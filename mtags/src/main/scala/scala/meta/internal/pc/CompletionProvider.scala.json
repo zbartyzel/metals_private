@@ -1,0 +1,218 @@
+[
+  {
+    "id" : "cced35a4-6f2e-46cb-9624-90e75b223433",
+    "prId" : 1522,
+    "comments" : [
+      {
+        "id" : "8d87ae96-b63c-4093-b7ef-724bee5084a1",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "deprecated Use `tags` instead if supported. From LSP docs.\r\n\r\nhttps://microsoft.github.io/language-server-protocol/specifications/specification-current/#textDocument_completion",
+        "createdAt" : "2020-03-21T17:57:40Z",
+        "updatedAt" : "2020-03-22T12:53:13Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a1f157044a3d540463d614d0851071783f10aed1",
+    "line" : 12,
+    "diffHunk" : "@@ -1,1 +217,221 @@        item.setKind(completionItemKind(member))\n        item.setSortText(f\"${idx}%05d\")\n        if (member.sym.isDeprecated) {\n          item.setTags(List(CompletionItemTag.Deprecated).asJava)\n        }"
+  },
+  {
+    "id" : "9344a44a-8d1b-436e-97a9-97a4808dfaa7",
+    "prId" : 1284,
+    "comments" : [
+      {
+        "id" : "defd5dcf-ac74-4f90-bf94-17fd760a19c1",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "I believe this is needed a bit further down to get the correct suffixes?",
+        "createdAt" : "2020-01-11T07:41:56Z",
+        "updatedAt" : "2020-02-06T21:01:53Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "84d21311-3a9c-4989-81c6-a7daeaebcc29",
+        "parentId" : "defd5dcf-ac74-4f90-bf94-17fd760a19c1",
+        "author" : {
+          "login" : "kubukoz",
+          "name" : "Jakub Kozłowski",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/894884?u=0540420b474e1a76cf318b145d2d0363f66946d0&v=4"
+        },
+        "body" : "We have access to it already from a val in a trait that's mixed in here (`Completions#clientSupportsSnippets`). I believe it's the same value...",
+        "createdAt" : "2020-01-12T14:01:57Z",
+        "updatedAt" : "2020-02-06T21:01:53Z",
+        "lastEditedBy" : {
+          "login" : "kubukoz",
+          "name" : "Jakub Kozłowski",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/894884?u=0540420b474e1a76cf318b145d2d0363f66946d0&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "984e771c-692d-4fe6-b3f8-e4e210d888ab",
+        "parentId" : "defd5dcf-ac74-4f90-bf94-17fd760a19c1",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "Ahh, I didn't notice that. Cool!",
+        "createdAt" : "2020-01-16T18:56:01Z",
+        "updatedAt" : "2020-02-06T21:01:53Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a32baa16258c5f96735d5f821a9be075bba9709d",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +47,51 @@\n    val pos = unit.position(params.offset)\n    val isSnippet = isSnippetEnabled(pos, params.text())\n\n    val (i, completion, editRange, query) = safeCompletionsAt(pos)"
+  },
+  {
+    "id" : "68771ccb-89a4-4f08-b70f-3e8efe8d8091",
+    "prId" : 1250,
+    "comments" : [
+      {
+        "id" : "bd64275f-ad71-43f3-ac14-ed57d3152c7b",
+        "parentId" : null,
+        "author" : {
+          "login" : "tanishiking",
+          "name" : "Rikito Taniguchi",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4"
+        },
+        "body" : "If we don't close the comment here, the whole code below the `/**` will be commented out, and we cannot traverse the AST (retrieved from a compilation unit) below the comment ",
+        "createdAt" : "2020-01-04T12:24:53Z",
+        "updatedAt" : "2020-01-13T13:44:04Z",
+        "lastEditedBy" : {
+          "login" : "tanishiking",
+          "name" : "Rikito Taniguchi",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cf8e6070092ac693251e01568b009a7f1bfce601",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +31,35 @@            params.text().charAt(i - 2) == '/' =>\n        // Insert potentially missing `*/` to avoid comment out all codes after the \"/**\".\n        CURSOR + \"*/\"\n      case _ =>\n        // Default _CURSOR_ instrumentation."
+  },
+  {
+    "id" : "165b60cb-2801-4f73-ba68-2e360c883d9e",
+    "prId" : 1092,
+    "comments" : [
+      {
+        "id" : "9174ba59-89d8-47cc-8334-c76daf94632d",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "The only thing I wasn't 100% sure on is here do we need to also encode this again before we pass it into `matchesSubCharacters` or `matches` since the `entered.toString`?",
+        "createdAt" : "2019-11-29T06:03:31Z",
+        "updatedAt" : "2019-11-29T06:05:08Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d57e0a0a-7f97-45d1-9f19-b2f009e8074a",
+        "parentId" : "9174ba59-89d8-47cc-8334-c76daf94632d",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Not sure either, but might be good to encode it again. Situations like: `weird_method@Name`",
+        "createdAt" : "2019-11-29T10:26:13Z",
+        "updatedAt" : "2019-11-29T10:26:13Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "60194238-13e1-4434-ad05-a8864952340a",
+        "parentId" : "9174ba59-89d8-47cc-8334-c76daf94632d",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "We always want to fuzzy match against the decoded name, it would be weird to include `::` if the user types `foo.$colon$col@@`",
+        "createdAt" : "2019-11-29T11:34:00Z",
+        "updatedAt" : "2019-11-29T11:34:08Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a8c3e9fd388b949abe04c1a0fa6eda1c14cfe9ab",
+    "line" : 24,
+    "diffHunk" : "@@ -1,1 +394,398 @@            val startOfWord =\n              if (lastSpace < lastDot && lastSpace >= 0) lastSpace else lastDot\n            reversedString.slice(0, startOfWord).reverse\n          } else {\n            entered.toString"
+  },
+  {
+    "id" : "976280b7-8047-422c-8af5-dcfb792d8f7f",
+    "prId" : 793,
+    "comments" : [
+      {
+        "id" : "867294b4-6254-42b7-bfba-c79cb11000e5",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "The whole pattern match can be removed, we can add a comment instead\r\n\r\n```scala\r\n// NOTE: We intentionally don't set the commit character because there are valid scenarios where\r\n// the user wants to type a dot '.' character without selecting a completion item.\r\n```",
+        "createdAt" : "2019-06-21T12:57:28Z",
+        "updatedAt" : "2019-06-21T13:43:24Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3a73509dc1e752e8f1bb2fe4a580f9539c93418",
+    "line" : 18,
+    "diffHunk" : "@@ -1,1 +215,219 @@  def isNullary(sym: Symbol): Boolean = sym.info match {\n    case _: NullaryMethodType => true\n    case PolyType(_, _: NullaryMethodType) => true\n    case _ => false\n  }"
+  }
+]

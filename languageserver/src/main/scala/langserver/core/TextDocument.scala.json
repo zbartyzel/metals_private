@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "ca9626da-a2cb-4201-b429-5eed26919f12",
+    "prId" : 22,
+    "comments" : [
+      {
+        "id" : "6bc2373a-01ff-4d2e-87dd-db01b9b696e9",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "I hadn't noticed this was implemented, we should use it instead of the buggy implementation I added on monday.",
+        "createdAt" : "2017-11-09T18:40:56Z",
+        "updatedAt" : "2017-11-09T18:47:55Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "dac6da56-85bc-4893-b9d0-2938457c976c",
+        "parentId" : "6bc2373a-01ff-4d2e-87dd-db01b9b696e9",
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "Ah nice, it's the first time I notice it too!",
+        "createdAt" : "2017-11-09T18:51:08Z",
+        "updatedAt" : "2017-11-09T18:51:08Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f5a08cec9d466f68f9b683a3fae08d09b2b1025b",
+    "line" : 58,
+    "diffHunk" : "@@ -1,1 +56,60 @@   * Return the offset in the current document, for a given 0-based line/col position.\n   */\n  def positionToOffset(pos: Position): Int = {\n    val Position(line, col) = pos\n"
+  }
+]

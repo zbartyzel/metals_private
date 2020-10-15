@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "a66a37f2-4666-45bb-a248-31cb76b98b50",
+    "prId" : 800,
+    "comments" : [
+      {
+        "id" : "c1dc98d6-619b-48eb-b26d-87e67e5c6ee9",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "maybe link to the ticket here?",
+        "createdAt" : "2019-06-28T14:47:09Z",
+        "updatedAt" : "2019-06-28T14:54:18Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "5ef14786616cc095dc789ac6006152883fc0fe0f",
+    "line" : 81,
+    "diffHunk" : "@@ -1,1 +79,83 @@- whitebox string interpolator macros, we had to disable one unit test for 2.13.\n  See [#777](https://github.com/scalameta/metals/issues/777).\n- better-monadic-for compile plugin, we had to disable one unit test for 2.13.\n  See [#777](https://github.com/scalameta/metals/issues/777).\n"
+  }
+]

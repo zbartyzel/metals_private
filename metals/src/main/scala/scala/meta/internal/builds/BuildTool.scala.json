@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "b637b0f7-36bd-4328-8379-58f050c1a799",
+    "prId" : 967,
+    "comments" : [
+      {
+        "id" : "11f5e8b3-ec3f-4588-b3cc-d79d8c5f301d",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "We're re-reading the `.gitignore` file on every path. It would be better to bind the value of `readText` to a variable.",
+        "createdAt" : "2019-10-08T06:37:54Z",
+        "updatedAt" : "2019-10-08T06:38:47Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7e59ad24-2456-43ad-959a-e169a42221d8",
+        "parentId" : "11f5e8b3-ec3f-4588-b3cc-d79d8c5f301d",
+        "author" : {
+          "login" : "ashwinbhaskar",
+          "name" : "Ashwin Bhaskar",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/6818365?u=ccec3e031605eaf7f6f696fe9b1fbabcd335569d&v=4"
+        },
+        "body" : "@olafurpg makes sense! I will do that",
+        "createdAt" : "2019-10-08T07:23:48Z",
+        "updatedAt" : "2019-10-08T07:23:49Z",
+        "lastEditedBy" : {
+          "login" : "ashwinbhaskar",
+          "name" : "Ashwin Bhaskar",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/6818365?u=ccec3e031605eaf7f6f696fe9b1fbabcd335569d&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b098388f750fc2eba665a7f68e6e200cbcd4f1b7",
+    "line" : 16,
+    "diffHunk" : "@@ -1,1 +36,40 @@    if (gitignore.exists) {\n      paths\n        .filterNot(gitignore.readText.contains)\n        .foreach(path => gitignore.appendText(s\"\\n$path\"))\n    }"
+  }
+]

@@ -1,0 +1,143 @@
+[
+  {
+    "id" : "140522b1-7fb9-4de6-95f5-af4b9fff6efc",
+    "prId" : 709,
+    "comments" : [
+      {
+        "id" : "60c21aa9-4f0b-4356-9a91-8ae475de5528",
+        "parentId" : null,
+        "author" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "body" : "`Pauseable` or `Pausable`? (I honestly don't know) ;)",
+        "createdAt" : "2019-05-31T14:05:07Z",
+        "updatedAt" : "2019-05-31T14:07:10Z",
+        "lastEditedBy" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "82233064-c764-4998-b071-03d4e98be75f",
+        "parentId" : "60c21aa9-4f0b-4356-9a91-8ae475de5528",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "I googled myself, seems pauseable is OK, similar to `Cancelable`.",
+        "createdAt" : "2019-05-31T14:49:53Z",
+        "updatedAt" : "2019-05-31T14:49:54Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e996d0d719a59efbb86d5727fb306a454ea1623b",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +6,10 @@ * Interface for something that can be paused and unpaused, for example a stream of compile requests.\n */\ntrait Pauseable {\n  final val isPaused = new AtomicBoolean(false)\n"
+  },
+  {
+    "id" : "37e1147d-9c48-4131-bc09-990197b648d3",
+    "prId" : 709,
+    "comments" : [
+      {
+        "id" : "4e705fc4-cfcf-48c8-8f63-4019e7d94f6a",
+        "parentId" : null,
+        "author" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "body" : "or maybe `resume`?",
+        "createdAt" : "2019-05-31T14:05:41Z",
+        "updatedAt" : "2019-05-31T14:07:10Z",
+        "lastEditedBy" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "76d76c6b-47df-4354-8cb6-f8218c6c895a",
+        "parentId" : "4e705fc4-cfcf-48c8-8f63-4019e7d94f6a",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "I prefer `unpause` for consistency with `pause`",
+        "createdAt" : "2019-05-31T14:50:11Z",
+        "updatedAt" : "2019-05-31T14:50:11Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e996d0d719a59efbb86d5727fb306a454ea1623b",
+    "line" : 15,
+    "diffHunk" : "@@ -1,1 +13,17 @@    doPause()\n  }\n  final def unpause(): Unit = {\n    isPaused.set(false)\n    doUnpause()"
+  },
+  {
+    "id" : "2c1b5025-45ef-48a3-914f-eff7cda0d7a7",
+    "prId" : 709,
+    "comments" : [
+      {
+        "id" : "c7a0d5e3-1c60-430b-9612-cd052861e6af",
+        "parentId" : null,
+        "author" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "body" : "why not `from` - the fact that it is from `Pauseables` is already expressed in the type. Unless it is to circumvent the generics?",
+        "createdAt" : "2019-05-31T14:06:41Z",
+        "updatedAt" : "2019-05-31T14:07:10Z",
+        "lastEditedBy" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "32d72aed-580f-4f56-abe6-4bd1885be079",
+        "parentId" : "c7a0d5e3-1c60-430b-9612-cd052861e6af",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "No issue with generics, just `fromX` feels consistent with similar APIs like `Json.fromString`. `Pauseable.fromPauseables` can be read as \"create a single pauseable from this list of pauseables\"",
+        "createdAt" : "2019-05-31T14:51:40Z",
+        "updatedAt" : "2019-05-31T14:51:41Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e996d0d719a59efbb86d5727fb306a454ea1623b",
+    "line" : 27,
+    "diffHunk" : "@@ -1,1 +25,29 @@\n  /** Merges a list of Pausables into a single Pauseable. */\n  def fromPausables(all: Iterable[Pauseable]): Pauseable = new Pauseable {\n    override def doPause(): Unit = Cancelable.cancelEach(all)(_.pause())\n    override def doUnpause(): Unit = Cancelable.cancelEach(all)(_.unpause())"
+  }
+]

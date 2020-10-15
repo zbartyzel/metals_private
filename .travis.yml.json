@@ -1,0 +1,284 @@
+[
+  {
+    "id" : "95ea7506-764f-47b1-86ef-302f7c482055",
+    "prId" : 1018,
+    "comments" : [
+      {
+        "id" : "fbce3844-fde9-4dc5-b5f0-c411bb8a8b17",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "BTW We can migrate this job to GH Actions. The latest sbt-ci-release supports GH Actions",
+        "createdAt" : "2019-10-25T17:57:30Z",
+        "updatedAt" : "2019-10-25T17:57:30Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "71375836d05d62c051df649e2d1094176bc3fd23",
+    "line" : 25,
+    "diffHunk" : "@@ -1,1 +15,19 @@    - stage: release\n      script:\n        - nvm install 'lts/*' && nvm use 'lts/*'\n        - git fetch --tags\n        - sbt ci-release docs/docusaurusPublishGhpages"
+  },
+  {
+    "id" : "7e07fc36-e419-4fe7-9270-9896ba20bbe2",
+    "prId" : 764,
+    "comments" : [
+      {
+        "id" : "770dbb68-c623-446a-8b56-943a300abd99",
+        "parentId" : null,
+        "author" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "body" : "what does it do?",
+        "createdAt" : "2019-06-13T13:19:23Z",
+        "updatedAt" : "2019-06-13T13:20:17Z",
+        "lastEditedBy" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2042949c-4610-4fbf-b04f-633af15ef7d7",
+        "parentId" : "770dbb68-c623-446a-8b56-943a300abd99",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "specifies distribution to be ubuntu trusty - I think there is an issue when the distro is newer and it doesn't have jdk 8.",
+        "createdAt" : "2019-06-13T13:24:17Z",
+        "updatedAt" : "2019-06-13T13:24:18Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "29c7e625-d045-49fa-9a6e-c6bbfd84a1c7",
+        "parentId" : "770dbb68-c623-446a-8b56-943a300abd99",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "@olafurpg does this make sense? I had issues with jdk8 before adding this, but I have no experience with travis.",
+        "createdAt" : "2019-06-13T13:57:10Z",
+        "updatedAt" : "2019-06-13T13:57:11Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "73f9b74b-a61a-4a47-affa-a3a7dc38d08f",
+        "parentId" : "770dbb68-c623-446a-8b56-943a300abd99",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "LGTM ",
+        "createdAt" : "2019-06-13T15:03:15Z",
+        "updatedAt" : "2019-06-13T15:04:20Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b24827dff9633514961a4a5d80f323b548d8be8e",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +4,8 @@  - linux\nlanguage: scala\ndist: trusty\nstages:\n  - name: test"
+  },
+  {
+    "id" : "6ac6232a-8b44-413c-b196-bf8d729f1cbf",
+    "prId" : 267,
+    "comments" : [
+      {
+        "id" : "fd71d79d-b043-4f5f-90b7-e854eba046e5",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "Makes sense 👍 ",
+        "createdAt" : "2018-04-07T17:39:29Z",
+        "updatedAt" : "2018-04-07T17:39:33Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "6cfbcede01e4f40baeeac303b7b535794a0dfd54",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +42,46 @@\nbefore_install:\n  - if [ \"$TRAVIS_BUILD_STAGE_NAME\" = 'Release'  ]; then\n      openssl aes-256-cbc -K $encrypted_df92ba612cfd_key -iv $encrypted_df92ba612cfd_iv -in travis/secrets.tar.enc -out travis/secrets.tar -d;\n      tar xv -C travis -f travis/secrets.tar;"
+  },
+  {
+    "id" : "fa10f0c0-2df4-4508-82f1-e457d37a9e12",
+    "prId" : 190,
+    "comments" : [
+      {
+        "id" : "7bdc9f94-55dd-49af-a15f-ab3505c0a708",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "Notice that I'm doing `test` for both projects, but there are no tests yet.\r\nThis effectively only tests that they compile for now.",
+        "createdAt" : "2018-02-06T09:53:26Z",
+        "updatedAt" : "2018-02-06T09:53:26Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "754418897a0217f1d72cb08c6219adccb43a201c",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +16,20 @@      script:\n        - sbt ++2.11.12 lsp4s/test\n        - sbt ++2.11.12 jsonrpc/test\n    - env: TEST=\"sbt test\"\n      script:"
+  },
+  {
+    "id" : "c653d292-b277-44ac-9ab4-f9aa9c50b090",
+    "prId" : 17,
+    "comments" : [
+      {
+        "id" : "acba4f8c-f163-4e38-9f96-28027827503c",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Should we also check `sbt compile`?",
+        "createdAt" : "2017-11-08T08:48:03Z",
+        "updatedAt" : "2017-11-09T18:43:08Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6a9d1505-3ec0-4cb6-b2dc-27c75ba68a57",
+        "parentId" : "acba4f8c-f163-4e38-9f96-28027827503c",
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "right, I'll add it",
+        "createdAt" : "2017-11-08T08:48:42Z",
+        "updatedAt" : "2017-11-09T18:43:08Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "036c60e79446afa0d349365297a6781c32272a00",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +6,10 @@env:\n  matrix:\n  - CI_TEST: scalafmt\n  - CI_TEST: ci-fast\n"
+  },
+  {
+    "id" : "4e4b7e07-7c1a-401a-8ef1-41ec9238fdd5",
+    "prId" : 17,
+    "comments" : [
+      {
+        "id" : "2ef28920-2171-49d2-ac20-0df5fdc1dd41",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Is this defined in build.sbt? We can probably just run `test`",
+        "createdAt" : "2017-11-08T08:57:35Z",
+        "updatedAt" : "2017-11-09T18:43:08Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c1441f6f-ae9c-449a-b1a3-1ac37429b7ba",
+        "parentId" : "2ef28920-2171-49d2-ac20-0df5fdc1dd41",
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "The task is defined in `bin/runci.sh` It's currently failing because it's looking for `dragos-vscode-scala:0.2.1-SNAPSHOT`, but that's not a managed dependency in the `build.sbt` :O I'm confused...",
+        "createdAt" : "2017-11-08T09:11:35Z",
+        "updatedAt" : "2017-11-09T18:43:08Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ebf22602-4052-4851-b8bd-cb85e7fc0ad9",
+        "parentId" : "2ef28920-2171-49d2-ac20-0df5fdc1dd41",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "I'm very puzzled by this error, can you try `dragos-vscode-scala/publishLocal` before compile?",
+        "createdAt" : "2017-11-08T18:26:50Z",
+        "updatedAt" : "2017-11-09T18:43:08Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "036c60e79446afa0d349365297a6781c32272a00",
+    "line" : 9,
+    "diffHunk" : "@@ -1,1 +7,11 @@  matrix:\n  - CI_TEST: scalafmt\n  - CI_TEST: ci-fast\n\ncache:"
+  }
+]

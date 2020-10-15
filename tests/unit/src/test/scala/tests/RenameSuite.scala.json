@@ -1,0 +1,190 @@
+[
+  {
+    "id" : "b2fbce78-6894-4010-b0db-008cadf00adf",
+    "prId" : 1048,
+    "comments" : [
+      {
+        "id" : "d85cf653-d6be-467e-bdcc-c2950e8c2477",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "😍 ",
+        "createdAt" : "2019-11-07T04:36:32Z",
+        "updatedAt" : "2019-11-11T16:33:17Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "32617da1c138d4dd74af7289c14ff3aeb1bc9654",
+    "line" : 331,
+    "diffHunk" : "@@ -1,1 +329,333 @@       |object Main {\n       |  val a = new Alphabet {\n       |    override def <<me@@thod>>(adf: String): Int = 321\n       |  }\n       |}"
+  },
+  {
+    "id" : "8bf1383c-a514-44ef-a20c-a86821cbf040",
+    "prId" : 1048,
+    "comments" : [
+      {
+        "id" : "5fa6de39-6e11-464c-be6d-e76053e2e4da",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : ":+1:",
+        "createdAt" : "2019-11-11T04:24:25Z",
+        "updatedAt" : "2019-11-11T16:33:17Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "32617da1c138d4dd74af7289c14ff3aeb1bc9654",
+    "line" : 104,
+    "diffHunk" : "@@ -1,1 +102,106 @@       |trait <<A@@BC>>\n       |trait Alphabet{\n       |  this: <<ABC>> =>\n       |}\n       |object Main{"
+  },
+  {
+    "id" : "ae908acd-91f7-42aa-80b0-4b5dc956597d",
+    "prId" : 1048,
+    "comments" : [
+      {
+        "id" : "307b41e0-850a-4ae6-af76-91e31a06879f",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Should we consider erroring in this case?",
+        "createdAt" : "2019-11-11T04:26:00Z",
+        "updatedAt" : "2019-11-11T16:33:17Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1064cae8-03a9-4ba5-bfda-4d3ce6bdd007",
+        "parentId" : "307b41e0-850a-4ae6-af76-91e31a06879f",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "We could, but the other way would be to use Metals to at least rename Scala occurrences and rename the rest by hand or via different LSP. \r\n\r\nI thinking maybe report a warning in that case?",
+        "createdAt" : "2019-11-11T12:13:45Z",
+        "updatedAt" : "2019-11-11T16:33:17Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c11eae90-679c-43ef-bc20-04216925e16e",
+        "parentId" : "307b41e0-850a-4ae6-af76-91e31a06879f",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "I added a warning in a case like that.",
+        "createdAt" : "2019-11-11T16:34:06Z",
+        "updatedAt" : "2019-11-11T16:34:06Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "32617da1c138d4dd74af7289c14ff3aeb1bc9654",
+    "line" : 348,
+    "diffHunk" : "@@ -1,1 +346,350 @@       |package a\n       |object Main{\n       |  val other = new <<Oth@@er>>()\n       |}\n       |\"\"\".stripMargin,"
+  },
+  {
+    "id" : "ba42f939-dc32-4390-a47c-e3c5940dcc86",
+    "prId" : 1048,
+    "comments" : [
+      {
+        "id" : "e660aead-3dff-44be-b7cd-1b16b10b4892",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Missing test case: named parameter for case class fields\r\n\r\n```scala\r\ncase class Name(value: String)\r\nName(value = \"42\")\r\n  .copy(value = \"43\")\r\n  .value\r\nnew Name(value = \"44\")\r\n```",
+        "createdAt" : "2019-11-11T04:27:23Z",
+        "updatedAt" : "2019-11-11T16:33:17Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8fc20060-7b9e-4389-ac16-0f9406ba7805",
+        "parentId" : "e660aead-3dff-44be-b7cd-1b16b10b4892",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "It seems that references are not being found for 42 nad 44. Added that test case.",
+        "createdAt" : "2019-11-11T12:20:36Z",
+        "updatedAt" : "2019-11-11T16:33:17Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "460d8c16-8c3c-48ef-86ea-df99e17c66ae",
+        "parentId" : "e660aead-3dff-44be-b7cd-1b16b10b4892",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Seems to be the same issue as https://github.com/scalameta/scalameta/issues/1169",
+        "createdAt" : "2019-11-11T12:23:03Z",
+        "updatedAt" : "2019-11-11T16:33:17Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "32617da1c138d4dd74af7289c14ff3aeb1bc9654",
+    "line" : 54,
+    "diffHunk" : "@@ -1,1 +52,56 @@    newName = \"Bar\"\n  )\n\n  renamed(\n    \"unapply-param\","
+  }
+]

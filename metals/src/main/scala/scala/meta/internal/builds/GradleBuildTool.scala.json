@@ -1,0 +1,105 @@
+[
+  {
+    "id" : "00b7a241-0f08-4041-a699-1000e7591a46",
+    "prId" : 1472,
+    "comments" : [
+      {
+        "id" : "6aa17980-266a-45d8-8116-906b7cb8766f",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Since we are using string interpolation here it will be safer to check the type.",
+        "createdAt" : "2020-02-28T16:20:12Z",
+        "updatedAt" : "2020-02-28T16:20:12Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "4c19190d9ea685f84ed485843bf86b1ae3906ad6",
+    "line" : 16,
+    "diffHunk" : "@@ -1,1 +23,27 @@  }\n\n  private def initScript(versionToUse: String) =\n    s\"\"\"\n       |initscript {"
+  },
+  {
+    "id" : "3b205684-11ee-4174-8ca2-f0c0b4f32840",
+    "prId" : 1412,
+    "comments" : [
+      {
+        "id" : "f7aa75a7-a41b-4857-a996-9ac0d835ea94",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "“workspaceGradle.isFile” should work ",
+        "createdAt" : "2020-02-09T20:19:00Z",
+        "updatedAt" : "2020-02-09T21:09:01Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "895f8874704740d448032cc109400f7e0e606c03",
+    "line" : 46,
+    "diffHunk" : "@@ -1,1 +80,84 @@        val workspaceGradle = workspaceGradleLauncher(workspace)\n        if (workspaceGradle.isFile)\n          workspaceGradle.toString() :: cmd\n        else\n          embeddedGradleLauncher.toString() :: cmd"
+  },
+  {
+    "id" : "0e56c095-a11a-4065-9f61-58fc3b246448",
+    "prId" : 694,
+    "comments" : [
+      {
+        "id" : "62da43d2-1286-42f2-bbcf-5dc8ee67168c",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Are these settings removed after the build import completes?",
+        "createdAt" : "2019-04-25T09:21:04Z",
+        "updatedAt" : "2019-05-07T08:42:52Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e492ebb6-5965-4f75-a8a9-c68c1d13fe5f",
+        "parentId" : "62da43d2-1286-42f2-bbcf-5dc8ee67168c",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Yes, it's only added explicitly when providing init script, which is in a tmp directory.",
+        "createdAt" : "2019-04-25T11:35:58Z",
+        "updatedAt" : "2019-05-07T08:42:52Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "95e8d18af9437cb5a757194bc83a227e9c0b8d79",
+    "line" : 62,
+    "diffHunk" : "@@ -1,1 +60,64 @@       |          }\n       |          tasks.withType(ScalaCompile) {\n       |              def params = [\n       |                      '-Xplugin:' + semanticDb,\n       |                      '-P:semanticdb:synthetics:on',"
+  }
+]

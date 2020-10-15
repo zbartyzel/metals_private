@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "d20134e5-cace-4d98-85a3-7d4966de99ae",
+    "prId" : 534,
+    "comments" : [
+      {
+        "id" : "daac71ee-ab48-4e8e-9868-25ed2443f1d9",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "What happens for foreign key references in `toplevel_symbol`? Does h2 support cascade deletes?",
+        "createdAt" : "2019-02-24T13:11:20Z",
+        "updatedAt" : "2019-02-24T16:00:43Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "12862c58-c36d-4c91-b1f2-4a28c305a3b6",
+        "parentId" : "daac71ee-ab48-4e8e-9868-25ed2443f1d9",
+        "author" : {
+          "login" : "mudsam",
+          "name" : null,
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/10428653?v=4"
+        },
+        "body" : "H2 support cascade deletes, when the jar entry in indexex_jar is deleted, the entries in toplevel_symbol entries referencing that jar will go as well.",
+        "createdAt" : "2019-02-24T15:10:39Z",
+        "updatedAt" : "2019-02-24T16:00:43Z",
+        "lastEditedBy" : {
+          "login" : "mudsam",
+          "name" : null,
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/10428653?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a82b41a7-e8cd-46be-9e4a-d6027f23964f",
+        "parentId" : "daac71ee-ab48-4e8e-9868-25ed2443f1d9",
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "@olafurpg see for reference https://github.com/scalameta/metals/pull/534/files#diff-d0c092f838650407c2e87cb728cd09baR11",
+        "createdAt" : "2019-02-24T16:38:31Z",
+        "updatedAt" : "2019-02-24T16:38:31Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "68a865709d6bc7d432ff4ffaa2fe1eac07d7409a",
+    "line" : 102,
+    "diffHunk" : "@@ -1,1 +100,104 @@    val md5s = usedPaths.map(getMD5Digest).map(\"'\" + _ + \"'\").mkString(\",\")\n    conn().update {\n      s\"delete from indexed_jar where md5 not in ($md5s)\"\n    } { _ =>\n      ()"
+  }
+]

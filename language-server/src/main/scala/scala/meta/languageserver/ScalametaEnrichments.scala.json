@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "cc94d563-7a3f-44db-b81b-5ab5a467aff8",
+    "prId" : 8,
+    "comments" : [
+      {
+        "id" : "de2ba63a-1710-4e9f-b714-5a14f63136e9",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "is this `asInstanceOf` safe?",
+        "createdAt" : "2017-11-06T09:42:22Z",
+        "updatedAt" : "2017-11-06T20:58:35Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a154d42708a1a97e34a23a7c79a153d4ee52f44b",
+    "line" : 30,
+    "diffHunk" : "@@ -1,1 +28,32 @@  }\n  implicit class XtensionInputLSP(val input: m.Input) extends AnyVal {\n    def contents: String = input.asInstanceOf[m.Input.VirtualFile].value\n  }\n  implicit class XtensionAbsolutePathLSP(val path: m.AbsolutePath)"
+  }
+]

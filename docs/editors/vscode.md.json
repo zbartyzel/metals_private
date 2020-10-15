@@ -1,0 +1,190 @@
+[
+  {
+    "id" : "432d302c-3080-4f32-969d-f9595fce2850",
+    "prId" : 2008,
+    "comments" : [
+      {
+        "id" : "3964a780-1982-4047-a6be-9fb461069253",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "This was actually not true, there is nothing we can customize about test yet.",
+        "createdAt" : "2020-08-19T11:30:58Z",
+        "updatedAt" : "2020-08-19T17:04:38Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7fd5b61ccb3d7e97c5e9199d0be9c74b36148eca",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +197,201 @@      // full name of the class to run\n      \"testClass\": \"com.example.Test\",\n      // optional build target name in case there more than one\n      // class with the same name\n      \"buildTarget\": \"root\""
+  },
+  {
+    "id" : "dc912b22-835b-4642-841b-426a6237ec47",
+    "prId" : 2005,
+    "comments" : [
+      {
+        "id" : "83b63505-34f2-4a01-bdeb-ab40dbdc82ee",
+        "parentId" : null,
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "will this syntax be coloured correctly? there are no '//' comments in json.",
+        "createdAt" : "2020-08-17T20:27:14Z",
+        "updatedAt" : "2020-08-18T15:31:49Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c9e9f1a8-083e-409b-92c6-1647345c1c2e",
+        "parentId" : "83b63505-34f2-4a01-bdeb-ab40dbdc82ee",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "It looks ok, VS Code does allow for comments.",
+        "createdAt" : "2020-08-18T09:34:25Z",
+        "updatedAt" : "2020-08-18T15:31:49Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9e146bee-4f5c-41b9-b591-e8b1738b5596",
+        "parentId" : "83b63505-34f2-4a01-bdeb-ab40dbdc82ee",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "I think it will also be displayed here: https://scalameta.org/metals/docs/editors/vscode.html\r\n\r\nWe can see how it looks like after merge and quickly update if something will not be right.",
+        "createdAt" : "2020-08-18T12:35:06Z",
+        "updatedAt" : "2020-08-18T15:31:49Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "cc9e1153-d248-4e6e-aac5-dbc808751559",
+        "parentId" : "83b63505-34f2-4a01-bdeb-ab40dbdc82ee",
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "For rendering it correctly, I think you can use the good old trick of changing the code block language to `js` (same syntax, and it allows comments)",
+        "createdAt" : "2020-08-18T12:38:57Z",
+        "updatedAt" : "2020-08-18T15:31:49Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a3ac6339a1e66b6ad62b64c6e84e3c0aa7ade47d",
+    "line" : 48,
+    "diffHunk" : "@@ -1,1 +177,181 @@      \"type\": \"scala\",\n      \"request\": \"launch\",\n      // configuration name visible for the user\n      \"name\": \"Main class\",\n      // full name of the class to run"
+  },
+  {
+    "id" : "6cee2558-6fda-40be-80c8-c468ea399633",
+    "prId" : 2005,
+    "comments" : [
+      {
+        "id" : "397ec4ad-2195-451e-ad9c-05d28236367c",
+        "parentId" : null,
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "can we attach second position like 'Test class' showing that in test config we specify 'testClass' and not 'mainClass' and how 2 configurations would look like here",
+        "createdAt" : "2020-08-18T07:10:21Z",
+        "updatedAt" : "2020-08-18T15:31:49Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8b6af6c1-7847-4bd2-9627-01189aa4bc9e",
+        "parentId" : "397ec4ad-2195-451e-ad9c-05d28236367c",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Added! Good idea!",
+        "createdAt" : "2020-08-18T09:45:39Z",
+        "updatedAt" : "2020-08-18T15:31:49Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a3ac6339a1e66b6ad62b64c6e84e3c0aa7ade47d",
+    "line" : 73,
+    "diffHunk" : "@@ -1,1 +202,206 @@      // class with the same name\n      \"buildTarget\": \"root\"\n    }\n  ]\n}"
+  },
+  {
+    "id" : "64bae54f-9423-4094-b6d4-5e3680d08aae",
+    "prId" : 1934,
+    "comments" : [
+      {
+        "id" : "02158c2d-ebc2-47b2-ae14-36d01797b20e",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Added better gifs, because the previous ones were bother me quite a bit :sweat_smile: ",
+        "createdAt" : "2020-07-20T13:04:12Z",
+        "updatedAt" : "2020-07-21T07:58:00Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1f9f20c530b2152a24fddd4618793dbec859f696",
+    "line" : 55,
+    "diffHunk" : "@@ -1,1 +149,153 @@formatted by Metals:\n\n![format-on-paste](https://i.imgur.com/fF0XWYC.gif)\n\nThis feature is enabled by default. If you need to disable/enable formatting on"
+  }
+]

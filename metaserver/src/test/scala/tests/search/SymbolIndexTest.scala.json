@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "8b12e1b0-e05e-4ee6-a794-fe143551d5da",
+    "prId" : 78,
+    "comments" : [
+      {
+        "id" : "c224684d-9336-4636-950c-89924d9c9f33",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "👍 ",
+        "createdAt" : "2017-12-02T22:40:18Z",
+        "updatedAt" : "2017-12-02T23:22:47Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "71da2fa975b8fb36cd888c23d0a8b0214a68e679",
+    "line" : 199,
+    "diffHunk" : "@@ -1,1 +182,186 @@    \"references\" - {\n      \"<<User>>(...)\" -\n        assertSymbolReferences(3, 17, withDefinition = true)(\n          ref(path.User, (2, 11), (2, 15)),\n          ref(path.UserTest, (3, 15), (3, 19))"
+  }
+]

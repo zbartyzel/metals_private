@@ -1,0 +1,152 @@
+[
+  {
+    "id" : "d52908c4-771a-4a84-a564-1f904a226f9a",
+    "prId" : 1834,
+    "comments" : [
+      {
+        "id" : "9e247527-b4d8-4110-9269-0061fccb6560",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "In this scenario I think that `isHttpEnabled` should win. Mainly due to the fact that while all clients _should_ support all the commands that the server can send, they may not. For example in nvim-metals, we are setting the client as `isExecuteClientCommandProvider` to true because we handle some stuff (for the new scala file command, toggle logs, goto location), but we still want the doctor to be in the browser without having to handle that functionality client side. Without this change, doing that is impossible. What are your thoughts on this? I feel like this is a unique scenario where we'd want this.",
+        "createdAt" : "2020-06-16T16:12:29Z",
+        "updatedAt" : "2020-06-16T17:14:59Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3086e42a12b5aab98de0d5e2e7b81434babbe611",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +73,77 @@      onServer: MetalsHttpServer => Unit\n  ): Unit = {\n    if (clientConfig.isExecuteClientCommandProvider && !clientConfig.isHttpEnabled) {\n      val output =\n        if (clientConfig.doctorFormatIsJson)"
+  },
+  {
+    "id" : "83d21476-bb50-4f29-ae9b-77ea3c7fe76c",
+    "prId" : 1414,
+    "comments" : [
+      {
+        "id" : "40c91738-5bb5-4fb2-b54e-04cd0966d584",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "I flipped the order of these since both default to html. So, I assume that if either is set to Json, it was intentionally set, and we then go with that.",
+        "createdAt" : "2020-02-19T10:08:29Z",
+        "updatedAt" : "2020-02-19T14:01:31Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "2b45c0ea6b216649b70b0a2e98445d20fe09d872",
+    "line" : 19,
+    "diffHunk" : "@@ -1,1 +73,77 @@    if (config.executeClientCommand.isOn || clientExperimentalCapabilities.executeClientCommandProvider) {\n      val output =\n        if (config.doctorFormat.isJson || clientExperimentalCapabilities.doctorFormatIsJson)\n          buildTargetsJson()\n        else buildTargetsHtml()"
+  },
+  {
+    "id" : "b0548e26-b45a-427d-aa3a-c2bf4abf5196",
+    "prId" : 1235,
+    "comments" : [
+      {
+        "id" : "834239b5-204e-4fb6-a1df-438509ad7c9d",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Can we introduce a case class that wraps all the columns here? It would be great to avoid passing around a `Tuple7`",
+        "createdAt" : "2019-12-31T09:29:46Z",
+        "updatedAt" : "2019-12-31T14:09:08Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "2c8c78247edf1c5829edf6eb83fcd0d93f2ea1f2",
+    "line" : 164,
+    "diffHunk" : "@@ -1,1 +298,302 @@  }\n\n  private def extractTargetInfo(target: ScalaTarget) = {\n    val scala = target.info.asScalaBuildTarget\n    val scalaVersion ="
+  },
+  {
+    "id" : "df097324-f08c-4182-b413-0a9a15f4812e",
+    "prId" : 374,
+    "comments" : [
+      {
+        "id" : "55b00ffc-45f4-47a2-a86b-5a4594c7f2a8",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "is this useful?",
+        "createdAt" : "2018-12-06T13:32:53Z",
+        "updatedAt" : "2018-12-06T13:34:33Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "beff7c6d-eb0a-4252-ad70-e23820731a3d",
+        "parentId" : "55b00ffc-45f4-47a2-a86b-5a4594c7f2a8",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Just to avoid double analysis that runs through all workspace build targets (which could be large), but I admit this is probably not a bottle-neck",
+        "createdAt" : "2018-12-06T13:35:40Z",
+        "updatedAt" : "2018-12-06T13:35:40Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2548fca9-bd72-4a2e-81eb-85bc838312a8",
+        "parentId" : "55b00ffc-45f4-47a2-a86b-5a4594c7f2a8",
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "Ah! I didn't realize `problemSummary` was a method",
+        "createdAt" : "2018-12-06T13:36:58Z",
+        "updatedAt" : "2018-12-06T13:36:58Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "df7f8d5a1264977806c0962631a996acb5646f64",
+    "line" : 70,
+    "diffHunk" : "@@ -1,1 +76,80 @@  /** Checks if there are any potential problems and if any, notifies the user. */\n  def check(): Unit = {\n    val summary = problemSummary\n    executeReloadDoctor(summary)\n    summary match {"
+  }
+]

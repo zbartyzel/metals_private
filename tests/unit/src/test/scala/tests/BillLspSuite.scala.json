@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "9091b7fc-e831-482f-9b69-bdb5a546ea44",
+    "prId" : 1985,
+    "comments" : [
+      {
+        "id" : "f43fca40-1b00-40c0-b9f1-49c25bb63747",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "This is flaky overall, might not be possible to properly fix it.",
+        "createdAt" : "2020-08-21T14:18:05Z",
+        "updatedAt" : "2020-08-21T14:58:03Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8e26e2d8d28a3d420f4f5bc7efb45ebe19ab460b",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +90,94 @@  }\n\n  test(\"automatic-reconnect\".flaky) {\n    cleanWorkspace()\n    Bill.installWorkspace(workspace.toNIO)"
+  }
+]

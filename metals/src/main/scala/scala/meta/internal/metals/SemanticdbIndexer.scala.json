@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "2abe1bb8-51e4-4f7a-98a9-01a0201242f4",
+    "prId" : 1435,
+    "comments" : [
+      {
+        "id" : "d37efa97-503e-45fe-8c4c-a9e3cb01537d",
+        "parentId" : null,
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "Something to take into consideration, we use FixedThreadPool(1) to handle events, because reindexing is sync, we will stop processing events till reindexing is done.",
+        "createdAt" : "2020-02-17T13:06:50Z",
+        "updatedAt" : "2020-02-17T16:18:06Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0201982d-26e7-48b4-9ed5-d1e6014088f9",
+        "parentId" : "d37efa97-503e-45fe-8c4c-a9e3cb01537d",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "changed to using future there",
+        "createdAt" : "2020-02-17T14:48:42Z",
+        "updatedAt" : "2020-02-17T16:18:06Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "fb025d5358f8296b853bbb7ede33b89e75356b35",
+    "line" : 23,
+    "diffHunk" : "@@ -1,1 +50,54 @@      val targetroot = item.targetroot\n      if (!targetroot.isJar) {\n        onChangeDirectory(targetroot.resolve(Directories.semanticdb).toNIO)\n      }\n    }"
+  }
+]

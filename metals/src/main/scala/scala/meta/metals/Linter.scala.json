@@ -1,0 +1,134 @@
+[
+  {
+    "id" : "12767371-fc6f-4a6f-9c6f-b29714ae7751",
+    "prId" : 199,
+    "comments" : [
+      {
+        "id" : "772c2251-3952-4259-8e0a-30ab35919220",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Does this get re-evaluated if the file is created after the warning but the setting remains unchanged? I think we should do the `Files.isRegularFile` check every time so that it's OK to create the file after defining the setting to a non-existent file",
+        "createdAt" : "2018-02-22T16:56:59Z",
+        "updatedAt" : "2018-02-22T16:59:30Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7eadee07-db3b-468d-a950-eabd96349ed7",
+        "parentId" : "772c2251-3952-4259-8e0a-30ab35919220",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "I think it would make sense to re-run `Files.isRegularFile` every time scalafix is invoked to allow the file to get picked up if it's created after the server starts. ",
+        "createdAt" : "2018-03-21T16:41:23Z",
+        "updatedAt" : "2018-03-21T16:42:23Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "69cefe0a15f6fe7cdf80d75092c6fb9322ea2bb2",
+    "line" : 52,
+    "diffHunk" : "@@ -1,1 +74,78 @@        case None =>\n          val default = cwd.resolve(Configuration.Scalafix.defaultConfPath)\n          if (Files.isRegularFile(default.toNIO))\n            Right(Some(Input.File(default)))\n          else Right(None)"
+  },
+  {
+    "id" : "e4edd719-6d8e-422a-9373-5a0bb466e1eb",
+    "prId" : 199,
+    "comments" : [
+      {
+        "id" : "f5728bf3-4d69-4b2d-b71c-405f22ac6a7e",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Can we keep the old signature? I would like to refactor lsp4s to make responses `Task[T]` instead of `Either[Response.Error, T]`. I've noticed that at least vsode doesn't display Response.Error responses unless they're server errors.",
+        "createdAt" : "2018-02-22T16:59:04Z",
+        "updatedAt" : "2018-02-22T16:59:30Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "dc5f4891-7895-4dda-a3d5-cdbea4029ad5",
+        "parentId" : "f5728bf3-4d69-4b2d-b71c-405f22ac6a7e",
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "We can't really keep the old signature, because now the implementation needs to read the configuration, which may fail. Would you prefer for this to be `Task[Seq[Diagnostic]]` where I make the `Task` fail if something goes wrong with the config?",
+        "createdAt" : "2018-03-10T15:51:08Z",
+        "updatedAt" : "2018-03-10T15:51:08Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4c51e5ee-ae59-4aec-8f15-14f69be732c5",
+        "parentId" : "f5728bf3-4d69-4b2d-b71c-405f22ac6a7e",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "I don't think `Left(Response.Error)` responses are reported in at least vsode, which makes it better to showMessage or throw \"internal error\". Either way, we can keep it like this and later refactor the signature. The plan is to make it `Task[T]` with custom recovering logic for a handful of exceptions.",
+        "createdAt" : "2018-03-11T11:55:45Z",
+        "updatedAt" : "2018-03-11T11:55:46Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "69c35e60-7c83-4c62-a08c-6344148582e8",
+        "parentId" : "f5728bf3-4d69-4b2d-b71c-405f22ac6a7e",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Opened https://github.com/scalameta/metals/issues/206 to track this",
+        "createdAt" : "2018-03-21T16:40:15Z",
+        "updatedAt" : "2018-03-21T16:42:23Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "69cefe0a15f6fe7cdf80d75092c6fb9322ea2bb2",
+    "line" : 87,
+    "diffHunk" : "@@ -1,1 +91,95 @@      document: m.Document,\n      index: SemanticdbIndex\n  ): Task[Either[Response.Error, Seq[Diagnostic]]] = Task {\n    val linterResult = for {\n      scalafixConfig <- config()"
+  }
+]

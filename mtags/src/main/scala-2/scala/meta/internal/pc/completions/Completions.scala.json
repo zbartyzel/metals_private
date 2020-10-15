@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "bd56da00-b81e-490b-a188-6c2640850fab",
+    "prId" : 2088,
+    "comments" : [
+      {
+        "id" : "b0f109ed-b793-4f19-9e3f-76a7cc596510",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "So this was causing issues where if I was trying to do `p@@` to complete package, the lsp edit position start was never 0 here if you were on line 0 and character 1. It was returning an edit with the start and end in the same position causing the edit to append to the previous character instead of replace.",
+        "createdAt" : "2020-09-21T16:06:31Z",
+        "updatedAt" : "2020-10-01T13:28:23Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "17cdafc208f0d4c3c6e79dc070909630cdd917c6",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +740,744 @@    def fallback: Int = {\n      var i = pos.point - 1\n      while (i >= 0 && Chars.isIdentifierPart(text.charAt(i))) {\n        i -= 1\n      }"
+  }
+]

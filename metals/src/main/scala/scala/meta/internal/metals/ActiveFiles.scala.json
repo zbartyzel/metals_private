@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "2c2db72e-a590-4a78-839b-e26bf7e5f851",
+    "prId" : 337,
+    "comments" : [
+      {
+        "id" : "5a14c975-972d-4f44-a15e-a026fb5b61ca",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "This removes the file \"opportunistically\", meaning that `isRecentlyActive` will occasionally have imprecise results.\r\n\r\nIs that an ok semantic?",
+        "createdAt" : "2018-11-21T21:53:46Z",
+        "updatedAt" : "2018-11-27T10:23:41Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a295c775-1aa4-42f0-89e3-57f60ef22207",
+        "parentId" : "5a14c975-972d-4f44-a15e-a026fb5b61ca",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Good catch, `isRecentlyActive` should guard against `isStale`, fixed.",
+        "createdAt" : "2018-11-23T11:46:30Z",
+        "updatedAt" : "2018-11-27T10:23:41Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8ab78d5883e2e77a843cca1ea641084e6e4a2875",
+    "line" : 22,
+    "diffHunk" : "@@ -1,1 +20,24 @@  private val paths = new ConcurrentLinkedQueue[Event]()\n  def add(path: AbsolutePath): Unit = {\n    paths.removeIf(_.isStale)\n    paths.add(Event(new Timer(time), path))\n  }"
+  }
+]

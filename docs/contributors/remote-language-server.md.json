@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "b53f1540-96f6-4abd-8325-3210f7c42e7c",
+    "prId" : 1547,
+    "comments" : [
+      {
+        "id" : "fc52fbd1-3c63-4566-be4e-4ccfde201498",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "Really small nitpick. I'd add something to end the article. I always find it a bit odd when a blog article ends with a code snippet. Just a summary or ideas about where this will go in the future might be a nice addition, and a good way to end the article.",
+        "createdAt" : "2020-03-26T11:58:06Z",
+        "updatedAt" : "2020-03-27T19:26:28Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7cbca6f5-16e6-46b0-885c-5f8b8c146a78",
+        "parentId" : "fc52fbd1-3c63-4566-be4e-4ccfde201498",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Haha, I have thought about this as well. I added a new \"Open questions\" section that documents some concerns I have about this approach and the to stress that this is an experimental feature.",
+        "createdAt" : "2020-03-26T18:15:19Z",
+        "updatedAt" : "2020-03-27T19:26:28Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "922329228964c110122b6e35a403b21a3c4d3f3e",
+    "line" : 151,
+    "diffHunk" : "@@ -1,1 +149,153 @@  }\n]\n```\n\n## Open questions"
+  }
+]

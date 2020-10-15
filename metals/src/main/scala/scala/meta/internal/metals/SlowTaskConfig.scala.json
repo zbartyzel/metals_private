@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "7fa9e1f7-443d-4119-a545-c411f6373ba8",
+    "prId" : 1414,
+    "comments" : [
+      {
+        "id" : "7d015a63-9c5c-43a8-b087-6ae575343eff",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "I didn't know this existed before. AFAIK, no clients use this. Is it safe to assume I can just remove this, and the remove the following check in `ConfiguredLanguageClient.scala`:\r\n\r\n```scala\r\n      if (config.slowTask.isStatusBar) {\r\n        metalsStatus(MetalsStatusParams(params.message))\r\n      }\r\n```",
+        "createdAt" : "2020-02-10T19:55:08Z",
+        "updatedAt" : "2020-02-19T14:01:31Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "610f7aab-db59-443b-bb21-b13d70565bd0",
+        "parentId" : "7d015a63-9c5c-43a8-b087-6ae575343eff",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Fine by me 👍 ",
+        "createdAt" : "2020-02-12T10:23:53Z",
+        "updatedAt" : "2020-02-19T14:01:31Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "2b45c0ea6b216649b70b0a2e98445d20fe09d872",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +4,8 @@  def isOff: Boolean = value == \"off\"\n  def isOn: Boolean = value == \"on\"\n}\n\nobject SlowTaskConfig {"
+  }
+]

@@ -1,0 +1,124 @@
+[
+  {
+    "id" : "f90a9364-7a2b-44bf-bb6a-c41eea4b1e8b",
+    "prId" : 694,
+    "comments" : [
+      {
+        "id" : "223d0cb1-0e82-40c3-b638-7debb8370f4f",
+        "parentId" : null,
+        "author" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "body" : "why not something like:\r\n```scala\r\nfinal class Status private(val value: Int){\r\n  def ...\r\n}\r\n\r\nobject Status{\r\n  val Requested = new Status(0)\r\n  val Started = new Status(1)\r\n  ...\r\n}\r\n```",
+        "createdAt" : "2019-04-25T14:13:56Z",
+        "updatedAt" : "2019-05-07T08:42:52Z",
+        "lastEditedBy" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2794388a-960d-4f38-aac9-585cf67ed3a7",
+        "parentId" : "223d0cb1-0e82-40c3-b638-7debb8370f4f",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "This is basically the same and lacks ability to sensibly pattern match. I would leave it as is.",
+        "createdAt" : "2019-04-26T09:17:21Z",
+        "updatedAt" : "2019-05-07T08:42:52Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "95e8d18af9437cb5a757194bc83a227e9c0b8d79",
+    "line" : 31,
+    "diffHunk" : "@@ -1,1 +29,33 @@   */\n  val version: String = \"v4\"\n  sealed abstract class Status(val value: Int)\n      extends Product\n      with Serializable {"
+  },
+  {
+    "id" : "bc0fd7ad-a086-4080-bc03-e39cf08cb157",
+    "prId" : 694,
+    "comments" : [
+      {
+        "id" : "2664e11d-09b0-49a9-a6ef-d43f5cc90282",
+        "parentId" : null,
+        "author" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "body" : "why ` path.toString().endsWith(_)` when there is an `ext` ?",
+        "createdAt" : "2019-04-25T14:23:17Z",
+        "updatedAt" : "2019-05-07T08:42:52Z",
+        "lastEditedBy" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1a000ade-badb-4302-849c-f334e75b5167",
+        "parentId" : "2664e11d-09b0-49a9-a6ef-d43f5cc90282",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "ext doesn't work with `.gradle.kts`",
+        "createdAt" : "2019-04-25T14:53:45Z",
+        "updatedAt" : "2019-05-07T08:42:52Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "95e8d18af9437cb5a757194bc83a227e9c0b8d79",
+    "line" : 91,
+    "diffHunk" : "@@ -1,1 +89,93 @@    val isGradle =\n      Set(\"gradle\", \"groovy\", \"gradle.kts\", \"java\", \"kts\").exists(\n        path.toString().endsWith(_)\n      )\n"
+  },
+  {
+    "id" : "02cc9d50-c995-4a6d-af04-759e03b25137",
+    "prId" : 694,
+    "comments" : [
+      {
+        "id" : "503e3a34-c49a-4161-89fe-e040849295b3",
+        "parentId" : null,
+        "author" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "body" : "what do you think about a new line here? to clearly separate the \"set up\" stage from the \"act\" one ;)",
+        "createdAt" : "2019-04-25T14:25:17Z",
+        "updatedAt" : "2019-05-07T08:42:52Z",
+        "lastEditedBy" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "95e8d18af9437cb5a757194bc83a227e9c0b8d79",
+    "line" : 94,
+    "diffHunk" : "@@ -1,1 +92,96 @@      )\n\n    if (isScala && path.isFile) {\n      digestScala(path, digest)\n    } else if (isGradle && path.isFile) {"
+  }
+]

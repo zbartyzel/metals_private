@@ -1,0 +1,219 @@
+[
+  {
+    "id" : "e94a87f2-4e54-42a6-97b0-8d0c70ac490a",
+    "prId" : 1833,
+    "comments" : [
+      {
+        "id" : "b1a16155-c986-4385-868e-8c6e6be99af7",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "Since these blogs somewhat serve as release notes and _sort of_ a changelog, do we really want to change this blog post to remove reference at all to Pants? This seems to imply that we are sort of _hiding_ away that we had experimental pants support at one time. My question is mainly just trying to understand the reason behind this.",
+        "createdAt" : "2020-06-18T17:47:38Z",
+        "updatedAt" : "2020-06-25T06:06:57Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1aa7c5d3-bf1d-4181-a5fe-e5f88baccb30",
+        "parentId" : "b1a16155-c986-4385-868e-8c6e6be99af7",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "My reasoning to remove this part is because it appears when users search for \"Pants\" on the website. Since the Pants integration is now gone I figured it would be best if this section didn't show up when people search for it.",
+        "createdAt" : "2020-06-25T06:18:15Z",
+        "updatedAt" : "2020-06-25T06:18:15Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "24d585838ffe8978ee3a30f502b81859f1776dc6",
+    "line" : 48,
+    "diffHunk" : "@@ -1,1 +248,252 @@to implement all of the abstract members, you'd need to do each one\nindividually. Now you'll see a new completion option in the scenario to\nImplement all members which will implement all the members at once.\n\n![implement-all](https://camo.githubusercontent.com/d698c2adb18a420fcb4259e4264b6417a5e4bb54/68747470733a2f2f692e696d6775722e636f6d2f617942614344552e676966)"
+  },
+  {
+    "id" : "1e1b135e-9491-4758-9afb-4fc4058b1a01",
+    "prId" : 1278,
+    "comments" : [
+      {
+        "id" : "7ebce23b-ffdf-4393-bc35-c6c3fb43ee5b",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "- formatting on paste for multi-line strings\r\n- json doctor support",
+        "createdAt" : "2020-01-09T14:38:43Z",
+        "updatedAt" : "2020-01-13T16:05:42Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "88a0b942-e5de-4cbb-8388-6e875b1a2591",
+        "parentId" : "7ebce23b-ffdf-4393-bc35-c6c3fb43ee5b",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "> formatting on paste for multi-line strings\r\n\r\nwasn't it in the previous release?\r\n\r\n> json doctor support\r\n\r\nIt seems not really user facing, we tend to include things that users might use themselves",
+        "createdAt" : "2020-01-09T15:04:13Z",
+        "updatedAt" : "2020-01-13T16:05:42Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0ac1401b-173a-48c5-9e5c-09c7f4599fa4",
+        "parentId" : "7ebce23b-ffdf-4393-bc35-c6c3fb43ee5b",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "I believe the previous release had `onTypeFormatting`, but didn't support formatting on multiline string pastes. The PR is listed below https://github.com/scalameta/metals/pull/968.\r\n\r\nRegarding json doctor, that makes sense, didn't think of that 👍 ",
+        "createdAt" : "2020-01-09T15:09:05Z",
+        "updatedAt" : "2020-01-13T16:05:42Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "66110e43-d032-45af-9eb3-4fdebe1d8706",
+        "parentId" : "7ebce23b-ffdf-4393-bc35-c6c3fb43ee5b",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Actually on paste formatting  was included in 0.7.6 - must have forgotten to add the PR there",
+        "createdAt" : "2020-01-10T14:17:12Z",
+        "updatedAt" : "2020-01-13T16:05:42Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0bff80a3-151b-45cd-bf7f-319b5137f62c",
+        "parentId" : "7ebce23b-ffdf-4393-bc35-c6c3fb43ee5b",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Actually nevermind. The fix was merged later.",
+        "createdAt" : "2020-01-10T14:23:28Z",
+        "updatedAt" : "2020-01-13T16:05:42Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1311f5dc-23ff-4c75-9d28-a2535e83e5c0",
+        "parentId" : "7ebce23b-ffdf-4393-bc35-c6c3fb43ee5b",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Added",
+        "createdAt" : "2020-01-10T14:41:21Z",
+        "updatedAt" : "2020-01-13T16:05:42Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "219a75cb06ea05adb9f9803fe11847a0104af7d5",
+    "line" : 291,
+    "diffHunk" : "@@ -1,1 +289,293 @@- add automatic formatting of multi-line `stripMargin` strings on paste\n- remove support for 2.12.7\n\n## Contributors\n"
+  },
+  {
+    "id" : "bf80f704-6188-4613-9b09-9c22ded886ef",
+    "prId" : 1278,
+    "comments" : [
+      {
+        "id" : "c5bcc7ac-5225-45ac-b810-67ed9c568962",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "I would add a small intro:\r\n\r\n> Refactoring support is one of the most requested features in Metals. In this release, we started by implementing the most commonly used refactors: rename and import missing symbol.\r\n\r\n> We plan to add more common refactors along the way. Make sure to check out the [ones that have already been proposed](https://github.com/scalameta/metals/issues/707) and consider suggesting other refactors that are essential in your development workflow.",
+        "createdAt" : "2020-01-11T13:57:36Z",
+        "updatedAt" : "2020-01-13T16:05:42Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f00d6581-b58d-40b8-9fd3-242c949fada0",
+        "parentId" : "c5bcc7ac-5225-45ac-b810-67ed9c568962",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Good idea, added.",
+        "createdAt" : "2020-01-13T12:24:19Z",
+        "updatedAt" : "2020-01-13T16:05:42Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "219a75cb06ea05adb9f9803fe11847a0104af7d5",
+    "line" : 87,
+    "diffHunk" : "@@ -1,1 +85,89 @@refactor (see below).\n\n## Refactor\n\nRefactoring support is one of the most requested features in Metals. In this"
+  }
+]

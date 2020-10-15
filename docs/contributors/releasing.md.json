@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "4ca2907e-01c5-4748-b19b-4c9ca490a62d",
+    "prId" : 2008,
+    "comments" : [
+      {
+        "id" : "67d283ad-cbae-4894-8e30-36b85fb425d3",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "I simplified the usage a bit.",
+        "createdAt" : "2020-08-19T17:08:40Z",
+        "updatedAt" : "2020-08-19T17:08:40Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7fd5b61ccb3d7e97c5e9199d0be9c74b36148eca",
+    "line" : 12,
+    "diffHunk" : "@@ -1,1 +39,43 @@  ```\n  cs install ammonite\n  amm ./bin/merged_prs.sc <tag1> <tag2> \"<github_api_token>\"\n  ```\n"
+  }
+]

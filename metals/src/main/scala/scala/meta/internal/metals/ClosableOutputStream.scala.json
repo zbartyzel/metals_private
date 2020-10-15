@@ -1,0 +1,96 @@
+[
+  {
+    "id" : "d711e722-1535-4529-a0f3-661b8153bfb3",
+    "prId" : 1266,
+    "comments" : [
+      {
+        "id" : "dea66c41-76ea-4bbc-a80d-d7c37a49cf78",
+        "parentId" : null,
+        "author" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "body" : "Why we don't treat this case as the stream being closed?",
+        "createdAt" : "2020-01-09T11:11:15Z",
+        "updatedAt" : "2020-01-09T19:41:06Z",
+        "lastEditedBy" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3e6367bc-bee4-4b42-8549-b8ab7667b98a",
+        "parentId" : "dea66c41-76ea-4bbc-a80d-d7c37a49cf78",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Actually this wasn't working properly this way. Should be better now.",
+        "createdAt" : "2020-01-09T17:36:44Z",
+        "updatedAt" : "2020-01-09T19:41:06Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0f92bf439ec2e556ef2dd37eb204d08963b7f24b",
+    "line" : 17,
+    "diffHunk" : "@@ -1,1 +15,19 @@      }\n    } catch {\n      case _: IOException =>\n    }\n  }"
+  },
+  {
+    "id" : "6bcf1e6f-3f35-4c7c-8280-93b8ccf9ac61",
+    "prId" : 1266,
+    "comments" : [
+      {
+        "id" : "d5d2a194-7876-4246-922d-92e379db6f5e",
+        "parentId" : null,
+        "author" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "body" : "It's worth commenting that any IOException means that the stream is `closed`, since it is not necessarily intuitive",
+        "createdAt" : "2020-01-09T11:21:33Z",
+        "updatedAt" : "2020-01-09T19:41:06Z",
+        "lastEditedBy" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "88becff3-af9e-4459-b622-b31ec716d047",
+        "parentId" : "d5d2a194-7876-4246-922d-92e379db6f5e",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Added",
+        "createdAt" : "2020-01-09T19:26:01Z",
+        "updatedAt" : "2020-01-09T19:41:06Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0f92bf439ec2e556ef2dd37eb204d08963b7f24b",
+    "line" : 32,
+    "diffHunk" : "@@ -1,1 +30,34 @@        isClosed = true\n        throw e\n    }\n  }\n}"
+  }
+]

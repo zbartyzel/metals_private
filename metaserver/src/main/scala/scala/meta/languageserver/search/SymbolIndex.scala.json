@@ -1,0 +1,143 @@
+[
+  {
+    "id" : "754d7b19-7335-4fc5-9e29-e49399cdcef4",
+    "prId" : 116,
+    "comments" : [
+      {
+        "id" : "561a02c5-ec4b-47cb-82be-8e0b751f3397",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "🎉 ",
+        "createdAt" : "2017-12-12T15:47:48Z",
+        "updatedAt" : "2017-12-14T16:33:49Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ff5741bd-4a7c-44ac-a7fa-e5456c402a09",
+        "parentId" : "561a02c5-ec4b-47cb-82be-8e0b751f3397",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "hehe guess that one wasn't very popular 😅 ",
+        "createdAt" : "2017-12-12T15:56:42Z",
+        "updatedAt" : "2017-12-14T16:33:49Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "dafd0bc0-615c-4027-bfe5-8f779a238f2d",
+        "parentId" : "561a02c5-ec4b-47cb-82be-8e0b751f3397",
+        "author" : {
+          "login" : "laughedelic",
+          "name" : "Alexey Alekhin",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/766656?v=4"
+        },
+        "body" : "@olafurpg just check https://github.com/laughedelic/atom-ide-scala/issues/20 and https://github.com/laughedelic/atom-ide-scala/pull/22 😉 ",
+        "createdAt" : "2017-12-12T15:59:44Z",
+        "updatedAt" : "2017-12-14T16:33:49Z",
+        "lastEditedBy" : {
+          "login" : "laughedelic",
+          "name" : "Alexey Alekhin",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/766656?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7a0f7974-4b0c-44c1-96c2-1bf7efd91769",
+        "parentId" : "561a02c5-ec4b-47cb-82be-8e0b751f3397",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : ":joy: @laughedelic ",
+        "createdAt" : "2017-12-12T16:39:40Z",
+        "updatedAt" : "2017-12-14T16:33:49Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "2ad41c2943b988f4013b1b0d29478092b349360a",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +61,65 @@      document <- documentIndex.getDocument(path.toNIO.toUri)\n      _ = logger.info(s\"Found document for $path\")\n      input = Input.VirtualFile(document.filename, document.contents)\n      name <- document.names.collectFirst {\n        case name @ ResolvedName(Some(position), symbol, _) if {"
+  },
+  {
+    "id" : "8d3e4f6f-19cf-4fad-bb7d-26888df92f5e",
+    "prId" : 78,
+    "comments" : [
+      {
+        "id" : "7c43e58f-473f-444b-a0be-3563088de212",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Makes sense!",
+        "createdAt" : "2017-12-01T20:33:42Z",
+        "updatedAt" : "2017-12-02T23:22:47Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "71da2fa975b8fb36cd888c23d0a8b0214a68e679",
+    "line" : 82,
+    "diffHunk" : "@@ -1,1 +82,86 @@      line: Int,\n      column: Int\n  ): Option[Symbol] = {\n    for {\n      name <- resolveName(path, line, column)"
+  },
+  {
+    "id" : "39adba9a-9a91-443b-a423-7e383d08e783",
+    "prId" : 78,
+    "comments" : [
+      {
+        "id" : "44e51c39-caec-4f33-b88f-3dedff4dd19a",
+        "parentId" : null,
+        "author" : {
+          "login" : "laughedelic",
+          "name" : "Alexey Alekhin",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/766656?v=4"
+        },
+        "body" : "@olafurpg note that I removed this `companion`. Was it there for a good reason? If I'm not mistaken, this would redirect `Foo.apply` just to the companion object (if it doesn't have this `apply` defined explicitly).",
+        "createdAt" : "2017-12-02T03:26:22Z",
+        "updatedAt" : "2017-12-02T23:22:47Z",
+        "lastEditedBy" : {
+          "login" : "laughedelic",
+          "name" : "Alexey Alekhin",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/766656?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "71da2fa975b8fb36cd888c23d0a8b0214a68e679",
+    "line" : 190,
+    "diffHunk" : "@@ -1,1 +240,244 @@      notifications: Notifications,\n      buffers: Buffers,\n      serverConfig: ServerConfig\n  ): SymbolIndex = {\n    val symbolIndexer = new TrieMapSymbolIndexer()"
+  }
+]

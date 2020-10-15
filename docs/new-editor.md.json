@@ -1,0 +1,96 @@
+[
+  {
+    "id" : "2e1abdb7-6f45-4c7c-9619-528e43c36a28",
+    "prId" : 256,
+    "comments" : [
+      {
+        "id" : "d0af448e-4258-43fb-b200-03815a003f27",
+        "parentId" : null,
+        "author" : {
+          "login" : "rossabaker",
+          "name" : "Ross A. Baker",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/142698?u=1217004f83c6cdee894e9b91f97f9880a9662d68&v=4"
+        },
+        "body" : "This link is broken.",
+        "createdAt" : "2018-04-06T13:22:16Z",
+        "updatedAt" : "2018-04-06T13:46:43Z",
+        "lastEditedBy" : {
+          "login" : "rossabaker",
+          "name" : "Ross A. Baker",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/142698?u=1217004f83c6cdee894e9b91f97f9880a9662d68&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "30c1d250-d22b-4755-a784-f0da8e2aaf1a",
+        "parentId" : "d0af448e-4258-43fb-b200-03815a003f27",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Good catch, added link at the bottom.",
+        "createdAt" : "2018-04-06T13:26:46Z",
+        "updatedAt" : "2018-04-06T13:46:43Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ffb45040378457f2159326840393d913cd081213",
+    "line" : 101,
+    "diffHunk" : "@@ -1,1 +99,103 @@\nA full list of server configuration options can be found in\n[Configuration.scala][]. All configuration options have default values. An\nexample of how the configuration options are used from the VS Code plugin can be\nseen in the"
+  },
+  {
+    "id" : "eabcdde9-eae4-420e-88eb-dfa165c7bc45",
+    "prId" : 256,
+    "comments" : [
+      {
+        "id" : "957d29a4-820c-4b23-9bfa-cc079ae22092",
+        "parentId" : null,
+        "author" : {
+          "login" : "laughedelic",
+          "name" : "Alexey Alekhin",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/766656?v=4"
+        },
+        "body" : "❤️ ",
+        "createdAt" : "2018-04-06T13:49:03Z",
+        "updatedAt" : "2018-04-06T13:49:11Z",
+        "lastEditedBy" : {
+          "login" : "laughedelic",
+          "name" : "Alexey Alekhin",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/766656?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "be87d5bb-ea3e-43a1-9646-08b35a1dd16f",
+        "parentId" : "957d29a4-820c-4b23-9bfa-cc079ae22092",
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "perfect 👍 ",
+        "createdAt" : "2018-04-06T13:58:35Z",
+        "updatedAt" : "2018-04-06T13:58:35Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ffb45040378457f2159326840393d913cd081213",
+    "line" : 126,
+    "diffHunk" : "@@ -1,1 +124,128 @@`\"editor.formatOnSave\": true` to trigger a `textDocument/formatting` request on\nfile save and for that reason the VS Code metals plugin does not support\n`scalafmt.onSave`.\n\n## Commands"
+  }
+]

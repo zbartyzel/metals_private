@@ -1,0 +1,124 @@
+[
+  {
+    "id" : "c7b39ed0-a894-412c-a46b-121649363942",
+    "prId" : 686,
+    "comments" : [
+      {
+        "id" : "cc6f87d8-8483-4583-8687-92b53db839f0",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "I'm definitely not sure about that `inits.head.pos`",
+        "createdAt" : "2019-04-20T10:09:35Z",
+        "updatedAt" : "2019-04-20T10:18:55Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "880fcd60-813b-455c-8b6c-57413a26d8df",
+        "parentId" : "cc6f87d8-8483-4583-8687-92b53db839f0",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "You can do `inits.headOption.fold(t.pos)(_.pos)` to sleep good at night. Feel free to merge!",
+        "createdAt" : "2019-04-22T06:53:10Z",
+        "updatedAt" : "2019-04-22T06:53:10Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6c07b51d-f798-4a1a-b2b1-18c4525164c9",
+        "parentId" : "cc6f87d8-8483-4583-8687-92b53db839f0",
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "yeah, the doubt is mostly about the position rather than the code itself.\r\n\r\nI'll merge anyway, we can always fix it later.",
+        "createdAt" : "2019-04-22T11:10:33Z",
+        "updatedAt" : "2019-04-22T11:10:34Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b4f225ded274f72303d018e1d49de40f6df8947e",
+    "line" : 9,
+    "diffHunk" : "@@ -1,1 +98,102 @@            case Nil => (\"(anonymous)\", t.pos)\n            case inits =>\n              (inits.map(_.tpe.syntax).mkString(\" with \"), inits.head.pos)\n          }\n          if (t.templ.stats.nonEmpty) {"
+  },
+  {
+    "id" : "f0a54c8b-9e11-4093-913c-0c22391a9aef",
+    "prId" : 686,
+    "comments" : [
+      {
+        "id" : "30cdfc59-6e75-4e6a-b831-cf16b09023ea",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "`Term.Block` is needed in order to find `b` in the following example\r\n\r\n```scala\r\ndef a = {\r\n  def b = ()\r\n  ()\r\n}\r\n```",
+        "createdAt" : "2019-04-20T11:17:31Z",
+        "updatedAt" : "2019-04-20T11:17:31Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b4f225ded274f72303d018e1d49de40f6df8947e",
+    "line" : 15,
+    "diffHunk" : "@@ -1,1 +104,108 @@            newOwner()\n          } else continue()\n        case _: Source | _: Template | _: Term.Block =>\n          continue()\n        case t: Defn.Class =>"
+  },
+  {
+    "id" : "bf5dd78c-7732-4be6-9fa7-b44646540d65",
+    "prId" : 424,
+    "comments" : [
+      {
+        "id" : "599056c0-471a-4c59-b8cc-ce5812e00d14",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "I took the liberty to (hopefully) simplify the implementation. A bit of boilerplate can sometimes make it easier to and extend the code.",
+        "createdAt" : "2018-12-19T11:53:21Z",
+        "updatedAt" : "2018-12-19T13:35:23Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "eade48fd8ffbc5572cad7092e373fee0027e4f0f",
+    "line" : 109,
+    "diffHunk" : "@@ -1,1 +107,111 @@        continue(withNewOwner = true)\n      }\n      tree match {\n        case t: Pkg =>\n          addChild(t.ref.syntax, SymbolKind.Package, t.pos, t.ref.pos, \"\")"
+  }
+]

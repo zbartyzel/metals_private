@@ -1,0 +1,58 @@
+[
+  {
+    "id" : "c576f998-4133-44a0-b15f-07fe6e3a5e33",
+    "prId" : 752,
+    "comments" : [
+      {
+        "id" : "92b7f19f-5666-49ba-b886-5b611264e479",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "```suggestion\r\n[Scala Center](https://scala.epfl.ch/) and [VirtusLab](???) along with contributors from the\r\n```",
+        "createdAt" : "2019-06-11T11:27:43Z",
+        "updatedAt" : "2019-06-11T13:43:02Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f93d3bf127bfb04521817c612f4a4d73cb27f642",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +12,16 @@Metals is a language server for Scala that works with VS Code, Atom, Vim,\nSublime Text and Emacs. Metals is developed at the\n[Scala Center](https://scala.epfl.ch/) along with contributors from the\ncommunity.\n"
+  },
+  {
+    "id" : "13a26947-a23b-4bdd-ba43-9299efd78fb1",
+    "prId" : 752,
+    "comments" : [
+      {
+        "id" : "fedc9d1a-b11e-4727-8ec4-dc3a9abd7744",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "> Keywords are suggested based on the context (e.g. you won't see `throw` suggested if the cursor is not inside a declaration)",
+        "createdAt" : "2019-06-11T11:49:45Z",
+        "updatedAt" : "2019-06-11T13:10:11Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f93d3bf127bfb04521817c612f4a4d73cb27f642",
+    "line" : 74,
+    "diffHunk" : "@@ -1,1 +72,76 @@    import\n}\n```\n\nKeywords are suggested based on the context (e.g. you won't see throw suggested"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "0cb55162-cb50-4126-86a2-395b93d636b6",
+    "prId" : 765,
+    "comments" : [
+      {
+        "id" : "d86ae2ab-cfa9-444b-a9d6-b2b7774616b7",
+        "parentId" : null,
+        "author" : {
+          "login" : "er1c",
+          "name" : "Eric Peters",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/64685?u=ebe761da4b8e5e1a360e8f87f094ce3e59938c95&v=4"
+        },
+        "body" : "Note for myself: the `GlobalSymbolTable` uses `ClasspathIndex` under the hood, so manually adding in the bootClasspath isn't needed, as it already is applied by the `includeJdk = true`: https://github.com/scalameta/scalameta/blob/18229e37d89f7982ef65a8b034edb0f503fd63cc/semanticdb/metacp/src/main/scala/scala/meta/internal/classpath/ClasspathIndex.scala#L67-L82\r\n\r\nTry deleting the (duplicated) bootClasspath code here and make sure it doesn't affect anything, also saw: https://github.com/scalameta/metals/pull/767/files which seemed to strip it out without any undesirable side effects.",
+        "createdAt" : "2019-06-17T17:54:36Z",
+        "updatedAt" : "2019-06-17T17:54:37Z",
+        "lastEditedBy" : {
+          "login" : "er1c",
+          "name" : "Eric Peters",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/64685?u=ebe761da4b8e5e1a360e8f87f094ce3e59938c95&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3acd18bf10c27dd1819ce01512ccbbb0c31c8278",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +21,25 @@        .getOrElse(Classpath(Nil))\n    GlobalSymbolTable(\n      input.classpath ++ bootClasspath,\n      includeJdk = true\n    )"
+  }
+]

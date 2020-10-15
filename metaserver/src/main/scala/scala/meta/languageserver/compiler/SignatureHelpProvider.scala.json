@@ -1,0 +1,87 @@
+[
+  {
+    "id" : "b35cb2d4-ca38-4464-b431-23628c8a245a",
+    "prId" : 83,
+    "comments" : [
+      {
+        "id" : "8179308a-98f9-438b-bf4a-f965049d8438",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "`offset + 1` because we want\r\n\r\n```\r\nPredef.assert(_CURSOR_\r\n```\r\n\r\nand not\r\n\r\n```\r\nPredef.assert_CURSOR_(\r\n```",
+        "createdAt" : "2017-12-01T19:43:35Z",
+        "updatedAt" : "2017-12-01T19:43:35Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "935153d5-8c1c-4f39-9378-3b79d09a401e",
+        "parentId" : "8179308a-98f9-438b-bf4a-f965049d8438",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Did you check if this changed/improved the behavior anywhere?",
+        "createdAt" : "2017-12-01T20:00:38Z",
+        "updatedAt" : "2017-12-01T20:00:38Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "93bb73f4-0892-4fb1-8f66-f43f62f5cdb9",
+        "parentId" : "8179308a-98f9-438b-bf4a-f965049d8438",
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "Honestly, no. I just made sure all tests still pass (and the first one didn't without the `+ 1`",
+        "createdAt" : "2017-12-01T20:02:27Z",
+        "updatedAt" : "2017-12-01T20:02:27Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "740124c8-9d7d-46f2-9374-f63a9e785837",
+        "parentId" : "8179308a-98f9-438b-bf4a-f965049d8438",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Sounds good, I will keep my eyes open for what effect this has, maybe it's not as important for signatureHelp as I thought it would be",
+        "createdAt" : "2017-12-01T20:03:10Z",
+        "updatedAt" : "2017-12-01T20:03:10Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3f3fa68d9f3513d6aeac5afab1801dbc31975368",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +17,21 @@      code = cursor.contents,\n      filename = cursor.uri,\n      cursor = Some(cursor.offset + 1)\n    )\n    val position = unit.position(cursor.offset)"
+  }
+]

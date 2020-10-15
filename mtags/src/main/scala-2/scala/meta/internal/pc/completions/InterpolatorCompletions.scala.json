@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "8c50bd2c-cf9e-4300-bd35-aeb9e173299b",
+    "prId" : 1949,
+    "comments" : [
+      {
+        "id" : "b789671c-e040-4f04-9183-02963c509673",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "`s.sym.name.decoded` will not be enough ?",
+        "createdAt" : "2020-07-27T10:56:53Z",
+        "updatedAt" : "2020-08-05T11:01:50Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c534ed7b-bce7-4f55-9041-908065a13f99",
+        "parentId" : "b789671c-e040-4f04-9183-02963c509673",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "From what I see this should be enough or is there a particular reason you used `getterName` ?",
+        "createdAt" : "2020-07-27T12:25:40Z",
+        "updatedAt" : "2020-08-05T11:01:50Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0b1011ab-59b8-4904-b449-c25ffaffdf72",
+        "parentId" : "b789671c-e040-4f04-9183-02963c509673",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4"
+        },
+        "body" : "I've just copied its usage from `newText` methods:\r\nhttps://github.com/scalameta/metals/blob/99367756fe15268a192cd2e194f27e9e2f643fef/mtags/src/main/scala-2/scala/meta/internal/pc/completions/InterpolatorCompletions.scala#L110-L113\r\n\r\nI don't know if `getterName` usage is required here, but at least it should use `dropLocal` since `s.sym.name.decoded` may contain space at the end.\r\n",
+        "createdAt" : "2020-08-03T21:00:46Z",
+        "updatedAt" : "2020-08-05T11:01:50Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ccbbb9645817d8ad55037e21e350334124490d33",
+    "line" : 29,
+    "diffHunk" : "@@ -1,1 +132,136 @@            if CompletionFuzzy.matches(interpolator.name, s.sym.name) =>\n          val edit = new l.TextEdit(nameRange, newText(s.sym))\n          val filterText = s.sym.getterName.decoded\n          new TextEditMember(\n            filterText,"
+  }
+]

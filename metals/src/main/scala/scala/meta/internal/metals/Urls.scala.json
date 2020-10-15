@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "32ebf51f-dcd5-4d75-b0b9-b4ef347c89e9",
+    "prId" : 369,
+    "comments" : [
+      {
+        "id" : "d6fc0968-b3d8-4cd9-b2c2-fa511762b2dd",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Cool, I didn't know about that one 👍 ",
+        "createdAt" : "2018-12-01T22:24:31Z",
+        "updatedAt" : "2018-12-01T22:24:40Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ae07c23bee953261a3de7387b708fd0856b3bcde",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +22,26 @@        s\"open $url\".!!\n      } else if (Desktop.isDesktopSupported &&\n        Desktop.getDesktop.isSupported(BROWSE)) {\n        Desktop.getDesktop.browse(URI.create(url))\n      } else if (Properties.isLinux) {"
+  }
+]

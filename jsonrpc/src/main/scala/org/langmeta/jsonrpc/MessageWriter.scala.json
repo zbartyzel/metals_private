@@ -1,0 +1,115 @@
+[
+  {
+    "id" : "ef385c78-6652-4b0d-bd18-2195fc73ec04",
+    "prId" : 177,
+    "comments" : [
+      {
+        "id" : "01fb6a44-a523-4565-84eb-ab7eaa2494e5",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Aha, this makes more sense!",
+        "createdAt" : "2018-01-14T14:38:38Z",
+        "updatedAt" : "2018-01-14T14:38:43Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e518e335838919b39f0ef7103b96629298e6c706",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +35,39 @@      require(h.get(ContentLen).isEmpty)\n\n      val json = msg.asJson.mapObject(_.add(\"jsonrpc\", \"2.0\".asJson))\n      val str = json.noSpaces\n      val contentBytes = str.getBytes(StandardCharsets.UTF_8)"
+  },
+  {
+    "id" : "3b9ac067-72c8-43bf-8cfe-80c0ec93d941",
+    "prId" : 172,
+    "comments" : [
+      {
+        "id" : "47c02a34-fb70-42e4-979e-c4691cd44261",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "Note that this changes the logger name: `LazyLogging` instantiates a logger using `getClass.getName` as the name, so now this logger won't be called `org.langmeta.jsonrpc.MessageWriter`, but something else depending on the caller.\r\n\r\nIf we move to file/position kind of logging instead this is won't be an issue, but for now this will lead to inconsistent names in the logs.\r\n\r\nA possible alternative is to explicitly do\r\n\r\n```scala\r\nval logger = Logger(classOf[MessageWriter])\r\n```\r\n\r\non the call site. It's not ideal, but at least it's consistent.",
+        "createdAt" : "2018-01-10T18:40:11Z",
+        "updatedAt" : "2018-01-10T18:41:40Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9c94122e-0d41-4ffa-9b27-9599c8f0ded8",
+        "parentId" : "47c02a34-fb70-42e4-979e-c4691cd44261",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "I think that\r\n```scala\r\nval logger = Logger(classOf[MessageWriter])\r\n```\r\nwill use LoggerFactory which breaks the integration in bloop. I agree this change makes debugging quite bad, but I personally use `pprint` during development. I would love to switch to a file:line output format where this won't matter, but that would mean moving to another api like airframe-log (which is not sl4j backed). What do you propose we do?",
+        "createdAt" : "2018-01-10T19:03:32Z",
+        "updatedAt" : "2018-01-10T19:03:32Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "686a4539-3c18-45dd-9452-e70ab6fa22ab",
+        "parentId" : "47c02a34-fb70-42e4-979e-c4691cd44261",
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "How does `LoggerFactory` break the integration in bloop? `LazyLogging` uses `LoggerFactory` too:\r\n\r\nhttps://github.com/typesafehub/scala-logging/blob/953ebc3dba7d2bb01317e6311d08481370ce9824/src/main/scala/com/typesafe/scalalogging/Logging.scala#L28",
+        "createdAt" : "2018-01-10T19:05:34Z",
+        "updatedAt" : "2018-01-10T19:05:54Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0def3e3e-c20d-44e5-a1f2-2e414ef1252a",
+        "parentId" : "47c02a34-fb70-42e4-979e-c4691cd44261",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "bloop needs a way to use the jsonrpc API without triggering LoggerFactory, LazyLogging is behind a lazy val so if it's never used then LoggerFactory never gets triggered.",
+        "createdAt" : "2018-01-10T19:16:19Z",
+        "updatedAt" : "2018-01-10T19:16:19Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cd4724d11b332145fac1ee90a6b0dffec98f69fd",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +21,25 @@ * @note The header part is defined to be ASCII encoded, while the content part is UTF8.\n */\nclass MessageWriter(out: OutputStream, logger: Logger) {\n  private val ContentLen = \"Content-Length\"\n"
+  }
+]

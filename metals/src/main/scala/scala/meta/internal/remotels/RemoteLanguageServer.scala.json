@@ -1,0 +1,87 @@
+[
+  {
+    "id" : "6d4b6cee-9d6d-487f-820e-16e0ae29c4f0",
+    "prId" : 1547,
+    "comments" : [
+      {
+        "id" : "1016811b-fbe3-4023-aecf-113a55e8f17d",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "`isOutsideBuildTargets` ? `isEnabledForPath` is rather misleading as it looks like there is some kind of configuration.\r\n\r\nTogether with using `Option[RemoteLanguageServer]` it would be the same result, but clearer.",
+        "createdAt" : "2020-03-27T15:42:42Z",
+        "updatedAt" : "2020-03-27T19:26:28Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6e4b6512-2b2c-40b4-a1c9-c689b8c025c5",
+        "parentId" : "1016811b-fbe3-4023-aecf-113a55e8f17d",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Though probably then it's not possible to just change the `remoteLanguageServer` setting to attach the remote server. Maybe just return None in references if `remoteLanguageServer` is not defined?",
+        "createdAt" : "2020-03-27T18:31:12Z",
+        "updatedAt" : "2020-03-27T19:26:28Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a2552635-343f-47d2-817f-7bd7cd83f6e2",
+        "parentId" : "1016811b-fbe3-4023-aecf-113a55e8f17d",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "I prefer to keep distinguishing when the remote server is enabled vs. returning empty results. The key motivation to keep the distinction is that I don't want to use the remote language server to be enabled for files that are exported in the build graph.",
+        "createdAt" : "2020-03-27T19:23:03Z",
+        "updatedAt" : "2020-03-27T19:26:42Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7b4a9062-7fa8-4b2a-950e-95bcacf7f9f6",
+        "parentId" : "1016811b-fbe3-4023-aecf-113a55e8f17d",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Sure, I just felt it's a bit counter intuitive. `isEnabledForPath` actually checks if file is not in buildTarget. So anything outside the source sets also fits the bill.",
+        "createdAt" : "2020-03-27T19:40:47Z",
+        "updatedAt" : "2020-03-27T19:40:47Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "922329228964c110122b6e35a403b21a3c4d3f3e",
+    "line" : 33,
+    "diffHunk" : "@@ -1,1 +31,35 @@)(implicit ec: ExecutionContext) {\n  val timeout: Duration = Duration(serverConfig.remoteTimeout)\n  def isEnabledForPath(path: AbsolutePath): Boolean =\n    userConfig().remoteLanguageServer.isDefined &&\n      buildTargets.inverseSources(path).isEmpty"
+  }
+]

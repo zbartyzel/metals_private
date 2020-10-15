@@ -1,0 +1,153 @@
+[
+  {
+    "id" : "e1778a57-1032-4f11-8d0e-d2e09141b685",
+    "prId" : 71,
+    "comments" : [
+      {
+        "id" : "d60c40fd-a230-4e19-ad2c-ebed1d5d3481",
+        "parentId" : null,
+        "author" : {
+          "login" : "ShaneDelmore",
+          "name" : "Shane Delmore",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/4604933?v=4"
+        },
+        "body" : "Should these be objects? Unit like marker effects feel like singletons to me.",
+        "createdAt" : "2017-11-28T21:46:12Z",
+        "updatedAt" : "2017-11-29T07:02:11Z",
+        "lastEditedBy" : {
+          "login" : "ShaneDelmore",
+          "name" : "Shane Delmore",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/4604933?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "406a33f8-8283-424b-9da7-1a3a89ff0fc7",
+        "parentId" : "d60c40fd-a230-4e19-ad2c-ebed1d5d3481",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "They're vals to avoid `PublishLinterDiagnostics.type`",
+        "createdAt" : "2017-11-28T21:48:47Z",
+        "updatedAt" : "2017-11-29T07:02:11Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ef2bfc06-9def-43fb-b6d9-1e2bc7187004",
+        "parentId" : "d60c40fd-a230-4e19-ad2c-ebed1d5d3481",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "But you can consider them as singleton objects",
+        "createdAt" : "2017-11-28T21:50:01Z",
+        "updatedAt" : "2017-11-29T07:02:11Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "365c6e95ebfe230b3ab154f12e2d85bab13e5136",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +17,21 @@  final val InstallPresentationCompiler = new InstallPresentationCompiler\n  final class PublishLinterDiagnostics extends Effects\n  final val PublishLinterDiagnostics = new PublishLinterDiagnostics\n}"
+  },
+  {
+    "id" : "e81bc089-b997-4c16-8ec3-61e08cb085ea",
+    "prId" : 23,
+    "comments" : [
+      {
+        "id" : "59665ee7-76be-4b81-ba82-6c53bec5f769",
+        "parentId" : null,
+        "author" : {
+          "login" : "ShaneDelmore",
+          "name" : "Shane Delmore",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/4604933?v=4"
+        },
+        "body" : "Love this. ",
+        "createdAt" : "2017-11-12T16:37:37Z",
+        "updatedAt" : "2017-11-14T20:08:40Z",
+        "lastEditedBy" : {
+          "login" : "ShaneDelmore",
+          "name" : "Shane Delmore",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/4604933?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6d01d458-6010-445c-8e08-03eb5374bfe9",
+        "parentId" : "59665ee7-76be-4b81-ba82-6c53bec5f769",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Poor man's type-safety. I refactored to this in fact because I hit on bugs related to accidentally creating `Observable[Observable[T]]` from a `.map` when I should have been using `.flatMap` to build `Observable[Unit]`",
+        "createdAt" : "2017-11-12T16:57:30Z",
+        "updatedAt" : "2017-11-14T20:08:40Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a2c53ba8-5342-47e2-ab11-9aae0c4c61b1",
+        "parentId" : "59665ee7-76be-4b81-ba82-6c53bec5f769",
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "are these phantom types?",
+        "createdAt" : "2017-11-14T09:08:09Z",
+        "updatedAt" : "2017-11-14T20:08:40Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "69088ba1-2fd6-44df-90ce-6b68460ead20",
+        "parentId" : "59665ee7-76be-4b81-ba82-6c53bec5f769",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Not really since those values also exist at runtime. I'm still not sure if this was necessary, maybe we can avoid it by using stricter scalac options (no discard unit). However, I think it's a nice replacement for `Observable[Unit]`.",
+        "createdAt" : "2017-11-14T18:45:14Z",
+        "updatedAt" : "2017-11-14T20:08:40Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "5e9272f240feb4f00bdea5ee50e2808699cd0d0e",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +6,10 @@ * Observable[Unit] is not descriptive of what the observable represents.\n * Instead, we create Unit-like types to better document what effects are\n * flowing through our application.\n */\nsealed abstract class Effects"
+  }
+]

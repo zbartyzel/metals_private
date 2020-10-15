@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "ae50c012-2525-4a2c-849a-054b4905f1d1",
+    "prId" : 1763,
+    "comments" : [
+      {
+        "id" : "30919d51-a52f-4a20-a9c5-64c2cc7e76be",
+        "parentId" : null,
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "index-modules-src.zip",
+        "createdAt" : "2020-05-19T19:06:34Z",
+        "updatedAt" : "2020-05-20T09:01:34Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1bb645b1-8e76-431f-bd05-4e995822bd17",
+        "parentId" : "30919d51-a52f-4a20-a9c5-64c2cc7e76be",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "it's not neccessarily modules, we test it also for JDK 8, which doesn't have modules.",
+        "createdAt" : "2020-05-20T08:28:22Z",
+        "updatedAt" : "2020-05-20T09:01:34Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "48c155158d1652e83ee4bf1cf2c98c3b1823b32f",
+    "line" : 12,
+    "diffHunk" : "@@ -1,1 +10,14 @@  }\n\n  test(\"index-src.zip\") {\n    val jdk = JdkSources.getOrThrow()\n    val symbolIndex = OnDemandSymbolIndex()"
+  }
+]

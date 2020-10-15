@@ -1,0 +1,124 @@
+[
+  {
+    "id" : "f22c3260-5d40-4d85-b9ca-fd475bc2fc80",
+    "prId" : 1640,
+    "comments" : [
+      {
+        "id" : "1254659e-a757-47be-b1df-b6dc22818bb7",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "In case of Scala 3 we get additional reference for Descriptor.Type when using main methods, so we can use that. In the future it could change to a method, but that depends on the changes in Dotty.",
+        "createdAt" : "2020-04-20T14:24:13Z",
+        "updatedAt" : "2020-04-20T14:24:13Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "72071e33226d4f770c565ba8cec004944bbad53d",
+    "line" : 19,
+    "diffHunk" : "@@ -1,1 +93,97 @@      descriptors = {\n        if (ScalaVersions.isScala3Version(buildTarget.scalaVersion))\n          List(Descriptor.Term, Descriptor.Type)\n        else List(Descriptor.Term)\n      }"
+  },
+  {
+    "id" : "fcd83fc9-9145-4704-ba6b-2148725ebeec",
+    "prId" : 1466,
+    "comments" : [
+      {
+        "id" : "e754e894-8e40-46cf-b224-53866f4a0e56",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Would `Option` not be enough at least here?",
+        "createdAt" : "2020-03-30T15:13:44Z",
+        "updatedAt" : "2020-04-03T11:50:57Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "56a8f705-1d27-45c3-a406-275ecdcd933c",
+        "parentId" : "e754e894-8e40-46cf-b224-53866f4a0e56",
+        "author" : {
+          "login" : "alekseiAlefirov",
+          "name" : "Aleksei Alefirov",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/10850363?v=4"
+        },
+        "body" : "actually, I've made it a List motivated by your idea to report multiple source targets https://github.com/scalameta/metals/pull/1466#discussion_r384661635",
+        "createdAt" : "2020-03-30T15:56:10Z",
+        "updatedAt" : "2020-04-03T11:50:57Z",
+        "lastEditedBy" : {
+          "login" : "alekseiAlefirov",
+          "name" : "Aleksei Alefirov",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/10850363?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6a66dace-85f2-4ffd-9563-329f4a72d572",
+        "parentId" : "e754e894-8e40-46cf-b224-53866f4a0e56",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Ach, nvm. I just thought it's `toList` from Option. Nevermind then :sweat_smile: ",
+        "createdAt" : "2020-03-30T16:11:49Z",
+        "updatedAt" : "2020-04-03T11:50:57Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d72fc182a42fd127dd0593dfbb3028ac615338b9",
+    "line" : 16,
+    "diffHunk" : "@@ -1,1 +41,45 @@  private def findClassesBy[A](\n      f: Classes => Option[A]\n  ): List[(A, b.BuildTargetIdentifier)] = {\n    index\n      .mapValues(f)"
+  },
+  {
+    "id" : "035caa57-e7a2-43d2-b265-92dbc91ac48a",
+    "prId" : 728,
+    "comments" : [
+      {
+        "id" : "8e6da3d1-21d7-451f-a953-9b10bfd868d0",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Docstring proposal\r\n\r\n> Manages in-memory index of main/test class symbols grouped by their enclosing build targets.",
+        "createdAt" : "2019-05-23T13:13:20Z",
+        "updatedAt" : "2019-05-24T09:17:46Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "9d3f311622eae8bedf5d893e5016c35523e74815",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +12,16 @@ * In-memory index of main class symbols grouped by their enclosing build target\n */\nfinal class BuildTargetClasses(\n    buildServer: () => Option[BuildServerConnection]\n)(implicit val ec: ExecutionContext) {"
+  }
+]

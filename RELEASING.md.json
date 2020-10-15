@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "4a55e138-77ff-42fd-94cf-727ff55a054e",
+    "prId" : 411,
+    "comments" : [
+      {
+        "id" : "2645d50b-34db-4364-a6fc-0e155769f25a",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "are this invented numbers? Otherwise it's 0.3.0 I think.",
+        "createdAt" : "2018-12-14T15:38:59Z",
+        "updatedAt" : "2018-12-14T15:56:16Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e5ddae77-3a55-48a7-a285-0a4ce879cb6b",
+        "parentId" : "2645d50b-34db-4364-a6fc-0e155769f25a",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "This was copy-pasted from the  scalameta repo and adjusted, I kept the v3.3.0 example but reformulated so it makes sense here.",
+        "createdAt" : "2018-12-14T15:44:53Z",
+        "updatedAt" : "2018-12-14T15:56:16Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8196148c50b771f6966405c54880655af93a1d49",
+    "line" : 18,
+    "diffHunk" : "@@ -1,1 +16,20 @@  - Close the milestone or milestones corresponding to the release. For example,\n    for a v3.3.0 release, we close both 3.3.0 and 3.2.1 (because we never\n    released 3.2.1, so all its tickets went straight to 3.3.0).\n  - Create the milestone or milestones corresponding to future releases. For\n    example, for a v3.3.0 release, we create both v3.3.1 and v3.4.0."
+  }
+]

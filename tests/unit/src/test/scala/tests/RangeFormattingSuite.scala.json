@@ -1,0 +1,96 @@
+[
+  {
+    "id" : "b5bf0247-99df-4f6d-9fd2-44dfe789ca6b",
+    "prId" : 1505,
+    "comments" : [
+      {
+        "id" : "531c93e3-11a2-49c8-8607-6dee2a1595d4",
+        "parentId" : null,
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "can we modify this test to paste multiple lines? (also one below)",
+        "createdAt" : "2020-03-17T10:19:07Z",
+        "updatedAt" : "2020-03-17T14:46:42Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "99859615-706a-45d5-ae58-52746fb3e10f",
+        "parentId" : "531c93e3-11a2-49c8-8607-6dee2a1595d4",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "Sure! I added in two more tests to account for this.",
+        "createdAt" : "2020-03-17T14:49:34Z",
+        "updatedAt" : "2020-03-17T14:49:34Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "fdb5a38d8231228e2f26bf5f72437a9a6868eb6e",
+    "line" : 15,
+    "diffHunk" : "@@ -1,1 +75,79 @@       |                |'''.stripMargin\n       |}\"\"\".stripMargin,\n    s\"\"\"|  some text\"\"\".stripMargin,\n    s\"\"\"\n       |object Main {"
+  },
+  {
+    "id" : "efc1dfed-e785-46bd-bf89-f07eb9125fff",
+    "prId" : 968,
+    "comments" : [
+      {
+        "id" : "0aec9a31-8193-4a52-9483-2748e40e53a8",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Maybe also another test that add single `|` ?",
+        "createdAt" : "2019-10-10T07:50:06Z",
+        "updatedAt" : "2019-10-14T05:25:56Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "be81bfdd-e762-40fd-97ab-b4acfcd06f27",
+        "parentId" : "0aec9a31-8193-4a52-9483-2748e40e53a8",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "Ha, yes. Seeing that it was breaking if I did that, good call.",
+        "createdAt" : "2019-10-11T09:18:03Z",
+        "updatedAt" : "2019-10-14T05:25:56Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f64d2110efe05696503246eef780ee3f06207249",
+    "line" : 31,
+    "diffHunk" : "@@ -1,1 +110,114 @@       |  '''.stripMargin\n       |}\"\"\".stripMargin,\n    s\"\"\"| |first line\n        | |second line\n        | | different indent\"\"\".stripMargin,"
+  }
+]

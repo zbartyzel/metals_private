@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "54147fc7-0a3d-4ccf-b79b-948d6657eefd",
+    "prId" : 373,
+    "comments" : [
+      {
+        "id" : "8cd5372e-f64c-4ace-9162-48fd30580ca1",
+        "parentId" : null,
+        "author" : {
+          "login" : "laughedelic",
+          "name" : "Alexey Alekhin",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/766656?v=4"
+        },
+        "body" : "I think that both files are the same image and the first one should be different (first time import)",
+        "createdAt" : "2018-12-04T18:56:33Z",
+        "updatedAt" : "2018-12-04T19:25:16Z",
+        "lastEditedBy" : {
+          "login" : "laughedelic",
+          "name" : "Alexey Alekhin",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/766656?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "28312829-630a-41d1-be77-5e7313f8f0ad",
+        "parentId" : "8cd5372e-f64c-4ace-9162-48fd30580ca1",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Good catch, updated the Atom \"import via bloop\" image.",
+        "createdAt" : "2018-12-04T19:23:22Z",
+        "updatedAt" : "2018-12-04T19:25:16Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "59bd43b3c80624f41b57e5f4cc8c0beb011dac2a",
+    "line" : 21,
+    "diffHunk" : "@@ -1,1 +19,23 @@       |import step.\n       |\n       |![Import build](../assets/$editor-import-via-bloop.png)\n       |\n       |- you don't need Bloop installed on your machine to run this step."
+  }
+]

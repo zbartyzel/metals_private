@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "ae75c29c-0c81-42e2-9912-aa0eb27b1884",
+    "prId" : 1423,
+    "comments" : [
+      {
+        "id" : "e6ef4b19-40e4-456e-b64c-34c0e33279aa",
+        "parentId" : null,
+        "author" : {
+          "login" : "tanishiking",
+          "name" : "Rikito Taniguchi",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4"
+        },
+        "body" : "Contains `match` and `case` related logic.",
+        "createdAt" : "2020-02-12T23:48:19Z",
+        "updatedAt" : "2020-02-13T23:57:05Z",
+        "lastEditedBy" : {
+          "login" : "tanishiking",
+          "name" : "Rikito Taniguchi",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ce2b52a8d218744475d975f452c87e3167dadd7b",
+    "line" : 12,
+    "diffHunk" : "@@ -1,1 +10,14 @@import scala.meta.internal.jdk.CollectionConverters._\n\ntrait MatchCaseCompletions { this: MetalsGlobal =>\n\n  /**"
+  }
+]

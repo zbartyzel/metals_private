@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "eddcd4e4-2cf8-4dce-91f3-5b8a584b62ae",
+    "prId" : 2058,
+    "comments" : [
+      {
+        "id" : "d44ee06b-01e7-40be-9eb6-1995676a3448",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Fun fact, this never added anything for Scala 3, which is why some tests worked even with bad dependencies. CrossReferenceLspSuite and RenameCrossSuite were the only ones that were problematic.",
+        "createdAt" : "2020-09-09T16:14:26Z",
+        "updatedAt" : "2020-09-09T16:14:26Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "49f3e691-7977-4d6b-b93f-0951bdd38d72",
+        "parentId" : "d44ee06b-01e7-40be-9eb6-1995676a3448",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Ach! This is due to the fact that else was operating on the whole expression with the `++`",
+        "createdAt" : "2020-09-09T16:52:58Z",
+        "updatedAt" : "2020-09-09T16:52:59Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "dcb34293-aaa5-4233-b824-b44e2e212a63",
+        "parentId" : "d44ee06b-01e7-40be-9eb6-1995676a3448",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "👀 good catch ha",
+        "createdAt" : "2020-09-09T18:44:10Z",
+        "updatedAt" : "2020-09-09T18:44:10Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e11a69983e1a8daa20e5799f5ecff8caae86da92",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +118,122 @@          s\"org.scala-lang:scala-reflect:$scalaVersion\"\n        )\n      }\n\n    val allDependencies = scalaDependencies ++ libraryDependencies"
+  }
+]

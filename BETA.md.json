@@ -1,0 +1,124 @@
+[
+  {
+    "id" : "64a01391-f462-4c3d-a79c-d34688a3faaa",
+    "prId" : 218,
+    "comments" : [
+      {
+        "id" : "7b00a50d-a719-44ff-89c1-a252b50ccb6d",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "Installing the metals VSCode extension now automatically ensures that https://marketplace.visualstudio.com/items?itemName=scala-lang.scala is installed.",
+        "createdAt" : "2018-04-02T13:59:54Z",
+        "updatedAt" : "2018-04-02T13:59:55Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "068a26e77742148e377252e19071478495c26d1e",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +30,34 @@* `cd vscode-extension`\n* `npm install`\n* `npm run build`\n* `code --install-extension metals-0.1.0.vsix`\n"
+  },
+  {
+    "id" : "6ca8f1fb-5ab0-4199-b8fd-5740662edb31",
+    "prId" : 137,
+    "comments" : [
+      {
+        "id" : "c8c87ae6-5ccc-4ca2-9207-98dacc0c8bb5",
+        "parentId" : null,
+        "author" : {
+          "login" : "cquiroz",
+          "name" : "Carlos Quiroz",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3615303?u=4f8908ca530e79d2da27aa9fb58e557c85452a14&v=4"
+        },
+        "body" : "I was exactly looking for this, but can this be enable without touching any of the `sbt` files?",
+        "createdAt" : "2017-12-18T20:54:53Z",
+        "updatedAt" : "2017-12-18T20:59:48Z",
+        "lastEditedBy" : {
+          "login" : "cquiroz",
+          "name" : "Carlos Quiroz",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3615303?u=4f8908ca530e79d2da27aa9fb58e557c85452a14&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "af5320bb-1404-4bb5-8c55-d7bdc3666d35",
+        "parentId" : "c8c87ae6-5ccc-4ca2-9207-98dacc0c8bb5",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Yes, this works without touching any sbt files.",
+        "createdAt" : "2017-12-18T20:59:19Z",
+        "updatedAt" : "2017-12-18T20:59:48Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c0a22d5b4b0bec14b8334b06379a15781329cd9e",
+    "line" : 22,
+    "diffHunk" : "@@ -1,1 +43,47 @@```\n\nThe second option is to enable `semanticdb-scalac` only for an active sbt session by running `semanticdbEnable` from the sbt shell.\n```scala\n$ sbt"
+  },
+  {
+    "id" : "1a347fc9-6e6e-4af9-96ff-0c3125019115",
+    "prId" : 79,
+    "comments" : [
+      {
+        "id" : "87593d73-527a-40f3-9750-b6acf56ca49d",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Should we mention addCompilerPlugin(semanticdb)? It's currently required for definitions.",
+        "createdAt" : "2017-11-30T21:24:15Z",
+        "updatedAt" : "2017-12-01T15:49:11Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a392d020-3faf-4fd4-b4ec-39e1429452ab",
+        "parentId" : "87593d73-527a-40f3-9750-b6acf56ca49d",
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "ah, yes, totally forgot about that, thanks",
+        "createdAt" : "2017-11-30T21:31:36Z",
+        "updatedAt" : "2017-12-01T15:49:11Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a2b2357bcf2208d48b22765e74dc151800c0218d",
+    "line" : 59,
+    "diffHunk" : "@@ -1,1 +57,61 @@\nFinally, since most features currently rely on a successful compilation step, make sure you incrementally\ncompile your project by running `~compile` in `sbt`."
+  }
+]

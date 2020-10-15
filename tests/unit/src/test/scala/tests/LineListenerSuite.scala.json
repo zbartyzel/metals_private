@@ -1,0 +1,77 @@
+[
+  {
+    "id" : "a764d383-2cbd-4be5-b0eb-dcb920d5ebbb",
+    "prId" : 727,
+    "comments" : [
+      {
+        "id" : "9778f7e9-e687-48fc-891c-7359c251f041",
+        "parentId" : null,
+        "author" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "body" : "Couldn't hurt to check how it behaves with unicode now, when we operate on bytes.",
+        "createdAt" : "2019-05-23T16:04:27Z",
+        "updatedAt" : "2019-05-24T09:56:49Z",
+        "lastEditedBy" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f13cbb89-565e-4aac-9585-03d747282ab8",
+        "parentId" : "9778f7e9-e687-48fc-891c-7359c251f041",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "The state machine operates on characters and does not nothing until it hits the first character with int value 27. I've added a new test case to demonstrate that unicode characters are unaffected.",
+        "createdAt" : "2019-05-23T18:34:39Z",
+        "updatedAt" : "2019-05-24T09:56:49Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ec9c0395fa83c2e41f0331e8f4bddea0b2709085",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +4,8 @@import scala.collection.mutable\n\nobject LineListenerSuite extends BaseSuite {\n  def check(\n      name: String,"
+  },
+  {
+    "id" : "80674a3b-6724-494b-ac14-0b1e59bb8de1",
+    "prId" : 727,
+    "comments" : [
+      {
+        "id" : "5a471976-e54c-4411-9e50-813903fd0519",
+        "parentId" : null,
+        "author" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "body" : "+1",
+        "createdAt" : "2019-05-23T19:10:21Z",
+        "updatedAt" : "2019-05-24T09:56:49Z",
+        "lastEditedBy" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ec9c0395fa83c2e41f0331e8f4bddea0b2709085",
+    "line" : 66,
+    "diffHunk" : "@@ -1,1 +64,68 @@  check(\n    \"emoji\", { out =>\n      out.appendString(\"🇮🇸🇵🇱\")\n    },\n    List(\"🇮🇸🇵🇱\")"
+  }
+]

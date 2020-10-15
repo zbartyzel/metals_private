@@ -1,0 +1,115 @@
+[
+  {
+    "id" : "115755b2-791e-4365-ac64-52cbe6e5f2ba",
+    "prId" : 2075,
+    "comments" : [
+      {
+        "id" : "b94223b9-674c-4cb2-bb9d-2f8a9ffa657b",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "We actually had this just as a string before, when in reality this as an Array with a URI in the first position and a filename in the second position.",
+        "createdAt" : "2020-09-17T16:21:06Z",
+        "updatedAt" : "2020-09-17T19:56:13Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "42aceb96ae53255c6f79a177b0a6944f072a9689",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +256,260 @@       |Note: requires 'metals/inputBox' capability from language client.\n       |\"\"\".stripMargin,\n    \"\"\"|[string[]], where the first is a directory location for the new file.\n       |The second and third positions correspond to the file name and file type to allow for quick\n       |creation of a file if all are present."
+  },
+  {
+    "id" : "83e7de20-9783-4959-8401-1481bdf61322",
+    "prId" : 1339,
+    "comments" : [
+      {
+        "id" : "7d6d54b8-660d-4ee8-97ff-da444a492f07",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "We should be able to just pack it into Option? Or is it a gson limitation?",
+        "createdAt" : "2020-02-05T11:34:41Z",
+        "updatedAt" : "2020-02-06T14:07:14Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6b453c6d-cfe3-48b4-a750-9b15da9facf5",
+        "parentId" : "7d6d54b8-660d-4ee8-97ff-da444a492f07",
+        "author" : {
+          "login" : "alekseiAlefirov",
+          "name" : "Aleksei Alefirov",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/10850363?v=4"
+        },
+        "body" : "I just followed other params case class declaration, like `MetalsStatusParams`. I would guess, it's a lsp4j limitation, not sure. Maybe @olafurpg  can comment on this ?\r\nThen I do `Option(directory)`, yes.",
+        "createdAt" : "2020-02-05T11:41:58Z",
+        "updatedAt" : "2020-02-06T14:07:14Z",
+        "lastEditedBy" : {
+          "login" : "alekseiAlefirov",
+          "name" : "Aleksei Alefirov",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/10850363?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3558cb75-d968-4078-9d27-d9ecc382c298",
+        "parentId" : "7d6d54b8-660d-4ee8-97ff-da444a492f07",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "We're using gson to serialize to JSON and I think you need custom gson adapters to support `Option[T]`",
+        "createdAt" : "2020-02-06T14:01:56Z",
+        "updatedAt" : "2020-02-06T14:07:14Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a9e5ec2e-1387-4ae4-87d2-b65248afea88",
+        "parentId" : "7d6d54b8-660d-4ee8-97ff-da444a492f07",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "The `@Nullable` annotation isn't required, but I used it to document field where I would have preferred to use `Option[T]`",
+        "createdAt" : "2020-02-06T14:02:23Z",
+        "updatedAt" : "2020-02-06T14:07:14Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f1e1175d6c0f716c374b1bc575ac9a28a3290743",
+    "line" : 42,
+    "diffHunk" : "@@ -1,1 +223,227 @@\ncase class MetalsNewScalaFileParams(\n    @Nullable directory: String,\n    name: String,\n    kind: String"
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "id" : "3e38da0e-6741-45e5-830f-a0aa7bda809a",
+    "prId" : 294,
+    "comments" : [
+      {
+        "id" : "541b48d8-8c5f-4084-b885-becba0d912d5",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "![wow](https://user-images.githubusercontent.com/1408093/39279566-776d8d30-48e9-11e8-94db-152429c11b1c.jpg)\r\n",
+        "createdAt" : "2018-04-26T00:33:53Z",
+        "updatedAt" : "2018-05-08T16:31:25Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c40a1413bb611d9c7cbe341adbcd54306b22398b",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +6,10 @@ */\n\nconst React = require('react');\n\nconst CompLibrary = require('../../core/CompLibrary.js');"
+  },
+  {
+    "id" : "d7ccf79d-6e12-431b-b0ee-43c74476e53a",
+    "prId" : 294,
+    "comments" : [
+      {
+        "id" : "cc9a15ed-b1e2-4a99-92f2-6d6e3d059ab0",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "how much work would it be to reuse the same setup for scalafmt/scalameta docs? Would we have to copy-paste these components or is there a smarter way to share code?",
+        "createdAt" : "2018-04-26T00:41:39Z",
+        "updatedAt" : "2018-05-08T16:31:25Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b3cfd724-77c7-4079-aee0-b1860f6edb0f",
+        "parentId" : "cc9a15ed-b1e2-4a99-92f2-6d6e3d059ab0",
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "Docusaurus provides some basic building blocks (https://docusaurus.io/docs/en/api-pages.html#provided-components), the rest we'll have to copy paste.",
+        "createdAt" : "2018-05-05T15:38:32Z",
+        "updatedAt" : "2018-05-08T16:31:25Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c40a1413bb611d9c7cbe341adbcd54306b22398b",
+    "line" : 29,
+    "diffHunk" : "@@ -1,1 +27,31 @@}\n\nclass Button extends React.Component {\n  render() {\n    return ("
+  }
+]

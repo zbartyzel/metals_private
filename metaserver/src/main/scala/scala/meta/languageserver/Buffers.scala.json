@@ -1,0 +1,87 @@
+[
+  {
+    "id" : "03a48cac-e02c-4bff-98fb-a52ff0b46cba",
+    "prId" : 93,
+    "comments" : [
+      {
+        "id" : "1418b8f7-e0d3-4371-890b-d4b5c1e0667f",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "I was gonna propose that we convert this into some `Observable[Source]` for the active open buffer but I don't think that will work since we don't receive a notification when the active/focused buffer changes. We only receive notifications didChange and documentSymbols. \r\n\r\nI think keeping this in `Buffers` is actually not as bad as it seems at first sight. Can we maybe hook into the `didClose` event to remove stale sources?",
+        "createdAt" : "2017-12-04T06:58:00Z",
+        "updatedAt" : "2017-12-04T23:49:22Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ee7242a5-66c5-4127-ba03-1bf3d816fc45",
+        "parentId" : "1418b8f7-e0d3-4371-890b-d4b5c1e0667f",
+        "author" : {
+          "login" : "laughedelic",
+          "name" : "Alexey Alekhin",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/766656?v=4"
+        },
+        "body" : "> I think keeping this in Buffers is actually not as bad as it seems at first sight.\r\n\r\nIs the parsed `Source` per buffer useful anywhere else?\r\n\r\n> Can we maybe hook into the didClose event to remove stale sources?\r\n\r\nGood idea, I will add it.",
+        "createdAt" : "2017-12-04T20:10:35Z",
+        "updatedAt" : "2017-12-04T23:49:22Z",
+        "lastEditedBy" : {
+          "login" : "laughedelic",
+          "name" : "Alexey Alekhin",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/766656?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "bd70109b-89d8-4760-a9c7-2b7661d0d1ff",
+        "parentId" : "1418b8f7-e0d3-4371-890b-d4b5c1e0667f",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "> Is the parsed Source per buffer useful anywhere else?\r\n\r\nYes, in scalafix. We should share the pipeline between the two, putting it in Buffers is a good start.",
+        "createdAt" : "2017-12-04T21:52:38Z",
+        "updatedAt" : "2017-12-04T23:49:22Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "85f6ec4b-c8a4-41df-b310-a066383d947a",
+        "parentId" : "1418b8f7-e0d3-4371-890b-d4b5c1e0667f",
+        "author" : {
+          "login" : "laughedelic",
+          "name" : "Alexey Alekhin",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/766656?v=4"
+        },
+        "body" : "Added hook for `didClose` event in d890af94d4d84e3e2267a08f8b92ce761fa4a7a7. Should it also remove from the `contents` map?",
+        "createdAt" : "2017-12-04T23:43:25Z",
+        "updatedAt" : "2017-12-04T23:49:22Z",
+        "lastEditedBy" : {
+          "login" : "laughedelic",
+          "name" : "Alexey Alekhin",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/766656?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7b17cbf33208eb27890af0e9b1a6a7b9016afbcb",
+    "line" : 25,
+    "diffHunk" : "@@ -1,1 +46,50 @@    Option(contents.get(path)).getOrElse(readFromDisk(path))\n\n  private val sources: JMap[AbsolutePath, Source] = new ConcurrentHashMap()\n  // Tries to parse and record it or fallback to an old source if it existed\n  def source(path: AbsolutePath): Option[Source] ="
+  }
+]

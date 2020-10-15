@@ -1,0 +1,1684 @@
+[
+  {
+    "id" : "5f6c18dd-2416-4a1e-b2af-84c8fd820780",
+    "prId" : 1911,
+    "comments" : [
+      {
+        "id" : "37385549-44b2-46b4-81a2-e012942c9376",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "I'm confused by this, what was the `onBuildTargets` method here supposed to be doing?",
+        "createdAt" : "2020-07-14T14:49:07Z",
+        "updatedAt" : "2020-07-14T16:55:06Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9457520e-0e21-4cd1-95fd-0a0b851f5bc5",
+        "parentId" : "37385549-44b2-46b4-81a2-e012942c9376",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "It's another leftover from Pants, came up when I added the explicits flag.",
+        "createdAt" : "2020-07-14T15:01:26Z",
+        "updatedAt" : "2020-07-14T16:55:06Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3cddbb0f161f90f3fa8877a263f2cac238b065b7",
+    "line" : 50,
+    "diffHunk" : "@@ -1,1 +1852,1856 @@    }\n    timedThunk(\n      \"started file watcher\",\n      clientConfig.initialConfig.statistics.isIndex\n    ) {"
+  },
+  {
+    "id" : "47b7890f-5f75-4b56-9f43-13ad91cfd9b9",
+    "prId" : 1897,
+    "comments" : [
+      {
+        "id" : "bd67a5b7-f48b-4dcd-ab69-0d82eafa4b50",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Maybe include it in the Doctor?  I feel like it's part of the Doctor's functionality. ",
+        "createdAt" : "2020-07-08T14:42:36Z",
+        "updatedAt" : "2020-07-10T08:47:16Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "17e2b075-0319-4344-9f18-c316599ee081",
+        "parentId" : "bd67a5b7-f48b-4dcd-ab69-0d82eafa4b50",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "I always prefer smaller, single responsibility classes but I have no strong preference here, if you want I can move this logic to Doctor :+1:",
+        "createdAt" : "2020-07-09T07:42:53Z",
+        "updatedAt" : "2020-07-10T08:47:16Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c6d453fd-8e4e-41d5-ba67-280f6e7cad84",
+        "parentId" : "bd67a5b7-f48b-4dcd-ab69-0d82eafa4b50",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "It's fine, but at some point we need a proper solution for setting up all the classes better.",
+        "createdAt" : "2020-07-09T11:58:31Z",
+        "updatedAt" : "2020-07-10T08:47:16Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b4ee63466d31865c307be3d378bd799c95063e2f",
+    "line" : 12,
+    "diffHunk" : "@@ -1,1 +504,508 @@      clientConfig\n    )\n    popupChoiceReset = new PopupChoiceReset(\n      tables,\n      languageClient,"
+  },
+  {
+    "id" : "2cbff0bd-c6ca-44b2-b4c4-8039fc76b8b3",
+    "prId" : 1846,
+    "comments" : [
+      {
+        "id" : "3e93923b-7c89-454e-b64a-6e005d996706",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "Was this an issue before? Would this only be an issue if for example the source was removed and then we were looking at stale information, or when would this actually happen?",
+        "createdAt" : "2020-06-19T19:57:13Z",
+        "updatedAt" : "2020-06-21T18:57:33Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "719e2779-97ac-4662-b4b3-00f5d2d9477d",
+        "parentId" : "3e93923b-7c89-454e-b64a-6e005d996706",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "This is actually only an issue if ammonite failed to generate the scala files, which also means we should watch the `.ammonite` directory, since they can be created after indexing :thinking: ",
+        "createdAt" : "2020-06-19T22:24:34Z",
+        "updatedAt" : "2020-06-21T18:57:33Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "83b4c027-bb99-4e59-bd11-cf50e9a5cf93",
+        "parentId" : "3e93923b-7c89-454e-b64a-6e005d996706",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Actually, it didn't fail to generate, ammonite just differently generates path if `^` is used, which should not normally be an issue, but we should leave the guard just in case: I will change the tests a bit so that it's more natural path and not `^.backToTheSameDirectory`",
+        "createdAt" : "2020-06-20T20:06:42Z",
+        "updatedAt" : "2020-06-21T18:57:33Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "10223975ce00488d39a58765d57e434b217aeb21",
+    "line" : 16,
+    "diffHunk" : "@@ -1,1 +1688,1692 @@    try {\n      val sourceToIndex0 = sourceToIndex(source, targetOpt)\n      if (sourceToIndex0.exists) {\n        val reluri = source.toIdeallyRelativeURI(sourceItem)\n        val input = sourceToIndex0.toInput"
+  },
+  {
+    "id" : "4071fbba-fea0-425b-b343-a0c58bc7bb98",
+    "prId" : 1803,
+    "comments" : [
+      {
+        "id" : "63aabd96-824f-40fd-9300-43d89beaaa6d",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "This might also be useful to log anyway just in case. There will be a fix in ammonite to not remove those directories, which will help in the long run.",
+        "createdAt" : "2020-06-04T12:22:32Z",
+        "updatedAt" : "2020-06-04T12:22:32Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a821715e949ca87e48cc5b41fe70815789eae405",
+    "line" : 11,
+    "diffHunk" : "@@ -1,1 +1821,1825 @@        // where it can rarely deletes directories while we are trying to watch them\n        case NonFatal(e) =>\n          scribe.warn(\"File watching failed, indexes will not be updated.\", e)\n      }\n    }"
+  },
+  {
+    "id" : "8f1411bd-6ffe-4d0d-91ef-48896065298e",
+    "prId" : 1784,
+    "comments" : [
+      {
+        "id" : "fb0b98c4-54c2-49a8-af7b-9ac43038ce27",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "This is needed so that we are able to be able to figure out what the original source roots were and and find their path relative to workspace root",
+        "createdAt" : "2020-05-29T16:32:09Z",
+        "updatedAt" : "2020-05-29T17:13:56Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "96739e67fcaac88a3d90e0225eec023b4b4e8293",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +1802,1806 @@        source <- item.getSources.asScala\n      } {\n        val sourceItemPath = source.getUri.toAbsolutePath(followSymlink = false)\n        buildTargets.addSourceItem(sourceItemPath, item.getTarget)\n      }"
+  },
+  {
+    "id" : "fc98537f-173d-4908-8992-a1ef48eb617d",
+    "prId" : 1758,
+    "comments" : [
+      {
+        "id" : "3da1d477-9d8e-4c50-a159-a8d9873fafe0",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Maybe we should filter the ones with incompatible versions and show a warning for those?",
+        "createdAt" : "2020-05-18T10:40:39Z",
+        "updatedAt" : "2020-05-21T13:59:54Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "48d7f315-9a36-4c07-bb95-4a7334a077b9",
+        "parentId" : "3da1d477-9d8e-4c50-a159-a8d9873fafe0",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "So one thing I thought about while doing this is in a situation where a user has an sbt and a mill file for example, I think it's important for the choice to take priority. Because let's say they are on an unsupported sbt version, but they want sbt, then it's probably better for them to choose sbt and then get a warning and \"no build tool\" message rather than have sbt filtered out, and mill chosen even if that's not what they want.\r\n\r\nWhat do you think?",
+        "createdAt" : "2020-05-18T11:57:29Z",
+        "updatedAt" : "2020-05-21T13:59:54Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "80c2952d-6959-4dc7-a2d8-f494d8d869c8",
+        "parentId" : "3da1d477-9d8e-4c50-a159-a8d9873fafe0",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Sure, that's probably better.",
+        "createdAt" : "2020-05-18T13:35:51Z",
+        "updatedAt" : "2020-05-21T13:59:54Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "82833ad1c0108993cd84f5b3b8aba65d1107aace",
+    "line" : 37,
+    "diffHunk" : "@@ -1,1 +1462,1466 @@    }\n\n    buildTools.loadSupported match {\n      case Nil => {\n        if (!buildTools.isAutoConnectable) {"
+  },
+  {
+    "id" : "6f9fed50-456d-45bd-916e-5727b1e94b7d",
+    "prId" : 1717,
+    "comments" : [
+      {
+        "id" : "3fa1e166-1cba-4d5c-a878-4cb832bb0ba9",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "So probably the best that we can do currently is add an option to MetalsServerConfig like:\r\n```scala\r\n  allowMultilineStringFormatting = MetalsServerConfig.binaryOption(\r\n      \"metals.allow-multiline-string-formatting\",\r\n      default = true\r\n    ),\r\n```\r\nAnd then:\r\n```scala      \r\n\r\ncapabilities.setDocumentRangeFormattingProvider(initialConfig.allowMultilineStringFormatting)\r\n```",
+        "createdAt" : "2020-05-08T17:32:59Z",
+        "updatedAt" : "2020-05-12T14:12:17Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b2e25e3cd0a9f38ceefc59fbff6f94d7e31be601",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +542,546 @@        new DocumentOnTypeFormattingOptions(\"\\n\")\n      )\n      capabilities.setDocumentRangeFormattingProvider(\n        initialConfig.allowMultilineStringFormatting\n      )"
+  },
+  {
+    "id" : "04d8d251-3715-48a3-87ef-efb0b80600cf",
+    "prId" : 1538,
+    "comments" : [
+      {
+        "id" : "2afbe0dc-30fb-4804-9f0f-9a664212279b",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Maybe we could have this:\r\n```scala\r\n    val toIndexSource = targetOpt\r\n      .flatMap(ammonite.generatedScalaPath(_, source))\r\n      .getOrElse(source)\r\n```\r\nin a separate function and just use here to get the real source item?",
+        "createdAt" : "2020-03-31T17:41:32Z",
+        "updatedAt" : "2020-05-21T11:17:43Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "341c4bae-983f-4dac-b64b-18f88a72858e",
+        "parentId" : "2afbe0dc-30fb-4804-9f0f-9a664212279b",
+        "author" : {
+          "login" : "alexarchambault",
+          "name" : "Alexandre Archambault",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7063723?u=d5befca0ebfec0042dad7ef93973490eef750ff4&v=4"
+        },
+        "body" : "Done.",
+        "createdAt" : "2020-04-05T22:17:53Z",
+        "updatedAt" : "2020-05-21T11:17:44Z",
+        "lastEditedBy" : {
+          "login" : "alexarchambault",
+          "name" : "Alexandre Archambault",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7063723?u=d5befca0ebfec0042dad7ef93973490eef750ff4&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0681fa0b1417b7ac622101d279667c6900a2506e",
+    "line" : 204,
+    "diffHunk" : "@@ -1,1 +1622,1626 @@        buildTargets.linkSourceFile(target, source)\n      }\n      indexSourceFile(source, Some(sourceItem), targets.asScala.headOption)\n    }\n  }"
+  },
+  {
+    "id" : "07effa64-e5b5-4f61-9e7d-ed132c81eb84",
+    "prId" : 1538,
+    "comments" : [
+      {
+        "id" : "889545cc-798e-4720-9ccb-f977f514a82c",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Could we reindex only the Ammonite targets when needed? ",
+        "createdAt" : "2020-04-09T11:00:44Z",
+        "updatedAt" : "2020-05-21T11:17:44Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "43f9571a-4e6f-4e7d-a564-a5b5d4918fda",
+        "parentId" : "889545cc-798e-4720-9ccb-f977f514a82c",
+        "author" : {
+          "login" : "alexarchambault",
+          "name" : "Alexandre Archambault",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7063723?u=d5befca0ebfec0042dad7ef93973490eef750ff4&v=4"
+        },
+        "body" : "I don't know… It seems that would require being able to remove particular build targets from the indices (only the Ammonite ones that changed when (re)importing Ammonite scripts, or only the main build ones when (re)importing the main build), before adding them back with updated parameters. I don't know if that's do-able.",
+        "createdAt" : "2020-04-11T14:06:47Z",
+        "updatedAt" : "2020-05-21T11:17:44Z",
+        "lastEditedBy" : {
+          "login" : "alexarchambault",
+          "name" : "Alexandre Archambault",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7063723?u=d5befca0ebfec0042dad7ef93973490eef750ff4&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0681fa0b1417b7ac622101d279667c6900a2506e",
+    "line" : 284,
+    "diffHunk" : "@@ -1,1 +1766,1770 @@  }\n\n  private var lastImportedBuild = ImportedBuild.empty\n\n  private def indexWorkspace(check: () => Unit): Unit = {"
+  },
+  {
+    "id" : "d5a00b1f-041b-4756-9aa9-489ccc38235c",
+    "prId" : 1491,
+    "comments" : [
+      {
+        "id" : "3c4b613c-178f-4f00-8814-c7ca5cc0ddac",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Will this trigger a warning if I'm running a custom version of Bloop locally? Ideally, it would be good to only trigger this when the user has explicitly configured a bloop version through the settings before (I personally don't change this setting).",
+        "createdAt" : "2020-03-12T08:46:51Z",
+        "updatedAt" : "2020-03-12T10:12:33Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4879c162-3a9e-46fe-a03a-e7388387f061",
+        "parentId" : "3c4b613c-178f-4f00-8814-c7ca5cc0ddac",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Fixed!",
+        "createdAt" : "2020-03-12T10:22:06Z",
+        "updatedAt" : "2020-03-12T10:22:06Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cbbdead8d9342cae1e125b6d8574ec11521afe81",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +841,845 @@          val expectedBloopVersion = userConfig.currentBloopVersion\n          val correctVersionRunning =\n            buildServer.map(_.version).contains(expectedBloopVersion)\n          val allVersionsDefined = buildServer.nonEmpty && userConfig.bloopVersion.nonEmpty\n          val changedToNoVersion = old.bloopVersion.isDefined && userConfig.bloopVersion.isEmpty"
+  },
+  {
+    "id" : "adf2fc03-4df0-44fc-858c-853bec10dbf9",
+    "prId" : 1435,
+    "comments" : [
+      {
+        "id" : "2acaeaab-5900-4b57-b4cd-b2ad238f0da4",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Since it's for the test, it's better that we wait.",
+        "createdAt" : "2020-02-17T14:53:50Z",
+        "updatedAt" : "2020-02-17T16:18:06Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "fb025d5358f8296b853bbb7ede33b89e75356b35",
+    "line" : 19,
+    "diffHunk" : "@@ -1,1 +803,807 @@        val event =\n          new DirectoryChangeEvent(EventType.MODIFY, generatedFile.toNIO, 1)\n        didChangeWatchedFiles(event).get()\n      }\n    }"
+  },
+  {
+    "id" : "cd633791-e496-4fd4-b122-fc934b927a81",
+    "prId" : 1435,
+    "comments" : [
+      {
+        "id" : "adb8ac6d-abd3-480f-afdd-4fc65324f2a8",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "It's now run in a Future in order not to block the event watcher",
+        "createdAt" : "2020-02-17T15:47:31Z",
+        "updatedAt" : "2020-02-17T16:18:06Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "fb025d5358f8296b853bbb7ede33b89e75356b35",
+    "line" : 70,
+    "diffHunk" : "@@ -1,1 +881,885 @@        onChange(List(path)).asJava\n      } else if (path.isSemanticdb) {\n        Future {\n          event.eventType() match {\n            case EventType.DELETE =>"
+  },
+  {
+    "id" : "0f2aa71c-c487-4cf4-a82f-16933c635c6f",
+    "prId" : 1310,
+    "comments" : [
+      {
+        "id" : "014e1a34-c1e5-4308-a747-d09d423caa7b",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "This will crash with `MatchError` when the user doesn't want to reconnect.",
+        "createdAt" : "2020-01-17T19:49:28Z",
+        "updatedAt" : "2020-01-19T10:49:31Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "45ef2bb6-636a-4ae7-a362-d5a3b9fce946",
+        "parentId" : "014e1a34-c1e5-4308-a747-d09d423caa7b",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Thanks, fixed!",
+        "createdAt" : "2020-01-18T18:58:40Z",
+        "updatedAt" : "2020-01-19T10:49:31Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e5a0168268324dcfda820d80b1b28f7833499098",
+    "line" : 12,
+    "diffHunk" : "@@ -1,1 +827,831 @@              .asScala\n              .flatMap {\n                case item if item == Messages.BloopVersionChange.reconnect =>\n                  bloopServers.shutdownServer()\n                  autoConnectToBuildServer().ignoreValue"
+  },
+  {
+    "id" : "8194c1d3-21af-4345-83df-4e2e8c67ec6a",
+    "prId" : 1286,
+    "comments" : [
+      {
+        "id" : "5f14af39-ab0e-4d2d-a2a0-e5de6ae0b607",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "I got this wrong in #1251. When the client supports code action literals we can send the `CodeActionOptions` version, otherwise we just send `true`",
+        "createdAt" : "2020-01-11T17:13:21Z",
+        "updatedAt" : "2020-01-11T17:13:21Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7e6135a896a913f6ec9a1ae82ca098806ffdfea3",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +515,519 @@      } else {\n        capabilities.setCodeActionProvider(true)\n      }\n      capabilities.setTextDocumentSync(TextDocumentSyncKind.Full)\n      capabilities.setExperimental(MetalsExperimental())"
+  },
+  {
+    "id" : "c4fe1dc8-985c-48fd-9c06-8065bde76e1b",
+    "prId" : 1266,
+    "comments" : [
+      {
+        "id" : "7c76854c-b424-4cbd-ae67-63bcdf776cf5",
+        "parentId" : null,
+        "author" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "body" : "could you also adapt the remaining methods on the `build` to return the scala `Future` as well?",
+        "createdAt" : "2020-01-09T11:22:45Z",
+        "updatedAt" : "2020-01-09T19:41:06Z",
+        "lastEditedBy" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "984f846e-771a-40c2-b0dc-e6f60ff4e77e",
+        "parentId" : "7c76854c-b424-4cbd-ae67-63bcdf776cf5",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Adapted most except `compile`, since the CompletableFuture.cancel is being used and don't want to rework cancellation right now.",
+        "createdAt" : "2020-01-09T19:25:50Z",
+        "updatedAt" : "2020-01-09T19:41:06Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0f92bf439ec2e556ef2dd37eb204d08963b7f24b",
+    "line" : 16,
+    "diffHunk" : "@@ -1,1 +1432,1436 @@    val importedBuild = timed(\"imported build\") {\n      for {\n        workspaceBuildTargets <- build.workspaceBuildTargets()\n        ids = workspaceBuildTargets.getTargets.map(_.getId)\n        scalacOptions <- build"
+  },
+  {
+    "id" : "bcfde5ff-2425-46e2-9e4d-e89a673b1860",
+    "prId" : 1256,
+    "comments" : [
+      {
+        "id" : "534918ab-7ebd-4289-9d7c-695d7b1c65e3",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "nit: should we move this into a separate file? ",
+        "createdAt" : "2020-01-06T16:35:07Z",
+        "updatedAt" : "2020-01-06T16:35:39Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "24a39550-95cc-4c1d-90ce-4806ab00c963",
+        "parentId" : "534918ab-7ebd-4289-9d7c-695d7b1c65e3",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "I think we should do it as a larger refactor of the file. I can see a number of similar methods that might be put there. ",
+        "createdAt" : "2020-01-06T17:11:17Z",
+        "updatedAt" : "2020-01-06T17:11:18Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "5221982e1605895d70c5abd22174e1406e1e0efb",
+    "line" : 30,
+    "diffHunk" : "@@ -1,1 +1659,1663 @@  }\n\n  private def checkRunningBloopVersion(bspServerVersion: String) = {\n    if (doctor.isUnsupportedBloopVersion(bspServerVersion)) {\n      val notification = tables.dismissedNotifications.IncompatibleBloop"
+  },
+  {
+    "id" : "bcf8414b-2a83-4f85-b004-13d242302701",
+    "prId" : 1250,
+    "comments" : [
+      {
+        "id" : "5888be4a-7282-43c3-89d2-263c7fd8c1d1",
+        "parentId" : null,
+        "author" : {
+          "login" : "tanishiking",
+          "name" : "Rikito Taniguchi",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4"
+        },
+        "body" : "Enable to fire `textDocument/completion` on type `*`",
+        "createdAt" : "2020-01-04T12:23:15Z",
+        "updatedAt" : "2020-01-13T13:44:04Z",
+        "lastEditedBy" : {
+          "login" : "tanishiking",
+          "name" : "Rikito Taniguchi",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cf8e6070092ac693251e01568b009a7f1bfce601",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +495,499 @@        new CompletionOptions(\n          config.compilers.isCompletionItemResolve,\n          List(\".\", \"*\").asJava\n        )\n      )"
+  },
+  {
+    "id" : "67e05fcc-ada8-4dca-97f2-9945fbeadf45",
+    "prId" : 1174,
+    "comments" : [
+      {
+        "id" : "7ab6961f-a98f-46b2-bf0a-360d744a83c7",
+        "parentId" : null,
+        "author" : {
+          "login" : "tanishiking",
+          "name" : "Rikito Taniguchi",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4"
+        },
+        "body" : "Clear symbolSearch cache (for dependency sources) on indexing workspace",
+        "createdAt" : "2019-12-15T17:54:47Z",
+        "updatedAt" : "2019-12-16T12:57:43Z",
+        "lastEditedBy" : {
+          "login" : "tanishiking",
+          "name" : "Rikito Taniguchi",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0d5f96fb977b6c73c44b8b5c061480393ecb1c82",
+    "line" : 37,
+    "diffHunk" : "@@ -1,1 +1600,1604 @@      treeView.reset()\n      worksheetProvider.reset()\n      symbolSearch.reset()\n      buildTargets.addWorkspaceBuildTargets(i.workspaceBuildTargets)\n      buildTargets.addScalacOptions(i.scalacOptions)"
+  },
+  {
+    "id" : "2139b9cc-79a1-444f-8d9c-6c418d139e0f",
+    "prId" : 1145,
+    "comments" : [
+      {
+        "id" : "d889675e-fca3-4d6b-b505-5547a83244de",
+        "parentId" : null,
+        "author" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "body" : "Why do we allow creating incompatible a BuildTool with incompatible version?",
+        "createdAt" : "2019-12-05T08:10:37Z",
+        "updatedAt" : "2019-12-05T11:14:30Z",
+        "lastEditedBy" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "92e6f7fd-f096-48b2-bf05-80f4c5c3c229",
+        "parentId" : "d889675e-fca3-4d6b-b505-5547a83244de",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "This code is unchanged in this PR, it just moved causing a diff. Please open an issue if you want to follow up on this.",
+        "createdAt" : "2019-12-05T10:29:23Z",
+        "updatedAt" : "2019-12-05T11:14:30Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c032fa899f1747d53cf2025b6e1cf03227b19980",
+    "line" : 56,
+    "diffHunk" : "@@ -1,1 +1274,1278 @@    buildTools.loadSupported match {\n      case Some(buildTool) =>\n        val isCompatibleVersion = BuildTool.isCompatibleVersion(\n          buildTool.minimumVersion,\n          buildTool.version"
+  },
+  {
+    "id" : "8df07cf6-559b-4980-bcf1-e7463ffb6cbd",
+    "prId" : 1145,
+    "comments" : [
+      {
+        "id" : "0cd6420b-e244-4339-a9c5-57a39d434ed2",
+        "parentId" : null,
+        "author" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "body" : "Could you also include the minimal version which is required so the user knows how far it must be upgraded? Also, the recommended version, since it is already known, could be useful to the user.",
+        "createdAt" : "2019-12-05T08:11:59Z",
+        "updatedAt" : "2019-12-05T11:14:30Z",
+        "lastEditedBy" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d9454d8a-75f4-45a5-8de3-729b3d0d3acc",
+        "parentId" : "0cd6420b-e244-4339-a9c5-57a39d434ed2",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "This code is unchanged in this PR, it just moved causing a diff. Please open an issue if you want to follow up on this.",
+        "createdAt" : "2019-12-05T10:29:32Z",
+        "updatedAt" : "2019-12-05T11:14:30Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c032fa899f1747d53cf2025b6e1cf03227b19980",
+    "line" : 66,
+    "diffHunk" : "@@ -1,1 +1281,1285 @@          Some(buildTool)\n        } else {\n          scribe.warn(s\"Unsupported $buildTool version ${buildTool.version}\")\n          languageClient.showMessage(\n            messages.IncompatibleBuildToolVersion.params(buildTool)"
+  },
+  {
+    "id" : "eed442fc-e2f7-4f25-8584-dde0fc4fd59a",
+    "prId" : 1089,
+    "comments" : [
+      {
+        "id" : "08661e2c-1d15-455b-92df-8bc2e6867e6a",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Let's go back to Option[WorksheetProvider]",
+        "createdAt" : "2019-11-28T15:12:17Z",
+        "updatedAt" : "2019-12-06T16:11:03Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3cd0fcbf-2a4c-4237-a752-b42d466b247d",
+        "parentId" : "08661e2c-1d15-455b-92df-8bc2e6867e6a",
+        "author" : {
+          "login" : "alekseiAlefirov",
+          "name" : "Aleksei Alefirov",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/10850363?v=4"
+        },
+        "body" : "why? Previously `Option` made sense, since there would not be a Provider always, and now we have fallback.",
+        "createdAt" : "2019-11-29T10:43:52Z",
+        "updatedAt" : "2019-12-06T16:11:03Z",
+        "lastEditedBy" : {
+          "login" : "alekseiAlefirov",
+          "name" : "Aleksei Alefirov",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/10850363?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "67bac1e6-c005-4f60-bea5-a608f76909d5",
+        "parentId" : "08661e2c-1d15-455b-92df-8bc2e6867e6a",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Ok, right. Haven't thought about it!",
+        "createdAt" : "2019-11-29T11:09:06Z",
+        "updatedAt" : "2019-12-06T16:11:03Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c2b310420ce80e33b8c8e4977b94f75be9e4f986",
+    "line" : 15,
+    "diffHunk" : "@@ -1,1 +181,185 @@  var httpServer: Option[MetalsHttpServer] = None\n  var treeView: TreeViewProvider = NoopTreeViewProvider\n  var worksheetProvider: WorksheetProvider = _\n\n  def connectToLanguageClient(client: MetalsLanguageClient): Unit = {"
+  },
+  {
+    "id" : "c047709f-019c-414c-8477-1f99dc291e8a",
+    "prId" : 935,
+    "comments" : [
+      {
+        "id" : "4acf7133-c441-43de-b0a3-fa72272d3745",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Would it be possible to get this as part of the digest so that `import build` pops up?",
+        "createdAt" : "2019-09-24T11:18:33Z",
+        "updatedAt" : "2019-12-05T19:30:31Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2412eb25-f44a-4562-a7e8-54e30675d349",
+        "parentId" : "4acf7133-c441-43de-b0a3-fa72272d3745",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Can you elaborate? Here we prompt the user to \"import build\" when the `pants-targets` setting changes. I have added a logging statement there for now. Down the road, it would be nice to prompt the user with a text box to provide what targets to run and then automatically update the setting for the user. We don't have the infrastructure to implement that yet, however.",
+        "createdAt" : "2019-09-26T15:44:49Z",
+        "updatedAt" : "2019-12-05T19:30:31Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d04b2e72-a5f2-438a-a080-8b1b7abdda26",
+        "parentId" : "4acf7133-c441-43de-b0a3-fa72272d3745",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "In PantsDigest we have the UserConfiguration now so we could also digest targets in the settings and we would not need to do anything else. The user would get informed that their pants build changed and that they need to reimport.\r\n\r\nWe wouldn't need to have some special logic in MetalsLanguageServer",
+        "createdAt" : "2019-09-27T15:14:13Z",
+        "updatedAt" : "2019-12-05T19:30:31Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "01b556bb-2d69-4f5d-8d08-8299d706d410",
+        "parentId" : "4acf7133-c441-43de-b0a3-fa72272d3745",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "The reason we need this logic in `MetalsLanguageServer` is to trigger a new digest when the `pants-targets` setting changes. Even if we include the targets in the digest, we don't get a notification to trigger the digest until a BUILD file changes.",
+        "createdAt" : "2019-12-03T16:19:35Z",
+        "updatedAt" : "2019-12-05T19:30:31Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a95ae87fd9621161d156685f32480fcb7bb451a4",
+    "line" : 11,
+    "diffHunk" : "@@ -1,1 +809,813 @@            compilers.restartAll()\n          }\n          if (userConfig.pantsTargets != old.pantsTargets) {\n            slowConnectToBuildServer(forceImport = false).ignoreValue\n          } else {"
+  },
+  {
+    "id" : "bd126070-d871-420f-b150-9796ad5abd6d",
+    "prId" : 865,
+    "comments" : [
+      {
+        "id" : "613c538d-ab7f-4e4c-88a9-3258ab87b8a7",
+        "parentId" : null,
+        "author" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "body" : "does it work in vscode?  The [specification](https://microsoft.github.io/language-server-protocol/specification#textDocument_onTypeFormatting) expects a `List`, not an `Option[TextEdit]`.",
+        "createdAt" : "2019-08-19T08:01:07Z",
+        "updatedAt" : "2019-08-21T09:26:02Z",
+        "lastEditedBy" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "fffe2a4c-b231-4f26-b2ab-06808391f92d",
+        "parentId" : "613c538d-ab7f-4e4c-88a9-3258ab87b8a7",
+        "author" : {
+          "login" : "Karolina-Bogacka",
+          "name" : "Karolina-Bogacka",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/23015369?u=b3677e6a6a4594e396a59e1386936bfbc1b27829&v=4"
+        },
+        "body" : "it doesn't, and you're right, I haven't noticed. But I've changed my ontypeformatting product to a list and the server still doesn't seem to be responding properly, so it's probably something deeper, too.",
+        "createdAt" : "2019-08-19T13:33:32Z",
+        "updatedAt" : "2019-08-21T09:26:02Z",
+        "lastEditedBy" : {
+          "login" : "Karolina-Bogacka",
+          "name" : "Karolina-Bogacka",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/23015369?u=b3677e6a6a4594e396a59e1386936bfbc1b27829&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7f4fb9d8a2ce58d558a9425c21448607b38f510a",
+    "line" : 34,
+    "diffHunk" : "@@ -1,1 +850,854 @@    }\n  /*in order to use onTypeFormatting in vscode, you'll have to set editor.formatOnType = true in settings*/\n  @JsonRequest(\"textDocument/onTypeFormatting\")\n  def onTypeFormatting(\n      params: DocumentOnTypeFormattingParams"
+  },
+  {
+    "id" : "9a74c1fa-f393-4692-a880-f67dce1bab64",
+    "prId" : 853,
+    "comments" : [
+      {
+        "id" : "a1607383-84fb-4844-a85a-ce248bc6dc60",
+        "parentId" : null,
+        "author" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "body" : "or we could do:\r\n```scala\r\nval semanticDBDoc = semanticdbs.textDocument(source).documentIncludingStale\r\nif(semanticDBDoc.isEmpty){\r\n  warnings.noSemanticdb(source)\r\n} else {\r\n  val occurrence = for { ...} yield occ\r\n  occurrence match {\r\n    case None =>\r\n      // ignore\r\n    case Some(occ) =>\r\n      (...)\r\n  }\r\n}\r\n```\r\nwould probably make the logic simpler (no need to remember about semanticDBDoc being emoty or not when working on occurrences).\r\n\r\nor even something like that:\r\n\r\n```scala\r\n\r\nval semanticDBDoc = semanticdbs.textDocument(source).documentIncludingStale \r\nsemanticDBDoc match {\r\n  case None => warnings.noSemanticdb(source)\r\n  case Some(doc) =>\r\n    val occurrence = definitionProvider.positionOccurrence(source, position, doc).occurrence \r\n    occurrence.foreach { occ =>\r\n        (...)\r\n    }\r\n```",
+        "createdAt" : "2019-08-06T06:02:20Z",
+        "updatedAt" : "2019-08-06T06:03:27Z",
+        "lastEditedBy" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "79bf66a8-a5b6-40a0-97e1-f0917ad6da16",
+        "parentId" : "a1607383-84fb-4844-a85a-ce248bc6dc60",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "I'd rather not change too much now.",
+        "createdAt" : "2019-08-06T08:40:43Z",
+        "updatedAt" : "2019-08-06T08:40:44Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "5f941ddc821a1d4f1f99221abb996858261aa0e5",
+    "line" : 17,
+    "diffHunk" : "@@ -1,1 +1586,1590 @@          }\n        case None =>\n          if (semanticDBDoc.isEmpty) {\n            warnings.noSemanticdb(source)\n          }"
+  },
+  {
+    "id" : "7c447d2e-e955-42b7-b402-5cf3d0de0a9b",
+    "prId" : 775,
+    "comments" : [
+      {
+        "id" : "be4a975c-1208-469e-beb8-e6ff220f503d",
+        "parentId" : null,
+        "author" : {
+          "login" : "tanishiking",
+          "name" : "Rikito Taniguchi",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4"
+        },
+        "body" : "Just moved the implementation into `referencesResult` that returns `ReferencesResult` instead of `CompletableFuture[util.List[Location]]`.",
+        "createdAt" : "2019-06-18T10:21:59Z",
+        "updatedAt" : "2019-06-18T17:58:25Z",
+        "lastEditedBy" : {
+          "login" : "tanishiking",
+          "name" : "Rikito Taniguchi",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "67d439ee-335b-41b3-b74b-49a2f0b47643",
+        "parentId" : "be4a975c-1208-469e-beb8-e6ff220f503d",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Good idea",
+        "createdAt" : "2019-06-18T12:52:02Z",
+        "updatedAt" : "2019-06-18T17:58:25Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "4cfc3a51daeb457a8f1e26bea4196104de517380",
+    "line" : 28,
+    "diffHunk" : "@@ -1,1 +821,825 @@  ): CompletableFuture[util.List[Location]] =\n    CancelTokens { _ =>\n      referencesResult(params).locations.asJava\n    }\n"
+  },
+  {
+    "id" : "7811f19b-15c4-40fb-a89f-8980d752457d",
+    "prId" : 775,
+    "comments" : [
+      {
+        "id" : "7ba6c642-0002-4ba1-bb16-c2ae62fa9479",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "typo\r\n```suggestion\r\n            val referenceContext = new ReferenceContext(false)\r\n```",
+        "createdAt" : "2019-06-18T10:25:14Z",
+        "updatedAt" : "2019-06-18T17:58:25Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "4cfc3a51daeb457a8f1e26bea4196104de517380",
+    "line" : 95,
+    "diffHunk" : "@@ -1,1 +1446,1450 @@        case Some(occ) =>\n          if (occ.role.isDefinition) {\n            val referecneContext = new ReferenceContext(false)\n            val refParams = new ReferenceParams(referecneContext)\n            refParams.setTextDocument(position.getTextDocument())"
+  },
+  {
+    "id" : "9070ae6e-43e0-46b0-844c-91aaec518ebf",
+    "prId" : 775,
+    "comments" : [
+      {
+        "id" : "1e8f904b-3440-4867-b0de-8b48f75b4bc2",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "```suggestion\r\n            val refParams = new ReferenceParams(referenceContext)\r\n```",
+        "createdAt" : "2019-06-18T10:25:29Z",
+        "updatedAt" : "2019-06-18T17:58:25Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "4cfc3a51daeb457a8f1e26bea4196104de517380",
+    "line" : 96,
+    "diffHunk" : "@@ -1,1 +1447,1451 @@          if (occ.role.isDefinition) {\n            val referecneContext = new ReferenceContext(false)\n            val refParams = new ReferenceParams(referecneContext)\n            refParams.setTextDocument(position.getTextDocument())\n            refParams.setPosition(position.getPosition())"
+  },
+  {
+    "id" : "9bd460d6-fa84-4963-8055-6fd5cf804e51",
+    "prId" : 775,
+    "comments" : [
+      {
+        "id" : "9e7a3a01-60f0-4870-9167-04264710935c",
+        "parentId" : null,
+        "author" : {
+          "login" : "tanishiking",
+          "name" : "Rikito Taniguchi",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4"
+        },
+        "body" : "Returns `symbol` in addition to the `locations` because `TestingServer` requires symbol information.\r\nWrapping those by `DefinitionResult` for structuring the return value, but what I actually want is something like [`Definitionresult | ReferencesResult`](https://dotty.epfl.ch/docs/reference/new-types/union-types.html) haha.",
+        "createdAt" : "2019-06-18T10:30:19Z",
+        "updatedAt" : "2019-06-18T17:58:25Z",
+        "lastEditedBy" : {
+          "login" : "tanishiking",
+          "name" : "Rikito Taniguchi",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "cefff715-0d41-495c-bc4c-6e393b459f17",
+        "parentId" : "9e7a3a01-60f0-4870-9167-04264710935c",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "`Either[A, B]` should work OK for unions with two types",
+        "createdAt" : "2019-06-18T12:55:26Z",
+        "updatedAt" : "2019-06-18T17:58:25Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3e7c4112-65da-416d-932a-4bedec7a8afe",
+        "parentId" : "9e7a3a01-60f0-4870-9167-04264710935c",
+        "author" : {
+          "login" : "tanishiking",
+          "name" : "Rikito Taniguchi",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4"
+        },
+        "body" : "That's right! But this time, let me leave the return value's type `Future[DefinitionResult]` because nesting `Either` inside `Future` makes things complicated and feels like to use something like `EitherT` ...",
+        "createdAt" : "2019-06-18T16:19:23Z",
+        "updatedAt" : "2019-06-18T17:58:25Z",
+        "lastEditedBy" : {
+          "login" : "tanishiking",
+          "name" : "Rikito Taniguchi",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "4cfc3a51daeb457a8f1e26bea4196104de517380",
+    "line" : 113,
+    "diffHunk" : "@@ -1,1 +1464,1468 @@                  semanticdb = None\n                )\n              )\n            }\n          } else {"
+  },
+  {
+    "id" : "9cf1d032-c32e-461e-928a-4cc27fd95c5d",
+    "prId" : 775,
+    "comments" : [
+      {
+        "id" : "0c5a29b8-31f3-4b5b-935e-2c5cca39230f",
+        "parentId" : null,
+        "author" : {
+          "login" : "tanishiking",
+          "name" : "Rikito Taniguchi",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4"
+        },
+        "body" : "Call `definitionResult` even if it failed to retrieve the symbol information from semanticdb because `DefinitionProvider#definition` [fallback to finding definitions from a presentation compiler](https://github.com/scalameta/metals/blob/50912543e057d958e4a336a6028f74ebca71271e/metals/src/main/scala/scala/meta/internal/metals/DefinitionProvider.scala#L62) if no definition locations found from semanticdb.",
+        "createdAt" : "2019-06-18T10:32:53Z",
+        "updatedAt" : "2019-06-18T17:58:25Z",
+        "lastEditedBy" : {
+          "login" : "tanishiking",
+          "name" : "Rikito Taniguchi",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d2193ba2-db87-4a1a-9033-437811d27e9a",
+        "parentId" : "0c5a29b8-31f3-4b5b-935e-2c5cca39230f",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Sounds reasonable :+1:",
+        "createdAt" : "2019-06-18T12:55:45Z",
+        "updatedAt" : "2019-06-18T17:58:25Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "4cfc3a51daeb457a8f1e26bea4196104de517380",
+    "line" : 122,
+    "diffHunk" : "@@ -1,1 +1473,1477 @@          // Even if it failed to retrieve the symbol occurrence from semanticdb,\n          // try to find its definitions from presentation compiler.\n          definitionResult(position, token)\n      }\n    } else {"
+  },
+  {
+    "id" : "d8b179c7-5d2b-40d8-b161-e5ffd43bdbd6",
+    "prId" : 729,
+    "comments" : [
+      {
+        "id" : "458be4f5-a07a-4d47-b271-9c65f7c7fb32",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "We already have tests to see that diagnostics are cleared for deleted files after a `didSave` notification. I manually verified that this works as soon as the file is deleted without a `didSave` notification. However, I don't think we can write a non-flaky test case to stress this situation since file watchers are quite unreliable between operating systems.",
+        "createdAt" : "2019-05-24T13:08:22Z",
+        "updatedAt" : "2019-05-24T13:08:22Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "9d1850b39031efae957be62d433b6c3d1aea8e09",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +672,676 @@    val isScalaOrJava = path.isScalaOrJava\n    if (isScalaOrJava && event.eventType() == EventType.DELETE) {\n      diagnostics.didDelete(path)\n      CompletableFuture.completedFuture(())\n    } else if (isScalaOrJava && !savedFiles.isRecentlyActive(path)) {"
+  },
+  {
+    "id" : "f6fc5fb8-9a15-4be1-8092-5bf3d86a40f6",
+    "prId" : 709,
+    "comments" : [
+      {
+        "id" : "2ea38889-da40-43d0-a5cc-b0b873c547f6",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "`SyntaxErrorSlowSuite` had become flaky until we merged the `parseTrees` and `onChange` futures here",
+        "createdAt" : "2019-05-31T13:41:04Z",
+        "updatedAt" : "2019-05-31T13:43:04Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e996d0d719a59efbb86d5727fb306a454ea1623b",
+    "line" : 74,
+    "diffHunk" : "@@ -1,1 +652,656 @@    buffers.put(path, path.toInput.text)\n    Future\n      .sequence(List(parseTrees(path), onChange(List(path))))\n      .ignoreValue\n      .asJava"
+  },
+  {
+    "id" : "9270bea5-8803-41cb-8b56-5a710ff97f44",
+    "prId" : 534,
+    "comments" : [
+      {
+        "id" : "540646bd-6552-4671-9944-5323433b3d02",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "minor, but you could use a SAM and this becomes:\r\n\r\n```scala\r\nsh.schedule(\r\n  () => tables.jarSymbols.deleteNotUsedTopLevels(usedJars.toArray),\r\n  2,\r\n  TimeUnit.SECONDS\r\n)\r\n```",
+        "createdAt" : "2019-02-24T16:35:57Z",
+        "updatedAt" : "2019-02-24T16:35:58Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f3352e7b-4c60-49a7-a68c-9d0090493118",
+        "parentId" : "540646bd-6552-4671-9944-5323433b3d02",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Some overloads on `ExecutorService` don't work with SAM, I can't remember which exact one. I don't mind `new Runnable { ... }`",
+        "createdAt" : "2019-02-24T16:38:36Z",
+        "updatedAt" : "2019-02-24T16:38:37Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "68a865709d6bc7d432ff4ffaa2fe1eac07d7409a",
+    "line" : 76,
+    "diffHunk" : "@@ -1,1 +1220,1224 @@      },\n      2,\n      TimeUnit.SECONDS\n    )\n  }"
+  },
+  {
+    "id" : "c18f8c5a-4081-4143-b6ab-bb4bbaccd144",
+    "prId" : 469,
+    "comments" : [
+      {
+        "id" : "1bb973c0-d158-41a4-bfc1-8bcfbc064b60",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "This case can be collapsed with the previous one",
+        "createdAt" : "2019-01-13T22:06:15Z",
+        "updatedAt" : "2019-01-14T10:14:10Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c784145f-df9c-493a-bd57-ce47231f2cc2",
+        "parentId" : "1bb973c0-d158-41a4-bfc1-8bcfbc064b60",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Huh, on my computer the code is different 🤔 \r\n```scala\r\n          case EventType.OVERFLOW =>\r\n            referencesProvider.onOverflow(event.path())\r\n```\r\n\r\nStill no diff, gonna push again.",
+        "createdAt" : "2019-01-14T10:21:52Z",
+        "updatedAt" : "2019-01-14T10:21:52Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "410f6aaa-9048-499b-9721-411a3d9afc17",
+        "parentId" : "1bb973c0-d158-41a4-bfc1-8bcfbc064b60",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "GitHub updated the diff now, it's a different case that we handle specially.",
+        "createdAt" : "2019-01-14T10:22:40Z",
+        "updatedAt" : "2019-01-14T10:22:40Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "2f3b70a1cd802829c6ddea08ce8fb12a2d374db9",
+    "line" : 85,
+    "diffHunk" : "@@ -1,1 +518,522 @@          case EventType.CREATE | EventType.MODIFY =>\n            referencesProvider.onChange(event.path())\n          case EventType.OVERFLOW =>\n            referencesProvider.onOverflow(event.path())\n        }"
+  },
+  {
+    "id" : "73407d75-c9e9-4829-b28c-767eb7374727",
+    "prId" : 360,
+    "comments" : [
+      {
+        "id" : "eb1f3114-aff5-4611-9418-9d3db5ac98b6",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "Is this call idepmpotent? Calling shutdown then exit will go through shutdown twice.",
+        "createdAt" : "2018-11-30T09:38:26Z",
+        "updatedAt" : "2018-11-30T09:46:56Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "fe903e1a-2bc0-488e-8c00-b070ea99477e",
+        "parentId" : "eb1f3114-aff5-4611-9418-9d3db5ac98b6",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Yes it is, added a comment to explain why.",
+        "createdAt" : "2018-11-30T09:51:22Z",
+        "updatedAt" : "2018-11-30T09:51:22Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c441cb0027d2d58f8b05e52df0b3d74440bfd5b2",
+    "line" : 119,
+    "diffHunk" : "@@ -1,1 +348,352 @@  def exit(): Unit = {\n    // `shutdown` is idempotent, we can trigger it as often as we like.\n    shutdown()\n    // Ensure that `shutdown` has completed before killing the process.\n    // Some clients may send `exit` immediately after `shutdown` causing"
+  },
+  {
+    "id" : "42e352f8-d418-41ae-b73a-3131c3beb35a",
+    "prId" : 337,
+    "comments" : [
+      {
+        "id" : "683c21d2-a946-456c-b99d-25589c77a80d",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "if you want you can use a SAM:\r\n\r\n```scala\r\nsh.schedule(() => initialized(new InitializedParams), 1, TimeUnit.SECONDS)\r\n```",
+        "createdAt" : "2018-11-24T13:14:14Z",
+        "updatedAt" : "2018-11-27T10:23:41Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d622267f-0721-497a-b62f-16091f2d706c",
+        "parentId" : "683c21d2-a946-456c-b99d-25589c77a80d",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Updated. SAM sure is prettier, and for dealing with Java collections they're almost a necessity (I can never get the covariant/contravarian bounds right for `java.util.function.Function`). ",
+        "createdAt" : "2018-11-25T11:32:26Z",
+        "updatedAt" : "2018-11-27T10:23:41Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8ed08fd7-ef5f-4011-9fdb-db10ae36a56c",
+        "parentId" : "683c21d2-a946-456c-b99d-25589c77a80d",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Sure would be nice to have  a Scalafix rewrite to fix these automatically.\r\n\r\nAs for 2.11 support, I would rather explore classloading 2.11 presentation compiler from a 2.12 server instead of compiling the server to 2.11.",
+        "createdAt" : "2018-11-25T11:33:38Z",
+        "updatedAt" : "2018-11-27T10:23:41Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8ab78d5883e2e77a843cca1ea641084e6e4a2875",
+    "line" : 178,
+    "diffHunk" : "@@ -1,1 +176,180 @@      capabilities.setTextDocumentSync(TextDocumentSyncKind.Full)\n      if (config.isNoInitialized) {\n        sh.schedule(\n          () => initialized(new InitializedParams),\n          1,"
+  },
+  {
+    "id" : "a8fa2668-e1b7-41cb-ad24-6ee66165ca43",
+    "prId" : 337,
+    "comments" : [
+      {
+        "id" : "b0f65dc2-a81a-4a1b-bd3e-4548dd2d12d1",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "is everything internal?",
+        "createdAt" : "2018-11-24T13:28:47Z",
+        "updatedAt" : "2018-11-27T10:23:41Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d074c229-fab5-40cd-9584-5eb66485693e",
+        "parentId" : "b0f65dc2-a81a-4a1b-bd3e-4548dd2d12d1",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Yes, only `scala.meta.metals.Main` is public.",
+        "createdAt" : "2018-11-25T11:29:03Z",
+        "updatedAt" : "2018-11-27T10:23:41Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8ab78d5883e2e77a843cca1ea641084e6e4a2875",
+    "line" : 1,
+    "diffHunk" : "@@ -1,1 +-1,3 @@package scala.meta.internal.metals\n\nimport ch.epfl.scala.bsp4j.BuildTargetIdentifier"
+  },
+  {
+    "id" : "0ca75615-7d9f-46c8-9ec7-200bd0f08263",
+    "prId" : 337,
+    "comments" : [
+      {
+        "id" : "6f34df63-7a34-4aba-aeaf-fa6c2dbf56ee",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "what's this call for?",
+        "createdAt" : "2018-11-24T13:49:38Z",
+        "updatedAt" : "2018-11-27T10:23:41Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "eef1a9a5-cb6e-4785-aa45-d83072dd8155",
+        "parentId" : "6f34df63-7a34-4aba-aeaf-fa6c2dbf56ee",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Added comment\r\n```scala\r\n      // Record what build target this dependency source (if any) was jumped from,\r\n      // needed to know what classpath to compile the dependency source with.\r\n```",
+        "createdAt" : "2018-11-25T11:38:55Z",
+        "updatedAt" : "2018-11-27T10:23:41Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8ab78d5883e2e77a843cca1ea641084e6e4a2875",
+    "line" : 737,
+    "diffHunk" : "@@ -1,1 +735,739 @@      // Record what build target this dependency source (if any) was jumped from,\n      // needed to know what classpath to compile the dependency source with.\n      interactiveSemanticdbs.didDefinition(source, result)\n      result\n    } else {"
+  }
+]

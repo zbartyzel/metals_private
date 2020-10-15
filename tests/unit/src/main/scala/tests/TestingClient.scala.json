@@ -1,0 +1,200 @@
+[
+  {
+    "id" : "e8457baf-eb97-4de2-84ef-d53429b30427",
+    "prId" : 994,
+    "comments" : [
+      {
+        "id" : "e5dc3048-e32b-44ea-bade-524dc2477f0d",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Nit: Could you keep the braces consistent?",
+        "createdAt" : "2019-10-17T09:12:18Z",
+        "updatedAt" : "2019-10-18T19:07:35Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "aaf364fe67cd256af8a8f743e5008246635310ce",
+    "line" : 22,
+    "diffHunk" : "@@ -1,1 +76,80 @@      case ClientCommands.RefreshModel.id =>\n        if (refreshedOnIndex) {\n          refreshModelHandler()\n        } else {\n          refreshedOnIndex = true"
+  },
+  {
+    "id" : "8347f247-cfd6-425c-afb4-29229ab8d684",
+    "prId" : 862,
+    "comments" : [
+      {
+        "id" : "bd6ebe64-60ea-4380-b89a-fa0a04f2ecef",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "I would lose the additional newlines here too.",
+        "createdAt" : "2019-08-09T14:24:06Z",
+        "updatedAt" : "2019-08-13T18:51:32Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "571ba641-c19b-458c-8d2d-e155d9ae606c",
+        "parentId" : "bd6ebe64-60ea-4380-b89a-fa0a04f2ecef",
+        "author" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "body" : "newlines are great. And here they separate the three steps of the function quite well:\r\n1. prepare the input\r\n2. apply the edit\r\n3. write the new content\r\n\r\nmaybe 1. and 2. could be aggregated into?\r\n```scala\r\n      val content = uri.toAbsolutePath.readText\r\n      val editedContent = \r\n        TextEdits.applyEdits(content, textEdits.asScala.toList)\r\n```",
+        "createdAt" : "2019-08-09T19:34:24Z",
+        "updatedAt" : "2019-08-13T18:51:32Z",
+        "lastEditedBy" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3b96ce8b-8e8a-4745-9212-c3ce72e71c7c",
+        "parentId" : "bd6ebe64-60ea-4380-b89a-fa0a04f2ecef",
+        "author" : {
+          "login" : "tdudzik",
+          "name" : "Tomasz Dudzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/6402694?u=cea0f7d71b2a4bd9ab98b5766436cc7833e5f834&v=4"
+        },
+        "body" : "It doesn't work.\r\n`Illegal character in path at index 44: /home/tdudzik/Projects/metals/target/e2e/add package/single-level/a/src/main/scala/a/Main.scala` \r\n\r\nAlso, `AbsolutePath` is used two times (`readText` and `writeText`) so I think it's good idea to have the `path` value. ",
+        "createdAt" : "2019-08-12T10:02:38Z",
+        "updatedAt" : "2019-08-13T18:51:32Z",
+        "lastEditedBy" : {
+          "login" : "tdudzik",
+          "name" : "Tomasz Dudzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/6402694?u=cea0f7d71b2a4bd9ab98b5766436cc7833e5f834&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1adb3811-0d12-4b44-89a6-c218a615726b",
+        "parentId" : "bd6ebe64-60ea-4380-b89a-fa0a04f2ecef",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Illegal path seems to be because of the whitespace I think.",
+        "createdAt" : "2019-08-12T10:12:26Z",
+        "updatedAt" : "2019-08-13T18:51:32Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "931c87ee-253e-434b-a09b-2471db0172ab",
+        "parentId" : "bd6ebe64-60ea-4380-b89a-fa0a04f2ecef",
+        "author" : {
+          "login" : "tdudzik",
+          "name" : "Tomasz Dudzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/6402694?u=cea0f7d71b2a4bd9ab98b5766436cc7833e5f834&v=4"
+        },
+        "body" : "Yes but after fixing whitespace issue another exception is thrown `Missing scheme\r\njava.lang.IllegalArgumentException: Missing scheme`",
+        "createdAt" : "2019-08-12T10:21:57Z",
+        "updatedAt" : "2019-08-13T18:51:32Z",
+        "lastEditedBy" : {
+          "login" : "tdudzik",
+          "name" : "Tomasz Dudzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/6402694?u=cea0f7d71b2a4bd9ab98b5766436cc7833e5f834&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "961809dd-dd68-4f50-9721-efb5bbefe555",
+        "parentId" : "bd6ebe64-60ea-4380-b89a-fa0a04f2ecef",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Ok, let's jsut leave whatever works, that's jsut the testing client",
+        "createdAt" : "2019-08-12T10:34:59Z",
+        "updatedAt" : "2019-08-13T18:51:32Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "909e79755bb7dc96fad63232599fe13092152914",
+    "line" : 27,
+    "diffHunk" : "@@ -1,1 +76,80 @@    def applyEdits(uri: String, textEdits: java.util.List[TextEdit]): Unit = {\n      val path = AbsolutePath(uri)\n\n      val content = path.readText\n      val editedContent ="
+  },
+  {
+    "id" : "9c2c39a2-2926-4adb-83c5-fab3e65644d5",
+    "prId" : 862,
+    "comments" : [
+      {
+        "id" : "853246ed-45d1-4725-9b6e-714928742135",
+        "parentId" : null,
+        "author" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "body" : "this does some additional magic to string uri (see [XtensionStringUriProtocol::toAbsolutePath](https://github.com/scalameta/metals/blob/7f85d79c3596721e3afe7b7443860c8582648c86/metals/src/main/scala/scala/meta/internal/metals/MetalsEnrichments.scala#L329))\r\n```suggestion\r\n      val path = uri.toAbsolutePath\r\n```",
+        "createdAt" : "2019-08-09T19:33:35Z",
+        "updatedAt" : "2019-08-13T18:51:32Z",
+        "lastEditedBy" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9f8a882a-3107-488c-8450-c38d28a70e91",
+        "parentId" : "853246ed-45d1-4725-9b6e-714928742135",
+        "author" : {
+          "login" : "tdudzik",
+          "name" : "Tomasz Dudzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/6402694?u=cea0f7d71b2a4bd9ab98b5766436cc7833e5f834&v=4"
+        },
+        "body" : "After this change exception is thrown: `Missing scheme java.lang.IllegalArgumentException: Missing scheme`. It seems that `uri` is actually not a valid URI. ",
+        "createdAt" : "2019-08-12T10:20:34Z",
+        "updatedAt" : "2019-08-13T18:51:32Z",
+        "lastEditedBy" : {
+          "login" : "tdudzik",
+          "name" : "Tomasz Dudzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/6402694?u=cea0f7d71b2a4bd9ab98b5766436cc7833e5f834&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "909e79755bb7dc96fad63232599fe13092152914",
+    "line" : 26,
+    "diffHunk" : "@@ -1,1 +75,79 @@  ): CompletableFuture[ApplyWorkspaceEditResponse] = {\n    def applyEdits(uri: String, textEdits: java.util.List[TextEdit]): Unit = {\n      val path = AbsolutePath(uri)\n\n      val content = path.readText"
+  }
+]

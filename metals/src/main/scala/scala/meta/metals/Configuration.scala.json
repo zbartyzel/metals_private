@@ -1,0 +1,96 @@
+[
+  {
+    "id" : "1845bf84-41a7-466c-8bcb-a48769a9bdfd",
+    "prId" : 236,
+    "comments" : [
+      {
+        "id" : "9520258e-e7ca-4e63-9019-747ed3af4602",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "can you make this change also on the vscode extension?",
+        "createdAt" : "2018-04-04T08:11:20Z",
+        "updatedAt" : "2018-04-04T08:11:20Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1aabb5fe-312f-4565-97fb-c56a439486a5",
+        "parentId" : "9520258e-e7ca-4e63-9019-747ed3af4602",
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "ah, nvm, it's already on!",
+        "createdAt" : "2018-04-04T08:11:39Z",
+        "updatedAt" : "2018-04-04T08:11:39Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1d665dc7b442fd5fa732042e9aa737bb0a7d2888",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +39,43 @@  @JsonCodec case class ScalacDiagnostics(enabled: Boolean = false)\n\n  @JsonCodec case class Hover(enabled: Boolean = true)\n  @JsonCodec case class Highlight(enabled: Boolean = false)\n  @JsonCodec case class Rename(enabled: Boolean = false)"
+  },
+  {
+    "id" : "2c29355a-411d-42f8-83b4-7dfaae668a63",
+    "prId" : 204,
+    "comments" : [
+      {
+        "id" : "753d6160-f290-4539-ae0f-7de0e487a86e",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Might be nice to add a `def enabled: Boolean = completions.enabled || diagnostics.enabled` ",
+        "createdAt" : "2018-03-26T13:44:53Z",
+        "updatedAt" : "2018-03-26T21:54:32Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "fa5ea05d-740b-4f14-bf22-2220b9664dc9",
+        "parentId" : "753d6160-f290-4539-ae0f-7de0e487a86e",
+        "author" : {
+          "login" : "laughedelic",
+          "name" : "Alexey Alekhin",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/766656?v=4"
+        },
+        "body" : "Added in 15398a1",
+        "createdAt" : "2018-03-26T21:54:51Z",
+        "updatedAt" : "2018-03-26T21:54:52Z",
+        "lastEditedBy" : {
+          "login" : "laughedelic",
+          "name" : "Alexey Alekhin",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/766656?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "15398a10a92978b2096e501f8c36977849adc782",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +30,34 @@      command: String = \"test:compile\"\n  )\n  @JsonCodec case class Scalac(\n      completions: ScalacCompletions = ScalacCompletions(),\n      diagnostics: ScalacDiagnostics = ScalacDiagnostics(),"
+  }
+]

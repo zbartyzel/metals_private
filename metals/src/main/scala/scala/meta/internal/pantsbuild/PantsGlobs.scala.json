@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "ae8a40ab-2407-46e4-a453-5126a63c47c3",
+    "prId" : 1198,
+    "comments" : [
+      {
+        "id" : "03a178e0-1fd8-41f4-8b26-083f58f89e5f",
+        "parentId" : null,
+        "author" : {
+          "login" : "wiwa",
+          "name" : "Win Wang",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1862202?u=67d3c93419e4dd2a110dc2135e1b5ebaf98919c2&v=4"
+        },
+        "body" : "why not `map` for these case matches?",
+        "createdAt" : "2019-12-17T17:59:07Z",
+        "updatedAt" : "2019-12-17T17:59:07Z",
+        "lastEditedBy" : {
+          "login" : "wiwa",
+          "name" : "Win Wang",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1862202?u=67d3c93419e4dd2a110dc2135e1b5ebaf98919c2&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e8be2aae2bc2f9c0d85a0cc1f1fe7bdcddb946a4",
+    "line" : 51,
+    "diffHunk" : "@@ -1,1 +49,53 @@    case Obj(obj) =>\n      obj.get(\"globs\") match {\n        case Some(arr: Arr) =>\n          arr.value.iterator.collect {\n            case Str(glob) => glob"
+  }
+]

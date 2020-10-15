@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "16dbfd81-baa0-448f-bccb-117ec0962f0b",
+    "prId" : 534,
+    "comments" : [
+      {
+        "id" : "a4b92f5b-225c-491e-be54-b5b8172cfdef",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Nice, good to test this case 👍 ",
+        "createdAt" : "2019-02-24T13:32:55Z",
+        "updatedAt" : "2019-02-24T16:00:43Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "68a865709d6bc7d432ff4ffaa2fe1eac07d7409a",
+    "line" : 44,
+    "diffHunk" : "@@ -1,1 +42,46 @@  }\n\n  test(\"deleteNotUsed\") {\n    Seq(jar1, jar2).foreach { jar =>\n      val fs = PlatformFileIO.newJarFileSystem(jar, create = false)"
+  }
+]

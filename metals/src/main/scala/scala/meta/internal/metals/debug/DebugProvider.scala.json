@@ -1,0 +1,162 @@
+[
+  {
+    "id" : "f7e2ec4c-1442-4783-882d-6722e7b23f8a",
+    "prId" : 1781,
+    "comments" : [
+      {
+        "id" : "fabe2665-b5f5-4a6a-953a-d80acfdea5d1",
+        "parentId" : null,
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "good idea to act smart here! :+1: ",
+        "createdAt" : "2020-05-27T11:20:35Z",
+        "updatedAt" : "2020-05-27T11:20:35Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "376535f14d761d5513fd67b015e9ab10588f0ac7",
+    "line" : 24,
+    "diffHunk" : "@@ -1,1 +235,239 @@        json.as[b.ScalaMainClass].foreach { main =>\n          val translated = main.getJvmOptions().asScala.map { param =>\n            if (!param.startsWith(\"-J\"))\n              s\"-J$param\"\n            else"
+  },
+  {
+    "id" : "8815d936-8412-43dc-b23d-f48383fd2fb4",
+    "prId" : 1466,
+    "comments" : [
+      {
+        "id" : "bc896aa7-79d6-4b5f-acf7-45002a05a6a7",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "This will fail on Nil, could you handle that case?",
+        "createdAt" : "2020-04-03T08:35:28Z",
+        "updatedAt" : "2020-04-03T11:50:57Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d72fc182a42fd127dd0593dfbb3028ac615338b9",
+    "line" : 140,
+    "diffHunk" : "@@ -1,1 +138,142 @@          Option(params.buildTarget)\n        )\n    }).map {\n      case (clazz, target) :: others =>\n        if (others.nonEmpty) {"
+  },
+  {
+    "id" : "f19b101b-cdf6-4211-8548-c942ef14bd10",
+    "prId" : 1466,
+    "comments" : [
+      {
+        "id" : "0c84924b-bf51-4100-84a5-fdcea6fcf9b8",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "This will also fail on Nil, could you handle that case?",
+        "createdAt" : "2020-04-03T08:35:43Z",
+        "updatedAt" : "2020-04-03T11:50:57Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b82f64cd-b8b4-4b8d-a5b3-8c682405ec58",
+        "parentId" : "0c84924b-bf51-4100-84a5-fdcea6fcf9b8",
+        "author" : {
+          "login" : "alekseiAlefirov",
+          "name" : "Aleksei Alefirov",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/10850363?v=4"
+        },
+        "body" : "as I commented on `BuildTargetClassFinder#findMainClassAndItsBuildTarget` (above method def), it either returns `Success` with non-empty list, or `Failure`. So it should not be the case. I wish we had a type-level solution for that.",
+        "createdAt" : "2020-04-03T10:21:29Z",
+        "updatedAt" : "2020-04-03T11:50:57Z",
+        "lastEditedBy" : {
+          "login" : "alekseiAlefirov",
+          "name" : "Aleksei Alefirov",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/10850363?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "27537a9f-484c-4623-97bb-3c7f7af99daf",
+        "parentId" : "0c84924b-bf51-4100-84a5-fdcea6fcf9b8",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "Solution for NonEmptyList? You have `scalaz.NonEmptyList`, `cats.data.NonEmptyList`, everything is already included in dependencies",
+        "createdAt" : "2020-04-03T11:08:54Z",
+        "updatedAt" : "2020-04-03T11:50:57Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "66c06cab-0c09-4226-96c2-823f7dfa7043",
+        "parentId" : "0c84924b-bf51-4100-84a5-fdcea6fcf9b8",
+        "author" : {
+          "login" : "alekseiAlefirov",
+          "name" : "Aleksei Alefirov",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/10850363?v=4"
+        },
+        "body" : "hmm, last time I checked (several months ago), `cats` just got eliminated from Metals, and it was said it's better to have less dependencies. Okay, thanks, @kpbochenek !",
+        "createdAt" : "2020-04-03T11:27:41Z",
+        "updatedAt" : "2020-04-03T11:50:57Z",
+        "lastEditedBy" : {
+          "login" : "alekseiAlefirov",
+          "name" : "Aleksei Alefirov",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/10850363?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5fdd489d-b204-41b0-972a-7add9826f674",
+        "parentId" : "0c84924b-bf51-4100-84a5-fdcea6fcf9b8",
+        "author" : {
+          "login" : "alekseiAlefirov",
+          "name" : "Aleksei Alefirov",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/10850363?v=4"
+        },
+        "body" : "okay, seems like there's no cats used in the main code, and @tgodzik recommended not to start.\r\n^ fixed with `throw NoSuchElement(Exception)` for the `Nil` case",
+        "createdAt" : "2020-04-03T11:58:44Z",
+        "updatedAt" : "2020-04-03T11:58:44Z",
+        "lastEditedBy" : {
+          "login" : "alekseiAlefirov",
+          "name" : "Aleksei Alefirov",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/10850363?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d72fc182a42fd127dd0593dfbb3028ac615338b9",
+    "line" : 107,
+    "diffHunk" : "@@ -1,1 +105,109 @@        )\n    ).map {\n      case (clazz, target) :: others =>\n        if (others.nonEmpty) {\n          reportOtherBuildTargets("
+  }
+]

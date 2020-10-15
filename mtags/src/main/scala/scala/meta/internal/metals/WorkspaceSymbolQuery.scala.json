@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "baee2b7f-a608-41ce-b7a1-245e2c5a28d8",
+    "prId" : 1659,
+    "comments" : [
+      {
+        "id" : "0afbfbbc-9788-4245-ad08-b5333281be39",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "This is actually deprecated, started poping up with 2.13.2.",
+        "createdAt" : "2020-04-24T22:25:02Z",
+        "updatedAt" : "2020-04-24T22:25:02Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "067b7cb4b8d79cba130e03ee94521e2e7590dabe",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +43,47 @@    val isTrailingDot = query.endsWith(\".\")\n    val isClasspath = query.contains(\";\")\n    val actualQuery = query.stripSuffix(\".\").replace(\";\", \"\")\n    WorkspaceSymbolQuery(\n      actualQuery,"
+  }
+]

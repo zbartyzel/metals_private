@@ -1,0 +1,153 @@
+[
+  {
+    "id" : "f32c027d-ad62-4ba6-8e4c-7cfe003c8c5a",
+    "prId" : 93,
+    "comments" : [
+      {
+        "id" : "9c95a081-a29b-4039-9ba7-a061b8f5953e",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "You will actually need additional logic to handle `val (a, b)`, it currently handles only `val a, b` which is different. I think we may produce weird/local symbols for `val (a, b)` because of desugarings in scalac so that can be left to be fixed in the future.",
+        "createdAt" : "2017-12-04T07:02:06Z",
+        "updatedAt" : "2017-12-04T23:49:22Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e9f0d3cf-08d2-452e-8f45-6d5d5c6f6ccf",
+        "parentId" : "9c95a081-a29b-4039-9ba7-a061b8f5953e",
+        "author" : {
+          "login" : "laughedelic",
+          "name" : "Alexey Alekhin",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/766656?v=4"
+        },
+        "body" : "Thanks for pointing it out. I'll check it 🤔 ",
+        "createdAt" : "2017-12-04T20:17:41Z",
+        "updatedAt" : "2017-12-04T23:49:22Z",
+        "lastEditedBy" : {
+          "login" : "laughedelic",
+          "name" : "Alexey Alekhin",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/766656?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a4bf5ed3-d875-49d9-85d9-a46fac4eb1f4",
+        "parentId" : "9c95a081-a29b-4039-9ba7-a061b8f5953e",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "No need to do it here, I think `val (a, b)` will need special treatment in scalameta similar to other patterns like `val Foo(a, b) = `",
+        "createdAt" : "2017-12-04T21:55:21Z",
+        "updatedAt" : "2017-12-04T23:49:22Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4ba45cc6-ae2e-4059-8275-395d69faef6e",
+        "parentId" : "9c95a081-a29b-4039-9ba7-a061b8f5953e",
+        "author" : {
+          "login" : "laughedelic",
+          "name" : "Alexey Alekhin",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/766656?v=4"
+        },
+        "body" : "OK. I'll just use this one simple change. Does it solve the problem or is it still more complicated?\r\n\r\n```scala\r\n@ q\"val (x, y) = (1, 2)\".pats.flatMap { _.collect { case Pat.Var(name) => name.value } }\r\nres4: List[String] = List(\"x\", \"y\")\r\n\r\n@ q\"val Foo(x, y) = (1, 'a')\".pats.flatMap { _.collect { case Pat.Var(name) => name.value } }\r\nres8: List[String] = List(\"x\", \"y\")\r\n```\r\n",
+        "createdAt" : "2017-12-04T22:45:33Z",
+        "updatedAt" : "2017-12-04T23:49:22Z",
+        "lastEditedBy" : {
+          "login" : "laughedelic",
+          "name" : "Alexey Alekhin",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/766656?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c79e1744-2c42-4f89-9721-17c779dca096",
+        "parentId" : "9c95a081-a29b-4039-9ba7-a061b8f5953e",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "For outline I think that solution is fine 👍 ",
+        "createdAt" : "2017-12-04T22:49:00Z",
+        "updatedAt" : "2017-12-04T23:49:22Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "40d1627d-b8aa-48f9-a2ce-4ba3c858bfb7",
+        "parentId" : "9c95a081-a29b-4039-9ba7-a061b8f5953e",
+        "author" : {
+          "login" : "laughedelic",
+          "name" : "Alexey Alekhin",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/766656?v=4"
+        },
+        "body" : "Done in cb484756b5b01b25bfcbfdde90df436667cbd6fe",
+        "createdAt" : "2017-12-04T23:40:34Z",
+        "updatedAt" : "2017-12-04T23:49:22Z",
+        "lastEditedBy" : {
+          "login" : "laughedelic",
+          "name" : "Alexey Alekhin",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/766656?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7b17cbf33208eb27890af0e9b1a6a7b9016afbcb",
+    "line" : 19,
+    "diffHunk" : "@@ -1,1 +68,72 @@    /** All names within the node.\n     * - if it's a package, it will have its qualified name: `package foo.bar.buh`\n     * - if it's a val/var, it may contain several names in the pattern: `val (x, y, z) = ...`\n     * - for everything else it's just its normal name (if it has one)\n     */"
+  },
+  {
+    "id" : "6868a86e-e700-455f-89d8-b03f319eac41",
+    "prId" : 78,
+    "comments" : [
+      {
+        "id" : "0084ecd0-d649-41bc-aaaf-7832eacb37ba",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "👍 ",
+        "createdAt" : "2017-12-01T20:32:17Z",
+        "updatedAt" : "2017-12-02T23:22:47Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "71da2fa975b8fb36cd888c23d0a8b0214a68e679",
+    "line" : 43,
+    "diffHunk" : "@@ -1,1 +75,79 @@      l.Position(line = range.endLine, character = range.endColumn)\n    )\n    def contains(line: Int, column: Int): Boolean = {\n      range.startLine <= line &&\n      range.startColumn <= column &&"
+  }
+]

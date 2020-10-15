@@ -1,0 +1,96 @@
+[
+  {
+    "id" : "b1095192-31de-4232-b892-bf7de9e69569",
+    "prId" : 1181,
+    "comments" : [
+      {
+        "id" : "e16dd687-9402-488c-9306-ef16b5031d7a",
+        "parentId" : null,
+        "author" : {
+          "login" : "wiwa",
+          "name" : "Win Wang",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1862202?u=67d3c93419e4dd2a110dc2135e1b5ebaf98919c2&v=4"
+        },
+        "body" : "nit: maybe put the hardcoded `\"target\"`, `\"transitive_targets\"`, etc. strings into `val`s?",
+        "createdAt" : "2019-12-10T19:54:39Z",
+        "updatedAt" : "2019-12-11T10:39:31Z",
+        "lastEditedBy" : {
+          "login" : "wiwa",
+          "name" : "Win Wang",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1862202?u=67d3c93419e4dd2a110dc2135e1b5ebaf98919c2&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f581c89a-7444-44fb-bd5a-fc242480aa17",
+        "parentId" : "e16dd687-9402-488c-9306-ef16b5031d7a",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Done. Extracted all hardcoded keys into an `object PantsKeys`",
+        "createdAt" : "2019-12-11T10:22:38Z",
+        "updatedAt" : "2019-12-11T10:39:34Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "da92e30ee6e1e5d61ccb46ecfc290af2da243900",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +11,15 @@)\n\nobject PantsExport {\n  def fromJson(output: ujson.Value): PantsExport = {\n    val allTargets = output.obj(\"targets\").obj"
+  },
+  {
+    "id" : "023809f5-3fdd-45ed-a05f-9671ee9db587",
+    "prId" : 1181,
+    "comments" : [
+      {
+        "id" : "af702b59-ce5b-4b84-a8ee-88b1ac49f9be",
+        "parentId" : null,
+        "author" : {
+          "login" : "wiwa",
+          "name" : "Win Wang",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1862202?u=67d3c93419e4dd2a110dc2135e1b5ebaf98919c2&v=4"
+        },
+        "body" : "nit: `valueObj.obj.mapValues`?",
+        "createdAt" : "2019-12-10T20:04:29Z",
+        "updatedAt" : "2019-12-11T10:39:31Z",
+        "lastEditedBy" : {
+          "login" : "wiwa",
+          "name" : "Win Wang",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1862202?u=67d3c93419e4dd2a110dc2135e1b5ebaf98919c2&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0a519a03-8c05-4c98-bc6a-c4a573209065",
+        "parentId" : "af702b59-ce5b-4b84-a8ee-88b1ac49f9be",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "`mapValues` does not work as you expect it to in 2.12, it creates a lazy map and re-evaluates the passed function on every access\r\n```scala\r\n  override def mapValues[C](f: B => C): scala.collection.Map[A, C] = new MappedValues(f)\r\n```\r\n\r\nI think it's eager in 2.13 but Metals is still on 2.12",
+        "createdAt" : "2019-12-11T10:24:10Z",
+        "updatedAt" : "2019-12-11T10:39:34Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "da92e30ee6e1e5d61ccb46ecfc290af2da243900",
+    "line" : 66,
+    "diffHunk" : "@@ -1,1 +64,68 @@    val libraries: Map[String, PantsLibrary] = allLibraries.iterator.map {\n      case (name, valueObj) =>\n        name -> PantsLibrary(name, valueObj.obj.map {\n          case (key, value) =>\n            key -> Paths.get(value.str)"
+  }
+]

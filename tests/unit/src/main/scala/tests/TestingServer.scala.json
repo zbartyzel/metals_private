@@ -1,0 +1,360 @@
+[
+  {
+    "id" : "cc2c9e1a-9187-4aba-989b-23650b060dbd",
+    "prId" : 1898,
+    "comments" : [
+      {
+        "id" : "d0cd0e90-7bf1-4abf-a3c2-68eccaff41c1",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "We must have missed this when we migrated to `InitilizationOptions` because we were actually still passing the values for that into the `ClientCapabilities` experimental param. Now we just pass in an empty object there and do the values here.",
+        "createdAt" : "2020-07-09T16:00:27Z",
+        "updatedAt" : "2020-07-10T20:39:59Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5525d9cd-ae2f-4ecf-96e9-08e47bde8572",
+        "parentId" : "d0cd0e90-7bf1-4abf-a3c2-68eccaff41c1",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "I keep finding small fixes, but no the one that fixes my issue 😆 ",
+        "createdAt" : "2020-07-09T16:01:17Z",
+        "updatedAt" : "2020-07-10T20:39:59Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a09c54df4983c2390e8b249633004d3433d16915",
+    "line" : 30,
+    "diffHunk" : "@@ -1,1 +417,421 @@        .asJava\n\n    params.setInitializationOptions(existingInitOptions.toJson)\n    params.setCapabilities(\n      new ClientCapabilities("
+  },
+  {
+    "id" : "15946930-0d3a-45de-8503-a6ba3ecdabd9",
+    "prId" : 1898,
+    "comments" : [
+      {
+        "id" : "0c04128f-9b7d-4e12-827d-0795bd161c6c",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "I would just add a simple json library for tests that takes into account options for tests, would be much nicer. ",
+        "createdAt" : "2020-07-10T15:22:26Z",
+        "updatedAt" : "2020-07-10T20:39:59Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f2d6f9ce-a3e2-4c27-b4eb-63ff21248730",
+        "parentId" : "0c04128f-9b7d-4e12-827d-0795bd161c6c",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "Could you expand on what you mean by this?",
+        "createdAt" : "2020-07-10T16:59:41Z",
+        "updatedAt" : "2020-07-10T20:39:59Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3e126475-35fd-45b9-ae05-1ad21051c1de",
+        "parentId" : "0c04128f-9b7d-4e12-827d-0795bd161c6c",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Ach, that was totally not clear. I just meant adding something like upickle. Automatically transforming case class into a string and then using gson to parse that.  This should have the same effect as the reflective access.",
+        "createdAt" : "2020-07-10T17:06:58Z",
+        "updatedAt" : "2020-07-10T20:39:59Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6c95332f-2276-4fe1-a053-5bd975ca9025",
+        "parentId" : "0c04128f-9b7d-4e12-827d-0795bd161c6c",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "So it looks like in order for uPickle to handle this correctly I would need to define a serializer in the companion object of `InitializationOptions`, but we don't include uPickle. I'm hesitant to add a library just to do this. What do you think?",
+        "createdAt" : "2020-07-10T20:24:58Z",
+        "updatedAt" : "2020-07-10T20:39:59Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "258779a2-ea07-4265-9510-ef634d41e1c0",
+        "parentId" : "0c04128f-9b7d-4e12-827d-0795bd161c6c",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "I haven't noticed that, I was thinking of only adding a library to the test project. This way we wouldn't be adding additional dependencies to the project itself.\r\n\r\nWe can leave it as is, it was just an idea.",
+        "createdAt" : "2020-07-10T20:38:07Z",
+        "updatedAt" : "2020-07-10T20:39:59Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a09c54df4983c2390e8b249633004d3433d16915",
+    "line" : 18,
+    "diffHunk" : "@@ -1,1 +405,409 @@    // collect the fields that are set, get the values, and then make them into\n    // a map that will become a JsonObject to pass in as the InitializationOptions\n    val existingInitOptions =\n      initOptions.getClass.getDeclaredFields\n        .map { field =>"
+  },
+  {
+    "id" : "7f18c3da-b41f-4d4c-9247-f15965ec2eea",
+    "prId" : 1753,
+    "comments" : [
+      {
+        "id" : "59ac0e29-8f6d-4bfc-b634-1ab364100c73",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "`triggerCharacter` ?",
+        "createdAt" : "2020-05-15T15:29:47Z",
+        "updatedAt" : "2020-05-29T09:53:41Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8e9d3795-eda4-4503-a38e-cd5972067cd7",
+        "parentId" : "59ac0e29-8f6d-4bfc-b634-1ab364100c73",
+        "author" : {
+          "login" : "mlachkar",
+          "name" : "Meriam Lachkar",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/7843237?u=d2941da73011b9a49767ac863ce5bc20b7b10ed7&v=4"
+        },
+        "body" : "ok",
+        "createdAt" : "2020-05-15T16:10:53Z",
+        "updatedAt" : "2020-05-29T09:53:41Z",
+        "lastEditedBy" : {
+          "login" : "mlachkar",
+          "name" : "Meriam Lachkar",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/7843237?u=d2941da73011b9a49767ac863ce5bc20b7b10ed7&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "964ccf1c-bab5-4745-89b0-6c5aaacd22b1",
+        "parentId" : "59ac0e29-8f6d-4bfc-b634-1ab364100c73",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "I think this might have been fixed in the other commit we had issues with. Could you change it again?",
+        "createdAt" : "2020-05-20T16:08:50Z",
+        "updatedAt" : "2020-05-29T09:53:41Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "60e701e5d87db159576e92e8239681d2abd92c6e",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +608,612 @@      expected: String,\n      autoIndent: String,\n      replaceWith: String,\n      root: AbsolutePath = workspace\n  )(implicit loc: munit.Location): Future[Unit] = {"
+  },
+  {
+    "id" : "36432c27-c605-4a0f-b732-ceae299dd613",
+    "prId" : 1286,
+    "comments" : [
+      {
+        "id" : "61a66dd3-3a25-4f88-bb43-2ecb66b4ef2c",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "the `endOffset` is adjusted to account for the removal of the range markers",
+        "createdAt" : "2020-01-11T16:13:53Z",
+        "updatedAt" : "2020-01-11T17:12:09Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "524d5f65-e9f1-47e6-9154-2df2521c3eef",
+        "parentId" : "61a66dd3-3a25-4f88-bb43-2ecb66b4ef2c",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "A lot of this code seem duplicate to what we already have. Would it be possible to reuse the methods that we use for changing to the position in params? ",
+        "createdAt" : "2020-01-12T16:48:48Z",
+        "updatedAt" : "2020-01-12T16:49:11Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8b5b49c5-a111-4767-85ac-3a765a3eeba0",
+        "parentId" : "61a66dd3-3a25-4f88-bb43-2ecb66b4ef2c",
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "@tgodzik which method? Anyway, sure, I'll open a tech debt issue.",
+        "createdAt" : "2020-01-14T09:20:07Z",
+        "updatedAt" : "2020-01-14T09:20:07Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7e6135a896a913f6ec9a1ae82ca098806ffdfea3",
+    "line" : 25,
+    "diffHunk" : "@@ -1,1 +606,610 @@    val path = root.resolve(filename)\n    path.touch()\n    val pos = m.Position.Range(input, startOffset, endOffset - \"<<>>\".length())\n    for {\n      _ <- didChange(filename)(_ => text)"
+  },
+  {
+    "id" : "e35b2fae-f89f-4ce9-931c-af8e4e862020",
+    "prId" : 934,
+    "comments" : [
+      {
+        "id" : "56a5912c-5597-4f3e-91a9-766d9682140d",
+        "parentId" : null,
+        "author" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "body" : "I know we have a convention of calling those names `assertFoo` but I would like to propose that at one point we rename those `assertFoo` to `verifyFoo` because after reading `assert implementation` I want to ask `assert that implementation *what*?` Let's make the act of verification explicit in the name.",
+        "createdAt" : "2019-09-19T15:21:04Z",
+        "updatedAt" : "2019-10-03T13:51:34Z",
+        "lastEditedBy" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d837625e03b77aa42a76d4f700137294452174fa",
+    "line" : 9,
+    "diffHunk" : "@@ -1,1 +617,621 @@  }\n\n  def assertImplementation(\n      filename: String,\n      query: String,"
+  },
+  {
+    "id" : "0429fdbf-3813-41b2-9183-ca7f6319822d",
+    "prId" : 621,
+    "comments" : [
+      {
+        "id" : "3a5296bf-e37d-4ced-a3bd-de13aba2f7ae",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "I think we might be able to avoid `expected` by encoding the `<<` ranges in the `query` string.\r\n```scala\r\nassertHover(\r\n\"\"\"\r\nobject Main {\r\n  val <<abc>> = 1\r\n  println(<<a@@bc>> + <<abc>>)\r\n}\r\n```\r\n\r\nI don't feel strongly about it, you can use the approach you prefer",
+        "createdAt" : "2019-04-02T15:08:19Z",
+        "updatedAt" : "2019-04-05T09:13:03Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0879b05c-5b0d-4257-b8ea-4c65dc4698f1",
+        "parentId" : "3a5296bf-e37d-4ced-a3bd-de13aba2f7ae",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "It's one string now, should be simpler to write new tests.",
+        "createdAt" : "2019-04-04T14:05:34Z",
+        "updatedAt" : "2019-04-05T09:13:03Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "6f03d2264f9c4e8e28d2e258ca99d24915c82e17",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +433,437 @@      filename: String,\n      query: String,\n      expected: String,\n      root: AbsolutePath = workspace\n  ): Future[Unit] = {"
+  }
+]

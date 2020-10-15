@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "e13cf1f9-ced2-41f4-8d75-d06a674bef2e",
+    "prId" : 1840,
+    "comments" : [
+      {
+        "id" : "109a4d4e-34a6-4048-9dda-1cb959de143c",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "I also don't love these, but since they aren't `//` they make sense. I normally like single line comments to just use `//`.",
+        "createdAt" : "2020-06-18T17:34:37Z",
+        "updatedAt" : "2020-06-19T09:40:38Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9bdc3c9c-88d4-4670-9d8c-f2fde88ddc28",
+        "parentId" : "109a4d4e-34a6-4048-9dda-1cb959de143c",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "I think it's fine, but if you prefer otherwise, I don't really have a preference.",
+        "createdAt" : "2020-06-18T18:00:11Z",
+        "updatedAt" : "2020-06-19T09:40:38Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "50ed65a6-ea0e-4c4c-a0a7-cfc3f580ab29",
+        "parentId" : "109a4d4e-34a6-4048-9dda-1cb959de143c",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "I'd say if you don't have a preference, then let's just leave them as is 👍 ",
+        "createdAt" : "2020-06-18T18:03:37Z",
+        "updatedAt" : "2020-06-19T09:40:38Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "961d6ddc05eac5a93c79be85a06377fe25b9317c",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +44,48 @@\n  /**\n   * Returns the latest published snapshot release, or the current release if. */\n  private def fetchLatest(repo: String): Snapshot = {\n    val url ="
+  }
+]

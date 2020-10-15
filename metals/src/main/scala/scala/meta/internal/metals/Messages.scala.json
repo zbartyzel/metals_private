@@ -1,0 +1,351 @@
+[
+  {
+    "id" : "98742b91-0140-45d1-9fc6-89f75cbfb991",
+    "prId" : 1538,
+    "comments" : [
+      {
+        "id" : "6632fbd2-6907-43ee-8ec9-9834046646b2",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Shouldn't we just always import if a script is opened? Especially that this should be much more lightweight than normal Bloop import.",
+        "createdAt" : "2020-03-31T16:26:38Z",
+        "updatedAt" : "2020-05-21T11:17:43Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d58b0b27-716c-485f-a1f3-213d9419bb0b",
+        "parentId" : "6632fbd2-6907-43ee-8ec9-9834046646b2",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "I would say until we do have mill `build.sc` support, it might be best to have this. If not, it might not be the best experience with the mill build files with spurious errors everywhere. What do you think?",
+        "createdAt" : "2020-04-02T07:42:47Z",
+        "updatedAt" : "2020-05-21T11:17:43Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "48801f80-23cb-4984-bff9-3ee127bc6086",
+        "parentId" : "6632fbd2-6907-43ee-8ec9-9834046646b2",
+        "author" : {
+          "login" : "alexarchambault",
+          "name" : "Alexandre Archambault",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7063723?u=d5befca0ebfec0042dad7ef93973490eef750ff4&v=4"
+        },
+        "body" : "It's even for me, although making that on-demand is probably safer, yes. Note that importing Ammonite scripts also re-indexes the whole workspace, main project included.",
+        "createdAt" : "2020-04-02T17:23:40Z",
+        "updatedAt" : "2020-05-21T11:17:43Z",
+        "lastEditedBy" : {
+          "login" : "alexarchambault",
+          "name" : "Alexandre Archambault",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7063723?u=d5befca0ebfec0042dad7ef93973490eef750ff4&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0681fa0b1417b7ac622101d279667c6900a2506e",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +484,488 @@    val message: String = \"Ammonite script detected.\"\n    val importAll: String = \"Import scripts automatically\"\n    val doImport: String = \"Import\"\n    val dismiss: String = \"Dismiss\"\n    def params(): ShowMessageRequestParams = {"
+  },
+  {
+    "id" : "e2edc091-5ade-4233-8efd-dbfb892e4296",
+    "prId" : 1447,
+    "comments" : [
+      {
+        "id" : "2d6ff179-b758-4226-96f3-c924b929109a",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "Super nitpicky, but I just tested this, and is it possible to just add a `:` in here?\r\n```suggestion\r\n      s\"Enter the name for the new $kind:\"\r\n```",
+        "createdAt" : "2020-02-24T12:45:56Z",
+        "updatedAt" : "2020-02-24T12:45:57Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a47b7bb6-428d-4454-bb30-a303ac2f7158",
+        "parentId" : "2d6ff179-b758-4226-96f3-c924b929109a",
+        "author" : {
+          "login" : "alekseiAlefirov",
+          "name" : "Aleksei Alefirov",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/10850363?v=4"
+        },
+        "body" : "it seems not to be going look good here:\r\n![image](https://user-images.githubusercontent.com/10850363/73563467-adfe6880-445d-11ea-89f6-a9a6398034da.gif)\r\n",
+        "createdAt" : "2020-02-24T12:59:45Z",
+        "updatedAt" : "2020-02-24T12:59:45Z",
+        "lastEditedBy" : {
+          "login" : "alekseiAlefirov",
+          "name" : "Aleksei Alefirov",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/10850363?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "118501cb-816b-45ce-952a-6c84808e07ee",
+        "parentId" : "2d6ff179-b758-4226-96f3-c924b929109a",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Let's leave it as is, I don't think it adds that much visually and it's not really being used in UI anywhere.",
+        "createdAt" : "2020-02-24T13:00:38Z",
+        "updatedAt" : "2020-02-24T13:00:38Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0ee69bc8-2565-41f9-bd9a-c0fae0dd1108",
+        "parentId" : "2d6ff179-b758-4226-96f3-c924b929109a",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "Hmmm, yea I see what you're saying. That's tricky, because in `coc-metals` there isn't a nice break, so it seems like there should really be a `:`. No worries, I'll just add it in on the vim side.\r\n\r\n<img width=\"438\" alt=\"Screenshot 2020-02-24 at 14 01 42\" src=\"https://user-images.githubusercontent.com/13974112/75154558-3b0ba900-570e-11ea-81fa-d6ef9b2fbfd5.png\">\r\n",
+        "createdAt" : "2020-02-24T13:03:09Z",
+        "updatedAt" : "2020-02-24T13:03:09Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1490d46b-f664-47eb-98f9-5c3ab30ecb08",
+        "parentId" : "2d6ff179-b758-4226-96f3-c924b929109a",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "Also, this feature works great 🎉 !!",
+        "createdAt" : "2020-02-24T13:05:40Z",
+        "updatedAt" : "2020-02-24T13:05:40Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e408da9b-a5f9-4fa0-800c-08408276869d",
+        "parentId" : "2d6ff179-b758-4226-96f3-c924b929109a",
+        "author" : {
+          "login" : "alekseiAlefirov",
+          "name" : "Aleksei Alefirov",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/10850363?v=4"
+        },
+        "body" : "thanks :relieved: ",
+        "createdAt" : "2020-02-24T13:07:41Z",
+        "updatedAt" : "2020-02-24T13:07:41Z",
+        "lastEditedBy" : {
+          "login" : "alekseiAlefirov",
+          "name" : "Aleksei Alefirov",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/10850363?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "948961c16a2b407e9b6be832f69458537ee4bc93",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +387,391 @@    def selectTheKindOfFileMessage = \"Select the kind of file to create\"\n    def enterNameMessage(kind: String): String =\n      s\"Enter the name for the new $kind\"\n  }\n}"
+  },
+  {
+    "id" : "fbfb87ef-ea6f-4cc2-9c52-951d1c539702",
+    "prId" : 694,
+    "comments" : [
+      {
+        "id" : "1c9a8a5d-f8f2-4a3c-a235-2f2bca5b389e",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Would it be possible to include the build tool name in this message?",
+        "createdAt" : "2019-04-25T09:17:32Z",
+        "updatedAt" : "2019-05-07T08:42:52Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c13651c1-7351-47c7-80f7-e27345ca4cb0",
+        "parentId" : "1c9a8a5d-f8f2-4a3c-a235-2f2bca5b389e",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "It's used in places where we don't have info about workspace - this could be possible, but I think it's more work than it's worth",
+        "createdAt" : "2019-04-25T13:19:06Z",
+        "updatedAt" : "2019-05-07T08:42:52Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "de0c5a10-ab48-4765-92f4-1f2bbda08f42",
+        "parentId" : "1c9a8a5d-f8f2-4a3c-a235-2f2bca5b389e",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "What about passing in the build tool name as a string? I think it would be helpful to know from the message what kind of build was detected,some workspaces might have both a gradle and sbt build (although I suspect it's uncommon).",
+        "createdAt" : "2019-04-25T13:24:05Z",
+        "updatedAt" : "2019-05-07T08:42:52Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d1d3142c-7272-4855-8932-cff54507c7ab",
+        "parentId" : "1c9a8a5d-f8f2-4a3c-a235-2f2bca5b389e",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Changed to string and reworked the logic behind the fake LSP client - I only check for what the message contains.",
+        "createdAt" : "2019-04-25T13:57:08Z",
+        "updatedAt" : "2019-05-07T08:42:52Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "95e8d18af9437cb5a757194bc83a227e9c0b8d79",
+    "line" : 33,
+    "diffHunk" : "@@ -1,1 +37,41 @@      new MessageActionItem(\"Import changes\")\n    def params(buildToolName: String): ShowMessageRequestParams = {\n      val params = new ShowMessageRequestParams()\n      params.setMessage(s\"$buildToolName build needs to be re-imported\")\n      params.setType(MessageType.Info)"
+  },
+  {
+    "id" : "cf7613c9-38d4-45e3-b5d0-100888783696",
+    "prId" : 694,
+    "comments" : [
+      {
+        "id" : "6a3453c9-2d62-400c-8f92-9ae76f46e4d5",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Can we keep the build tool name in this message as well?\r\n\r\nAlso, when running \"Import build\" for Gradle workspaces the `metals/slowTask` message is \"sbt bloopInstall\"\r\n\r\n<img width=\"441\" alt=\"Screenshot 2019-05-02 at 19 27 47\" src=\"https://user-images.githubusercontent.com/1408093/57094328-99dfdc00-6d10-11e9-8fab-b95f9c1a9205.png\">\r\n",
+        "createdAt" : "2019-05-02T17:29:16Z",
+        "updatedAt" : "2019-05-07T08:42:52Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6914b996-ea6f-4524-8ef8-c5288ef6a5b2",
+        "parentId" : "6a3453c9-2d62-400c-8f92-9ae76f46e4d5",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Will change that, lost that one message",
+        "createdAt" : "2019-05-02T19:13:51Z",
+        "updatedAt" : "2019-05-07T08:42:52Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "95e8d18af9437cb5a757194bc83a227e9c0b8d79",
+    "line" : 46,
+    "diffHunk" : "@@ -1,1 +55,59 @@    def params(buildToolName: String): ShowMessageRequestParams = {\n      val params = new ShowMessageRequestParams()\n      params.setMessage(\n        s\"New $buildToolName workspace detected, would you like to import the build?\"\n      )"
+  },
+  {
+    "id" : "5f0099d7-691f-4c23-ae69-866ad53effc9",
+    "prId" : 434,
+    "comments" : [
+      {
+        "id" : "63e637dd-6b5c-4f58-9ef6-9bd251585121",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "this was unused, so I took the liberty of removing it",
+        "createdAt" : "2018-12-22T11:36:00Z",
+        "updatedAt" : "2018-12-22T11:36:00Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "32c966a7c848779318c8febb601dd161f23470c5",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +111,115 @@\n  object IncompatibleSbtVersion {\n    def toFixMessage =\n      \"To fix this problem, upgrade to sbt v0.13.17+\"\n    def dismissForever: MessageActionItem ="
+  }
+]

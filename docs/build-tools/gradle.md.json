@@ -1,0 +1,96 @@
+[
+  {
+    "id" : "e8522fe4-4c16-4031-a887-708e4e9b89e9",
+    "prId" : 1892,
+    "comments" : [
+      {
+        "id" : "18bf9631-1407-44ca-955e-cbd99de48056",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Why remove it?",
+        "createdAt" : "2020-07-06T10:18:24Z",
+        "updatedAt" : "2020-07-06T10:42:02Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "bbd9151b-208c-45d9-961d-3a865c455911",
+        "parentId" : "18bf9631-1407-44ca-955e-cbd99de48056",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "Mainly for consistency. We don't have it on any of the other build tool pages, so we should either have it on all or none. Plus, this is also in the footer.",
+        "createdAt" : "2020-07-06T10:43:36Z",
+        "updatedAt" : "2020-07-06T10:43:37Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "93a7168c-a138-411d-8e03-74d20045d641",
+        "parentId" : "18bf9631-1407-44ca-955e-cbd99de48056",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Ok, it's fine with me then!",
+        "createdAt" : "2020-07-06T10:47:42Z",
+        "updatedAt" : "2020-07-06T10:47:43Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "671b226b67ca2fff1d7189603dce0ba3760ded6b",
+    "line" : 46,
+    "diffHunk" : "@@ -1,1 +50,54 @@"
+  },
+  {
+    "id" : "681d614f-7cfe-4185-b676-3ecba86db781",
+    "prId" : 1278,
+    "comments" : [
+      {
+        "id" : "c4b6d3d8-c906-415e-a397-1c07191112e3",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "It's so nice to see all of this go 🎉 ",
+        "createdAt" : "2020-01-10T16:01:59Z",
+        "updatedAt" : "2020-01-13T16:05:42Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "219a75cb06ea05adb9f9803fe11847a0104af7d5",
+    "line" : 15,
+    "diffHunk" : "@@ -1,1 +49,53 @@This will enable us to work with Metals and all features should work.\n\nYou can also always try to reach us on the\n[Metals gitter channel](https://gitter.im/scalameta/metals) in case of any\nproblems."
+  }
+]

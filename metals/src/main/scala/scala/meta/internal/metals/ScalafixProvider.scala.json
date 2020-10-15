@@ -1,0 +1,124 @@
+[
+  {
+    "id" : "f4f5b004-70d8-46ca-acf4-bfbcee9d524c",
+    "prId" : 2119,
+    "comments" : [
+      {
+        "id" : "33deb702-e6f3-4c55-9307-eb4d74b8a3ac",
+        "parentId" : null,
+        "author" : {
+          "login" : "mlachkar",
+          "name" : "Meriam Lachkar",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/7843237?u=d2941da73011b9a49767ac863ce5bc20b7b10ed7&v=4"
+        },
+        "body" : "I would change this for comprehension from option to Try to get errors when failing downloading scalafix or the rule. It will also be easier to add error message on other part.\r\n```\r\n  private def getScalafix(\r\n      scalaBinaryVersion: ScalaBinaryVersion\r\n  ): Try[Scalafix] = {\r\n    scalafixCache\r\n      .get(scalaBinaryVersion)\r\n      .toTry\r\n      .orElse(\r\n        statusBar.trackBlockingTask(\"Downloading scalafix\") {\r\n          Try(Scalafix.fetchAndClassloadInstance(scalaBinaryVersion))\r\n            .map { api =>\r\n              scalafixCache.update(scalaBinaryVersion, api)\r\n              api\r\n            }\r\n        }\r\n      )\r\n  }\r\n\r\n  private def getRuleClassLoader(\r\n      scalaBinaryVersion: ScalaBinaryVersion,\r\n      scalafixClassLoader: ClassLoader\r\n  ): Try[URLClassLoader] = {\r\n    val pathsOpt = organizeImportRuleCache\r\n      .get(scalaBinaryVersion)\r\n      .toTry\r\n      .orElse(\r\n        statusBar.trackBlockingTask(\"Downloading organize import rule\") {\r\n          Try(Embedded.organizeImportRule(scalaBinaryVersion))\r\n            .map { paths =>\r\n              organizeImportRuleCache.update(scalaBinaryVersion, paths)\r\n              paths\r\n            }\r\n        }\r\n      )\r\n    pathsOpt.map(paths =>\r\n      Embedded.toClassLoader(\r\n        Classpath(paths.map(AbsolutePath(_))),\r\n        scalafixClassLoader\r\n      )\r\n    )\r\n  }\r\n// to add with the rest of extension methods we have on Option.\r\n  implicit class OptionExtension[A](val in: Option[A]) extends AnyVal {\r\n    def toTry(e: => Throwable): Try[A] = in match {\r\n      case Some(v) => Success(v)\r\n      case None => Failure(e)\r\n    }\r\n\r\n    def toTry = toTry(new Exception(\"None.get \"))\r\n  \r\n```\r\n\r\nThis way we will cover this error. ",
+        "createdAt" : "2020-10-05T11:07:33Z",
+        "updatedAt" : "2020-10-05T17:36:58Z",
+        "lastEditedBy" : {
+          "login" : "mlachkar",
+          "name" : "Meriam Lachkar",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/7843237?u=d2941da73011b9a49767ac863ce5bc20b7b10ed7&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b7796789-a693-4348-a717-0e769c14a3d8",
+        "parentId" : "33deb702-e6f3-4c55-9307-eb4d74b8a3ac",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Thanks, I changed it a bit, but stayed why Try as you suggested.",
+        "createdAt" : "2020-10-05T17:09:09Z",
+        "updatedAt" : "2020-10-05T17:36:58Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b271a278ae2c881051a18b72dc1b1f97da8cb4cb",
+    "line" : 97,
+    "diffHunk" : "@@ -1,1 +57,61 @@        val scalaBinaryVersion = scalaTarget.scalaBinaryVersion\n        val scalafixEvaluation = for {\n          api <- getScalafix(scalaBinaryVersion)\n          urlClassLoaderWithExternalRule <- getRuleClassLoader(\n            scalaBinaryVersion,"
+  },
+  {
+    "id" : "ea5fbace-8bd7-499b-a14e-11832a344c76",
+    "prId" : 2119,
+    "comments" : [
+      {
+        "id" : "5b1793f4-a4e5-4e1e-a26a-0b0692fa7b9a",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Changed it to Classlaoder, since otherwise we create a new classlaoder on each run, which can really grow the memory.",
+        "createdAt" : "2020-10-06T10:39:28Z",
+        "updatedAt" : "2020-10-06T10:39:28Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b271a278ae2c881051a18b72dc1b1f97da8cb4cb",
+    "line" : 38,
+    "diffHunk" : "@@ -1,1 +34,38 @@  private val scalafixCache = TrieMap.empty[ScalaBinaryVersion, Scalafix]\n  private val organizeImportRuleCache =\n    TrieMap.empty[ScalaBinaryVersion, URLClassLoader]\n\n  def organizeImports("
+  },
+  {
+    "id" : "6fcabd45-62f7-4473-9f8d-98344de9b305",
+    "prId" : 1971,
+    "comments" : [
+      {
+        "id" : "08309c4d-3885-4b81-8b01-5f71ede513ed",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Should we not use concurrent map here? What if someone quickly runs optimize imports a couple of times? We should wait and not run additional times",
+        "createdAt" : "2020-09-14T18:40:52Z",
+        "updatedAt" : "2020-09-25T12:46:58Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "47738bd9-0057-48c6-957b-790ae928866b",
+        "parentId" : "08309c4d-3885-4b81-8b01-5f71ede513ed",
+        "author" : {
+          "login" : "mlachkar",
+          "name" : "Meriam Lachkar",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/7843237?u=d2941da73011b9a49767ac863ce5bc20b7b10ed7&v=4"
+        },
+        "body" : "We decided to keep TrieMap after discussing it.",
+        "createdAt" : "2020-09-25T12:43:10Z",
+        "updatedAt" : "2020-09-25T12:46:58Z",
+        "lastEditedBy" : {
+          "login" : "mlachkar",
+          "name" : "Meriam Lachkar",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/7843237?u=d2941da73011b9a49767ac863ce5bc20b7b10ed7&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8f623f507d61ccbcd02d982594a8b0d46c292509",
+    "line" : 105,
+    "diffHunk" : "@@ -1,1 +103,107 @@          Try(Scalafix.fetchAndClassloadInstance(scalaBinaryVersion)).toOption\n            .map { api =>\n              scalafixCache.update(scalaBinaryVersion, api)\n              api\n            }"
+  }
+]

@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "b02e5780-ffd7-420b-8f0c-e3aa1c472cc7",
+    "prId" : 1041,
+    "comments" : [
+      {
+        "id" : "14b3affc-1071-40cf-8a63-5784b571cdba",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "Same as above, should this be\r\n\r\n```suggestion\r\ncase class DecorationRangesDidChangeParams(\r\n```\r\n\r\n?",
+        "createdAt" : "2019-11-04T11:49:02Z",
+        "updatedAt" : "2019-11-09T20:01:12Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d5ce2615-92c2-41c7-98fe-7cd1259eb2a4",
+        "parentId" : "14b3affc-1071-40cf-8a63-5784b571cdba",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "The endpoint name is `metals/publishDecorations`",
+        "createdAt" : "2019-11-06T06:22:33Z",
+        "updatedAt" : "2019-11-09T20:01:12Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a2902a65a77773398f8ac710483906215a06bcf8",
+    "line" : 21,
+    "diffHunk" : "@@ -1,1 +19,23 @@)\n\ncase class PublishDecorationsParams(\n    uri: String,\n    options: Array[DecorationOptions]"
+  }
+]

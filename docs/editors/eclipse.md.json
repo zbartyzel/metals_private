@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "8fbb4c78-a272-4d00-938b-d9cba2dc6a5f",
+    "prId" : 894,
+    "comments" : [
+      {
+        "id" : "56317dfa-cf9a-4241-86de-d9702b37aeb9",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Should we add a note that this is a new integration that is under development? \r\n",
+        "createdAt" : "2019-09-03T15:10:47Z",
+        "updatedAt" : "2019-09-04T13:20:51Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "31774609-5f60-458f-8b51-90dce4232a74",
+        "parentId" : "56317dfa-cf9a-4241-86de-d9702b37aeb9",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Sure, makes sense.",
+        "createdAt" : "2019-09-03T15:25:15Z",
+        "updatedAt" : "2019-09-04T13:20:51Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "443d317471b55d6325e3a7394a31d95391d28053",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +5,9 @@\nMetals works with Eclipse thanks to the\n[`metals-eclipse`](https://github.com/scalameta/metals-eclipse) plugin.\n\n**Notice** Eclipse integration is still under development and might lack some of the features"
+  }
+]

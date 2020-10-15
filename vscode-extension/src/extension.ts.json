@@ -1,0 +1,124 @@
+[
+  {
+    "id" : "00f5d16f-01c8-4357-a8b9-719f5ca351f2",
+    "prId" : 218,
+    "comments" : [
+      {
+        "id" : "fc08b47a-53e2-4462-ae0f-bc4a00cc7a50",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "I've tested this locally: the default currently returns an error (because there's no 0.1.0 artifact published yet), and changing it to `0.1-SNAPSHOT` works correctly.",
+        "createdAt" : "2018-04-02T10:39:24Z",
+        "updatedAt" : "2018-04-02T13:59:00Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "068a26e77742148e377252e19071478495c26d1e",
+    "line" : 10,
+    "diffHunk" : "@@ -1,1 +27,31 @@    \"launch\",\n    \"-r\", \"bintray:scalameta/maven\",\n    `org.scalameta:metals_2.12:${serverVersion}`,\n    \"-M\", \"scala.meta.metals.Main\"\n  ];"
+  },
+  {
+    "id" : "0a2af907-77aa-44cf-9ff9-6ded94f11b13",
+    "prId" : 131,
+    "comments" : [
+      {
+        "id" : "3be2f54e-8afe-4a99-8b73-c15b51784dc2",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Is this needed for every new command? I thought codeActions was a way for the server to list the commands it supports.",
+        "createdAt" : "2017-12-15T11:42:58Z",
+        "updatedAt" : "2017-12-15T11:43:33Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6c5d2620-3999-4738-b395-644ce8e357a9",
+        "parentId" : "3be2f54e-8afe-4a99-8b73-c15b51784dc2",
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "Yes, it is. codeAction is not very well integrated in the client library, as of now. I guess it may depend by the requirement for extensions to statically include commands in the manifest",
+        "createdAt" : "2017-12-15T11:52:03Z",
+        "updatedAt" : "2017-12-15T11:52:04Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "867e5b2b0a081dfb481be2a14c9b7bffa47a2d98",
+    "line" : 15,
+    "diffHunk" : "@@ -1,1 +94,98 @@\n  client.onReady().then(() => {\n    const clearIndexCacheCommand = commands.registerCommand(\"scalameta.clearIndexCache\", async () => {\n      return client.sendRequest(ExecuteCommandRequest.type, { command: \"clearIndexCache\" });\n    });"
+  },
+  {
+    "id" : "48e69779-60de-49fb-b642-10db06dd6526",
+    "prId" : 108,
+    "comments" : [
+      {
+        "id" : "d92811f3-c945-4b0a-8828-af4d70f89838",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "by the way, this and the other import above were added automatically as I was typing ❤️  /cc @olafurpg ",
+        "createdAt" : "2017-12-10T11:11:54Z",
+        "updatedAt" : "2017-12-10T17:08:36Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "89797f80-0a10-4025-92db-2772300d8d70",
+        "parentId" : "d92811f3-c945-4b0a-8828-af4d70f89838",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "I've had this for Scala in IJ for a long time, hard to live without once you get used to it :)\r\n",
+        "createdAt" : "2017-12-10T11:12:48Z",
+        "updatedAt" : "2017-12-10T17:08:36Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d70930516287ca7b7c4d7cf5be37c376e93809bd",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +11,15 @@} from 'vscode-languageclient';\nimport { Requirements } from './requirements';\nimport { exec } from 'child_process';\n\nexport async function activate(context: ExtensionContext) {"
+  }
+]

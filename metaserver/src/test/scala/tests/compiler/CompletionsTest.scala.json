@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "638ce141-04d9-49e0-9751-a16d2670c6e4",
+    "prId" : 67,
+    "comments" : [
+      {
+        "id" : "ca57f1b2-4f91-4e46-81e6-27cda943de2d",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Is this detail expected? Seems a bit weird.",
+        "createdAt" : "2017-11-27T21:01:59Z",
+        "updatedAt" : "2017-11-28T10:19:34Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "69400e6b-70d7-458b-911c-b0457d0dac7d",
+        "parentId" : "ca57f1b2-4f91-4e46-81e6-27cda943de2d",
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "it's weird but consistent to what I see in the editor. I suspect it's `Template`'s fault. I want to improve details in a future PR (Java LSP seems to be doing a nice job that we can mimic)",
+        "createdAt" : "2017-11-28T01:08:54Z",
+        "updatedAt" : "2017-11-28T10:19:34Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1362e9fe8ce917113c7fe81b6e219c678ab423ae",
+    "line" : 124,
+    "diffHunk" : "@@ -1,1 +141,145 @@       |    \"label\" : \"TestTrait\",\n       |    \"kind\" : ${CompletionItemKind.Interface},\n       |    \"detail\" : \" extends \"\n       |  } ]\n       |}"
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "id" : "fbcff872-5903-4907-9ede-6b825acb4a8b",
+    "prId" : 154,
+    "comments" : [
+      {
+        "id" : "0f0a21c5-a386-4a1f-b67f-b7d74bb6b5e5",
+        "parentId" : null,
+        "author" : {
+          "login" : "laughedelic",
+          "name" : "Alexey Alekhin",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/766656?v=4"
+        },
+        "body" : "Would it be possible (in the future) to adapt Scalafix rewrites to code actions so that it won't be necessary to define a `WorkspaceCommand` for each type of rewrite? ",
+        "createdAt" : "2017-12-26T01:46:26Z",
+        "updatedAt" : "2017-12-29T12:34:28Z",
+        "lastEditedBy" : {
+          "login" : "laughedelic",
+          "name" : "Alexey Alekhin",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/766656?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6d6ad7a6-d2b4-426f-a337-d37889cde950",
+        "parentId" : "0f0a21c5-a386-4a1f-b67f-b7d74bb6b5e5",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Scalafix absolutely, scalafix can run custom rules from configuration in .scalafix.conf, we can probably embed that config as command arguments to get away with only a single `Scalafix` WorkspaceCommand. ",
+        "createdAt" : "2017-12-29T12:26:00Z",
+        "updatedAt" : "2017-12-29T12:34:28Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "fdc9c838e9c14f4d811f77cd7768c91f492170e0",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +11,15 @@  case object ClearIndexCache extends WorkspaceCommand\n  case object ResetPresentationCompiler extends WorkspaceCommand\n  case object ScalafixUnusedImports extends WorkspaceCommand\n\n  val values = findValues"
+  },
+  {
+    "id" : "57a7a9ac-70ca-4250-8619-2dc49e8e053d",
+    "prId" : 131,
+    "comments" : [
+      {
+        "id" : "cc29a9c9-f84a-4166-9cf2-e1fb6764ee7c",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "I went for a `lowerCamelCase` convention here and thanks to `Uncapitalised` this is automatically handled by `withNameOption` and `entryName`",
+        "createdAt" : "2017-12-15T11:17:41Z",
+        "updatedAt" : "2017-12-15T11:25:20Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "867e5b2b0a081dfb481be2a14c9b7bffa47a2d98",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +5,9 @@import enumeratum.EnumEntry.Uncapitalised\n\nsealed trait WorkspaceCommand extends EnumEntry with Uncapitalised\n\ncase object WorkspaceCommand extends Enum[WorkspaceCommand] {"
+  }
+]

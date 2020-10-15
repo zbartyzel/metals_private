@@ -1,0 +1,246 @@
+[
+  {
+    "id" : "fc69d5b3-08c6-4795-bd32-64fbfcdfbb3e",
+    "prId" : 2015,
+    "comments" : [
+      {
+        "id" : "c4b71e19-0733-4a42-a683-807345d22501",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "Cool! I dropped by to suggest to use this only to find you were already doing it.\r\n\r\nMany thanks @alexarchambault for this!",
+        "createdAt" : "2020-08-21T12:44:48Z",
+        "updatedAt" : "2020-08-21T12:44:55Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a7b5d0788d1fdc73fb854e375e508bab345ab0fe",
+    "line" : 16,
+    "diffHunk" : "@@ -1,1 +31,35 @@        with:\n          java-version: \"adopt@1.${{ matrix.java }}\"\n      - uses: coursier/cache-action@v3\n      - name: Run unit tests\n        run: |"
+  },
+  {
+    "id" : "8fd9e0d3-c2c0-4b8b-b219-e056c10e1b4b",
+    "prId" : 1985,
+    "comments" : [
+      {
+        "id" : "cf1ea57f-8b0f-478a-b612-0cae779311c7",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "Just to clarify, you said shared in your description but I'm seing shard here? I'm assuming it's meant to be shard? I'm looking up github actions shard and finding a whole bunch of different things. Can you explain a bit more about what exactly this is doing? 😬 \r\nI'm assuming this is just sharding the environments into 2 and running it in one or the other?",
+        "createdAt" : "2020-08-21T17:10:19Z",
+        "updatedAt" : "2020-08-21T17:14:26Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "59d377b4-db74-494b-9ea1-ae7b8f2f443f",
+        "parentId" : "cf1ea57f-8b0f-478a-b612-0cae779311c7",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "`shard` is just the name I used. It means I am running around half of the tests in one job and the rest in the other.",
+        "createdAt" : "2020-08-21T17:16:30Z",
+        "updatedAt" : "2020-08-21T17:16:31Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "eb52e550-1a0c-40ab-a0f9-0d592f3adfd1",
+        "parentId" : "cf1ea57f-8b0f-478a-b612-0cae779311c7",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "Sounds good. That's what I figured.",
+        "createdAt" : "2020-08-21T17:37:23Z",
+        "updatedAt" : "2020-08-21T17:37:23Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8e26e2d8d28a3d420f4f5bc7efb45ebe19ab460b",
+    "line" : 12,
+    "diffHunk" : "@@ -1,1 +14,18 @@        os: [windows-latest, macOS-latest, ubuntu-latest]\n        java: [8, 11]\n        shard: [1, 2]\n        exclude:\n          - os: windows-latest"
+  },
+  {
+    "id" : "1e5d874c-a01d-45dc-a62e-4888c61bc195",
+    "prId" : 1833,
+    "comments" : [
+      {
+        "id" : "783ba64c-0ce4-42b6-994d-1899f74d99e4",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Don't we want to keep the tests, but just add a dependency on fastpass?",
+        "createdAt" : "2020-06-18T17:06:01Z",
+        "updatedAt" : "2020-06-25T06:06:57Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1de4ead3-14a0-44aa-a46b-b50ed0da804d",
+        "parentId" : "783ba64c-0ce4-42b6-994d-1899f74d99e4",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "The current Pants integration for \"import build\" doesn't work reliably. It's better for users to run the fastpass refresh/create commands from the command-line instead.",
+        "createdAt" : "2020-06-25T06:16:39Z",
+        "updatedAt" : "2020-06-25T06:16:39Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "24d585838ffe8978ee3a30f502b81859f1776dc6",
+    "line" : 12,
+    "diffHunk" : "@@ -1,1 +88,92 @@            os: ubuntu-latest\n          - type: mill\n            command: bin/test.sh 'slow/testOnly -- tests.mill.*'\n            name: Mill integration\n            os: ubuntu-latest"
+  },
+  {
+    "id" : "f849ef92-57d9-434d-b14a-1650ed68f317",
+    "prId" : 1276,
+    "comments" : [
+      {
+        "id" : "6966a245-47d6-4ec1-bb12-51316ee49809",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "How about using `COURSIER_CACHE=$HOME/.cache/coursier` so we can use the same directory for all operating systems?",
+        "createdAt" : "2020-01-09T11:41:25Z",
+        "updatedAt" : "2020-01-21T17:41:30Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "44085f48-4e9f-4608-a204-0230eb959d16",
+        "parentId" : "6966a245-47d6-4ec1-bb12-51316ee49809",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "I was thinking about it, will change before going out of draft.",
+        "createdAt" : "2020-01-09T11:42:30Z",
+        "updatedAt" : "2020-01-21T17:41:30Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0a93da57a826a2970f9face5c8dae0695c1e2a59",
+    "line" : 16,
+    "diffHunk" : "@@ -1,1 +31,35 @@        with:\n          java-version: \"adopt@1.${{ matrix.java }}\"\n      - uses: actions/cache@v1\n        with:\n          path: $CACHE_PATH"
+  },
+  {
+    "id" : "d8cedee0-aa4f-4d9e-87db-40f56382200f",
+    "prId" : 1276,
+    "comments" : [
+      {
+        "id" : "404a1bdf-50ba-4990-9900-050216cb09a4",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "It should be easy now to split the unit tests, but I don't want to do too much in this PR. Will follow up later",
+        "createdAt" : "2020-01-21T18:38:38Z",
+        "updatedAt" : "2020-01-21T18:38:39Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0a93da57a826a2970f9face5c8dae0695c1e2a59",
+    "line" : 92,
+    "diffHunk" : "@@ -1,1 +55,59 @@          [sbt, maven, gradle, pants, mill, feature, cross, scalafmt, scalafix]\n        include:\n          - type: sbt\n            command: bin/test.sh 'slow/testOnly -- tests.sbt'\n            name: Sbt integration"
+  },
+  {
+    "id" : "9f23d447-de62-40a1-8b69-16dabe1740d7",
+    "prId" : 1176,
+    "comments" : [
+      {
+        "id" : "5d5449a9-3e1d-4a89-a552-51298ff88e83",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : ":smile: Somehow I never realized what I wrote here",
+        "createdAt" : "2019-12-09T20:01:35Z",
+        "updatedAt" : "2019-12-09T20:02:11Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "72c390de01a8ebc80e48677c091e4d1987bc9eec",
+    "line" : 28,
+    "diffHunk" : "@@ -1,1 +77,81 @@        run: sbt +cross/test\n  checks:\n    name: Scalafmt/Scalafix/Docs\n    runs-on: ubuntu-latest\n    steps:"
+  }
+]

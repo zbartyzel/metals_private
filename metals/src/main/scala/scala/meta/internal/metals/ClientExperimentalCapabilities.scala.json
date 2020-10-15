@@ -1,0 +1,87 @@
+[
+  {
+    "id" : "8cfe5e69-9c85-4d38-8d83-d476a89fef53",
+    "prId" : 1898,
+    "comments" : [
+      {
+        "id" : "7bd52360-ac7e-4be0-9765-4b79eded9e2b",
+        "parentId" : null,
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "https://github.com/scalameta/metals/blob/48b20201f3357738ce472c40dcae47b0cccc56fb/docs/editors/new-editor.md\r\n\r\nHere we say `statusBarProvider` is Boolean :thinking: ",
+        "createdAt" : "2020-07-10T11:22:28Z",
+        "updatedAt" : "2020-07-10T20:39:59Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f78e6e85-4990-4b53-9ff3-946d5f5825e7",
+        "parentId" : "7bd52360-ac7e-4be0-9765-4b79eded9e2b",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "🤔 that's a mistake in the docs then. Good catch. I'll change this there.",
+        "createdAt" : "2020-07-10T12:01:52Z",
+        "updatedAt" : "2020-07-10T20:39:59Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5aecc801-19fb-406a-acfd-ebfa18332a01",
+        "parentId" : "7bd52360-ac7e-4be0-9765-4b79eded9e2b",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "Updated this.",
+        "createdAt" : "2020-07-10T14:42:48Z",
+        "updatedAt" : "2020-07-10T20:39:59Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "30f2eb8f-b02e-402e-9b2c-aea7e0f339a2",
+        "parentId" : "7bd52360-ac7e-4be0-9765-4b79eded9e2b",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "Changed.",
+        "createdAt" : "2020-07-10T14:44:21Z",
+        "updatedAt" : "2020-07-10T20:39:59Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a09c54df4983c2390e8b249633004d3433d16915",
+    "line" : 36,
+    "diffHunk" : "@@ -1,1 +21,25 @@    quickPickProvider: Option[Boolean],\n    slowTaskProvider: Option[Boolean],\n    statusBarProvider: Option[String],\n    treeViewProvider: Option[Boolean]\n) {"
+  }
+]

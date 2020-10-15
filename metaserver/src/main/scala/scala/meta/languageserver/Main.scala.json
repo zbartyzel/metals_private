@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "d253c238-cba8-4626-b809-410fe43514a9",
+    "prId" : 158,
+    "comments" : [
+      {
+        "id" : "eec92f0d-d519-4f25-adc7-5fd3d87a593d",
+        "parentId" : null,
+        "author" : {
+          "login" : "ShaneDelmore",
+          "name" : "Shane Delmore",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/4604933?v=4"
+        },
+        "body" : "Is this ok to have two streams to the same file?  I have never tried it,  but would have expected err and out to point to the same stream, instead of having two streams point to the same file.",
+        "createdAt" : "2017-12-23T16:08:40Z",
+        "updatedAt" : "2018-01-02T19:54:18Z",
+        "lastEditedBy" : {
+          "login" : "ShaneDelmore",
+          "name" : "Shane Delmore",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/4604933?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "21a34e29-3b92-45e0-9e53-67bf78107c13",
+        "parentId" : "eec92f0d-d519-4f25-adc7-5fd3d87a593d",
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "This was already here, but it's a good question. I guess it's ok since it never gave us problems.",
+        "createdAt" : "2017-12-23T16:10:09Z",
+        "updatedAt" : "2018-01-02T19:54:18Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "affa2ea127de9483cd4eeda3dfcfcb3bb80a4322",
+    "line" : 12,
+    "diffHunk" : "@@ -1,1 +19,23 @@    Files.createDirectories(configDir)\n    val out = new PrintStream(new FileOutputStream(logFile))\n    val err = new PrintStream(new FileOutputStream(logFile))\n    val stdin = System.in\n    val stdout = System.out"
+  }
+]

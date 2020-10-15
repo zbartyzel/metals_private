@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "5eb5dc38-de3a-45b8-9657-95fef77a29d2",
+    "prId" : 104,
+    "comments" : [
+      {
+        "id" : "0d0b2aa3-cd52-445d-a79f-521d7dd2e666",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "`@BeanProperty` generates `getEncoder` and `setEncoder` which are required",
+        "createdAt" : "2017-12-09T14:36:17Z",
+        "updatedAt" : "2017-12-09T15:38:34Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3330c2f2d79e2c56d07a18df0981e227b3ca9179",
+    "line" : 12,
+    "diffHunk" : "@@ -1,1 +10,14 @@import scala.beans.BeanProperty\n\nclass LSPLogger(@BeanProperty var encoder: PatternLayoutEncoder)\n    extends AppenderBase[ILoggingEvent] {\n  import LSPLogger._"
+  }
+]

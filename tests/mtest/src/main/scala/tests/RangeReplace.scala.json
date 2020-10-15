@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "236f09f1-5f76-4b01-abd7-79d79ff6fd04",
+    "prId" : 621,
+    "comments" : [
+      {
+        "id" : "d3a257e8-6903-4a56-9cb6-5c43eb3da207",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "remove, unused",
+        "createdAt" : "2019-04-02T14:27:32Z",
+        "updatedAt" : "2019-04-05T09:13:03Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ef7ef33a-7f06-4651-8d4c-d4c71703f72e",
+        "parentId" : "d3a257e8-6903-4a56-9cb6-5c43eb3da207",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "That was supposed to be used below, added there.",
+        "createdAt" : "2019-04-04T11:07:44Z",
+        "updatedAt" : "2019-04-05T09:13:03Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "6f03d2264f9c4e8e28d2e258ca99d24915c82e17",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +11,15 @@      base: String,\n      range: Range,\n      prefix: String = \"<<\",\n      suffix: String = \">>\"\n  ): String = {"
+  }
+]

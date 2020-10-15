@@ -1,0 +1,77 @@
+[
+  {
+    "id" : "e86337b1-09ae-4cd7-b229-7da2b205c20d",
+    "prId" : 1783,
+    "comments" : [
+      {
+        "id" : "3043e5b9-d624-49a3-9679-964f6e78178a",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "We also take methods into account now, which in case of java files will mean that the breakpoints will work properly even with an inner class.",
+        "createdAt" : "2020-05-28T15:26:18Z",
+        "updatedAt" : "2020-06-02T20:02:03Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "354a7590e2040752863a8b6566562324bc6d9483",
+    "line" : 10,
+    "diffHunk" : "@@ -1,1 +33,37 @@  }\n\n  private def findClass(symbol: String): String = {\n    val desc = symbol.desc\n    if (desc.isTerm || desc.isType) {"
+  },
+  {
+    "id" : "74a06649-e9e2-4dfd-b009-fea7e0a83a26",
+    "prId" : 1163,
+    "comments" : [
+      {
+        "id" : "d393a16b-145f-46e4-8b19-966df5de4e7e",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Does it work inside annonymous classes?",
+        "createdAt" : "2019-12-16T11:32:33Z",
+        "updatedAt" : "2019-12-18T11:36:11Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "cb5acd93-f145-48d7-bed0-39067ef67aca",
+        "parentId" : "d393a16b-145f-46e4-8b19-966df5de4e7e",
+        "author" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "body" : "Added a test case for that",
+        "createdAt" : "2019-12-17T09:15:03Z",
+        "updatedAt" : "2019-12-18T11:36:11Z",
+        "lastEditedBy" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "04ef30f47759c2620cd886265e4c50169245a539",
+    "line" : 29,
+    "diffHunk" : "@@ -1,1 +27,31 @@      }\n    }\n    val fqcn = loop(definition.symbol.ownerChain, new StringBuilder)\n    TypeSignature(fqcn)\n  }"
+  }
+]

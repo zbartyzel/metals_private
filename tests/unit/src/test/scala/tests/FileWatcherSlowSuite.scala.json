@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "52139b63-3b67-4c31-8ced-ccec7a62a836",
+    "prId" : 506,
+    "comments" : [
+      {
+        "id" : "03e4ace1-7ea3-43fc-af78-be0ea1909b58",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "We can use `cleanWorkspace()` to clean everything",
+        "createdAt" : "2019-02-01T09:34:06Z",
+        "updatedAt" : "2019-02-01T09:34:21Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d0327f55623bffb4aa6e971e1d6771361879e81a",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +10,14 @@    cleanCompileCache(\"c\")\n    RecursivelyDelete(workspace.resolve(\"a\"))\n    RecursivelyDelete(workspace.resolve(\"b\"))\n    RecursivelyDelete(workspace.resolve(\"c\"))\n    val JavaFileEvent ="
+  }
+]

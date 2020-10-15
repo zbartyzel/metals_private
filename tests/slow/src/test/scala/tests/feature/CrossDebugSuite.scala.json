@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "4a0bacc2-3d60-4565-b2b2-9643d02b19a9",
+    "prId" : 1808,
+    "comments" : [
+      {
+        "id" : "a282eda9-58e9-45e6-816e-05cc555bcc18",
+        "parentId" : null,
+        "author" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "body" : "this is called `outer` object in dotty instead of `inner` ? It is inner to the method in the end... :thinking: \r\nIs it accessible from outside the `helloworld`?",
+        "createdAt" : "2020-06-08T08:17:20Z",
+        "updatedAt" : "2020-06-08T11:48:26Z",
+        "lastEditedBy" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "28161774-9a24-40b3-97e8-02daa04a9354",
+        "parentId" : "a282eda9-58e9-45e6-816e-05cc555bcc18",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Changed to `object-in-toplevel-method`",
+        "createdAt" : "2020-06-08T11:17:47Z",
+        "updatedAt" : "2020-06-08T11:48:26Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "74c564f241c0a79740bfb2f0806ac5627b894797",
+    "line" : 59,
+    "diffHunk" : "@@ -1,1 +57,61 @@                |@main \n                |def helloWorld(): Unit = {\n                |  object Hello{\n                |    def run() = {\n                |>>    println(\"Hello world\")"
+  }
+]

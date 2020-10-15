@@ -1,0 +1,87 @@
+[
+  {
+    "id" : "d60d7340-0cf7-475c-84c9-71fec004416a",
+    "prId" : 225,
+    "comments" : [
+      {
+        "id" : "522bf684-4377-48a9-9512-ccace6435eb0",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Didn't know this existed!",
+        "createdAt" : "2018-04-02T14:38:18Z",
+        "updatedAt" : "2018-04-02T15:14:24Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "62f05df5-c653-42f0-95d7-abe2ba614907",
+        "parentId" : "522bf684-4377-48a9-9512-ccace6435eb0",
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "Me neither, I looked for it, since re-implementing that case class felt redundant.",
+        "createdAt" : "2018-04-02T15:05:12Z",
+        "updatedAt" : "2018-04-02T15:14:24Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a62d1e3b-4e1a-4e9a-b12d-00c51a777982",
+        "parentId" : "522bf684-4377-48a9-9512-ccace6435eb0",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "I probably would have cheated with using `scalaVersion.startsWith(\"2.12\")` 😜 ",
+        "createdAt" : "2018-04-02T15:12:36Z",
+        "updatedAt" : "2018-04-02T15:14:24Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "71507cb7-3f24-4cba-95cf-8f6c8a5974d6",
+        "parentId" : "522bf684-4377-48a9-9512-ccace6435eb0",
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "Hehe, I don't trust strings 😅",
+        "createdAt" : "2018-04-02T15:15:29Z",
+        "updatedAt" : "2018-04-02T15:15:29Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "299c47884dfa8163da6c7411b3643224ec941881",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +5,9 @@import java.nio.file.Paths\nimport java.util.Properties\nimport scala.tools.nsc.settings.ScalaVersion\nimport scala.tools.nsc.settings.SpecificScalaVersion\nimport com.typesafe.scalalogging.LazyLogging"
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "id" : "bea5b08d-ce7e-480e-be76-c4ba03dc5b14",
+    "prId" : 1277,
+    "comments" : [
+      {
+        "id" : "c1d72364-8e29-4247-a56a-dc3a1107e63a",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "This re-enables the test, but marks it as flaky",
+        "createdAt" : "2020-01-09T12:08:03Z",
+        "updatedAt" : "2020-01-26T10:34:42Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "49287d98409399c613ea481aeb08529f827e5982",
+    "line" : 31,
+    "diffHunk" : "@@ -1,1 +183,187 @@  // Navigation continues to mostly work, except for areas that have compilation\n  // errors.\n  test(\"missing-compiler-plugin\".flaky) {\n    for {\n      _ <- server.initialize("
+  },
+  {
+    "id" : "67a920e3-fea6-4afc-b7c5-bb86a8ffe4ba",
+    "prId" : 1000,
+    "comments" : [
+      {
+        "id" : "e0abd089-bafb-4077-8cd2-8b57456b3e88",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "I hadn't realized we were calling \"find references\" in this test suite. That explains why the test was flaky, \"find references\" triggers a background cascade compilation. Generally, any discarded `Future[T]` is a likely source of flaky test failures. It's a good change to only test for definitions in `DefinitionLspSuite` 👍 ",
+        "createdAt" : "2019-10-18T18:37:01Z",
+        "updatedAt" : "2019-10-18T18:37:02Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d528dd471866def16a78d66b95b8895f65017a9d",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +75,79 @@           |import java.util.concurrent.Future/*Future.java*/ // unused\n           |import scala.util.Failure/*Try.scala*/ // unused\n           |object Main/*L3*/ extends App/*App.scala*/ {\n           |  val message/*L4*/ = Message/*Message.java:1*/.message/*Message.java:2*/\n           |  new java.io.PrintStream/*PrintStream.java*/(new java.io.ByteArrayOutputStream/*ByteArrayOutputStream.java*/())"
+  }
+]

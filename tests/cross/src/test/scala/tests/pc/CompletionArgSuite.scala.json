@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "f7122315-9f40-43d6-a50e-6c79d0c73277",
+    "prId" : 827,
+    "comments" : [
+      {
+        "id" : "2a51df14-27e8-4330-a192-30406dfbd850",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "I am concerned we're trying to be too smart in this particular case. I think it's fine to complete only one thing at a time, for example there may be variables in scope that start with `arg*`.",
+        "createdAt" : "2019-08-25T20:14:59Z",
+        "updatedAt" : "2019-08-28T16:34:18Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "94591289-fe67-4120-aa7c-39f671002c4e",
+        "parentId" : "2a51df14-27e8-4330-a192-30406dfbd850",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "We first check for values with the name, then for named arguments, named arguments with values and the autocomplete is last.\r\n\r\nI think that's the best option and is compatible with the current behaviour. Wouldn't cause users to need to scroll more then now to use the current capabilities.",
+        "createdAt" : "2019-08-28T11:20:03Z",
+        "updatedAt" : "2019-08-28T16:34:18Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ab71afec148a55c6f3f1f6f237920e8bec11622e",
+    "line" : 54,
+    "diffHunk" : "@@ -1,1 +225,229 @@        |\"\"\".stripMargin,\n    \"\"\"|argument = : Int\n       |argument = number : Int\n       |argument = number2 : Int\n       |argument = number4 : Int"
+  }
+]

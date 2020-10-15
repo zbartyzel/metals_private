@@ -1,0 +1,87 @@
+[
+  {
+    "id" : "b75b0247-6734-46c9-9897-d1256b497e4e",
+    "prId" : 1522,
+    "comments" : [
+      {
+        "id" : "e8340a69-f518-4bcb-98ec-a88718bfacff",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "In the spec it says that code `can be omitted`, and I don't believe we use it at all. Plus, now it's a `Either[String, Number]`, but it was also returning `null` often, so I just removed it. Let me know if I'm missing something, and we actually need this.",
+        "createdAt" : "2020-03-21T18:03:07Z",
+        "updatedAt" : "2020-03-22T12:53:13Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "dfaf7ea7-5102-4ddf-91c5-9f3935b26995",
+        "parentId" : "e8340a69-f518-4bcb-98ec-a88718bfacff",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "There is a comment in conversion `bsp.Diagnostics -> lsp.Diagnostics`:\r\n```\r\n        // We omit diag.getCode since Bloop's BSP implementation uses 'code' with different semantics\r\n        // than LSP. See https://github.com/scalacenter/bloop/issues/1134 for details\r\n```\r\nIssue is still open but was assigned 4 days ago, maybe it is worth just doing `Left(d.getCode)` ? (more complex as it is java and must handle null, but concept the same)\r\nThis way when you update conversion bsp->lsp it will be pushed to client.\r\n\r\nWhat is this code for is actually a good question anyway.",
+        "createdAt" : "2020-03-21T23:39:39Z",
+        "updatedAt" : "2020-03-22T12:53:13Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "427ab242-2235-4560-82da-63585112c36b",
+        "parentId" : "e8340a69-f518-4bcb-98ec-a88718bfacff",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "Thanks for pointing out the conversation. I'm hesitant to change something to account for the changes in bloop when they aren't there yet. Since on the metals side we aren't using `code` for anything (again as far as I can tell), do you think it might be best to leave it out for now and first implement it if needed when there when it's finished and concrete just to ensure we don't have to potentially make the changes for the current case, and then change them again later? I'd rather just do that once. ",
+        "createdAt" : "2020-03-22T12:59:07Z",
+        "updatedAt" : "2020-03-22T12:59:07Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "89cb1c4f-93e0-4311-94f6-fc55885620ff",
+        "parentId" : "e8340a69-f518-4bcb-98ec-a88718bfacff",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "I think we can drop code for now, it's not really useful anyway. This usually just means the code for the error/warning type. That can be useful in some automatic tooling, but here we just need to present data to the user. Let's drop it.",
+        "createdAt" : "2020-03-22T17:38:58Z",
+        "updatedAt" : "2020-03-22T17:51:36Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a1f157044a3d540463d614d0851071783f10aed1",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +216,220 @@        d.getSeverity,\n        d.getSource\n      )\n    }\n    if (result.isEmpty) {"
+  }
+]

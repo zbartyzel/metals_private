@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "5ba48722-7e83-4816-8356-a5d12f588c73",
+    "prId" : 1145,
+    "comments" : [
+      {
+        "id" : "f10ab56b-78a8-4fa8-ac3f-47a573881c66",
+        "parentId" : null,
+        "author" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "body" : "doesn't `trySuccess` cover the condition already?",
+        "createdAt" : "2019-12-05T08:21:15Z",
+        "updatedAt" : "2019-12-05T11:14:30Z",
+        "lastEditedBy" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "862ad26c-9f62-47fc-b611-54621e2b0a56",
+        "parentId" : "f10ab56b-78a8-4fa8-ac3f-47a573881c66",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "This code is unchanged in this PR, it just moved causing a diff. Please open an issue if you want to follow up on this.",
+        "createdAt" : "2019-12-05T10:30:41Z",
+        "updatedAt" : "2019-12-05T11:14:30Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c032fa899f1747d53cf2025b6e1cf03227b19980",
+    "line" : 56,
+    "diffHunk" : "@@ -1,1 +54,58 @@    if (!completeProcess.isCompleted) {\n      completeProcess.trySuccess(statusCode)\n    }\n    scribe.info(s\"build tool exit: $statusCode\")\n    response.foreach(_.cancel(false))"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "85910d9b-e6f7-44ca-9bae-13c6fd1461a2",
+    "prId" : 2126,
+    "comments" : [
+      {
+        "id" : "45e586f4-700b-4e3a-bc5c-4b87d00fd403",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "We no longer support anything less than 0.25.0, so the option will always be available.",
+        "createdAt" : "2020-10-08T09:41:39Z",
+        "updatedAt" : "2020-10-08T09:41:39Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "6957f3f78c05dcb0e74234fe265da021d93fef3f",
+    "line" : 9,
+    "diffHunk" : "@@ -1,1 +99,103 @@\n  def newDriver: InteractiveDriver = {\n    val implicitSuggestionTimeout = List(\"-Ximport-suggestion-timeout\", \"0\")\n    val defaultFlags = List(\"-color:never\")\n    val settings ="
+  }
+]

@@ -1,0 +1,124 @@
+[
+  {
+    "id" : "aa4a3e44-84d9-496d-b0f8-6b30e9fc62d5",
+    "prId" : 797,
+    "comments" : [
+      {
+        "id" : "34695139-f1ec-4acc-983d-8c3fc3ade611",
+        "parentId" : null,
+        "author" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "body" : "```suggestion\r\n   * Whether this node should be collapsed, expanded or if it has no children.\r\n```",
+        "createdAt" : "2019-06-27T06:33:30Z",
+        "updatedAt" : "2019-06-28T12:28:04Z",
+        "lastEditedBy" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a43e250d79a91a6cadd98f502fb91b0993c3b5d8",
+    "line" : 42,
+    "diffHunk" : "@@ -1,1 +40,44 @@  tooltip?: string;\n  /**\n   * Whether this tree node should be collapsed, expanded or if it has no children.\n   *\n   * - undefined: this node has no children."
+  },
+  {
+    "id" : "592d37d2-4a54-4b62-9e59-c068ec927e35",
+    "prId" : 797,
+    "comments" : [
+      {
+        "id" : "84be8bc8-5ead-4654-92d8-43e638fe035c",
+        "parentId" : null,
+        "author" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "body" : "```suggestion\r\n   * - expanded: this node has children and this node should be auto-expanded\r\n```",
+        "createdAt" : "2019-06-27T06:34:33Z",
+        "updatedAt" : "2019-06-28T12:28:04Z",
+        "lastEditedBy" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8b31e5b6-c69c-482e-8b66-dda304d8f292",
+        "parentId" : "84be8bc8-5ead-4654-92d8-43e638fe035c",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Good catch!",
+        "createdAt" : "2019-06-27T08:51:20Z",
+        "updatedAt" : "2019-06-28T12:28:04Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a43e250d79a91a6cadd98f502fb91b0993c3b5d8",
+    "line" : 45,
+    "diffHunk" : "@@ -1,1 +43,47 @@   *\n   * - undefined: this node has no children.\n   * - collapsed: this node has children and this node should be auto-expanded\n   *   on the first load.\n   * - expanded: this node has children and the user should manually expand"
+  },
+  {
+    "id" : "89671bfc-0332-47ee-b892-f9f6111de501",
+    "prId" : 797,
+    "comments" : [
+      {
+        "id" : "82635589-1efe-45b9-8039-183a263b31f9",
+        "parentId" : null,
+        "author" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "body" : "```suggestion\r\n```",
+        "createdAt" : "2019-06-27T06:52:09Z",
+        "updatedAt" : "2019-06-28T12:28:04Z",
+        "lastEditedBy" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "842737a4-29cb-4419-a26e-abb63d1a12a6",
+        "parentId" : "82635589-1efe-45b9-8039-183a263b31f9",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "I agree it feels a bit redundant but I think it's helpful to establish the terminology that `collapsed=false` means the node is \"expanded\".",
+        "createdAt" : "2019-06-27T09:02:57Z",
+        "updatedAt" : "2019-06-28T12:28:04Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a43e250d79a91a6cadd98f502fb91b0993c3b5d8",
+    "line" : 212,
+    "diffHunk" : "@@ -1,1 +210,214 @@  /** The URI of the node that was collapsed or expanded. */\n  nodeUri: string;\n  /** True if the node is collapsed, false if the node was expanded. */\n  collapsed: boolean;\n}"
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "id" : "9e560052-cf9b-41fd-88ce-349e828852f3",
+    "prId" : 1584,
+    "comments" : [
+      {
+        "id" : "6bf45f6d-6add-49f8-83e4-4832fb414b16",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "I refactored this to support a slightly more general use case.\r\n\r\nWe still compare versions only by x.y.z, ignoring any other following modifier. This has some edge cases such as `1.0.0+1` being equal to `1.0.0-SNAPSHOT` and `1.0.0+56-abcdefg`, but it still covers all our uses cases for now",
+        "createdAt" : "2020-04-04T13:33:29Z",
+        "updatedAt" : "2020-04-08T10:30:38Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ba70749edb494f6da26064369a549085fcb87161",
+    "line" : 36,
+    "diffHunk" : "@@ -1,1 +24,28 @@  def isCompatibleVersion(minimumVersion: String, version: String): Boolean = {\n    Version.fromString(version) >= Version.fromString(minimumVersion)\n  }\n}"
+  },
+  {
+    "id" : "4e622b05-8eac-48fe-989a-d70e11392696",
+    "prId" : 1256,
+    "comments" : [
+      {
+        "id" : "5a80ae8f-1f7a-49d5-92a6-dd438ac3ce8e",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Fixed it to work with `1.4.0-RC` etc. and snapshot versions.",
+        "createdAt" : "2020-01-06T12:46:54Z",
+        "updatedAt" : "2020-01-06T12:46:54Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "5221982e1605895d70c5abd22174e1406e1e0efb",
+    "line" : 9,
+    "diffHunk" : "@@ -1,1 +6,10 @@\n    def splitVersion(v: String) =\n      v.replaceAll(\"(-|\\\\+).+$\", \"\").split('.')\n\n    (splitVersion(minimumVersion), splitVersion(version)) match {"
+  }
+]
