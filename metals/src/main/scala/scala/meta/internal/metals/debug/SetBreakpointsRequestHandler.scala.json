@@ -1,0 +1,144 @@
+[
+  {
+    "id" : "4a3fc8ad-b10f-4b5e-a2e2-6c08ca602c11",
+    "prId" : 1163,
+    "comments" : [
+      {
+        "id" : "1aa74ea7-4af0-4e6e-ae53-c9baa6327a14",
+        "parentId" : null,
+        "author" : {
+          "login" : "jvican",
+          "name" : "Jorge",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/2462974?u=247f9a0cfd142440687595dce462fabed087e912&v=4"
+        },
+        "body" : "Are we sending fqcns only for symbols from third-party deps? Or are we sending fqcns for symbols for Java and Scala sources defined in the project? Are we following the recommendation in [the PR introducing support for breakpoints in Bloop](https://github.com/scalacenter/bloop/pull/1087)?",
+        "createdAt" : "2019-12-18T12:55:29Z",
+        "updatedAt" : "2019-12-18T12:55:35Z",
+        "lastEditedBy" : {
+          "login" : "jvican",
+          "name" : "Jorge",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/2462974?u=247f9a0cfd142440687595dce462fabed087e912&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6b048b08-f476-455d-8e6c-9b7b31a3838d",
+        "parentId" : "1aa74ea7-4af0-4e6e-ae53-c9baa6327a14",
+        "author" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "body" : "We are avoiding extra branching by not checking whether the source is defined within the workspace or is a part of a dependency. We are confident this approach is working thanks to the extensive suite of tests we provide alongside. If you know a case when this will fail, please don't hesitate to point to it.\r\n\r\nOr did you have another recommendation in mind?",
+        "createdAt" : "2019-12-18T13:12:19Z",
+        "updatedAt" : "2019-12-18T13:13:44Z",
+        "lastEditedBy" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "73d3c5ff-e4f5-475a-93e4-04604220d9d9",
+        "parentId" : "1aa74ea7-4af0-4e6e-ae53-c9baa6327a14",
+        "author" : {
+          "login" : "jvican",
+          "name" : "Jorge",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/2462974?u=247f9a0cfd142440687595dce462fabed087e912&v=4"
+        },
+        "body" : "My recommendation is not to send `dap-fqcn` for files defined inside user-defined projects. It should only be used for third-party dependencies.\r\n\r\nBloop and Zinc are the source of truth here. Regardless of how confident we're from Metals doing the right thing, we should be relying on the source of truth if that's possible to avoid issues/discrepancies in the future.",
+        "createdAt" : "2019-12-18T13:54:47Z",
+        "updatedAt" : "2019-12-18T13:54:47Z",
+        "lastEditedBy" : {
+          "login" : "jvican",
+          "name" : "Jorge",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/2462974?u=247f9a0cfd142440687595dce462fabed087e912&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "200bbbcf-7955-4877-8c5e-04ba02b1d3ab",
+        "parentId" : "1aa74ea7-4af0-4e6e-ae53-c9baa6327a14",
+        "author" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "body" : "Fair enough. For now, though, we will rely on the compiler to emit `LineNumberTable` according to the JVM spec. \r\nIf the compiler, at any point, proves to be unreliable by messing the line numbers, then I believe neither bloop nor zinc would help us.",
+        "createdAt" : "2019-12-19T08:12:50Z",
+        "updatedAt" : "2019-12-19T08:12:50Z",
+        "lastEditedBy" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a99cb89d-c9cd-44e8-9c22-6fb2455fb1f0",
+        "parentId" : "1aa74ea7-4af0-4e6e-ae53-c9baa6327a14",
+        "author" : {
+          "login" : "jvican",
+          "name" : "Jorge",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/2462974?u=247f9a0cfd142440687595dce462fabed087e912&v=4"
+        },
+        "body" : "I feel pretty strongly this is not the way to go. You should not be reimplementing this part of the logic. Metals should be reusing the breakpoint logic for user-defined sources implemented in Bloop. ",
+        "createdAt" : "2019-12-19T08:29:53Z",
+        "updatedAt" : "2019-12-19T08:29:53Z",
+        "lastEditedBy" : {
+          "login" : "jvican",
+          "name" : "Jorge",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/2462974?u=247f9a0cfd142440687595dce462fabed087e912&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "af0eb9ac-1fd6-40ea-a2f5-17aab70c2e0a",
+        "parentId" : "1aa74ea7-4af0-4e6e-ae53-c9baa6327a14",
+        "author" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "body" : "The logic you say I am reimplementing is required for the library sources anyway, since bloop solution works only for workspace sources. \r\nSince it is required either way, right now, I don't see a reason for falling back to bloop and not using it also for user-defined sources. It does not mean there is no such reason but only that I don't see it currently - can you help me in this regard?",
+        "createdAt" : "2019-12-19T13:49:15Z",
+        "updatedAt" : "2019-12-19T13:49:15Z",
+        "lastEditedBy" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4b8d213b-9966-476e-8d93-2edeebd48a43",
+        "parentId" : "1aa74ea7-4af0-4e6e-ae53-c9baa6327a14",
+        "author" : {
+          "login" : "jvican",
+          "name" : "Jorge",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/2462974?u=247f9a0cfd142440687595dce462fabed087e912&v=4"
+        },
+        "body" : "> The logic you say I am reimplementing is required for the library sources anyway, since bloop solution works only for workspace sources.\r\n  \r\nYes, the whole reason why we have `dap-fqcn` is so that IDEs that manage library sources can pass in the resolved fully qualified class names.\r\n  \r\n>  I don't see a reason for falling back to bloop and not using it also for user-defined sources. It does not mean there is no such reason but only that I don't see it currently - can you help me in this regard?\r\n  \r\nYes, the point I'm trying to make is that the logic for library sources is necessary since Bloop doesn't support it. But the logic for workspace sources isn't. There is a reference implementation that it's as good as it gets: it's using the same resolution mechanism the JVM uses for debugging (what's happening under the hood is that the JVM gets our fully qualified class name we pass it and undoes some of the work Bloop has done and finds the class file the loaded class was loaded from in the classloader).\r\n  \r\nAt a high level, the process looks like this:\r\n  \r\nBloop: `$WORKSPACE_SOURCE_FILE` -> `$WORKSPACE_CLASS_FILE` -> `$FQCN` ->\r\nJVM: `$FQCN` -> `$WORKSPACE_CLASS_FILE`\r\n  \r\nThe JVM uses the `LineNumberTable` of the `$WORKSPACE_CLASS_FILE` to correctly set the breakpoint. This is why it's so important that `WORKSPACE_CLASS_FILE` matches the one the JVM picks and why the Bloop implementation is the source of the truth -- because it mimics exactly the logic of the JVM.\r\n  \r\nWhat Metals is doing here might be correct based on the semantic-level information you have. But it's creating a layer of indirection that should be avoided as it could produce issues or inconsistent results in the future. I think it's a good practice to rely on the source of truth if it's possible and in this case it is.",
+        "createdAt" : "2019-12-19T14:34:01Z",
+        "updatedAt" : "2019-12-19T14:34:02Z",
+        "lastEditedBy" : {
+          "login" : "jvican",
+          "name" : "Jorge",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/2462974?u=247f9a0cfd142440687595dce462fabed087e912&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "04ef30f47759c2620cd886265e4c50169245a539",
+    "line" : 25,
+    "diffHunk" : "@@ -1,1 +23,27 @@    val input = path.toAbsolutePath.toInput\n    val occurrences = Mtags.allToplevels(input).occurrences\n    val groups = request.getBreakpoints.groupBy { breakpoint =>\n      val definition = occurrences.minBy(distanceFrom(breakpoint))\n      JvmSignatures.toTypeSignature(definition)"
+  }
+]

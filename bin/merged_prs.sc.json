@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "43e7ff64-62f0-466f-bc7b-e5e612300b75",
+    "prId" : 1915,
+    "comments" : [
+      {
+        "id" : "3be36984-0005-4922-887d-9c276a5b7d59",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Added ammonite script, which should be easier to use and maintain. Java library was simpler than any available Scala library.",
+        "createdAt" : "2020-07-15T10:46:43Z",
+        "updatedAt" : "2020-07-15T11:08:55Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f42127e312fa4b6319ec9dfe593c9e7f2839cc1f",
+    "line" : 1,
+    "diffHunk" : "@@ -1,1 +-1,3 @@import $ivy.`org.kohsuke:github-api:1.114`\n\nimport scala.collection.JavaConverters._"
+  }
+]

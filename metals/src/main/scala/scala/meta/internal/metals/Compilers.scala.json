@@ -1,0 +1,341 @@
+[
+  {
+    "id" : "a8fd3fc5-a3b8-4002-9c8d-a8c0d4ce701a",
+    "prId" : 1856,
+    "comments" : [
+      {
+        "id" : "2f323a58-c439-4063-8a15-a1eb261ec484",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "This code path didn't exist before, why is that? Would it be possible to somehow move the management of compilers to `Compilers.scala`? There seems to be some overlap, maybe we can generate `BuildTargetIdentifier` for worksheets?",
+        "createdAt" : "2020-06-25T17:17:02Z",
+        "updatedAt" : "2020-06-26T14:08:31Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a802e740-98d9-49bc-8bd1-e4919be6bd73",
+        "parentId" : "2f323a58-c439-4063-8a15-a1eb261ec484",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Not sure what you mean? It's invoked after evaluating the worksheet in case of changed dependencies, which in essence is a build target change. I am not sure how otherwise to trigger on that particular event. \r\n\r\nAlternatively, we could have worksheets as a different target and update the build target if dependencies change, which will be effectively the same with more indirection. We do need to somehow restart the presentation compiler.\r\n\r\n> There seems to be some overlap, maybe we can generate BuildTargetIdentifier for worksheets?\r\n\r\nI was thinking about having a separate build target for each worksheet, but since the worksheets can be a part of another build target I decided against. It also seemed like it might cause more work really and I planned to have this for the release tomorrow.\r\n",
+        "createdAt" : "2020-06-25T18:47:36Z",
+        "updatedAt" : "2020-06-26T14:08:31Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "77cc09c4-f647-48b2-8274-35d307126af5",
+        "parentId" : "2f323a58-c439-4063-8a15-a1eb261ec484",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Sounds good. I agree with your conclusion to keep this as is ",
+        "createdAt" : "2020-06-26T09:02:33Z",
+        "updatedAt" : "2020-06-26T14:08:31Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1f17edfb786b6f5af2def3bdb1d0b49714512fb2",
+    "line" : 95,
+    "diffHunk" : "@@ -1,1 +380,384 @@      _ = {\n        if (!isSupported) {\n          scribe.warn(s\"unsupported Scala ${info.scalaVersion}\")\n        }\n      }"
+  },
+  {
+    "id" : "45ab3f73-a3b5-4d9e-9215-c5634c8b9734",
+    "prId" : 1856,
+    "comments" : [
+      {
+        "id" : "6b98c147-1d66-4821-8541-334e6d61b77f",
+        "parentId" : null,
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "why are you updating `jworksheetsCache` twice?",
+        "createdAt" : "2020-06-25T21:48:54Z",
+        "updatedAt" : "2020-06-26T14:08:31Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "036ffc02-8614-4e5c-b799-28a59897408e",
+        "parentId" : "6b98c147-1d66-4821-8541-334e6d61b77f",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "okay this is actually foreach if not present :D scala should add method like forempty {} :P",
+        "createdAt" : "2020-06-25T22:01:34Z",
+        "updatedAt" : "2020-06-26T14:08:31Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d9442d76-1874-400d-aeff-ba280f5c01bc",
+        "parentId" : "6b98c147-1d66-4821-8541-334e6d61b77f",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "< resolved >",
+        "createdAt" : "2020-06-25T22:01:44Z",
+        "updatedAt" : "2020-06-26T14:08:31Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1f17edfb786b6f5af2def3bdb1d0b49714512fb2",
+    "line" : 119,
+    "diffHunk" : "@@ -1,1 +404,408 @@\n    created.getOrElse {\n      jworksheetsCache.put(\n        path,\n        createStandaloneCompiler(classpath, path.toString())"
+  },
+  {
+    "id" : "4527e811-34bf-4676-835e-7973e9651e0f",
+    "prId" : 1856,
+    "comments" : [
+      {
+        "id" : "b1fa05ad-83d7-473d-b24d-9c6e763a5ba8",
+        "parentId" : null,
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "put returns previous value, `created` ends up being:\r\n```\r\nscala> val created = for {\r\n     |   x <- Option(3)\r\n     | } yield {\r\n     |   null\r\n     | }\r\nval created: Option[Null] = Some(null)\r\n```",
+        "createdAt" : "2020-06-25T21:55:23Z",
+        "updatedAt" : "2020-06-26T14:08:31Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "24c3de88-d265-4b77-8c30-14593f9dd058",
+        "parentId" : "b1fa05ad-83d7-473d-b24d-9c6e763a5ba8",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Added `()`, but this should not be an issue anyway, since that value is never used.",
+        "createdAt" : "2020-06-26T12:59:28Z",
+        "updatedAt" : "2020-06-26T14:08:31Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4a9f127e-117d-4cf1-b131-f0d9aebb9304",
+        "parentId" : "b1fa05ad-83d7-473d-b24d-9c6e763a5ba8",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Changed to explicit: Option[Unit], which looks better. ",
+        "createdAt" : "2020-06-26T14:32:42Z",
+        "updatedAt" : "2020-06-26T14:32:42Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1f17edfb786b6f5af2def3bdb1d0b49714512fb2",
+    "line" : 101,
+    "diffHunk" : "@@ -1,1 +386,390 @@      scalac <- buildTargets.scalacOptions(targetId)\n    } yield {\n      jworksheetsCache.put(\n        path,\n        statusBar.trackBlockingTask("
+  },
+  {
+    "id" : "04d05436-31c1-4815-83ec-4bf5e76852d1",
+    "prId" : 1523,
+    "comments" : [
+      {
+        "id" : "632c5930-0dbe-4472-93b2-c12214faec54",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Moved the configuration for `foldOnlyLines` here",
+        "createdAt" : "2020-04-15T13:41:36Z",
+        "updatedAt" : "2020-04-15T13:50:25Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1142490703f832961ac0df1debd14b4f3b12ce7d",
+    "line" : 117,
+    "diffHunk" : "@@ -1,1 +362,366 @@          isCompletionSnippetsEnabled =\n            initializeParams.supportsCompletionSnippets,\n          isFoldOnlyLines = initializeParams.foldOnlyLines\n        )\n      )"
+  },
+  {
+    "id" : "ff913231-9d4c-48af-8766-4089af509bf5",
+    "prId" : 736,
+    "comments" : [
+      {
+        "id" : "86592dc6-1e2d-421c-ab41-89155a99daac",
+        "parentId" : null,
+        "author" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "body" : "Can we not mix the future/options? Other methods here have option/future. Is there a reason for breaking this consistency?",
+        "createdAt" : "2019-05-29T13:24:31Z",
+        "updatedAt" : "2019-06-01T12:08:36Z",
+        "lastEditedBy" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "06441fb9-02d1-4871-a316-6998e38ee50f",
+        "parentId" : "86592dc6-1e2d-421c-ab41-89155a99daac",
+        "author" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "body" : "Or as @tgodzik suggested - the other way around :)",
+        "createdAt" : "2019-05-29T15:17:19Z",
+        "updatedAt" : "2019-06-01T12:08:36Z",
+        "lastEditedBy" : {
+          "login" : "mzarnowski",
+          "name" : "Marek Żarnowski",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8ea65344-80aa-4966-a34c-dd62aabe2e67",
+        "parentId" : "86592dc6-1e2d-421c-ab41-89155a99daac",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "I have changed all the signatures to return `Future[T]` for consistency, I agree this makes the code easier to reason about.",
+        "createdAt" : "2019-05-31T09:05:43Z",
+        "updatedAt" : "2019-06-01T12:08:36Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3cd39a3dc1957ac5b5e4e60da9c3eae356702ace",
+    "line" : 62,
+    "diffHunk" : "@@ -1,1 +155,159 @@      token: CancelToken,\n      interactiveSemanticdbs: InteractiveSemanticdbs\n  ): Future[Option[Hover]] =\n    withPC(params, Some(interactiveSemanticdbs)) { (pc, pos) =>\n      pc.hover("
+  },
+  {
+    "id" : "c5158d74-dfdf-4554-bcbe-ede0dc5e4778",
+    "prId" : 527,
+    "comments" : [
+      {
+        "id" : "43fe7be4-8f0e-41aa-821c-b60b244aeea5",
+        "parentId" : null,
+        "author" : {
+          "login" : "nremond",
+          "name" : "Nicolas Rémond",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/600102?v=4"
+        },
+        "body" : "But why a synchronized version vs `java.util.concurrent.ConcurrentHashMap`?",
+        "createdAt" : "2019-02-20T23:19:24Z",
+        "updatedAt" : "2019-03-10T09:44:08Z",
+        "lastEditedBy" : {
+          "login" : "nremond",
+          "name" : "Nicolas Rémond",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/600102?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "fbd096be-457e-4b16-aa05-2afa580168a5",
+        "parentId" : "43fe7be4-8f0e-41aa-821c-b60b244aeea5",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "`j.u.c.ConcurrentHashMap` can deadlock in `computeIfAbsent` when the compute function is expensive",
+        "createdAt" : "2019-02-21T08:53:30Z",
+        "updatedAt" : "2019-03-10T09:44:08Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c7621ebcf6232d37856b167824069496131bae13",
+    "line" : 47,
+    "diffHunk" : "@@ -1,1 +45,49 @@  // Not a `j.u.c.ConcurrentHashMap` because it can deadlock in `computeIfAbsent` when the absent\n  // function is expensive, which is the case here.\n  val jcache = Collections.synchronizedMap(\n    new java.util.HashMap[BuildTargetIdentifier, PresentationCompiler]\n  )"
+  }
+]

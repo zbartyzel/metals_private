@@ -1,0 +1,378 @@
+[
+  {
+    "id" : "f10af76f-4107-4ad8-86c7-439f19d29240",
+    "prId" : 2103,
+    "comments" : [
+      {
+        "id" : "a3360d12-53dd-4c1e-a14c-0a12f4fb9027",
+        "parentId" : null,
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "Something is not right because I haven't configured anything and I can see annotations, yet default is false? :confused: ",
+        "createdAt" : "2020-09-30T09:39:22Z",
+        "updatedAt" : "2020-10-05T15:15:05Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1e51fc72-70ee-44dd-9e06-5635d5e7435e",
+        "parentId" : "a3360d12-53dd-4c1e-a14c-0a12f4fb9027",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "My bad! I changed it for testing :sweat_smile: ",
+        "createdAt" : "2020-09-30T11:29:35Z",
+        "updatedAt" : "2020-10-05T15:15:05Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8e572e8c-edfc-45e3-9314-6c3066918c54",
+        "parentId" : "a3360d12-53dd-4c1e-a14c-0a12f4fb9027",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Fixed.",
+        "createdAt" : "2020-09-30T18:12:48Z",
+        "updatedAt" : "2020-10-05T15:15:05Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d41415a1ce39fbc08c6ed741ee8b6bf37978a983",
+    "line" : 15,
+    "diffHunk" : "@@ -1,1 +174,178 @@      UserConfigurationOption(\n        \"type-annotations-enabled\",\n        \"false\",\n        \"false\",\n        \"Should display type annotations for infered types\","
+  },
+  {
+    "id" : "5ad384c8-d474-4dab-ae42-7ce28a95a110",
+    "prId" : 2103,
+    "comments" : [
+      {
+        "id" : "c917eef7-763e-469f-9d3b-756666fc1ec0",
+        "parentId" : null,
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "Something is not right because I haven't configured anything and I can see annotations, yet default is false? confused",
+        "createdAt" : "2020-09-30T09:39:41Z",
+        "updatedAt" : "2020-10-05T15:15:05Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2e4ae835-fdd5-45fe-94ae-c562b850c779",
+        "parentId" : "c917eef7-763e-469f-9d3b-756666fc1ec0",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Fixed",
+        "createdAt" : "2020-09-30T18:12:58Z",
+        "updatedAt" : "2020-10-05T15:15:05Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d41415a1ce39fbc08c6ed741ee8b6bf37978a983",
+    "line" : 25,
+    "diffHunk" : "@@ -1,1 +184,188 @@      UserConfigurationOption(\n        \"implicit-argument-annotations-enabled\",\n        \"false\",\n        \"false\",\n        \"Should display implicit parameter at usage sites\","
+  },
+  {
+    "id" : "497cccaa-cd8a-4192-847c-d6228c009c04",
+    "prId" : 2091,
+    "comments" : [
+      {
+        "id" : "11a1cb23-62bc-4a00-81a3-f66463c65272",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "I've picked another example, since javax is not excluded anymore",
+        "createdAt" : "2020-09-23T19:30:29Z",
+        "updatedAt" : "2020-09-24T20:18:02Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "60da564c27e76de2aa29732ff6eec08a54ac0fb9",
+    "line" : 16,
+    "diffHunk" : "@@ -1,1 +140,144 @@            |\n            |```js\n            |[\"--sun\"]\n            |```\n            |\"\"\".stripMargin"
+  },
+  {
+    "id" : "d3b47c1d-30f4-47ff-baf0-814c980552af",
+    "prId" : 1853,
+    "comments" : [
+      {
+        "id" : "c884c129-1700-46db-8796-055820ea2dfc",
+        "parentId" : null,
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "It doesn't matter much but I would check if it actually has any value or not and if it has but is not JsonArray I would do `errors += ...`\r\n\r\nIt might be helpful to catch potential error when other clients will start sending this value but will serialize it e.g. as String not array.\r\n\r\n But this is super edge case, you can completely ignore this.",
+        "createdAt" : "2020-06-25T16:31:58Z",
+        "updatedAt" : "2020-06-25T18:58:20Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "79a03251-a3e2-4d60-a68b-fe66cdcb1f12",
+        "parentId" : "c884c129-1700-46db-8796-055820ea2dfc",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Added an additional error when we don't have a list.",
+        "createdAt" : "2020-06-25T18:59:04Z",
+        "updatedAt" : "2020-06-25T18:59:04Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "260dcc28a1d6bb9ca8ef07702ee8d2697b212ea8",
+    "line" : 46,
+    "diffHunk" : "@@ -1,1 +234,238 @@          } else {\n            errors += s\"json error: key '$key' should have value of type array but obtained $elem\"\n            None\n          }\n        }"
+  },
+  {
+    "id" : "28cded0c-edc7-4dc4-828c-e1b16b84a404",
+    "prId" : 1853,
+    "comments" : [
+      {
+        "id" : "a5247cc6-ad8a-4e5f-933f-2efd279ef854",
+        "parentId" : null,
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "I noticed with other parameters there is always a dot in the end, any idea why? Just curious",
+        "createdAt" : "2020-06-25T17:23:00Z",
+        "updatedAt" : "2020-06-25T18:58:20Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3b484101-2b97-4622-ad35-c0c7709858b0",
+        "parentId" : "a5247cc6-ad8a-4e5f-933f-2efd279ef854",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Not sure if really needed, but this is rendered here: https://scalameta.org/metals/docs/editors/vim.html#gradle-script",
+        "createdAt" : "2020-06-25T18:52:33Z",
+        "updatedAt" : "2020-06-25T18:58:20Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e2f56348-db61-4a83-b45c-048007304fd3",
+        "parentId" : "a5247cc6-ad8a-4e5f-933f-2efd279ef854",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "🤔 I don't think the dot is needed.",
+        "createdAt" : "2020-06-25T19:07:54Z",
+        "updatedAt" : "2020-06-25T19:09:34Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "260dcc28a1d6bb9ca8ef07702ee8d2697b212ea8",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +111,115 @@      UserConfigurationOption(\n        \"ammonite-jvm-properties\",\n        \"\"\"`[]`.\"\"\",\n        \"\"\"[\"-Xmx1G\"]\"\"\",\n        \"Ammonite JVM Properties\","
+  },
+  {
+    "id" : "a086aac4-f7d9-4c09-93ba-9359542b1938",
+    "prId" : 1145,
+    "comments" : [
+      {
+        "id" : "231f1d68-b3bc-42a3-84c7-03b85f6f59d9",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "these imports seem unused?",
+        "createdAt" : "2019-12-04T16:56:35Z",
+        "updatedAt" : "2019-12-05T11:14:30Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d0062e0b-e5ce-44f5-b4a8-a9117fc01244",
+        "parentId" : "231f1d68-b3bc-42a3-84c7-03b85f6f59d9",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "They're used in the final version of the PR. I did my best to split the mega commit into smaller chunks but may have missed some import changes",
+        "createdAt" : "2019-12-05T10:30:16Z",
+        "updatedAt" : "2019-12-05T11:14:30Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c032fa899f1747d53cf2025b6e1cf03227b19980",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +12,16 @@import scala.util.Try\nimport scala.util.Failure\nimport scala.util.Success\n\n/**"
+  },
+  {
+    "id" : "e92c2a7f-75d6-4568-8fe5-c7a7e5454292",
+    "prId" : 387,
+    "comments" : [
+      {
+        "id" : "e8367fab-3bff-4af0-b1b7-0b50dadb8e24",
+        "parentId" : null,
+        "author" : {
+          "login" : "laughedelic",
+          "name" : "Alexey Alekhin",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/766656?v=4"
+        },
+        "body" : "I'm not sure I understand, why is this hardcoded here?",
+        "createdAt" : "2018-12-09T13:32:45Z",
+        "updatedAt" : "2018-12-09T18:05:10Z",
+        "lastEditedBy" : {
+          "login" : "laughedelic",
+          "name" : "Alexey Alekhin",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/766656?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1ccdd54f-35f5-4f1d-9b18-599322638a59",
+        "parentId" : "e8367fab-3bff-4af0-b1b7-0b50dadb8e24",
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "That's the `example` field ;)\r\n\r\n (took me a while too)",
+        "createdAt" : "2018-12-09T13:41:10Z",
+        "updatedAt" : "2018-12-09T18:05:10Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1b1118ae5909e6fd535bcd79958b0dfde37041e3",
+    "line" : 35,
+    "diffHunk" : "@@ -1,1 +31,35 @@      \"sbt-launcher\",\n      \"Metals embedded sbt-launch.jar.\",\n      \"/usr/local/Cellar/sbt/1.2.6/libexec/bin/sbt-launch.jar\",\n      \"sbt launcher jar\",\n      \"Optional sbt-launch.jar launcher to use when running `sbt bloopInstall`.\""
+  },
+  {
+    "id" : "16bb712b-0b77-403a-8280-ce3aa808b9ba",
+    "prId" : 387,
+    "comments" : [
+      {
+        "id" : "b9dd853e-d39a-4aff-aa62-7a32034c79f8",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "This looks wrong. `\"settings\"` is part of the protocol and it's already being accessed in `didChangeConfiguration` with `params.getSettings()`",
+        "createdAt" : "2018-12-09T18:23:13Z",
+        "updatedAt" : "2018-12-09T18:23:30Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1b1118ae5909e6fd535bcd79958b0dfde37041e3",
+    "line" : 74,
+    "diffHunk" : "@@ -1,1 +68,72 @@    val base: JsonObject =\n      (for {\n        settings <- Option(json.getAsJsonObject(\"settings\"))\n        metals <- Option(settings.getAsJsonObject(\"metals\"))\n      } yield metals).getOrElse(new JsonObject)"
+  }
+]

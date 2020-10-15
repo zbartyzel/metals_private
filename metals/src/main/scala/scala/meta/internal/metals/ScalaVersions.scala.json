@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "52bdad27-7906-4b23-b76f-3a84572fac7e",
+    "prId" : 818,
+    "comments" : [
+      {
+        "id" : "bbbd31d0-edb7-49bd-947c-eca225671e98",
+        "parentId" : null,
+        "author" : {
+          "login" : "cb372",
+          "name" : "Chris Birchall",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/106760?v=4"
+        },
+        "body" : "I guess it's fine to leave 2.12.8 as the recommended version for now?",
+        "createdAt" : "2019-07-08T11:41:27Z",
+        "updatedAt" : "2019-07-08T11:41:27Z",
+        "lastEditedBy" : {
+          "login" : "cb372",
+          "name" : "Chris Birchall",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/106760?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "6ef9cb7e64a9e60e4a63baea23dd3c8afce7cf9d",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +23,27 @@    Set(BuildInfo.scala213, BuildInfo.scala212, BuildInfo.scala211)\n\n  def recommendedVersion(scalaVersion: String): String = BuildInfo.scala212\n\n}"
+  }
+]

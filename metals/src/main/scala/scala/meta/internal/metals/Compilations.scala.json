@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "ccbd65e8-c011-4062-b623-f0758c8043f7",
+    "prId" : 1538,
+    "comments" : [
+      {
+        "id" : "91a8dd82-a39a-4960-b177-f310ab0103de",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Why the change? I think it's better to keep the result rather than just return unit.",
+        "createdAt" : "2020-03-31T16:57:04Z",
+        "updatedAt" : "2020-05-21T11:17:43Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "82acad5a-cd80-426f-845e-1adbcd9c6103",
+        "parentId" : "91a8dd82-a39a-4960-b177-f310ab0103de",
+        "author" : {
+          "login" : "alexarchambault",
+          "name" : "Alexandre Archambault",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7063723?u=d5befca0ebfec0042dad7ef93973490eef750ff4&v=4"
+        },
+        "body" : "See my comment above.",
+        "createdAt" : "2020-04-02T20:08:20Z",
+        "updatedAt" : "2020-05-21T11:17:44Z",
+        "lastEditedBy" : {
+          "login" : "alexarchambault",
+          "name" : "Alexandre Archambault",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7063723?u=d5befca0ebfec0042dad7ef93973490eef750ff4&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0681fa0b1417b7ac622101d279667c6900a2506e",
+    "line" : 69,
+    "diffHunk" : "@@ -1,1 +75,79 @@  }\n\n  def compileFiles(paths: Seq[AbsolutePath]): Future[Unit] = {\n    val targets = expand(paths)\n    for {"
+  }
+]

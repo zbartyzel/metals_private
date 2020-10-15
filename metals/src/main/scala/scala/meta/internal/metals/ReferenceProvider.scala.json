@@ -1,0 +1,162 @@
+[
+  {
+    "id" : "4d2711f8-2374-43b3-bab7-e497a3cc8c37",
+    "prId" : 1976,
+    "comments" : [
+      {
+        "id" : "82ee3080-aa04-4e2e-aa9e-1a9c0252984c",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "This is because I figured contains is not good enough here. And this is only used in case of rename, which doesn't make references slower and we are fine with some flaky results there, but we do not want to break the code when renaming.",
+        "createdAt" : "2020-08-06T11:59:13Z",
+        "updatedAt" : "2020-08-06T11:59:14Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "efa61fdab4c9b2e83dbf8d9aaa9322adf48ec193",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +315,319 @@      if (isBackticked) name.substring(1, name.length() - 1)\n      else name\n    if (symbol.isLocal || symbol.desc.name.toString == realName) {\n      val realRange = if (isBackticked) {\n        range"
+  },
+  {
+    "id" : "c5c2575a-65a8-40cc-9861-7b83bf408ef9",
+    "prId" : 1435,
+    "comments" : [
+      {
+        "id" : "6d1ba0bb-c04a-4803-8c90-0d05de47216e",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "If we removed some files, we would still be looking for references inside them, since the semanticDB files will not be deleted.",
+        "createdAt" : "2020-02-15T21:19:43Z",
+        "updatedAt" : "2020-02-17T16:18:06Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "70fce2cc-30c8-45b1-b26e-dfb6bed1103b",
+        "parentId" : "6d1ba0bb-c04a-4803-8c90-0d05de47216e",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "Can we simply delete this file?",
+        "createdAt" : "2020-02-17T13:03:36Z",
+        "updatedAt" : "2020-02-17T16:18:06Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4fc837da-3610-4d2f-84b8-c98ce9883858",
+        "parentId" : "6d1ba0bb-c04a-4803-8c90-0d05de47216e",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "That file is managed by Bloop and we shouldn't remove it ourselves.",
+        "createdAt" : "2020-02-17T14:24:24Z",
+        "updatedAt" : "2020-02-17T16:18:06Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "fb025d5358f8296b853bbb7ede33b89e75356b35",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +203,207 @@          .toScala(workspace, AbsolutePath(path))\n          .iterator\n        if scalaPath.exists\n        semanticdb <- semanticdbs\n          .textDocument(scalaPath)"
+  },
+  {
+    "id" : "b8acd13a-2fc2-45d9-85c1-398a42c6b13d",
+    "prId" : 1430,
+    "comments" : [
+      {
+        "id" : "4a94f3c6-0844-4ba4-92c9-567cd6ea0bcd",
+        "parentId" : null,
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "you could extract `removeBackticks` function that would do the check and substring if needed.\r\nit would be:\r\n`val realName = removeBackticks(name)`\r\nIt could also be used in RenameProvider as removing backticks is the same there",
+        "createdAt" : "2020-02-18T12:39:28Z",
+        "updatedAt" : "2020-02-18T12:39:55Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f645dbe4-b6d0-42ad-9514-29ead298ffa2",
+        "parentId" : "4a94f3c6-0844-4ba4-92c9-567cd6ea0bcd",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "I tried it, but I still need to check for backticks and change the range, so I would check it double. This is on the critical path, so I'd rather leave it as is.",
+        "createdAt" : "2020-02-18T18:48:33Z",
+        "updatedAt" : "2020-02-18T18:48:33Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "197b0c6d-9b0a-4189-9cf5-c6ba5373c1e2",
+        "parentId" : "4a94f3c6-0844-4ba4-92c9-567cd6ea0bcd",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "ahh right isBackticked is needed later for another check, good as it is then :+1:",
+        "createdAt" : "2020-02-18T19:54:59Z",
+        "updatedAt" : "2020-02-18T19:54:59Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "449f77053dddb24263c8a82a150393da6812f615",
+    "line" : 90,
+    "diffHunk" : "@@ -1,1 +291,295 @@  ): Option[s.Range] = {\n    val name = findName(range, text)\n    val isBackticked = name.charAt(0) == '`'\n    val realName =\n      if (isBackticked) name.substring(1, name.length() - 1)"
+  }
+]

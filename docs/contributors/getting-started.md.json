@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "a6dfed4b-4aa7-481d-83fb-38c9bb3ab3a9",
+    "prId" : 370,
+    "comments" : [
+      {
+        "id" : "8d34cca6-83b2-44bd-a83b-210e05eaf115",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "maybe add metals-vscode to the related projects?",
+        "createdAt" : "2018-12-02T10:44:26Z",
+        "updatedAt" : "2018-12-02T13:58:41Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "27d7dcdf-17de-4ec3-ae01-7d2a54ee7ff2",
+        "parentId" : "8d34cca6-83b2-44bd-a83b-210e05eaf115",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Good idea!",
+        "createdAt" : "2018-12-02T13:58:59Z",
+        "updatedAt" : "2018-12-02T13:58:59Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "965f0a75947bae0c87b07abc268c424850dbc53c",
+    "line" : 30,
+    "diffHunk" : "@@ -1,1 +27,31 @@- `test-workspace` demo project for manually testing Metals through an editor.\n\n## Related projects\n\nThe improvement you are looking to contribute may belong in a separate"
+  }
+]

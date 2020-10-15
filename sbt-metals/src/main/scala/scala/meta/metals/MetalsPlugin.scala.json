@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "0ac7ea6c-4fcd-4213-92e0-0f0f1ef5e20b",
+    "prId" : 397,
+    "comments" : [
+      {
+        "id" : "342ecfab-0df5-4345-9e84-40a98e095600",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "This is unrelated to Emacs, I caught it while testing out Metals in the http4s repo. sbt-metals disables fatal warning only when exporting the build to bloop, fatal warnings remain enabled in the sbt build.",
+        "createdAt" : "2018-12-10T15:40:13Z",
+        "updatedAt" : "2018-12-11T10:26:59Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "dc4a390c004e0da54976f66fea7feb0469ca9621",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +45,49 @@            // Down the road, metals can even remove unused imports for you if they are reported\n            // as warnings but not if they are errors.\n            \"-Xfatal-warnings\"\n          ),\n          scalacOptions.in(p) ++= List("
+  }
+]
