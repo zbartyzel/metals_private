@@ -242,5 +242,52 @@
     "commit" : "a2902a65a77773398f8ac710483906215a06bcf8",
     "line" : 227,
     "diffHunk" : "@@ -1,1 +225,229 @@    if (!isEmptyValue) {\n      statement.binders.iterator.foreach { binder =>\n        out\n          .append(\"\\n\")\n          .append(binder.name)"
+  },
+  {
+    "id" : "69e7dbaf-c3ef-4a24-9380-61c2808d1e40",
+    "prId" : 2190,
+    "comments" : [
+      {
+        "id" : "595995df-50a1-4f6b-8499-3e8c91861503",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "So I was curious what would happen if I was still no 0.27, and this is shown in the logs\r\n```\r\n2020.11.06 13:03:03 WARN  worksheet: unsupported Scala version '0.27.0-RC1', using Scala version '2.12.12' without classpath instead.\r\nworksheet: to fix this problem use Scala version '3.0.0-M1'.\r\n```\r\nWe don't have to do this now, but what do you think about actually floating this up to the user? I think it might be confusing for someone since I'm not sure I'd expect it to revert to 2.12.12 without the classpath. It may cause confusion.",
+        "createdAt" : "2020-11-06T12:05:00Z",
+        "updatedAt" : "2020-11-06T12:07:54Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8c94cc0e-51fa-48d7-bd4c-1b07143f43b3",
+        "parentId" : "595995df-50a1-4f6b-8499-3e8c91861503",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Yeah, it might be good to do, I will try to follow up with that and merge this so that people can start testing out 3.0.0-M1",
+        "createdAt" : "2020-11-06T12:15:45Z",
+        "updatedAt" : "2020-11-06T12:15:45Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b135a6d205cffd61ee131ead0d6326569af38c30",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +316,320 @@      // Worksheet support for Scala 3 is only working currently for 3.0.0-M1\n      ScalaVersions.isScala3Version(scalaVersion) && SemVer.isCompatibleVersion(\n        \"3.0.0\",\n        scalaVersion\n      )"
   }
 ]

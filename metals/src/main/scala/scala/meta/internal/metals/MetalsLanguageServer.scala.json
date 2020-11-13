@@ -1633,5 +1633,52 @@
     "commit" : "8ab78d5883e2e77a843cca1ea641084e6e4a2875",
     "line" : 737,
     "diffHunk" : "@@ -1,1 +735,739 @@      // Record what build target this dependency source (if any) was jumped from,\n      // needed to know what classpath to compile the dependency source with.\n      interactiveSemanticdbs.didDefinition(source, result)\n      result\n    } else {"
+  },
+  {
+    "id" : "5335bd06-f7bd-4b24-98aa-c9b4c383de0f",
+    "prId" : 2154,
+    "comments" : [
+      {
+        "id" : "379e98ec-9a66-4b85-9c7d-537479435197",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Could we move the logic to a separate method?",
+        "createdAt" : "2020-10-28T17:35:18Z",
+        "updatedAt" : "2020-10-30T17:54:40Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "447135fe-9772-4da9-953a-dca0ff44bf4b",
+        "parentId" : "379e98ec-9a66-4b85-9c7d-537479435197",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "Yea for sure, I moved this out now.",
+        "createdAt" : "2020-10-29T13:44:27Z",
+        "updatedAt" : "2020-10-30T17:54:40Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8eab66607688c713397334de6750fab0ca346fc8",
+    "line" : 215,
+    "diffHunk" : "@@ -1,1 +1409,1413 @@        }.asJavaObject\n      case ServerCommands.RestartBuildServer() =>\n        bspSession.foreach { session =>\n          if (session.main.isBloop) bloopServers.shutdownServer()\n        }"
   }
 ]

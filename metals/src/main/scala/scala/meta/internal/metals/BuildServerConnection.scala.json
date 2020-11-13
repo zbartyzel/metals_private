@@ -195,5 +195,33 @@
     "commit" : "47ea581fbaa603a2dc171e3e913392f05fc4ba11",
     "line" : 40,
     "diffHunk" : "@@ -1,1 +83,87 @@  }\n\n  def startDebugSession(params: DebugSessionParams): CompletableFuture[URI] = {\n    register(\n      server"
+  },
+  {
+    "id" : "b793062f-1955-46eb-956c-f3eafcacdadc",
+    "prId" : 2184,
+    "comments" : [
+      {
+        "id" : "9a9e8b27-c454-4a4e-abf9-c3c73728fa5f",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "This was 5 in the past as well before the sbt pr, so hopefully this being a bit longer will help as well.",
+        "createdAt" : "2020-11-02T19:25:00Z",
+        "updatedAt" : "2020-11-04T19:26:09Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1999ac26f803e1ac22b7fe73fabf3372b3f4f87b",
+    "line" : 93,
+    "diffHunk" : "@@ -1,1 +358,362 @@        initializeResult.get(60, TimeUnit.SECONDS)\n      } else {\n        initializeResult.get(20, TimeUnit.SECONDS)\n      }\n"
   }
 ]

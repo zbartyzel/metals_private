@@ -1568,5 +1568,80 @@
     "commit" : "e1420acb72b911833576526ab64a31b8c4452568",
     "line" : 13,
     "diffHunk" : "@@ -1,1 +55,59 @@)\n\nlazy val V = new {\n  val scalameta = \"2.1.3\"\n}"
+  },
+  {
+    "id" : "df082cc0-85d1-47b1-8c1c-facafbb7577c",
+    "prId" : 2190,
+    "comments" : [
+      {
+        "id" : "720512ed-a496-47d6-84f9-2a1a763bc8e3",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "`isScala3`\r\n`isScala30`\r\n`isScala3Prerelease`\r\n\r\n🙈 \r\n\r\nI'll be happy when we can just have a `isScala3`",
+        "createdAt" : "2020-11-04T18:56:36Z",
+        "updatedAt" : "2020-11-06T10:08:14Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b135a6d205cffd61ee131ead0d6326569af38c30",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +13,17 @@  v.exists(_._1 == 3) || v.exists(_._1 == 0)\ndef isScala30(v: Option[(Long, Long)]): Boolean = v.exists(_._1 == 3)\ndef isScala3Prerelease(v: Option[(Long, Long)]): Boolean = v.exists(_._1 == 0)\n\ndef crossSetting[A]("
+  },
+  {
+    "id" : "0961181d-1722-45bb-8792-08cbfa8ae607",
+    "prId" : 2161,
+    "comments" : [
+      {
+        "id" : "afef32e4-82fc-4edc-90d1-7cced37ee48a",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Since Metals is not a library, I imagine this will not be needed.",
+        "createdAt" : "2020-10-28T18:14:29Z",
+        "updatedAt" : "2020-10-28T18:41:16Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ff9981c4-5532-4501-af68-080ef0a54a39",
+        "parentId" : "afef32e4-82fc-4edc-90d1-7cced37ee48a",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "Ahh, good point. I should have thought of this before. 👍 ",
+        "createdAt" : "2020-10-29T08:24:19Z",
+        "updatedAt" : "2020-10-29T08:24:20Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "9eb21fe4071e224acb0aab7c9d1deb6701c93aaa",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +294,298 @@  ),\n  // @note needed to deal with issues in https://github.com/scalameta/metals/pull/2157\n  sources in (Compile, doc) := Seq.empty,\n  libraryDependencies ++= crossSetting(\n    scalaVersion.value,"
   }
 ]

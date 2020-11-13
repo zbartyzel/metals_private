@@ -337,5 +337,33 @@
     "commit" : "c7621ebcf6232d37856b167824069496131bae13",
     "line" : 47,
     "diffHunk" : "@@ -1,1 +45,49 @@  // Not a `j.u.c.ConcurrentHashMap` because it can deadlock in `computeIfAbsent` when the absent\n  // function is expensive, which is the case here.\n  val jcache = Collections.synchronizedMap(\n    new java.util.HashMap[BuildTargetIdentifier, PresentationCompiler]\n  )"
+  },
+  {
+    "id" : "38a2eee1-5c7b-4fd6-af7c-b2bff265cc87",
+    "prId" : 2215,
+    "comments" : [
+      {
+        "id" : "5ebba96d-5fab-4bd9-a62f-40c0426e1afa",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "I also added a small change to not publish syntax errors in library sources. It seems to happen sporadically for Scala 3 sources.",
+        "createdAt" : "2020-11-12T18:15:05Z",
+        "updatedAt" : "2020-11-12T18:15:06Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f14596c3ce5e06112391f788cfa50634bb174be6",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +227,231 @@        case None =>\n          diagnostics.onNoSyntaxError(path)\n        case Some(diagnostic) if !path.isInReadonlyDirectory(workspace) =>\n          diagnostics.onSyntaxError(path, adjust.adjustDiagnostic(diagnostic))\n      }"
   }
 ]

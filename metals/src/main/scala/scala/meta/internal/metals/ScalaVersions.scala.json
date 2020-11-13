@@ -26,5 +26,52 @@
     "commit" : "6ef9cb7e64a9e60e4a63baea23dd3c8afce7cf9d",
     "line" : 13,
     "diffHunk" : "@@ -1,1 +23,27 @@    Set(BuildInfo.scala213, BuildInfo.scala212, BuildInfo.scala211)\n\n  def recommendedVersion(scalaVersion: String): String = BuildInfo.scala212\n\n}"
+  },
+  {
+    "id" : "ba9ad6e8-41aa-49c2-9c49-1caa7502a52f",
+    "prId" : 2190,
+    "comments" : [
+      {
+        "id" : "1d30d988-3cea-4a81-8bf0-8ab08e3deea0",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "I wasn't expecting the binary version here to be `3.0.0-M1`. At the same time, I was also wasn't expected `org.scala-lang:scala3-library_3.0.0-M1:3.0.0-M1` but rather just `org.scala-lang:scala3-library:3.0.0-M1`. 🤔 ",
+        "createdAt" : "2020-11-04T19:04:46Z",
+        "updatedAt" : "2020-11-06T10:08:14Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a4028ae4-aae7-4ef1-97a0-316409f17a92",
+        "parentId" : "1d30d988-3cea-4a81-8bf0-8ab08e3deea0",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Yeah, I was surprised by it too, but it seems that's how it's done currently :thinking: ",
+        "createdAt" : "2020-11-04T19:10:50Z",
+        "updatedAt" : "2020-11-06T10:08:14Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b135a6d205cffd61ee131ead0d6326569af38c30",
+    "line" : 27,
+    "diffHunk" : "@@ -1,1 +78,82 @@  def scalaBinaryVersionFromFullVersion(scalaVersion: String): String = {\n    if (scalaVersion == \"3.0.0-M1\")\n      scalaVersion\n    else\n      scalaVersion.split('.').take(2).mkString(\".\")"
   }
 ]
