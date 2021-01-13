@@ -1,0 +1,81 @@
+[
+  {
+    "id" : "cae0a265-1efc-4948-a4b7-6ba7681af89c",
+    "prId" : 2345,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2345",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "3749509f-38d9-4c86-8e53-395f598c695a",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "It was easier to test out this issue with standalone files, because readonly files need to be opened from a build target to be associated to a compiler instance.",
+        "createdAt" : "2020-12-28T15:22:35Z",
+        "updatedAt" : "2020-12-31T10:33:41Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d9cd2ac8f7fbab36622dcb13d1c272c4f968a361",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +296,300 @@            |}\n            |\n            |/standalone/Main.scala\n            |object Main{\n            |  \"asd.\".stripSuffix(\".\")"
+  },
+  {
+    "id" : "75d4de84-b4d6-42e0-a1fa-1ee46b1b12bb",
+    "prId" : 2232,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2232",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b597a212-d855-48c8-93b0-bc7596e72953",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "So this is a curious sample and I think it makes sense for to add some filters later on if people complain.\r\n\r\nLooking through metals codebase it doesn't seem too bothersome, but might be be in some cases.",
+        "createdAt" : "2020-11-16T16:01:16Z",
+        "updatedAt" : "2020-11-16T17:30:01Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "25be7549-dca0-40d5-9fde-0f3c8e29e174",
+        "parentId" : "b597a212-d855-48c8-93b0-bc7596e72953",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "lol yea this example isn't awesome, at the same time, I think it's fine. If people do start to complain about it, we can think about fine tuning it.",
+        "createdAt" : "2020-11-16T16:16:22Z",
+        "updatedAt" : "2020-11-16T17:30:01Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "2d968b16f63bed12de7c49bbcbabc0559798e84e",
+    "line" : 140,
+    "diffHunk" : "@@ -1,1 +269,273 @@        client.workspaceDecorations,\n        \"\"\"|object Main{\n           |  (augmentString(augmentString(augmentString(\"1\" + \"2\"))\n           |    .stripSuffix(\".\"))\n           |    .stripSuffix(\"#\"))"
+  }
+]

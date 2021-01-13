@@ -1,0 +1,70 @@
+[
+  {
+    "id" : "46b94dc6-6431-4933-8d32-e09e01601de8",
+    "prId" : 2234,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2234",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "7e8814bf-c68e-4e87-bf09-1bfbce46c9ec",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "```suggestion\r\neither hard to explain in the context of the docs or there just isn't a good enough\r\n```\r\n?",
+        "createdAt" : "2020-11-16T13:30:48Z",
+        "updatedAt" : "2020-11-16T14:22:31Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c3cee029-5579-4c12-b7ab-e7ac205d5db1",
+        "parentId" : "7e8814bf-c68e-4e87-bf09-1bfbce46c9ec",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "Uh, both the original sentence and the suggestion basically means exactly the same thing. I'll add in enough to make it explicit.",
+        "createdAt" : "2020-11-16T14:12:29Z",
+        "updatedAt" : "2020-11-16T14:22:31Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8f3f85b2-7d49-4437-b528-9a7950699847",
+        "parentId" : "7e8814bf-c68e-4e87-bf09-1bfbce46c9ec",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Yeah, I just felt it was missing there :sweat_smile: You can fully ignore it.",
+        "createdAt" : "2020-11-16T14:13:38Z",
+        "updatedAt" : "2020-11-16T14:22:31Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3875f0f0c61106789e6448888fb069895d985a4f",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +6,10 @@This is a collection of frequently asked questions. We do our best to ensure\neverything is included in the docs in the relevant places, but sometimes it's\neither hard to explain in the context of the docs or there just isn't a good\nenough place to stick it. This is an attempt to document some of the most common\nquestions that we see related to Metals."
+  }
+]

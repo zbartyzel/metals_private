@@ -1,0 +1,32 @@
+[
+  {
+    "id" : "de86f178-163d-4370-9473-ec94d4c540fb",
+    "prId" : 2247,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2247",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b1279227-be42-4ffc-9af5-e5bfa3bb8ddd",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "So this is fixed, but the main issue I tried to fix needed to be reopened unfortunately https://github.com/scalameta/scalameta/issues/2144",
+        "createdAt" : "2020-11-19T18:07:06Z",
+        "updatedAt" : "2020-11-19T19:15:43Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "70e6073dc5a2657aacdf9c86a4f40c6bb0cf48ff",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +23,27 @@  // anonymous classes\n  @deprecated/*deprecated.scala*/(\n    message/*deprecated.scala fallback to scala.deprecated#*/ = \"a\",\n    since/*deprecated.scala fallback to scala.deprecated#*/ = susan/*NamedArguments.scala*/\n  ) def b/*NamedArguments.scala*/ = 1"
+  }
+]

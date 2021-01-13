@@ -1,0 +1,89 @@
+[
+  {
+    "id" : "e082ad15-b310-4d72-a9f1-4536f9e7e545",
+    "prId" : 2247,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2247",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "dddbbdc0-78ff-4371-be51-22a9c8cd4b7a",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "If \"2.13.2\", \"2.13.3\", and \"2.13.4\" are all the same can't this just stay \"2.13\" instead of separating them out?",
+        "createdAt" : "2020-11-19T17:56:35Z",
+        "updatedAt" : "2020-11-19T19:15:43Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5a58680a-1b00-475c-9774-5deb0281d573",
+        "parentId" : "dddbbdc0-78ff-4371-be51-22a9c8cd4b7a",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "There are actually different, 2.13.4 has changed docs. Might not be that noticable with the naming :sweat_smile: ",
+        "createdAt" : "2020-11-19T18:01:15Z",
+        "updatedAt" : "2020-11-19T19:15:43Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c212288f-d725-40f9-bdeb-42c6f7dbf325",
+        "parentId" : "dddbbdc0-78ff-4371-be51-22a9c8cd4b7a",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "`commonlyUsedTypesPre2134` and `commonlyUsedTypesPost2134` Post/Pre\r\n\r\nAny idea on naming? This one is pretty bad I guess.",
+        "createdAt" : "2020-11-19T18:19:54Z",
+        "updatedAt" : "2020-11-19T19:15:43Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "106423a9-9205-426f-b2ae-7ed0b6f27deb",
+        "parentId" : "dddbbdc0-78ff-4371-be51-22a9c8cd4b7a",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "Honestly, I don't think it's that bad. I just _totally_ glossed over the `Post/Pre` part. Do you think it's clearer if you preface it with `post1234`/`pre1234` instead of the suffix? /shrug",
+        "createdAt" : "2020-11-19T18:44:16Z",
+        "updatedAt" : "2020-11-19T19:15:43Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "70e6073dc5a2657aacdf9c86a4f40c6bb0cf48ff",
+    "line" : 133,
+    "diffHunk" : "@@ -1,1 +227,231 @@           |Predef scala\n           |\"\"\".stripMargin,\n      \"2.13.4\" ->\n        s\"\"\"\n           |${predefDocString(commonlyUsedTypesPost2134)}"
+  }
+]

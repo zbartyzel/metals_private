@@ -1,0 +1,51 @@
+[
+  {
+    "id" : "9b141525-29ad-43da-9ae8-4920f0104065",
+    "prId" : 2247,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2247",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "8a64cb11-f8df-4664-b1a3-99301b1f3173",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "So this will work better and is actually a fix. Who fixed this you ask? I have no idea :sweat_smile: ",
+        "createdAt" : "2020-11-19T18:07:49Z",
+        "updatedAt" : "2020-11-19T19:15:43Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ffd66fd9-7f3e-43ec-aa73-6672fc109d7f",
+        "parentId" : "8a64cb11-f8df-4664-b1a3-99301b1f3173",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "Great? haha",
+        "createdAt" : "2020-11-19T18:45:54Z",
+        "updatedAt" : "2020-11-19T19:15:43Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "70e6073dc5a2657aacdf9c86a4f40c6bb0cf48ff",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +19,23 @@\n  def chain = >>region>>Seq(1).map{\n    >>region>>x =>\n    x + 1\n     + 1"
+  }
+]

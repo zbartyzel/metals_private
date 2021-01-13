@@ -2,6 +2,8 @@
   {
     "id" : "a8fd3fc5-a3b8-4002-9c8d-a8c0d4ce701a",
     "prId" : 1856,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "2f323a58-c439-4063-8a15-a1eb261ec484",
@@ -68,6 +70,8 @@
   {
     "id" : "45ab3f73-a3b5-4d9e-9215-c5634c8b9734",
     "prId" : 1856,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "6b98c147-1d66-4821-8541-334e6d61b77f",
@@ -134,6 +138,8 @@
   {
     "id" : "4527e811-34bf-4676-835e-7973e9651e0f",
     "prId" : 1856,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "b1fa05ad-83d7-473d-b24d-9c6e763a5ba8",
@@ -200,6 +206,8 @@
   {
     "id" : "04d05436-31c1-4815-83ec-4bf5e76852d1",
     "prId" : 1523,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "632c5930-0dbe-4472-93b2-c12214faec54",
@@ -228,6 +236,8 @@
   {
     "id" : "ff913231-9d4c-48af-8766-4089af509bf5",
     "prId" : 736,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "86592dc6-1e2d-421c-ab41-89155a99daac",
@@ -294,6 +304,8 @@
   {
     "id" : "c5158d74-dfdf-4554-bcbe-ede0dc5e4778",
     "prId" : 527,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "43fe7be4-8f0e-41aa-821c-b60b244aeea5",
@@ -341,6 +353,8 @@
   {
     "id" : "38a2eee1-5c7b-4fd6-af7c-b2bff265cc87",
     "prId" : 2215,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "5ebba96d-5fab-4bd9-a62f-40c0426e1afa",
@@ -365,5 +379,35 @@
     "commit" : "f14596c3ce5e06112391f788cfa50634bb174be6",
     "line" : 5,
     "diffHunk" : "@@ -1,1 +227,231 @@        case None =>\n          diagnostics.onNoSyntaxError(path)\n        case Some(diagnostic) if !path.isInReadonlyDirectory(workspace) =>\n          diagnostics.onSyntaxError(path, adjust.adjustDiagnostic(diagnostic))\n      }"
+  },
+  {
+    "id" : "862d0001-750f-42fe-afb3-6fa50cf3fdb8",
+    "prId" : 2345,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2345",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "099b7037-c5c1-4511-8313-bcd08207fdcd",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Previously, if a dependency source file would be open from worksheets this would cause the source not to be linked to any build target or worksheet.",
+        "createdAt" : "2020-12-29T15:39:25Z",
+        "updatedAt" : "2020-12-31T10:33:41Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d9cd2ac8f7fbab36622dcb13d1c272c4f968a361",
+    "line" : 21,
+    "diffHunk" : "@@ -1,1 +350,354 @@            c.locations(),\n            c.symbol(),\n            definitionPath,\n            None\n          )"
   }
 ]

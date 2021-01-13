@@ -2,6 +2,8 @@
   {
     "id" : "33b06871-177a-4848-92d7-e1cdb78c31e3",
     "prId" : 1856,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "cf91e0f8-5226-422c-bf1a-4aa0409744ec",
@@ -68,6 +70,8 @@
   {
     "id" : "7ea2789b-c6c6-4f41-9d3d-a22a83f134d5",
     "prId" : 1856,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "38eaf3b3-c3d3-4672-95ab-e7e576ac5e77",
@@ -115,6 +119,8 @@
   {
     "id" : "f0b1ac15-e4d9-450f-8b89-c2f1c97928cf",
     "prId" : 1523,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "b4a77f47-186d-4834-b2af-70aa17420119",
@@ -143,6 +149,8 @@
   {
     "id" : "4a77c552-02b4-4328-8ad1-ab61476ea495",
     "prId" : 1070,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "2d9b591b-0df6-47b3-bbb8-8c0236b10faf",
@@ -190,6 +198,8 @@
   {
     "id" : "0f478b16-8fae-4c69-b776-f9a6051a6fd3",
     "prId" : 1030,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "3796c53d-a717-4798-8870-6fe5f349a968",
@@ -275,6 +285,8 @@
   {
     "id" : "96b6a704-e7a1-42e1-8f6e-782481478f8e",
     "prId" : 527,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "df60cb04-a870-4569-b5fc-d9e77d1d1a5a",
@@ -322,6 +334,8 @@
   {
     "id" : "7efb3532-5d9b-4c69-be69-21694c7b5dc0",
     "prId" : 429,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "ccd0e78e-7902-423b-a4d1-e30c60f44ab2",
@@ -346,5 +360,73 @@
     "commit" : "ec1161fecfaec6824cba1eb2a21806f972c8f67f",
     "line" : 58,
     "diffHunk" : "@@ -1,1 +140,144 @@            version\n          ),\n          new coursiersmall.Dependency(\n            // We need reflect because https://github.com/scalameta/scalafmt/issues/1252\n            \"org.scala-lang\","
+  },
+  {
+    "id" : "60b7055f-0b60-4238-990a-98453b62f25d",
+    "prId" : 2260,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2260",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "3e7de13b-d160-4edf-9b96-406218eabb71",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "I honestly don't love that we are doing this. Was it just not possible to publish mdoc for both M1 and M2? It seems a bit extreme that have to have logic to include 1 of 3 different versions of a single dependency.",
+        "createdAt" : "2020-11-25T17:07:07Z",
+        "updatedAt" : "2020-11-25T17:26:36Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "72c8a020-df85-4ff3-be19-a078c2e00000",
+        "parentId" : "3e7de13b-d160-4edf-9b96-406218eabb71",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "It seemed simpler to just put in the logic here. We need to double the code for each Scala 3 version currently and it's really only Metals doing it. I might have been too quick, but there was no real changes between all those changes that would impact worksheets.",
+        "createdAt" : "2020-11-25T17:11:02Z",
+        "updatedAt" : "2020-11-25T17:26:36Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a92715e2-4cdc-4931-b533-3e0fba7d4b02",
+        "parentId" : "3e7de13b-d160-4edf-9b96-406218eabb71",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "After the changes in https://github.com/lampepfl/dotty/pull/10172 we should be able to just do https://github.com/scalameta/mdoc/commit/81e43c1d42dc54fbe14c32412ee0c2cc67544d03",
+        "createdAt" : "2020-11-25T17:23:50Z",
+        "updatedAt" : "2020-11-25T17:26:36Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "bad2ebdafddec4a185f9f657fbafabdb58cac798",
+    "line" : 10,
+    "diffHunk" : "@@ -1,1 +187,191 @@      if (scalaVersion == \"0.27.0-RC1\") \"2.2.10\"\n      else if (scalaVersion == \"3.0.0-M1\") \"2.2.12\"\n      else BuildInfo.mdocVersion\n    Dependency.of(\n      \"org.scalameta\","
   }
 ]

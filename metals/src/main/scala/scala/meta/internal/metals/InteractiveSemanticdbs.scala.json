@@ -2,6 +2,8 @@
   {
     "id" : "b6871f5f-c3a7-4c3a-a9b6-0ef892f66528",
     "prId" : 337,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "d01465d4-4800-417e-8a7c-4a18fab97518",
@@ -64,5 +66,35 @@
     "commit" : "8ab78d5883e2e77a843cca1ea641084e6e4a2875",
     "line" : 57,
     "diffHunk" : "@@ -1,1 +55,59 @@  private val textDocumentCache = Collections.synchronizedMap(\n    new java.util.HashMap[AbsolutePath, s.TextDocument]()\n  )\n\n  def reset(): Unit = {"
+  },
+  {
+    "id" : "5f88d551-20d9-41b1-8677-a6a8fa9fe593",
+    "prId" : 2345,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2345",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "19d05e1b-c1a0-4206-b99c-4dc60f4b7b66",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "I added two fallbacks here - worksheet presentation compiler and the standalone one as a last resort.",
+        "createdAt" : "2020-12-29T15:43:05Z",
+        "updatedAt" : "2020-12-31T10:33:41Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d9cd2ac8f7fbab36622dcb13d1c272c4f968a361",
+    "line" : 111,
+    "diffHunk" : "@@ -1,1 +169,173 @@          .flatMap(compilers().loadWorksheetCompiler)\n      }\n      .getOrElse(compilers().ramboCompiler)\n\n    val uri = source.toURI.toString"
   }
 ]

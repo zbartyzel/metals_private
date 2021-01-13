@@ -1,0 +1,81 @@
+[
+  {
+    "id" : "1b1e18db-8040-4048-97a6-f726a98625ce",
+    "prId" : 2345,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2345",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "24c4df22-4abf-4cd5-9a78-951c551457fa",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "Out of curiosity, was this causing issues before? In reality, what other types of files would actually be hitting this? Java files?",
+        "createdAt" : "2020-12-30T19:24:49Z",
+        "updatedAt" : "2020-12-31T10:33:41Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f2e563d3-e708-44eb-9519-6fe9d9ae5068",
+        "parentId" : "24c4df22-4abf-4cd5-9a78-951c551457fa",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Ach, so this was normally only getting semanticdb files (which would correspond to some scala file), but now that we can produce them from standalone files, then that's the path that is being sent.",
+        "createdAt" : "2020-12-30T21:02:33Z",
+        "updatedAt" : "2020-12-31T10:33:41Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d9cd2ac8f7fbab36622dcb13d1c272c4f968a361",
+    "line" : 16,
+    "diffHunk" : "@@ -1,1 +82,86 @@      sourcePath <-\n        if (!filePath.isScala) SemanticdbClasspath.toScala(workspace, filePath)\n        else Some(filePath)\n      if sourcePath == focused || !clientConfig.isDidFocusProvider()\n      textDoc <- textDocument.documents.headOption"
+  },
+  {
+    "id" : "eefe70dd-6585-4132-89e3-cb6e1e141a0d",
+    "prId" : 2232,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2232",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "094a9d37-c8f8-4c12-bae5-4d4e688b1d80",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Changed here to gather all synthetics at a spot - can happen especially with multiple implicit conversions at the same spot. ",
+        "createdAt" : "2020-11-16T17:33:14Z",
+        "updatedAt" : "2020-11-16T17:33:14Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "2d968b16f63bed12de7c49bbcbabc0559798e84e",
+    "line" : 59,
+    "diffHunk" : "@@ -1,1 +155,159 @@    }.distinct\n\n    if (interestingSynthetics.nonEmpty)\n      addToHover(\n        pcHover,"
+  }
+]
