@@ -2,6 +2,8 @@
   {
     "id" : "c2d494d7-8c94-4e5d-911c-2c46affabc29",
     "prId" : 1538,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "2989a15f-bdc1-4c02-bb0c-c1f3c673cb73",
@@ -68,6 +70,8 @@
   {
     "id" : "85f99bc1-f53d-42e4-abb5-d782a2acdbdc",
     "prId" : 1447,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "a7336a4b-bfe3-40d7-90aa-077d2dac98f4",
@@ -187,5 +191,73 @@
     "commit" : "948961c16a2b407e9b6be832f69458537ee4bc93",
     "line" : 8,
     "diffHunk" : "@@ -1,1 +387,391 @@    def selectTheKindOfFileMessage = \"Select the kind of file to create\"\n    def enterNameMessage(kind: String): String =\n      s\"Enter the name for the new $kind\"\n  }\n}"
+  },
+  {
+    "id" : "433be9af-329a-4aad-8fa3-175348a12483",
+    "prId" : 2391,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2391",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "1a4901b5-46df-4480-b7f7-1f860186f1e6",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "`No workspace folder detected` ?\r\n\r\n`rootUri` and `rootPath` seem internal to LSP, so might be confusing to users",
+        "createdAt" : "2021-01-15T11:41:02Z",
+        "updatedAt" : "2021-01-15T11:41:48Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8ea4aacf-4a00-42e6-806e-fb82493d215c",
+        "parentId" : "1a4901b5-46df-4480-b7f7-1f860186f1e6",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "So I guess I was purposefully avoiding that term since `workspaceFolder` is part of the LSP spec that we don't support. So I was trying to avoid using the term. Do you still think it may be clearer to use it?",
+        "createdAt" : "2021-01-15T12:27:06Z",
+        "updatedAt" : "2021-01-15T12:27:06Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a0387c54-32c5-4a40-9ef2-e6a7ff476d13",
+        "parentId" : "1a4901b5-46df-4480-b7f7-1f860186f1e6",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Right, it might be fine then with the current message. I was mostly thinking aloud here.",
+        "createdAt" : "2021-01-15T12:46:29Z",
+        "updatedAt" : "2021-01-15T12:46:29Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "128d18c143146159f289e0402ad515753e17f3d5",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +21,25 @@  val noRoot = new MessageParams(\n    MessageType.Error,\n    \"\"\"|No rootUri or rootPath detected.\n       |Metals will not function correctly without either of these set since a workspace is needed.\n       |Try opening your project at the workspace root.\"\"\".stripMargin"
   }
 ]

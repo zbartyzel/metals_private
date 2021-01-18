@@ -1762,5 +1762,54 @@
     "commit" : "bad2ebdafddec4a185f9f657fbafabdb58cac798",
     "line" : 23,
     "diffHunk" : "@@ -1,1 +215,219 @@\n  // Scala 3\n  def nonDeprecatedScala3Versions = Seq(scala3, \"3.0.0-M1\", \"0.27.0-RC1\")\n  def deprecatedScala3Versions = Seq(\"0.26.0\")\n  def scala3Versions = nonDeprecatedScala3Versions ++ deprecatedScala3Versions"
+  },
+  {
+    "id" : "75c6584c-7881-4c79-a74a-0a2981872d64",
+    "prId" : 2383,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2383",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "6db78ecb-43ea-4734-88f9-08b0a6c484d4",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "I decided to add support for 2.12.13, but keep Metals on 2.12.12 until we can just calmly update. I should have done it in the beginning, but it seemed I would be able to just do one more thing and they just kept poping up.",
+        "createdAt" : "2021-01-17T10:01:38Z",
+        "updatedAt" : "2021-01-17T10:01:38Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9fdb58c9-2ec0-4357-8c40-fed67ea8f1fa",
+        "parentId" : "6db78ecb-43ea-4734-88f9-08b0a6c484d4",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "No worries at all. We can easily just do it after.",
+        "createdAt" : "2021-01-17T10:07:55Z",
+        "updatedAt" : "2021-01-17T10:11:05Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "2d9d79ab2be4fc541bb617efbf06aae1c43dfcd0",
+    "line" : 23,
+    "diffHunk" : "@@ -1,1 +214,218 @@    Seq(scala211, \"2.12.8\", \"2.12.9\", \"2.13.0\", \"2.13.1\")\n  def nonDeprecatedScala2Versions =\n    Seq(scala213, scala212, \"2.12.13\", \"2.12.11\", \"2.12.10\", \"2.13.2\", \"2.13.3\")\n  def scala2Versions = nonDeprecatedScala2Versions ++ deprecatedScala2Versions\n"
   }
 ]
