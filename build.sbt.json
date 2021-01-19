@@ -1811,5 +1811,73 @@
     "commit" : "2d9d79ab2be4fc541bb617efbf06aae1c43dfcd0",
     "line" : 23,
     "diffHunk" : "@@ -1,1 +214,218 @@    Seq(scala211, \"2.12.8\", \"2.12.9\", \"2.13.0\", \"2.13.1\")\n  def nonDeprecatedScala2Versions =\n    Seq(scala213, scala212, \"2.12.13\", \"2.12.11\", \"2.12.10\", \"2.13.2\", \"2.13.3\")\n  def scala2Versions = nonDeprecatedScala2Versions ++ deprecatedScala2Versions\n"
+  },
+  {
+    "id" : "f264ff74-46ef-4696-8dc6-50c82f94c7ed",
+    "prId" : 2404,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2404",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "aa942795-53a5-4bc7-80f3-e82cd0ac7e3f",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "Can we just bump the version of Ammonite right away to not have to worry about this? It looks like it's available for 2.12.13 -> `2.3.8-32-64308dc3`. Or were you purposefully not including that?",
+        "createdAt" : "2021-01-18T17:40:34Z",
+        "updatedAt" : "2021-01-18T19:36:06Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "70e058aa-fa7f-4ad9-8a89-27c87b263536",
+        "parentId" : "aa942795-53a5-4bc7-80f3-e82cd0ac7e3f",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "So turns out there was a regression, but once https://github.com/lihaoyi/Ammonite/pull/1146 is released we can upgrade.",
+        "createdAt" : "2021-01-18T17:43:17Z",
+        "updatedAt" : "2021-01-18T19:36:06Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1ab883ca-8c74-4f96-a92d-297cbe6a5c20",
+        "parentId" : "aa942795-53a5-4bc7-80f3-e82cd0ac7e3f",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "![](https://media.giphy.com/media/H3qWY13eGZUomKxOs6/source.gif)\r\n\r\n\r\nRegressions this week...",
+        "createdAt" : "2021-01-18T17:49:40Z",
+        "updatedAt" : "2021-01-18T19:36:06Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8ecb05f5d5e9bbda7f30f18731695522ef5aa16d",
+    "line" : 27,
+    "diffHunk" : "@@ -1,1 +576,580 @@          V.sbtScala,\n          V.scala212,\n          // TODO https://github.com/scalameta/metals/issues/2392\n          \"2.12.12\",\n          V.scala213,"
   }
 ]

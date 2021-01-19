@@ -2,6 +2,8 @@
   {
     "id" : "0ac7ea6c-4fcd-4213-92e0-0f0f1ef5e20b",
     "prId" : 397,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "342ecfab-0df5-4345-9e84-40a98e095600",
@@ -26,5 +28,73 @@
     "commit" : "dc4a390c004e0da54976f66fea7feb0469ca9621",
     "line" : 5,
     "diffHunk" : "@@ -1,1 +45,49 @@            // Down the road, metals can even remove unused imports for you if they are reported\n            // as warnings but not if they are errors.\n            \"-Xfatal-warnings\"\n          ),\n          scalacOptions.in(p) ++= List("
+  },
+  {
+    "id" : "619170c2-a8ac-4607-8a0d-02eb4447bffd",
+    "prId" : 2404,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2404",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "cd2455b4-c7dd-42cc-a9f3-a2a45a50594e",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "@ckipp01 what about this? I think this might have been the actual problem, we should not set `semanticdbCompilerPlugin` if we don't currently support the given scala version. If a user had the Metals plugin and `semanticdbEnabled := true` then we would have replaced the original without actually needing to do it. So it would break user's builds even though Metals does not support the given version. ",
+        "createdAt" : "2021-01-18T19:39:49Z",
+        "updatedAt" : "2021-01-18T19:39:56Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d852019f-22bc-4b2b-93da-440e3af891c5",
+        "parentId" : "cd2455b4-c7dd-42cc-a9f3-a2a45a50594e",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "Yea, that makes sense 👍🏼 . So if it's not in our supported versions, we just default to what they want. The only problem (and I don't know how to get around) is that for some reason if someone wants to bump the semanticdb version while using a Scala version that we do support, they can't.",
+        "createdAt" : "2021-01-18T19:41:29Z",
+        "updatedAt" : "2021-01-18T19:41:29Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "04184f6c-09ca-4a6a-a7ec-d58810bb7376",
+        "parentId" : "cd2455b4-c7dd-42cc-a9f3-a2a45a50594e",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "I think it's fine, we update the semanticdb version often enough. There should be no actual need to do it manually. Besides, if the user modifies the version we cannot know if it actually supports the given Scala version. Metals should be a source of truth here the same as with Bloop.",
+        "createdAt" : "2021-01-18T19:47:54Z",
+        "updatedAt" : "2021-01-18T19:47:54Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8ecb05f5d5e9bbda7f30f18731695522ef5aa16d",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +18,22 @@  override lazy val projectSettings: Seq[Def.Setting[_]] = Seq(\n    semanticdbCompilerPlugin := {\n      if (supportedScala2Versions.contains(scalaVersion.value))\n        (\"org.scalameta\" % \"semanticdb-scalac\" % semanticdbVersion)\n          .cross(CrossVersion.full)"
   }
 ]

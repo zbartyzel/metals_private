@@ -1822,5 +1822,130 @@
     "commit" : "128d18c143146159f289e0402ad515753e17f3d5",
     "line" : 200,
     "diffHunk" : "@@ -1,1 +284,288 @@    root match {\n      case None =>\n        languageClient.showMessage(Messages.noRoot)\n      case Some(path) =>\n        workspace = AbsolutePath(Paths.get(URI.create(path))).dealias"
+  },
+  {
+    "id" : "3ee3ee92-63e2-4580-822c-2d131409ae54",
+    "prId" : 2402,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2402",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "9ad8909b-2222-4db6-9010-e6de7304b2aa",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/691940?u=cc41b494c40cff0015df21d897639d7d176bb9c6&v=4"
+        },
+        "body" : "do all clients set this? This is potentially breaking for clients that used to rely on the flag and are not yet sending this info via LSP",
+        "createdAt" : "2021-01-18T13:13:40Z",
+        "updatedAt" : "2021-01-18T13:13:42Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/691940?u=cc41b494c40cff0015df21d897639d7d176bb9c6&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "be3b0428-6e9f-4fcf-85df-df7ab6152e57",
+        "parentId" : "9ad8909b-2222-4db6-9010-e6de7304b2aa",
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/691940?u=cc41b494c40cff0015df21d897639d7d176bb9c6&v=4"
+        },
+        "body" : "Sorry, just saw the comment in the PR description. It's cool then!\r\n\r\nDo we still need `metalsClientType` in the config or can we remove it?",
+        "createdAt" : "2021-01-18T13:14:27Z",
+        "updatedAt" : "2021-01-18T13:14:28Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/691940?u=cc41b494c40cff0015df21d897639d7d176bb9c6&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a43ba9e8-c9b9-4032-8731-f44ef8161d72",
+        "parentId" : "9ad8909b-2222-4db6-9010-e6de7304b2aa",
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/691940?u=cc41b494c40cff0015df21d897639d7d176bb9c6&v=4"
+        },
+        "body" : "At a quick glance, it seems like this is the only spot where we used `metalsClientType` directly. Other than that it's used to initialize the default config in https://github.com/scalameta/metals/blob/a004fd0a7c0153415243f735a54070abe178924e/metals/src/main/scala/scala/meta/internal/metals/MetalsServerConfig.scala#L134 so it would be better to align the source of truth and use LSP for that too, wdyt?",
+        "createdAt" : "2021-01-18T13:17:28Z",
+        "updatedAt" : "2021-01-18T13:17:28Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/691940?u=cc41b494c40cff0015df21d897639d7d176bb9c6&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "cbfec217-7d14-4eb6-be1a-9f974f6dfb36",
+        "parentId" : "9ad8909b-2222-4db6-9010-e6de7304b2aa",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "As far as I can tell, yes. A few examples of the lesser popular clients\r\n- [emacs-lsp](https://github.com/emacs-lsp/lsp-mode/blob/a0c41e489c656bc69a3cdd0d04ee549f45e42a59/lsp-mode.el#L6656)\r\n- [Neovim](https://github.com/neovim/neovim/commit/1a4d380b5abfff2cf5e46a1b00e98f4381b7e5b0)\r\n\r\nAnd of course the big dogs like VS Code for sure set this.\r\n\r\n> potentially breaking \r\n\r\nAlso, this is only being used to show the client in the logs, everything else regarind the `-Dmetals.client` stuff is still the same and will still work as expected, it just won't show the client name in the logs.\r\n\r\nThe one that I did find that doesn't set this is `vim-lsc`. However, I'll send in a pr to fix this for them  since this has been part of the spec for a while now.",
+        "createdAt" : "2021-01-18T13:18:56Z",
+        "updatedAt" : "2021-01-18T13:18:56Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a1c5f0d5-e09b-4098-b829-dd120d2f153f",
+        "parentId" : "9ad8909b-2222-4db6-9010-e6de7304b2aa",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "https://github.com/natebosch/vim-lsc/pull/373",
+        "createdAt" : "2021-01-18T13:25:04Z",
+        "updatedAt" : "2021-01-18T13:25:04Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "78058098-da2e-4721-b182-3eb3d57784a3",
+        "parentId" : "9ad8909b-2222-4db6-9010-e6de7304b2aa",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : ">  so it would be better to align the source of truth and use LSP for that too, wdyt?\r\n\r\nSorry I was answering your other questions, and totally missed this one. I think in theory, yea, it'd be awesome to just fully get away from the `MetalsServerConfig` altogether, but I'm honest just not sure when. We could do a check on `clientInfo.name` and try to somewhat match on that, but that also may be a bit eh. I'm sort of in the mindset for now to still just leave this in here for a bit since it's not really harming anything. Especially since all the values are looked at last in here: https://github.com/scalameta/metals/blob/main/metals/src/main/scala/scala/meta/internal/metals/ClientConfiguration.scala",
+        "createdAt" : "2021-01-18T13:36:18Z",
+        "updatedAt" : "2021-01-18T13:36:18Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "beda22ff572487e3bb0d5c8b0b6a60df46f9e2f1",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +289,293 @@        MetalsLogger.setupLspLogger(workspace, redirectSystemOut)\n\n        val clientInfo = Option(params.getClientInfo()) match {\n          case Some(info) =>\n            s\"for client ${info.getName()} ${Option(info.getVersion).getOrElse(\"\")}\""
   }
 ]
