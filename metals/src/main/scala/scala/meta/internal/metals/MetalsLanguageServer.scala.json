@@ -1947,5 +1947,54 @@
     "commit" : "beda22ff572487e3bb0d5c8b0b6a60df46f9e2f1",
     "line" : 7,
     "diffHunk" : "@@ -1,1 +289,293 @@        MetalsLogger.setupLspLogger(workspace, redirectSystemOut)\n\n        val clientInfo = Option(params.getClientInfo()) match {\n          case Some(info) =>\n            s\"for client ${info.getName()} ${Option(info.getVersion).getOrElse(\"\")}\""
+  },
+  {
+    "id" : "4b48a7c0-da64-4988-bd6f-5a3b169a3bdb",
+    "prId" : 2374,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2374",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "106faf6e-9767-4510-b93f-d8bba01ebecf",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "So I honestly don't know, that's why I'm asking, but will there be a penalty paid at all if a user closes a file, and then re-opens it? In that case, we removed the tree from `trees` in `Trees.scala`. It's probably not a huge deal, but am more just curious if it's necessary.",
+        "createdAt" : "2021-01-14T11:32:14Z",
+        "updatedAt" : "2021-01-22T16:41:19Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8b8ca5c1-3b3b-4fe4-83bd-5461c2de48fa",
+        "parentId" : "106faf6e-9767-4510-b93f-d8bba01ebecf",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "the penalty should rather be small, parsing is fast, so this is just needed to keep memory issues in check.",
+        "createdAt" : "2021-01-14T16:16:23Z",
+        "updatedAt" : "2021-01-22T16:41:19Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3bdee6d5b72cf6cfee580941ef1b1c2987b172b",
+    "line" : 99,
+    "diffHunk" : "@@ -1,1 +1040,1044 @@    buffers.remove(path)\n    compilers.didClose(path)\n    trees.didClose(path)\n    diagnostics.onNoSyntaxError(path)\n  }"
   }
 ]

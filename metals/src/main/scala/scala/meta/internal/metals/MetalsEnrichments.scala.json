@@ -2,6 +2,8 @@
   {
     "id" : "2fee2b8e-2675-4608-9b22-630db6e188f4",
     "prId" : 1523,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "5ce3fdf8-4353-4ee4-afad-5f189689e555",
@@ -49,6 +51,8 @@
   {
     "id" : "4f821716-995f-47bf-b45f-345d440064e4",
     "prId" : 1155,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "cd830df8-3ce2-4e0a-b8fe-0bb83892ca1c",
@@ -134,6 +138,8 @@
   {
     "id" : "a547a5a2-a466-4cbe-932e-ef5f86fd219c",
     "prId" : 1057,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "1da3d468-a887-4f99-8e97-450740137360",
@@ -219,6 +225,8 @@
   {
     "id" : "b072e2d2-cd71-4882-ab33-bf6ee23378fb",
     "prId" : 1048,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "38d78635-dac2-4b78-bd12-c0375a2cf650",
@@ -266,6 +274,8 @@
   {
     "id" : "c15b5f7c-a874-4bf5-ab08-4d757ba69a4a",
     "prId" : 632,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "496e886a-217a-4d63-8e4f-56c768561d8f",
@@ -290,5 +300,35 @@
     "commit" : "79793f51fa23f5e83e6e9dc8e633ae708eeb17a1",
     "line" : 21,
     "diffHunk" : "@@ -1,1 +502,506 @@  }\n\n  implicit class XtensionTreeTokenStream(tree: Tree) {\n    def leadingTokens: Iterator[Token] = tree.origin match {\n      case Origin.Parsed(input, _, pos) =>"
+  },
+  {
+    "id" : "3e1cf107-99bd-45b0-850b-201d1a77c130",
+    "prId" : 2374,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2374",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "8bddcfa7-759f-44b5-a8e9-cbecdb8b3f60",
+        "parentId" : null,
+        "author" : {
+          "login" : "tanishiking",
+          "name" : "Rikito Taniguchi",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4"
+        },
+        "body" : "[note] Previously, the tokenizer always use `Trees.defaultDialect`, now it uses an appropriate dialect for the input.",
+        "createdAt" : "2021-01-20T16:17:07Z",
+        "updatedAt" : "2021-01-22T16:41:19Z",
+        "lastEditedBy" : {
+          "login" : "tanishiking",
+          "name" : "Rikito Taniguchi",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3bdee6d5b72cf6cfee580941ef1b1c2987b172b",
+    "line" : 20,
+    "diffHunk" : "@@ -1,1 +702,706 @@      tree.origin match {\n        case Origin.Parsed(input, dialect, pos) =>\n          val tokens = dialect(input).tokenize.get\n          tokens.slice(0, pos.start - 1).reverseIterator\n        case _ => Iterator.empty"
   }
 ]

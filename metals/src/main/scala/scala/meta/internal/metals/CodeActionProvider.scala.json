@@ -2,6 +2,8 @@
   {
     "id" : "0968d0df-c093-45b3-86b7-377c643ad236",
     "prId" : 1065,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "0189df22-1cf4-4820-9eff-6d494837bf6b",
@@ -26,5 +28,35 @@
     "commit" : "1e046b2b878d476d389f19bdcaa73ae4b7c121c9",
     "line" : 20,
     "diffHunk" : "@@ -1,1 +18,22 @@      quickFixes <- Future\n        .sequence(\n          List(QuickFix.ImportMissingSymbol)\n            .map(_.contribute(params, compilers, token))\n        )"
+  },
+  {
+    "id" : "a0a0839c-4c12-4f11-9e7c-34dc56a5d653",
+    "prId" : 2374,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2374",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "dfb5315f-4f04-4c55-9d2b-0a130928f21c",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "Good idea to just pass this in 👍🏼 ",
+        "createdAt" : "2021-01-14T11:20:12Z",
+        "updatedAt" : "2021-01-22T16:41:19Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3bdee6d5b72cf6cfee580941ef1b1c2987b172b",
+    "line" : 21,
+    "diffHunk" : "@@ -1,1 +22,26 @@    new ImportMissingSymbol(compilers),\n    new CreateNewSymbol(),\n    new StringActions(buffers, trees),\n    new OrganizeImports(scalafixProvider, buildTargets)\n  )"
   }
 ]

@@ -1,0 +1,32 @@
+[
+  {
+    "id" : "c8ff3b93-8e56-4b1a-8ab5-997543da145a",
+    "prId" : 2427,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2427",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "76bc380f-e411-4c01-a742-65a8667b05c0",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "This is just so that we don't search for class if an object was already found.",
+        "createdAt" : "2021-01-24T08:52:05Z",
+        "updatedAt" : "2021-01-24T08:52:06Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "236d51b95a99953e085701478620c7b04cbca110",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +29,33 @@    val symbolBase = if (base.contains(\"/\")) base else \"_empty_/\" + base\n    val symbols = for {\n      symbol <- Set(symbolBase + \".\", symbolBase + \"#\").toIterator\n      definition <- definitionProvider.fromSymbol(symbol).asScala\n    } yield definition.getUri.toAbsolutePath"
+  }
+]

@@ -1,0 +1,51 @@
+[
+  {
+    "id" : "42286f8f-8b7c-4f1c-962a-d3cac5fd7604",
+    "prId" : 2374,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2374",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "9e325fdd-2e1f-4244-97f7-f5d91729ee47",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "Do we also need to check for `startsWith(\"0\")` still?",
+        "createdAt" : "2021-01-14T11:37:05Z",
+        "updatedAt" : "2021-01-22T16:41:19Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b9ec2d34-6999-4a75-95dc-82b5705c32e7",
+        "parentId" : "9e325fdd-2e1f-4244-97f7-f5d91729ee47",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "So actually the parser will not work with those since the syntax changed. I think we should drop `0.` in this PR actually. Let's do a release with `2.12.13`, merge this and that should give enought time for EPFL students to finish their semester and never look at 0.27 version ever gain :sweat_smile: ",
+        "createdAt" : "2021-01-14T17:02:59Z",
+        "updatedAt" : "2021-01-22T16:41:19Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3bdee6d5b72cf6cfee580941ef1b1c2987b172b",
+    "line" : 19,
+    "diffHunk" : "@@ -1,1 +28,32 @@      case \"2.12\" => Scala212\n      case \"2.13\" => Scala213\n      case version if version.startsWith(\"3.\") => Scala3\n      case _ => Scala213\n    }"
+  }
+]

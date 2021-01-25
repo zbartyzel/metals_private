@@ -1879,5 +1879,35 @@
     "commit" : "8ecb05f5d5e9bbda7f30f18731695522ef5aa16d",
     "line" : 27,
     "diffHunk" : "@@ -1,1 +576,580 @@          V.sbtScala,\n          V.scala212,\n          // TODO https://github.com/scalameta/metals/issues/2392\n          \"2.12.12\",\n          V.scala213,"
+  },
+  {
+    "id" : "9998a9c0-0ee1-4655-a004-820d95fd9f6f",
+    "prId" : 2374,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2374",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "e49b905c-c126-4f3a-8a40-53ac95619291",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "It makes me happy to be simplifying in this :)",
+        "createdAt" : "2021-01-21T17:38:58Z",
+        "updatedAt" : "2021-01-22T16:41:19Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3bdee6d5b72cf6cfee580941ef1b1c2987b172b",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +10,14 @@def isScala213(v: Option[(Long, Long)]): Boolean = v.contains((2, 13))\ndef isScala2(v: Option[(Long, Long)]): Boolean = v.exists(_._1 == 2)\ndef isScala3(v: Option[(Long, Long)]): Boolean = v.exists(_._1 == 3)\n\ndef crossSetting[A]("
   }
 ]

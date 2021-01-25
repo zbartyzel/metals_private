@@ -2,6 +2,8 @@
   {
     "id" : "4a3fc8ad-b10f-4b5e-a2e2-6c08ca602c11",
     "prId" : 1163,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "1aa74ea7-4af0-4e6e-ae53-c9baa6327a14",
@@ -140,5 +142,73 @@
     "commit" : "04ef30f47759c2620cd886265e4c50169245a539",
     "line" : 25,
     "diffHunk" : "@@ -1,1 +23,27 @@    val input = path.toAbsolutePath.toInput\n    val occurrences = Mtags.allToplevels(input).occurrences\n    val groups = request.getBreakpoints.groupBy { breakpoint =>\n      val definition = occurrences.minBy(distanceFrom(breakpoint))\n      JvmSignatures.toTypeSignature(definition)"
+  },
+  {
+    "id" : "dcd92c96-5ede-42a9-bb94-eb1980916c67",
+    "prId" : 2374,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2374",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "dce109a6-a84c-4e61-b196-bf2b73d3280a",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "Also, this may be me just not knowing a whole log about DAP stuff, but why are these called `partitions` when these are `Iterable[SetBreakPointsArguments]`?",
+        "createdAt" : "2021-01-14T11:42:42Z",
+        "updatedAt" : "2021-01-22T16:41:19Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c79a8feb-ec86-47e4-832b-9764bb35f3d3",
+        "parentId" : "dce109a6-a84c-4e61-b196-bf2b73d3280a",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "We partition breakpoints into groups that pertain to a certain classfile. So for example if we have:\r\n```scala\r\nclass Main{\r\n   ...\r\n}\r\n\r\nobject Main{\r\n  ...\r\n}\r\n```\r\n\r\nBreakpoints from `Main.scala` will be split into partitions for `Main$.class` and `Main.class` ",
+        "createdAt" : "2021-01-14T17:18:47Z",
+        "updatedAt" : "2021-01-22T16:41:19Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "53c64cf9-08d9-4139-8411-c3a5dda00ae7",
+        "parentId" : "dce109a6-a84c-4e61-b196-bf2b73d3280a",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Ach and each `SetBreakPointsArguments` is an actual parition.",
+        "createdAt" : "2021-01-14T17:41:40Z",
+        "updatedAt" : "2021-01-22T16:41:19Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3bdee6d5b72cf6cfee580941ef1b1c2987b172b",
+    "line" : 66,
+    "diffHunk" : "@@ -1,1 +49,53 @@\n    val groups = symbols.groupBy(_._2)\n    val partitions = groups.flatMap {\n      case (Some(fullyQualifiedClassName), breakpoints) =>\n        Some("
   }
 ]
