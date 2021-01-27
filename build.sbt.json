@@ -1909,5 +1909,54 @@
     "commit" : "e3bdee6d5b72cf6cfee580941ef1b1c2987b172b",
     "line" : 8,
     "diffHunk" : "@@ -1,1 +10,14 @@def isScala213(v: Option[(Long, Long)]): Boolean = v.contains((2, 13))\ndef isScala2(v: Option[(Long, Long)]): Boolean = v.exists(_._1 == 2)\ndef isScala3(v: Option[(Long, Long)]): Boolean = v.exists(_._1 == 3)\n\ndef crossSetting[A]("
+  },
+  {
+    "id" : "a6182a85-756d-41ef-9b45-83f12d1c590e",
+    "prId" : 2440,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2440",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "13bf88da-a897-4c74-9d55-0afc976de21f",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "You may want to leave a comment on what Google account owns this bucket to help the next person investigate the failing CI 😅 ",
+        "createdAt" : "2021-01-27T10:49:53Z",
+        "updatedAt" : "2021-01-27T10:52:55Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "81f7926d-2eac-494a-b130-098d4e9247af",
+        "parentId" : "13bf88da-a897-4c74-9d55-0afc976de21f",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "I think I should be able to give more people access to it. I will try to do that later if it works, but I added a comment for now.",
+        "createdAt" : "2021-01-27T10:53:07Z",
+        "updatedAt" : "2021-01-27T10:53:07Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "dec8329936203da502120bdf8f0bc58b59cc795f",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +695,699 @@    moduleName := \"metals-docs\",\n    // note bucket created by @tgodzik\n    munitBucketName := Some(\"scala-metals-test-reports\"),\n    mdoc := run.in(Compile).evaluated,\n    munitRepository := Some(\"scalameta/metals\"),"
   }
 ]

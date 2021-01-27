@@ -96,5 +96,73 @@
     "commit" : "d9cd2ac8f7fbab36622dcb13d1c272c4f968a361",
     "line" : 111,
     "diffHunk" : "@@ -1,1 +169,173 @@          .flatMap(compilers().loadWorksheetCompiler)\n      }\n      .getOrElse(compilers().ramboCompiler)\n\n    val uri = source.toURI.toString"
+  },
+  {
+    "id" : "212a0b2d-3546-43ce-a69b-f168a6ab83be",
+    "prId" : 2412,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2412",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b7a4d284-9b22-4429-8d7b-923bfe0f1947",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Let's maybe move some of the logic (prepending imports, calculating semanticdb and adjusting ranges) to `Compilers` and we can use `AdjustLspData` the same as with any other cases? We would probably need to add `adjustRange` from here to `AdjustLspData`",
+        "createdAt" : "2021-01-20T13:39:05Z",
+        "updatedAt" : "2021-01-25T08:49:45Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2175829b-f844-4a93-967e-44cda5615db6",
+        "parentId" : "b7a4d284-9b22-4429-8d7b-923bfe0f1947",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4"
+        },
+        "body" : "In the beginning, I thought to implement it as you suggest.\r\n\r\nHowever, I found that `references` and `rename` are based on `DefinitionProvider.positionOccurence`.\r\nIt internally uses `TokenEditDistance` between buffer and TextDocument. So for sbt files, it means that TextDocument has to be cleaned from sbt-specific imports before it will be passed into `TokenEditDistance`. Otherwise, it's method `toOriginal` fails.\r\nIt might be handled by adding sbt/adjust-specific logic into `DefinitionProvider` but I don't think that it's the right way to go.\r\n\r\nSo, I decided that it would be better just to leave these hacks in `IntercativeSemanticdb` because in this case adjustment is applied on TextDocument, not on LSP positions.",
+        "createdAt" : "2021-01-21T18:11:05Z",
+        "updatedAt" : "2021-01-25T08:49:45Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5b1486a9-f9c7-450d-8241-7b98b2fa771f",
+        "parentId" : "b7a4d284-9b22-4429-8d7b-923bfe0f1947",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "I think that should not be an issue. DefinitionProvider would still use `InteractiveSemanticdb`, so there would be no need to add sbt specific logic anywhere. However, I see now that it's a bigger refactor here, so maybe I can take a look a bit later while taking a look at how we infer build targets (especially for worksheets, which I guess might not work perfectly now) and how we could improve it. ",
+        "createdAt" : "2021-01-22T09:58:00Z",
+        "updatedAt" : "2021-01-25T08:49:45Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "65917e67c7a40c22e3e50becfb28cb3aafcad030",
+    "line" : 112,
+    "diffHunk" : "@@ -1,1 +169,173 @@    val textDocument = s.TextDocument.parseFrom(bytes)\n    if (prependedLinesSize > 0)\n      cleanupAutoImports(textDocument, text, prependedLinesSize)\n    else textDocument\n  }"
   }
 ]
