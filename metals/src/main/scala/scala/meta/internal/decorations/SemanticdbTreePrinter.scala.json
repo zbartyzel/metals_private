@@ -2,6 +2,8 @@
   {
     "id" : "58d0c9a3-0dad-43d2-823a-baa7b41abb74",
     "prId" : 2103,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "df4933bc-5ac8-40bb-915e-bd23e7b53760",
@@ -102,5 +104,35 @@
     "commit" : "d41415a1ce39fbc08c6ed741ee8b6bf37978a983",
     "line" : 9,
     "diffHunk" : "@@ -1,1 +7,11 @@import scala.meta.metap.Format\n\nobject SemanticdbTreePrinter {\n\n  def printSyntheticInfo("
+  },
+  {
+    "id" : "d38ad04d-0806-47c6-9cc2-c18b810c80e3",
+    "prId" : 2435,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2435",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "1b4a7d4d-6da2-4ec2-a0c3-c683a434b4c8",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "This is the main change here, everything else was mostly moved around.",
+        "createdAt" : "2021-01-25T15:45:39Z",
+        "updatedAt" : "2021-01-28T12:14:39Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c4f8c1edc27375c09baea128c304e6ddbb915c2a",
+    "line" : 31,
+    "diffHunk" : "@@ -1,1 +24,28 @@        s\"${printPrefix(prefix)}${printSymbol(symbol)}\"\n      case s.TypeRef(prefix, symbol, typeArguments) =>\n        val isTuple = symbol.startsWith(\"scala/Tuple\")\n        val isFunction = symbol.startsWith(\"scala/Function\")\n        val sym = if (isTuple || isFunction) \"\" else printSymbol(symbol)"
   }
 ]
