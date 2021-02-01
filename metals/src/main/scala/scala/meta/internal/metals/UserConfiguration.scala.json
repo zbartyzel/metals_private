@@ -2,6 +2,8 @@
   {
     "id" : "f10af76f-4107-4ad8-86c7-439f19d29240",
     "prId" : 2103,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "a3360d12-53dd-4c1e-a14c-0a12f4fb9027",
@@ -68,6 +70,8 @@
   {
     "id" : "5ad384c8-d474-4dab-ae42-7ce28a95a110",
     "prId" : 2103,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "c917eef7-763e-469f-9d3b-756666fc1ec0",
@@ -115,6 +119,8 @@
   {
     "id" : "497cccaa-cd8a-4192-847c-d6228c009c04",
     "prId" : 2091,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "11a1cb23-62bc-4a00-81a3-f66463c65272",
@@ -143,6 +149,8 @@
   {
     "id" : "d3b47c1d-30f4-47ff-baf0-814c980552af",
     "prId" : 1853,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "c884c129-1700-46db-8796-055820ea2dfc",
@@ -190,6 +198,8 @@
   {
     "id" : "28cded0c-edc7-4dc4-828c-e1b16b84a404",
     "prId" : 1853,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "a5247cc6-ad8a-4e5f-933f-2efd279ef854",
@@ -256,6 +266,8 @@
   {
     "id" : "a086aac4-f7d9-4c09-93ba-9359542b1938",
     "prId" : 1145,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "231f1d68-b3bc-42a3-84c7-03b85f6f59d9",
@@ -303,6 +315,8 @@
   {
     "id" : "e92c2a7f-75d6-4568-8fe5-c7a7e5454292",
     "prId" : 387,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "e8367fab-3bff-4af0-b1b7-0b50dadb8e24",
@@ -350,6 +364,8 @@
   {
     "id" : "16bb712b-0b77-403a-8280-ce3aa808b9ba",
     "prId" : 387,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "b9dd853e-d39a-4aff-aa62-7a32034c79f8",
@@ -374,5 +390,54 @@
     "commit" : "1b1118ae5909e6fd535bcd79958b0dfde37041e3",
     "line" : 74,
     "diffHunk" : "@@ -1,1 +68,72 @@    val base: JsonObject =\n      (for {\n        settings <- Option(json.getAsJsonObject(\"settings\"))\n        metals <- Option(settings.getAsJsonObject(\"metals\"))\n      } yield metals).getOrElse(new JsonObject)"
+  },
+  {
+    "id" : "9f11b02c-b7fa-4cc2-9606-f126095da0e5",
+    "prId" : 2417,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2417",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "8ff37339-903e-47c1-b641-ca8ae127d285",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "We should also create a PR to metals-vscode and add the new configuration option to `package.json`, we should also only allow to select from a number of values (I think that should be supported)",
+        "createdAt" : "2021-01-27T15:38:42Z",
+        "updatedAt" : "2021-01-30T10:31:04Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "46de60a8-b8af-4121-b5c7-66a6be8192d6",
+        "parentId" : "8ff37339-903e-47c1-b641-ca8ae127d285",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4"
+        },
+        "body" : "Yep, I have a branch with these changes. Will publish them soon.\r\nDecided to delay this PR creation because I expected there might be some changes in option name and it's description)",
+        "createdAt" : "2021-01-28T14:18:42Z",
+        "updatedAt" : "2021-01-30T10:31:04Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c6afe8859884b58401f8d9fa587922f6b6dfa0c7",
+    "line" : 16,
+    "diffHunk" : "@@ -1,1 +224,228 @@      ),\n      UserConfigurationOption(\n        \"fallback-scala-version\",\n        BuildInfo.scala212,\n        BuildInfo.scala212,"
   }
 ]

@@ -1958,5 +1958,35 @@
     "commit" : "dec8329936203da502120bdf8f0bc58b59cc795f",
     "line" : 5,
     "diffHunk" : "@@ -1,1 +695,699 @@    moduleName := \"metals-docs\",\n    // note bucket created by @tgodzik\n    munitBucketName := Some(\"scala-metals-test-reports\"),\n    mdoc := run.in(Compile).evaluated,\n    munitRepository := Some(\"scalameta/metals\"),"
+  },
+  {
+    "id" : "c840891a-88be-4756-8d2c-1a6a99afd53d",
+    "prId" : 2457,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2457",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "06908664-9a3a-4ba4-be23-252a7510265a",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "The file related stuff that we use got extracted out into it's own module and published separately. So that's the reason for this addition.",
+        "createdAt" : "2021-02-01T09:14:57Z",
+        "updatedAt" : "2021-02-01T10:13:16Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c554e4212897184ebcb0389966752b8b178eb0b0",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +430,434 @@      // for logging\n      \"com.outr\" %% \"scribe\" % \"3.3.1\",\n      \"com.outr\" %% \"scribe-file\" % \"3.3.1\",\n      \"com.outr\" %% \"scribe-slf4j\" % \"3.3.1\", // needed for flyway database migrations\n      // for debugging purposes, not strictly needed but nice for productivity"
   }
 ]
