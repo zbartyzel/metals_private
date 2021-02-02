@@ -2,6 +2,8 @@
   {
     "id" : "ccbd65e8-c011-4062-b623-f0758c8043f7",
     "prId" : 1538,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "91a8dd82-a39a-4960-b177-f310ab0103de",
@@ -45,5 +47,54 @@
     "commit" : "0681fa0b1417b7ac622101d279667c6900a2506e",
     "line" : 69,
     "diffHunk" : "@@ -1,1 +75,79 @@  }\n\n  def compileFiles(paths: Seq[AbsolutePath]): Future[Unit] = {\n    val targets = expand(paths)\n    for {"
+  },
+  {
+    "id" : "cc96ec8d-7d76-4adb-9653-c5a2d178ebbf",
+    "prId" : 2450,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2450",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "6609b917-b98c-46b0-9d1c-331084039368",
+        "parentId" : null,
+        "author" : {
+          "login" : "pvid",
+          "name" : "Pavol Vidlička",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/32688476?u=90b2ccb7b7f3a81acffc31b52fb8e179d9cbde33&v=4"
+        },
+        "body" : "I am not really sure about this - should it not compile all inverse dependencies and not just leaves? Should it even care about inverse dependencies?",
+        "createdAt" : "2021-01-30T12:36:31Z",
+        "updatedAt" : "2021-01-30T12:40:16Z",
+        "lastEditedBy" : {
+          "login" : "pvid",
+          "name" : "Pavol Vidlička",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/32688476?u=90b2ccb7b7f3a81acffc31b52fb8e179d9cbde33&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6f960b61-02fb-462b-95fb-59debb841b65",
+        "parentId" : "6609b917-b98c-46b0-9d1c-331084039368",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Leaves will trigger also the compilation of their dependencies, so we should be good.",
+        "createdAt" : "2021-02-01T14:08:43Z",
+        "updatedAt" : "2021-02-01T14:29:42Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "aa7fe079b0e12a163f61899e25eccce6647aec55",
+    "line" : 30,
+    "diffHunk" : "@@ -1,1 +97,101 @@\n  def cascadeCompile(targets: Seq[BuildTargetIdentifier]): Future[Unit] = {\n    val inverseDependencyLeaves =\n      targets.flatMap(buildTargets.inverseDependencyLeaves).distinct\n    cascadeBatch(inverseDependencyLeaves).map(_ => ())"
   }
 ]

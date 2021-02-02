@@ -439,5 +439,35 @@
     "commit" : "c6afe8859884b58401f8d9fa587922f6b6dfa0c7",
     "line" : 16,
     "diffHunk" : "@@ -1,1 +224,228 @@      ),\n      UserConfigurationOption(\n        \"fallback-scala-version\",\n        BuildInfo.scala212,\n        BuildInfo.scala212,"
+  },
+  {
+    "id" : "71f5f1e8-5680-4cb4-9e81-1e331f4f262a",
+    "prId" : 2466,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2466",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "c726c181-7e2d-4bbf-8daa-c315c5b22966",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "I commented more on this in the VS Code repo, but what's the added benefit of this over just filtering out `\"\"` and not needing to introduce another value in the enum?",
+        "createdAt" : "2021-02-01T13:30:41Z",
+        "updatedAt" : "2021-02-01T13:30:42Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "711f373c8cfee46b83bf97fb833f6be299948928",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +390,394 @@    // It was added only to have a meaningful option value in vscode\n    val defaultScalaVersion =\n      getStringKey(\"fallback-scala-version\").filter(_ != \"automatic\")\n    if (errors.isEmpty) {\n      Right("
   }
 ]
