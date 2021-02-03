@@ -2,6 +2,8 @@
   {
     "id" : "4d2711f8-2374-43b3-bab7-e497a3cc8c37",
     "prId" : 1976,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "82ee3080-aa04-4e2e-aa9e-1a9c0252984c",
@@ -30,6 +32,8 @@
   {
     "id" : "c5c2575a-65a8-40cc-9861-7b83bf408ef9",
     "prId" : 1435,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "6d1ba0bb-c04a-4803-8c90-0d05de47216e",
@@ -96,6 +100,8 @@
   {
     "id" : "b8acd13a-2fc2-45d9-85c1-398a42c6b13d",
     "prId" : 1430,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "4a94f3c6-0844-4ba4-92c9-567cd6ea0bcd",
@@ -158,5 +164,35 @@
     "commit" : "449f77053dddb24263c8a82a150393da6812f615",
     "line" : 90,
     "diffHunk" : "@@ -1,1 +291,295 @@  ): Option[s.Range] = {\n    val name = findName(range, text)\n    val isBackticked = name.charAt(0) == '`'\n    val realName =\n      if (isBackticked) name.substring(1, name.length() - 1)"
+  },
+  {
+    "id" : "1009032b-20f7-4dbe-bbe3-fcdf21f08774",
+    "prId" : 2467,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2467",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "2e3addc9-2783-4d3c-aa2e-847aaad14fbf",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "This will make sure that when searching for references in dependency sources it will search the current file despite those sources not being indexed.",
+        "createdAt" : "2021-02-01T17:53:02Z",
+        "updatedAt" : "2021-02-02T12:16:15Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c8e340827464a5e7151fb6e1a653072cb791a959",
+    "line" : 31,
+    "diffHunk" : "@@ -1,1 +196,200 @@  ): Seq[Location] = {\n    val isSymbol = alternatives + occ.symbol\n    if (occ.symbol.isLocal || source.isDependencySource(workspace)) {\n      referenceLocations(\n        snapshot,"
   }
 ]

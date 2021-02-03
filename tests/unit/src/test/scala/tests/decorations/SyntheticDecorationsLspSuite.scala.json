@@ -77,5 +77,84 @@
     "commit" : "2d968b16f63bed12de7c49bbcbabc0559798e84e",
     "line" : 140,
     "diffHunk" : "@@ -1,1 +269,273 @@        client.workspaceDecorations,\n        \"\"\"|object Main{\n           |  (augmentString(augmentString(augmentString(\"1\" + \"2\"))\n           |    .stripSuffix(\".\"))\n           |    .stripSuffix(\"#\"))"
+  },
+  {
+    "id" : "bacecc3c-7296-43ae-b502-fb9289903ffa",
+    "prId" : 2467,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2467",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "252f2536-f122-453c-bccd-458a7c494bfb",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "I discovered that symbol signatures are not produced by interactive semanticdb :/",
+        "createdAt" : "2021-02-01T17:53:51Z",
+        "updatedAt" : "2021-02-02T12:16:15Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c8e340827464a5e7151fb6e1a653072cb791a959",
+    "line" : 56,
+    "diffHunk" : "@@ -1,1 +315,319 @@        client.workspaceDecorations,\n        \"\"\"|object Main{\n           |  val value = augmentString(\"asd.\").stripSuffix(\".\")\n           |}\n           |\"\"\".stripMargin"
+  },
+  {
+    "id" : "b06d14c5-303d-4912-a3e9-62d8078993ee",
+    "prId" : 2449,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2449",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "2b6935d9-90e9-456d-b105-836955ad229c",
+        "parentId" : null,
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4"
+        },
+        "body" : "A minor addition.\r\n\r\nI've tried the following sample:\r\n```scala\r\nval runnable = new Runnable {\r\n  override def run(): Unit = {}\r\n}\r\n```\r\nAnd got printed type:\r\n```scala\r\nval runnable: Object with Runnable {} = new Runnable {\r\n   override def run(): Unit = {}\r\n}\r\n```\r\n\r\nProbably in this case, `Object` should be dropped in the same way as it's done for `AnyRef` in `WithType`",
+        "createdAt" : "2021-02-01T09:46:00Z",
+        "updatedAt" : "2021-02-01T12:26:19Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "320afa40-6152-4a92-bd66-be5976c84e3a",
+        "parentId" : "2b6935d9-90e9-456d-b105-836955ad229c",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Good catch, fixed it also!",
+        "createdAt" : "2021-02-01T12:26:31Z",
+        "updatedAt" : "2021-02-01T12:26:31Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "4cc143492a501a2c67de5c3930ebd2f8b9d54405",
+    "line" : 27,
+    "diffHunk" : "@@ -1,1 +467,471 @@           |  val job = ec.submit(new Runnable {\n           |     override def run(): Unit = {}\n           |  })\n           |  val runnable = new Runnable {\n           |    override def run(): Unit = {}"
   }
 ]

@@ -134,5 +134,54 @@
     "commit" : "c4f8c1edc27375c09baea128c304e6ddbb915c2a",
     "line" : 31,
     "diffHunk" : "@@ -1,1 +24,28 @@        s\"${printPrefix(prefix)}${printSymbol(symbol)}\"\n      case s.TypeRef(prefix, symbol, typeArguments) =>\n        val isTuple = symbol.startsWith(\"scala/Tuple\")\n        val isFunction = symbol.startsWith(\"scala/Function\")\n        val sym = if (isTuple || isFunction) \"\" else printSymbol(symbol)"
+  },
+  {
+    "id" : "31acce7f-14cd-45b2-b12f-9f6da58d55ec",
+    "prId" : 2449,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2449",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "be100355-6759-454a-8b5b-c4a6c3e9011d",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "Just a nit, but did you want a `...` or `…` here for this?",
+        "createdAt" : "2021-02-01T07:40:47Z",
+        "updatedAt" : "2021-02-01T12:26:19Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6512ffa3-eef5-4385-82ac-94aa6ccda5de",
+        "parentId" : "be100355-6759-454a-8b5b-c4a6c3e9011d",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "I actually intended to change it :sweat_smile:  Changed to using ellpsis when applicable.",
+        "createdAt" : "2021-02-01T12:27:15Z",
+        "updatedAt" : "2021-02-01T12:27:15Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "4cc143492a501a2c67de5c3930ebd2f8b9d54405",
+    "line" : 61,
+    "diffHunk" : "@@ -1,1 +77,81 @@\n  def printScope(scope: Option[s.Scope]): String = {\n    if (scope.exists(_.hardlinks.nonEmpty)) \"...\" else \"\"\n  }\n"
   }
 ]
