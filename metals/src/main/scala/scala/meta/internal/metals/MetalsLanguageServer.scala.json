@@ -1996,5 +1996,54 @@
     "commit" : "e3bdee6d5b72cf6cfee580941ef1b1c2987b172b",
     "line" : 99,
     "diffHunk" : "@@ -1,1 +1040,1044 @@    buffers.remove(path)\n    compilers.didClose(path)\n    trees.didClose(path)\n    diagnostics.onNoSyntaxError(path)\n  }"
+  },
+  {
+    "id" : "0d66bb97-171e-462a-a1bd-824529244532",
+    "prId" : 2481,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2481",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "5985fcab-3240-41ad-915d-c11e21cef0c7",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "I hesitated to completely redo this, but wanted to instead just focus on the task at hand. However, I think we can actually improve this here. Mainly, in the first part we are actually disconnecting and then re-connecting. Then we are running the full build import, and then initiating the tree view. However, if at any point during that process something goes wrong, we `disconnectOldBuildServer()` when that's probably not necessary at all depending on the situation. It may be preferable to instead break those three things out from one another and handle a failure in differently. An argument could be made that if something goes wonky during the build import that _maybe_ could be fixed easily, do we really want to disconnect fully? There may be partial support still very much available. Just something to think about.",
+        "createdAt" : "2021-02-06T13:34:01Z",
+        "updatedAt" : "2021-02-08T10:39:29Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5fb9fe64-cf29-4bd4-8ebd-698ef8834895",
+        "parentId" : "5985fcab-3240-41ad-915d-c11e21cef0c7",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "We should not fail on tree view for sure, we used to fail on compile too, but I moved it out because of that. It's fine to do it here, but also can be a separate PR.",
+        "createdAt" : "2021-02-08T10:17:13Z",
+        "updatedAt" : "2021-02-08T10:39:29Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e6ba74f9a1216266d6c0b6c4a6da349745770f6d",
+    "line" : 79,
+    "diffHunk" : "@@ -1,1 +1972,1976 @@        BuildChange.Failed\n      }\n      .flatMap(compileAllOpenFiles)\n  }\n"
   }
 ]
