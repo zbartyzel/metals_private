@@ -2018,5 +2018,92 @@
     "commit" : "4ddead1cefd9da4ca338f88a09d0b2265171ec18",
     "line" : 4,
     "diffHunk" : "@@ -1,1 +6,10 @@    },\n    scalaVersion := V.scala212,\n    crossScalaVersions := List(V.scala212),\n    scalacOptions ++= List(\n      \"-Yrangepos\","
+  },
+  {
+    "id" : "cda2acee-3e75-4a9a-adf1-77ec94992255",
+    "prId" : 2448,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2448",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "739d96cb-5b69-439e-b53a-89dc0e51fbfd",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Could we add it as cross version to `input` ? We could have separate `scala-3` directory like in case of mtags.",
+        "createdAt" : "2021-02-02T13:12:01Z",
+        "updatedAt" : "2021-02-08T17:02:33Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a9311865-f57c-4bce-ac78-ed23d0961718",
+        "parentId" : "739d96cb-5b69-439e-b53a-89dc0e51fbfd",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "If it's too complicated it's okay to leave it separate.",
+        "createdAt" : "2021-02-02T17:08:23Z",
+        "updatedAt" : "2021-02-08T17:02:33Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "cf3cda5e-1a9a-49a8-b6e3-ea8b2aa50567",
+        "parentId" : "739d96cb-5b69-439e-b53a-89dc0e51fbfd",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4"
+        },
+        "body" : "Yep, that will be hard. It requires to do smth like in `crossPublishLocal`.\r\n\r\nAlso, there is an option not to use `input` as a project.\r\nThe only advantage it provides is that before running `unit` it checks that `input` compiles.",
+        "createdAt" : "2021-02-02T18:25:56Z",
+        "updatedAt" : "2021-02-08T17:02:33Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "535a28e4-f2d5-40cc-aa4f-9f4ed414777d",
+        "parentId" : "739d96cb-5b69-439e-b53a-89dc0e51fbfd",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Ok, I think it's fine to leave it as is then. It looks pretty sensible currently.",
+        "createdAt" : "2021-02-02T19:46:57Z",
+        "updatedAt" : "2021-02-08T17:02:33Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "90878c4d641b8a8eb4b4e0bd4a7b43460e8f769f",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +513,517 @@  .settings(\n    sharedSettings,\n    scalaVersion := V.scala3,\n    skip.in(publish) := true\n  )"
   }
 ]

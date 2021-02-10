@@ -1,0 +1,51 @@
+[
+  {
+    "id" : "d48eb02c-b1bf-4b1a-b67e-bee89576f36c",
+    "prId" : 2448,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2448",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "61d59f6f-c65f-426e-ab35-02f38905c480",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "You can also add a test for extension group with multiple params using braces.",
+        "createdAt" : "2021-02-02T17:04:02Z",
+        "updatedAt" : "2021-02-08T17:02:33Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "726738b6-2057-40e8-b811-1e16e8ef464f",
+        "parentId" : "61d59f6f-c65f-426e-ab35-02f38905c480",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4"
+        },
+        "body" : "Done",
+        "createdAt" : "2021-02-05T17:14:13Z",
+        "updatedAt" : "2021-02-08T17:02:33Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "90878c4d641b8a8eb4b4e0bd4a7b43460e8f769f",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +2,6 @@\nextension (i: Int)\n  def asString: String = i.toString\n\nextension (s: String) {"
+  }
+]

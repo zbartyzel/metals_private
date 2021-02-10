@@ -1,0 +1,119 @@
+[
+  {
+    "id" : "ecfd95fd-50fd-4a74-a07b-a79f5ccdfe62",
+    "prId" : 2448,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2448",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "2d260a89-82ca-4048-9b5f-ade121871732",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "We also have `Decl.Given` we should handle.",
+        "createdAt" : "2021-02-02T16:50:36Z",
+        "updatedAt" : "2021-02-08T17:02:33Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "919d399c-e399-426b-88f3-f34dc011539e",
+        "parentId" : "2d260a89-82ca-4048-9b5f-ade121871732",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4"
+        },
+        "body" : "It's handled below",
+        "createdAt" : "2021-02-05T17:14:06Z",
+        "updatedAt" : "2021-02-08T17:02:33Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "fcf22915-313d-477b-b8f2-ea42cf113adc",
+        "parentId" : "2d260a89-82ca-4048-9b5f-ade121871732",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "That's `Defn.Given` not `Decl.Given` - it's a bit confusing, but one is for given definitions and the other for abstract givens.",
+        "createdAt" : "2021-02-08T13:39:37Z",
+        "updatedAt" : "2021-02-08T17:02:33Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "90878c4d641b8a8eb4b4e0bd4a7b43460e8f769f",
+    "line" : 43,
+    "diffHunk" : "@@ -1,1 +290,294 @@          )\n          newOwner()\n        case t: Defn.GivenAlias =>\n          addChild(\n            t.name.value,"
+  },
+  {
+    "id" : "9dcce394-1ca6-4165-9cd9-507c6246ef70",
+    "prId" : 2448,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2448",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ff4098bf-608f-4ec4-b89d-258e4b0c5a31",
+        "parentId" : null,
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4"
+        },
+        "body" : "I've tried to pass an empty string as a name but it breaks smth.\r\n\r\nThere are no exceptions in log and vscode displays as `No symbols found in document $filename`",
+        "createdAt" : "2021-02-05T18:23:28Z",
+        "updatedAt" : "2021-02-08T17:02:33Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "806e9dd3-2787-4090-a05a-e0001bae0967",
+        "parentId" : "ff4098bf-608f-4ec4-b89d-258e4b0c5a31",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Maybe then just put `tpeName` into name and leave the detail empty?",
+        "createdAt" : "2021-02-08T13:40:52Z",
+        "updatedAt" : "2021-02-08T17:02:33Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "90878c4d641b8a8eb4b4e0bd4a7b43460e8f769f",
+    "line" : 62,
+    "diffHunk" : "@@ -1,1 +309,313 @@          val (name, pos) =\n            t.name match {\n              case Name.Anonymous() => (\" \", initPos)\n              case name => (name.value, name.pos)\n            }"
+  }
+]
