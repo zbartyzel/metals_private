@@ -836,74 +836,6 @@
     "diffHunk" : "@@ -1,1 +1281,1285 @@          Some(buildTool)\n        } else {\n          scribe.warn(s\"Unsupported $buildTool version ${buildTool.version}\")\n          languageClient.showMessage(\n            messages.IncompatibleBuildToolVersion.params(buildTool)"
   },
   {
-    "id" : "50baf8fc-ba04-4186-8879-02c43b6bbe83",
-    "prId" : 1089,
-    "prUrl" : null,
-    "prSource" : null,
-    "comments" : [
-      {
-        "id" : "5c619d90-6642-4d9f-8930-e7a6f7da0c59",
-        "parentId" : null,
-        "author" : {
-          "login" : "tgodzik",
-          "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
-        },
-        "body" : "Let's go back to Option[WorksheetProvider]",
-        "createdAt" : "2019-11-28T15:12:17Z",
-        "updatedAt" : "2019-12-06T16:11:03Z",
-        "lastEditedBy" : {
-          "login" : "tgodzik",
-          "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
-        },
-        "tags" : [
-        ]
-      },
-      {
-        "id" : "5f027032-54d5-4a13-b7ff-f33c48eb051d",
-        "parentId" : "5c619d90-6642-4d9f-8930-e7a6f7da0c59",
-        "author" : {
-          "login" : "alekseiAlefirov",
-          "name" : "Aleksei Alefirov",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/10850363?v=4"
-        },
-        "body" : "why? Previously `Option` made sense, since there would not be a Provider always, and now we have fallback.",
-        "createdAt" : "2019-11-29T10:43:52Z",
-        "updatedAt" : "2019-12-06T16:11:03Z",
-        "lastEditedBy" : {
-          "login" : "alekseiAlefirov",
-          "name" : "Aleksei Alefirov",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/10850363?v=4"
-        },
-        "tags" : [
-        ]
-      },
-      {
-        "id" : "48fd771b-7ba7-430a-9d6e-0cf59e786e59",
-        "parentId" : "5c619d90-6642-4d9f-8930-e7a6f7da0c59",
-        "author" : {
-          "login" : "tgodzik",
-          "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
-        },
-        "body" : "Ok, right. Haven't thought about it!",
-        "createdAt" : "2019-11-29T11:09:06Z",
-        "updatedAt" : "2019-12-06T16:11:03Z",
-        "lastEditedBy" : {
-          "login" : "tgodzik",
-          "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
-        },
-        "tags" : [
-        ]
-      }
-    ],
-    "commit" : "c2b310420ce80e33b8c8e4977b94f75be9e4f986",
-    "line" : 15,
-    "diffHunk" : "@@ -1,1 +181,185 @@  var httpServer: Option[MetalsHttpServer] = None\n  var treeView: TreeViewProvider = NoopTreeViewProvider\n  var worksheetProvider: WorksheetProvider = _\n\n  def connectToLanguageClient(client: MetalsLanguageClient): Unit = {"
-  },
-  {
     "id" : "73c7b025-8bd7-4a15-bef3-a100b7996502",
     "prId" : 935,
     "prUrl" : null,
@@ -2045,5 +1977,88 @@
     "commit" : "e6ba74f9a1216266d6c0b6c4a6da349745770f6d",
     "line" : 79,
     "diffHunk" : "@@ -1,1 +1972,1976 @@        BuildChange.Failed\n      }\n      .flatMap(compileAllOpenFiles)\n  }\n"
+  },
+  {
+    "id" : "50baf8fc-ba04-4186-8879-02c43b6bbe83",
+    "prId" : 1089,
+    "prUrl" : null,
+    "prSource" : null,
+    "comments" : [
+      {
+        "id" : "5c619d90-6642-4d9f-8930-e7a6f7da0c59",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Let's go back to Option[WorksheetProvider]",
+        "createdAt" : "2019-11-28T15:12:17Z",
+        "updatedAt" : "2019-12-06T16:11:03Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5f027032-54d5-4a13-b7ff-f33c48eb051d",
+        "parentId" : "5c619d90-6642-4d9f-8930-e7a6f7da0c59",
+        "author" : {
+          "login" : "alekseiAlefirov",
+          "name" : "Aleksei Alefirov",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/10850363?v=4"
+        },
+        "body" : "why? Previously `Option` made sense, since there would not be a Provider always, and now we have fallback.",
+        "createdAt" : "2019-11-29T10:43:52Z",
+        "updatedAt" : "2019-12-06T16:11:03Z",
+        "lastEditedBy" : {
+          "login" : "alekseiAlefirov",
+          "name" : "Aleksei Alefirov",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/10850363?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "48fd771b-7ba7-430a-9d6e-0cf59e786e59",
+        "parentId" : "5c619d90-6642-4d9f-8930-e7a6f7da0c59",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Ok, right. Haven't thought about it!",
+        "createdAt" : "2019-11-29T11:09:06Z",
+        "updatedAt" : "2019-12-06T16:11:03Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1778aec8-36f0-4000-822c-4eb2ee3d5200",
+        "parentId" : null,
+        "author" : {
+          "login" : "mucharafal",
+          "name" : "Rafał Mucha",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+        },
+        "body" : "test",
+        "createdAt" : "2021-02-10T07:51:31.951Z",
+        "updatedAt" : "2021-02-10T07:51:31.951Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c2b310420ce80e33b8c8e4977b94f75be9e4f986",
+    "line" : 15,
+    "diffHunk" : "@@ -1,1 +181,185 @@  var httpServer: Option[MetalsHttpServer] = None\n  var treeView: TreeViewProvider = NoopTreeViewProvider\n  var worksheetProvider: WorksheetProvider = _\n\n  def connectToLanguageClient(client: MetalsLanguageClient): Unit = {"
   }
 ]
