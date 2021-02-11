@@ -1,0 +1,89 @@
+[
+  {
+    "id" : "2b57b26e-67f9-4b68-9cf0-58a409e3ce67",
+    "prId" : 2490,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2490",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "06fd5ed4-3602-40b6-976f-2a892cfd8986",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "Not a big deal, but these don't throw right? So can't this just be:\r\n```suggestion\r\n      case p: JsonPrimitive if p.isString => Some(p.getAsString())\r\n```",
+        "createdAt" : "2021-02-09T18:24:52Z",
+        "updatedAt" : "2021-02-10T18:07:56Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "74de50a9-a650-4844-b260-1c41f13cd95b",
+        "parentId" : "06fd5ed4-3602-40b6-976f-2a892cfd8986",
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/691940?u=cc41b494c40cff0015df21d897639d7d176bb9c6&v=4"
+        },
+        "body" : "The Option constructor doesn't catch exceptions anyway, it only turns null into None, so I too tend to use it when dealing with Java API. You never know where a null may hide 👻",
+        "createdAt" : "2021-02-09T19:45:19Z",
+        "updatedAt" : "2021-02-10T18:07:56Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/691940?u=cc41b494c40cff0015df21d897639d7d176bb9c6&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "80082aad-d3af-42f3-b04b-a5288ac1f843",
+        "parentId" : "06fd5ed4-3602-40b6-976f-2a892cfd8986",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "Spooky. 😨 ",
+        "createdAt" : "2021-02-09T19:46:15Z",
+        "updatedAt" : "2021-02-10T18:07:56Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c76ad7ad-496c-4c1a-b790-86665ac94f27",
+        "parentId" : "06fd5ed4-3602-40b6-976f-2a892cfd8986",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Haha, yes. I am always afraid of that 😂",
+        "createdAt" : "2021-02-09T20:23:28Z",
+        "updatedAt" : "2021-02-10T18:07:56Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "35b8cef77f49a5dbfaea65336ba01706bc959133",
+    "line" : 17,
+    "diffHunk" : "@@ -1,1 +22,26 @@  def getAsString(obj: AnyRef): Option[String] = {\n    obj match {\n      case p: JsonPrimitive if p.isString => Option(p.getAsString())\n      case _ => None\n    }"
+  }
+]

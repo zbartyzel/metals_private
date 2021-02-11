@@ -1,0 +1,51 @@
+[
+  {
+    "id" : "f4f2956d-fde4-4abf-87ef-cdbc3ac04f22",
+    "prId" : 2490,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2490",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ce8e20bc-6b2a-4ca3-bdba-35d4f2cff4e1",
+        "parentId" : null,
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4"
+        },
+        "body" : "Is it leftover from testing ?)",
+        "createdAt" : "2021-02-09T19:46:36Z",
+        "updatedAt" : "2021-02-10T18:07:56Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ebf2dc95-e702-4feb-98b6-e513def32f2d",
+        "parentId" : "ce8e20bc-6b2a-4ca3-bdba-35d4f2cff4e1",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Actually no, it's needed to pass it as AnyRef. It's automatically converted to `java.lang.Integer`, but the compiler requires the annotation.",
+        "createdAt" : "2021-02-10T14:57:31Z",
+        "updatedAt" : "2021-02-10T18:07:56Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "35b8cef77f49a5dbfaea65336ba01706bc959133",
+    "line" : 42,
+    "diffHunk" : "@@ -1,1 +40,44 @@            params.getTextDocument().getUri(),\n            range.getLine(): java.lang.Integer,\n            range.getCharacter(): java.lang.Integer\n          )\n        )"
+  }
+]
