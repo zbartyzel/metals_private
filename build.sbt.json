@@ -1,54 +1,5 @@
 [
   {
-    "id" : "f6496245-2904-464a-ad37-d6bb995a4a3b",
-    "prId" : 2058,
-    "prUrl" : null,
-    "prSource" : null,
-    "comments" : [
-      {
-        "id" : "1f1215cc-f0f8-4bc3-aa83-787b13e1772b",
-        "parentId" : null,
-        "author" : {
-          "login" : "tgodzik",
-          "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
-        },
-        "body" : "It seems that we have a large regression in 0.27 and no completions coming from scala library are not displayed.\r\nThis way most large tests will be run on 0.26, which works and I will focus on fixing it upstream before the release.\r\n",
-        "createdAt" : "2020-09-09T15:25:28Z",
-        "updatedAt" : "2020-09-09T16:12:31Z",
-        "lastEditedBy" : {
-          "login" : "tgodzik",
-          "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
-        },
-        "tags" : [
-        ]
-      },
-      {
-        "id" : "8756e7a3-68fe-411e-8e4b-5d66bdc60cb5",
-        "parentId" : "1f1215cc-f0f8-4bc3-aa83-787b13e1772b",
-        "author" : {
-          "login" : "tgodzik",
-          "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
-        },
-        "body" : "Link to the regression https://github.com/lampepfl/dotty/issues/9760",
-        "createdAt" : "2020-09-09T16:49:54Z",
-        "updatedAt" : "2020-09-09T16:49:54Z",
-        "lastEditedBy" : {
-          "login" : "tgodzik",
-          "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
-        },
-        "tags" : [
-        ]
-      }
-    ],
-    "commit" : "e11a69983e1a8daa20e5799f5ecff8caae86da92",
-    "line" : 23,
-    "diffHunk" : "@@ -1,1 +203,207 @@\n  // Scala 3\n  def nonDeprecatedScala3Versions = Seq(scala3, scala3Candidate)\n  def deprecatedScala3Versions = Seq(\"0.25.0\", \"0.26.0-RC1\")\n  def scala3Versions = nonDeprecatedScala3Versions ++ deprecatedScala3Versions"
-  },
-  {
     "id" : "881621a4-d86f-43f5-bfdb-4a7ce3d8e075",
     "prId" : 1985,
     "prUrl" : null,
@@ -2210,5 +2161,69 @@
     "commit" : "bad2ebdafddec4a185f9f657fbafabdb58cac798",
     "line" : 23,
     "diffHunk" : "@@ -1,1 +215,219 @@\n  // Scala 3\n  def nonDeprecatedScala3Versions = Seq(scala3, \"3.0.0-M1\", \"0.27.0-RC1\")\n  def deprecatedScala3Versions = Seq(\"0.26.0\")\n  def scala3Versions = nonDeprecatedScala3Versions ++ deprecatedScala3Versions"
+  },
+  {
+    "id" : "f6496245-2904-464a-ad37-d6bb995a4a3b",
+    "prId" : 2058,
+    "prUrl" : null,
+    "prSource" : null,
+    "comments" : [
+      {
+        "id" : "1f1215cc-f0f8-4bc3-aa83-787b13e1772b",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "It seems that we have a large regression in 0.27 and no completions coming from scala library are not displayed.\r\nThis way most large tests will be run on 0.26, which works and I will focus on fixing it upstream before the release.\r\n",
+        "createdAt" : "2020-09-09T15:25:28Z",
+        "updatedAt" : "2020-09-09T16:12:31Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8756e7a3-68fe-411e-8e4b-5d66bdc60cb5",
+        "parentId" : "1f1215cc-f0f8-4bc3-aa83-787b13e1772b",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Link to the regression https://github.com/lampepfl/dotty/issues/9760",
+        "createdAt" : "2020-09-09T16:49:54Z",
+        "updatedAt" : "2020-09-09T16:49:54Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "177aa8ad-87c0-4000-8658-37fa7b057b00",
+        "parentId" : null,
+        "author" : {
+          "login" : "mwojtow",
+          "name" : "Marcin Wójtowicz",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
+        },
+        "body" : "test",
+        "createdAt" : "2021-02-16T11:12:42.108Z",
+        "updatedAt" : "2021-02-16T11:12:42.108Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e11a69983e1a8daa20e5799f5ecff8caae86da92",
+    "line" : 23,
+    "diffHunk" : "@@ -1,1 +203,207 @@\n  // Scala 3\n  def nonDeprecatedScala3Versions = Seq(scala3, scala3Candidate)\n  def deprecatedScala3Versions = Seq(\"0.25.0\", \"0.26.0-RC1\")\n  def scala3Versions = nonDeprecatedScala3Versions ++ deprecatedScala3Versions"
   }
 ]
