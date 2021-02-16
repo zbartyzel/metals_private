@@ -2062,51 +2062,6 @@
     "diffHunk" : "@@ -1,1 +13,17 @@  v.exists(_._1 == 3) || v.exists(_._1 == 0)\ndef isScala30(v: Option[(Long, Long)]): Boolean = v.exists(_._1 == 3)\ndef isScala3Prerelease(v: Option[(Long, Long)]): Boolean = v.exists(_._1 == 0)\n\ndef crossSetting[A]("
   },
   {
-    "id" : "acce1ef2-6026-4710-a519-5652f3044df7",
-    "prId" : 949,
-    "prUrl" : null,
-    "prSource" : null,
-    "comments" : [
-      {
-        "id" : "52d27a57-934c-4f39-b6e5-50a591f00e98",
-        "parentId" : null,
-        "author" : {
-          "login" : "olafurpg",
-          "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
-        },
-        "body" : "I was just gonna open a PR to do this ❤️ ",
-        "createdAt" : "2019-09-27T16:45:12Z",
-        "updatedAt" : "2019-09-27T16:45:12Z",
-        "lastEditedBy" : {
-          "login" : "olafurpg",
-          "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
-        },
-        "tags" : [
-        ]
-      },
-      {
-        "id" : "177a9ffd-8530-4000-8147-c30dbc999200",
-        "parentId" : null,
-        "author" : {
-          "login" : "mucharafal",
-          "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
-        },
-        "body" : "Test comment",
-        "createdAt" : "2021-02-16T08:40:52.563Z",
-        "updatedAt" : "2021-02-16T08:40:52.563Z",
-        "lastEditedBy" : null,
-        "tags" : [
-        ]
-      }
-    ],
-    "commit" : "db5259d9e5f0856077bafb6ca95e8bc6ba5cfdb3",
-    "line" : 2,
-    "diffHunk" : "@@ -1,1 +-1,3 @@def localSnapshotVersion = \"0.7.7-SNAPSHOT\"\ndef isCI = System.getenv(\"CI\") != null\n"
-  },
-  {
     "id" : "9998a9c0-0ee1-4655-a004-820d95fd9f6f",
     "prId" : 2374,
     "prUrl" : "https://github.com/scalameta/metals/pull/2374",
@@ -2150,5 +2105,65 @@
     "commit" : "e3bdee6d5b72cf6cfee580941ef1b1c2987b172b",
     "line" : 8,
     "diffHunk" : "@@ -1,1 +10,14 @@def isScala213(v: Option[(Long, Long)]): Boolean = v.contains((2, 13))\ndef isScala2(v: Option[(Long, Long)]): Boolean = v.exists(_._1 == 2)\ndef isScala3(v: Option[(Long, Long)]): Boolean = v.exists(_._1 == 3)\n\ndef crossSetting[A]("
+  },
+  {
+    "id" : "acce1ef2-6026-4710-a519-5652f3044df7",
+    "prId" : 949,
+    "prUrl" : null,
+    "prSource" : null,
+    "comments" : [
+      {
+        "id" : "52d27a57-934c-4f39-b6e5-50a591f00e98",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "I was just gonna open a PR to do this ❤️ ",
+        "createdAt" : "2019-09-27T16:45:12Z",
+        "updatedAt" : "2019-09-27T16:45:12Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "177a9ffd-8530-4000-8147-c30dbc999200",
+        "parentId" : null,
+        "author" : {
+          "login" : "mucharafal",
+          "name" : "Rafał Mucha",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+        },
+        "body" : "Test comment",
+        "createdAt" : "2021-02-16T08:40:52.563Z",
+        "updatedAt" : "2021-02-16T08:40:52.563Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "177aa154-6060-4000-8684-f0b744cc7400",
+        "parentId" : null,
+        "author" : {
+          "login" : "mwojtow",
+          "name" : "Marcin Wójtowicz",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
+        },
+        "body" : "test",
+        "createdAt" : "2021-02-16T09:04:16.902Z",
+        "updatedAt" : "2021-02-16T09:04:16.902Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "db5259d9e5f0856077bafb6ca95e8bc6ba5cfdb3",
+    "line" : 2,
+    "diffHunk" : "@@ -1,1 +-1,3 @@def localSnapshotVersion = \"0.7.7-SNAPSHOT\"\ndef isCI = System.getenv(\"CI\") != null\n"
   }
 ]
