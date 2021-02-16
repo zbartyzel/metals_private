@@ -264,36 +264,6 @@
     "diffHunk" : "@@ -1,1 +1462,1466 @@    }\n\n    buildTools.loadSupported match {\n      case Nil => {\n        if (!buildTools.isAutoConnectable) {"
   },
   {
-    "id" : "b3c52109-aecb-4e92-9977-7a4834d58dbf",
-    "prId" : 1717,
-    "prUrl" : null,
-    "prSource" : null,
-    "comments" : [
-      {
-        "id" : "caaa61bc-bb3c-47ac-b958-629e74fa310b",
-        "parentId" : null,
-        "author" : {
-          "login" : "tgodzik",
-          "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
-        },
-        "body" : "So probably the best that we can do currently is add an option to MetalsServerConfig like:\r\n```scala\r\n  allowMultilineStringFormatting = MetalsServerConfig.binaryOption(\r\n      \"metals.allow-multiline-string-formatting\",\r\n      default = true\r\n    ),\r\n```\r\nAnd then:\r\n```scala      \r\n\r\ncapabilities.setDocumentRangeFormattingProvider(initialConfig.allowMultilineStringFormatting)\r\n```",
-        "createdAt" : "2020-05-08T17:32:59Z",
-        "updatedAt" : "2020-05-12T14:12:17Z",
-        "lastEditedBy" : {
-          "login" : "tgodzik",
-          "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
-        },
-        "tags" : [
-        ]
-      }
-    ],
-    "commit" : "b2e25e3cd0a9f38ceefc59fbff6f94d7e31be601",
-    "line" : 5,
-    "diffHunk" : "@@ -1,1 +542,546 @@        new DocumentOnTypeFormattingOptions(\"\\n\")\n      )\n      capabilities.setDocumentRangeFormattingProvider(\n        initialConfig.allowMultilineStringFormatting\n      )"
-  },
-  {
     "id" : "32785c29-4ef5-4e4b-907b-386f8cd6725c",
     "prId" : 1538,
     "prUrl" : null,
@@ -2270,5 +2240,50 @@
     "commit" : "c2b310420ce80e33b8c8e4977b94f75be9e4f986",
     "line" : 15,
     "diffHunk" : "@@ -1,1 +181,185 @@  var httpServer: Option[MetalsHttpServer] = None\n  var treeView: TreeViewProvider = NoopTreeViewProvider\n  var worksheetProvider: WorksheetProvider = _\n\n  def connectToLanguageClient(client: MetalsLanguageClient): Unit = {"
+  },
+  {
+    "id" : "b3c52109-aecb-4e92-9977-7a4834d58dbf",
+    "prId" : 1717,
+    "prUrl" : null,
+    "prSource" : null,
+    "comments" : [
+      {
+        "id" : "caaa61bc-bb3c-47ac-b958-629e74fa310b",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "So probably the best that we can do currently is add an option to MetalsServerConfig like:\r\n```scala\r\n  allowMultilineStringFormatting = MetalsServerConfig.binaryOption(\r\n      \"metals.allow-multiline-string-formatting\",\r\n      default = true\r\n    ),\r\n```\r\nAnd then:\r\n```scala      \r\n\r\ncapabilities.setDocumentRangeFormattingProvider(initialConfig.allowMultilineStringFormatting)\r\n```",
+        "createdAt" : "2020-05-08T17:32:59Z",
+        "updatedAt" : "2020-05-12T14:12:17Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "177a9e5e-ed20-4000-800a-68dbe0470e00",
+        "parentId" : null,
+        "author" : {
+          "login" : "mucharafal",
+          "name" : "Rafał Mucha",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+        },
+        "body" : "new comment",
+        "createdAt" : "2021-02-16T08:12:34.386Z",
+        "updatedAt" : "2021-02-16T08:12:34.386Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b2e25e3cd0a9f38ceefc59fbff6f94d7e31be601",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +542,546 @@        new DocumentOnTypeFormattingOptions(\"\\n\")\n      )\n      capabilities.setDocumentRangeFormattingProvider(\n        initialConfig.allowMultilineStringFormatting\n      )"
   }
 ]
