@@ -1568,55 +1568,6 @@
     "diffHunk" : "@@ -1,1 +294,298 @@  ),\n  // @note needed to deal with issues in https://github.com/scalameta/metals/pull/2157\n  sources in (Compile, doc) := Seq.empty,\n  libraryDependencies ++= crossSetting(\n    scalaVersion.value,"
   },
   {
-    "id" : "4ad9f17b-6348-4177-97d9-53393be5e1ce",
-    "prId" : 2260,
-    "prUrl" : "https://github.com/scalameta/metals/pull/2260",
-    "prSource" : "GitHub",
-    "comments" : [
-      {
-        "id" : "417222a5-bbb3-4c7f-9afa-f79ce79d866f",
-        "parentId" : null,
-        "author" : {
-          "login" : "ckipp01",
-          "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
-        },
-        "body" : "Just because I don't fully remember where we ended up on this. How long will we keep 0.27.0-RC1 around as non-deprecated?",
-        "createdAt" : "2020-11-25T17:05:30Z",
-        "updatedAt" : "2020-11-25T17:26:36Z",
-        "lastEditedBy" : {
-          "login" : "ckipp01",
-          "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
-        },
-        "tags" : [
-        ]
-      },
-      {
-        "id" : "0a8a9c0c-25d4-4264-846f-7168a8d7a0a7",
-        "parentId" : "417222a5-bbb3-4c7f-9afa-f79ce79d866f",
-        "author" : {
-          "login" : "tgodzik",
-          "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
-        },
-        "body" : "Probably under the end of the course at EPFL.",
-        "createdAt" : "2020-11-25T17:09:05Z",
-        "updatedAt" : "2020-11-25T17:26:36Z",
-        "lastEditedBy" : {
-          "login" : "tgodzik",
-          "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
-        },
-        "tags" : [
-        ]
-      }
-    ],
-    "commit" : "bad2ebdafddec4a185f9f657fbafabdb58cac798",
-    "line" : 23,
-    "diffHunk" : "@@ -1,1 +215,219 @@\n  // Scala 3\n  def nonDeprecatedScala3Versions = Seq(scala3, \"3.0.0-M1\", \"0.27.0-RC1\")\n  def deprecatedScala3Versions = Seq(\"0.26.0\")\n  def scala3Versions = nonDeprecatedScala3Versions ++ deprecatedScala3Versions"
-  },
-  {
     "id" : "75c6584c-7881-4c79-a74a-0a2981872d64",
     "prId" : 2383,
     "prUrl" : "https://github.com/scalameta/metals/pull/2383",
@@ -2180,5 +2131,69 @@
     "commit" : "db5259d9e5f0856077bafb6ca95e8bc6ba5cfdb3",
     "line" : 2,
     "diffHunk" : "@@ -1,1 +-1,3 @@def localSnapshotVersion = \"0.7.7-SNAPSHOT\"\ndef isCI = System.getenv(\"CI\") != null\n"
+  },
+  {
+    "id" : "4ad9f17b-6348-4177-97d9-53393be5e1ce",
+    "prId" : 2260,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2260",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "417222a5-bbb3-4c7f-9afa-f79ce79d866f",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "Just because I don't fully remember where we ended up on this. How long will we keep 0.27.0-RC1 around as non-deprecated?",
+        "createdAt" : "2020-11-25T17:05:30Z",
+        "updatedAt" : "2020-11-25T17:26:36Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0a8a9c0c-25d4-4264-846f-7168a8d7a0a7",
+        "parentId" : "417222a5-bbb3-4c7f-9afa-f79ce79d866f",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Probably under the end of the course at EPFL.",
+        "createdAt" : "2020-11-25T17:09:05Z",
+        "updatedAt" : "2020-11-25T17:26:36Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "177aa709-97c0-4000-88d4-3a9acaa2fb00",
+        "parentId" : null,
+        "author" : {
+          "login" : "mwojtow",
+          "name" : "Marcin Wójtowicz",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
+        },
+        "body" : "test",
+        "createdAt" : "2021-02-16T10:44:02.044Z",
+        "updatedAt" : "2021-02-16T10:44:02.044Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "bad2ebdafddec4a185f9f657fbafabdb58cac798",
+    "line" : 23,
+    "diffHunk" : "@@ -1,1 +215,219 @@\n  // Scala 3\n  def nonDeprecatedScala3Versions = Seq(scala3, \"3.0.0-M1\", \"0.27.0-RC1\")\n  def deprecatedScala3Versions = Seq(\"0.26.0\")\n  def scala3Versions = nonDeprecatedScala3Versions ++ deprecatedScala3Versions"
   }
 ]
