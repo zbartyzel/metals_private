@@ -991,74 +991,6 @@
     "diffHunk" : "@@ -1,1 +152,156 @@      // ==================\n      \"org.scalameta\" %% \"scalafmt-dynamic\" % V.scalafmt,\n      // for fetching ch.epfl.scala:bloop-frontend and other library dependencies\n      \"com.geirsson\" %% \"coursier-small\" % \"1.3.1\",\n      // undeclared transitive dependency of coursier-small"
   },
   {
-    "id" : "51e47f56-18df-4770-bb6f-f500facf0e14",
-    "prId" : 350,
-    "prUrl" : null,
-    "prSource" : null,
-    "comments" : [
-      {
-        "id" : "fe391642-8f25-47d4-826f-f0180b06539f",
-        "parentId" : null,
-        "author" : {
-          "login" : "gabro",
-          "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
-        },
-        "body" : "where is this used?",
-        "createdAt" : "2018-11-29T09:55:01Z",
-        "updatedAt" : "2018-11-29T10:20:22Z",
-        "lastEditedBy" : {
-          "login" : "gabro",
-          "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
-        },
-        "tags" : [
-        ]
-      },
-      {
-        "id" : "7d176843-f2b7-489a-8ee5-71aef25a4176",
-        "parentId" : "fe391642-8f25-47d4-826f-f0180b06539f",
-        "author" : {
-          "login" : "gabro",
-          "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
-        },
-        "body" : "answering myself: in #351 ",
-        "createdAt" : "2018-11-29T09:56:01Z",
-        "updatedAt" : "2018-11-29T10:20:22Z",
-        "lastEditedBy" : {
-          "login" : "gabro",
-          "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
-        },
-        "tags" : [
-        ]
-      },
-      {
-        "id" : "f3939695-406d-4613-92b8-bcc97e338116",
-        "parentId" : "fe391642-8f25-47d4-826f-f0180b06539f",
-        "author" : {
-          "login" : "olafurpg",
-          "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
-        },
-        "body" : "Just a habit, generally useful to have although not used atm",
-        "createdAt" : "2018-11-29T09:58:35Z",
-        "updatedAt" : "2018-11-29T10:20:22Z",
-        "lastEditedBy" : {
-          "login" : "olafurpg",
-          "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
-        },
-        "tags" : [
-        ]
-      }
-    ],
-    "commit" : "fc1506e1a10f093c975842de0eab0cb0515c9b94",
-    "line" : 17,
-    "diffHunk" : "@@ -1,1 +187,191 @@    buildInfoPackage := \"scala.meta.internal.sbtmetals\",\n    buildInfoKeys := Seq[BuildInfoKey](\n      \"metalsVersion\" -> version.value,\n      \"scalametaVersion\" -> V.scalameta\n    )"
-  },
-  {
     "id" : "ad42cf98-6952-41da-bef2-9775ee6b8bb6",
     "prId" : 329,
     "prUrl" : null,
@@ -2225,5 +2157,88 @@
     "commit" : "e11a69983e1a8daa20e5799f5ecff8caae86da92",
     "line" : 23,
     "diffHunk" : "@@ -1,1 +203,207 @@\n  // Scala 3\n  def nonDeprecatedScala3Versions = Seq(scala3, scala3Candidate)\n  def deprecatedScala3Versions = Seq(\"0.25.0\", \"0.26.0-RC1\")\n  def scala3Versions = nonDeprecatedScala3Versions ++ deprecatedScala3Versions"
+  },
+  {
+    "id" : "51e47f56-18df-4770-bb6f-f500facf0e14",
+    "prId" : 350,
+    "prUrl" : null,
+    "prSource" : null,
+    "comments" : [
+      {
+        "id" : "fe391642-8f25-47d4-826f-f0180b06539f",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "where is this used?",
+        "createdAt" : "2018-11-29T09:55:01Z",
+        "updatedAt" : "2018-11-29T10:20:22Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7d176843-f2b7-489a-8ee5-71aef25a4176",
+        "parentId" : "fe391642-8f25-47d4-826f-f0180b06539f",
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "answering myself: in #351 ",
+        "createdAt" : "2018-11-29T09:56:01Z",
+        "updatedAt" : "2018-11-29T10:20:22Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f3939695-406d-4613-92b8-bcc97e338116",
+        "parentId" : "fe391642-8f25-47d4-826f-f0180b06539f",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "Just a habit, generally useful to have although not used atm",
+        "createdAt" : "2018-11-29T09:58:35Z",
+        "updatedAt" : "2018-11-29T10:20:22Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "177af7a5-2260-4000-861b-83e2293ee600",
+        "parentId" : null,
+        "author" : {
+          "login" : "mwojtow",
+          "name" : "Marcin Wójtowicz",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
+        },
+        "body" : "test comment",
+        "createdAt" : "2021-02-17T10:12:45.222Z",
+        "updatedAt" : "2021-02-17T10:12:45.222Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "fc1506e1a10f093c975842de0eab0cb0515c9b94",
+    "line" : 17,
+    "diffHunk" : "@@ -1,1 +187,191 @@    buildInfoPackage := \"scala.meta.internal.sbtmetals\",\n    buildInfoKeys := Seq[BuildInfoKey](\n      \"metalsVersion\" -> version.value,\n      \"scalametaVersion\" -> V.scalameta\n    )"
   }
 ]
