@@ -2065,111 +2065,6 @@
     "diffHunk" : "@@ -1,1 +187,191 @@    buildInfoPackage := \"scala.meta.internal.sbtmetals\",\n    buildInfoKeys := Seq[BuildInfoKey](\n      \"metalsVersion\" -> version.value,\n      \"scalametaVersion\" -> V.scalameta\n    )"
   },
   {
-    "id" : "acce1ef2-6026-4710-a519-5652f3044df7",
-    "prId" : 949,
-    "prUrl" : null,
-    "prSource" : null,
-    "comments" : [
-      {
-        "id" : "52d27a57-934c-4f39-b6e5-50a591f00e98",
-        "parentId" : null,
-        "author" : {
-          "login" : "olafurpg",
-          "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
-        },
-        "body" : "I was just gonna open a PR to do this ❤️ ",
-        "createdAt" : "2019-09-27T16:45:12Z",
-        "updatedAt" : "2019-09-27T16:45:12Z",
-        "lastEditedBy" : {
-          "login" : "olafurpg",
-          "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
-        },
-        "tags" : [
-        ]
-      },
-      {
-        "id" : "177a9ffd-8530-4000-8147-c30dbc999200",
-        "parentId" : null,
-        "author" : {
-          "login" : "mucharafal",
-          "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
-        },
-        "body" : "Test comment",
-        "createdAt" : "2021-02-16T08:40:52.563Z",
-        "updatedAt" : "2021-02-16T08:40:52.563Z",
-        "lastEditedBy" : null,
-        "tags" : [
-        ]
-      },
-      {
-        "id" : "177aa154-6060-4000-8684-f0b744cc7400",
-        "parentId" : null,
-        "author" : {
-          "login" : "mwojtow",
-          "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
-        },
-        "body" : "test",
-        "createdAt" : "2021-02-16T09:04:16.902Z",
-        "updatedAt" : "2021-02-16T09:04:16.902Z",
-        "lastEditedBy" : null,
-        "tags" : [
-        ]
-      },
-      {
-        "id" : "177aa32b-1370-4000-82e5-47a9b5587100",
-        "parentId" : null,
-        "author" : {
-          "login" : "mwojtow",
-          "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
-        },
-        "body" : "test with loader",
-        "createdAt" : "2021-02-16T09:36:24.887Z",
-        "updatedAt" : "2021-02-16T09:36:24.887Z",
-        "lastEditedBy" : null,
-        "tags" : [
-        ]
-      },
-      {
-        "id" : "177b4365-91d0-4000-873d-b993df0ea600",
-        "parentId" : null,
-        "author" : {
-          "login" : "mwojtow",
-          "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
-        },
-        "body" : "test comment 3",
-        "createdAt" : "2021-02-18T08:16:36.637Z",
-        "updatedAt" : "2021-02-18T08:16:36.637Z",
-        "lastEditedBy" : null,
-        "tags" : [
-        ]
-      },
-      {
-        "id" : "177b43f0-d120-4000-8cb5-3ae758c29f00",
-        "parentId" : null,
-        "author" : {
-          "login" : "mwojtow",
-          "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
-        },
-        "body" : "Rafel comment test",
-        "createdAt" : "2021-02-18T08:26:06.994Z",
-        "updatedAt" : "2021-02-18T08:26:06.994Z",
-        "lastEditedBy" : null,
-        "tags" : [
-        ]
-      }
-    ],
-    "commit" : "db5259d9e5f0856077bafb6ca95e8bc6ba5cfdb3",
-    "line" : 2,
-    "diffHunk" : "@@ -1,1 +-1,3 @@def localSnapshotVersion = \"0.7.7-SNAPSHOT\"\ndef isCI = System.getenv(\"CI\") != null\n"
-  },
-  {
     "id" : "3d68805f-cc52-46a9-9cf1-3bf872a6388e",
     "prId" : 313,
     "prUrl" : null,
@@ -2300,5 +2195,125 @@
     "commit" : "4ddead1cefd9da4ca338f88a09d0b2265171ec18",
     "line" : 4,
     "diffHunk" : "@@ -1,1 +6,10 @@    },\n    scalaVersion := V.scala212,\n    crossScalaVersions := List(V.scala212),\n    scalacOptions ++= List(\n      \"-Yrangepos\","
+  },
+  {
+    "id" : "acce1ef2-6026-4710-a519-5652f3044df7",
+    "prId" : 949,
+    "prUrl" : null,
+    "prSource" : null,
+    "comments" : [
+      {
+        "id" : "52d27a57-934c-4f39-b6e5-50a591f00e98",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "I was just gonna open a PR to do this ❤️ ",
+        "createdAt" : "2019-09-27T16:45:12Z",
+        "updatedAt" : "2019-09-27T16:45:12Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "177a9ffd-8530-4000-8147-c30dbc999200",
+        "parentId" : null,
+        "author" : {
+          "login" : "mucharafal",
+          "name" : "Rafał Mucha",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+        },
+        "body" : "Test comment",
+        "createdAt" : "2021-02-16T08:40:52.563Z",
+        "updatedAt" : "2021-02-16T08:40:52.563Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "177aa154-6060-4000-8684-f0b744cc7400",
+        "parentId" : null,
+        "author" : {
+          "login" : "mwojtow",
+          "name" : "Marcin Wójtowicz",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
+        },
+        "body" : "test",
+        "createdAt" : "2021-02-16T09:04:16.902Z",
+        "updatedAt" : "2021-02-16T09:04:16.902Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "177aa32b-1370-4000-82e5-47a9b5587100",
+        "parentId" : null,
+        "author" : {
+          "login" : "mwojtow",
+          "name" : "Marcin Wójtowicz",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
+        },
+        "body" : "test with loader",
+        "createdAt" : "2021-02-16T09:36:24.887Z",
+        "updatedAt" : "2021-02-16T09:36:24.887Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "177b4365-91d0-4000-873d-b993df0ea600",
+        "parentId" : null,
+        "author" : {
+          "login" : "mwojtow",
+          "name" : "Marcin Wójtowicz",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
+        },
+        "body" : "test comment 3",
+        "createdAt" : "2021-02-18T08:16:36.637Z",
+        "updatedAt" : "2021-02-18T08:16:36.637Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "177b43f0-d120-4000-8cb5-3ae758c29f00",
+        "parentId" : null,
+        "author" : {
+          "login" : "mwojtow",
+          "name" : "Marcin Wójtowicz",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
+        },
+        "body" : "Rafel comment test",
+        "createdAt" : "2021-02-18T08:26:06.994Z",
+        "updatedAt" : "2021-02-18T08:26:06.994Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "177b5b14-37f0-4000-8dd3-c30d52b09600",
+        "parentId" : null,
+        "author" : {
+          "login" : "mucharafal",
+          "name" : "Rafał Mucha",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+        },
+        "body" : "another test - linux",
+        "createdAt" : "2021-02-18T15:10:29.247Z",
+        "updatedAt" : "2021-02-18T15:10:29.247Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "db5259d9e5f0856077bafb6ca95e8bc6ba5cfdb3",
+    "line" : 2,
+    "diffHunk" : "@@ -1,1 +-1,3 @@def localSnapshotVersion = \"0.7.7-SNAPSHOT\"\ndef isCI = System.getenv(\"CI\") != null\n"
   }
 ]
