@@ -1647,123 +1647,6 @@
     "diffHunk" : "@@ -1,1 +430,434 @@      // for logging\n      \"com.outr\" %% \"scribe\" % \"3.3.1\",\n      \"com.outr\" %% \"scribe-file\" % \"3.3.1\",\n      \"com.outr\" %% \"scribe-slf4j\" % \"3.3.1\", // needed for flyway database migrations\n      // for debugging purposes, not strictly needed but nice for productivity"
   },
   {
-    "id" : "3d68805f-cc52-46a9-9cf1-3bf872a6388e",
-    "prId" : 313,
-    "prUrl" : null,
-    "prSource" : null,
-    "comments" : [
-      {
-        "id" : "3a2424f2-8007-4d6e-be6b-d01941eac28d",
-        "parentId" : null,
-        "author" : {
-          "login" : "gabro",
-          "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
-        },
-        "body" : "Do we need this option at all if we're not cross-building?",
-        "createdAt" : "2018-06-23T09:53:36Z",
-        "updatedAt" : "2018-06-27T09:31:45Z",
-        "lastEditedBy" : {
-          "login" : "gabro",
-          "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
-        },
-        "tags" : [
-        ]
-      },
-      {
-        "id" : "3644aa7c-97c5-4559-9f22-3bafa7949ec5",
-        "parentId" : "3a2424f2-8007-4d6e-be6b-d01941eac28d",
-        "author" : {
-          "login" : "olafurpg",
-          "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
-        },
-        "body" : "I added it to ensure `+compile` does the right thing, just in case",
-        "createdAt" : "2018-06-23T10:21:08Z",
-        "updatedAt" : "2018-06-27T09:31:45Z",
-        "lastEditedBy" : {
-          "login" : "olafurpg",
-          "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
-        },
-        "tags" : [
-        ]
-      },
-      {
-        "id" : "0dd6a348-f564-4be9-abd0-736baadbf666",
-        "parentId" : "3a2424f2-8007-4d6e-be6b-d01941eac28d",
-        "author" : {
-          "login" : "gabro",
-          "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
-        },
-        "body" : "Out of curiosity, what does +compile do if there is crossScalaVersions is not set? I thought it would already do the right thing.",
-        "createdAt" : "2018-06-23T10:23:13Z",
-        "updatedAt" : "2018-06-27T09:31:45Z",
-        "lastEditedBy" : {
-          "login" : "gabro",
-          "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
-        },
-        "tags" : [
-        ]
-      },
-      {
-        "id" : "5858487d-103b-429e-be58-d6cdb58dd5b0",
-        "parentId" : "3a2424f2-8007-4d6e-be6b-d01941eac28d",
-        "author" : {
-          "login" : "olafurpg",
-          "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
-        },
-        "body" : "I don't know what `+compile` does when crossScalaVersions is unset",
-        "createdAt" : "2018-06-27T09:30:57Z",
-        "updatedAt" : "2018-06-27T09:31:45Z",
-        "lastEditedBy" : {
-          "login" : "olafurpg",
-          "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
-        },
-        "tags" : [
-        ]
-      },
-      {
-        "id" : "1778afc1-1bb0-4000-8834-c3ae81a75f00",
-        "parentId" : null,
-        "author" : {
-          "login" : "mucharafal",
-          "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
-        },
-        "body" : "Test",
-        "createdAt" : "2021-02-10T08:08:31.419Z",
-        "updatedAt" : "2021-02-10T08:08:31.419Z",
-        "lastEditedBy" : null,
-        "tags" : [
-        ]
-      },
-      {
-        "id" : "1778b0df-42b0-4000-8352-32b3bd41f700",
-        "parentId" : null,
-        "author" : {
-          "login" : "mucharafal",
-          "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
-        },
-        "body" : "YAT",
-        "createdAt" : "2021-02-10T08:28:03.499Z",
-        "updatedAt" : "2021-02-10T08:28:03.499Z",
-        "lastEditedBy" : null,
-        "tags" : [
-        ]
-      }
-    ],
-    "commit" : "4ddead1cefd9da4ca338f88a09d0b2265171ec18",
-    "line" : 4,
-    "diffHunk" : "@@ -1,1 +6,10 @@    },\n    scalaVersion := V.scala212,\n    crossScalaVersions := List(V.scala212),\n    scalacOptions ++= List(\n      \"-Yrangepos\","
-  },
-  {
     "id" : "cda2acee-3e75-4a9a-adf1-77ec94992255",
     "prId" : 2448,
     "prUrl" : "https://github.com/scalameta/metals/pull/2448",
@@ -2285,5 +2168,137 @@
     "commit" : "db5259d9e5f0856077bafb6ca95e8bc6ba5cfdb3",
     "line" : 2,
     "diffHunk" : "@@ -1,1 +-1,3 @@def localSnapshotVersion = \"0.7.7-SNAPSHOT\"\ndef isCI = System.getenv(\"CI\") != null\n"
+  },
+  {
+    "id" : "3d68805f-cc52-46a9-9cf1-3bf872a6388e",
+    "prId" : 313,
+    "prUrl" : null,
+    "prSource" : null,
+    "comments" : [
+      {
+        "id" : "3a2424f2-8007-4d6e-be6b-d01941eac28d",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "Do we need this option at all if we're not cross-building?",
+        "createdAt" : "2018-06-23T09:53:36Z",
+        "updatedAt" : "2018-06-27T09:31:45Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3644aa7c-97c5-4559-9f22-3bafa7949ec5",
+        "parentId" : "3a2424f2-8007-4d6e-be6b-d01941eac28d",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "I added it to ensure `+compile` does the right thing, just in case",
+        "createdAt" : "2018-06-23T10:21:08Z",
+        "updatedAt" : "2018-06-27T09:31:45Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0dd6a348-f564-4be9-abd0-736baadbf666",
+        "parentId" : "3a2424f2-8007-4d6e-be6b-d01941eac28d",
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "Out of curiosity, what does +compile do if there is crossScalaVersions is not set? I thought it would already do the right thing.",
+        "createdAt" : "2018-06-23T10:23:13Z",
+        "updatedAt" : "2018-06-27T09:31:45Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5858487d-103b-429e-be58-d6cdb58dd5b0",
+        "parentId" : "3a2424f2-8007-4d6e-be6b-d01941eac28d",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "body" : "I don't know what `+compile` does when crossScalaVersions is unset",
+        "createdAt" : "2018-06-27T09:30:57Z",
+        "updatedAt" : "2018-06-27T09:31:45Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1778afc1-1bb0-4000-8834-c3ae81a75f00",
+        "parentId" : null,
+        "author" : {
+          "login" : "mucharafal",
+          "name" : "Rafał Mucha",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+        },
+        "body" : "Test",
+        "createdAt" : "2021-02-10T08:08:31.419Z",
+        "updatedAt" : "2021-02-10T08:08:31.419Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1778b0df-42b0-4000-8352-32b3bd41f700",
+        "parentId" : null,
+        "author" : {
+          "login" : "mucharafal",
+          "name" : "Rafał Mucha",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+        },
+        "body" : "YAT",
+        "createdAt" : "2021-02-10T08:28:03.499Z",
+        "updatedAt" : "2021-02-10T08:28:03.499Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "177b54af-fc50-4000-847d-62bcac05da00",
+        "parentId" : null,
+        "author" : {
+          "login" : "mucharafal",
+          "name" : "Rafał Mucha",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+        },
+        "body" : "yeti",
+        "createdAt" : "2021-02-18T13:18:47.237Z",
+        "updatedAt" : "2021-02-18T13:18:47.237Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "4ddead1cefd9da4ca338f88a09d0b2265171ec18",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +6,10 @@    },\n    scalaVersion := V.scala212,\n    crossScalaVersions := List(V.scala212),\n    scalacOptions ++= List(\n      \"-Yrangepos\","
   }
 ]
