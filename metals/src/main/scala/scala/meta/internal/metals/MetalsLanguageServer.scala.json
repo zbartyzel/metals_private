@@ -2300,5 +2300,31 @@
     "commit" : "b2e25e3cd0a9f38ceefc59fbff6f94d7e31be601",
     "line" : 5,
     "diffHunk" : "@@ -1,1 +542,546 @@        new DocumentOnTypeFormattingOptions(\"\\n\")\n      )\n      capabilities.setDocumentRangeFormattingProvider(\n        initialConfig.allowMultilineStringFormatting\n      )"
+  },
+  {
+    "id" : "177b4918-7ef0-4000-8d79-71541eea2300",
+    "prId" : null,
+    "prUrl" : null,
+    "prSource" : null,
+    "comments" : [
+      {
+        "id" : "177b4918-7ef0-4000-89b3-f251ea197f00",
+        "parentId" : null,
+        "author" : {
+          "login" : "mucharafal",
+          "name" : "Rafał Mucha",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+        },
+        "body" : "New discussion added",
+        "createdAt" : "2021-02-18T09:56:12.399Z",
+        "updatedAt" : "2021-02-18T09:56:12.399Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : null,
+    "line" : null,
+    "diffHunk" : "@@ 0,0 +0,0 @@ buffers: Buffers = Buffers(),\n    redirectSystemOut: Boolean = true,\n    charset: Charset = StandardCharsets.UTF_8,\n    time: Time = Time.system,\n    initialConfig: MetalsServerConfig = MetalsServerConfig.default,\n    progressTicks: ProgressTicks = ProgressTicks.braille,\n    bspGlobalDirectories: List[AbsolutePath] =\n      BspServers.globalInstallDirectories,\n    sh: ScheduledExecutorService = Executors.newSingleThreadScheduledExecutor(),\n    isReliableFileWatcher: Boolean = true\n) extends Cancelable {\n  ThreadPools.discardRejectedRunnables(\"MetalsLanguageServer.sh\", sh)\n  ThreadPools.discardRejectedRunnables(\"MetalsLanguageServer.ec\", ec)\n  private val cancelables = new MutableCancelable()\n  val isCancelled = new AtomicBoolean(false)\n  override def cancel(): Unit = {\n    if (isCancelled.compareAndSet(false, true))"
   }
 ]
