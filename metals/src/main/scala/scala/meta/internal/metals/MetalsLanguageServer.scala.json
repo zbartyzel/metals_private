@@ -2326,5 +2326,31 @@
     "commit" : null,
     "line" : null,
     "diffHunk" : "@@ 0,0 +0,0 @@ buffers: Buffers = Buffers(),\n    redirectSystemOut: Boolean = true,\n    charset: Charset = StandardCharsets.UTF_8,\n    time: Time = Time.system,\n    initialConfig: MetalsServerConfig = MetalsServerConfig.default,\n    progressTicks: ProgressTicks = ProgressTicks.braille,\n    bspGlobalDirectories: List[AbsolutePath] =\n      BspServers.globalInstallDirectories,\n    sh: ScheduledExecutorService = Executors.newSingleThreadScheduledExecutor(),\n    isReliableFileWatcher: Boolean = true\n) extends Cancelable {\n  ThreadPools.discardRejectedRunnables(\"MetalsLanguageServer.sh\", sh)\n  ThreadPools.discardRejectedRunnables(\"MetalsLanguageServer.ec\", ec)\n  private val cancelables = new MutableCancelable()\n  val isCancelled = new AtomicBoolean(false)\n  override def cancel(): Unit = {\n    if (isCancelled.compareAndSet(false, true))"
+  },
+  {
+    "id" : "177b49e9-69c0-4000-836a-9f2482e70f00",
+    "prId" : null,
+    "prUrl" : null,
+    "prSource" : null,
+    "comments" : [
+      {
+        "id" : "177b49e9-69c0-4000-8aa1-248582531400",
+        "parentId" : null,
+        "author" : {
+          "login" : "mucharafal",
+          "name" : "Rafał Mucha",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+        },
+        "body" : "Another new discussion",
+        "createdAt" : "2021-02-18T10:10:28.124Z",
+        "updatedAt" : "2021-02-18T10:10:28.124Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "v0.9.0-177-ge87c231",
+    "line" : null,
+    "diffHunk" : "@@ 0,0 +0,0 @@s: ProgressTicks = ProgressTicks.braille,\n    bspGlobalDirectories: List[AbsolutePath] =\n      BspServers.globalInstallDirectories,\n    sh: ScheduledExecutorService = Executors.newSingleThreadScheduledExecutor(),\n    isReliableFileWatcher: Boolean = true\n) extends Cancelable {\n  ThreadPools.discardRejectedRunnables(\"MetalsLanguageServer.sh\", sh)\n  ThreadPools.discardRejectedRunnables(\"MetalsLanguageServer.ec\", ec)\n  private val cancelables = new MutableCancelable()\n  val isCancelled = new AtomicBoolean(false)\n  override def cancel(): Unit = {\n    if (isCancelled.compareAndSet(false, true)) {\n      val buildShutdown = buil"
   }
 ]
