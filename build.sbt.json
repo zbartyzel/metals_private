@@ -3050,5 +3050,31 @@
     "commit" : "dec8329936203da502120bdf8f0bc58b59cc795f",
     "line" : 5,
     "diffHunk" : "@@ -1,1 +695,699 @@    moduleName := \"metals-docs\",\n    // note bucket created by @tgodzik\n    munitBucketName := Some(\"scala-metals-test-reports\"),\n    mdoc := run.in(Compile).evaluated,\n    munitRepository := Some(\"scalameta/metals\"),"
+  },
+  {
+    "id" : "1780170c-e650-4000-80ec-f8f3278eea00",
+    "prId" : null,
+    "prUrl" : null,
+    "prSource" : null,
+    "comments" : [
+      {
+        "id" : "1780170c-e650-4000-8af3-bd8879b58e00",
+        "parentId" : null,
+        "author" : {
+          "login" : "mucharafal",
+          "name" : "Rafał Mucha",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+        },
+        "body" : "pppp",
+        "createdAt" : "2021-03-05T08:11:13.38Z",
+        "updatedAt" : "2021-03-05T08:11:13.381Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "v0.9.0-177-ge87c231",
+    "line" : null,
+    "diffHunk" : "@@ -1,1 +9,25 @@(v: Option[(Long, Long)]): Boolean = v.contains((0, 24))\ndef isScala2(v: Option[(Long, Long)]): Boolean = v.exists(_._1 == 2)\ndef isScala3(v: Option[(Long, Long)]): Boolean =\n  v.exists(_._1 == 0) || v.exists(_._1 == 3)\n\ndef crossSetting[A](\n    scalaVersion: String,\n    if211: List[A] = Nil,\n    if2: List[A] = Nil,\n    ifLaterThan211: List[A] = Nil,\n    if3: List[A] = Nil\n): List[A] =\n  CrossVersion.partialVersion(scalaVersion) match {\n    case partialVersion if isScala211(partialVersion) => if211 ::: if2\n    case partialVersion if isScala212(partialVersion) => ifLaterThan211 ::: if2\n    case partialVersion if isScala213(partialVersion) => ifLaterThan211 ::: if2\n    case partialVersion if isSca"
   }
 ]
