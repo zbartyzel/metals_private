@@ -128,55 +128,6 @@
     "diffHunk" : "@@ -1,1 +343,347 @@    managedSourceDirectories.in(Compile) += baseDirectory\n      .in(ThisBuild)\n      .value / \"mtags\" / \"target\" / (\"scala-\" + scalaVersion.value) / \"src_managed\" / \"main\",\n    moduleName := \"mtags3\",\n    scalaVersion := V.scala3,"
   },
   {
-    "id" : "5a194f4d-1db4-43a3-94a3-ddb9917cfbfc",
-    "prId" : 1842,
-    "prUrl" : null,
-    "prSource" : null,
-    "comments" : [
-      {
-        "id" : "f334ebf2-3e7c-49f5-b9dd-1fc4f0167c87",
-        "parentId" : null,
-        "author" : {
-          "login" : "tgodzik",
-          "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
-        },
-        "body" : "This should simplify things and make it more future proof.",
-        "createdAt" : "2020-06-19T08:26:57Z",
-        "updatedAt" : "2020-06-19T08:33:47Z",
-        "lastEditedBy" : {
-          "login" : "tgodzik",
-          "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
-        },
-        "tags" : [
-        ]
-      },
-      {
-        "id" : "1242dba9-d938-4bd9-86df-eb3276a4fe9d",
-        "parentId" : "f334ebf2-3e7c-49f5-b9dd-1fc4f0167c87",
-        "author" : {
-          "login" : "ckipp01",
-          "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
-        },
-        "body" : "Ah, I like this. Good idea 👍 ",
-        "createdAt" : "2020-06-19T08:30:09Z",
-        "updatedAt" : "2020-06-19T08:33:47Z",
-        "lastEditedBy" : {
-          "login" : "ckipp01",
-          "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
-        },
-        "tags" : [
-        ]
-      }
-    ],
-    "commit" : "c3fbaf90e4bab47cd7640ee843f739bd647ff19f",
-    "line" : 27,
-    "diffHunk" : "@@ -1,1 +258,262 @@  val result = mutable.ListBuffer.empty[File]\n  val partialVersion = CrossVersion.partialVersion(scalaVersion)\n  partialVersion.collect {\n    case (major, minor) =>\n      result += base / s\"scala-$major.$minor\""
-  },
-  {
     "id" : "5f4e3501-c750-43dd-8758-6968dd2d4573",
     "prId" : 1842,
     "prUrl" : null,
@@ -3196,5 +3147,69 @@
     "commit" : "86d2c3c2df7dbe98f1c72c521448ffc89827baa6",
     "line" : 27,
     "diffHunk" : "@@ -1,1 +193,197 @@  // Scala 3\n  def nonDeprecatedScala3Versions = Seq(scala3, \"0.24.0\")\n  def deprecatedScala3Versions = Seq(\"0.24.0-RC1\")\n  def scala3Versions = nonDeprecatedScala3Versions ++ deprecatedScala3Versions\n"
+  },
+  {
+    "id" : "5a194f4d-1db4-43a3-94a3-ddb9917cfbfc",
+    "prId" : 1842,
+    "prUrl" : null,
+    "prSource" : null,
+    "comments" : [
+      {
+        "id" : "f334ebf2-3e7c-49f5-b9dd-1fc4f0167c87",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "This should simplify things and make it more future proof.",
+        "createdAt" : "2020-06-19T08:26:57Z",
+        "updatedAt" : "2020-06-19T08:33:47Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1242dba9-d938-4bd9-86df-eb3276a4fe9d",
+        "parentId" : "f334ebf2-3e7c-49f5-b9dd-1fc4f0167c87",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "Ah, I like this. Good idea 👍 ",
+        "createdAt" : "2020-06-19T08:30:09Z",
+        "updatedAt" : "2020-06-19T08:33:47Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1785f07f-4f30-4000-87d8-ef34db5f1900",
+        "parentId" : null,
+        "author" : {
+          "login" : "mwojtow",
+          "name" : "Marcin Wójtowicz",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
+        },
+        "body" : "test new flow",
+        "createdAt" : "2021-03-23T12:21:00.275Z",
+        "updatedAt" : "2021-03-23T12:21:00.275Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c3fbaf90e4bab47cd7640ee843f739bd647ff19f",
+    "line" : 27,
+    "diffHunk" : "@@ -1,1 +258,262 @@  val result = mutable.ListBuffer.empty[File]\n  val partialVersion = CrossVersion.partialVersion(scalaVersion)\n  partialVersion.collect {\n    case (major, minor) =>\n      result += base / s\"scala-$major.$minor\""
   }
 ]
