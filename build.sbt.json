@@ -128,55 +128,6 @@
     "diffHunk" : "@@ -1,1 +343,347 @@    managedSourceDirectories.in(Compile) += baseDirectory\n      .in(ThisBuild)\n      .value / \"mtags\" / \"target\" / (\"scala-\" + scalaVersion.value) / \"src_managed\" / \"main\",\n    moduleName := \"mtags3\",\n    scalaVersion := V.scala3,"
   },
   {
-    "id" : "9ba1b737-a4da-4bda-b51a-4f25bded9d97",
-    "prId" : 1857,
-    "prUrl" : null,
-    "prSource" : null,
-    "comments" : [
-      {
-        "id" : "f4ce48d8-73a7-489c-ad72-0e72f53843e9",
-        "parentId" : null,
-        "author" : {
-          "login" : "tgodzik",
-          "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
-        },
-        "body" : "Added this back, since I figured it we should not be just dropping it on users.",
-        "createdAt" : "2020-07-01T06:49:48Z",
-        "updatedAt" : "2020-07-01T09:27:36Z",
-        "lastEditedBy" : {
-          "login" : "tgodzik",
-          "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
-        },
-        "tags" : [
-        ]
-      },
-      {
-        "id" : "4bcb17f8-84c5-4cae-af56-2b997b256976",
-        "parentId" : "f4ce48d8-73a7-489c-ad72-0e72f53843e9",
-        "author" : {
-          "login" : "tgodzik",
-          "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
-        },
-        "body" : "Also added 0.23.0, which doesn't influence the tests",
-        "createdAt" : "2020-07-01T07:16:53Z",
-        "updatedAt" : "2020-07-01T09:27:36Z",
-        "lastEditedBy" : {
-          "login" : "tgodzik",
-          "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
-        },
-        "tags" : [
-        ]
-      }
-    ],
-    "commit" : "86d2c3c2df7dbe98f1c72c521448ffc89827baa6",
-    "line" : 27,
-    "diffHunk" : "@@ -1,1 +193,197 @@  // Scala 3\n  def nonDeprecatedScala3Versions = Seq(scala3, \"0.24.0\")\n  def deprecatedScala3Versions = Seq(\"0.24.0-RC1\")\n  def scala3Versions = nonDeprecatedScala3Versions ++ deprecatedScala3Versions\n"
-  },
-  {
     "id" : "5a194f4d-1db4-43a3-94a3-ddb9917cfbfc",
     "prId" : 1842,
     "prUrl" : null,
@@ -3181,5 +3132,69 @@
     "commit" : "v0.9.0-177-ge87c231",
     "line" : null,
     "diffHunk" : "@@ -1,1 +9,25 @@(v: Option[(Long, Long)]): Boolean = v.contains((0, 24))\ndef isScala2(v: Option[(Long, Long)]): Boolean = v.exists(_._1 == 2)\ndef isScala3(v: Option[(Long, Long)]): Boolean =\n  v.exists(_._1 == 0) || v.exists(_._1 == 3)\n\ndef crossSetting[A](\n    scalaVersion: String,\n    if211: List[A] = Nil,\n    if2: List[A] = Nil,\n    ifLaterThan211: List[A] = Nil,\n    if3: List[A] = Nil\n): List[A] =\n  CrossVersion.partialVersion(scalaVersion) match {\n    case partialVersion if isScala211(partialVersion) => if211 ::: if2\n    case partialVersion if isScala212(partialVersion) => ifLaterThan211 ::: if2\n    case partialVersion if isScala213(partialVersion) => ifLaterThan211 ::: if2\n    case partialVersion if isSca"
+  },
+  {
+    "id" : "9ba1b737-a4da-4bda-b51a-4f25bded9d97",
+    "prId" : 1857,
+    "prUrl" : null,
+    "prSource" : null,
+    "comments" : [
+      {
+        "id" : "f4ce48d8-73a7-489c-ad72-0e72f53843e9",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Added this back, since I figured it we should not be just dropping it on users.",
+        "createdAt" : "2020-07-01T06:49:48Z",
+        "updatedAt" : "2020-07-01T09:27:36Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4bcb17f8-84c5-4cae-af56-2b997b256976",
+        "parentId" : "f4ce48d8-73a7-489c-ad72-0e72f53843e9",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Also added 0.23.0, which doesn't influence the tests",
+        "createdAt" : "2020-07-01T07:16:53Z",
+        "updatedAt" : "2020-07-01T09:27:36Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1785ef59-a7e0-4000-8771-c0033a0f1f00",
+        "parentId" : null,
+        "author" : {
+          "login" : "mwojtow",
+          "name" : "Marcin Wójtowicz",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
+        },
+        "body" : "test new flow",
+        "createdAt" : "2021-03-23T12:00:57.47Z",
+        "updatedAt" : "2021-03-23T12:00:57.47Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "86d2c3c2df7dbe98f1c72c521448ffc89827baa6",
+    "line" : 27,
+    "diffHunk" : "@@ -1,1 +193,197 @@  // Scala 3\n  def nonDeprecatedScala3Versions = Seq(scala3, \"0.24.0\")\n  def deprecatedScala3Versions = Seq(\"0.24.0-RC1\")\n  def scala3Versions = nonDeprecatedScala3Versions ++ deprecatedScala3Versions\n"
   }
 ]
