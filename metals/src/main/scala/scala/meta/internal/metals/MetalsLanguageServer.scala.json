@@ -2457,5 +2457,31 @@
     "commit" : "v0.9.0-177-ge87c231",
     "line" : null,
     "diffHunk" : "@@ 0,0 +0,0 @@s: ProgressTicks = ProgressTicks.braille,\n    bspGlobalDirectories: List[AbsolutePath] =\n      BspServers.globalInstallDirectories,\n    sh: ScheduledExecutorService = Executors.newSingleThreadScheduledExecutor(),\n    isReliableFileWatcher: Boolean = true\n) extends Cancelable {\n  ThreadPools.discardRejectedRunnables(\"MetalsLanguageServer.sh\", sh)\n  ThreadPools.discardRejectedRunnables(\"MetalsLanguageServer.ec\", ec)\n  private val cancelables = new MutableCancelable()\n  val isCancelled = new AtomicBoolean(false)\n  override def cancel(): Unit = {\n    if (isCancelled.compareAndSet(false, true)) {\n      val buildShutdown = buil"
+  },
+  {
+    "id" : "17863cac-3d00-4000-84da-07ee60445200",
+    "prId" : null,
+    "prUrl" : null,
+    "prSource" : null,
+    "comments" : [
+      {
+        "id" : "17863cac-3d00-4000-8927-cda89700be00",
+        "parentId" : null,
+        "author" : {
+          "login" : "mucharafal",
+          "name" : "Rafał Mucha",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+        },
+        "body" : "test",
+        "createdAt" : "2021-03-24T10:32:16.08Z",
+        "updatedAt" : "2021-03-24T10:32:16.08Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "v0.9.0-177-ge87c231",
+    "line" : null,
+    "diffHunk" : "@@ -1,1 +580,595 @@es.setDocumentRangeFormattingProvider(\n        initialConfig.allowMultilineStringFormatting\n      )\n      capabilities.setSignatureHelpProvider(\n        new SignatureHelpOptions(List(\"(\", \"[\").asJava)\n      )\n      capabilities.setCompletionProvider(\n        new CompletionOptions(\n          clientConfig.isCompletionItemResolve,\n          List(\".\", \"*\").asJava\n        )\n      )\n      capabilities.setWorkspaceSymbolProvider(true)\n      capabilities.setDocumentSymbolProvider(true)\n      capabilities.setDocumentFormattingProvider(true)\n      if (initializeParams.supportsCodeActionLiterals)"
   }
 ]
