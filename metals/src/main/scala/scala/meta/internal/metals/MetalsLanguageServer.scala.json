@@ -2483,5 +2483,31 @@
     "commit" : "v0.9.0-177-ge87c231",
     "line" : null,
     "diffHunk" : "@@ -1,1 +580,595 @@es.setDocumentRangeFormattingProvider(\n        initialConfig.allowMultilineStringFormatting\n      )\n      capabilities.setSignatureHelpProvider(\n        new SignatureHelpOptions(List(\"(\", \"[\").asJava)\n      )\n      capabilities.setCompletionProvider(\n        new CompletionOptions(\n          clientConfig.isCompletionItemResolve,\n          List(\".\", \"*\").asJava\n        )\n      )\n      capabilities.setWorkspaceSymbolProvider(true)\n      capabilities.setDocumentSymbolProvider(true)\n      capabilities.setDocumentFormattingProvider(true)\n      if (initializeParams.supportsCodeActionLiterals)"
+  },
+  {
+    "id" : "17863cd5-e3c0-4000-8cb4-1d2c0dfb5000",
+    "prId" : null,
+    "prUrl" : null,
+    "prSource" : null,
+    "comments" : [
+      {
+        "id" : "17863cd5-e3c0-4000-8519-e15b80876700",
+        "parentId" : null,
+        "author" : {
+          "login" : "mucharafal",
+          "name" : "Rafał Mucha",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+        },
+        "body" : "current",
+        "createdAt" : "2021-03-24T10:35:06.684Z",
+        "updatedAt" : "2021-03-24T10:35:06.684Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "v0.9.0-177-ge87c231",
+    "line" : null,
+    "diffHunk" : "@@ -1,1 +588,603 @@nfig.isCompletionItemResolve,\n          List(\".\", \"*\").asJava\n        )\n      )\n      capabilities.setWorkspaceSymbolProvider(true)\n      capabilities.setDocumentSymbolProvider(true)\n      capabilities.setDocumentFormattingProvider(true)\n      if (initializeParams.supportsCodeActionLiterals) {\n        capabilities.setCodeActionProvider(\n          new CodeActionOptions(\n            List(CodeActionKind.QuickFix, CodeActionKind.Refactor).asJava\n          )\n        )\n      } else {\n        capabilities.setCodeActionProvider(true)\n      }"
   }
 ]
