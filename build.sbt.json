@@ -700,55 +700,6 @@
     "diffHunk" : "@@ -1,1 +284,288 @@      \"com.lihaoyi\" %% \"pprint\" % \"0.5.6\",\n      // For exporting Pants builds.\n      \"com.lihaoyi\" %% \"ujson\" % \"0.7.5\",\n      \"ch.epfl.scala\" %% \"bloop-config\" % V.bloop,\n      // for producing SemanticDB from Scala source files"
   },
   {
-    "id" : "c13a187b-ca90-4f43-8168-96d74309e871",
-    "prId" : 913,
-    "prUrl" : null,
-    "prSource" : null,
-    "comments" : [
-      {
-        "id" : "dcf578c2-cef1-453b-a7a3-9c53f4e64c56",
-        "parentId" : null,
-        "author" : {
-          "login" : "tgodzik",
-          "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
-        },
-        "body" : "Let's maybe drop 2.12.7 and make 2.12.8 deprecated?",
-        "createdAt" : "2019-09-11T13:14:41Z",
-        "updatedAt" : "2019-09-11T13:15:18Z",
-        "lastEditedBy" : {
-          "login" : "tgodzik",
-          "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
-        },
-        "tags" : [
-        ]
-      },
-      {
-        "id" : "0df2719e-ee2d-495e-9e6f-8ee4dc09a483",
-        "parentId" : "dcf578c2-cef1-453b-a7a3-9c53f4e64c56",
-        "author" : {
-          "login" : "tgodzik",
-          "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
-        },
-        "body" : "We can deprecate it with the next version, since it's working now.",
-        "createdAt" : "2019-09-13T09:22:14Z",
-        "updatedAt" : "2019-09-13T09:22:14Z",
-        "lastEditedBy" : {
-          "login" : "tgodzik",
-          "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
-        },
-        "tags" : [
-        ]
-      }
-    ],
-    "commit" : "74bd65dd97ca4ebf3172bae4a58071e6c1ed8060",
-    "line" : 18,
-    "diffHunk" : "@@ -1,1 +151,155 @@  def supportedScalaVersions =\n    Seq(scala213, \"2.12.8\", \"2.12.9\", scala212) ++ deprecatedScalaVersions\n  def deprecatedScalaVersions = Seq(\"2.12.7\", scala211)\n  def guava = \"com.google.guava\" % \"guava\" % \"28.0-jre\"\n  def lsp4j = \"org.eclipse.lsp4j\" % \"org.eclipse.lsp4j\" % \"0.8.0\""
-  },
-  {
     "id" : "b7699dd9-0ad4-4017-889a-8552041cd7e7",
     "prId" : 887,
     "prUrl" : null,
@@ -3241,5 +3192,69 @@
     "commit" : "9eb21fe4071e224acb0aab7c9d1deb6701c93aaa",
     "line" : 5,
     "diffHunk" : "@@ -1,1 +294,298 @@  ),\n  // @note needed to deal with issues in https://github.com/scalameta/metals/pull/2157\n  sources in (Compile, doc) := Seq.empty,\n  libraryDependencies ++= crossSetting(\n    scalaVersion.value,"
+  },
+  {
+    "id" : "c13a187b-ca90-4f43-8168-96d74309e871",
+    "prId" : 913,
+    "prUrl" : null,
+    "prSource" : null,
+    "comments" : [
+      {
+        "id" : "dcf578c2-cef1-453b-a7a3-9c53f4e64c56",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Let's maybe drop 2.12.7 and make 2.12.8 deprecated?",
+        "createdAt" : "2019-09-11T13:14:41Z",
+        "updatedAt" : "2019-09-11T13:15:18Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0df2719e-ee2d-495e-9e6f-8ee4dc09a483",
+        "parentId" : "dcf578c2-cef1-453b-a7a3-9c53f4e64c56",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "We can deprecate it with the next version, since it's working now.",
+        "createdAt" : "2019-09-13T09:22:14Z",
+        "updatedAt" : "2019-09-13T09:22:14Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "178687ad-a6a0-4000-8fa5-8c46c8d81f00",
+        "parentId" : null,
+        "author" : {
+          "login" : "mwojtow",
+          "name" : "Marcin Wójtowicz",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
+        },
+        "body" : "test",
+        "createdAt" : "2021-03-25T08:23:05.066Z",
+        "updatedAt" : "2021-03-25T08:23:05.066Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "74bd65dd97ca4ebf3172bae4a58071e6c1ed8060",
+    "line" : 18,
+    "diffHunk" : "@@ -1,1 +151,155 @@  def supportedScalaVersions =\n    Seq(scala213, \"2.12.8\", \"2.12.9\", scala212) ++ deprecatedScalaVersions\n  def deprecatedScalaVersions = Seq(\"2.12.7\", scala211)\n  def guava = \"com.google.guava\" % \"guava\" % \"28.0-jre\"\n  def lsp4j = \"org.eclipse.lsp4j\" % \"org.eclipse.lsp4j\" % \"0.8.0\""
   }
 ]
