@@ -156,5 +156,31 @@
     "commit" : "8ecb05f5d5e9bbda7f30f18731695522ef5aa16d",
     "line" : 13,
     "diffHunk" : "@@ -1,1 +18,22 @@  override lazy val projectSettings: Seq[Def.Setting[_]] = Seq(\n    semanticdbCompilerPlugin := {\n      if (supportedScala2Versions.contains(scalaVersion.value))\n        (\"org.scalameta\" % \"semanticdb-scalac\" % semanticdbVersion)\n          .cross(CrossVersion.full)"
+  },
+  {
+    "id" : "178a6c5f-7b50-4000-805b-a545562de800",
+    "prId" : null,
+    "prUrl" : null,
+    "prSource" : null,
+    "comments" : [
+      {
+        "id" : "178a6c5f-7b50-4000-8947-e6ec038fb900",
+        "parentId" : null,
+        "author" : {
+          "login" : "mwojtow",
+          "name" : "Marcin Wójtowicz",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
+        },
+        "body" : "test add new discusion",
+        "createdAt" : "2021-04-06T10:41:35.157Z",
+        "updatedAt" : "2021-04-06T10:41:35.157Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "v0.9.4-171-g652fb4a",
+    "line" : null,
+    "diffHunk" : "@@ -1,1 +42,46 @@    semanticdbTargetRoot := {\n      val in = semanticdbIncludeInJar.value\n      if (in) classDirectory.value\n      else semanticdbTargetRoot.value\n    },"
   }
 ]
