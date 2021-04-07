@@ -106,5 +106,31 @@
     "commit" : "v0.9.4-171-g652fb4a",
     "line" : null,
     "diffHunk" : "@@ -1,1 +12,13 @@          case _ =>\n            resourceGeneratorImpl(input)"
+  },
+  {
+    "id" : "178ab390-9880-4000-8db9-73b5a47a1a00",
+    "prId" : null,
+    "prUrl" : null,
+    "prSource" : null,
+    "comments" : [
+      {
+        "id" : "178ab390-9880-4000-874e-55604ce60f00",
+        "parentId" : null,
+        "author" : {
+          "login" : "mwojtow",
+          "name" : "Marcin Wójtowicz",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
+        },
+        "body" : "test discu",
+        "createdAt" : "2021-04-07T07:25:45.224Z",
+        "updatedAt" : "2021-04-07T07:25:45.224Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "v0.9.4-171-g652fb4a",
+    "line" : null,
+    "diffHunk" : "@@ -1,1 +10,11 @@          case Some(value) if value.isFile =>\n            Def.task(List(value))"
   }
 ]
