@@ -1,0 +1,28 @@
+[
+  {
+    "id" : "178ab3b8-bd30-4000-8f91-36b2692c8b00",
+    "prId" : null,
+    "prUrl" : null,
+    "prSource" : null,
+    "comments" : [
+      {
+        "id" : "178ab3b8-bd30-4000-876f-ddf868ace800",
+        "parentId" : null,
+        "author" : {
+          "login" : "mwojtow",
+          "name" : "Marcin Wójtowicz",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
+        },
+        "body" : "test",
+        "createdAt" : "2021-04-07T07:28:29.651Z",
+        "updatedAt" : "2021-04-07T07:28:29.651Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "v0.9.4-171-g652fb4a",
+    "line" : null,
+    "diffHunk" : "@@ -1,1 +76,78 @@  def toplevelsScalaIndex(): Unit = {\n    scalaDependencySources.inputs.foreach { input => Mtags.toplevels(input) }\n  }"
+  }
+]
