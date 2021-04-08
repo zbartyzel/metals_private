@@ -229,5 +229,31 @@
     "commit" : "v0.9.4-171-g652fb4a",
     "line" : null,
     "diffHunk" : "@@ -1,1 +82,88 @@  def scalaTokenize(): Unit = {\n    scalaDependencySources.inputs.foreach { input =>\n      val scanner = new LegacyScanner(input, meta.dialects.Scala213)\n      var i = 0\n      scanner.foreach(_ => i += 1)\n    }\n  }"
+  },
+  {
+    "id" : "178b0f1f-5150-4000-8ff3-cdcc1de3de00",
+    "prId" : null,
+    "prUrl" : null,
+    "prSource" : null,
+    "comments" : [
+      {
+        "id" : "178b0f1f-5150-4000-854c-bccc1eab8b00",
+        "parentId" : null,
+        "author" : {
+          "login" : "mwojtow",
+          "name" : "Marcin Wójtowicz",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
+        },
+        "body" : "test",
+        "createdAt" : "2021-04-08T10:05:50.229Z",
+        "updatedAt" : "2021-04-08T10:05:50.229Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "v0.9.4-171-g652fb4a",
+    "line" : null,
+    "diffHunk" : "@@ -1,1 +144,147 @@  def indexSources(): Unit = {\n    val index = OnDemandSymbolIndex()\n    fullClasspath.entries.foreach(entry => index.addSourceJar(entry))\n  }"
   }
 ]
