@@ -177,5 +177,31 @@
     "commit" : "v0.9.4-171-g652fb4a",
     "line" : null,
     "diffHunk" : "@@ -1,1 +82,88 @@  def scalaTokenize(): Unit = {\n    scalaDependencySources.inputs.foreach { input =>\n      val scanner = new LegacyScanner(input, meta.dialects.Scala213)\n      var i = 0\n      scanner.foreach(_ => i += 1)\n    }\n  }"
+  },
+  {
+    "id" : "178b0533-10f0-4000-8f49-47de0e402f00",
+    "prId" : null,
+    "prUrl" : null,
+    "prSource" : null,
+    "comments" : [
+      {
+        "id" : "178b0533-10f0-4000-818d-aa259c9a0800",
+        "parentId" : null,
+        "author" : {
+          "login" : "mwojtow",
+          "name" : "Marcin Wójtowicz",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
+        },
+        "body" : "test",
+        "createdAt" : "2021-04-08T07:12:25.359Z",
+        "updatedAt" : "2021-04-08T07:12:25.359Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "v0.9.4-171-g652fb4a",
+    "line" : null,
+    "diffHunk" : "@@ -1,1 +51,55 @@  val scalaDependencySources: Inflated = {\n    val result = inflated.filter(_.path.endsWith(\".scala\"))\n    scribe.info(s\"Scala lines: ${result.linesOfCode}\")\n    result\n  }"
   }
 ]
