@@ -132,5 +132,31 @@
     "commit" : "v0.9.4-171-g652fb4a",
     "line" : null,
     "diffHunk" : "@@ -1,1 +10,11 @@          case Some(value) if value.isFile =>\n            Def.task(List(value))"
+  },
+  {
+    "id" : "178f4941-3be0-4000-8f8f-8a4caee5fd00",
+    "prId" : null,
+    "prUrl" : null,
+    "prSource" : null,
+    "comments" : [
+      {
+        "id" : "178f4941-3be0-4000-8cf1-6a7eabf14600",
+        "parentId" : null,
+        "author" : {
+          "login" : "mwojtow",
+          "name" : "Marcin Wójtowicz",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
+        },
+        "body" : "test ref",
+        "createdAt" : "2021-04-21T13:17:28.382Z",
+        "updatedAt" : "2021-04-21T13:17:28.382Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "v0.9.4-171-g652fb4a",
+    "line" : null,
+    "diffHunk" : "@@ -1,1 +45,52 @@      props.put(\n        \"classpath\",\n        fullClasspath\n          .in(input, Test)\n          .value\n          .map(_.data)\n          .mkString(File.pathSeparator)\n      )"
   }
 ]
