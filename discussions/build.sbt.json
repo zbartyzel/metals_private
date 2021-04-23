@@ -11,7 +11,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "This ensures that if the test is not found then it will go into the first group",
         "createdAt" : "2020-08-21T14:18:56Z",
@@ -19,7 +20,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -30,7 +32,8 @@
         "author" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "body" : "Just a note, but I've noticed the build definition is getting pretty large. I'm normally in favor of starting to move methods out into `project/x` once things start getting this large. Just something to think about for the future as we continually add more.",
         "createdAt" : "2020-08-21T17:12:26Z",
@@ -38,7 +41,8 @@
         "lastEditedBy" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -60,7 +64,8 @@
         "author" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "body" : "The package name seems odd, but it is indeed just `testng`. I figured this was a nice small one to include for this purpose.",
         "createdAt" : "2020-07-29T19:05:46Z",
@@ -68,7 +73,8 @@
         "lastEditedBy" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -90,7 +96,8 @@
         "author" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "body" : "So I see this is added in order to access `BuildInfo` in `ScalaPresentationCompiler.scala`, but why isn't it detected by default here?",
         "createdAt" : "2020-07-23T07:01:26Z",
@@ -98,7 +105,8 @@
         "lastEditedBy" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -109,7 +117,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "It's the `mtags3` module, which I added so that we have the additional target. It uses `mtags3` directory by default, so every source dir from mtags needs to be added manually.",
         "createdAt" : "2020-07-23T08:40:50Z",
@@ -117,7 +126,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -139,7 +149,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "In order not to add `.mtags` directories, although it seems that sbt now created the `.mtags` directory anyway.",
         "createdAt" : "2020-06-19T08:28:53Z",
@@ -147,7 +158,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -169,7 +181,8 @@
         "author" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "body" : "👍 ",
         "createdAt" : "2020-04-30T08:51:44Z",
@@ -177,7 +190,8 @@
         "lastEditedBy" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -199,7 +213,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "This caused issues with a workflow like:\r\n```\r\n++2.13.2\r\ncross/test\r\n```",
         "createdAt" : "2020-04-24T22:26:08Z",
@@ -207,8 +222,25 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "178fe79c-4240-4000-8e0e-233cdb0b2e00",
+        "parentId" : null,
+        "author" : {
+          "login" : "kasprzyckit",
+          "name" : "Tomasz Kasprzycki",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/22435324?v=4",
+          "altName" : null
+        },
+        "body" : "asdas",
+        "createdAt" : "2021-04-23T11:24:56.228Z",
+        "updatedAt" : "2021-04-23T11:24:56.228Z",
+        "lastEditedBy" : null,
         "tags" : [
         ]
       }
@@ -229,7 +261,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "Fixes pprint to be available in mtags. Otherwise branch was never hit.",
         "createdAt" : "2020-04-24T22:26:31Z",
@@ -237,7 +270,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -259,7 +293,8 @@
         "author" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "body" : "I know we briefly hit on this before, but why do we say that `2.13.0` is deprecated, but not `2.12.10`. I fee like we should be consistent with that across 2.12 and 2.13.",
         "createdAt" : "2020-04-04T08:19:06Z",
@@ -267,7 +302,8 @@
         "lastEditedBy" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -278,7 +314,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "`2.13.0` was released a while ago and had a couple of issue, so I don't think we can recommend that. `2.13.1` was quickly released with the fixes. `2.12.10` is still in use by a lot of codebases and it`s only recently that the new version was released.\r\n",
         "createdAt" : "2020-04-04T09:57:11Z",
@@ -286,7 +323,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -297,7 +335,8 @@
         "author" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "body" : "Alright, that makes sense.",
         "createdAt" : "2020-04-06T18:29:15Z",
@@ -305,7 +344,8 @@
         "lastEditedBy" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -316,7 +356,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "s",
         "createdAt" : "2021-02-24T12:48:15.92Z",
@@ -331,7 +372,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "x",
         "createdAt" : "2021-02-24T12:56:00.971Z",
@@ -346,7 +388,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "p",
         "createdAt" : "2021-02-24T13:11:26.639Z",
@@ -361,7 +404,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "ff",
         "createdAt" : "2021-02-24T15:15:09.847Z",
@@ -376,7 +420,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "xd",
         "createdAt" : "2021-02-24T15:16:33.018Z",
@@ -391,7 +436,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : ";p",
         "createdAt" : "2021-02-24T15:17:53.204Z",
@@ -406,7 +452,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "op",
         "createdAt" : "2021-02-24T15:17:58.635Z",
@@ -421,7 +468,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : ":c",
         "createdAt" : "2021-02-24T15:19:06.212Z",
@@ -436,7 +484,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "2",
         "createdAt" : "2021-02-24T15:19:38.848Z",
@@ -451,7 +500,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "1",
         "createdAt" : "2021-02-24T15:19:40.779Z",
@@ -477,7 +527,8 @@
         "author" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "body" : "I might be missing it, but is `s` not used at all?",
         "createdAt" : "2020-04-04T08:25:37Z",
@@ -485,7 +536,8 @@
         "lastEditedBy" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -496,7 +548,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "You are right, it's removed.",
         "createdAt" : "2020-04-06T18:04:07Z",
@@ -504,7 +557,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -526,7 +580,8 @@
         "author" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "body" : "out of curiosity, why is this necessary?",
         "createdAt" : "2019-12-04T16:50:14Z",
@@ -534,7 +589,8 @@
         "lastEditedBy" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -545,7 +601,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "It may no longer be necessary but it won't hurt. I believe there was a moment after we removed sbt-metals where this line was necessary.",
         "createdAt" : "2019-12-05T10:24:58Z",
@@ -553,7 +610,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -564,7 +622,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "That might have been before the latest bloop version I think. We didn't add sourceroot if the semanticdb plugin option was already there. Should be fine now.",
         "createdAt" : "2019-12-05T10:54:02Z",
@@ -572,7 +631,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -594,7 +654,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "1.3.5 was a failed release, there's no longer a v1.3.5 tag in the Bloop repo. The new version was released last night https://scalacenter.github.io/bloop/setup",
         "createdAt" : "2019-12-02T09:39:04Z",
@@ -602,7 +663,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -613,7 +675,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "It would be nice to reenable windows DAP tests, but I can do it later.",
         "createdAt" : "2019-12-02T09:59:38Z",
@@ -621,7 +684,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -632,7 +696,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "I re-enabled the DAP tests on Windows, let's see how they do!",
         "createdAt" : "2019-12-02T10:58:37Z",
@@ -640,7 +705,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -662,7 +728,8 @@
         "author" : {
           "login" : "mzarnowski",
           "name" : "Marek Żarnowski",
-          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4",
+          "altName" : null
         },
         "body" : "is `gson` not suitable for exporting? It is already pulled in from `lsp4j`",
         "createdAt" : "2019-09-24T12:41:55Z",
@@ -670,7 +737,8 @@
         "lastEditedBy" : {
           "login" : "mzarnowski",
           "name" : "Marek Żarnowski",
-          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -681,7 +749,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "The bloop export logic originally started as a separate project that I ended up folding into the Metals codebase. I would prefer not to refactor to gson since it requires a fair amount of work for questionable gain. ujson is a pretty small dependency as well.\r\n\r\nWe're also bringing circe via `bloop-config` so we'd actually have three json libraries on the classpath 🙈 ",
         "createdAt" : "2019-09-26T14:43:15Z",
@@ -689,7 +758,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -711,7 +781,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "\r\n```suggestion\r\n    Seq(scala213, scala212, scala212) ++ deprecatedScalaVersions\r\n```",
         "createdAt" : "2019-08-30T21:21:40Z",
@@ -719,7 +790,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -730,7 +802,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "Nevermind, I didn't see it was already there 😅 ",
         "createdAt" : "2019-08-30T21:24:48Z",
@@ -738,7 +811,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -760,7 +834,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "```suggestion\r\n  def deprecatedScalaVersions = Seq(\"2.12.7\", \"2.12.8\", scala211)\r\n```",
         "createdAt" : "2019-08-30T21:21:56Z",
@@ -768,7 +843,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -779,7 +855,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "Nevermind, not needed.",
         "createdAt" : "2019-08-30T21:25:02Z",
@@ -787,7 +864,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -798,7 +876,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "as",
         "createdAt" : "2021-02-24T12:40:06.319Z",
@@ -824,7 +903,8 @@
         "author" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "body" : "@olafurpg Travis is complaining about a missing `mtags-interfaces`, which I guess is normal now that the optimization about transitive dependencies is not in place anymore?\r\n\r\nI've added this to run `interfaces/publishLocal` in addition to `mtags/publishLocal` before running slow tests",
         "createdAt" : "2019-08-24T20:30:34Z",
@@ -832,7 +912,8 @@
         "lastEditedBy" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -854,7 +935,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "Missing `scala213`",
         "createdAt" : "2019-06-18T09:12:35Z",
@@ -862,7 +944,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -873,7 +956,8 @@
         "author" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "body" : "I'll add it for consistency, but it's not used anywhere.",
         "createdAt" : "2019-06-18T09:43:36Z",
@@ -881,7 +965,8 @@
         "lastEditedBy" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -903,7 +988,8 @@
         "author" : {
           "login" : "mzarnowski",
           "name" : "Marek Żarnowski",
-          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4",
+          "altName" : null
         },
         "body" : "Why do we need it?",
         "createdAt" : "2019-05-29T13:18:14Z",
@@ -911,7 +997,8 @@
         "lastEditedBy" : {
           "login" : "mzarnowski",
           "name" : "Marek Żarnowski",
-          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -922,7 +1009,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "Added a comment, it's needed for SAM types on 2.11.",
         "createdAt" : "2019-05-31T08:55:32Z",
@@ -930,7 +1018,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -952,7 +1041,8 @@
         "author" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "body" : "this comment is now on the wrong line",
         "createdAt" : "2019-01-10T09:50:45Z",
@@ -960,7 +1050,8 @@
         "lastEditedBy" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -971,7 +1062,8 @@
         "author" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "body" : "Also, do we still need the `com.typesafe.config` dependency?",
         "createdAt" : "2019-01-10T11:50:28Z",
@@ -979,7 +1071,8 @@
         "lastEditedBy" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -990,7 +1083,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "Removed, it's still brought in via scalafmt-dynamic.",
         "createdAt" : "2019-01-10T21:38:35Z",
@@ -998,7 +1092,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1020,7 +1115,8 @@
         "author" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "body" : "maybe move this into `V`?",
         "createdAt" : "2018-09-28T13:59:33Z",
@@ -1028,7 +1124,8 @@
         "lastEditedBy" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1039,7 +1136,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "This is a setting and not a version so I decided to keep it outside. This will go soon once the scalameta upgrade is complete.",
         "createdAt" : "2018-09-28T14:06:02Z",
@@ -1047,7 +1145,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1058,7 +1157,8 @@
         "author" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "body" : "Makes sense 👍 ",
         "createdAt" : "2018-09-28T14:06:20Z",
@@ -1066,7 +1166,8 @@
         "lastEditedBy" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1088,7 +1189,8 @@
         "author" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "body" : "are you replicating the `^` logic by hand? Was it broken?",
         "createdAt" : "2018-09-28T14:00:09Z",
@@ -1096,7 +1198,8 @@
         "lastEditedBy" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1107,7 +1210,8 @@
         "author" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "body" : "I get it now, thanks :) ",
         "createdAt" : "2018-09-28T14:06:29Z",
@@ -1115,7 +1219,8 @@
         "lastEditedBy" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1126,7 +1231,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "The primary motivation was to use `+` instead of `^`, it's conceptually easier IMO to have to only think about the Scala version, especially when it comes to publishing all modules. I think sbt doesn't work this way by default in order to be able to hypothetically support multiple sbt versions on the same Scala version.",
         "createdAt" : "2018-09-28T14:07:35Z",
@@ -1134,7 +1240,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1156,7 +1263,8 @@
         "author" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "body" : "This will effectively introduce a regression wrt the PR merged yesterday that made pid optional during initialization. Can we release a 0.1.1 of lsp4s and depend on it?",
         "createdAt" : "2018-06-23T09:52:52Z",
@@ -1164,7 +1272,8 @@
         "lastEditedBy" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1175,7 +1284,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "Good point, I've pushed a v0.2.0 tag to lsp4s. Fortunately, we were able to bundle the breaking change with other jsonrpc breaking changes so this time it's fine to release jsonrpc and ls4s together.",
         "createdAt" : "2018-06-23T10:04:15Z",
@@ -1183,7 +1293,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1205,7 +1316,8 @@
         "author" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "body" : "are all these `disablePlugins` necessary even after https://github.com/sbt/sbt/pull/3875?",
         "createdAt" : "2018-04-08T09:48:24Z",
@@ -1213,7 +1325,8 @@
         "lastEditedBy" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1224,7 +1337,8 @@
         "author" : {
           "login" : "laughedelic",
           "name" : "Alexey Alekhin",
-          "avatarUrl" : "https://avatars2.githubusercontent.com/u/766656?v=4"
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/766656?v=4",
+          "altName" : null
         },
         "body" : "I'm not sure. I saw this failure: https://travis-ci.org/laughedelic/metals/jobs/363624534#L931\r\n\r\nand then I also saw this commit in bloop: https://github.com/scalacenter/bloop/commit/7b45b9b8120867a258520f0aba42f6ade87471d1",
         "createdAt" : "2018-04-08T17:16:10Z",
@@ -1232,7 +1346,8 @@
         "lastEditedBy" : {
           "login" : "laughedelic",
           "name" : "Alexey Alekhin",
-          "avatarUrl" : "https://avatars2.githubusercontent.com/u/766656?v=4"
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/766656?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1243,7 +1358,8 @@
         "author" : {
           "login" : "laughedelic",
           "name" : "Alexey Alekhin",
-          "avatarUrl" : "https://avatars2.githubusercontent.com/u/766656?v=4"
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/766656?v=4",
+          "altName" : null
         },
         "body" : "Oh, and https://github.com/sbt/sbt/pull/3875 isn't in sbt 1.1 yet, it's targeted to 1.2.",
         "createdAt" : "2018-04-08T17:51:11Z",
@@ -1251,7 +1367,8 @@
         "lastEditedBy" : {
           "login" : "laughedelic",
           "name" : "Alexey Alekhin",
-          "avatarUrl" : "https://avatars2.githubusercontent.com/u/766656?v=4"
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/766656?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1273,7 +1390,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "Can we set `name := \"metalsRoot\"` in the top-level? By default sbt names the root project after the directory name, unless there is a project with a conflicting in which case it creates a bogus name like \"default-fd2bf4\". This name appears in IntelliJ after importing the build so I think \"metalsRoot\" would be nice",
         "createdAt" : "2018-02-12T20:15:02Z",
@@ -1281,7 +1399,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1292,7 +1411,8 @@
         "author" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "body" : "👍 done. Thanks for explaining where the bogus name came from, also the sbt launcher displays it and I was confused.",
         "createdAt" : "2018-02-13T09:34:21Z",
@@ -1300,7 +1420,8 @@
         "lastEditedBy" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1322,7 +1443,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "FWIW, `%%` can be replaced with `%`, but it doesn't matter which one is used",
         "createdAt" : "2017-12-09T10:54:42Z",
@@ -1330,7 +1452,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1352,7 +1475,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "Trailing commas 🙏 😄 ",
         "createdAt" : "2017-12-09T10:55:01Z",
@@ -1360,7 +1484,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1382,7 +1507,8 @@
         "author" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "body" : "out of curiosity, why not\r\n\r\n```scala\r\nobject V {\r\n  val scalameta = \"2.1.3\"\r\n}\r\n```",
         "createdAt" : "2017-12-07T18:12:14Z",
@@ -1390,7 +1516,8 @@
         "lastEditedBy" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1401,7 +1528,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "No objects allowed in build.sbt I think ",
         "createdAt" : "2017-12-07T18:54:03Z",
@@ -1409,7 +1537,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1431,7 +1560,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "I decided to add support for 2.12.13, but keep Metals on 2.12.12 until we can just calmly update. I should have done it in the beginning, but it seemed I would be able to just do one more thing and they just kept poping up.",
         "createdAt" : "2021-01-17T10:01:38Z",
@@ -1439,7 +1569,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1450,7 +1581,8 @@
         "author" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "body" : "No worries at all. We can easily just do it after.",
         "createdAt" : "2021-01-17T10:07:55Z",
@@ -1458,7 +1590,8 @@
         "lastEditedBy" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1480,7 +1613,8 @@
         "author" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "body" : "Can we just bump the version of Ammonite right away to not have to worry about this? It looks like it's available for 2.12.13 -> `2.3.8-32-64308dc3`. Or were you purposefully not including that?",
         "createdAt" : "2021-01-18T17:40:34Z",
@@ -1488,7 +1622,8 @@
         "lastEditedBy" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1499,7 +1634,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "So turns out there was a regression, but once https://github.com/lihaoyi/Ammonite/pull/1146 is released we can upgrade.",
         "createdAt" : "2021-01-18T17:43:17Z",
@@ -1507,7 +1643,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1518,7 +1655,8 @@
         "author" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "body" : "![](https://media.giphy.com/media/H3qWY13eGZUomKxOs6/source.gif)\r\n\r\n\r\nRegressions this week...",
         "createdAt" : "2021-01-18T17:49:40Z",
@@ -1526,7 +1664,8 @@
         "lastEditedBy" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1548,7 +1687,8 @@
         "author" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "body" : "The file related stuff that we use got extracted out into it's own module and published separately. So that's the reason for this addition.",
         "createdAt" : "2021-02-01T09:14:57Z",
@@ -1556,7 +1696,8 @@
         "lastEditedBy" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1578,7 +1719,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "Could we add it as cross version to `input` ? We could have separate `scala-3` directory like in case of mtags.",
         "createdAt" : "2021-02-02T13:12:01Z",
@@ -1586,7 +1728,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1597,7 +1740,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "If it's too complicated it's okay to leave it separate.",
         "createdAt" : "2021-02-02T17:08:23Z",
@@ -1605,7 +1749,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1616,7 +1761,8 @@
         "author" : {
           "login" : "dos65",
           "name" : "Vadim Chelyshov",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
         },
         "body" : "Yep, that will be hard. It requires to do smth like in `crossPublishLocal`.\r\n\r\nAlso, there is an option not to use `input` as a project.\r\nThe only advantage it provides is that before running `unit` it checks that `input` compiles.",
         "createdAt" : "2021-02-02T18:25:56Z",
@@ -1624,7 +1770,8 @@
         "lastEditedBy" : {
           "login" : "dos65",
           "name" : "Vadim Chelyshov",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1635,7 +1782,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "Ok, I think it's fine to leave it as is then. It looks pretty sensible currently.",
         "createdAt" : "2021-02-02T19:46:57Z",
@@ -1643,7 +1791,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1665,7 +1814,8 @@
         "author" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "body" : "`isScala3`\r\n`isScala30`\r\n`isScala3Prerelease`\r\n\r\n🙈 \r\n\r\nI'll be happy when we can just have a `isScala3`",
         "createdAt" : "2020-11-04T18:56:36Z",
@@ -1673,7 +1823,8 @@
         "lastEditedBy" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1684,7 +1835,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "try",
         "createdAt" : "2021-02-16T08:33:22.466Z",
@@ -1710,7 +1862,8 @@
         "author" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "body" : "It makes me happy to be simplifying in this :)",
         "createdAt" : "2021-01-21T17:38:58Z",
@@ -1718,7 +1871,8 @@
         "lastEditedBy" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1729,7 +1883,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "Test comment",
         "createdAt" : "2021-02-16T08:40:57.629Z",
@@ -1744,7 +1899,8 @@
         "author" : {
           "login" : "Gedochao",
           "name" : "Piotr Chabelski",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/18601388?u=3bdb8a47886f318b553db837d3715a1891e7f176&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/18601388?u=3bdb8a47886f318b553db837d3715a1891e7f176&v=4",
+          "altName" : null
         },
         "body" : "test",
         "createdAt" : "2021-03-02T11:57:34.396Z",
@@ -1759,7 +1915,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "asd",
         "createdAt" : "2021-03-04T08:34:18.525Z",
@@ -1774,7 +1931,8 @@
         "author" : {
           "login" : "kasprzyckit",
           "name" : "Tomasz Kasprzycki",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/22435324?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/22435324?v=4",
+          "altName" : null
         },
         "body" : "test-tomek",
         "createdAt" : "2021-03-04T08:34:22.758Z",
@@ -1789,7 +1947,8 @@
         "author" : {
           "login" : "kasprzyckit",
           "name" : "Tomasz Kasprzycki",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/22435324?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/22435324?v=4",
+          "altName" : null
         },
         "body" : "sdfsdf",
         "createdAt" : "2021-03-04T08:34:45.252Z",
@@ -1804,7 +1963,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "ff",
         "createdAt" : "2021-03-04T08:34:51.654Z",
@@ -1819,7 +1979,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "sad",
         "createdAt" : "2021-03-04T08:35:03.819Z",
@@ -1834,7 +1995,8 @@
         "author" : {
           "login" : "kasprzyckit",
           "name" : "Tomasz Kasprzycki",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/22435324?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/22435324?v=4",
+          "altName" : null
         },
         "body" : "test-to",
         "createdAt" : "2021-03-04T08:35:03.948Z",
@@ -1849,7 +2011,8 @@
         "author" : {
           "login" : "kasprzyckit",
           "name" : "Tomasz Kasprzycki",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/22435324?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/22435324?v=4",
+          "altName" : null
         },
         "body" : "sdf",
         "createdAt" : "2021-03-04T08:36:45.188Z",
@@ -1864,7 +2027,8 @@
         "author" : {
           "login" : "kasprzyckit",
           "name" : "Tomasz Kasprzycki",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/22435324?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/22435324?v=4",
+          "altName" : null
         },
         "body" : "ytrgf\ndfg",
         "createdAt" : "2021-03-04T08:36:54.531Z",
@@ -1879,7 +2043,8 @@
         "author" : {
           "login" : "kasprzyckit",
           "name" : "Tomasz Kasprzycki",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/22435324?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/22435324?v=4",
+          "altName" : null
         },
         "body" : "sdf",
         "createdAt" : "2021-03-04T08:37:01.838Z",
@@ -1894,7 +2059,8 @@
         "author" : {
           "login" : "kasprzyckit",
           "name" : "Tomasz Kasprzycki",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/22435324?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/22435324?v=4",
+          "altName" : null
         },
         "body" : "qwe",
         "createdAt" : "2021-03-04T08:37:09.053Z",
@@ -1909,7 +2075,8 @@
         "author" : {
           "login" : "kasprzyckit",
           "name" : "Tomasz Kasprzycki",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/22435324?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/22435324?v=4",
+          "altName" : null
         },
         "body" : "rtr",
         "createdAt" : "2021-03-04T08:37:17.929Z",
@@ -1935,7 +2102,8 @@
         "author" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "body" : "Just because I don't fully remember where we ended up on this. How long will we keep 0.27.0-RC1 around as non-deprecated?",
         "createdAt" : "2020-11-25T17:05:30Z",
@@ -1943,7 +2111,8 @@
         "lastEditedBy" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1954,7 +2123,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "Probably under the end of the course at EPFL.",
         "createdAt" : "2020-11-25T17:09:05Z",
@@ -1962,7 +2132,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1973,7 +2144,8 @@
         "author" : {
           "login" : "mwojtow",
           "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
+          "altName" : null
         },
         "body" : "test",
         "createdAt" : "2021-02-16T10:44:02.044Z",
@@ -1988,7 +2160,8 @@
         "author" : {
           "login" : "mwojtow",
           "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
+          "altName" : null
         },
         "body" : "test",
         "createdAt" : "2021-02-16T10:44:22.717Z",
@@ -2014,7 +2187,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "It seems that we have a large regression in 0.27 and no completions coming from scala library are not displayed.\r\nThis way most large tests will be run on 0.26, which works and I will focus on fixing it upstream before the release.\r\n",
         "createdAt" : "2020-09-09T15:25:28Z",
@@ -2022,7 +2196,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -2033,7 +2208,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "Link to the regression https://github.com/lampepfl/dotty/issues/9760",
         "createdAt" : "2020-09-09T16:49:54Z",
@@ -2041,7 +2217,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -2052,7 +2229,8 @@
         "author" : {
           "login" : "mwojtow",
           "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
+          "altName" : null
         },
         "body" : "test",
         "createdAt" : "2021-02-16T11:12:42.108Z",
@@ -2078,7 +2256,8 @@
         "author" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "body" : "where is this used?",
         "createdAt" : "2018-11-29T09:55:01Z",
@@ -2086,7 +2265,8 @@
         "lastEditedBy" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -2097,7 +2277,8 @@
         "author" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "body" : "answering myself: in #351 ",
         "createdAt" : "2018-11-29T09:56:01Z",
@@ -2105,7 +2286,8 @@
         "lastEditedBy" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -2116,7 +2298,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "Just a habit, generally useful to have although not used atm",
         "createdAt" : "2018-11-29T09:58:35Z",
@@ -2124,7 +2307,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -2135,7 +2319,8 @@
         "author" : {
           "login" : "mwojtow",
           "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
+          "altName" : null
         },
         "body" : "test comment",
         "createdAt" : "2021-02-17T10:12:45.222Z",
@@ -2150,7 +2335,8 @@
         "author" : {
           "login" : "mwojtow",
           "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
+          "altName" : null
         },
         "body" : "test 2",
         "createdAt" : "2021-02-18T07:51:48.85Z",
@@ -2176,7 +2362,8 @@
         "author" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "body" : "Do we need this option at all if we're not cross-building?",
         "createdAt" : "2018-06-23T09:53:36Z",
@@ -2184,7 +2371,8 @@
         "lastEditedBy" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -2195,7 +2383,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "I added it to ensure `+compile` does the right thing, just in case",
         "createdAt" : "2018-06-23T10:21:08Z",
@@ -2203,7 +2392,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -2214,7 +2404,8 @@
         "author" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "body" : "Out of curiosity, what does +compile do if there is crossScalaVersions is not set? I thought it would already do the right thing.",
         "createdAt" : "2018-06-23T10:23:13Z",
@@ -2222,7 +2413,8 @@
         "lastEditedBy" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -2233,7 +2425,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "I don't know what `+compile` does when crossScalaVersions is unset",
         "createdAt" : "2018-06-27T09:30:57Z",
@@ -2241,7 +2434,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -2252,7 +2446,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "Test",
         "createdAt" : "2021-02-10T08:08:31.419Z",
@@ -2267,7 +2462,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "YAT",
         "createdAt" : "2021-02-10T08:28:03.499Z",
@@ -2282,7 +2478,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "yeti",
         "createdAt" : "2021-02-18T13:18:47.237Z",
@@ -2297,7 +2494,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "yat",
         "createdAt" : "2021-03-01T06:51:09.724Z",
@@ -2312,7 +2510,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "pierwszy",
         "createdAt" : "2021-03-04T08:38:48.014Z",
@@ -2327,7 +2526,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "2",
         "createdAt" : "2021-03-04T08:38:56.093Z",
@@ -2342,7 +2542,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "3",
         "createdAt" : "2021-03-04T08:39:02.623Z",
@@ -2357,7 +2558,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "4",
         "createdAt" : "2021-03-04T08:39:09.474Z",
@@ -2372,7 +2574,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "5",
         "createdAt" : "2021-03-04T08:39:41.964Z",
@@ -2387,7 +2590,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "6",
         "createdAt" : "2021-03-04T08:39:52.239Z",
@@ -2402,7 +2606,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "7",
         "createdAt" : "2021-03-04T08:40:11.948Z",
@@ -2428,7 +2633,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "I was just gonna open a PR to do this ❤️ ",
         "createdAt" : "2019-09-27T16:45:12Z",
@@ -2436,7 +2642,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -2447,7 +2654,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "Test comment",
         "createdAt" : "2021-02-16T08:40:52.563Z",
@@ -2462,7 +2670,8 @@
         "author" : {
           "login" : "mwojtow",
           "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
+          "altName" : null
         },
         "body" : "test",
         "createdAt" : "2021-02-16T09:04:16.902Z",
@@ -2477,7 +2686,8 @@
         "author" : {
           "login" : "mwojtow",
           "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
+          "altName" : null
         },
         "body" : "test with loader",
         "createdAt" : "2021-02-16T09:36:24.887Z",
@@ -2492,7 +2702,8 @@
         "author" : {
           "login" : "mwojtow",
           "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
+          "altName" : null
         },
         "body" : "test comment 3",
         "createdAt" : "2021-02-18T08:16:36.637Z",
@@ -2507,7 +2718,8 @@
         "author" : {
           "login" : "mwojtow",
           "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
+          "altName" : null
         },
         "body" : "Rafel comment test",
         "createdAt" : "2021-02-18T08:26:06.994Z",
@@ -2522,7 +2734,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "another test - linux",
         "createdAt" : "2021-02-18T15:10:29.247Z",
@@ -2537,7 +2750,8 @@
         "author" : {
           "login" : "kasprzyckit",
           "name" : "Tomasz Kasprzycki",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/22435324?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/22435324?v=4",
+          "altName" : null
         },
         "body" : "test - tomek",
         "createdAt" : "2021-02-25T07:59:49.36Z",
@@ -2552,7 +2766,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "test",
         "createdAt" : "2021-02-25T13:18:36.303Z",
@@ -2567,7 +2782,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "xd",
         "createdAt" : "2021-02-25T13:33:30.618Z",
@@ -2582,7 +2798,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : ";p",
         "createdAt" : "2021-02-25T13:33:35.213Z",
@@ -2597,7 +2814,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : ":d",
         "createdAt" : "2021-02-25T13:37:16.958Z",
@@ -2612,7 +2830,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "2",
         "createdAt" : "2021-02-25T13:37:20.014Z",
@@ -2627,7 +2846,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "3",
         "createdAt" : "2021-02-25T13:48:56.13Z",
@@ -2642,7 +2862,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "4",
         "createdAt" : "2021-02-25T13:50:41.038Z",
@@ -2657,7 +2878,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "5",
         "createdAt" : "2021-02-25T13:50:49.353Z",
@@ -2672,7 +2894,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "6",
         "createdAt" : "2021-02-25T13:52:55.53Z",
@@ -2687,7 +2910,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "7",
         "createdAt" : "2021-02-25T14:01:26.146Z",
@@ -2702,7 +2926,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "8",
         "createdAt" : "2021-02-25T14:02:36.09Z",
@@ -2717,7 +2942,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "9",
         "createdAt" : "2021-02-25T14:05:36.713Z",
@@ -2732,7 +2958,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "10",
         "createdAt" : "2021-02-25T14:11:52.179Z",
@@ -2747,7 +2974,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "11",
         "createdAt" : "2021-02-25T14:15:30.615Z",
@@ -2762,7 +2990,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "12",
         "createdAt" : "2021-02-25T14:15:34.724Z",
@@ -2777,7 +3006,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "pll",
         "createdAt" : "2021-03-01T09:03:03.989Z",
@@ -2803,7 +3033,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4",
+          "altName" : null
         },
         "body" : "You may want to leave a comment on what Google account owns this bucket to help the next person investigate the failing CI 😅 ",
         "createdAt" : "2021-01-27T10:49:53Z",
@@ -2811,7 +3042,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -2822,7 +3054,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "I think I should be able to give more people access to it. I will try to do that later if it works, but I added a comment for now.",
         "createdAt" : "2021-01-27T10:53:07Z",
@@ -2830,7 +3063,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -2841,7 +3075,8 @@
         "author" : {
           "login" : "mwojtow",
           "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
+          "altName" : null
         },
         "body" : "test",
         "createdAt" : "2021-03-01T09:12:40.708Z",
@@ -2867,7 +3102,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "pppp",
         "createdAt" : "2021-03-05T08:11:13.38Z",
@@ -2882,7 +3118,8 @@
         "author" : {
           "login" : "Gedochao",
           "name" : "Piotr Chabelski",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/18601388?u=3bdb8a47886f318b553db837d3715a1891e7f176&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/18601388?u=3bdb8a47886f318b553db837d3715a1891e7f176&v=4",
+          "altName" : null
         },
         "body" : "xyz",
         "createdAt" : "2021-03-18T08:36:48.971Z",
@@ -2897,7 +3134,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "xxd",
         "createdAt" : "2021-03-18T08:36:49.205Z",
@@ -2912,7 +3150,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "aaaa",
         "createdAt" : "2021-03-18T08:38:03.174Z",
@@ -2927,7 +3166,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "xd",
         "createdAt" : "2021-03-18T10:06:32.751Z",
@@ -2942,7 +3182,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "xd",
         "createdAt" : "2021-03-18T10:07:51.557Z",
@@ -2957,7 +3198,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : ";",
         "createdAt" : "2021-03-18T10:09:43.65Z",
@@ -2972,7 +3214,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "kkk",
         "createdAt" : "2021-03-18T10:10:22.376Z",
@@ -2998,7 +3241,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "Added this back, since I figured it we should not be just dropping it on users.",
         "createdAt" : "2020-07-01T06:49:48Z",
@@ -3006,7 +3250,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -3017,7 +3262,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "Also added 0.23.0, which doesn't influence the tests",
         "createdAt" : "2020-07-01T07:16:53Z",
@@ -3025,7 +3271,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -3036,7 +3283,8 @@
         "author" : {
           "login" : "mwojtow",
           "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
+          "altName" : null
         },
         "body" : "test new flow",
         "createdAt" : "2021-03-23T12:00:57.47Z",
@@ -3062,7 +3310,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "This should simplify things and make it more future proof.",
         "createdAt" : "2020-06-19T08:26:57Z",
@@ -3070,7 +3319,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -3081,7 +3331,8 @@
         "author" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "body" : "Ah, I like this. Good idea 👍 ",
         "createdAt" : "2020-06-19T08:30:09Z",
@@ -3089,7 +3340,8 @@
         "lastEditedBy" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -3100,7 +3352,8 @@
         "author" : {
           "login" : "mwojtow",
           "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
+          "altName" : null
         },
         "body" : "test new flow",
         "createdAt" : "2021-03-23T12:21:00.275Z",
@@ -3126,7 +3379,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "Since Metals is not a library, I imagine this will not be needed.",
         "createdAt" : "2020-10-28T18:14:29Z",
@@ -3134,7 +3388,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -3145,7 +3400,8 @@
         "author" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "body" : "Ahh, good point. I should have thought of this before. 👍 ",
         "createdAt" : "2020-10-29T08:24:19Z",
@@ -3153,7 +3409,8 @@
         "lastEditedBy" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -3164,7 +3421,8 @@
         "author" : {
           "login" : "mwojtow",
           "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
+          "altName" : null
         },
         "body" : "flow test",
         "createdAt" : "2021-03-24T08:05:53.051Z",
@@ -3179,7 +3437,8 @@
         "author" : {
           "login" : "mwojtow",
           "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
+          "altName" : null
         },
         "body" : "flow test",
         "createdAt" : "2021-03-24T08:05:55.223Z",
@@ -3205,7 +3464,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "Let's maybe drop 2.12.7 and make 2.12.8 deprecated?",
         "createdAt" : "2019-09-11T13:14:41Z",
@@ -3213,7 +3473,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -3224,7 +3485,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "We can deprecate it with the next version, since it's working now.",
         "createdAt" : "2019-09-13T09:22:14Z",
@@ -3232,7 +3494,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -3243,7 +3506,8 @@
         "author" : {
           "login" : "mwojtow",
           "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
+          "altName" : null
         },
         "body" : "test",
         "createdAt" : "2021-03-25T08:23:05.066Z",
@@ -3258,7 +3522,8 @@
         "author" : {
           "login" : "mwojtow",
           "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
+          "altName" : null
         },
         "body" : "test",
         "createdAt" : "2021-03-25T08:23:09.196Z",
@@ -3273,7 +3538,8 @@
         "author" : {
           "login" : "mwojtow",
           "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
+          "altName" : null
         },
         "body" : "test 2",
         "createdAt" : "2021-03-25T08:24:58.09Z",
@@ -3288,7 +3554,8 @@
         "author" : {
           "login" : "mwojtow",
           "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
+          "altName" : null
         },
         "body" : "test3",
         "createdAt" : "2021-03-25T08:25:01.619Z",
