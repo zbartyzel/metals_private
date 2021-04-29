@@ -3568,5 +3568,32 @@
     "commit" : "74bd65dd97ca4ebf3172bae4a58071e6c1ed8060",
     "line" : 18,
     "diffHunk" : "@@ -1,1 +151,155 @@  def supportedScalaVersions =\n    Seq(scala213, \"2.12.8\", \"2.12.9\", scala212) ++ deprecatedScalaVersions\n  def deprecatedScalaVersions = Seq(\"2.12.7\", scala211)\n  def guava = \"com.google.guava\" % \"guava\" % \"28.0-jre\"\n  def lsp4j = \"org.eclipse.lsp4j\" % \"org.eclipse.lsp4j\" % \"0.8.0\""
+  },
+  {
+    "id" : "1791c784-d830-4000-84ef-bfb6e16ca200",
+    "prId" : null,
+    "prUrl" : null,
+    "prSource" : null,
+    "comments" : [
+      {
+        "id" : "1791c784-d830-4000-8428-f67edd515400",
+        "parentId" : null,
+        "author" : {
+          "login" : "mwojtow",
+          "name" : "Marcin Wójtowicz",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
+          "altName" : null
+        },
+        "body" : "test",
+        "createdAt" : "2021-04-29T07:11:56.803Z",
+        "updatedAt" : "2021-04-29T07:11:56.803Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "v0.9.4-171-g652fb4a",
+    "line" : null,
+    "diffHunk" : "@@ -1,1 +14,20 @@def crossSetting[A](\n    scalaVersion: String,\n    if211: List[A] = Nil,\n    if2: List[A] = Nil,\n    ifLaterThan211: List[A] = Nil,\n    if3: List[A] = Nil\n): List[A] ="
   }
 ]
