@@ -337,5 +337,32 @@
     "commit" : "v0.9.4-171-g652fb4a",
     "line" : null,
     "diffHunk" : "@@ -1,1 +49,50 @@  val inflated: Inflated = Inflated.jars(fullClasspath)\n"
+  },
+  {
+    "id" : "1791cf98-ebf0-4000-8e96-18a1c6501f00",
+    "prId" : null,
+    "prUrl" : null,
+    "prSource" : null,
+    "comments" : [
+      {
+        "id" : "1791cf98-ebf0-4000-8279-bb24b7263600",
+        "parentId" : null,
+        "author" : {
+          "login" : "mwojtow",
+          "name" : "Marcin Wójtowicz",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
+          "altName" : null
+        },
+        "body" : "test new disc with mention flow",
+        "createdAt" : "2021-04-29T09:33:07.647Z",
+        "updatedAt" : "2021-04-29T09:33:07.647Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "v0.9.4-171-g652fb4a",
+    "line" : null,
+    "diffHunk" : "@@ -1,1 +38,44 @@  val scalaLibrarySourcesJar: AbsolutePath = inputs.dependencySources.entries\n    .find(_.toNIO.getFileName.toString.contains(\"scala-library\"))\n    .getOrElse {\n      sys.error(\n        s\"missing: scala-library-sources.jar, obtained ${inputs.dependencySources}\"\n      )\n    }"
   }
 ]
