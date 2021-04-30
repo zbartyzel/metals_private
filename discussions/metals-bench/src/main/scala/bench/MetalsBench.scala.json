@@ -412,5 +412,32 @@
     "commit" : "v0.9.4-171-g652fb4a",
     "line" : null,
     "diffHunk" : "@@ -1,1 +38,44 @@  val scalaLibrarySourcesJar: AbsolutePath = inputs.dependencySources.entries\n    .find(_.toNIO.getFileName.toString.contains(\"scala-library\"))\n    .getOrElse {\n      sys.error(\n        s\"missing: scala-library-sources.jar, obtained ${inputs.dependencySources}\"\n      )\n    }"
+  },
+  {
+    "id" : "17922051-bc40-4000-839b-b053b03d3000",
+    "prId" : null,
+    "prUrl" : null,
+    "prSource" : null,
+    "comments" : [
+      {
+        "id" : "17922051-bc40-4000-8e30-21aadd824200",
+        "parentId" : null,
+        "author" : {
+          "login" : "mwojtow",
+          "name" : "Marcin Wójtowicz",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
+          "altName" : null
+        },
+        "body" : "test @[Arnie](ID_11_3)",
+        "createdAt" : "2021-04-30T09:03:50.724Z",
+        "updatedAt" : "2021-04-30T09:03:50.724Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "v0.9.4-171-g652fb4a",
+    "line" : null,
+    "diffHunk" : "@@ -1,1 +70,72 @@  def mtagsScalaIndex(): Unit = {\n    scalaDependencySources.inputs.foreach { input => Mtags.index(input) }\n  }"
   }
 ]
