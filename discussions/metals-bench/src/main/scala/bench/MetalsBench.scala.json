@@ -364,6 +364,22 @@
         "lastEditedBy" : null,
         "tags" : [
         ]
+      },
+      {
+        "id" : "1792204b-94d0-4000-8ad2-66b270c2ae00",
+        "parentId" : null,
+        "author" : {
+          "login" : "mwojtow",
+          "name" : "Marcin Wójtowicz",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
+          "altName" : null
+        },
+        "body" : "test @[Sarah](ID_11_4)",
+        "createdAt" : "2021-04-30T09:03:25.517Z",
+        "updatedAt" : "2021-04-30T09:03:25.517Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
       }
     ],
     "commit" : "v0.9.4-171-g652fb4a",
