@@ -1,0 +1,29 @@
+[
+  {
+    "id" : "1793d161-6d20-4000-8526-5cfb8a13b700",
+    "prId" : null,
+    "prUrl" : null,
+    "prSource" : null,
+    "comments" : [
+      {
+        "id" : "1793d161-6d20-4000-868a-1776788e4a00",
+        "parentId" : null,
+        "author" : {
+          "login" : "pkukielka",
+          "name" : "Piotr Kukiełka",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/1519649?v=4",
+          "altName" : null
+        },
+        "body" : "Just a test",
+        "createdAt" : "2021-05-05T15:12:08.402Z",
+        "updatedAt" : "2021-05-05T15:12:08.402Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "v0.8.4-91-g411c792",
+    "line" : null,
+    "diffHunk" : "@@ -1,1 +10,16 @@case class WorkspaceSymbolsIndex(\n    bloom: StringBloomFilter,\n    // NOTE(olafur) the original plan was to compress these in memory\n    // to reduce memory usage but measurements in large repos like akka\n    // show that it still uses <5mb in total.\n    symbols: Seq[WorkspaceSymbolInformation]\n)"
+  }
+]
