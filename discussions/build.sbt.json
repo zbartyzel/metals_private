@@ -3611,5 +3611,32 @@
     "commit" : "v0.9.4-171-g652fb4a",
     "line" : null,
     "diffHunk" : "@@ -1,1 +14,20 @@def crossSetting[A](\n    scalaVersion: String,\n    if211: List[A] = Nil,\n    if2: List[A] = Nil,\n    ifLaterThan211: List[A] = Nil,\n    if3: List[A] = Nil\n): List[A] ="
+  },
+  {
+    "id" : "1793c4a2-e440-4000-8b87-9cc0bf141100",
+    "prId" : null,
+    "prUrl" : null,
+    "prSource" : null,
+    "comments" : [
+      {
+        "id" : "1793c4a2-e440-4000-87c7-4b66186b9e00",
+        "parentId" : null,
+        "author" : {
+          "login" : "mucharafal",
+          "name" : "Rafał Mucha",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
+        },
+        "body" : "Totally new comment",
+        "createdAt" : "2021-05-05T11:29:25.06Z",
+        "updatedAt" : "2021-05-05T11:29:25.06Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "v0.10.2-15-gf2ee61f",
+    "line" : null,
+    "diffHunk" : "@@ -1,1 +58,71 @@\n    homepage := Some(url(\"https://github.com/scalameta/metals\")),\n    developers := List(\n      Developer(\n        \"adpi2\",\n        \"Adrien Piquerez\",\n        \"adrien.piquerez@epfl.ch\",\n        url(\"https://github.com/adpi2\")\n      ),\n      Developer(\n        \"laughedelic\",\n        \"Alexey Alekhin\",\n        \"laughedelic@gmail.com\",\n        url(\"https://github.com/laughedelic\")"
   }
 ]
