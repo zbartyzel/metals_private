@@ -154,6 +154,22 @@
         "lastEditedBy" : null,
         "tags" : [
         ]
+      },
+      {
+        "id" : "179405fc-35d0-4000-8cb8-03f069d16600",
+        "parentId" : null,
+        "author" : {
+          "login" : "mwojtow",
+          "name" : "Marcin Wójtowicz",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
+          "altName" : null
+        },
+        "body" : "test @newMention",
+        "createdAt" : "2021-05-06T06:31:28.349Z",
+        "updatedAt" : "2021-05-06T06:31:28.349Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
       }
     ],
     "commit" : "v0.9.4-171-g652fb4a",
