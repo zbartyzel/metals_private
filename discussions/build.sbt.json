@@ -3670,5 +3670,32 @@
     "commit" : "v0.10.2-15-gf2ee61f",
     "line" : null,
     "diffHunk" : "@@ -1,1 +58,71 @@\n    homepage := Some(url(\"https://github.com/scalameta/metals\")),\n    developers := List(\n      Developer(\n        \"adpi2\",\n        \"Adrien Piquerez\",\n        \"adrien.piquerez@epfl.ch\",\n        url(\"https://github.com/adpi2\")\n      ),\n      Developer(\n        \"laughedelic\",\n        \"Alexey Alekhin\",\n        \"laughedelic@gmail.com\",\n        url(\"https://github.com/laughedelic\")"
+  },
+  {
+    "id" : "17945aa7-bbb0-4000-8e5a-39af46ad3200",
+    "prId" : null,
+    "prUrl" : null,
+    "prSource" : null,
+    "comments" : [
+      {
+        "id" : "17945aa7-bbb0-4000-874c-eb775ea36600",
+        "parentId" : null,
+        "author" : {
+          "login" : "pkukielka",
+          "name" : "Piotr Kukiełka",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/1519649?v=4",
+          "altName" : null
+        },
+        "body" : "fdsfdfsdf",
+        "createdAt" : "2021-05-07T07:11:11.291Z",
+        "updatedAt" : "2021-05-07T07:11:11.291Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "v0.8.4-91-g411c792",
+    "line" : null,
+    "diffHunk" : "@@ -1,1 +228,237 @@\nlazy val interfaces = project\n  .in(file(\"mtags-interfaces\"))\n  .settings(\n    moduleName := \"mtags-interfaces\",\n    autoScalaLibrary := false,\n    crossPaths := false,\n    libraryDependencies ++= List(\n      V.lsp4j\n    ),"
   }
 ]
