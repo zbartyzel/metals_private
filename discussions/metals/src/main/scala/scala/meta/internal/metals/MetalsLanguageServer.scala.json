@@ -11,7 +11,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "Maybe include it in the Doctor?  I feel like it's part of the Doctor's functionality. ",
         "createdAt" : "2020-07-08T14:42:36Z",
@@ -19,7 +20,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -30,7 +32,8 @@
         "author" : {
           "login" : "kpbochenek",
           "name" : "Krzysiek Bochenek",
-          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4",
+          "altName" : null
         },
         "body" : "I always prefer smaller, single responsibility classes but I have no strong preference here, if you want I can move this logic to Doctor :+1:",
         "createdAt" : "2020-07-09T07:42:53Z",
@@ -38,7 +41,8 @@
         "lastEditedBy" : {
           "login" : "kpbochenek",
           "name" : "Krzysiek Bochenek",
-          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -49,7 +53,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "It's fine, but at some point we need a proper solution for setting up all the classes better.",
         "createdAt" : "2020-07-09T11:58:31Z",
@@ -57,7 +62,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -79,7 +85,8 @@
         "author" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "body" : "Was this an issue before? Would this only be an issue if for example the source was removed and then we were looking at stale information, or when would this actually happen?",
         "createdAt" : "2020-06-19T19:57:13Z",
@@ -87,7 +94,8 @@
         "lastEditedBy" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -98,7 +106,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "This is actually only an issue if ammonite failed to generate the scala files, which also means we should watch the `.ammonite` directory, since they can be created after indexing :thinking: ",
         "createdAt" : "2020-06-19T22:24:34Z",
@@ -106,7 +115,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -117,7 +127,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "Actually, it didn't fail to generate, ammonite just differently generates path if `^` is used, which should not normally be an issue, but we should leave the guard just in case: I will change the tests a bit so that it's more natural path and not `^.backToTheSameDirectory`",
         "createdAt" : "2020-06-20T20:06:42Z",
@@ -125,7 +136,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -147,7 +159,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "This might also be useful to log anyway just in case. There will be a fix in ammonite to not remove those directories, which will help in the long run.",
         "createdAt" : "2020-06-04T12:22:32Z",
@@ -155,7 +168,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -177,7 +191,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "This is needed so that we are able to be able to figure out what the original source roots were and and find their path relative to workspace root",
         "createdAt" : "2020-05-29T16:32:09Z",
@@ -185,7 +200,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -207,7 +223,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "Maybe we should filter the ones with incompatible versions and show a warning for those?",
         "createdAt" : "2020-05-18T10:40:39Z",
@@ -215,7 +232,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -226,7 +244,8 @@
         "author" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "body" : "So one thing I thought about while doing this is in a situation where a user has an sbt and a mill file for example, I think it's important for the choice to take priority. Because let's say they are on an unsupported sbt version, but they want sbt, then it's probably better for them to choose sbt and then get a warning and \"no build tool\" message rather than have sbt filtered out, and mill chosen even if that's not what they want.\r\n\r\nWhat do you think?",
         "createdAt" : "2020-05-18T11:57:29Z",
@@ -234,7 +253,8 @@
         "lastEditedBy" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -245,7 +265,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "Sure, that's probably better.",
         "createdAt" : "2020-05-18T13:35:51Z",
@@ -253,7 +274,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -275,7 +297,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "Maybe we could have this:\r\n```scala\r\n    val toIndexSource = targetOpt\r\n      .flatMap(ammonite.generatedScalaPath(_, source))\r\n      .getOrElse(source)\r\n```\r\nin a separate function and just use here to get the real source item?",
         "createdAt" : "2020-03-31T17:41:32Z",
@@ -283,7 +306,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -294,7 +318,8 @@
         "author" : {
           "login" : "alexarchambault",
           "name" : "Alexandre Archambault",
-          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7063723?u=d5befca0ebfec0042dad7ef93973490eef750ff4&v=4"
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7063723?u=d5befca0ebfec0042dad7ef93973490eef750ff4&v=4",
+          "altName" : null
         },
         "body" : "Done.",
         "createdAt" : "2020-04-05T22:17:53Z",
@@ -302,7 +327,8 @@
         "lastEditedBy" : {
           "login" : "alexarchambault",
           "name" : "Alexandre Archambault",
-          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7063723?u=d5befca0ebfec0042dad7ef93973490eef750ff4&v=4"
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7063723?u=d5befca0ebfec0042dad7ef93973490eef750ff4&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -324,7 +350,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "Could we reindex only the Ammonite targets when needed? ",
         "createdAt" : "2020-04-09T11:00:44Z",
@@ -332,7 +359,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -343,7 +371,8 @@
         "author" : {
           "login" : "alexarchambault",
           "name" : "Alexandre Archambault",
-          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7063723?u=d5befca0ebfec0042dad7ef93973490eef750ff4&v=4"
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7063723?u=d5befca0ebfec0042dad7ef93973490eef750ff4&v=4",
+          "altName" : null
         },
         "body" : "I don't know… It seems that would require being able to remove particular build targets from the indices (only the Ammonite ones that changed when (re)importing Ammonite scripts, or only the main build ones when (re)importing the main build), before adding them back with updated parameters. I don't know if that's do-able.",
         "createdAt" : "2020-04-11T14:06:47Z",
@@ -351,7 +380,8 @@
         "lastEditedBy" : {
           "login" : "alexarchambault",
           "name" : "Alexandre Archambault",
-          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7063723?u=d5befca0ebfec0042dad7ef93973490eef750ff4&v=4"
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7063723?u=d5befca0ebfec0042dad7ef93973490eef750ff4&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -373,7 +403,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "Will this trigger a warning if I'm running a custom version of Bloop locally? Ideally, it would be good to only trigger this when the user has explicitly configured a bloop version through the settings before (I personally don't change this setting).",
         "createdAt" : "2020-03-12T08:46:51Z",
@@ -381,7 +412,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -392,7 +424,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "Fixed!",
         "createdAt" : "2020-03-12T10:22:06Z",
@@ -400,7 +433,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -422,7 +456,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "Since it's for the test, it's better that we wait.",
         "createdAt" : "2020-02-17T14:53:50Z",
@@ -430,7 +465,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -452,7 +488,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "It's now run in a Future in order not to block the event watcher",
         "createdAt" : "2020-02-17T15:47:31Z",
@@ -460,7 +497,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -482,7 +520,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "This will crash with `MatchError` when the user doesn't want to reconnect.",
         "createdAt" : "2020-01-17T19:49:28Z",
@@ -490,7 +529,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -501,7 +541,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "Thanks, fixed!",
         "createdAt" : "2020-01-18T18:58:40Z",
@@ -509,7 +550,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -531,7 +573,8 @@
         "author" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "body" : "I got this wrong in #1251. When the client supports code action literals we can send the `CodeActionOptions` version, otherwise we just send `true`",
         "createdAt" : "2020-01-11T17:13:21Z",
@@ -539,7 +582,8 @@
         "lastEditedBy" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -550,7 +594,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "Sorry for spam",
         "createdAt" : "2021-02-24T12:11:22.244Z",
@@ -565,7 +610,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "Another eggs",
         "createdAt" : "2021-02-24T12:20:12.935Z",
@@ -580,7 +626,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "asd",
         "createdAt" : "2021-02-24T12:24:27.825Z",
@@ -595,7 +642,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "Yet another",
         "createdAt" : "2021-02-24T12:27:57.587Z",
@@ -610,11 +658,28 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "aa",
         "createdAt" : "2021-02-24T12:28:35.759Z",
         "updatedAt" : "2021-02-24T12:28:35.759Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1796599b-91f0-4000-8c70-5dfec5e9d900",
+        "parentId" : null,
+        "author" : {
+          "login" : "pkukielka",
+          "name" : "Piotr Kukiełka",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/1519649?v=4",
+          "altName" : null
+        },
+        "body" : "Test2",
+        "createdAt" : "2021-05-13T12:00:43.807Z",
+        "updatedAt" : "2021-05-13T12:00:43.807Z",
         "lastEditedBy" : null,
         "tags" : [
         ]
@@ -636,7 +701,8 @@
         "author" : {
           "login" : "mzarnowski",
           "name" : "Marek Żarnowski",
-          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4",
+          "altName" : null
         },
         "body" : "could you also adapt the remaining methods on the `build` to return the scala `Future` as well?",
         "createdAt" : "2020-01-09T11:22:45Z",
@@ -644,7 +710,8 @@
         "lastEditedBy" : {
           "login" : "mzarnowski",
           "name" : "Marek Żarnowski",
-          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -655,7 +722,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "Adapted most except `compile`, since the CompletableFuture.cancel is being used and don't want to rework cancellation right now.",
         "createdAt" : "2020-01-09T19:25:50Z",
@@ -663,7 +731,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -685,7 +754,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "nit: should we move this into a separate file? ",
         "createdAt" : "2020-01-06T16:35:07Z",
@@ -693,7 +763,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -704,7 +775,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "I think we should do it as a larger refactor of the file. I can see a number of similar methods that might be put there. ",
         "createdAt" : "2020-01-06T17:11:17Z",
@@ -712,7 +784,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -734,7 +807,8 @@
         "author" : {
           "login" : "tanishiking",
           "name" : "Rikito Taniguchi",
-          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4"
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4",
+          "altName" : null
         },
         "body" : "Enable to fire `textDocument/completion` on type `*`",
         "createdAt" : "2020-01-04T12:23:15Z",
@@ -742,7 +816,8 @@
         "lastEditedBy" : {
           "login" : "tanishiking",
           "name" : "Rikito Taniguchi",
-          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4"
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -764,7 +839,8 @@
         "author" : {
           "login" : "tanishiking",
           "name" : "Rikito Taniguchi",
-          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4"
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4",
+          "altName" : null
         },
         "body" : "Clear symbolSearch cache (for dependency sources) on indexing workspace",
         "createdAt" : "2019-12-15T17:54:47Z",
@@ -772,7 +848,8 @@
         "lastEditedBy" : {
           "login" : "tanishiking",
           "name" : "Rikito Taniguchi",
-          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4"
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -794,7 +871,8 @@
         "author" : {
           "login" : "mzarnowski",
           "name" : "Marek Żarnowski",
-          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4",
+          "altName" : null
         },
         "body" : "Why do we allow creating incompatible a BuildTool with incompatible version?",
         "createdAt" : "2019-12-05T08:10:37Z",
@@ -802,7 +880,8 @@
         "lastEditedBy" : {
           "login" : "mzarnowski",
           "name" : "Marek Żarnowski",
-          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -813,7 +892,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "This code is unchanged in this PR, it just moved causing a diff. Please open an issue if you want to follow up on this.",
         "createdAt" : "2019-12-05T10:29:23Z",
@@ -821,7 +901,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -843,7 +924,8 @@
         "author" : {
           "login" : "mzarnowski",
           "name" : "Marek Żarnowski",
-          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4",
+          "altName" : null
         },
         "body" : "Could you also include the minimal version which is required so the user knows how far it must be upgraded? Also, the recommended version, since it is already known, could be useful to the user.",
         "createdAt" : "2019-12-05T08:11:59Z",
@@ -851,7 +933,8 @@
         "lastEditedBy" : {
           "login" : "mzarnowski",
           "name" : "Marek Żarnowski",
-          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -862,7 +945,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "This code is unchanged in this PR, it just moved causing a diff. Please open an issue if you want to follow up on this.",
         "createdAt" : "2019-12-05T10:29:32Z",
@@ -870,7 +954,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -892,7 +977,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "Would it be possible to get this as part of the digest so that `import build` pops up?",
         "createdAt" : "2019-09-24T11:18:33Z",
@@ -900,7 +986,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -911,7 +998,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "Can you elaborate? Here we prompt the user to \"import build\" when the `pants-targets` setting changes. I have added a logging statement there for now. Down the road, it would be nice to prompt the user with a text box to provide what targets to run and then automatically update the setting for the user. We don't have the infrastructure to implement that yet, however.",
         "createdAt" : "2019-09-26T15:44:49Z",
@@ -919,7 +1007,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -930,7 +1019,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "In PantsDigest we have the UserConfiguration now so we could also digest targets in the settings and we would not need to do anything else. The user would get informed that their pants build changed and that they need to reimport.\r\n\r\nWe wouldn't need to have some special logic in MetalsLanguageServer",
         "createdAt" : "2019-09-27T15:14:13Z",
@@ -938,7 +1028,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -949,7 +1040,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "The reason we need this logic in `MetalsLanguageServer` is to trigger a new digest when the `pants-targets` setting changes. Even if we include the targets in the digest, we don't get a notification to trigger the digest until a BUILD file changes.",
         "createdAt" : "2019-12-03T16:19:35Z",
@@ -957,7 +1049,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -979,7 +1072,8 @@
         "author" : {
           "login" : "mzarnowski",
           "name" : "Marek Żarnowski",
-          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4",
+          "altName" : null
         },
         "body" : "does it work in vscode?  The [specification](https://microsoft.github.io/language-server-protocol/specification#textDocument_onTypeFormatting) expects a `List`, not an `Option[TextEdit]`.",
         "createdAt" : "2019-08-19T08:01:07Z",
@@ -987,7 +1081,8 @@
         "lastEditedBy" : {
           "login" : "mzarnowski",
           "name" : "Marek Żarnowski",
-          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -998,7 +1093,8 @@
         "author" : {
           "login" : "Karolina-Bogacka",
           "name" : "Karolina-Bogacka",
-          "avatarUrl" : "https://avatars1.githubusercontent.com/u/23015369?u=b3677e6a6a4594e396a59e1386936bfbc1b27829&v=4"
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/23015369?u=b3677e6a6a4594e396a59e1386936bfbc1b27829&v=4",
+          "altName" : null
         },
         "body" : "it doesn't, and you're right, I haven't noticed. But I've changed my ontypeformatting product to a list and the server still doesn't seem to be responding properly, so it's probably something deeper, too.",
         "createdAt" : "2019-08-19T13:33:32Z",
@@ -1006,7 +1102,8 @@
         "lastEditedBy" : {
           "login" : "Karolina-Bogacka",
           "name" : "Karolina-Bogacka",
-          "avatarUrl" : "https://avatars1.githubusercontent.com/u/23015369?u=b3677e6a6a4594e396a59e1386936bfbc1b27829&v=4"
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/23015369?u=b3677e6a6a4594e396a59e1386936bfbc1b27829&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1028,7 +1125,8 @@
         "author" : {
           "login" : "mzarnowski",
           "name" : "Marek Żarnowski",
-          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4",
+          "altName" : null
         },
         "body" : "or we could do:\r\n```scala\r\nval semanticDBDoc = semanticdbs.textDocument(source).documentIncludingStale\r\nif(semanticDBDoc.isEmpty){\r\n  warnings.noSemanticdb(source)\r\n} else {\r\n  val occurrence = for { ...} yield occ\r\n  occurrence match {\r\n    case None =>\r\n      // ignore\r\n    case Some(occ) =>\r\n      (...)\r\n  }\r\n}\r\n```\r\nwould probably make the logic simpler (no need to remember about semanticDBDoc being emoty or not when working on occurrences).\r\n\r\nor even something like that:\r\n\r\n```scala\r\n\r\nval semanticDBDoc = semanticdbs.textDocument(source).documentIncludingStale \r\nsemanticDBDoc match {\r\n  case None => warnings.noSemanticdb(source)\r\n  case Some(doc) =>\r\n    val occurrence = definitionProvider.positionOccurrence(source, position, doc).occurrence \r\n    occurrence.foreach { occ =>\r\n        (...)\r\n    }\r\n```",
         "createdAt" : "2019-08-06T06:02:20Z",
@@ -1036,7 +1134,8 @@
         "lastEditedBy" : {
           "login" : "mzarnowski",
           "name" : "Marek Żarnowski",
-          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4"
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/3709537?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1047,7 +1146,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "I'd rather not change too much now.",
         "createdAt" : "2019-08-06T08:40:43Z",
@@ -1055,7 +1155,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1077,7 +1178,8 @@
         "author" : {
           "login" : "tanishiking",
           "name" : "Rikito Taniguchi",
-          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4"
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4",
+          "altName" : null
         },
         "body" : "Just moved the implementation into `referencesResult` that returns `ReferencesResult` instead of `CompletableFuture[util.List[Location]]`.",
         "createdAt" : "2019-06-18T10:21:59Z",
@@ -1085,7 +1187,8 @@
         "lastEditedBy" : {
           "login" : "tanishiking",
           "name" : "Rikito Taniguchi",
-          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4"
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1096,7 +1199,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "Good idea",
         "createdAt" : "2019-06-18T12:52:02Z",
@@ -1104,7 +1208,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1126,7 +1231,8 @@
         "author" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "body" : "typo\r\n```suggestion\r\n            val referenceContext = new ReferenceContext(false)\r\n```",
         "createdAt" : "2019-06-18T10:25:14Z",
@@ -1134,7 +1240,8 @@
         "lastEditedBy" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1156,7 +1263,8 @@
         "author" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "body" : "```suggestion\r\n            val refParams = new ReferenceParams(referenceContext)\r\n```",
         "createdAt" : "2019-06-18T10:25:29Z",
@@ -1164,7 +1272,8 @@
         "lastEditedBy" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1186,7 +1295,8 @@
         "author" : {
           "login" : "tanishiking",
           "name" : "Rikito Taniguchi",
-          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4"
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4",
+          "altName" : null
         },
         "body" : "Returns `symbol` in addition to the `locations` because `TestingServer` requires symbol information.\r\nWrapping those by `DefinitionResult` for structuring the return value, but what I actually want is something like [`Definitionresult | ReferencesResult`](https://dotty.epfl.ch/docs/reference/new-types/union-types.html) haha.",
         "createdAt" : "2019-06-18T10:30:19Z",
@@ -1194,7 +1304,8 @@
         "lastEditedBy" : {
           "login" : "tanishiking",
           "name" : "Rikito Taniguchi",
-          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4"
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1205,7 +1316,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "`Either[A, B]` should work OK for unions with two types",
         "createdAt" : "2019-06-18T12:55:26Z",
@@ -1213,7 +1325,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1224,7 +1337,8 @@
         "author" : {
           "login" : "tanishiking",
           "name" : "Rikito Taniguchi",
-          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4"
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4",
+          "altName" : null
         },
         "body" : "That's right! But this time, let me leave the return value's type `Future[DefinitionResult]` because nesting `Either` inside `Future` makes things complicated and feels like to use something like `EitherT` ...",
         "createdAt" : "2019-06-18T16:19:23Z",
@@ -1232,7 +1346,8 @@
         "lastEditedBy" : {
           "login" : "tanishiking",
           "name" : "Rikito Taniguchi",
-          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4"
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1254,7 +1369,8 @@
         "author" : {
           "login" : "tanishiking",
           "name" : "Rikito Taniguchi",
-          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4"
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4",
+          "altName" : null
         },
         "body" : "Call `definitionResult` even if it failed to retrieve the symbol information from semanticdb because `DefinitionProvider#definition` [fallback to finding definitions from a presentation compiler](https://github.com/scalameta/metals/blob/50912543e057d958e4a336a6028f74ebca71271e/metals/src/main/scala/scala/meta/internal/metals/DefinitionProvider.scala#L62) if no definition locations found from semanticdb.",
         "createdAt" : "2019-06-18T10:32:53Z",
@@ -1262,7 +1378,8 @@
         "lastEditedBy" : {
           "login" : "tanishiking",
           "name" : "Rikito Taniguchi",
-          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4"
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1273,7 +1390,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "Sounds reasonable :+1:",
         "createdAt" : "2019-06-18T12:55:45Z",
@@ -1281,7 +1399,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1292,7 +1411,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "p",
         "createdAt" : "2021-03-24T10:46:00.67Z",
@@ -1318,7 +1438,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "We already have tests to see that diagnostics are cleared for deleted files after a `didSave` notification. I manually verified that this works as soon as the file is deleted without a `didSave` notification. However, I don't think we can write a non-flaky test case to stress this situation since file watchers are quite unreliable between operating systems.",
         "createdAt" : "2019-05-24T13:08:22Z",
@@ -1326,7 +1447,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1348,7 +1470,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "`SyntaxErrorSlowSuite` had become flaky until we merged the `parseTrees` and `onChange` futures here",
         "createdAt" : "2019-05-31T13:41:04Z",
@@ -1356,7 +1479,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1378,7 +1502,8 @@
         "author" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "body" : "minor, but you could use a SAM and this becomes:\r\n\r\n```scala\r\nsh.schedule(\r\n  () => tables.jarSymbols.deleteNotUsedTopLevels(usedJars.toArray),\r\n  2,\r\n  TimeUnit.SECONDS\r\n)\r\n```",
         "createdAt" : "2019-02-24T16:35:57Z",
@@ -1386,7 +1511,8 @@
         "lastEditedBy" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1397,7 +1523,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "Some overloads on `ExecutorService` don't work with SAM, I can't remember which exact one. I don't mind `new Runnable { ... }`",
         "createdAt" : "2019-02-24T16:38:36Z",
@@ -1405,7 +1532,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1427,7 +1555,8 @@
         "author" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "body" : "This case can be collapsed with the previous one",
         "createdAt" : "2019-01-13T22:06:15Z",
@@ -1435,7 +1564,8 @@
         "lastEditedBy" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1446,7 +1576,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "Huh, on my computer the code is different 🤔 \r\n```scala\r\n          case EventType.OVERFLOW =>\r\n            referencesProvider.onOverflow(event.path())\r\n```\r\n\r\nStill no diff, gonna push again.",
         "createdAt" : "2019-01-14T10:21:52Z",
@@ -1454,7 +1585,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1465,7 +1597,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "GitHub updated the diff now, it's a different case that we handle specially.",
         "createdAt" : "2019-01-14T10:22:40Z",
@@ -1473,7 +1606,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1495,7 +1629,8 @@
         "author" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "body" : "Is this call idepmpotent? Calling shutdown then exit will go through shutdown twice.",
         "createdAt" : "2018-11-30T09:38:26Z",
@@ -1503,7 +1638,8 @@
         "lastEditedBy" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1514,7 +1650,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "Yes it is, added a comment to explain why.",
         "createdAt" : "2018-11-30T09:51:22Z",
@@ -1522,7 +1659,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1544,7 +1682,8 @@
         "author" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "body" : "if you want you can use a SAM:\r\n\r\n```scala\r\nsh.schedule(() => initialized(new InitializedParams), 1, TimeUnit.SECONDS)\r\n```",
         "createdAt" : "2018-11-24T13:14:14Z",
@@ -1552,7 +1691,8 @@
         "lastEditedBy" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1563,7 +1703,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "Updated. SAM sure is prettier, and for dealing with Java collections they're almost a necessity (I can never get the covariant/contravarian bounds right for `java.util.function.Function`). ",
         "createdAt" : "2018-11-25T11:32:26Z",
@@ -1571,7 +1712,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1582,7 +1724,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "Sure would be nice to have  a Scalafix rewrite to fix these automatically.\r\n\r\nAs for 2.11 support, I would rather explore classloading 2.11 presentation compiler from a 2.12 server instead of compiling the server to 2.11.",
         "createdAt" : "2018-11-25T11:33:38Z",
@@ -1590,7 +1733,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1612,7 +1756,8 @@
         "author" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "body" : "is everything internal?",
         "createdAt" : "2018-11-24T13:28:47Z",
@@ -1620,7 +1765,8 @@
         "lastEditedBy" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1631,7 +1777,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "Yes, only `scala.meta.metals.Main` is public.",
         "createdAt" : "2018-11-25T11:29:03Z",
@@ -1639,7 +1786,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1661,7 +1809,8 @@
         "author" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "body" : "what's this call for?",
         "createdAt" : "2018-11-24T13:49:38Z",
@@ -1669,7 +1818,8 @@
         "lastEditedBy" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1680,7 +1830,8 @@
         "author" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "body" : "Added comment\r\n```scala\r\n      // Record what build target this dependency source (if any) was jumped from,\r\n      // needed to know what classpath to compile the dependency source with.\r\n```",
         "createdAt" : "2018-11-25T11:38:55Z",
@@ -1688,7 +1839,8 @@
         "lastEditedBy" : {
           "login" : "olafurpg",
           "name" : "Ólafur Páll Geirsson",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/1408093?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1710,7 +1862,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "Could we move the logic to a separate method?",
         "createdAt" : "2020-10-28T17:35:18Z",
@@ -1718,7 +1871,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1729,7 +1883,8 @@
         "author" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "body" : "Yea for sure, I moved this out now.",
         "createdAt" : "2020-10-29T13:44:27Z",
@@ -1737,7 +1892,8 @@
         "lastEditedBy" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1759,7 +1915,8 @@
         "author" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "body" : "This pr looks huge because of the shift, but really this is the only difference. If there is no root, we just show the message, and then don't replace the providers. ",
         "createdAt" : "2021-01-15T10:48:33Z",
@@ -1767,7 +1924,8 @@
         "lastEditedBy" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1778,7 +1936,8 @@
         "author" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars2.githubusercontent.com/u/691940?u=cc41b494c40cff0015df21d897639d7d176bb9c6&v=4"
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/691940?u=cc41b494c40cff0015df21d897639d7d176bb9c6&v=4",
+          "altName" : null
         },
         "body" : "![image](https://user-images.githubusercontent.com/691940/104718269-e9577d00-572a-11eb-95a6-f7de81aece6e.png)\r\n\r\nThis helps a lot with the review",
         "createdAt" : "2021-01-15T11:12:29Z",
@@ -1786,7 +1945,8 @@
         "lastEditedBy" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars2.githubusercontent.com/u/691940?u=cc41b494c40cff0015df21d897639d7d176bb9c6&v=4"
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/691940?u=cc41b494c40cff0015df21d897639d7d176bb9c6&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1797,7 +1957,8 @@
         "author" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "body" : "ahhhh TIL! I've never used this before!",
         "createdAt" : "2021-01-15T11:14:21Z",
@@ -1805,7 +1966,8 @@
         "lastEditedBy" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1827,7 +1989,8 @@
         "author" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars2.githubusercontent.com/u/691940?u=cc41b494c40cff0015df21d897639d7d176bb9c6&v=4"
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/691940?u=cc41b494c40cff0015df21d897639d7d176bb9c6&v=4",
+          "altName" : null
         },
         "body" : "do all clients set this? This is potentially breaking for clients that used to rely on the flag and are not yet sending this info via LSP",
         "createdAt" : "2021-01-18T13:13:40Z",
@@ -1835,7 +1998,8 @@
         "lastEditedBy" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars2.githubusercontent.com/u/691940?u=cc41b494c40cff0015df21d897639d7d176bb9c6&v=4"
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/691940?u=cc41b494c40cff0015df21d897639d7d176bb9c6&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1846,7 +2010,8 @@
         "author" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars2.githubusercontent.com/u/691940?u=cc41b494c40cff0015df21d897639d7d176bb9c6&v=4"
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/691940?u=cc41b494c40cff0015df21d897639d7d176bb9c6&v=4",
+          "altName" : null
         },
         "body" : "Sorry, just saw the comment in the PR description. It's cool then!\r\n\r\nDo we still need `metalsClientType` in the config or can we remove it?",
         "createdAt" : "2021-01-18T13:14:27Z",
@@ -1854,7 +2019,8 @@
         "lastEditedBy" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars2.githubusercontent.com/u/691940?u=cc41b494c40cff0015df21d897639d7d176bb9c6&v=4"
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/691940?u=cc41b494c40cff0015df21d897639d7d176bb9c6&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1865,7 +2031,8 @@
         "author" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars2.githubusercontent.com/u/691940?u=cc41b494c40cff0015df21d897639d7d176bb9c6&v=4"
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/691940?u=cc41b494c40cff0015df21d897639d7d176bb9c6&v=4",
+          "altName" : null
         },
         "body" : "At a quick glance, it seems like this is the only spot where we used `metalsClientType` directly. Other than that it's used to initialize the default config in https://github.com/scalameta/metals/blob/a004fd0a7c0153415243f735a54070abe178924e/metals/src/main/scala/scala/meta/internal/metals/MetalsServerConfig.scala#L134 so it would be better to align the source of truth and use LSP for that too, wdyt?",
         "createdAt" : "2021-01-18T13:17:28Z",
@@ -1873,7 +2040,8 @@
         "lastEditedBy" : {
           "login" : "gabro",
           "name" : "Gabriele Petronella",
-          "avatarUrl" : "https://avatars2.githubusercontent.com/u/691940?u=cc41b494c40cff0015df21d897639d7d176bb9c6&v=4"
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/691940?u=cc41b494c40cff0015df21d897639d7d176bb9c6&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1884,7 +2052,8 @@
         "author" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "body" : "As far as I can tell, yes. A few examples of the lesser popular clients\r\n- [emacs-lsp](https://github.com/emacs-lsp/lsp-mode/blob/a0c41e489c656bc69a3cdd0d04ee549f45e42a59/lsp-mode.el#L6656)\r\n- [Neovim](https://github.com/neovim/neovim/commit/1a4d380b5abfff2cf5e46a1b00e98f4381b7e5b0)\r\n\r\nAnd of course the big dogs like VS Code for sure set this.\r\n\r\n> potentially breaking \r\n\r\nAlso, this is only being used to show the client in the logs, everything else regarind the `-Dmetals.client` stuff is still the same and will still work as expected, it just won't show the client name in the logs.\r\n\r\nThe one that I did find that doesn't set this is `vim-lsc`. However, I'll send in a pr to fix this for them  since this has been part of the spec for a while now.",
         "createdAt" : "2021-01-18T13:18:56Z",
@@ -1892,7 +2061,8 @@
         "lastEditedBy" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1903,7 +2073,8 @@
         "author" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "body" : "https://github.com/natebosch/vim-lsc/pull/373",
         "createdAt" : "2021-01-18T13:25:04Z",
@@ -1911,7 +2082,8 @@
         "lastEditedBy" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1922,7 +2094,8 @@
         "author" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "body" : ">  so it would be better to align the source of truth and use LSP for that too, wdyt?\r\n\r\nSorry I was answering your other questions, and totally missed this one. I think in theory, yea, it'd be awesome to just fully get away from the `MetalsServerConfig` altogether, but I'm honest just not sure when. We could do a check on `clientInfo.name` and try to somewhat match on that, but that also may be a bit eh. I'm sort of in the mindset for now to still just leave this in here for a bit since it's not really harming anything. Especially since all the values are looked at last in here: https://github.com/scalameta/metals/blob/main/metals/src/main/scala/scala/meta/internal/metals/ClientConfiguration.scala",
         "createdAt" : "2021-01-18T13:36:18Z",
@@ -1930,7 +2103,8 @@
         "lastEditedBy" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1952,7 +2126,8 @@
         "author" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "body" : "So I honestly don't know, that's why I'm asking, but will there be a penalty paid at all if a user closes a file, and then re-opens it? In that case, we removed the tree from `trees` in `Trees.scala`. It's probably not a huge deal, but am more just curious if it's necessary.",
         "createdAt" : "2021-01-14T11:32:14Z",
@@ -1960,7 +2135,8 @@
         "lastEditedBy" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -1971,7 +2147,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "the penalty should rather be small, parsing is fast, so this is just needed to keep memory issues in check.",
         "createdAt" : "2021-01-14T16:16:23Z",
@@ -1979,7 +2156,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -2001,7 +2179,8 @@
         "author" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "body" : "I hesitated to completely redo this, but wanted to instead just focus on the task at hand. However, I think we can actually improve this here. Mainly, in the first part we are actually disconnecting and then re-connecting. Then we are running the full build import, and then initiating the tree view. However, if at any point during that process something goes wrong, we `disconnectOldBuildServer()` when that's probably not necessary at all depending on the situation. It may be preferable to instead break those three things out from one another and handle a failure in differently. An argument could be made that if something goes wonky during the build import that _maybe_ could be fixed easily, do we really want to disconnect fully? There may be partial support still very much available. Just something to think about.",
         "createdAt" : "2021-02-06T13:34:01Z",
@@ -2009,7 +2188,8 @@
         "lastEditedBy" : {
           "login" : "ckipp01",
           "name" : "Chris Kipp",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -2020,7 +2200,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "We should not fail on tree view for sure, we used to fail on compile too, but I moved it out because of that. It's fine to do it here, but also can be a separate PR.",
         "createdAt" : "2021-02-08T10:17:13Z",
@@ -2028,7 +2209,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -2050,7 +2232,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "Let's go back to Option[WorksheetProvider]",
         "createdAt" : "2019-11-28T15:12:17Z",
@@ -2058,7 +2241,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -2069,7 +2253,8 @@
         "author" : {
           "login" : "alekseiAlefirov",
           "name" : "Aleksei Alefirov",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/10850363?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/10850363?v=4",
+          "altName" : null
         },
         "body" : "why? Previously `Option` made sense, since there would not be a Provider always, and now we have fallback.",
         "createdAt" : "2019-11-29T10:43:52Z",
@@ -2077,7 +2262,8 @@
         "lastEditedBy" : {
           "login" : "alekseiAlefirov",
           "name" : "Aleksei Alefirov",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/10850363?v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/10850363?v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -2088,7 +2274,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "Ok, right. Haven't thought about it!",
         "createdAt" : "2019-11-29T11:09:06Z",
@@ -2096,7 +2283,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -2107,7 +2295,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "test",
         "createdAt" : "2021-02-10T07:51:31.951Z",
@@ -2122,7 +2311,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "another test",
         "createdAt" : "2021-02-10T08:04:41.738Z",
@@ -2137,7 +2327,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "YAT",
         "createdAt" : "2021-02-10T08:13:04.924Z",
@@ -2152,7 +2343,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "YYAT",
         "createdAt" : "2021-02-10T08:18:16.69Z",
@@ -2167,7 +2359,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "YYYAT",
         "createdAt" : "2021-02-10T08:24:35.118Z",
@@ -2182,7 +2375,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "Hamilton",
         "createdAt" : "2021-02-12T08:20:46.368Z",
@@ -2197,7 +2391,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "Alex",
         "createdAt" : "2021-02-12T08:26:51.235Z",
@@ -2212,7 +2407,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "Y",
         "createdAt" : "2021-02-12T09:42:10.042Z",
@@ -2227,7 +2423,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "b ",
         "createdAt" : "2021-02-12T10:16:15.685Z",
@@ -2242,7 +2439,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "dsf",
         "createdAt" : "2021-02-12T10:16:25.331Z",
@@ -2257,7 +2455,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "sdf",
         "createdAt" : "2021-02-12T10:16:34.2Z",
@@ -2272,7 +2471,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "xd",
         "createdAt" : "2021-02-12T11:07:34.013Z",
@@ -2287,7 +2487,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "Y, y",
         "createdAt" : "2021-02-12T20:07:57.075Z",
@@ -2302,7 +2503,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "pl",
         "createdAt" : "2021-02-15T19:23:12.539Z",
@@ -2317,7 +2519,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : ";p",
         "createdAt" : "2021-02-16T08:12:11.25Z",
@@ -2332,7 +2535,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "pl",
         "createdAt" : "2021-02-18T09:49:02.817Z",
@@ -2347,7 +2551,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "mm",
         "createdAt" : "2021-03-26T11:17:38.057Z",
@@ -2373,7 +2578,8 @@
         "author" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "body" : "So probably the best that we can do currently is add an option to MetalsServerConfig like:\r\n```scala\r\n  allowMultilineStringFormatting = MetalsServerConfig.binaryOption(\r\n      \"metals.allow-multiline-string-formatting\",\r\n      default = true\r\n    ),\r\n```\r\nAnd then:\r\n```scala      \r\n\r\ncapabilities.setDocumentRangeFormattingProvider(initialConfig.allowMultilineStringFormatting)\r\n```",
         "createdAt" : "2020-05-08T17:32:59Z",
@@ -2381,7 +2587,8 @@
         "lastEditedBy" : {
           "login" : "tgodzik",
           "name" : "Tomasz Godzik",
-          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
         },
         "tags" : [
         ]
@@ -2392,7 +2599,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "new comment",
         "createdAt" : "2021-02-16T08:12:34.386Z",
@@ -2407,7 +2615,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "another",
         "createdAt" : "2021-02-24T13:42:47.155Z",
@@ -2433,7 +2642,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "New discussion added",
         "createdAt" : "2021-02-18T09:56:12.399Z",
@@ -2448,7 +2658,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "mmmm",
         "createdAt" : "2021-03-26T11:18:03.267Z",
@@ -2474,7 +2685,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "Another new discussion",
         "createdAt" : "2021-02-18T10:10:28.124Z",
@@ -2489,7 +2701,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "ttt",
         "createdAt" : "2021-02-18T13:25:22.118Z",
@@ -2504,7 +2717,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "nnn",
         "createdAt" : "2021-03-25T14:32:47.923Z",
@@ -2530,7 +2744,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "test",
         "createdAt" : "2021-03-24T10:32:16.08Z",
@@ -2556,7 +2771,8 @@
         "author" : {
           "login" : "mucharafal",
           "name" : "Rafał Mucha",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4"
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+          "altName" : null
         },
         "body" : "current",
         "createdAt" : "2021-03-24T10:35:06.684Z",
