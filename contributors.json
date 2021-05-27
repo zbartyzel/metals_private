@@ -1,77 +1,32 @@
 [
   {
-    "id" : "aa2be3c5-282e-4813-a2c1-d314c670da4d",
-    "remoteIds" : [
-      {
-        "id" : "mwojtow",
-        "url" : "github.com",
-        "provider" : "GitHub"
-      }
-    ],
-    "name" : "Marcin Wójtowicz",
-    "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
-    "altName" : "mwojtow",
-    "email" : null,
-    "updatedAt" : "2021-05-27T09:10:18.451695+02:00"
-  },
-  {
-    "id" : "0a35fa14-a242-45a8-a51d-561a4595ab62",
-    "remoteIds" : [
-      {
-        "id" : "kasprzyckit",
-        "url" : "github.com",
-        "provider" : "GitHub"
-      }
-    ],
-    "name" : "Tomasz Kasprzycki",
-    "avatarUrl" : "https://avatars.githubusercontent.com/u/22435324?v=4",
-    "altName" : "kasprzyckit",
-    "email" : null,
-    "updatedAt" : "2021-05-27T09:10:21.768135+02:00"
-  },
-  {
-    "id" : "4fa5795e-b317-4b28-a65f-406a49b0c340",
-    "remoteIds" : [
-      {
-        "id" : "Gedochao",
-        "url" : "github.com",
-        "provider" : "GitHub"
-      }
-    ],
+    "login" : "Gedochao",
     "name" : "Piotr Chabelski",
     "avatarUrl" : "https://avatars.githubusercontent.com/u/18601388?u=3bdb8a47886f318b553db837d3715a1891e7f176&v=4",
-    "altName" : "Gedochao",
-    "email" : null,
-    "updatedAt" : "2021-05-27T09:10:21.768122+02:00"
+    "altName" : null
   },
   {
-    "id" : "54f8ae56-328e-4cbc-ad66-8e8278c2fae1",
-    "remoteIds" : [
-      {
-        "id" : "pkukielka",
-        "url" : "github.com",
-        "provider" : "GitHub"
-      }
-    ],
-    "name" : "Piotr Kukiełka",
-    "avatarUrl" : "https://avatars.githubusercontent.com/u/1519649?v=4",
-    "altName" : "pkukielka",
-    "email" : null,
-    "updatedAt" : "2021-05-27T09:10:21.768091+02:00"
+    "login" : "kasprzyckit",
+    "name" : "Tomasz Kasprzycki",
+    "avatarUrl" : "https://avatars.githubusercontent.com/u/22435324?v=4",
+    "altName" : null
   },
   {
-    "id" : "633167ed-2388-46e6-a02e-6393a0a46bda",
-    "remoteIds" : [
-      {
-        "id" : "mucharafal",
-        "url" : "github.com",
-        "provider" : "GitHub"
-      }
-    ],
+    "login" : "mucharafal",
     "name" : "Rafał Mucha",
     "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
-    "altName" : "mucharafal",
-    "email" : null,
-    "updatedAt" : "2021-05-27T09:10:21.768148+02:00"
+    "altName" : null
+  },
+  {
+    "login" : "mwojtow",
+    "name" : "Marcin Wójtowicz",
+    "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
+    "altName" : null
+  },
+  {
+    "login" : "pkukielka",
+    "name" : "Piotr Kukiełka",
+    "avatarUrl" : "https://avatars.githubusercontent.com/u/1519649?v=4",
+    "altName" : null
   }
 ]
