@@ -1,32 +1,17 @@
 [
   {
-    "login" : "Gedochao",
-    "name" : "Piotr Chabelski",
-    "avatarUrl" : "https://avatars.githubusercontent.com/u/18601388?u=3bdb8a47886f318b553db837d3715a1891e7f176&v=4",
-    "altName" : null
-  },
-  {
-    "login" : "kasprzyckit",
-    "name" : "Tomasz Kasprzycki",
-    "avatarUrl" : "https://avatars.githubusercontent.com/u/22435324?v=4",
-    "altName" : null
-  },
-  {
-    "login" : "mucharafal",
-    "name" : "Rafał Mucha",
-    "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
-    "altName" : null
-  },
-  {
-    "login" : "mwojtow",
+    "id" : "aa2be3c5-282e-4813-a2c1-d314c670da4d",
+    "remoteIds" : [
+      {
+        "id" : "mwojtow",
+        "url" : "github.com",
+        "provider" : "GitHub"
+      }
+    ],
     "name" : "Marcin Wójtowicz",
     "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
-    "altName" : null
-  },
-  {
-    "login" : "pkukielka",
-    "name" : "Piotr Kukiełka",
-    "avatarUrl" : "https://avatars.githubusercontent.com/u/1519649?v=4",
-    "altName" : null
+    "altName" : "mwojtow",
+    "email" : null,
+    "updatedAt" : "2021-05-27T09:10:18.451695+02:00"
   }
 ]
