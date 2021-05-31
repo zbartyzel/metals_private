@@ -1,0 +1,29 @@
+[
+  {
+    "id" : "179c1096-4df0-4000-8719-e64b2e498100",
+    "prId" : null,
+    "prUrl" : null,
+    "prSource" : null,
+    "comments" : [
+      {
+        "id" : "179c1096-4df0-4000-853e-64998fb66500",
+        "parentId" : null,
+        "author" : {
+          "login" : "mwojtow",
+          "name" : "Marcin Wójtowicz",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
+          "altName" : null
+        },
+        "body" : "@[Piotr Chabelski](Gedochao) ",
+        "createdAt" : "2021-05-31T06:08:08.927Z",
+        "updatedAt" : "2021-05-31T06:08:08.927Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "v0.9.4-171-g652fb4a",
+    "line" : null,
+    "diffHunk" : "@@ -1,1 +17,20 @@@State(Scope.Benchmark)\nclass ClasspathSymbolsBench {\n  var classpath: Seq[AbsolutePath] = _\n"
+  }
+]
