@@ -8,12 +8,7 @@
       {
         "id" : "178ab3b8-bd30-4000-876f-ddf868ace800",
         "parentId" : null,
-        "author" : {
-          "login" : "mwojtow",
-          "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
-          "altName" : null
-        },
+        "authorId" : null,
         "body" : "test",
         "createdAt" : "2021-04-07T07:28:29.651Z",
         "updatedAt" : "2021-04-07T07:28:29.651Z",
@@ -24,12 +19,7 @@
       {
         "id" : "178ab3ba-8ff0-4000-892e-1d89489b1600",
         "parentId" : null,
-        "author" : {
-          "login" : "mwojtow",
-          "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
-          "altName" : null
-        },
+        "authorId" : null,
         "body" : "test1",
         "createdAt" : "2021-04-07T07:28:37.119Z",
         "updatedAt" : "2021-04-07T07:28:37.119Z",
@@ -40,12 +30,7 @@
       {
         "id" : "178ab3bb-5ca0-4000-8b13-6c004c28c800",
         "parentId" : null,
-        "author" : {
-          "login" : "mwojtow",
-          "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
-          "altName" : null
-        },
+        "authorId" : null,
         "body" : "test2",
         "createdAt" : "2021-04-07T07:28:40.394Z",
         "updatedAt" : "2021-04-07T07:28:40.394Z",
@@ -56,12 +41,7 @@
       {
         "id" : "178ab3bc-1400-4000-803f-d9a405526200",
         "parentId" : null,
-        "author" : {
-          "login" : "mwojtow",
-          "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
-          "altName" : null
-        },
+        "authorId" : null,
         "body" : "test",
         "createdAt" : "2021-04-07T07:28:43.328Z",
         "updatedAt" : "2021-04-07T07:28:43.328Z",
@@ -72,12 +52,7 @@
       {
         "id" : "178ab3bc-cda0-4000-8113-a2d47e25cc00",
         "parentId" : null,
-        "author" : {
-          "login" : "mwojtow",
-          "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
-          "altName" : null
-        },
+        "authorId" : null,
         "body" : "test",
         "createdAt" : "2021-04-07T07:28:46.298Z",
         "updatedAt" : "2021-04-07T07:28:46.299Z",
@@ -88,12 +63,7 @@
       {
         "id" : "178ab3be-2e90-4000-84a9-cdeb0b6c1a00",
         "parentId" : null,
-        "author" : {
-          "login" : "mwojtow",
-          "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
-          "altName" : null
-        },
+        "authorId" : null,
         "body" : "test test",
         "createdAt" : "2021-04-07T07:28:51.945Z",
         "updatedAt" : "2021-04-07T07:28:51.945Z",
@@ -104,12 +74,7 @@
       {
         "id" : "17940835-f630-4000-872e-8f291c2ac300",
         "parentId" : null,
-        "author" : {
-          "login" : "mwojtow",
-          "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
-          "altName" : null
-        },
+        "authorId" : null,
         "body" : "@siemaNowyMention",
         "createdAt" : "2021-05-06T07:10:22.051Z",
         "updatedAt" : "2021-05-06T07:10:22.051Z",
@@ -120,12 +85,7 @@
       {
         "id" : "17940845-c120-4000-8652-fc7450aa1f00",
         "parentId" : null,
-        "author" : {
-          "login" : "mwojtow",
-          "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
-          "altName" : null
-        },
+        "authorId" : null,
         "body" : "😊 ",
         "createdAt" : "2021-05-06T07:11:26.738Z",
         "updatedAt" : "2021-05-06T07:11:26.738Z",
@@ -147,12 +107,7 @@
       {
         "id" : "178ab406-3890-4000-822d-3fa96eeac100",
         "parentId" : null,
-        "author" : {
-          "login" : "mwojtow",
-          "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
-          "altName" : null
-        },
+        "authorId" : null,
         "body" : "test",
         "createdAt" : "2021-04-07T07:33:47.017Z",
         "updatedAt" : "2021-04-07T07:33:47.017Z",
@@ -174,12 +129,7 @@
       {
         "id" : "178ab80f-c1f0-4000-8de6-6e36062ff800",
         "parentId" : null,
-        "author" : {
-          "login" : "mwojtow",
-          "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
-          "altName" : null
-        },
+        "authorId" : null,
         "body" : "test",
         "createdAt" : "2021-04-07T08:44:20.383Z",
         "updatedAt" : "2021-04-07T08:44:20.383Z",
@@ -190,12 +140,7 @@
       {
         "id" : "179405fc-35d0-4000-8cb8-03f069d16600",
         "parentId" : null,
-        "author" : {
-          "login" : "mwojtow",
-          "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
-          "altName" : null
-        },
+        "authorId" : null,
         "body" : "test @newMention",
         "createdAt" : "2021-05-06T06:31:28.349Z",
         "updatedAt" : "2021-05-06T06:31:28.349Z",
@@ -217,12 +162,7 @@
       {
         "id" : "178ab819-9ed0-4000-871e-c1dad3666d00",
         "parentId" : null,
-        "author" : {
-          "login" : "mwojtow",
-          "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
-          "altName" : null
-        },
+        "authorId" : null,
         "body" : "test",
         "createdAt" : "2021-04-07T08:45:00.781Z",
         "updatedAt" : "2021-04-07T08:45:00.781Z",
@@ -244,12 +184,7 @@
       {
         "id" : "178b0533-10f0-4000-818d-aa259c9a0800",
         "parentId" : null,
-        "author" : {
-          "login" : "mwojtow",
-          "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
-          "altName" : null
-        },
+        "authorId" : null,
         "body" : "test",
         "createdAt" : "2021-04-08T07:12:25.359Z",
         "updatedAt" : "2021-04-08T07:12:25.359Z",
@@ -271,12 +206,7 @@
       {
         "id" : "178b0571-67d0-4000-8893-5ee1a356ab00",
         "parentId" : null,
-        "author" : {
-          "login" : "mwojtow",
-          "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
-          "altName" : null
-        },
+        "authorId" : null,
         "body" : "test",
         "createdAt" : "2021-04-08T07:16:40.701Z",
         "updatedAt" : "2021-04-08T07:16:40.701Z",
@@ -287,12 +217,7 @@
       {
         "id" : "17936de6-a830-4000-8901-b7fb933dd500",
         "parentId" : null,
-        "author" : {
-          "login" : "mwojtow",
-          "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
-          "altName" : null
-        },
+        "authorId" : null,
         "body" : "test 😍",
         "createdAt" : "2021-05-04T10:13:36.515Z",
         "updatedAt" : "2021-05-04T10:13:36.515Z",
@@ -303,12 +228,7 @@
       {
         "id" : "179c1037-5a90-4000-8089-50a3eecb8700",
         "parentId" : null,
-        "author" : {
-          "login" : "mwojtow",
-          "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
-          "altName" : null
-        },
+        "authorId" : null,
         "body" : "@[Marcin Wójtowicz](mwojtow) ",
         "createdAt" : "2021-05-31T06:01:40.009Z",
         "updatedAt" : "2021-05-31T06:01:40.009Z",
@@ -330,12 +250,7 @@
       {
         "id" : "178b0f1f-5150-4000-854c-bccc1eab8b00",
         "parentId" : null,
-        "author" : {
-          "login" : "mwojtow",
-          "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
-          "altName" : null
-        },
+        "authorId" : null,
         "body" : "test",
         "createdAt" : "2021-04-08T10:05:50.229Z",
         "updatedAt" : "2021-04-08T10:05:50.229Z",
@@ -346,12 +261,7 @@
       {
         "id" : "179c108c-7b90-4000-8d31-0cc2d1a9e100",
         "parentId" : null,
-        "author" : {
-          "login" : "mwojtow",
-          "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
-          "altName" : null
-        },
+        "authorId" : null,
         "body" : "@[Piotr Chabelski](Gedochao) ",
         "createdAt" : "2021-05-31T06:07:28.697Z",
         "updatedAt" : "2021-05-31T06:07:28.697Z",
@@ -373,12 +283,7 @@
       {
         "id" : "178b0f3c-fed0-4000-843c-5ce378253f00",
         "parentId" : null,
-        "author" : {
-          "login" : "mwojtow",
-          "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
-          "altName" : null
-        },
+        "authorId" : null,
         "body" : "test",
         "createdAt" : "2021-04-08T10:07:51.789Z",
         "updatedAt" : "2021-04-08T10:07:51.789Z",
@@ -389,12 +294,7 @@
       {
         "id" : "1791cf8f-a370-4000-885e-a5f4b2aa9600",
         "parentId" : null,
-        "author" : {
-          "login" : "mwojtow",
-          "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
-          "altName" : null
-        },
+        "authorId" : null,
         "body" : "test with mentions",
         "createdAt" : "2021-04-29T09:32:29.623Z",
         "updatedAt" : "2021-04-29T09:32:29.623Z",
@@ -405,12 +305,7 @@
       {
         "id" : "17937037-49d0-4000-800d-96ae3f956000",
         "parentId" : null,
-        "author" : {
-          "login" : "mwojtow",
-          "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
-          "altName" : null
-        },
+        "authorId" : null,
         "body" : "test @[Piotr Chabelski](Gedochao) 😊",
         "createdAt" : "2021-05-04T10:54:03.933Z",
         "updatedAt" : "2021-05-04T10:54:03.933Z",
@@ -421,12 +316,7 @@
       {
         "id" : "179373d7-8a50-4000-8e85-223ac0705300",
         "parentId" : null,
-        "author" : {
-          "login" : "mwojtow",
-          "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
-          "altName" : null
-        },
+        "authorId" : null,
         "body" : "test @[Rafał Mucha](mucharafal) @[Marcin Wójtowicz](mwojtow) ☺️",
         "createdAt" : "2021-05-04T11:57:26.053Z",
         "updatedAt" : "2021-05-04T11:57:26.053Z",
@@ -448,12 +338,7 @@
       {
         "id" : "178b0fb6-7ee0-4000-8e45-d9bcc92bae00",
         "parentId" : null,
-        "author" : {
-          "login" : "mwojtow",
-          "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
-          "altName" : null
-        },
+        "authorId" : null,
         "body" : "test",
         "createdAt" : "2021-04-08T10:16:09.454Z",
         "updatedAt" : "2021-04-08T10:16:09.454Z",
@@ -464,12 +349,7 @@
       {
         "id" : "17921bcf-3cc0-4000-8b49-5c83f1252300",
         "parentId" : null,
-        "author" : {
-          "login" : "mwojtow",
-          "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
-          "altName" : null
-        },
+        "authorId" : null,
         "body" : "test mention @[Arnie](3) and @[Arnie](3)",
         "createdAt" : "2021-04-30T07:45:01.9Z",
         "updatedAt" : "2021-04-30T07:45:01.9Z",
@@ -480,12 +360,7 @@
       {
         "id" : "17921c02-9f90-4000-8a14-0f0829835e00",
         "parentId" : null,
-        "author" : {
-          "login" : "mwojtow",
-          "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
-          "altName" : null
-        },
+        "authorId" : null,
         "body" : "test @[John](6) ",
         "createdAt" : "2021-04-30T07:48:32.377Z",
         "updatedAt" : "2021-04-30T07:48:32.377Z",
@@ -496,12 +371,7 @@
       {
         "id" : "1792204b-94d0-4000-8ad2-66b270c2ae00",
         "parentId" : null,
-        "author" : {
-          "login" : "mwojtow",
-          "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
-          "altName" : null
-        },
+        "authorId" : null,
         "body" : "test @[Sarah](ID_11_4)",
         "createdAt" : "2021-04-30T09:03:25.517Z",
         "updatedAt" : "2021-04-30T09:03:25.517Z",
@@ -523,12 +393,7 @@
       {
         "id" : "1791cf98-ebf0-4000-8279-bb24b7263600",
         "parentId" : null,
-        "author" : {
-          "login" : "mwojtow",
-          "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
-          "altName" : null
-        },
+        "authorId" : null,
         "body" : "test new disc with mention flow",
         "createdAt" : "2021-04-29T09:33:07.647Z",
         "updatedAt" : "2021-04-29T09:33:07.647Z",
@@ -539,12 +404,7 @@
       {
         "id" : "179c1092-8bd0-4000-83ee-ac04b7f64100",
         "parentId" : null,
-        "author" : {
-          "login" : "mwojtow",
-          "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
-          "altName" : null
-        },
+        "authorId" : null,
         "body" : "@[Piotr Chabelski](Gedochao) ",
         "createdAt" : "2021-05-31T06:07:53.533Z",
         "updatedAt" : "2021-05-31T06:07:53.533Z",
@@ -566,12 +426,7 @@
       {
         "id" : "17922051-bc40-4000-8e30-21aadd824200",
         "parentId" : null,
-        "author" : {
-          "login" : "mwojtow",
-          "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
-          "altName" : null
-        },
+        "authorId" : null,
         "body" : "test @[Arnie](ID_11_3)",
         "createdAt" : "2021-04-30T09:03:50.724Z",
         "updatedAt" : "2021-04-30T09:03:50.724Z",
@@ -582,12 +437,7 @@
       {
         "id" : "17940808-b660-4000-8002-cf7c99ee0400",
         "parentId" : null,
-        "author" : {
-          "login" : "mwojtow",
-          "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
-          "altName" : null
-        },
+        "authorId" : null,
         "body" : "test @[Piotr Chabelski](Gedochao) ",
         "createdAt" : "2021-05-06T07:07:16.71Z",
         "updatedAt" : "2021-05-06T07:07:16.71Z",
@@ -609,12 +459,7 @@
       {
         "id" : "17983f45-23f0-4000-811c-00d985f6ad00",
         "parentId" : null,
-        "author" : {
-          "login" : "mwojtow",
-          "name" : "Marcin Wójtowicz",
-          "avatarUrl" : "https://avatars.githubusercontent.com/u/23500372?u=fe035671959168f0243f5a5556fd4e4f103f93f3&v=4",
-          "altName" : null
-        },
+        "authorId" : null,
         "body" : "test @[Piotr Chabelski](Gedochao) 😊 ",
         "createdAt" : "2021-05-19T09:28:17.727Z",
         "updatedAt" : "2021-05-19T09:28:17.727Z",
@@ -626,5 +471,27 @@
     "commit" : "v0.9.4-171-g652fb4a",
     "line" : null,
     "diffHunk" : "@@ -1,1 +0,0 @@package bench"
+  },
+  {
+    "id" : "179c1c47-df40-4000-846e-24146a61d500",
+    "prId" : null,
+    "prUrl" : null,
+    "prSource" : null,
+    "comments" : [
+      {
+        "id" : "179c1c47-df40-4000-82e3-22ad474bfa00",
+        "parentId" : null,
+        "authorId" : "28129769-0ee4-4cb9-ba20-01ae8ff6138d",
+        "body" : "review @48de753c-e5ac-4038-ad5c-e32b4bd25a3b ",
+        "createdAt" : "2021-05-31T09:32:30.58Z",
+        "updatedAt" : "2021-05-31T09:32:30.58Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "v0.9.4-171-g652fb4a",
+    "line" : null,
+    "diffHunk" : "@@ -1,1 +15,17 @@import scala.meta.internal.tokenizers.LegacyToken\nimport scala.meta.io.AbsolutePath\nimport scala.meta.io.Classpath"
   }
 ]
