@@ -88,5 +88,20 @@
     "altName" : "Gedochao",
     "email" : null,
     "updatedAt" : "2021-05-31T08:08:26.074203+02:00"
+  },
+  {
+    "id" : "74150e55-7fbd-473f-9013-b96a7ff6e018",
+    "remoteIds" : [
+      {
+        "id" : "Gedochao",
+        "url" : "github.com",
+        "provider" : "GitHub"
+      }
+    ],
+    "name" : "Piotr Chabelski",
+    "avatarUrl" : "https://avatars.githubusercontent.com/u/18601388?u=3bdb8a47886f318b553db837d3715a1891e7f176&v=4",
+    "altName" : "Gedochao",
+    "email" : null,
+    "updatedAt" : "2021-05-31T14:04:08.370927+02:00"
   }
 ]
