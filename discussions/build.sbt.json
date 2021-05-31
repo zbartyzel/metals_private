@@ -75,5 +75,27 @@
     "commit" : "v0.9.4-171-g652fb4a",
     "line" : null,
     "diffHunk" : "@@ -1,1 +127,138 @@    // forking options\n    javaOptions += {\n      import scala.collection.JavaConverters._\n      val props = System.getProperties\n      props\n        .stringPropertyNames()\n        .asScala\n        .map { configKey => s\"-D$configKey=${props.getProperty(configKey)}\" }\n        .mkString(\" \")\n    },\n    resolvers += Resolver.bintrayRepo(\"scalacenter\", \"releases\")\n  )"
+  },
+  {
+    "id" : "179c248c-7990-4000-830f-3768f7e3f300",
+    "prId" : null,
+    "prUrl" : null,
+    "prSource" : null,
+    "comments" : [
+      {
+        "id" : "179c248c-7990-4000-8d70-5d1b5449bb00",
+        "parentId" : null,
+        "authorId" : "63c39317-3f54-496a-9975-efc83224b924",
+        "body" : "test",
+        "createdAt" : "2021-05-31T11:57:00.185Z",
+        "updatedAt" : "2021-05-31T11:57:00.185Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "v0.10.0-24-g1102cc3",
+    "line" : null,
+    "diffHunk" : "@@ -1,1 +13,17 @@f crossSetting[A](\n    scalaVersion: String,\n    if211: List[A] = Nil,\n    if2: List[A] = Nil,\n    ifLaterThan211: "
   }
 ]
