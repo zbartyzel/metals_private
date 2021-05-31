@@ -53,5 +53,27 @@
     "commit" : "v0.10.0-24-g1102cc3",
     "line" : null,
     "diffHunk" : "@@ -1,1 +75,81 @@\n      Developer(\n        \"gabro\",\n        \"Gabriele Petronella\",\n        \"gabriele@buildo.io\",\n        url(\"https://github.com/gabro\")\n      ),"
+  },
+  {
+    "id" : "179c1c4c-a170-4000-8171-3e3d48555d00",
+    "prId" : null,
+    "prUrl" : null,
+    "prSource" : null,
+    "comments" : [
+      {
+        "id" : "179c1c4c-a170-4000-887e-dbddd3d0e000",
+        "parentId" : null,
+        "authorId" : "28129769-0ee4-4cb9-ba20-01ae8ff6138d",
+        "body" : "@48de753c-e5ac-4038-ad5c-e32b4bd25a3b test 3",
+        "createdAt" : "2021-05-31T09:32:50.071Z",
+        "updatedAt" : "2021-05-31T09:32:50.071Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "v0.9.4-171-g652fb4a",
+    "line" : null,
+    "diffHunk" : "@@ -1,1 +127,138 @@    // forking options\n    javaOptions += {\n      import scala.collection.JavaConverters._\n      val props = System.getProperties\n      props\n        .stringPropertyNames()\n        .asScala\n        .map { configKey => s\"-D$configKey=${props.getProperty(configKey)}\" }\n        .mkString(\" \")\n    },\n    resolvers += Resolver.bintrayRepo(\"scalacenter\", \"releases\")\n  )"
   }
 ]
