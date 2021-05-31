@@ -31,5 +31,27 @@
     "commit" : "v0.9.4-171-g652fb4a",
     "line" : null,
     "diffHunk" : "@@ -1,1 +17,20 @@@State(Scope.Benchmark)\nclass ClasspathSymbolsBench {\n  var classpath: Seq[AbsolutePath] = _\n"
+  },
+  {
+    "id" : "179c1c43-7280-4000-853c-3057faa90200",
+    "prId" : null,
+    "prUrl" : null,
+    "prSource" : null,
+    "comments" : [
+      {
+        "id" : "179c1c43-7280-4000-871e-b3db3d6aae00",
+        "parentId" : null,
+        "authorId" : "28129769-0ee4-4cb9-ba20-01ae8ff6138d",
+        "body" : "@48de753c-e5ac-4038-ad5c-e32b4bd25a3b test",
+        "createdAt" : "2021-05-31T09:32:12.456Z",
+        "updatedAt" : "2021-05-31T09:32:12.456Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "v0.9.4-171-g652fb4a",
+    "line" : null,
+    "diffHunk" : "@@ -1,1 +13,16 @@import org.openjdk.jmh.annotations.State\nimport org.openjdk.jmh.annotations.TearDown\nimport tests.Library\n"
   }
 ]
