@@ -60,6 +60,21 @@
     "updatedAt" : "2021-05-31T08:08:30.285231+02:00"
   },
   {
+    "id" : "48de753c-e5ac-4038-ad5c-e32b4bd25a3b",
+    "remoteIds" : [
+      {
+        "id" : "jakubbania",
+        "url" : "github.com",
+        "provider" : "GitHub"
+      }
+    ],
+    "name" : "Jakub",
+    "avatarUrl" : "https://avatars.githubusercontent.com/u/51878282?u=539a76cc00d871b9db0f1b1600ea389a34c78ed1&v=4",
+    "altName" : "jakubbania",
+    "email" : null,
+    "updatedAt" : "2021-05-31T11:31:55.138571+02:00"
+  },
+  {
     "id" : "63c39317-3f54-496a-9975-efc83224b924",
     "remoteIds" : [
       {
