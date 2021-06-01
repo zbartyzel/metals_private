@@ -78,5 +78,15 @@
     "mentionTarget" : "28129769-0ee4-4cb9-ba20-01ae8ff6138d",
     "createdAt" : "2021-06-01T12:22:29.305Z",
     "notified" : false
+  },
+  {
+    "id" : "247f8596-7880-4cb9-ac03-5af093749b88",
+    "sourceFilePath" : "tests/cross/src/main/scala/tests/BaseCodeActionSuite.scala",
+    "discussionId" : "179c786f-afe0-4000-847b-5288b4c7d000",
+    "commentId" : "179c786f-afe0-4000-8d74-d174a80e1400",
+    "mentionedBy" : "63c39317-3f54-496a-9975-efc83224b924",
+    "mentionTarget" : "28129769-0ee4-4cb9-ba20-01ae8ff6138d",
+    "createdAt" : "2021-06-01T12:23:02.654Z",
+    "notified" : false
   }
 ]
