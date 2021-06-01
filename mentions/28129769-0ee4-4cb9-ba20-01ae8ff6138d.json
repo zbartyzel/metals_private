@@ -68,5 +68,15 @@
     "mentionTarget" : "28129769-0ee4-4cb9-ba20-01ae8ff6138d",
     "createdAt" : "2021-06-01T12:22:06.707Z",
     "notified" : false
+  },
+  {
+    "id" : "340c8eea-7931-43e5-9df0-87246a6ce90b",
+    "sourceFilePath" : "metals/src/main/scala/scala/meta/metals/Main.scala",
+    "discussionId" : "179c7867-8b90-4000-8ba3-1c517be55000",
+    "commentId" : "179c7867-8b90-4000-8669-2a12da418000",
+    "mentionedBy" : "63c39317-3f54-496a-9975-efc83224b924",
+    "mentionTarget" : "28129769-0ee4-4cb9-ba20-01ae8ff6138d",
+    "createdAt" : "2021-06-01T12:22:29.305Z",
+    "notified" : false
   }
 ]
