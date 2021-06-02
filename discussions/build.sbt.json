@@ -163,5 +163,27 @@
     "commit" : "v0.10.0-24-g1102cc3",
     "line" : null,
     "diffHunk" : "@@ -1,1 +13,17 @@f crossSetting[A](\n    scalaVersion: String,\n    if211: List[A] = Nil,\n    if2: List[A] = Nil,\n    ifLaterThan211: "
+  },
+  {
+    "id" : "179cc686-7b50-4000-8e87-6e372767a400",
+    "prId" : null,
+    "prUrl" : null,
+    "prSource" : null,
+    "comments" : [
+      {
+        "id" : "179cc686-7b50-4000-8b54-e5b34933cc00",
+        "parentId" : null,
+        "authorId" : "25033fa5-be8d-40dd-98bd-c85744d15f4f",
+        "body" : "notification click test @48de753c-e5ac-4038-ad5c-e32b4bd25a3b ",
+        "createdAt" : "2021-06-02T11:07:44.949Z",
+        "updatedAt" : "2021-06-02T11:07:44.949Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "v0.9.4-171-g652fb4a",
+    "line" : null,
+    "diffHunk" : "@@ -1,1 +191,196 @@  def supportedScalaBinaryVersions =\n    supportedScalaVersions.iterator\n      .map(CrossVersion.partialVersion)\n      .collect { case Some((a, b)) => s\"$a.$b\" }\n      .toList\n      .distinct"
   }
 ]

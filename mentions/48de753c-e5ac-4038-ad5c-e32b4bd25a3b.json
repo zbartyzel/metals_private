@@ -1,5 +1,15 @@
 [
   {
+    "id" : "7fbf8112-949e-41b3-8b1b-4ed00ab3655b",
+    "sourceFilePath" : "build.sbt",
+    "discussionId" : "179cc686-7b50-4000-8e87-6e372767a400",
+    "commentId" : "179cc686-7b50-4000-8b54-e5b34933cc00",
+    "mentionedBy" : "25033fa5-be8d-40dd-98bd-c85744d15f4f",
+    "mentionTarget" : "48de753c-e5ac-4038-ad5c-e32b4bd25a3b",
+    "createdAt" : "2021-06-02T11:07:44.949Z",
+    "notified" : false
+  },
+  {
     "id" : "d68580c3-3fd0-4a67-9f50-8566cb6c5f16",
     "sourceFilePath" : "metals-bench/src/main/scala/bench/ClasspathSymbolsBench.scala",
     "discussionId" : "179cc680-4650-4000-8911-e3f0ac2ad700",
