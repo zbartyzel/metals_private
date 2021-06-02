@@ -1,5 +1,15 @@
 [
   {
+    "id" : "d68580c3-3fd0-4a67-9f50-8566cb6c5f16",
+    "sourceFilePath" : "metals-bench/src/main/scala/bench/ClasspathSymbolsBench.scala",
+    "discussionId" : "179cc680-4650-4000-8911-e3f0ac2ad700",
+    "commentId" : "179cc680-4650-4000-8d0b-f06c729c2300",
+    "mentionedBy" : "25033fa5-be8d-40dd-98bd-c85744d15f4f",
+    "mentionTarget" : "48de753c-e5ac-4038-ad5c-e32b4bd25a3b",
+    "createdAt" : "2021-06-02T11:07:19.525Z",
+    "notified" : false
+  },
+  {
     "id" : "1e543f21-9a41-4724-947f-5f18f1067cbf",
     "sourceFilePath" : "metals-bench/src/main/scala/bench/MetalsBench.scala",
     "discussionId" : "179c1c47-df40-4000-846e-24146a61d500",
