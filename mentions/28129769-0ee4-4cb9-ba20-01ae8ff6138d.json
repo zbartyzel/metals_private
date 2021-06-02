@@ -67,7 +67,7 @@
     "mentionedBy" : "63c39317-3f54-496a-9975-efc83224b924",
     "mentionTarget" : "28129769-0ee4-4cb9-ba20-01ae8ff6138d",
     "createdAt" : "2021-06-01T12:22:06.707Z",
-    "notified" : false
+    "notified" : true
   },
   {
     "id" : "340c8eea-7931-43e5-9df0-87246a6ce90b",
