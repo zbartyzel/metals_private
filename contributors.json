@@ -1,5 +1,35 @@
 [
   {
+    "id" : "80dd129a-8632-468a-be8e-4f4ac1a7158b",
+    "remoteIds" : [
+      {
+        "id" : "jakubbania",
+        "url" : "github.com",
+        "provider" : "GitHub"
+      }
+    ],
+    "name" : "Jakub",
+    "avatarUrl" : "https://avatars.githubusercontent.com/u/51878282?u=539a76cc00d871b9db0f1b1600ea389a34c78ed1&v=4",
+    "altName" : "jakubbania",
+    "email" : null,
+    "updatedAt" : "2021-06-07T13:23:05.140625+02:00"
+  },
+  {
+    "id" : "b65f38e2-5a5c-4545-b181-0457acf3dd20",
+    "remoteIds" : [
+      {
+        "id" : "pkukielka",
+        "url" : "github.com",
+        "provider" : "GitHub"
+      }
+    ],
+    "name" : "Piotr Kukiełka",
+    "avatarUrl" : "https://avatars.githubusercontent.com/u/1519649?v=4",
+    "altName" : "pkukielka",
+    "email" : null,
+    "updatedAt" : "2021-06-07T13:23:05.140547+02:00"
+  },
+  {
     "id" : "ea89132d-e634-493f-b14b-12cc785e8a43",
     "remoteIds" : [
       {
@@ -13,5 +43,50 @@
     "altName" : "mwojtow",
     "email" : null,
     "updatedAt" : "2021-06-07T13:23:00.471545+02:00"
+  },
+  {
+    "id" : "1a8d7057-0bf9-4746-90df-9d3575cd1c39",
+    "remoteIds" : [
+      {
+        "id" : "Gedochao",
+        "url" : "github.com",
+        "provider" : "GitHub"
+      }
+    ],
+    "name" : "Piotr Chabelski",
+    "avatarUrl" : "https://avatars.githubusercontent.com/u/18601388?u=3bdb8a47886f318b553db837d3715a1891e7f176&v=4",
+    "altName" : "Gedochao",
+    "email" : null,
+    "updatedAt" : "2021-06-07T13:23:05.140576+02:00"
+  },
+  {
+    "id" : "362b2233-6586-42ef-adbc-532b56f84eaf",
+    "remoteIds" : [
+      {
+        "id" : "kasprzyckit",
+        "url" : "github.com",
+        "provider" : "GitHub"
+      }
+    ],
+    "name" : "Tomasz Kasprzycki",
+    "avatarUrl" : "https://avatars.githubusercontent.com/u/22435324?v=4",
+    "altName" : "kasprzyckit",
+    "email" : null,
+    "updatedAt" : "2021-06-07T13:23:05.140649+02:00"
+  },
+  {
+    "id" : "61e3ac34-32e0-4de6-af8e-015f3d36ba24",
+    "remoteIds" : [
+      {
+        "id" : "mucharafal",
+        "url" : "github.com",
+        "provider" : "GitHub"
+      }
+    ],
+    "name" : "Rafał Mucha",
+    "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+    "altName" : "mucharafal",
+    "email" : null,
+    "updatedAt" : "2021-06-07T13:23:05.140602+02:00"
   }
 ]
