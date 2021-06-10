@@ -225,6 +225,21 @@
     "updatedAt" : "2021-06-10T12:12:05.379724+02:00"
   },
   {
+    "id" : "d01683b8-1e0f-49f8-ab40-a6a96c4d1433",
+    "remoteIds" : [
+      {
+        "id" : "mucharafal",
+        "url" : "github.com",
+        "provider" : "GitHub"
+      }
+    ],
+    "name" : "Rafał Mucha",
+    "avatarUrl" : "https://avatars.githubusercontent.com/u/23396653?v=4",
+    "altName" : "mucharafal",
+    "email" : null,
+    "updatedAt" : "2021-06-10T12:30:06.660361+02:00"
+  },
+  {
     "id" : "da2cd095-1f8f-45c7-9ea4-3315cad4b0b7",
     "remoteIds" : [
       {
