@@ -1,0 +1,57 @@
+[
+  {
+    "id" : "bd90b2c6-b8eb-419d-90da-e7485270218c",
+    "prId" : 387,
+    "prUrl" : "https://github.com/scalameta/metals/pull/387",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "116f900e-7d28-46ba-8467-80405b24e21c",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "See my comment above, the client actually sends these nested inside a `\"metals\"` key.",
+        "createdAt" : "2018-12-08T17:49:46Z",
+        "updatedAt" : "2018-12-09T18:05:10Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "68c05a3c-5d12-4cb0-a12d-5309aa6b1109",
+        "parentId" : "116f900e-7d28-46ba-8467-80405b24e21c",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Adding more details to this.\r\n\r\nI strongly suspect there's no agreement on how clients will send this.\r\nI'm sure VSCode will wrap the settings in `metals`, but by reading the code I don't think Atom does the same. It looks like it will send them wrapped in `settings`.\r\n\r\n@laughedelic I don't have Atom on my machine. If you have a minute, can you confirm which format Atom uses for configuration?",
+        "createdAt" : "2018-12-09T10:32:52Z",
+        "updatedAt" : "2018-12-09T18:05:10Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b050a314-62a7-4f68-b0a7-2d2074dbe4f5",
+        "parentId" : "116f900e-7d28-46ba-8467-80405b24e21c",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Atom seems to send the same structure as vscode\r\n```json\r\n{\r\n  \"jsonrpc\": \"2.0\",\r\n  \"method\": \"workspace/didChangeConfiguration\",\r\n  \"params\": {\r\n    \"settings\": {\r\n      \"metals\": {\r\n        \"version\": \"0.4.0-SNAPSHOT\",\r\n        \"javaArgs\": [\r\n          \"-XX:+UseG1GC\",\r\n          \"-XX:+UseStringDeduplication\",\r\n          \"-Xss4m\",\r\n          \"-Xms1G\",\r\n          \"-Xmx4G\"\r\n        ]\r\n      }\r\n    }\r\n  }\r\n}\r\n```",
+        "createdAt" : "2018-12-09T11:58:24Z",
+        "updatedAt" : "2018-12-09T18:05:10Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ce992cab-5a15-47a4-8511-a03f34b43edd",
+        "parentId" : "116f900e-7d28-46ba-8467-80405b24e21c",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "Right, Atom wraps it in `settings`:\r\n\r\nhttps://github.com/atom/atom-languageclient/blob/cc8975d70c7e93b3d017ad7454635bb14f9439ac/lib/auto-languageclient.ts#L340-L342\r\n\r\nAnd there is a hook to transform the configuration object before sending it to the server:\r\n\r\nhttps://github.com/atom/atom-languageclient/blob/cc8975d70c7e93b3d017ad7454635bb14f9439ac/lib/auto-languageclient.ts#L220-L228",
+        "createdAt" : "2018-12-09T13:23:57Z",
+        "updatedAt" : "2018-12-09T18:05:10Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1b1118ae5909e6fd535bcd79958b0dfde37041e3",
+    "line" : 59,
+    "diffHunk" : "@@ -1,1 +57,61 @@      | \"sbt-script\": \"script\"\n      |}\n    \"\"\".stripMargin\n  ) { obtained =>\n    assert(obtained.javaHome == Some(\"home\"))"
+  }
+]

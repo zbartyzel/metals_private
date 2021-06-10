@@ -1,0 +1,112 @@
+[
+  {
+    "id" : "ea05abdd-abca-471f-bafd-03fa0388ef84",
+    "prId" : 2852,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2852",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "0249322c-0063-406a-9bc5-5074205159de",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Improved it to return the full hover string here, full separation was actually problematic to maintain.",
+        "createdAt" : "2021-06-04T10:09:29Z",
+        "updatedAt" : "2021-06-04T10:12:52Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "55f4accb32b50673f57ca811cee234a7bcea5792",
+    "line" : 36,
+    "diffHunk" : "@@ -1,1 +311,315 @@            val docComments =\n              symbols.flatMap(ParsedComment.docOf(_))\n            val hoverString = symbols.headOption.map { symbol =>\n              tpw match {\n                // https://github.com/lampepfl/dotty/issues/8891"
+  },
+  {
+    "id" : "e4ce5864-0ee9-4545-b72f-526e7f2f05d8",
+    "prId" : 2504,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2504",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "eb1a287a-459f-4c91-9888-4cd7375658fe",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Can you extract it to a def ?",
+        "createdAt" : "2021-02-15T10:01:01Z",
+        "updatedAt" : "2021-02-18T14:15:02Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6e1d069f-ffd1-47a9-968a-a3adcc8f6b37",
+        "parentId" : "eb1a287a-459f-4c91-9888-4cd7375658fe",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Ach no, that's a bit different. NVM",
+        "createdAt" : "2021-02-18T12:20:39Z",
+        "updatedAt" : "2021-02-18T14:15:02Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1ca76fba3fb60396b09fcdec3edfde98d74f0b6b",
+    "line" : 105,
+    "diffHunk" : "@@ -1,1 +569,573 @@          // designator is not necessarily an instance of `Symbol` and it's an instance of `Name`\n          // this can be seen, for example, when we are shortening the signature of 3rd party APIs.\n          val sym =\n            if (designator.isInstanceOf[Symbol]) designator.asInstanceOf[Symbol]\n            else tpe.typeSymbol"
+  },
+  {
+    "id" : "887a5b2e-4043-443a-8bb2-10b2448351c4",
+    "prId" : 2330,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2330",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "0a45e067-eff0-4963-b887-5cac8b8142ae",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "🤔 This isn't 100% clear to me. How come this doesn't need to be a `given` anymore?",
+        "createdAt" : "2020-12-17T18:10:14Z",
+        "updatedAt" : "2020-12-18T20:51:29Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a6ac8b05-5873-42a7-a0c8-ffb54b0a048a",
+        "parentId" : "0a45e067-eff0-4963-b887-5cac8b8142ae",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This is a workaround not to use givens, because they changed the syntax and I would have duplicate the whole file. By doing it all explicitely it seems to work fine.",
+        "createdAt" : "2020-12-17T18:16:52Z",
+        "updatedAt" : "2020-12-18T20:51:29Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "2368510bda33c05ac21993258896f1c31f01ddfa",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +120,124 @@      driver.run(uri, sourceFile)\n\n      val ctx = driver.currentCtx\n      val pos = sourcePosition(driver, params, uri)\n      val items = driver.compilationUnits.get(uri) match {"
+  },
+  {
+    "id" : "789117cf-d1b4-4076-9bd7-0eade1fa0fc1",
+    "prId" : 2126,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2126",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "251170a7-8dcb-4bad-9f6a-98c7cee0c45a",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "We no longer support anything less than 0.25.0, so the option will always be available.",
+        "createdAt" : "2020-10-08T09:41:39Z",
+        "updatedAt" : "2020-10-08T09:41:39Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "6957f3f78c05dcb0e74234fe265da021d93fef3f",
+    "line" : 9,
+    "diffHunk" : "@@ -1,1 +99,103 @@\n  def newDriver: InteractiveDriver = {\n    val implicitSuggestionTimeout = List(\"-Ximport-suggestion-timeout\", \"0\")\n    val defaultFlags = List(\"-color:never\")\n    val settings ="
+  }
+]

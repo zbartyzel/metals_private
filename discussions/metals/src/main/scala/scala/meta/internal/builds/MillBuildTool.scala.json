@@ -1,0 +1,79 @@
+[
+  {
+    "id" : "bec612c6-0a6c-4767-ab16-14a6375090dc",
+    "prId" : 764,
+    "prUrl" : "https://github.com/scalameta/metals/pull/764",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f1740fdf-df03-4174-8b5d-068de009f071",
+        "parentId" : null,
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "does this file contain anything except the one-line version? If no, then you can use `Files.readAllBytes` \r\n",
+        "createdAt" : "2019-06-13T13:20:07Z",
+        "updatedAt" : "2019-06-13T13:20:17Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a244e612-343a-4306-a0d6-19b6b7547a6d",
+        "parentId" : "f1740fdf-df03-4174-8b5d-068de009f071",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "readAllBytes doesn't give me Strings so this is a bit more useful.",
+        "createdAt" : "2019-06-13T13:24:55Z",
+        "updatedAt" : "2019-06-13T13:24:55Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9c367244-e509-471f-ae6f-2a5abc3cb5ce",
+        "parentId" : "f1740fdf-df03-4174-8b5d-068de009f071",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "There is FileIO.slurp from our internal io libraries. ",
+        "createdAt" : "2019-06-13T15:03:48Z",
+        "updatedAt" : "2019-06-13T15:04:20Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b24827dff9633514961a4a5d80f323b548d8be8e",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +42,46 @@    val millVersion = if (millVersionPath.isFile) {\n      Files\n        .readAllLines(millVersionPath.toNIO)\n        .asScala\n        .headOption"
+  },
+  {
+    "id" : "f0f9f525-7936-4b1e-a5b6-88490824ce35",
+    "prId" : 737,
+    "prUrl" : "https://github.com/scalameta/metals/pull/737",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "00b5e55e-e275-4ae7-8867-ad6fce4a26a4",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "```suggestion\r\n  override def toString(): String = \"Mill\"\r\n```\r\n?",
+        "createdAt" : "2019-06-05T13:33:46Z",
+        "updatedAt" : "2019-06-05T15:06:18Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "36e88a35-27c1-499c-b093-fc0218b30cb7",
+        "parentId" : "00b5e55e-e275-4ae7-8867-ad6fce4a26a4",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Will fix that up along with maven",
+        "createdAt" : "2019-06-05T14:51:18Z",
+        "updatedAt" : "2019-06-05T15:06:18Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3b0b2cfc5be483b031004060e57b22729000de09",
+    "line" : 55,
+    "diffHunk" : "@@ -1,1 +53,57 @@  override def version: String = \"0.4.0\"\n\n  override def toString(): String = \"mill\"\n\n}"
+  }
+]

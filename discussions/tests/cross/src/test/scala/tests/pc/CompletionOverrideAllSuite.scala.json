@@ -1,0 +1,46 @@
+[
+  {
+    "id" : "d068e108-eb10-4b5c-844f-fb25627674c8",
+    "prId" : 1031,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1031",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "879f193c-9e61-4fee-9bb6-341c25ec7327",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "What happens if a method we override needs an import?\r\n```scala\r\ntrait Foo {\r\n  def file: java.io.File \r\n}\r\nclass Bar {\r\n  def file@@ // implement all members\r\n}\r\n```",
+        "createdAt" : "2019-11-08T15:25:07Z",
+        "updatedAt" : "2019-11-10T21:00:37Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4792cf25-2491-4b5a-bf3a-a4cd6fbdf503",
+        "parentId" : "879f193c-9e61-4fee-9bb6-341c25ec7327",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Just tested it locally and it imports it, but let me add a test to actually check it.",
+        "createdAt" : "2019-11-08T15:35:38Z",
+        "updatedAt" : "2019-11-10T21:00:37Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "08f16e0c-8913-430e-af32-f9d12ff58316",
+        "parentId" : "879f193c-9e61-4fee-9bb6-341c25ec7327",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Actually nevermind, it does for a single member but not like I thought it would with the implement all. Good catch, thanks.",
+        "createdAt" : "2019-11-08T15:41:43Z",
+        "updatedAt" : "2019-11-10T21:00:37Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d86f1fab85d5e22c96d5b7f681c79dc78116aaac",
+    "line" : 318,
+    "diffHunk" : "@@ -1,1 +316,320 @@\n  checkEdit(\n    \"mixed-partial-edit\",\n    \"\"\"|package example\n       |"
+  }
+]

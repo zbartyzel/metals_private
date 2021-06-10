@@ -1,0 +1,79 @@
+[
+  {
+    "id" : "332c83d8-e5c8-4433-b66f-926bbbb0c66f",
+    "prId" : 2539,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2539",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "297e8a91-fb18-4810-89cf-1ff5234c4b63",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "`implementations` are not yet supported - added an issue here: https://github.com/scalameta/metals-feature-requests/issues/190\r\n",
+        "createdAt" : "2021-02-22T16:31:55Z",
+        "updatedAt" : "2021-02-22T17:56:53Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b53145da24136554bef3e6fc28bc77a7dcfd5a62",
+    "line" : 17,
+    "diffHunk" : "@@ -1,1 +480,484 @@    <td>Find implementations</td>\n    <td align=\"center\">✅</td>\n    <td align=\"center\"></td>\n    <td align=\"center\">✅</td>\n    <td align=\"center\">✅</td>"
+  },
+  {
+    "id" : "7abc8a67-101a-4f7b-9364-5a406a1b6cdf",
+    "prId" : 2026,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2026",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "555aad02-d993-48fa-9a83-32c0e39cf01d",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This is not rendering correctly now.",
+        "createdAt" : "2020-08-26T13:43:30Z",
+        "updatedAt" : "2020-08-26T17:38:51Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a9b7341c6a9ccad5b4f42532e7aec5116e41bda3",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +14,18 @@```\n\n\n## Editor support\n"
+  },
+  {
+    "id" : "149d6e3a-6958-4027-a06f-da5978eff693",
+    "prId" : 1934,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1934",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "df8dcd61-6bcf-424c-84e2-15c287ab7dd3",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I feel like it will be much easier to find this way. Alternatively we could move it to the top of each editor?",
+        "createdAt" : "2020-07-20T13:03:24Z",
+        "updatedAt" : "2020-07-21T07:58:00Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d061f111-dac5-42f6-95c9-6922e73ceb25",
+        "parentId" : "df8dcd61-6bcf-424c-84e2-15c287ab7dd3",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "I think this is fine as long as we don't remove it from the editor page since I feel like some people just skip the overview page and go right to their editor.",
+        "createdAt" : "2020-07-20T14:35:04Z",
+        "updatedAt" : "2020-07-21T07:58:00Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1f9f20c530b2152a24fddd4618793dbec859f696",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +5,9 @@---\n\n## Latest Metals server versions\n\nTo find out how to set the version in your editor please check out the editor"
+  }
+]

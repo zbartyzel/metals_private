@@ -1,0 +1,134 @@
+[
+  {
+    "id" : "645cbdf6-8867-42be-aed6-34e3b1c0de78",
+    "prId" : 1048,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1048",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "6c397e3f-3a33-4e29-a377-af31af506557",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "😍 ",
+        "createdAt" : "2019-11-07T04:36:32Z",
+        "updatedAt" : "2019-11-11T16:33:17Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "32617da1c138d4dd74af7289c14ff3aeb1bc9654",
+    "line" : 331,
+    "diffHunk" : "@@ -1,1 +329,333 @@       |object Main {\n       |  val a = new Alphabet {\n       |    override def <<me@@thod>>(adf: String): Int = 321\n       |  }\n       |}"
+  },
+  {
+    "id" : "3c18ac78-72b5-4dca-be25-b080cf9658b1",
+    "prId" : 1048,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1048",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "df5162d0-ce2b-4fb8-873d-ed0a482a8431",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : ":+1:",
+        "createdAt" : "2019-11-11T04:24:25Z",
+        "updatedAt" : "2019-11-11T16:33:17Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "32617da1c138d4dd74af7289c14ff3aeb1bc9654",
+    "line" : 104,
+    "diffHunk" : "@@ -1,1 +102,106 @@       |trait <<A@@BC>>\n       |trait Alphabet{\n       |  this: <<ABC>> =>\n       |}\n       |object Main{"
+  },
+  {
+    "id" : "a5a04f64-1684-41ae-9f74-e265fc915285",
+    "prId" : 1048,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1048",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "92e9f35d-4094-4ff6-a2ca-52f8c97b266e",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Should we consider erroring in this case?",
+        "createdAt" : "2019-11-11T04:26:00Z",
+        "updatedAt" : "2019-11-11T16:33:17Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0ea14169-607f-4dd6-a733-bf5b5d482b24",
+        "parentId" : "92e9f35d-4094-4ff6-a2ca-52f8c97b266e",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "We could, but the other way would be to use Metals to at least rename Scala occurrences and rename the rest by hand or via different LSP. \r\n\r\nI thinking maybe report a warning in that case?",
+        "createdAt" : "2019-11-11T12:13:45Z",
+        "updatedAt" : "2019-11-11T16:33:17Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ddb09958-95fb-42e3-bdce-941847fb4c9f",
+        "parentId" : "92e9f35d-4094-4ff6-a2ca-52f8c97b266e",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I added a warning in a case like that.",
+        "createdAt" : "2019-11-11T16:34:06Z",
+        "updatedAt" : "2019-11-11T16:34:06Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "32617da1c138d4dd74af7289c14ff3aeb1bc9654",
+    "line" : 348,
+    "diffHunk" : "@@ -1,1 +346,350 @@       |package a\n       |object Main{\n       |  val other = new <<Oth@@er>>()\n       |}\n       |\"\"\".stripMargin,"
+  },
+  {
+    "id" : "12e9b013-a17b-49ae-b30c-eb038682b5e1",
+    "prId" : 1048,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1048",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "35b20807-89cf-40e5-a7e0-dcf071ae45ef",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Missing test case: named parameter for case class fields\r\n\r\n```scala\r\ncase class Name(value: String)\r\nName(value = \"42\")\r\n  .copy(value = \"43\")\r\n  .value\r\nnew Name(value = \"44\")\r\n```",
+        "createdAt" : "2019-11-11T04:27:23Z",
+        "updatedAt" : "2019-11-11T16:33:17Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2526b194-6b0a-45ed-86ac-d242b901422d",
+        "parentId" : "35b20807-89cf-40e5-a7e0-dcf071ae45ef",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "It seems that references are not being found for 42 nad 44. Added that test case.",
+        "createdAt" : "2019-11-11T12:20:36Z",
+        "updatedAt" : "2019-11-11T16:33:17Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "eec32dd2-04f2-4297-9b9f-b18b3909847b",
+        "parentId" : "35b20807-89cf-40e5-a7e0-dcf071ae45ef",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Seems to be the same issue as https://github.com/scalameta/scalameta/issues/1169",
+        "createdAt" : "2019-11-11T12:23:03Z",
+        "updatedAt" : "2019-11-11T16:33:17Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "32617da1c138d4dd74af7289c14ff3aeb1bc9654",
+    "line" : 54,
+    "diffHunk" : "@@ -1,1 +52,56 @@    newName = \"Bar\"\n  )\n\n  renamed(\n    \"unapply-param\","
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "6079ba93-1ced-4a3f-a57b-ab09fc804ead",
+    "prId" : 37,
+    "prUrl" : "https://github.com/scalameta/metals/pull/37",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "c4cf986f-88b0-420c-bdf0-33396ba21bc5",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "These commented printlns are intentionally left behind, since they're useful when updating the snapshot tests",
+        "createdAt" : "2017-11-19T12:23:13Z",
+        "updatedAt" : "2017-11-20T07:50:41Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ed0e859accacbeb45baa83cfdbb1650efaa932da",
+    "line" : 18,
+    "diffHunk" : "@@ -1,1 +16,20 @@    test(filename) {\n      val obtained = Database(Ctags.index(filename, original) :: Nil)\n//      println(obtained)\n      assertNoDiff(obtained.toDb(None).documents.head.syntax, expected)\n    }"
+  }
+]

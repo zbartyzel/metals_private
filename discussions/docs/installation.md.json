@@ -1,0 +1,101 @@
+[
+  {
+    "id" : "8e958a5f-3f61-4d55-9fbb-fd4f80780916",
+    "prId" : 287,
+    "prUrl" : "https://github.com/scalameta/metals/pull/287",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "32a9478d-4df1-4e18-adcb-2a07857cb557",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Is it possible to disable this behavior sbt 1? For example if `sbt.diagnostics=false` and `command=\"\"`. ",
+        "createdAt" : "2018-04-21T18:05:29Z",
+        "updatedAt" : "2018-04-21T18:06:55Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "67fd9ac8-46b4-4ad6-8502-a95848d8a635",
+        "parentId" : "32a9478d-4df1-4e18-adcb-2a07857cb557",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "I think this combination is a bit confusing. I'm hesitant to suggest adding another setting again after we removed `sbt.enabled`, but without it automatic connection to sbt server is currently unconditional.",
+        "createdAt" : "2018-04-21T21:30:58Z",
+        "updatedAt" : "2018-04-21T21:30:58Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "39ffe6f8c879a0972623c0e0dbd7282caf2314c6",
+    "line" : 17,
+    "diffHunk" : "@@ -1,1 +56,60 @@Note that in sbt 0.13 you will need to invoke `metalsSetup` (or `semanticdbEnable`) whenever you close and\nre-open sbt. For a more persistent setup, keep reading. In sbt 1 you don't need to do it because Metals will\nautomatically invoke `semanticdbEnable` every time it connects to the sbt server.\n\n## Persisting the semanticdb-scalac compiler plugin"
+  },
+  {
+    "id" : "fcfae99f-8ae4-4cd8-8be7-03d3742909fe",
+    "prId" : 226,
+    "prUrl" : "https://github.com/scalameta/metals/pull/226",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "1878fa71-1b4f-4229-9dcf-af449c570923",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "when #222 is in, this won't be true anymore",
+        "createdAt" : "2018-04-02T15:10:04Z",
+        "updatedAt" : "2018-04-02T21:54:11Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "83e28d94-b496-4f5c-99f0-297e3e67dc0b",
+        "parentId" : "1878fa71-1b4f-4229-9dcf-af449c570923",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I'll remove this part in the PR that fixes #222",
+        "createdAt" : "2018-04-02T15:45:18Z",
+        "updatedAt" : "2018-04-02T21:54:11Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "774cbf430ac6829db5d40bd97995fc3a6d38bab0",
+    "line" : 77,
+    "diffHunk" : "@@ -1,1 +75,79 @@\n> **NOTE**: you will need to repeat this step every time you add a new\n> dependency in your build or when you run `sbt clean`.\n\n> **NOTE**: `metalsSetup` previously used to be called"
+  },
+  {
+    "id" : "4c819b11-aecc-40a9-b026-aff6211d31d6",
+    "prId" : 226,
+    "prUrl" : "https://github.com/scalameta/metals/pull/226",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f9e2a8c9-8c98-4b73-8e5f-bf16d9c76c07",
+        "parentId" : null,
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "Probably mention that it can be automated with the sbt 1.1 integration here? Or just link to the roadmap's sbt section?",
+        "createdAt" : "2018-04-02T18:07:01Z",
+        "updatedAt" : "2018-04-02T21:54:11Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3105b85a-6f3f-456d-8fce-d5bedba63918",
+        "parentId" : "f9e2a8c9-8c98-4b73-8e5f-bf16d9c76c07",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "The sbt integration is still fairly undocumented. I think it's best to rewrite the installation steps once everything is released because so many steps in the current document will be removed.",
+        "createdAt" : "2018-04-02T18:53:48Z",
+        "updatedAt" : "2018-04-02T21:54:11Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "774cbf430ac6829db5d40bd97995fc3a6d38bab0",
+    "line" : 95,
+    "diffHunk" : "@@ -1,1 +93,97 @@\nFinally, since most features currently rely on a successful compilation step,\nmake sure you incrementally compile your project by running `~compile` in `sbt`."
+  }
+]

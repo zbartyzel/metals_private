@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "9210f2be-a3c3-42b4-8168-87e2466bcc19",
+    "prId" : 171,
+    "prUrl" : "https://github.com/scalameta/metals/pull/171",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "6171616c-b12c-4835-ae75-573d9a3387d2",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "https://github.com/coursier/coursier/raw/master/coursier",
+        "createdAt" : "2018-01-08T14:49:57Z",
+        "updatedAt" : "2018-01-08T14:51:45Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e5b9a034cb504a894a66ae60a4fb06ab5b5a5e7b",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +6,10 @@test -e \"$COURSIER_PATH\" || ( \\\n  mkdir -p \"$COURSIER_DIR\" && \\\n  curl -Lso \"$COURSIER_PATH\" https://git.io/vgvpD && \\\n  chmod +x \"$COURSIER_PATH\" \\\n)"
+  }
+]

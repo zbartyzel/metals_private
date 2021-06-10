@@ -1,0 +1,90 @@
+[
+  {
+    "id" : "644c0adf-80fc-4c6a-8e31-481f19023294",
+    "prId" : 458,
+    "prUrl" : "https://github.com/scalameta/metals/pull/458",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "8eb71309-616e-4ab7-87e0-72d056a81e08",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "To explain the problem, this future here returned before we were able to fix `.scalafmt.conf`. Now the `formatting` future includes waiting for the \"update .scalafmt.conf?\" dialogue.",
+        "createdAt" : "2019-01-11T17:54:18Z",
+        "updatedAt" : "2019-01-11T17:54:18Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "73c2b571e90b9cb65c43c52aca8f3b008aa998c8",
+    "line" : 35,
+    "diffHunk" : "@@ -1,1 +250,254 @@      )\n      _ <- server.didOpen(\"Main.scala\")\n      _ <- server.formatting(\"Main.scala\")\n      _ = {\n        assertNoDiff("
+  },
+  {
+    "id" : "31e48607-ff5b-414b-bf44-cb5b7e6d70c7",
+    "prId" : 429,
+    "prUrl" : "https://github.com/scalameta/metals/pull/429",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "2afcc666-9b77-4b16-9d54-df51b22d86a3",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Missing test for `.sbt` files, we can add a file `project/plugins.sbt` to avoid the slow sbt build import. It's handled automatically by the Scalafm210 class, but good to test it in case we change the impl later.",
+        "createdAt" : "2018-12-20T08:44:32Z",
+        "updatedAt" : "2018-12-22T11:11:14Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "72944fb9-8308-47ed-bb30-d02899becb3c",
+        "parentId" : "2afcc666-9b77-4b16-9d54-df51b22d86a3",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Also missing test to ensure that `project.excludeFilters` is respected. This is not handled by the `Scalafmt210` class so I suspect we need to replicate the Scalafmt logic here. With \"format on save\", you don't want to format excluded files.",
+        "createdAt" : "2018-12-20T08:55:54Z",
+        "updatedAt" : "2018-12-22T11:11:14Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b2d62786-8fc9-4fec-9e58-dd3b0257017c",
+        "parentId" : "2afcc666-9b77-4b16-9d54-df51b22d86a3",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Also missing test for `.sc` files, I think `Scala210` doesn't handle that case actually (it's an old API). I'm fine actually not supporting `.sc` files for now.",
+        "createdAt" : "2018-12-20T08:56:24Z",
+        "updatedAt" : "2018-12-22T11:11:14Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "bbc35135-508f-4b74-abf7-429f0036f130",
+        "parentId" : "2afcc666-9b77-4b16-9d54-df51b22d86a3",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Added tests for `.sbt` and `.sc` files. They both seeem to work fine.",
+        "createdAt" : "2018-12-21T11:03:08Z",
+        "updatedAt" : "2018-12-22T11:11:14Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0d2b3a13-da58-493e-a405-f71a08cd071f",
+        "parentId" : "2afcc666-9b77-4b16-9d54-df51b22d86a3",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Ah no, `.sc` do not parse. I'll rever that commit. We can add .sc support if there's demand for it.",
+        "createdAt" : "2018-12-21T11:05:18Z",
+        "updatedAt" : "2018-12-22T11:11:14Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ec1161fecfaec6824cba1eb2a21806f972c8f67f",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +6,10 @@import scala.meta.internal.metals.Messages.ScalafmtError\n\nobject FormattingSlowSuite extends BaseSlowSuite(\"formatting\") {\n\n  testAsync(\"basic\") {"
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "7860105e-f413-4e4c-9775-bb1da6c0d2f2",
+    "prId" : 1657,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1657",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f197320c-007e-43eb-bc4b-e15444b80a21",
+        "parentId" : null,
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "Question: Is this test related to mentioned optimisation removal?",
+        "createdAt" : "2020-04-22T17:52:51Z",
+        "updatedAt" : "2020-04-22T17:52:51Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "53acb521-e3c6-47fe-b6e9-9278a4dced2f",
+        "parentId" : "f197320c-007e-43eb-bc4b-e15444b80a21",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Yes actually, this issue came up when using Folding on Scala versions different than `2.12.11`",
+        "createdAt" : "2020-04-22T18:03:42Z",
+        "updatedAt" : "2020-04-22T18:03:42Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "dbb668af718f405cc9cb432f1f65a58a474a9994",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +4,8 @@import scala.meta.internal.metals.{BuildInfo => V}\n\nclass FoldingCrossLspSuite extends BaseLspSuite(\"foldingRange-cross\") {\n\n  test(\"base-213\") {"
+  }
+]

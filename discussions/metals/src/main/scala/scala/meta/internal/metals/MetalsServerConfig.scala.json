@@ -1,0 +1,123 @@
+[
+  {
+    "id" : "83628dd6-586b-4dc3-b874-90d8b09efbe7",
+    "prId" : 1677,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1677",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "482fa095-ba68-42a8-bea9-95034b280f8f",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Instead of introducing this as a server property, can we just introduce it in `InitializationOptions`?",
+        "createdAt" : "2020-04-29T18:15:56Z",
+        "updatedAt" : "2020-05-04T13:57:13Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "bef78a3f-af9e-47a3-8c87-c88df100c8cb",
+        "parentId" : "482fa095-ba68-42a8-bea9-95034b280f8f",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Client editor should never set this. It's only to be set by a user that knows what they are doing. Usually via `.jvmopts` file in the workspace. The default is fine for all clients.",
+        "createdAt" : "2020-04-29T18:31:55Z",
+        "updatedAt" : "2020-05-04T13:57:13Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "97c804af-f622-4b14-9e5c-dfe4c279e329",
+        "parentId" : "482fa095-ba68-42a8-bea9-95034b280f8f",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "ahhh ok, that makes sense. 👍 ",
+        "createdAt" : "2020-04-29T18:33:41Z",
+        "updatedAt" : "2020-05-04T13:57:13Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "38751291a84f683f8d8eb60ed8a73ce8657936c9",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +67,71 @@      BuildInfo.bloopVersion\n    ),\n    askToReconnect: Boolean = MetalsServerConfig.binaryOption(\n      \"metals.ask-to-reconnect\",\n      default = false"
+  },
+  {
+    "id" : "74f11e64-29ad-4154-98c4-02df9694ca2b",
+    "prId" : 1218,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1218",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "e2e74ec8-d42f-405d-8494-b96f0683f831",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "I would remove this line so that it uses the default as the other editors (the default is `\"on\"` unless overridden by a system property) \r\n\r\nActually, we can probably remove `ShowMessageConfig` and `ShowMessageRequestConfig` altogether since as far as I know they were only used by Sublime Text.\r\n\r\nI doubt anyone uses those system properties directly, and if they do, I would be curious to know why and better handle this on the server directly.",
+        "createdAt" : "2019-12-26T09:20:16Z",
+        "updatedAt" : "2019-12-26T09:22:38Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4573b573-d695-4024-889e-887d8789276d",
+        "parentId" : "e2e74ec8-d42f-405d-8494-b96f0683f831",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "(It's fine to just remove the line for this PR, I can follow up with a different PR cleaning up the config options)",
+        "createdAt" : "2019-12-26T09:20:36Z",
+        "updatedAt" : "2019-12-26T09:22:38Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "408498b4-bb3d-4c71-8ad2-b83d95345890",
+        "parentId" : "e2e74ec8-d42f-405d-8494-b96f0683f831",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "actually, I'll merge as is and follow up directly. ",
+        "createdAt" : "2019-12-26T09:28:08Z",
+        "updatedAt" : "2019-12-26T09:28:09Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "aa1e73980b5c2b5406a7a4f9837ce4018713bc4a",
+    "line" : 16,
+    "diffHunk" : "@@ -1,1 +145,149 @@        base.copy(\n          isHttpEnabled = true,\n          showMessage = ShowMessageConfig.on,\n          statusBar = StatusBarConfig.showMessage,\n          showMessageRequest = ShowMessageRequestConfig.on,"
+  },
+  {
+    "id" : "05512183-d33b-44d4-a22c-a60d65319fbf",
+    "prId" : 424,
+    "prUrl" : "https://github.com/scalameta/metals/pull/424",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "97559634-3f4b-4f75-82b1-9a11c6e0cd26",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "maybe add a comment here?\r\n\r\n```scala\r\n// vim-lsc does not yet support DocumentSymbol[] as a response for textDocument/documentSymbol\r\ndocumentSymbol = DocumentSymbolConfig.symbolInformation,\r\n\r\n```",
+        "createdAt" : "2018-12-19T11:59:09Z",
+        "updatedAt" : "2018-12-19T13:35:23Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8dee6018-5d36-4c61-840f-d02edeba841f",
+        "parentId" : "97559634-3f4b-4f75-82b1-9a11c6e0cd26",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Done.",
+        "createdAt" : "2018-12-19T12:44:28Z",
+        "updatedAt" : "2018-12-19T13:35:23Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "eade48fd8ffbc5572cad7092e373fee0027e4f0f",
+    "line" : 20,
+    "diffHunk" : "@@ -1,1 +91,95 @@          // window/logMessage output is always visible and non-invasive in vim-lsc\n          statusBar = StatusBarConfig.logMessage,\n          documentSymbol = DocumentSymbolConfig.symbolInformation,\n          // Not strictly needed, but helpful while this integration matures.\n          isHttpEnabled = true,"
+  }
+]

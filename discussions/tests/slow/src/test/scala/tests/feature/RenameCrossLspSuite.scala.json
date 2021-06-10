@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "7dc2017b-e4b8-41f6-92cc-34c32b667242",
+    "prId" : 2586,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2586",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "dbd2e03b-51f5-46fe-868d-bda7a9a7e074",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This was actually causing a warning, which now was picked up.",
+        "createdAt" : "2021-03-09T16:18:39Z",
+        "updatedAt" : "2021-03-10T08:52:26Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d58a05d72a615e9338e2c28245343d6fa1d3aa30",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +11,15 @@    \"\"\"|/a/src/main/scala/a/Main.scala\n       |\n       |@main def run() = {\n       |  <<hello>>(\"Mark\")\n       |  <<hello>>(\"Anne\")"
+  }
+]

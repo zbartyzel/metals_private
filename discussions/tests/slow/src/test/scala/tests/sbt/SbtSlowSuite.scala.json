@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "3fe6f839-d213-44af-a9c8-652106725eaa",
+    "prId" : 942,
+    "prUrl" : "https://github.com/scalameta/metals/pull/942",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "2d6ce6cb-9f6b-4e3a-a9bf-d557def49c74",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "What is the motivation for this change? The ScalaTest error message inside asserts for large lists is quite difficult to read. The output format from `assertNoDiff` is easier to debug in my experience (although it may take some time to get used to the output)",
+        "createdAt" : "2019-09-25T08:00:29Z",
+        "updatedAt" : "2019-10-04T07:32:50Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ab154653-7b92-436e-9126-2f5bf0fc7569",
+        "parentId" : "2d6ce6cb-9f6b-4e3a-a9bf-d557def49c74",
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "because now the `client.workspaceClientCommands` contain also ClientCommands.RefreshModel, so the `noDiff` ` actually won't do.",
+        "createdAt" : "2019-09-25T08:53:45Z",
+        "updatedAt" : "2019-10-04T07:32:50Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "47ea581fbaa603a2dc171e3e913392f05fc4ba11",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +249,253 @@        val expected = ClientCommands.ReloadDoctor.id :: ClientCommands.RunDoctor.id :: Nil\n        val actual = client.workspaceClientCommands\n        assert(actual.startsWith(expected))\n        client.showMessages.clear()\n        client.clientCommands.clear()"
+  }
+]

@@ -1,0 +1,101 @@
+[
+  {
+    "id" : "62135d8f-8e33-495e-be63-dab059101a78",
+    "prId" : 1546,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1546",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "a716480f-6271-4089-a5c7-4ad4a48ae2e3",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "/cc @olafurpg dogfooding the new scalacheck module 👇 ",
+        "createdAt" : "2020-03-26T09:41:52Z",
+        "updatedAt" : "2020-03-27T07:54:00Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a6ece3fc-375f-46b2-b0ea-a01a7009e159",
+        "parentId" : "a716480f-6271-4089-a5c7-4ad4a48ae2e3",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Do we really need Scalacheck here though? It's supposed to be used over a set of possible values and here it is just normal testing. I have never found a usage for property based testing and maybe it would be better to keep the tests consistent?  \r\n\r\n",
+        "createdAt" : "2020-03-26T11:55:17Z",
+        "updatedAt" : "2020-03-27T07:54:00Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f05fa52a-72ce-46b2-9ebc-5bd710ab87f3",
+        "parentId" : "a716480f-6271-4089-a5c7-4ad4a48ae2e3",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "> It's supposed to be used over a set of possible values and here it is just normal testing\r\n\r\nI'm using Scalacheck to test \"all\" possible positions of the cursor inside a (fixed) document.\r\n\r\n\r\n> Do we really need Scalacheck here though?\r\n\r\nIt's not strictly necessary, but it just gives me a little more confidence that the computation is not right by chance but it holds for \"all\" possible cursor positions.\r\n\r\nThat said, if you prefer we can remove it.",
+        "createdAt" : "2020-03-27T07:55:51Z",
+        "updatedAt" : "2020-03-27T07:55:51Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d01755b1-cf6a-479a-831b-186989a6fda2",
+        "parentId" : "a716480f-6271-4089-a5c7-4ad4a48ae2e3",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "> I'm using Scalacheck to test \"all\" possible positions of the cursor inside a (fixed) document.\r\n\r\nI am totally blind and have not seen it. It's a perfectly valid scenario to use it in. :+1: \r\n",
+        "createdAt" : "2020-03-27T08:58:08Z",
+        "updatedAt" : "2020-03-27T08:58:09Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "9509aaa1d7c1803f9c5304e9517a4c0370590f23",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +5,9 @@import org.scalacheck.Gen\nimport org.scalacheck.Prop.forAll\n\nclass NewFileTemplateSuite extends BaseSuite with ScalaCheckSuite {\n"
+  },
+  {
+    "id" : "866aacf3-b678-4ec9-8531-f27d9e46f3f5",
+    "prId" : 1546,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1546",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "0005596e-ccbb-4022-889d-c4b554a893f3",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "What is the difference between `forAll` here and `0.to(template.length).foreach { .. }`?",
+        "createdAt" : "2020-03-27T11:22:16Z",
+        "updatedAt" : "2020-03-27T11:22:16Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "fe758027-5cf8-49ce-9f0c-95ff9b463a76",
+        "parentId" : "0005596e-ccbb-4022-889d-c4b554a893f3",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "ah, good point: in this case just the number of iterations (100 with ScalaCheck). I can revert to just using a range",
+        "createdAt" : "2020-03-27T11:31:03Z",
+        "updatedAt" : "2020-03-27T11:31:03Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0c49fc20-ab34-44d4-9bf0-c9b1de19f1cb",
+        "parentId" : "0005596e-ccbb-4022-889d-c4b554a893f3",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I think `1.to(100)` would be clearer and more consistent with the rest of the tests. Property based testing is more helpful when you can't tests all possible inputs. ",
+        "createdAt" : "2020-03-27T12:04:18Z",
+        "updatedAt" : "2020-03-27T12:04:18Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "9509aaa1d7c1803f9c5304e9517a4c0370590f23",
+    "line" : 26,
+    "diffHunk" : "@@ -1,1 +24,28 @@          |\"\"\".stripMargin\n    val cursorOffsetGen = Gen.chooseNum(0, template.length)\n    forAll(cursorOffsetGen) { cursorOffset =>\n      val templateWithCursor = template.patch(cursorOffset, \"@@\", 0)\n      val newFileTemplate = NewFileTemplate(templateWithCursor)"
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "fb0999f1-967d-4561-8d5e-f1b3fb8cf283",
+    "prId" : 78,
+    "prUrl" : "https://github.com/scalameta/metals/pull/78",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "a7e7c868-2284-4e61-90ea-123a5c3a2960",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Makes sense!",
+        "createdAt" : "2017-12-01T20:33:42Z",
+        "updatedAt" : "2017-12-02T23:22:47Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "71da2fa975b8fb36cd888c23d0a8b0214a68e679",
+    "line" : 82,
+    "diffHunk" : "@@ -1,1 +82,86 @@      line: Int,\n      column: Int\n  ): Option[Symbol] = {\n    for {\n      name <- resolveName(path, line, column)"
+  }
+]

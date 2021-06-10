@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "4af827f5-68e8-4b1b-9d24-91c7779d4c5a",
+    "prId" : 1056,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1056",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "dfcebc0d-6384-4c63-bc13-56ea1183e2c3",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "I honestly couldn't make this work, but it's not too terrible as UX",
+        "createdAt" : "2019-11-10T11:00:30Z",
+        "updatedAt" : "2019-11-10T11:34:28Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f37f1cd8-bbb0-47dd-a3b3-3a2725e1856f",
+        "parentId" : "dfcebc0d-6384-4c63-bc13-56ea1183e2c3",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I think this UX is totally fine, you don't always know if the supermethod is a def, val or a var",
+        "createdAt" : "2019-11-10T18:04:50Z",
+        "updatedAt" : "2019-11-10T18:05:33Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cfc8b62667af7d1b6a67f9855fbaa83c52772c72",
+    "line" : 45,
+    "diffHunk" : "@@ -1,1 +680,684 @@       }\n       |\"\"\".stripMargin,\n    // NOTE(gabro): we inlcude also var and def completions despite the user typed a val\n    \"\"\"|var hello1: Int\n       |val hello2: Int"
+  }
+]

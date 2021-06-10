@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "b2a25e00-9612-4c51-bfcc-00f544c14827",
+    "prId" : 1019,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1019",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ff4778c6-2d56-4965-badd-326a413ed0ab",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "👍 Thank you for writing a test case!",
+        "createdAt" : "2019-10-25T08:36:45Z",
+        "updatedAt" : "2019-10-30T11:44:17Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "35345e713c35479f38e4211db46b8e758640e70b",
+    "line" : 11,
+    "diffHunk" : "@@ -1,1 +9,13 @@import scala.util.Success\n\nobject UnsupportedDebuggingLspSuite\n    extends BaseLspSuite(\"unsupported-debugging\") {\n"
+  }
+]

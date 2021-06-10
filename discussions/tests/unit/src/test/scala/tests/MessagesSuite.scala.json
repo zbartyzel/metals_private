@@ -1,0 +1,46 @@
+[
+  {
+    "id" : "941dbb0e-5dca-47cb-a0fa-ee476dd38d7d",
+    "prId" : 1549,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1549",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "a6535526-8c0e-490c-846d-5906816cba6e",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "🤔 I guess I'm still not convinced that suggesting to a user that is currently on 2.12.2 that they switch to 2.11.12 is a good idea. In this specific situation, what would be the benefit of suggesting this current message over just `Please upgrade to Scala versions 2.12.11`?",
+        "createdAt" : "2020-03-30T05:49:04Z",
+        "updatedAt" : "2020-03-30T05:49:05Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3356c335-438d-4429-a88c-d509a5c35f42",
+        "parentId" : "a6535526-8c0e-490c-846d-5906816cba6e",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "They are both on `2.11.9` and `2.12.2`, it might be another module they have in the project that is for Scala native and we cannot recommend they upgrade to 2.12. This should be a rare situation though.",
+        "createdAt" : "2020-03-30T08:00:28Z",
+        "updatedAt" : "2020-03-30T08:00:28Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "adf1e7e4-30cb-4134-aa72-8943b2f5bb5f",
+        "parentId" : "a6535526-8c0e-490c-846d-5906816cba6e",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "ahhhh, sorry, I misunderstood the test. Yea, then this is fine.",
+        "createdAt" : "2020-03-30T08:47:57Z",
+        "updatedAt" : "2020-03-30T08:47:58Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "47492e925bace8ce1f4ee651edf5c68f20118a13",
+    "line" : 44,
+    "diffHunk" : "@@ -1,1 +42,46 @@        .message(Seq(\"2.11.9\", \"2.12.2\", \"2.12.1\")),\n      \"You are using Scala versions 2.11.9, 2.12.1, 2.12.2, which are not supported in this version of Metals.\" +\n        \" Please upgrade to Scala version 2.12.11 or alternatively to legacy Scala 2.11.12.\"\n    )\n  }"
+  }
+]

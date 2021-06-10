@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "6cd87aee-d3ef-46d6-8def-9ea1b1298c07",
+    "prId" : 586,
+    "prUrl" : "https://github.com/scalameta/metals/pull/586",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "6519706b-2436-4060-9fb5-b8d431014852",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Nice! 👏 ",
+        "createdAt" : "2019-03-21T21:20:34Z",
+        "updatedAt" : "2019-03-21T21:20:57Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e2bf54988ebbb071ec5f5380d0085839ed45f5d8",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +3,7 @@import scala.meta.internal.metals.ScalaVersions\n\nobject ScalaVersionsSuite extends BaseSuite {\n  test(\"Idempotent minor release\") {\n    assert("
+  }
+]

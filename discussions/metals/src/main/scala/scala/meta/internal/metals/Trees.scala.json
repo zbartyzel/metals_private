@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "85019376-c48a-4174-a3b7-e791e3fd07a4",
+    "prId" : 799,
+    "prUrl" : "https://github.com/scalameta/metals/pull/799",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "8aa56bb3-e12f-43e1-a7f0-54c64b578b35",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "good call, at least we have a single place where to change this.",
+        "createdAt" : "2019-06-28T13:38:26Z",
+        "updatedAt" : "2019-06-28T13:38:26Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "fc72d8ead705e3c3076f10be4590a0a14f122d54",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +51,55 @@  private def dialect(path: AbsolutePath): Option[Dialect] = {\n    Option(PathIO.extension(path.toNIO)).collect {\n      case \"scala\" => dialects.Scala\n      case \"sbt\" => dialects.Sbt\n      case \"sc\" => dialects.Sbt"
+  }
+]

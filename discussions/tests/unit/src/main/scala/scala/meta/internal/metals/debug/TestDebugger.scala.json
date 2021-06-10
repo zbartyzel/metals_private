@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "15ba84b6-a5bc-41d7-bace-038061ff386d",
+    "prId" : 2005,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2005",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "9ab3fa0c-358b-42c7-a216-96b2fbbcd57f",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Fix for the failing tests, not sure why it started popping up.",
+        "createdAt" : "2020-08-18T10:04:03Z",
+        "updatedAt" : "2020-08-18T15:31:49Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a3ac6339a1e66b6ad62b64c6e84e3c0aa7ade47d",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +132,136 @@        output.append(event.getOutput)\n      case Category.STDERR =>\n        val output = event.getOutput()\n        // This might sometimes be printed in the JVM, but does not cause any actual issues\n        if (!output.contains(\"Picked up JAVA_TOOL_OPTIONS\"))"
+  },
+  {
+    "id" : "78f5c74e-dba7-4d70-aecc-f43ae7a376a5",
+    "prId" : 1783,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1783",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "1ce6df13-c07e-4be2-a886-f51584ab02ca",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This should help with the flaky tests better, since we are not sure how it is possible that source is very rarely null.",
+        "createdAt" : "2020-05-28T15:28:53Z",
+        "updatedAt" : "2020-06-02T20:02:03Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "354a7590e2040752863a8b6566562324bc6d9483",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +67,71 @@        // hence we have to register breakpoints here\n        response.getBreakpoints.foreach { brPoint =>\n          // note(@tgodzik) from time to time breakpoints are sent back without the source,\n          // it's pretty rare, but we were unable to find the reason\n          // more details here https://github.com/scalameta/metals/issues/1569"
+  },
+  {
+    "id" : "d06eec91-0c68-4b95-aabb-5699a31fb47c",
+    "prId" : 1256,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1256",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "fddca463-742e-4d67-9570-75743db70075",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "The test on windows were timing out and they usually are slower.",
+        "createdAt" : "2020-01-06T12:47:21Z",
+        "updatedAt" : "2020-01-06T12:47:21Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "5221982e1605895d70c5abd22174e1406e1e0efb",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +79,83 @@    for {\n      _ <- terminated.future\n      _ <- debugger.shutdown(60)\n      _ <- onStoppage.shutdown\n    } yield ()"
+  }
+]

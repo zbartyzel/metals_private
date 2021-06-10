@@ -1,0 +1,79 @@
+[
+  {
+    "id" : "86698b13-289e-4c48-a1c1-3ca8b83ebd47",
+    "prId" : 177,
+    "prUrl" : "https://github.com/scalameta/metals/pull/177",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "c9883022-73a9-4133-935c-057686da1e5e",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Aha, this makes more sense!",
+        "createdAt" : "2018-01-14T14:38:38Z",
+        "updatedAt" : "2018-01-14T14:38:43Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e518e335838919b39f0ef7103b96629298e6c706",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +35,39 @@      require(h.get(ContentLen).isEmpty)\n\n      val json = msg.asJson.mapObject(_.add(\"jsonrpc\", \"2.0\".asJson))\n      val str = json.noSpaces\n      val contentBytes = str.getBytes(StandardCharsets.UTF_8)"
+  },
+  {
+    "id" : "1ba058fe-7b79-48bc-88c1-f9c26a06942d",
+    "prId" : 172,
+    "prUrl" : "https://github.com/scalameta/metals/pull/172",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "c2200f91-b4d2-42ea-ab9c-62b72383b14a",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Note that this changes the logger name: `LazyLogging` instantiates a logger using `getClass.getName` as the name, so now this logger won't be called `org.langmeta.jsonrpc.MessageWriter`, but something else depending on the caller.\r\n\r\nIf we move to file/position kind of logging instead this is won't be an issue, but for now this will lead to inconsistent names in the logs.\r\n\r\nA possible alternative is to explicitly do\r\n\r\n```scala\r\nval logger = Logger(classOf[MessageWriter])\r\n```\r\n\r\non the call site. It's not ideal, but at least it's consistent.",
+        "createdAt" : "2018-01-10T18:40:11Z",
+        "updatedAt" : "2018-01-10T18:41:40Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2ca3364b-6a39-4db1-a925-da0ae6616c54",
+        "parentId" : "c2200f91-b4d2-42ea-ab9c-62b72383b14a",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I think that\r\n```scala\r\nval logger = Logger(classOf[MessageWriter])\r\n```\r\nwill use LoggerFactory which breaks the integration in bloop. I agree this change makes debugging quite bad, but I personally use `pprint` during development. I would love to switch to a file:line output format where this won't matter, but that would mean moving to another api like airframe-log (which is not sl4j backed). What do you propose we do?",
+        "createdAt" : "2018-01-10T19:03:32Z",
+        "updatedAt" : "2018-01-10T19:03:32Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "be1e502e-0020-4013-875a-cfedf06356dd",
+        "parentId" : "c2200f91-b4d2-42ea-ab9c-62b72383b14a",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "How does `LoggerFactory` break the integration in bloop? `LazyLogging` uses `LoggerFactory` too:\r\n\r\nhttps://github.com/typesafehub/scala-logging/blob/953ebc3dba7d2bb01317e6311d08481370ce9824/src/main/scala/com/typesafe/scalalogging/Logging.scala#L28",
+        "createdAt" : "2018-01-10T19:05:34Z",
+        "updatedAt" : "2018-01-10T19:05:54Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3885a84c-632f-4fc4-947c-3051179f5f45",
+        "parentId" : "c2200f91-b4d2-42ea-ab9c-62b72383b14a",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "bloop needs a way to use the jsonrpc API without triggering LoggerFactory, LazyLogging is behind a lazy val so if it's never used then LoggerFactory never gets triggered.",
+        "createdAt" : "2018-01-10T19:16:19Z",
+        "updatedAt" : "2018-01-10T19:16:19Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cd4724d11b332145fac1ee90a6b0dffec98f69fd",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +21,25 @@ * @note The header part is defined to be ASCII encoded, while the content part is UTF8.\n */\nclass MessageWriter(out: OutputStream, logger: Logger) {\n  private val ContentLen = \"Content-Length\"\n"
+  }
+]

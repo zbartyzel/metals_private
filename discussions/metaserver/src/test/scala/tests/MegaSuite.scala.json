@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "b4d02219-d73d-41a4-af71-3ad17726fcf3",
+    "prId" : 37,
+    "prUrl" : "https://github.com/scalameta/metals/pull/37",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "328bebdb-ae46-47d6-b9ca-566b97506f93",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Mega? 😄 ",
+        "createdAt" : "2017-11-19T05:09:58Z",
+        "updatedAt" : "2017-11-20T07:50:41Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2be18c6d-e8db-45e6-b5f0-0c722eb5c510",
+        "parentId" : "328bebdb-ae46-47d6-b9ca-566b97506f93",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Didn't know what to call it, but it's mega good 😄 ",
+        "createdAt" : "2017-11-19T12:22:44Z",
+        "updatedAt" : "2017-11-20T07:50:41Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ed0e859accacbeb45baa83cfdbb1650efaa932da",
+    "line" : 23,
+    "diffHunk" : "@@ -1,1 +21,25 @@ * - FunSuite-style test(\"name\") { => fun }\n */\nclass MegaSuite(implicit filename: sourcecode.File) extends TestSuite {\n  def beforeAll(): Unit = ()\n  def afterAll(): Unit = ()"
+  }
+]

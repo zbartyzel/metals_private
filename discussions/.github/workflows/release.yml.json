@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "3c38fa56-1216-4378-8116-afdb57487e34",
+    "prId" : 2015,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2015",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "863b7f70-8d1a-4f48-a990-0890873f357d",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "This looks really neat 🤩 ",
+        "createdAt" : "2020-08-21T12:45:35Z",
+        "updatedAt" : "2020-08-21T12:45:35Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a7b5d0788d1fdc73fb854e375e508bab345ab0fe",
+    "line" : 19,
+    "diffHunk" : "@@ -1,1 +17,21 @@        run: |\n          sbt ci-release\n          sbt docs/docusaurusPublishGhpages\n        env:\n          GIT_USER: scalameta@scalameta.org"
+  }
+]

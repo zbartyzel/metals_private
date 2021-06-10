@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "a3b1b70e-2e40-4de8-80ac-7347e406c38c",
+    "prId" : 2467,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2467",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "564ad4d3-9553-45f8-a47a-efcdf51d447e",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "So actually, I think this was testing the wrong thing. We should not find references in readonly files when looking in files in the workspace, but it should find them in the file itself.",
+        "createdAt" : "2021-02-01T17:07:56Z",
+        "updatedAt" : "2021-02-02T12:16:15Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c8e340827464a5e7151fb6e1a653072cb791a959",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +145,149 @@      _ = server.workspaceSymbol(\"scala.None\")\n      _ <- server.didOpen(\".metals/readonly/scala/Option.scala\")\n      references <- server.references(\"a/src/main/scala/a/A.scala\", \" None\")\n      _ = assertNoDiff(\n        references,"
+  }
+]

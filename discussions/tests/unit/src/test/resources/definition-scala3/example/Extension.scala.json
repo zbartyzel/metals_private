@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "fee8bff4-7667-4e69-81b8-769a2522a98c",
+    "prId" : 2600,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2600",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "60cce4f2-08d1-4aa2-9879-30fe5d02d14b",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "What is this fallback coming from?",
+        "createdAt" : "2021-03-26T17:04:47Z",
+        "updatedAt" : "2021-04-01T21:54:41Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "24155580-f646-47cb-8c92-a51b307a539c",
+        "parentId" : "60cce4f2-08d1-4aa2-9879-30fe5d02d14b",
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "I think it comes from `DefinitionAlternatives.methodOwner`",
+        "createdAt" : "2021-03-30T17:27:35Z",
+        "updatedAt" : "2021-04-01T21:54:41Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "028b3ff710580df42fff3574f99c743c9649e48c",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +6,10 @@extension/*<no symbol>*/ (s/*Extension.scala fallback to example.Extension$package.*/: String/*Predef.scala*/) {\n  def asInt/*Extension.scala fallback to example.Extension$package.*/: Int/*Int.scala*/ = s/*Extension.scala fallback to example.Extension$package.*/.toInt/*StringOps.scala*/\n  def double/*Extension.scala fallback to example.Extension$package.*/: String/*Predef.scala*/ = s/*Extension.scala fallback to example.Extension$package.*/ */*StringOps.scala*/ 2\n}\n"
+  }
+]

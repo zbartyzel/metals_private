@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "7f4ccd13-bbac-42cb-a11c-d20d41ce446c",
+    "prId" : 164,
+    "prUrl" : "https://github.com/scalameta/metals/pull/164",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "e0bba7e6-a2a1-4866-830b-94a8fdd1429a",
+        "parentId" : null,
+        "authorId" : "f57c53c5-6c7b-4248-91a5-7cc41356b426",
+        "body" : "How do you determine what data structures to return from the language server - raw payload, `XxxResult` or `XxxResponse`?",
+        "createdAt" : "2018-01-04T05:17:58Z",
+        "updatedAt" : "2018-01-04T21:40:31Z",
+        "lastEditedBy" : "f57c53c5-6c7b-4248-91a5-7cc41356b426",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "bb987805-3359-475b-98c9-1a6758869466",
+        "parentId" : "e0bba7e6-a2a1-4866-830b-94a8fdd1429a",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Those as specified in https://microsoft.github.io/language-server-protocol/specification",
+        "createdAt" : "2018-01-04T09:57:59Z",
+        "updatedAt" : "2018-01-04T21:40:31Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "91848703d00af951b1f55d62236ec4f5ae50851b",
+    "line" : 23,
+    "diffHunk" : "@@ -1,1 +16,20 @@      position: l.Position,\n      tempSourcesDir: AbsolutePath\n  ): List[Location] = {\n    val locations = for {\n      data <- symbolIndex.findDefinition(uri, position.line, position.character)"
+  }
+]

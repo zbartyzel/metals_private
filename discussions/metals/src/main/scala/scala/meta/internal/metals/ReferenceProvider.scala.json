@@ -1,0 +1,255 @@
+[
+  {
+    "id" : "c7b0fe16-600a-40c7-acdd-62680cf46d9e",
+    "prId" : 2601,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2601",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "05fcc79c-4f2b-4a5e-812f-dc4333b28e40",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "So previously, we would check any document that the cursor currently points to. This would cause us not to find synthetic objects, since their definition only exists in the file where the case class was also defined.",
+        "createdAt" : "2021-03-12T17:26:06Z",
+        "updatedAt" : "2021-03-15T11:19:22Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f41604dd38d384c46037636f95cea33529f6d87b",
+    "line" : 51,
+    "diffHunk" : "@@ -1,1 +127,131 @@    }\n\n    definitionDoc match {\n      case Some(definitionDoc) =>\n        val name = symbol.desc.name.value"
+  },
+  {
+    "id" : "a5660058-b7d8-4629-a5ce-8d2270a4912d",
+    "prId" : 2601,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2601",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "c18eafef-15f0-40c7-80c6-e5fe36a279e5",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Here we search for any synthetic symbols that we might be also interested in.",
+        "createdAt" : "2021-03-12T17:26:47Z",
+        "updatedAt" : "2021-03-15T11:19:22Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f41604dd38d384c46037636f95cea33529f6d87b",
+    "line" : 56,
+    "diffHunk" : "@@ -1,1 +132,136 @@        val alternatives = new SymbolAlternatives(symbol, name)\n\n        val candidates = for {\n          info <- definitionDoc.symbols\n          if info.symbol != name"
+  },
+  {
+    "id" : "d8c871c6-0d61-4d4c-bfc6-622acf60b5c1",
+    "prId" : 2601,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2601",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "da48f5f0-a81a-4222-beb5-0b9777f380bb",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This is an additional section that I actually added. We sometimes want to find non-synthetic symbols for synthetic symbols such as:\r\n- case class for a synthetic object\r\n- class field for a synthetic constructor param (they always synthetic when in `new A(param = \"\")`)",
+        "createdAt" : "2021-03-12T17:28:47Z",
+        "updatedAt" : "2021-03-15T11:19:22Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f41604dd38d384c46037636f95cea33529f6d87b",
+    "line" : 77,
+    "diffHunk" : "@@ -1,1 +153,157 @@        def isSyntheticSymbol = !nonSyntheticSymbols.contains(symbol)\n\n        def additionalAlternativesForSynthetic = for {\n          info <- definitionDoc.symbols\n          if info.symbol != name"
+  },
+  {
+    "id" : "88e6809d-de93-4840-aa1a-b97352320533",
+    "prId" : 2601,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2601",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "48e50e57-79c1-42d5-a6f3-44862965442e",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Almost everything is moved except for isCompanionClass and isFieldParam",
+        "createdAt" : "2021-03-12T17:29:17Z",
+        "updatedAt" : "2021-03-15T11:19:22Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ab9c5257-0d26-4220-a3ff-9566754e6d69",
+        "parentId" : "48e50e57-79c1-42d5-a6f3-44862965442e",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "This could just be a case class no?",
+        "createdAt" : "2021-03-15T09:13:13Z",
+        "updatedAt" : "2021-03-15T11:19:22Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "54475613-01ac-45b9-800c-f812251997c3",
+        "parentId" : "48e50e57-79c1-42d5-a6f3-44862965442e",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Sure, but honestly I think it doesn't really fit the use case of a case class. We don't need to pretty print it, compareit, it's not really passed around, so I decided on a normal class here.",
+        "createdAt" : "2021-03-15T09:18:37Z",
+        "updatedAt" : "2021-03-15T11:19:22Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6b28f525-55d3-4e9c-9bb7-124cf59bad21",
+        "parentId" : "48e50e57-79c1-42d5-a6f3-44862965442e",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "That's fine 👍🏼 ",
+        "createdAt" : "2021-03-15T09:19:19Z",
+        "updatedAt" : "2021-03-15T11:19:22Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f41604dd38d384c46037636f95cea33529f6d87b",
+    "line" : 162,
+    "diffHunk" : "@@ -1,1 +323,327 @@}\n\nclass SymbolAlternatives(symbol: String, name: String) {\n\n  // Returns true if `info` is the companion object matching the occurrence class symbol."
+  },
+  {
+    "id" : "da99fac5-a55d-44c7-82fe-a5a4a452ffdf",
+    "prId" : 2467,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2467",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "fc82c764-cda5-4480-85f5-430111414799",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This will make sure that when searching for references in dependency sources it will search the current file despite those sources not being indexed.",
+        "createdAt" : "2021-02-01T17:53:02Z",
+        "updatedAt" : "2021-02-02T12:16:15Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c8e340827464a5e7151fb6e1a653072cb791a959",
+    "line" : 31,
+    "diffHunk" : "@@ -1,1 +196,200 @@  ): Seq[Location] = {\n    val isSymbol = alternatives + occ.symbol\n    if (occ.symbol.isLocal || source.isDependencySource(workspace)) {\n      referenceLocations(\n        snapshot,"
+  },
+  {
+    "id" : "27604796-86af-4a68-ab93-a5890d037d3c",
+    "prId" : 1976,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1976",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "fc5f329d-6f70-439d-b306-8f872dba3ea3",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This is because I figured contains is not good enough here. And this is only used in case of rename, which doesn't make references slower and we are fine with some flaky results there, but we do not want to break the code when renaming.",
+        "createdAt" : "2020-08-06T11:59:13Z",
+        "updatedAt" : "2020-08-06T11:59:14Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "efa61fdab4c9b2e83dbf8d9aaa9322adf48ec193",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +315,319 @@      if (isBackticked) name.substring(1, name.length() - 1)\n      else name\n    if (symbol.isLocal || symbol.desc.name.toString == realName) {\n      val realRange = if (isBackticked) {\n        range"
+  },
+  {
+    "id" : "06ab58e5-0a99-459f-a088-724387ffde29",
+    "prId" : 1435,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1435",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "5ba10bfc-bd83-4cc0-8d1d-fab52aeea339",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "If we removed some files, we would still be looking for references inside them, since the semanticDB files will not be deleted.",
+        "createdAt" : "2020-02-15T21:19:43Z",
+        "updatedAt" : "2020-02-17T16:18:06Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "27d6ca26-7cac-4a66-a387-ad5a95483a8b",
+        "parentId" : "5ba10bfc-bd83-4cc0-8d1d-fab52aeea339",
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "Can we simply delete this file?",
+        "createdAt" : "2020-02-17T13:03:36Z",
+        "updatedAt" : "2020-02-17T16:18:06Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6bf0bbf0-0685-48fb-b777-056815601187",
+        "parentId" : "5ba10bfc-bd83-4cc0-8d1d-fab52aeea339",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "That file is managed by Bloop and we shouldn't remove it ourselves.",
+        "createdAt" : "2020-02-17T14:24:24Z",
+        "updatedAt" : "2020-02-17T16:18:06Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "fb025d5358f8296b853bbb7ede33b89e75356b35",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +203,207 @@          .toScala(workspace, AbsolutePath(path))\n          .iterator\n        if scalaPath.exists\n        semanticdb <- semanticdbs\n          .textDocument(scalaPath)"
+  },
+  {
+    "id" : "6db0a490-33d7-4ae6-8f38-3aa95ab59e4c",
+    "prId" : 1430,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1430",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "a5fb3304-b9ce-4fa3-a4c6-d14a0ba7a662",
+        "parentId" : null,
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "you could extract `removeBackticks` function that would do the check and substring if needed.\r\nit would be:\r\n`val realName = removeBackticks(name)`\r\nIt could also be used in RenameProvider as removing backticks is the same there",
+        "createdAt" : "2020-02-18T12:39:28Z",
+        "updatedAt" : "2020-02-18T12:39:55Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a1956a38-7e23-49ca-bedf-dbcec4c585fc",
+        "parentId" : "a5fb3304-b9ce-4fa3-a4c6-d14a0ba7a662",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I tried it, but I still need to check for backticks and change the range, so I would check it double. This is on the critical path, so I'd rather leave it as is.",
+        "createdAt" : "2020-02-18T18:48:33Z",
+        "updatedAt" : "2020-02-18T18:48:33Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b1b600d4-63d3-41ac-80e5-9ac94465ec09",
+        "parentId" : "a5fb3304-b9ce-4fa3-a4c6-d14a0ba7a662",
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "ahh right isBackticked is needed later for another check, good as it is then :+1:",
+        "createdAt" : "2020-02-18T19:54:59Z",
+        "updatedAt" : "2020-02-18T19:54:59Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "449f77053dddb24263c8a82a150393da6812f615",
+    "line" : 90,
+    "diffHunk" : "@@ -1,1 +291,295 @@  ): Option[s.Range] = {\n    val name = findName(range, text)\n    val isBackticked = name.charAt(0) == '`'\n    val realName =\n      if (isBackticked) name.substring(1, name.length() - 1)"
+  }
+]

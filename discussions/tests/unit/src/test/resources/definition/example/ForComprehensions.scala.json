@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "e63ae7d9-65cd-4bf4-95ca-e4c07380c51d",
+    "prId" : 510,
+    "prUrl" : "https://github.com/scalameta/metals/pull/510",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "8c5bf562-439a-441a-826c-6eb9aea19550",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "🤩",
+        "createdAt" : "2019-02-01T11:08:41Z",
+        "updatedAt" : "2019-02-01T11:08:41Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "9dc82ef38447958ed15a183d8ec85402ecd7764f",
+    "line" : 38,
+    "diffHunk" : "@@ -1,1 +33,37 @@      c/*ForComprehensions.semanticdb*/,\n      d/*ForComprehensions.semanticdb*/,\n      e/*ForComprehensions.semanticdb*/,\n      f/*ForComprehensions.semanticdb*/\n    )"
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "17be0b2f-2c06-4e35-a421-69db2e90b87e",
+    "prId" : 2457,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2457",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "c04c19a1-5869-4e80-a5eb-ef8f70ae1ffb",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "`autoFlush` here was `flushAlways`. There is a new asynchronous flush that wasn't available before, but I just stuck with what we had before and set flush to always.",
+        "createdAt" : "2021-02-01T09:16:09Z",
+        "updatedAt" : "2021-02-01T10:13:16Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c554e4212897184ebcb0389966752b8b178eb0b0",
+    "line" : 69,
+    "diffHunk" : "@@ -1,1 +91,95 @@\n  def newFileWriter(logfile: AbsolutePath): FileWriter =\n    FileWriter(pathBuilder = PathBuilder.static(logfile.toNIO)).flushAlways\n\n  def defaultFormat: Formatter = formatter\"$date $levelPaddedRight $message\""
+  }
+]

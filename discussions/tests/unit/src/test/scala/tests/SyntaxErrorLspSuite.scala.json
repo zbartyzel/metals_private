@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "2ac7e831-9fd8-4fe3-8f62-a1de2fe3f35e",
+    "prId" : 1499,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1499",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "412b9011-79a6-4d37-a1bd-c30449fa6dba",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "@olafurpg This looks like a regression, any idea where it came from? ",
+        "createdAt" : "2020-03-13T16:49:31Z",
+        "updatedAt" : "2020-03-13T16:49:32Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a15a983c-54c2-43a4-82a8-15b2201515de",
+        "parentId" : "412b9011-79a6-4d37-a1bd-c30449fa6dba",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Reported the issue in https://github.com/scalameta/scalameta/issues/2002 - we can take a look at it later.",
+        "createdAt" : "2020-03-16T11:04:36Z",
+        "updatedAt" : "2020-03-16T11:04:37Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "14d436243b78fc9282e7019b92aba5bd4c55b3c2",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +103,107 @@           |object object A\n           |       ^^^^^^\n           |a/src/main/scala/Main.scala:2:1: error: <error> is already defined as object <error>\n           |object object B\n           |^^^^^^^^^^^^^^^"
+  }
+]

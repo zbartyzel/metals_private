@@ -1,0 +1,90 @@
+[
+  {
+    "id" : "22ca7a3f-ce89-4ae5-ad4b-5fc7be5188dc",
+    "prId" : 686,
+    "prUrl" : "https://github.com/scalameta/metals/pull/686",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "dcd1e264-8f1f-4175-92c5-349b8066cd5c",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "I'm definitely not sure about that `inits.head.pos`",
+        "createdAt" : "2019-04-20T10:09:35Z",
+        "updatedAt" : "2019-04-20T10:18:55Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9f1b4ef2-2cf2-4ac9-8fa4-087141783eb1",
+        "parentId" : "dcd1e264-8f1f-4175-92c5-349b8066cd5c",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "You can do `inits.headOption.fold(t.pos)(_.pos)` to sleep good at night. Feel free to merge!",
+        "createdAt" : "2019-04-22T06:53:10Z",
+        "updatedAt" : "2019-04-22T06:53:10Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f03509c4-a6ea-4369-8ba5-52adb1319ed7",
+        "parentId" : "dcd1e264-8f1f-4175-92c5-349b8066cd5c",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "yeah, the doubt is mostly about the position rather than the code itself.\r\n\r\nI'll merge anyway, we can always fix it later.",
+        "createdAt" : "2019-04-22T11:10:33Z",
+        "updatedAt" : "2019-04-22T11:10:34Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b4f225ded274f72303d018e1d49de40f6df8947e",
+    "line" : 9,
+    "diffHunk" : "@@ -1,1 +98,102 @@            case Nil => (\"(anonymous)\", t.pos)\n            case inits =>\n              (inits.map(_.tpe.syntax).mkString(\" with \"), inits.head.pos)\n          }\n          if (t.templ.stats.nonEmpty) {"
+  },
+  {
+    "id" : "5b90eda8-275d-4cca-9581-955fa4dbd5dc",
+    "prId" : 686,
+    "prUrl" : "https://github.com/scalameta/metals/pull/686",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "c86dc392-cc1d-40f9-8e4b-aa9b4101c198",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "`Term.Block` is needed in order to find `b` in the following example\r\n\r\n```scala\r\ndef a = {\r\n  def b = ()\r\n  ()\r\n}\r\n```",
+        "createdAt" : "2019-04-20T11:17:31Z",
+        "updatedAt" : "2019-04-20T11:17:31Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b4f225ded274f72303d018e1d49de40f6df8947e",
+    "line" : 15,
+    "diffHunk" : "@@ -1,1 +104,108 @@            newOwner()\n          } else continue()\n        case _: Source | _: Template | _: Term.Block =>\n          continue()\n        case t: Defn.Class =>"
+  },
+  {
+    "id" : "f8223ca6-d1ee-4c24-badb-9a889d18d271",
+    "prId" : 424,
+    "prUrl" : "https://github.com/scalameta/metals/pull/424",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "e377b6fe-c29b-4cb6-b7c0-3d880fbb2080",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I took the liberty to (hopefully) simplify the implementation. A bit of boilerplate can sometimes make it easier to and extend the code.",
+        "createdAt" : "2018-12-19T11:53:21Z",
+        "updatedAt" : "2018-12-19T13:35:23Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "eade48fd8ffbc5572cad7092e373fee0027e4f0f",
+    "line" : 109,
+    "diffHunk" : "@@ -1,1 +107,111 @@        continue(withNewOwner = true)\n      }\n      tree match {\n        case t: Pkg =>\n          addChild(t.ref.syntax, SymbolKind.Package, t.pos, t.ref.pos, \"\")"
+  }
+]

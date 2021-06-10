@@ -1,0 +1,101 @@
+[
+  {
+    "id" : "4637da6e-1a6c-48bf-a1c1-fd6dbdbcf9fe",
+    "prId" : 332,
+    "prUrl" : "https://github.com/scalameta/metals/pull/332",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "2222a666-fed2-41b2-b2c3-b3091958c4b8",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "In case this becomes a hot path, maybe using `++` instead of `List.apply` + `flatten` is slightly more conservative.",
+        "createdAt" : "2018-10-13T12:17:40Z",
+        "updatedAt" : "2018-10-17T09:17:09Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "69bfbaed-b991-48d2-81c7-60d3f2991a45",
+        "parentId" : "2222a666-fed2-41b2-b2c3-b3091958c4b8",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I don't think this is a bottleneck since is not on a critical path, it's a fallback to missing symbols. If we want to squeeze out the last juice of performance we should benchmark it first. I'm also not sure if `List[List[T]].flatten` is slower than `++`",
+        "createdAt" : "2018-10-13T13:08:22Z",
+        "updatedAt" : "2018-10-17T09:17:09Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "889b282a30a7ddd72b09da4b9328f7779b1cfae9",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +12,16 @@      caseClassApplyOrCopyParams(symbol),\n      methodOwner(symbol),\n    ).flatten\n  }\n"
+  },
+  {
+    "id" : "cf1a54e2-3a23-4b80-8a14-f388f36f5e63",
+    "prId" : 332,
+    "prUrl" : "https://github.com/scalameta/metals/pull/332",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "10ed4105-15eb-47ef-9e16-fbda577e685b",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Alternatively re-using the utility from `Enrichments` \r\n\r\n```scala\r\ncase GlobalSymbol(\r\n  GlobalSymbol(\r\n    GlobalSymbol(owner, signature),\r\n    desc\r\n  ),\r\n  Descriptor.Parameter(param)\r\n) if desc.isCaseClassSynthetic => // ...\r\n```",
+        "createdAt" : "2018-10-13T12:26:26Z",
+        "updatedAt" : "2018-10-17T09:17:09Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "619cbcfe-d593-4ac6-97ce-09098cde2eef",
+        "parentId" : "10ed4105-15eb-47ef-9e16-fbda577e685b",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I remove that method, it wasn't used anywhere. Somebody ™️ should write a scalafix linter that warns about unused global symbols 🤔 ",
+        "createdAt" : "2018-10-13T13:09:34Z",
+        "updatedAt" : "2018-10-17T09:17:09Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "889b282a30a7ddd72b09da4b9328f7779b1cfae9",
+    "line" : 44,
+    "diffHunk" : "@@ -1,1 +42,46 @@            GlobalSymbol(owner, signature),\n            Descriptor.Method(\"copy\" | \"apply\", _)\n          ),\n          Descriptor.Parameter(param)\n          ) =>"
+  },
+  {
+    "id" : "0d7cdf8c-6d20-40e3-984a-6d25a8a3a3c4",
+    "prId" : 332,
+    "prUrl" : "https://github.com/scalameta/metals/pull/332",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "6466a3af-db97-4dbb-8b76-81d3017781e5",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Same as above, alternatively\r\n\r\n```scala\r\ncase GlobalSymbol(GlobalSymbol(owner, signature), desc) if desc.isCaseClassSynthetic => // ...\r\n```",
+        "createdAt" : "2018-10-13T12:27:29Z",
+        "updatedAt" : "2018-10-17T09:17:09Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6a02be65-d3e2-41cf-b100-7b34e9955903",
+        "parentId" : "6466a3af-db97-4dbb-8b76-81d3017781e5",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I think it's fine to hardcode it here instead of using the other method ",
+        "createdAt" : "2018-10-13T13:10:00Z",
+        "updatedAt" : "2018-10-17T09:17:09Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "889b282a30a7ddd72b09da4b9328f7779b1cfae9",
+    "line" : 63,
+    "diffHunk" : "@@ -1,1 +61,65 @@          GlobalSymbol(owner, signature),\n          Descriptor.Method(\"apply\" | \"copy\", _)\n          ) =>\n        GlobalSymbol(owner, Descriptor.Type(signature.name.value))\n    }"
+  }
+]

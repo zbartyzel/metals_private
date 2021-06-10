@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "a2e43888-d529-491b-911e-a2338931c3fa",
+    "prId" : 1018,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1018",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "d398638d-5d71-468e-a7af-b2ab5ee7aec0",
+        "parentId" : null,
+        "authorId" : "1977d0df-25a0-4fd9-a417-470eafe55f98",
+        "body" : ":tada:",
+        "createdAt" : "2019-10-24T20:35:07Z",
+        "updatedAt" : "2019-10-25T14:10:25Z",
+        "lastEditedBy" : "1977d0df-25a0-4fd9-a417-470eafe55f98",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "71375836d05d62c051df649e2d1094176bc3fd23",
+    "line" : 17,
+    "diffHunk" : "@@ -1,1 +5,9 @@}\n\ncoursier launch ch.epfl.scala:bloopgun-core_2.12:$(bloop_version) -- about\n\nsbt \"$1\""
+  }
+]

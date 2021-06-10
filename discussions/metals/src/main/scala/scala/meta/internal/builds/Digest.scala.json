@@ -1,0 +1,90 @@
+[
+  {
+    "id" : "335f5180-3785-494f-a707-7bd0a0ffc5eb",
+    "prId" : 694,
+    "prUrl" : "https://github.com/scalameta/metals/pull/694",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "fe693033-d075-4bf9-a73b-f5f952f35dbe",
+        "parentId" : null,
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "why not something like:\r\n```scala\r\nfinal class Status private(val value: Int){\r\n  def ...\r\n}\r\n\r\nobject Status{\r\n  val Requested = new Status(0)\r\n  val Started = new Status(1)\r\n  ...\r\n}\r\n```",
+        "createdAt" : "2019-04-25T14:13:56Z",
+        "updatedAt" : "2019-05-07T08:42:52Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4217deab-8c4e-4569-8af3-d634c9fd847b",
+        "parentId" : "fe693033-d075-4bf9-a73b-f5f952f35dbe",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This is basically the same and lacks ability to sensibly pattern match. I would leave it as is.",
+        "createdAt" : "2019-04-26T09:17:21Z",
+        "updatedAt" : "2019-05-07T08:42:52Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "95e8d18af9437cb5a757194bc83a227e9c0b8d79",
+    "line" : 31,
+    "diffHunk" : "@@ -1,1 +29,33 @@   */\n  val version: String = \"v4\"\n  sealed abstract class Status(val value: Int)\n      extends Product\n      with Serializable {"
+  },
+  {
+    "id" : "4b5d3552-959f-43ab-8a32-12e6aa2c2ed8",
+    "prId" : 694,
+    "prUrl" : "https://github.com/scalameta/metals/pull/694",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "eb2c3067-a813-4372-84b6-36e4d3d2c955",
+        "parentId" : null,
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "why ` path.toString().endsWith(_)` when there is an `ext` ?",
+        "createdAt" : "2019-04-25T14:23:17Z",
+        "updatedAt" : "2019-05-07T08:42:52Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "bdc010b4-26f3-47cd-890a-a7e18a1f29fe",
+        "parentId" : "eb2c3067-a813-4372-84b6-36e4d3d2c955",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "ext doesn't work with `.gradle.kts`",
+        "createdAt" : "2019-04-25T14:53:45Z",
+        "updatedAt" : "2019-05-07T08:42:52Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "95e8d18af9437cb5a757194bc83a227e9c0b8d79",
+    "line" : 91,
+    "diffHunk" : "@@ -1,1 +89,93 @@    val isGradle =\n      Set(\"gradle\", \"groovy\", \"gradle.kts\", \"java\", \"kts\").exists(\n        path.toString().endsWith(_)\n      )\n"
+  },
+  {
+    "id" : "0f2cd2bb-45c5-46fe-95df-158d0cd41221",
+    "prId" : 694,
+    "prUrl" : "https://github.com/scalameta/metals/pull/694",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "329b549a-0a13-4d99-9108-2f28e1cc154f",
+        "parentId" : null,
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "what do you think about a new line here? to clearly separate the \"set up\" stage from the \"act\" one ;)",
+        "createdAt" : "2019-04-25T14:25:17Z",
+        "updatedAt" : "2019-05-07T08:42:52Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "95e8d18af9437cb5a757194bc83a227e9c0b8d79",
+    "line" : 94,
+    "diffHunk" : "@@ -1,1 +92,96 @@      )\n\n    if (isScala && path.isFile) {\n      digestScala(path, digest)\n    } else if (isGradle && path.isFile) {"
+  }
+]

@@ -1,0 +1,101 @@
+[
+  {
+    "id" : "4d052dde-9706-4710-94db-7fbd6857790c",
+    "prId" : 2668,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2668",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "5ae15364-d1d2-4bc2-a696-5efa784f95c2",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Again are all these right no longer being in `.metals/readonly`? Or are they all now relative? If it's easy to switch, having the full path here might be clearer.",
+        "createdAt" : "2021-04-09T14:37:19Z",
+        "updatedAt" : "2021-04-23T16:07:36Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f638993b-562d-4e0a-8cb0-d4f468f92129",
+        "parentId" : "5ae15364-d1d2-4bc2-a696-5efa784f95c2",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Seen your reason up above. Just ignore this.",
+        "createdAt" : "2021-04-17T14:37:03Z",
+        "updatedAt" : "2021-04-23T16:07:37Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3fcc251f9126b13a9372df15273d675aff8f745",
+    "line" : 31,
+    "diffHunk" : "@@ -1,1 +63,67 @@        \"main.sc\",\n        \"foo.as@@Json.noSpaces\",\n        \"io/circe/syntax/package.scala\"\n      )\n"
+  },
+  {
+    "id" : "3cb8e433-ae4b-4952-b587-f3a5ebf00cda",
+    "prId" : 1538,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1538",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "88538074-ba1a-44e8-b551-e72706aba4af",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Maybe we can include those as comments in the file? Similar to how we do a lot of the expected suites like `DefinitionLspSuite`?",
+        "createdAt" : "2020-03-31T17:30:46Z",
+        "updatedAt" : "2020-05-21T11:17:43Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "666d98b2-5063-4d14-a2c9-532b18a7a981",
+        "parentId" : "88538074-ba1a-44e8-b551-e72706aba4af",
+        "authorId" : "343802b0-b5d4-488b-944f-b7fca9ffb64f",
+        "body" : "I slightly changed `assertDefinitionAtLocation`, so that it infers the exact line / char itself. That should make the resulting code more maintainable.\r\n\r\nI didn't inline that like in `DefinitionLspSuite`, for fear the resulting output would change in the future (there are still some definitions, like `import $file.foo, foo.Something`, that don't work as expected yet).",
+        "createdAt" : "2020-04-05T22:17:09Z",
+        "updatedAt" : "2020-05-21T11:17:44Z",
+        "lastEditedBy" : "343802b0-b5d4-488b-944f-b7fca9ffb64f",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0681fa0b1417b7ac622101d279667c6900a2506e",
+    "line" : 70,
+    "diffHunk" : "@@ -1,1 +68,72 @@        \"main.sc\",\n        \"foo.as@@Json.noSpaces\",\n        \".metals/readonly/io/circe/syntax/package.scala\"\n      )\n"
+  },
+  {
+    "id" : "8548c355-8475-4bd4-bd89-fbfdb39243f2",
+    "prId" : 1538,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1538",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f207a261-3b52-44c1-88fe-c80508466924",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Would be nice to do it the same way as in `HoverLspSuite`",
+        "createdAt" : "2020-03-31T17:32:19Z",
+        "updatedAt" : "2020-05-21T11:17:43Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f31d4b2c-1641-4232-8bd1-c3a99d22c55a",
+        "parentId" : "f207a261-3b52-44c1-88fe-c80508466924",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This can also be a separate test case I think. It could be in a method `checkHovers`",
+        "createdAt" : "2020-04-09T11:34:00Z",
+        "updatedAt" : "2020-05-21T11:17:44Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0681fa0b1417b7ac622101d279667c6900a2506e",
+    "line" : 130,
+    "diffHunk" : "@@ -1,1 +128,132 @@      _ <- server.executeCommand(\"ammonite-start\")\n\n      expectedHoverRes = \"\"\"```scala\n                           |val foo: Foo\n                           |```"
+  }
+]

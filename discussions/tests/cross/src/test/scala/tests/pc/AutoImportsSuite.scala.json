@@ -1,0 +1,123 @@
+[
+  {
+    "id" : "9d0d84f1-5365-40be-bdc4-999a6d438990",
+    "prId" : 2728,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2728",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b6e5a9bb-0d67-4282-9e36-942b1d163b0a",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Let's remove this and ignore the ammonite tests for Scala 3 since we don't really support it.",
+        "createdAt" : "2021-05-14T13:00:40Z",
+        "updatedAt" : "2021-05-14T13:00:44Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "10c763add43198a40377d84ab7a67c9f6a77ac84",
+    "line" : 60,
+    "diffHunk" : "@@ -1,1 +235,239 @@  )\n\n  checkAmmoniteEdit(\n    \"second-auto-import-amm-script\".tag(IgnoreScala3),\n    ammoniteWrapper("
+  },
+  {
+    "id" : "d0f43ebd-9d56-4cd0-8bcf-73ef695ab09d",
+    "prId" : 1065,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1065",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "6c640388-96a6-4f2d-a195-95538fe8ba11",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Could you add a case with a partial import?\r\nFor example:\r\n`<<concurrent.Future>>`",
+        "createdAt" : "2019-12-11T11:03:52Z",
+        "updatedAt" : "2019-12-11T15:30:45Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "16294798-101d-446e-8984-ec6d029636c6",
+        "parentId" : "6c640388-96a6-4f2d-a195-95538fe8ba11",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "I don't think that works, since we get a diagnostic on the package name which we can't resolve, it seems. For example:\r\n\r\n![image](https://user-images.githubusercontent.com/691940/70630226-86dca500-1c2b-11ea-9688-2fed24c63aaf.png)\r\n\r\nhovering on `time` won't yield any quick action (no completions are returned either)",
+        "createdAt" : "2019-12-11T14:33:39Z",
+        "updatedAt" : "2019-12-11T15:30:45Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "bda9a5e4-0b73-4551-8fcd-0f622307354d",
+        "parentId" : "6c640388-96a6-4f2d-a195-95538fe8ba11",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "this is because the classpath index doesn't support querying packages. It should be an easy fix to implement",
+        "createdAt" : "2019-12-11T14:50:39Z",
+        "updatedAt" : "2019-12-11T15:30:45Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "48807faa-a4fc-4450-9ff6-f809221288b6",
+        "parentId" : "6c640388-96a6-4f2d-a195-95538fe8ba11",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "I imagined. Should we consider that out of scope for this PR?",
+        "createdAt" : "2019-12-11T14:52:30Z",
+        "updatedAt" : "2019-12-11T15:30:45Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7f65a3c6-0d2d-44f5-852d-df3f4de45bff",
+        "parentId" : "6c640388-96a6-4f2d-a195-95538fe8ba11",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "It’s best to implement that as a separate pr. I estimate it’s a simple fix ",
+        "createdAt" : "2019-12-13T11:10:37Z",
+        "updatedAt" : "2019-12-13T11:10:38Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1e046b2b878d476d389f19bdcaa73ae4b7c121c9",
+    "line" : 34,
+    "diffHunk" : "@@ -1,1 +32,36 @@       |\n       |object A {\n       |  <<Future>>.successful(2)\n       |}\n       |\"\"\".stripMargin,"
+  },
+  {
+    "id" : "c2946d56-e94a-43bc-8f20-b6772528635e",
+    "prId" : 1065,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1065",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "76e24f39-8aeb-4ac2-ba05-fb1eaab04309",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I would also create unit tests:\r\n- CodeActionsDetectionSuite - it would detect what code actions are available for given offsets and if they should be\r\n- RunCodeActionSuite - it would run given code action at a given position\r\n\r\nI am ok with combining those suites, but for sure I would add some unit tests, which might be useful for people writing simpler code actions.",
+        "createdAt" : "2019-12-11T11:16:44Z",
+        "updatedAt" : "2019-12-11T15:30:45Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d3afe5ff-cd89-48e5-b02a-d28a8f634973",
+        "parentId" : "76e24f39-8aeb-4ac2-ba05-fb1eaab04309",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Doing it as we speak ;) ",
+        "createdAt" : "2019-12-11T11:50:50Z",
+        "updatedAt" : "2019-12-11T15:30:45Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1e046b2b878d476d389f19bdcaa73ae4b7c121c9",
+    "line" : 9,
+    "diffHunk" : "@@ -1,1 +7,11 @@import scala.meta.internal.metals.TextEdits\n\nobject AutoImportsSuite extends BaseCodeActionSuite {\n\n  check("
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "9c95f928-30a1-40fb-ba5b-61831c103c47",
+    "prId" : 23,
+    "prUrl" : "https://github.com/scalameta/metals/pull/23",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "e0d314fd-e08f-40c8-850c-622492e8f263",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "what would it take to index `.sbt` files?",
+        "createdAt" : "2017-11-14T09:59:55Z",
+        "updatedAt" : "2017-11-14T20:08:40Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "fbcfa2ae-f9a8-4d95-a7f7-3380a6dec16d",
+        "parentId" : "e0d314fd-e08f-40c8-850c-622492e8f263",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Not much really, I can give some pointers if you open an issue 😉 ",
+        "createdAt" : "2017-11-14T19:40:19Z",
+        "updatedAt" : "2017-11-14T20:08:40Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "5e9272f240feb4f00bdea5ee50e2808699cd0d0e",
+    "line" : 144,
+    "diffHunk" : "@@ -1,1 +142,146 @@    logger.trace(s\"Indexing ${input.path} with length ${input.value.length}\")\n    val indexer: CtagsIndexer =\n      if (isScala(input.path)) ScalaCtags.index(input)\n      else if (isJava(input.path)) JavaCtags.index(input)\n      else {"
+  }
+]

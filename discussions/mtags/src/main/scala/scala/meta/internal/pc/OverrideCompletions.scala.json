@@ -1,0 +1,211 @@
+[
+  {
+    "id" : "ad8bd0e4-397f-4ecc-88dc-2d2ed50e887c",
+    "prId" : 1379,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1379",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "992d0724-9370-4fd5-957a-af5b3dbb7e14",
+        "parentId" : null,
+        "authorId" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "body" : "The followings code comes from `Completions.scala`",
+        "createdAt" : "2020-02-03T07:06:25Z",
+        "updatedAt" : "2020-02-11T11:11:05Z",
+        "lastEditedBy" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e100253dce0a50a1201510f9bec11fbe8f298bbb",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +12,16 @@  private val DefaultIndent = 2\n\n  class OverrideDefMember(\n      val label: String,\n      val edit: l.TextEdit,"
+  },
+  {
+    "id" : "e5c8afbd-9320-4314-98fb-921a4a400edf",
+    "prId" : 1379,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1379",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "72d7aa10-1bea-4339-8fbe-63c0301eb1b5",
+        "parentId" : null,
+        "authorId" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "body" : "Extracted the logic to calculate the list of `OverrideDefMember` so that this method can be used from both\r\n- `case class Override`\r\n- `implementAll()`",
+        "createdAt" : "2020-02-03T07:08:29Z",
+        "updatedAt" : "2020-02-11T11:11:05Z",
+        "lastEditedBy" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e100253dce0a50a1201510f9bec11fbe8f298bbb",
+    "line" : 106,
+    "diffHunk" : "@@ -1,1 +104,108 @@  }\n\n  private def getMembers(\n      typed: Tree,\n      range: l.Range,"
+  },
+  {
+    "id" : "bb7c8b76-ef47-48d9-aed3-9b6f4d2149ef",
+    "prId" : 1379,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1379",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "89661cdd-51b4-432b-87c1-89e3a00a9d5e",
+        "parentId" : null,
+        "authorId" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "body" : "The following codes are new ones.",
+        "createdAt" : "2020-02-03T07:09:09Z",
+        "updatedAt" : "2020-02-11T11:11:05Z",
+        "lastEditedBy" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e100253dce0a50a1201510f9bec11fbe8f298bbb",
+    "line" : 294,
+    "diffHunk" : "@@ -1,1 +292,296 @@  private def isVarSetter(sym: Symbol): Boolean =\n    !sym.isStable && !sym.isLazy && sym.isAccessor\n\n  def implementAllAt(pos: Position, text: String): List[l.TextEdit] = {\n"
+  },
+  {
+    "id" : "654547a6-95bf-43c2-9c22-6da4eac57474",
+    "prId" : 1379,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1379",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "11127a89-231d-4806-9fd1-8c92d3420661",
+        "parentId" : null,
+        "authorId" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "body" : "Find the explicit declaration in the class/object so that we can infer the indent from them.\r\n\r\n```scala\r\nobject X {\r\n  trait Foo {\r\n    def foo(x: Int): Int\r\n  }\r\n  class Bar extends Foo {\r\n               val x = 1\r\n  }\r\n}\r\n```\r\n\r\nto \r\n\r\n```scala\r\nobject X {\r\n  // ...\r\n  class Bar extends Foo {\r\n          override def foo(x: Int): Int = ???\r\n          val x = 1\r\n  }\r\n}\r\n```\r\n\r\ninstead of \r\n\r\n```scala\r\nobject X {\r\n  // ...\r\n  class Bar extends Foo {\r\n    override def foo(x: Int): Int = ???\r\n          val x = 1\r\n  }\r\n}\r\n```\r\n\r\n---\r\n\r\n**Removing primary constructor** by `sym.pos.line != t.pos.line`, because if it remains and infers the indent from that, the result will be\r\n\r\n```scala\r\nobject X {\r\n  // ...\r\n  class Bar(init: Int) extends Foo {\r\n  override def foo(x: Int): Int = ???\r\n          val x = 1\r\n  }\r\n}\r\n```\r\n\r\nI thought it could be filtered out using `!sym.isPrimaryConstructor` but it remains 🤔 ",
+        "createdAt" : "2020-02-03T07:26:01Z",
+        "updatedAt" : "2020-02-11T11:11:05Z",
+        "lastEditedBy" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e100253dce0a50a1201510f9bec11fbe8f298bbb",
+    "line" : 398,
+    "diffHunk" : "@@ -1,1 +396,400 @@            !sym.isPrimaryConstructor &&\n            sym.pos.line != t.pos.line // filter out explicit primary constructor `class Foo(x: Int) ...`\n        )\n        .headOption\n        .map(existing => {"
+  },
+  {
+    "id" : "b5ef718d-e6b8-4355-ad6d-e04b89e0c045",
+    "prId" : 1379,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1379",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "eb3918d7-0f90-4ff1-9c84-c40dc3425b1d",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "What about:\r\n```\r\nobject Foo extends Bar {}\r\n```\r\n?",
+        "createdAt" : "2020-02-03T15:55:14Z",
+        "updatedAt" : "2020-02-11T11:11:05Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "809d1483-7686-42eb-8419-e83782c2c1dd",
+        "parentId" : "eb3918d7-0f90-4ff1-9c84-c40dc3425b1d",
+        "authorId" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "body" : "Oops, I missed that situation, we have to add the following case:\r\n\r\n```scala\r\ncase (m: ModuleDef) :: _ =>\r\n  // ...\r\n```\r\n\r\nto capture object's definition. ",
+        "createdAt" : "2020-02-08T06:11:48Z",
+        "updatedAt" : "2020-02-11T11:11:05Z",
+        "lastEditedBy" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c625ac4c-b493-48e3-9a03-122440ba37c3",
+        "parentId" : "eb3918d7-0f90-4ff1-9c84-c40dc3425b1d",
+        "authorId" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "body" : "done in https://github.com/scalameta/metals/pull/1379/commits/0bd0092ecb6890e62d2b137b085fed55d4db5473 :)",
+        "createdAt" : "2020-02-08T07:56:16Z",
+        "updatedAt" : "2020-02-11T11:11:05Z",
+        "lastEditedBy" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e100253dce0a50a1201510f9bec11fbe8f298bbb",
+    "line" : 318,
+    "diffHunk" : "@@ -1,1 +316,320 @@      // class Foo extends Bar {}\n      // ~~~~~~~~~~~~~~~~~~~~~~~~\n      case (c: ClassDef) :: _ =>\n        val t = c.impl\n        implementAllFor(t)"
+  },
+  {
+    "id" : "b6bdc98c-83c2-4484-9d94-ee749df1eda0",
+    "prId" : 1379,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1379",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b7676be9-1fe0-4a92-a4ce-220c4dd7fad1",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "all the cases are nearly identical in their implementation, the only difference is how they extract a tree. Can we maybe extract it to a utility method taking a Tree as input?",
+        "createdAt" : "2020-02-09T21:36:49Z",
+        "updatedAt" : "2020-02-11T11:11:05Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2a4bf5c4-ec04-449b-ac4c-30ecb5aeaf3a",
+        "parentId" : "b7676be9-1fe0-4a92-a4ce-220c4dd7fad1",
+        "authorId" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "body" : "done in https://github.com/scalameta/metals/pull/1379/commits/761a52952d7d9138cba683bbbd1c638723889903\r\nThank you for your advice, it's much clear :)",
+        "createdAt" : "2020-02-10T15:40:48Z",
+        "updatedAt" : "2020-02-11T11:11:05Z",
+        "lastEditedBy" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e100253dce0a50a1201510f9bec11fbe8f298bbb",
+    "line" : 324,
+    "diffHunk" : "@@ -1,1 +322,326 @@      // object Foo extends Bar {}\n      // ~~~~~~~~~~~~~~~~~~~~~~~~\n      case (m: ModuleDef) :: _ =>\n        val t = m.impl\n        implementAllFor(t)"
+  },
+  {
+    "id" : "dec347b9-2e32-4c85-a7a0-322be263bfd2",
+    "prId" : 1379,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1379",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "fab0c484-cc51-42e1-8e44-8f7a52ee6571",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "defaultIndent (lowercase D)?",
+        "createdAt" : "2020-02-09T21:41:04Z",
+        "updatedAt" : "2020-02-11T11:11:05Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e2a5cfd0-7f26-4a31-9524-2c155e21806b",
+        "parentId" : "fab0c484-cc51-42e1-8e44-8f7a52ee6571",
+        "authorId" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "body" : "Personally, I usually use upper camel case for constants https://docs.scala-lang.org/style/naming-conventions.html#constants-values-variable-and-methods, and [metals seem that it also follow this naming convention](https://github.com/scalameta/metals/blob/60e3d151dd80f0def1a122ff54e5c2f9e805e6cb/metals/src/main/scala/scala/meta/internal/metals/ClientExperimentalCapabilities.scala#L12).\r\n\r\nI don't have a strong opinion around a naming convention, but what do you think about this? :)",
+        "createdAt" : "2020-02-10T07:01:12Z",
+        "updatedAt" : "2020-02-11T11:11:05Z",
+        "lastEditedBy" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "34a6c20b-1cc8-4c2c-9f9f-15a06f4ffd2b",
+        "parentId" : "fab0c484-cc51-42e1-8e44-8f7a52ee6571",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "I don't mind either, let's leave it like this 👍 ",
+        "createdAt" : "2020-02-10T15:34:34Z",
+        "updatedAt" : "2020-02-11T11:11:05Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e100253dce0a50a1201510f9bec11fbe8f298bbb",
+    "line" : 12,
+    "diffHunk" : "@@ -1,1 +10,14 @@trait OverrideCompletions { this: MetalsGlobal =>\n\n  private val DefaultIndent = 2\n\n  class OverrideDefMember("
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "id" : "6cd003e4-f293-4192-9173-6d79a6a2df04",
+    "prId" : 2374,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2374",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f0ba73ff-8427-4636-b55a-98a2f1b700df",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Also, this may be me just not knowing a whole log about DAP stuff, but why are these called `partitions` when these are `Iterable[SetBreakPointsArguments]`?",
+        "createdAt" : "2021-01-14T11:42:42Z",
+        "updatedAt" : "2021-01-22T16:41:19Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2ddba506-861b-4d37-b979-4b2cf9288f60",
+        "parentId" : "f0ba73ff-8427-4636-b55a-98a2f1b700df",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "We partition breakpoints into groups that pertain to a certain classfile. So for example if we have:\r\n```scala\r\nclass Main{\r\n   ...\r\n}\r\n\r\nobject Main{\r\n  ...\r\n}\r\n```\r\n\r\nBreakpoints from `Main.scala` will be split into partitions for `Main$.class` and `Main.class` ",
+        "createdAt" : "2021-01-14T17:18:47Z",
+        "updatedAt" : "2021-01-22T16:41:19Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "686fab76-9336-4696-8207-1b368f0dcf62",
+        "parentId" : "f0ba73ff-8427-4636-b55a-98a2f1b700df",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Ach and each `SetBreakPointsArguments` is an actual parition.",
+        "createdAt" : "2021-01-14T17:41:40Z",
+        "updatedAt" : "2021-01-22T16:41:19Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3bdee6d5b72cf6cfee580941ef1b1c2987b172b",
+    "line" : 66,
+    "diffHunk" : "@@ -1,1 +49,53 @@\n    val groups = symbols.groupBy(_._2)\n    val partitions = groups.flatMap {\n      case (Some(fullyQualifiedClassName), breakpoints) =>\n        Some("
+  },
+  {
+    "id" : "86eca8a5-cdd9-41d5-9907-9ead0abab976",
+    "prId" : 1163,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1163",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "47a9fd59-ddea-4ffa-bbab-80628b3253a5",
+        "parentId" : null,
+        "authorId" : "1977d0df-25a0-4fd9-a417-470eafe55f98",
+        "body" : "Are we sending fqcns only for symbols from third-party deps? Or are we sending fqcns for symbols for Java and Scala sources defined in the project? Are we following the recommendation in [the PR introducing support for breakpoints in Bloop](https://github.com/scalacenter/bloop/pull/1087)?",
+        "createdAt" : "2019-12-18T12:55:29Z",
+        "updatedAt" : "2019-12-18T12:55:35Z",
+        "lastEditedBy" : "1977d0df-25a0-4fd9-a417-470eafe55f98",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "748e76bd-eb37-4e84-822a-45ad430fb4d5",
+        "parentId" : "47a9fd59-ddea-4ffa-bbab-80628b3253a5",
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "We are avoiding extra branching by not checking whether the source is defined within the workspace or is a part of a dependency. We are confident this approach is working thanks to the extensive suite of tests we provide alongside. If you know a case when this will fail, please don't hesitate to point to it.\r\n\r\nOr did you have another recommendation in mind?",
+        "createdAt" : "2019-12-18T13:12:19Z",
+        "updatedAt" : "2019-12-18T13:13:44Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "194cfdc6-da47-4195-871b-ba6e2ea5e1b1",
+        "parentId" : "47a9fd59-ddea-4ffa-bbab-80628b3253a5",
+        "authorId" : "1977d0df-25a0-4fd9-a417-470eafe55f98",
+        "body" : "My recommendation is not to send `dap-fqcn` for files defined inside user-defined projects. It should only be used for third-party dependencies.\r\n\r\nBloop and Zinc are the source of truth here. Regardless of how confident we're from Metals doing the right thing, we should be relying on the source of truth if that's possible to avoid issues/discrepancies in the future.",
+        "createdAt" : "2019-12-18T13:54:47Z",
+        "updatedAt" : "2019-12-18T13:54:47Z",
+        "lastEditedBy" : "1977d0df-25a0-4fd9-a417-470eafe55f98",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "655b7597-0e16-44d3-b8c1-57227bfb4a94",
+        "parentId" : "47a9fd59-ddea-4ffa-bbab-80628b3253a5",
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "Fair enough. For now, though, we will rely on the compiler to emit `LineNumberTable` according to the JVM spec. \r\nIf the compiler, at any point, proves to be unreliable by messing the line numbers, then I believe neither bloop nor zinc would help us.",
+        "createdAt" : "2019-12-19T08:12:50Z",
+        "updatedAt" : "2019-12-19T08:12:50Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1704fa3c-0f3c-4b05-80ca-92982ca7ef72",
+        "parentId" : "47a9fd59-ddea-4ffa-bbab-80628b3253a5",
+        "authorId" : "1977d0df-25a0-4fd9-a417-470eafe55f98",
+        "body" : "I feel pretty strongly this is not the way to go. You should not be reimplementing this part of the logic. Metals should be reusing the breakpoint logic for user-defined sources implemented in Bloop. ",
+        "createdAt" : "2019-12-19T08:29:53Z",
+        "updatedAt" : "2019-12-19T08:29:53Z",
+        "lastEditedBy" : "1977d0df-25a0-4fd9-a417-470eafe55f98",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6ae79148-07fd-4ba5-9fc6-3e01b588dcc5",
+        "parentId" : "47a9fd59-ddea-4ffa-bbab-80628b3253a5",
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "The logic you say I am reimplementing is required for the library sources anyway, since bloop solution works only for workspace sources. \r\nSince it is required either way, right now, I don't see a reason for falling back to bloop and not using it also for user-defined sources. It does not mean there is no such reason but only that I don't see it currently - can you help me in this regard?",
+        "createdAt" : "2019-12-19T13:49:15Z",
+        "updatedAt" : "2019-12-19T13:49:15Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e3930863-1df0-435f-9a6c-9a70a1de5a97",
+        "parentId" : "47a9fd59-ddea-4ffa-bbab-80628b3253a5",
+        "authorId" : "1977d0df-25a0-4fd9-a417-470eafe55f98",
+        "body" : "> The logic you say I am reimplementing is required for the library sources anyway, since bloop solution works only for workspace sources.\r\n  \r\nYes, the whole reason why we have `dap-fqcn` is so that IDEs that manage library sources can pass in the resolved fully qualified class names.\r\n  \r\n>  I don't see a reason for falling back to bloop and not using it also for user-defined sources. It does not mean there is no such reason but only that I don't see it currently - can you help me in this regard?\r\n  \r\nYes, the point I'm trying to make is that the logic for library sources is necessary since Bloop doesn't support it. But the logic for workspace sources isn't. There is a reference implementation that it's as good as it gets: it's using the same resolution mechanism the JVM uses for debugging (what's happening under the hood is that the JVM gets our fully qualified class name we pass it and undoes some of the work Bloop has done and finds the class file the loaded class was loaded from in the classloader).\r\n  \r\nAt a high level, the process looks like this:\r\n  \r\nBloop: `$WORKSPACE_SOURCE_FILE` -> `$WORKSPACE_CLASS_FILE` -> `$FQCN` ->\r\nJVM: `$FQCN` -> `$WORKSPACE_CLASS_FILE`\r\n  \r\nThe JVM uses the `LineNumberTable` of the `$WORKSPACE_CLASS_FILE` to correctly set the breakpoint. This is why it's so important that `WORKSPACE_CLASS_FILE` matches the one the JVM picks and why the Bloop implementation is the source of the truth -- because it mimics exactly the logic of the JVM.\r\n  \r\nWhat Metals is doing here might be correct based on the semantic-level information you have. But it's creating a layer of indirection that should be avoided as it could produce issues or inconsistent results in the future. I think it's a good practice to rely on the source of truth if it's possible and in this case it is.",
+        "createdAt" : "2019-12-19T14:34:01Z",
+        "updatedAt" : "2019-12-19T14:34:02Z",
+        "lastEditedBy" : "1977d0df-25a0-4fd9-a417-470eafe55f98",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "04ef30f47759c2620cd886265e4c50169245a539",
+    "line" : 25,
+    "diffHunk" : "@@ -1,1 +23,27 @@    val input = path.toAbsolutePath.toInput\n    val occurrences = Mtags.allToplevels(input).occurrences\n    val groups = request.getBreakpoints.groupBy { breakpoint =>\n      val definition = occurrences.minBy(distanceFrom(breakpoint))\n      JvmSignatures.toTypeSignature(definition)"
+  }
+]

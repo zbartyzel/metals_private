@@ -1,0 +1,101 @@
+[
+  {
+    "id" : "c6e97ab4-05cd-402f-afd0-44f94bf42e1c",
+    "prId" : 1840,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1840",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "356a578f-0618-4db3-8e47-04440184daa1",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "These large diffs shouldn’t be necessary. I don’t remember the setting to keep the old behavior but I’m tempted to open an upstream issue about enabling it by default. No action needed here, just thinking out loud ",
+        "createdAt" : "2020-06-19T07:04:18Z",
+        "updatedAt" : "2020-06-19T09:40:38Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "961d6ddc05eac5a93c79be85a06377fe25b9317c",
+    "line" : 33,
+    "diffHunk" : "@@ -1,1 +47,51 @@  private var allTemplates = Seq.empty[MetalsQuickPickItem]\n  def allTemplatesFromWeb: Seq[MetalsQuickPickItem] =\n    synchronized {\n      if (allTemplates.nonEmpty) {\n        allTemplates"
+  },
+  {
+    "id" : "781a71fe-649c-4545-a2f9-bf8ea7137110",
+    "prId" : 1728,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1728",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "c16b3049-5b2d-4995-a1ca-128fc6b0cdb0",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I added a couple of new templates as well as one done by my colleague around Akka and kubernetes. The plan is to keep this list small so that we can be sure of the \"curated\" templates. It's always possible to manually enter a template or pick one from the list in https://github.com/foundweekends/giter8/wiki/giter8-templates\r\n\r\nLet me know if any templates could benefit of being added to the list here.",
+        "createdAt" : "2020-06-11T12:23:23Z",
+        "updatedAt" : "2020-06-15T12:58:29Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b8fc594e56a5aefca5b9a80fb273aca01de04ede",
+    "line" : 376,
+    "diffHunk" : "@@ -1,1 +374,378 @@        description = \"A Scala template for the Gradle build tool\"\n      ),\n      MetalsQuickPickItem(\n        id = \"VirtusLab/akka-http-kubernetes.g8\",\n        label = \"VirtusLab/akka-http-kubernetes.g8\","
+  },
+  {
+    "id" : "3ea113ca-8fe8-481d-bd1f-49ae06557937",
+    "prId" : 1728,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1728",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "3a49a7fc-46b9-4acd-acf7-a6ff75abc9bf",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "It's cool to see multiple build tool options 👍 ",
+        "createdAt" : "2020-06-11T12:59:44Z",
+        "updatedAt" : "2020-06-15T12:58:29Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b8fc594e56a5aefca5b9a80fb273aca01de04ede",
+    "line" : 374,
+    "diffHunk" : "@@ -1,1 +372,376 @@        id = \"scalameta/gradle-scala-seed.g8\",\n        label = \"scalameta/gradle-scala-seed.g8\",\n        description = \"A Scala template for the Gradle build tool\"\n      ),\n      MetalsQuickPickItem("
+  },
+  {
+    "id" : "222fe9f9-c11f-46ac-92e3-6e9f25e86f92",
+    "prId" : 1728,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1728",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ea056b7a-5186-4b1d-b10b-65575530a96d",
+        "parentId" : null,
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "'not verified' can we use `mapOption` here instead of `flatMap`?",
+        "createdAt" : "2020-06-15T07:44:21Z",
+        "updatedAt" : "2020-06-15T12:58:29Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e8ef6f52-b801-4a90-a54e-6c5cf53e7806",
+        "parentId" : "ea056b7a-5186-4b1d-b10b-65575530a96d",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "flatMap is better here, we could use `mapOption`, but it's not straightforward",
+        "createdAt" : "2020-06-15T10:36:36Z",
+        "updatedAt" : "2020-06-15T12:58:29Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b8fc594e56a5aefca5b9a80fb273aca01de04ede",
+    "line" : 97,
+    "diffHunk" : "@@ -1,1 +95,99 @@            .map { name => Some((template, path, name)) }\n      }\n      .flatMap {\n        case Some((template, inputPath, Some(projectName))) =>\n          createNewProject("
+  }
+]

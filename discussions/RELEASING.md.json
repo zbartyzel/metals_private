@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "57a02c4b-f9ce-49aa-90ed-9b861cc40060",
+    "prId" : 411,
+    "prUrl" : "https://github.com/scalameta/metals/pull/411",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "d470c014-9403-46e6-a046-d8bd44d56f35",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "are this invented numbers? Otherwise it's 0.3.0 I think.",
+        "createdAt" : "2018-12-14T15:38:59Z",
+        "updatedAt" : "2018-12-14T15:56:16Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5bb86950-0172-4b75-be07-02dcdf60ec2b",
+        "parentId" : "d470c014-9403-46e6-a046-d8bd44d56f35",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "This was copy-pasted from the  scalameta repo and adjusted, I kept the v3.3.0 example but reformulated so it makes sense here.",
+        "createdAt" : "2018-12-14T15:44:53Z",
+        "updatedAt" : "2018-12-14T15:56:16Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8196148c50b771f6966405c54880655af93a1d49",
+    "line" : 18,
+    "diffHunk" : "@@ -1,1 +16,20 @@  - Close the milestone or milestones corresponding to the release. For example,\n    for a v3.3.0 release, we close both 3.3.0 and 3.2.1 (because we never\n    released 3.2.1, so all its tickets went straight to 3.3.0).\n  - Create the milestone or milestones corresponding to future releases. For\n    example, for a v3.3.0 release, we create both v3.3.1 and v3.4.0."
+  }
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "id" : "0806ce99-087f-4b97-ba7e-30b3fa7d88e2",
+    "prId" : 2490,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2490",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f79a4906-3c93-47c3-ae9b-6b768a94b7e7",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Not a big deal, but these don't throw right? So can't this just be:\r\n```suggestion\r\n      case p: JsonPrimitive if p.isString => Some(p.getAsString())\r\n```",
+        "createdAt" : "2021-02-09T18:24:52Z",
+        "updatedAt" : "2021-02-10T18:07:56Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4277772a-a3be-4c97-bd14-8d4021cb84c9",
+        "parentId" : "f79a4906-3c93-47c3-ae9b-6b768a94b7e7",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "The Option constructor doesn't catch exceptions anyway, it only turns null into None, so I too tend to use it when dealing with Java API. You never know where a null may hide 👻",
+        "createdAt" : "2021-02-09T19:45:19Z",
+        "updatedAt" : "2021-02-10T18:07:56Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "84ae3bd6-c636-485f-859d-8d8f1b81ee41",
+        "parentId" : "f79a4906-3c93-47c3-ae9b-6b768a94b7e7",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Spooky. 😨 ",
+        "createdAt" : "2021-02-09T19:46:15Z",
+        "updatedAt" : "2021-02-10T18:07:56Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2fa23376-5e89-476a-a562-df0b5da56952",
+        "parentId" : "f79a4906-3c93-47c3-ae9b-6b768a94b7e7",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Haha, yes. I am always afraid of that 😂",
+        "createdAt" : "2021-02-09T20:23:28Z",
+        "updatedAt" : "2021-02-10T18:07:56Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "35b8cef77f49a5dbfaea65336ba01706bc959133",
+    "line" : 17,
+    "diffHunk" : "@@ -1,1 +22,26 @@  def getAsString(obj: AnyRef): Option[String] = {\n    obj match {\n      case p: JsonPrimitive if p.isString => Option(p.getAsString())\n      case _ => None\n    }"
+  }
+]

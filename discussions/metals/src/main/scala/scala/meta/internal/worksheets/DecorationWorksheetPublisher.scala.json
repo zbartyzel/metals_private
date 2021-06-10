@@ -1,0 +1,57 @@
+[
+  {
+    "id" : "7fd277df-521c-42bf-93ee-9a9a3c88e95b",
+    "prId" : 1522,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1522",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "8e2f508b-8471-459a-9c9c-75c1b6e0c055",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Also, this breaks from the [Decoration Protocol 0.1.0](https://scalameta.org/metals/docs/editors/decoration-protocol.html) with having the hover message being `MarkupContent` rather than `MarkedString`. I can update the docs, however, how do we version the decoration protocol? Do we need to keep history of the v0.1.0, or am I ok to just update it and make it v0.2.0? After we figure this out, I'll also need to update the vs code and coc-metals clients to match this.\r\n\r\nThis is also causing the lsp integration and unit tests to fail because we are just looking at the raw string. However, I don't really see this any different than the other hovers, so I think it actually make sense to surround it with ````scala` tics. Thoughts?",
+        "createdAt" : "2020-03-21T18:09:36Z",
+        "updatedAt" : "2020-03-22T12:53:13Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d4db4549-eff5-4187-8fff-a8ceaa5a31c8",
+        "parentId" : "8e2f508b-8471-459a-9c9c-75c1b6e0c055",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "I sort of just assumed that it was ok to update the protocol. I've gone ahead and updated the decoration protocol docs and updated the changelog just in case someone was using the protocol.\r\n\r\nI also updated the worksheet suite to include the new hover text having ```scala tics. I've tested this manually to ensure there is no regression in the way things appear in both VS Code an coc-metals. As far as I can tell, it behaves exactly the same.",
+        "createdAt" : "2020-03-22T12:56:17Z",
+        "updatedAt" : "2020-03-22T12:56:17Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "62fd1449-28b0-4b25-8e0a-4d9b2663fe9f",
+        "parentId" : "8e2f508b-8471-459a-9c9c-75c1b6e0c055",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I think it's fine to do 0.2.0, but probably best if @olafurpg confirms. The only issue I see is that will make the snapshot versions stop working. Maybe we should have the client send the version it is using? And send one or the other (MarkupContent or MarkupString)?\r\n\r\nMight be more effort to change it than it's worth, we might need to remove MarkedString at some point, but s it deprecated itself?",
+        "createdAt" : "2020-03-22T17:43:11Z",
+        "updatedAt" : "2020-03-22T17:51:36Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "01b6fe43-7fca-4d5a-b500-81efe17e10c7",
+        "parentId" : "8e2f508b-8471-459a-9c9c-75c1b6e0c055",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Talked about his offline, but even with the current version of the extensions, this still works fine. The old shape that was returned was below:\r\n\r\n```json\r\n  \"hoverMessage\": {\r\n        \"language\": \"scala\",\r\n        \"value\": \"x: Int \\u003d 3\"\r\n      }\r\n```\r\nNow, the new format is below:\r\n```json\r\n```json\r\n\"hoverMessage\": {\r\n        \"kind\": \"markdown\",\r\n        \"value\": \"```scala\\nx: Int \\u003d 3\\n```\"\r\n      }\r\n```\r\nThe current extension is able to handled these both.",
+        "createdAt" : "2020-03-22T18:16:13Z",
+        "updatedAt" : "2020-03-22T18:16:25Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a1f157044a3d540463d614d0851071783f10aed1",
+    "line" : 26,
+    "diffHunk" : "@@ -1,1 +43,47 @@        new DecorationOptions(\n          s.position().toLsp,\n          new MarkupContent(\n            MarkupKind.MARKDOWN,\n            HoverMarkup(s.details)"
+  }
+]

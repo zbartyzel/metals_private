@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "0d44ad70-08ae-49c7-a605-67ad1c2bd6d8",
+    "prId" : 2012,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2012",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "cec4a28d-9cef-4021-9b67-255ad068f14f",
+        "parentId" : null,
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "nice test! 👍 ",
+        "createdAt" : "2020-08-31T07:00:23Z",
+        "updatedAt" : "2020-09-01T08:04:55Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "742d615938b7ae27e2a94fdcb0daa3d765c5a4ba",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +231,235 @@  }\n\n  test(\"with-exclusions\") {\n    cleanWorkspace()\n    for {"
+  }
+]

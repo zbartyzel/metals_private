@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "a267425a-c3ad-4def-a757-d679499910cf",
+    "prId" : 1041,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1041",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "2e6f8f25-3d49-4001-b067-fdeee1d6c361",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "this looks incomplete, the implementation has more parameters",
+        "createdAt" : "2019-11-04T11:44:45Z",
+        "updatedAt" : "2019-11-09T20:01:12Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d77e4a07-37e1-49f8-b091-3f9921378b25",
+        "parentId" : "2e6f8f25-3d49-4001-b067-fdeee1d6c361",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Yes, the implementation mirrors the VS Code API but we currently only use a fraction of it. I would prefer to wait with expanding the actual protocol as we start using more parts of it. ",
+        "createdAt" : "2019-11-06T06:14:35Z",
+        "updatedAt" : "2019-11-09T20:01:12Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a2902a65a77773398f8ac710483906215a06bcf8",
+    "line" : 51,
+    "diffHunk" : "@@ -1,1 +49,53 @@export interface ThemableDecorationInstanceRenderOption {\n  /** The decoration to display next to the given range. */\n  after?: ThemableDecorationAttachmentRenderOptions;\n}\n```"
+  }
+]

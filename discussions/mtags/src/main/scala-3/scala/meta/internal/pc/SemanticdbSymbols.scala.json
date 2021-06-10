@@ -1,0 +1,46 @@
+[
+  {
+    "id" : "120a52bc-38f3-44e4-873d-54342f9ed3b1",
+    "prId" : 2728,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2728",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "a10044f2-1a8c-4a79-8a96-32db8ff8abb9",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This is probably not yet needed for AutoImports? Could we have the TODOs with an issue to back them?",
+        "createdAt" : "2021-04-27T11:45:07Z",
+        "updatedAt" : "2021-05-10T11:58:32Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2c265fbc-6451-4126-8ea4-ded9cfa00b28",
+        "parentId" : "a10044f2-1a8c-4a79-8a96-32db8ff8abb9",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Let's remove the TODOs or but at least create a follow up issues.",
+        "createdAt" : "2021-05-10T16:36:18Z",
+        "updatedAt" : "2021-05-13T16:03:06Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ff8e8ca6-f41b-4c7d-a4e0-0328802a2224",
+        "parentId" : "a10044f2-1a8c-4a79-8a96-32db8ff8abb9",
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "Created - https://github.com/scalameta/metals/issues/2778",
+        "createdAt" : "2021-05-13T20:31:05Z",
+        "updatedAt" : "2021-05-13T20:31:05Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "10c763add43198a40377d84ab7a67c9f6a77ac84",
+    "line" : 51,
+    "diffHunk" : "@@ -1,1 +49,53 @@                  owner.info.decl(termName(value)).symbol :: Nil\n                case Descriptor.Parameter(value) =>\n                  // TODO - need to check how to implement this properly\n                  //owner.paramSymss.flatten.filter(_.name.containsName(value))\n                  Nil"
+  }
+]

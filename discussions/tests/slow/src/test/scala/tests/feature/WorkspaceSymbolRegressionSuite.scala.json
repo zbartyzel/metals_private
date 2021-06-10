@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "eedabe2e-d4be-4f93-b120-1de91c55e9e9",
+    "prId" : 2745,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2745",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b53b3081-f1c5-4f87-913d-d6ed9be97226",
+        "parentId" : null,
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "I checked all affected tests that were changed except this one.\r\n\r\nActually, this change just spotted the same problem as described in #2742.",
+        "createdAt" : "2021-04-28T10:36:05Z",
+        "updatedAt" : "2021-04-28T10:36:05Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "6b94f13a01515eb14d0887b55f57eeec6b76e7b4",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +8,12 @@class WorkspaceSymbolRegressionSuite extends BaseWorkspaceSymbolSuite {\n  def workspace: AbsolutePath = Corpus.akka()\n  check(\"Actor\", \"1009 results\")\n  check(\"Actor(\", \"\")\n  check("
+  }
+]

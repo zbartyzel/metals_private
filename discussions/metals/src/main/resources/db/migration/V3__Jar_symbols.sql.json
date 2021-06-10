@@ -1,0 +1,101 @@
+[
+  {
+    "id" : "d3133554-2410-45c3-b047-08a70538edf2",
+    "prId" : 534,
+    "prUrl" : "https://github.com/scalameta/metals/pull/534",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f3a53cc2-154e-4ff2-ae34-9765882a718a",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "what's the expected cardinality for this `id`? If it grows unbounded, maybe it's better to use `bigint`",
+        "createdAt" : "2019-02-21T14:30:59Z",
+        "updatedAt" : "2019-02-24T16:00:43Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7a12608d-8548-4a06-8666-f76b3afa030a",
+        "parentId" : "f3a53cc2-154e-4ff2-ae34-9765882a718a",
+        "authorId" : "670bdad4-bf9b-431f-80f0-e86350cc0bd5",
+        "body" : "These are unique Jar references (combination of path, size and modification date) over the lifetime of a project on your local drive. I doubt the combinations will ever exceed 2^31.",
+        "createdAt" : "2019-02-21T14:40:23Z",
+        "updatedAt" : "2019-02-24T16:00:43Z",
+        "lastEditedBy" : "670bdad4-bf9b-431f-80f0-e86350cc0bd5",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4d3435f1-e5a9-4daa-a413-1922620ed020",
+        "parentId" : "f3a53cc2-154e-4ff2-ae34-9765882a718a",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "sounds good, let's save space then and leave `int` :) ",
+        "createdAt" : "2019-02-21T14:43:13Z",
+        "updatedAt" : "2019-02-24T16:00:43Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "68a865709d6bc7d432ff4ffaa2fe1eac07d7409a",
+    "line" : 3,
+    "diffHunk" : "@@ -1,1 +1,5 @@-- Indexed jars, the MD5 digest of path, modified time and size as key\ncreate table indexed_jar(\n  id int auto_increment,\n  md5 varchar primary key,\n);"
+  },
+  {
+    "id" : "959002ae-6d9e-4029-a370-d3c5a2305d26",
+    "prId" : 534,
+    "prUrl" : "https://github.com/scalameta/metals/pull/534",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "d7f33dd3-028c-4439-9b02-701d725397d2",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "is this a foreign key on `indexed_jar -> id`?",
+        "createdAt" : "2019-02-21T14:31:32Z",
+        "updatedAt" : "2019-02-24T16:00:43Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "da15d47c-cc23-4ed3-abae-b61fb6168513",
+        "parentId" : "d7f33dd3-028c-4439-9b02-701d725397d2",
+        "authorId" : "670bdad4-bf9b-431f-80f0-e86350cc0bd5",
+        "body" : "Yes, indeed. Should I add a foreign key reference?",
+        "createdAt" : "2019-02-21T14:40:34Z",
+        "updatedAt" : "2019-02-24T16:00:43Z",
+        "lastEditedBy" : "670bdad4-bf9b-431f-80f0-e86350cc0bd5",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "38d9eed2-ed01-4e1a-a3ef-2031fe7dd07a",
+        "parentId" : "d7f33dd3-028c-4439-9b02-701d725397d2",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "I generally prefer to add foreign key references, so that there's no ambiguity when reading the schema. I would add it 👍 ",
+        "createdAt" : "2019-02-21T14:43:56Z",
+        "updatedAt" : "2019-02-24T16:00:43Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "03f24142-d1be-4337-af72-682e850664cc",
+        "parentId" : "d7f33dd3-028c-4439-9b02-701d725397d2",
+        "authorId" : "670bdad4-bf9b-431f-80f0-e86350cc0bd5",
+        "body" : "Added foreign key restraint from toplevel_symbol to indexed_jar.",
+        "createdAt" : "2019-02-23T20:11:01Z",
+        "updatedAt" : "2019-02-24T16:00:43Z",
+        "lastEditedBy" : "670bdad4-bf9b-431f-80f0-e86350cc0bd5",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "68a865709d6bc7d432ff4ffaa2fe1eac07d7409a",
+    "line" : 10,
+    "diffHunk" : "@@ -1,1 +8,12 @@  symbol varchar not null,\n  path varchar not null,\n  jar int,\n  foreign key (jar) references indexed_jar (id) on delete cascade,\n  primary key (jar, path, symbol)"
+  }
+]

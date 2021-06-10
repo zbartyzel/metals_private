@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "135bfba3-0634-4148-a2a6-73ce99df135c",
+    "prId" : 1685,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1685",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "386bb40a-fe9a-4cf8-ad4c-0fe9b5aa3312",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "We want to use the 2.13 dialect, otherwise the feature will not work in a file with Scala 2.13 specific syntax",
+        "createdAt" : "2020-05-12T13:30:54Z",
+        "updatedAt" : "2020-05-12T13:30:54Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "375c9791-2728-4623-8139-6ad7e0c02a5d",
+        "parentId" : "386bb40a-fe9a-4cf8-ad4c-0fe9b5aa3312",
+        "authorId" : "111a9150-7ee0-442a-8973-64d93d8a024e",
+        "body" : "okay perfect :)",
+        "createdAt" : "2020-05-12T13:43:46Z",
+        "updatedAt" : "2020-05-12T13:43:46Z",
+        "lastEditedBy" : "111a9150-7ee0-442a-8973-64d93d8a024e",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7f5ec374d50f73ff7a549073d2da0e635cd14ded",
+    "line" : 28,
+    "diffHunk" : "@@ -1,1 +26,30 @@      .successful {\n        val input = path.toInputFromBuffers(buffers)\n        Trees.defaultDialect(input).tokenize.toOption match {\n          case Some(tokens) =>\n            tokens"
+  }
+]

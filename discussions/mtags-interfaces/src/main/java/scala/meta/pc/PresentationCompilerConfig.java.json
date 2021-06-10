@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "4cdfadcc-eadd-47f2-b0ef-f2309ffa6f03",
+    "prId" : 2155,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2155",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f2680a5d-22c0-447d-ba1b-ada13b6cd8d0",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "More of just a curiosity, but I've always meant to ask about the `symbolPrfixes` in the `PresentationCompilerConfig` interface. I know I don't actually expose this in `coc-metals`, and it looks like we don't in the VS Code extension either. Is this intentional or just an oversight that you originally never used this in the VS Code extension?",
+        "createdAt" : "2020-10-24T14:38:05Z",
+        "updatedAt" : "2020-10-24T14:39:54Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8a73e6cc-fa61-4678-beb3-7e77c92121bd",
+        "parentId" : "f2680a5d-22c0-447d-ba1b-ada13b6cd8d0",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I don't think this feature was used too much at any point, it has been implemented early with the other completion features by @olafurpg , but not sure what was the intention.",
+        "createdAt" : "2020-10-26T12:16:23Z",
+        "updatedAt" : "2020-10-26T12:16:23Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e100645cb0c2d9e73fd1646bce62a9c3b4eca22f",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +36,40 @@     * Returns true if user didn't modify symbol prefixes\n     */\n    boolean isDefaultSymbolPrefixes();\n\n    /**"
+  }
+]

@@ -1,0 +1,101 @@
+[
+  {
+    "id" : "875eca82-51b7-4d5f-ad97-a20865cf8a7e",
+    "prId" : 8,
+    "prUrl" : "https://github.com/scalameta/metals/pull/8",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ee193af2-a3f8-4084-9bd8-7b8f449f0a03",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "I would call this `symbolIndexer`. `symbol` is a bit confusing, given the context",
+        "createdAt" : "2017-11-06T09:44:20Z",
+        "updatedAt" : "2017-11-06T20:58:35Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a154d42708a1a97e34a23a7c79a153d4ee52f44b",
+    "line" : 46,
+    "diffHunk" : "@@ -1,1 +39,43 @@    ScalametaLanguageServer.semanticdbStream\n  val buffers: Buffers = Buffers()\n  val symbol: SymbolIndexer =\n    SymbolIndexer(semanticdbPublisher, logger, connection, buffers)\n  val scalafix: Linter ="
+  },
+  {
+    "id" : "d98e3bc4-92c6-484f-afa5-c43cc1a763fb",
+    "prId" : 8,
+    "prUrl" : "https://github.com/scalameta/metals/pull/8",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "d007d888-a3c1-4b34-be17-3948967024fc",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Can't we just fallback to the default config? I believe that's what most plugins do, right?",
+        "createdAt" : "2017-11-06T09:47:42Z",
+        "updatedAt" : "2017-11-06T20:58:35Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a154d42708a1a97e34a23a7c79a153d4ee52f44b",
+    "line" : 134,
+    "diffHunk" : "@@ -1,1 +120,124 @@        List(TextEdit(fullDocumentRange, formattedContent))\n      } else {\n        connection.showMessage(MessageType.Info, s\"Missing $config\")\n        Nil\n      }"
+  },
+  {
+    "id" : "ae270dd9-eb62-40c6-bb76-3ac36aa0a59d",
+    "prId" : 8,
+    "prUrl" : "https://github.com/scalameta/metals/pull/8",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "947c725b-66cd-4fb9-ae56-1c2e0a881894",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "We might want to do this on parallel, could be a lot of semanticdb files.",
+        "createdAt" : "2017-11-06T19:53:23Z",
+        "updatedAt" : "2017-11-06T20:58:35Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "78cf0483-28c6-45cc-a4a2-0f8a8ace99f8",
+        "parentId" : "947c725b-66cd-4fb9-ae56-1c2e0a881894",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "right, that makes sense -> #11 ",
+        "createdAt" : "2017-11-06T21:55:58Z",
+        "updatedAt" : "2017-11-06T21:55:58Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a154d42708a1a97e34a23a7c79a153d4ee52f44b",
+    "line" : 73,
+    "diffHunk" : "@@ -1,1 +66,70 @@          Files.isRegularFile(path) && path.toString.endsWith(\".semanticdb\")\n      )\n      .forEach(path => semanticdbSubscriber.onNext(AbsolutePath(path)))\n  }\n"
+  },
+  {
+    "id" : "c0c9981b-8f5d-463f-b708-48560192c3c9",
+    "prId" : 4,
+    "prUrl" : "https://github.com/scalameta/metals/pull/4",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "818d8dff-e5bf-4ea7-b2ff-53fabcf09b18",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "lol, I spent su much time trying to get this right and I didn't think of this trick 👍 ",
+        "createdAt" : "2017-11-05T16:37:38Z",
+        "updatedAt" : "2017-11-05T16:52:29Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "fb7f2b68fd2401d20d274b55fec49292737e0614",
+    "line" : 75,
+    "diffHunk" : "@@ -1,1 +71,75 @@      val fullDocumentRange = Range(\n        start = Position(0, 0),\n        end = Position(Int.MaxValue, Int.MaxValue)\n      )\n      val formattedContent = scalafmt.format("
+  }
+]

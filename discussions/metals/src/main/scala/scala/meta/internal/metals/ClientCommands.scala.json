@@ -1,0 +1,123 @@
+[
+  {
+    "id" : "4fbdaf49-b408-48ea-a439-0dbdc7be9bc8",
+    "prId" : 1034,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1034",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "d528420f-a9ed-455e-afb3-827b81b2f19a",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "What are these `new` about?",
+        "createdAt" : "2019-10-31T22:11:20Z",
+        "updatedAt" : "2019-11-01T21:34:31Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0e1acd2c-13f4-40b9-af63-81b6b642f9d2",
+        "parentId" : "d528420f-a9ed-455e-afb3-827b81b2f19a",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "This was a manual fix, `new T` expressions always have type `T` so the rewrite leaves the unannotated by default. It's possible to let the rewrite also add annotations in this case but I don't think it improves readability much.",
+        "createdAt" : "2019-11-01T21:33:24Z",
+        "updatedAt" : "2019-11-01T21:36:28Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e53354e4d5f4086a39ad4aeabfa1e94592eb9fd9",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +8,12 @@object ClientCommands {\n\n  val EchoCommand = new Command(\n    \"metals-echo-command\",\n    \"Echo command\","
+  },
+  {
+    "id" : "cdb32020-5d61-4f55-8581-d734b45b544a",
+    "prId" : 797,
+    "prUrl" : "https://github.com/scalameta/metals/pull/797",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "e5884620-23c9-4ca3-9731-5829e79e0c06",
+        "parentId" : null,
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "Is this related to the TVP?",
+        "createdAt" : "2019-06-27T06:59:44Z",
+        "updatedAt" : "2019-06-28T12:28:04Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "82ea0735-08f4-4e4e-b3ca-b14aba51c761",
+        "parentId" : "e5884620-23c9-4ca3-9731-5829e79e0c06",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "It was needed so that clicking on tree view nodes would open the text editor at the location of that symbol. The TVP is not concerned with the command IDs system which is part of LSP (and client commands are a Metals LSP extension).",
+        "createdAt" : "2019-06-27T09:07:21Z",
+        "updatedAt" : "2019-06-28T12:28:04Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a43e250d79a91a6cadd98f502fb91b0993c3b5d8",
+    "line" : 23,
+    "diffHunk" : "@@ -1,1 +63,67 @@  )\n\n  val GotoLocation = Command(\n    \"metals-goto-location\",\n    \"Goto location\","
+  },
+  {
+    "id" : "18814f76-51d6-49ad-903f-8fff16ad0c44",
+    "prId" : 797,
+    "prUrl" : "https://github.com/scalameta/metals/pull/797",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "71bee3ee-2fe0-486a-b7f6-3c6da752293a",
+        "parentId" : null,
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "Duplicate\r\n\r\n```suggestion\r\n```",
+        "createdAt" : "2019-06-27T07:01:45Z",
+        "updatedAt" : "2019-06-28T12:28:04Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a43e250d79a91a6cadd98f502fb91b0993c3b5d8",
+    "line" : 46,
+    "diffHunk" : "@@ -1,1 +85,89 @@    ToggleLogs,\n    FocusDiagnostics,\n    GotoLocation,\n    EchoCommand\n  )"
+  },
+  {
+    "id" : "0802778b-f2a5-40e4-b4e5-8f179e098198",
+    "prId" : 728,
+    "prUrl" : "https://github.com/scalameta/metals/pull/728",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "c0920479-8418-4b49-924e-3483ab6dc70f",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "`Run` instead of `run`?",
+        "createdAt" : "2019-05-24T09:40:12Z",
+        "updatedAt" : "2019-05-24T09:41:40Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "70ab1eb4-7666-4d9c-a61d-aee328020f50",
+        "parentId" : "c0920479-8418-4b49-924e-3483ab6dc70f",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "This can be changed down the road once the Bloop release is out.",
+        "createdAt" : "2019-05-24T10:04:57Z",
+        "updatedAt" : "2019-05-24T10:04:58Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "9d3f311622eae8bedf5d893e5016c35523e74815",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +42,46 @@  val RunMain = Command(\n    \"metals-main-run\",\n    \"run\",\n    \"Runs main method\",\n    \"\"\"|Array of strings of length 2 where"
+  }
+]

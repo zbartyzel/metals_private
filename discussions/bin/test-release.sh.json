@@ -1,0 +1,46 @@
+[
+  {
+    "id" : "cc11faa0-58dd-4ffb-a4d4-b114bc8b39f4",
+    "prId" : 2779,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2779",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "872f15bd-381c-401d-91c5-d95d6b71d0ba",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Sort of random, but are Scala 3 artifacts supposed to be `_3` or `_3.0.0`? This morning I hit on this in coursier and we had to correct to `_3` https://github.com/coursier/apps/pull/98",
+        "createdAt" : "2021-05-14T12:32:50Z",
+        "updatedAt" : "2021-05-14T12:32:51Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b7c38180-a582-4c2f-bb92-02ee9b9c3c30",
+        "parentId" : "872f15bd-381c-401d-91c5-d95d6b71d0ba",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Mtags always resolve with the full scala version similar to anything that depend on the compiler. Just like the other mtags versions. This is finally an end to the very confusing time 😅",
+        "createdAt" : "2021-05-14T12:40:56Z",
+        "updatedAt" : "2021-05-14T12:40:56Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3b08c5e1-34fd-44a2-84b1-f397740f09e1",
+        "parentId" : "872f15bd-381c-401d-91c5-d95d6b71d0ba",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "ahhh of course, duh. sorry wasn't thinking at all there.",
+        "createdAt" : "2021-05-14T12:51:06Z",
+        "updatedAt" : "2021-05-14T12:51:06Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b14dcc6e504c6df35a5797bf8f1c0fafef689627",
+    "line" : 10,
+    "diffHunk" : "@@ -1,1 +10,14 @@  org.scalameta:mtags_3.0.0-RC2:$version \\\n  org.scalameta:mtags_3.0.0-RC3:$version \\\n  org.scalameta:mtags_3.0.0:$version \\\n  org.scalameta:metals_2.12:$version \\\n  org.scalameta:mtags_2.13.0:$version \\"
+  }
+]

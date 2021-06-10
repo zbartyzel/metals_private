@@ -1,0 +1,46 @@
+[
+  {
+    "id" : "c6d6acf0-6d4d-4937-a850-815842056c15",
+    "prId" : 154,
+    "prUrl" : "https://github.com/scalameta/metals/pull/154",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f6ddcdad-1ba7-46c2-b4e1-16a6ad2db003",
+        "parentId" : null,
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "What is this number?",
+        "createdAt" : "2017-12-26T01:40:16Z",
+        "updatedAt" : "2017-12-29T12:34:28Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e18109be-03ad-4828-8268-860592fcfc3b",
+        "parentId" : "f6ddcdad-1ba7-46c2-b4e1-16a6ad2db003",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "```scala\r\n/**\r\n@param timeout max number of milliseconds to allow the presentation compiler\r\n*/\r\n```\r\n\r\nfrom: https://github.com/scalameta/scalameta/blob/00e7bb0683ad646b20c72482976e2b1f651da2b5/scalameta/semanticdb-scalac-core/src/main/scala/scala/meta/interactive/InteractiveSemanticdb.scala#L47",
+        "createdAt" : "2017-12-29T07:37:39Z",
+        "updatedAt" : "2017-12-29T12:34:28Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "eed7c594-e874-4d31-9aeb-dd9a24e7b1d7",
+        "parentId" : "f6ddcdad-1ba7-46c2-b4e1-16a6ad2db003",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I have some WIP experiments to use monix Task to avoid ad-hoc timeouts and support proper cancellation for presentation compiler requests",
+        "createdAt" : "2017-12-29T12:34:00Z",
+        "updatedAt" : "2017-12-29T12:34:28Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "fdc9c838e9c14f4d811f77cd7768c91f492170e0",
+    "line" : 17,
+    "diffHunk" : "@@ -1,1 +18,22 @@\n  def toDocument(name: String, code: String): Document = {\n    InteractiveSemanticdb.toDocument(compiler, code, name, 10000)\n  }\n"
+  }
+]

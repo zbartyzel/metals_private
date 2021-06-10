@@ -1,0 +1,112 @@
+[
+  {
+    "id" : "eab99f74-74cf-4cb7-a712-5c4015a6efd8",
+    "prId" : 2005,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2005",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "1e0301fc-8f4e-4a57-844b-bfe1748a8b92",
+        "parentId" : null,
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "will this syntax be coloured correctly? there are no '//' comments in json.",
+        "createdAt" : "2020-08-17T20:27:14Z",
+        "updatedAt" : "2020-08-18T15:31:49Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "73f5a6af-7d7c-43f0-b7a6-4b5395331aa0",
+        "parentId" : "1e0301fc-8f4e-4a57-844b-bfe1748a8b92",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "It looks ok, VS Code does allow for comments.",
+        "createdAt" : "2020-08-18T09:34:25Z",
+        "updatedAt" : "2020-08-18T15:31:49Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d0e0677e-a53b-4f16-b55e-20b77cf7e018",
+        "parentId" : "1e0301fc-8f4e-4a57-844b-bfe1748a8b92",
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "I think it will also be displayed here: https://scalameta.org/metals/docs/editors/vscode.html\r\n\r\nWe can see how it looks like after merge and quickly update if something will not be right.",
+        "createdAt" : "2020-08-18T12:35:06Z",
+        "updatedAt" : "2020-08-18T15:31:49Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e2e31861-44f0-4635-bd54-ac5e16f6b4a8",
+        "parentId" : "1e0301fc-8f4e-4a57-844b-bfe1748a8b92",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "For rendering it correctly, I think you can use the good old trick of changing the code block language to `js` (same syntax, and it allows comments)",
+        "createdAt" : "2020-08-18T12:38:57Z",
+        "updatedAt" : "2020-08-18T15:31:49Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a3ac6339a1e66b6ad62b64c6e84e3c0aa7ade47d",
+    "line" : 48,
+    "diffHunk" : "@@ -1,1 +177,181 @@      \"type\": \"scala\",\n      \"request\": \"launch\",\n      // configuration name visible for the user\n      \"name\": \"Main class\",\n      // full name of the class to run"
+  },
+  {
+    "id" : "6e9a66e9-93c4-4bb6-b2d5-05be6da49d99",
+    "prId" : 2005,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2005",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "dd02d059-b252-472b-91e7-ecea4f8ca0f8",
+        "parentId" : null,
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "can we attach second position like 'Test class' showing that in test config we specify 'testClass' and not 'mainClass' and how 2 configurations would look like here",
+        "createdAt" : "2020-08-18T07:10:21Z",
+        "updatedAt" : "2020-08-18T15:31:49Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c397e6a8-0c00-49a8-a9dc-b3eb847e3f6a",
+        "parentId" : "dd02d059-b252-472b-91e7-ecea4f8ca0f8",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Added! Good idea!",
+        "createdAt" : "2020-08-18T09:45:39Z",
+        "updatedAt" : "2020-08-18T15:31:49Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a3ac6339a1e66b6ad62b64c6e84e3c0aa7ade47d",
+    "line" : 73,
+    "diffHunk" : "@@ -1,1 +202,206 @@      // class with the same name\n      \"buildTarget\": \"root\"\n    }\n  ]\n}"
+  },
+  {
+    "id" : "b68b7877-0513-4f6a-b0f6-12ce20bcf341",
+    "prId" : 1934,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1934",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "94184cda-1736-4f10-8c0b-fdea62746c66",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Added better gifs, because the previous ones were bother me quite a bit :sweat_smile: ",
+        "createdAt" : "2020-07-20T13:04:12Z",
+        "updatedAt" : "2020-07-21T07:58:00Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1f9f20c530b2152a24fddd4618793dbec859f696",
+    "line" : 55,
+    "diffHunk" : "@@ -1,1 +149,153 @@formatted by Metals:\n\n![format-on-paste](https://i.imgur.com/fF0XWYC.gif)\n\nThis feature is enabled by default. If you need to disable/enable formatting on"
+  }
+]

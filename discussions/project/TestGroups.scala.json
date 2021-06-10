@@ -1,0 +1,46 @@
+[
+  {
+    "id" : "703be8bc-53b0-414d-97aa-9db629062072",
+    "prId" : 1985,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1985",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "1a1983a4-0233-434a-8fb8-18b23aa0301f",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Again, just a note but if we are going to add something like this, let's make sure to add it to the contributor notes under testing or something, like \"if you add a new test suite you may want to add it to `TestGroups` etc. Because I can see how this may be forgotten in the future.",
+        "createdAt" : "2020-08-21T17:14:09Z",
+        "updatedAt" : "2020-08-21T17:14:26Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "43f56c1c-1423-4d76-b1c3-55443b2a1876",
+        "parentId" : "1a1983a4-0233-434a-8fb8-18b23aa0301f",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I think the problem with that is that it will be hard for the user to split the tests manually, so I wouldn't want to require it from them. This is something we should do ourselves using the data we have from testing.",
+        "createdAt" : "2020-08-21T17:19:44Z",
+        "updatedAt" : "2020-08-21T17:19:44Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f0507bd4-5ada-4ea9-a1c5-4896687574fb",
+        "parentId" : "1a1983a4-0233-434a-8fb8-18b23aa0301f",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Fair enough.",
+        "createdAt" : "2020-08-21T17:38:07Z",
+        "updatedAt" : "2020-08-21T17:38:53Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8e26e2d8d28a3d420f4f5bc7efb45ebe19ab460b",
+    "line" : 3,
+    "diffHunk" : "@@ -1,1 +1,5 @@object TestGroups {\n\n  val testGroups = List(\n    Set(\"tests.RenameLspSuite\", \"tests.ImplementationLspSuite\",\n      \"tests.worksheets.WorksheetLspSuite\","
+  }
+]

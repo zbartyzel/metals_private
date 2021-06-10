@@ -1,0 +1,57 @@
+[
+  {
+    "id" : "5b17aaf4-d93e-4e86-ac55-7bfa88d39931",
+    "prId" : 1911,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1911",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "cc6a8996-3b26-4215-95c7-134604fef655",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Added back the `RemoveUnused` rule to remove unused private and local values. Left imports to the OrganizeImports rules.",
+        "createdAt" : "2020-07-14T16:56:37Z",
+        "updatedAt" : "2020-07-14T16:56:37Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3cddbb0f161f90f3fa8877a263f2cac238b065b7",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +2,6 @@  OrganizeImports,\n  ExplicitResultTypes,\n  RemoveUnused\n]\n"
+  },
+  {
+    "id" : "5d7b4e64-3723-44ac-87be-9b402c0ed74c",
+    "prId" : 133,
+    "prUrl" : "https://github.com/scalameta/metals/pull/133",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "4c1687ad-00a1-4520-9cad-09d87cd6b66b",
+        "parentId" : null,
+        "authorId" : "ef0069c2-046a-496d-a83f-80db27f0d990",
+        "body" : "Can managed files or protobuf sources be excluded here?",
+        "createdAt" : "2017-12-16T22:04:42Z",
+        "updatedAt" : "2017-12-16T22:04:42Z",
+        "lastEditedBy" : "ef0069c2-046a-496d-a83f-80db27f0d990",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "03f608d3-8a4b-4a70-81a9-e99cf2bfa0b6",
+        "parentId" : "4c1687ad-00a1-4520-9cad-09d87cd6b66b",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "managed sources are ignored by scalafix by default, the problem is that all non-primitive fields are `Option[T]` and we do `.get` on them in several places, esp. in tests. ",
+        "createdAt" : "2017-12-17T13:02:59Z",
+        "updatedAt" : "2017-12-17T13:02:59Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ce6187249dc8ddcbe1c3a6b3fdb6cf056a09db64",
+    "line" : 3,
+    "diffHunk" : "@@ -1,1 +0,4 @@rules = [\n  Disable\n  RemoveUnusedImports\n  ExplicitResultTypes"
+  }
+]

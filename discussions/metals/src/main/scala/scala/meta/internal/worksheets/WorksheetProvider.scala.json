@@ -1,0 +1,244 @@
+[
+  {
+    "id" : "8f466d64-efee-4ce4-bd32-979145118191",
+    "prId" : 2290,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2290",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b6a4a06b-6f15-4828-8516-e3d9706ef767",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Should we remove a key if a file was closed?",
+        "createdAt" : "2020-12-14T17:26:13Z",
+        "updatedAt" : "2020-12-14T18:00:09Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "86786c19-568b-4a1f-8c6b-c24eeebd6c16",
+        "parentId" : "b6a4a06b-6f15-4828-8516-e3d9706ef767",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "I _don't think_ it really matters. Mainly because if you close a worksheet, you won't be able to send in a request to get the evaluations for that URI until it's open again, and that opening would re-evaluate and update this anyways. So I don't think there is much there we need to worry about.",
+        "createdAt" : "2020-12-14T17:54:53Z",
+        "updatedAt" : "2020-12-14T18:00:09Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "59cebc6f2471e834b277535472b36f87fc219b2f",
+    "line" : 78,
+    "diffHunk" : "@@ -1,1 +326,330 @@    val newDigest = calculateDigest(classpath)\n\n    exportableEvaluations.update(\n      input,\n      evaluatedWorksheet"
+  },
+  {
+    "id" : "700cc281-f6f4-42ee-8d29-5a64a9437c3c",
+    "prId" : 2190,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2190",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "7bdf52ac-2d9a-4d1d-b01b-d7cef93be1d3",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "So I was curious what would happen if I was still no 0.27, and this is shown in the logs\r\n```\r\n2020.11.06 13:03:03 WARN  worksheet: unsupported Scala version '0.27.0-RC1', using Scala version '2.12.12' without classpath instead.\r\nworksheet: to fix this problem use Scala version '3.0.0-M1'.\r\n```\r\nWe don't have to do this now, but what do you think about actually floating this up to the user? I think it might be confusing for someone since I'm not sure I'd expect it to revert to 2.12.12 without the classpath. It may cause confusion.",
+        "createdAt" : "2020-11-06T12:05:00Z",
+        "updatedAt" : "2020-11-06T12:07:54Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "48b63692-aa8c-4b54-b18d-26d3833e5054",
+        "parentId" : "7bdf52ac-2d9a-4d1d-b01b-d7cef93be1d3",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Yeah, it might be good to do, I will try to follow up with that and merge this so that people can start testing out 3.0.0-M1",
+        "createdAt" : "2020-11-06T12:15:45Z",
+        "updatedAt" : "2020-11-06T12:15:45Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b135a6d205cffd61ee131ead0d6326569af38c30",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +316,320 @@      // Worksheet support for Scala 3 is only working currently for 3.0.0-M1\n      ScalaVersions.isScala3Version(scalaVersion) && SemVer.isCompatibleVersion(\n        \"3.0.0\",\n        scalaVersion\n      )"
+  },
+  {
+    "id" : "73bbd9a6-6396-4c4f-8076-66a1f4d7b12f",
+    "prId" : 1986,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1986",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "bef80907-08fb-4205-9008-08a7d2055eba",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Can we include a note either here or in the commit to why it has to be 0.26.0 or newer.",
+        "createdAt" : "2020-08-11T14:04:02Z",
+        "updatedAt" : "2020-08-11T14:17:42Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "660a10c9f889aaf4d513c017763508d145468845",
+    "line" : 16,
+    "diffHunk" : "@@ -1,1 +297,301 @@      // Worksheet support for Scala 3 started with 0.26.0-RC1\n      ScalaVersions.isScala3Version(scalaVersion) && SemVer.isCompatibleVersion(\n        \"0.26.0\",\n        scalaVersion\n      )"
+  },
+  {
+    "id" : "59720c77-38c5-4b8e-b6d9-e7c96ea46946",
+    "prId" : 1856,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1856",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "9cf9ca5e-cb0d-490f-a285-dd2460d0e649",
+        "parentId" : null,
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "that was this incompatibility with newest mdoc? :laughing: ",
+        "createdAt" : "2020-06-25T22:17:00Z",
+        "updatedAt" : "2020-06-26T14:08:31Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c3181232-b48c-4d71-ab3f-a480555ceb18",
+        "parentId" : "9cf9ca5e-cb0d-490f-a285-dd2460d0e649",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "That's the change for worksheet to be able to include dependencies.",
+        "createdAt" : "2020-06-26T06:19:41Z",
+        "updatedAt" : "2020-06-26T14:08:31Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1f17edfb786b6f5af2def3bdb1d0b49714512fb2",
+    "line" : 77,
+    "diffHunk" : "@@ -1,1 +253,257 @@    val mdoc = getMdoc(path)\n    val input = path.toInputFromBuffers(buffers)\n    val relativePath = path.toRelative(workspace)\n    val worksheet = mdoc.evaluateWorksheet(relativePath.toString(), input.value)\n    val classpath = worksheet.classpath().asScala.toList"
+  },
+  {
+    "id" : "450a7953-99ea-47bc-9fbe-352d48459d1b",
+    "prId" : 1523,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1523",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b5aee341-9068-4840-aaf3-60d85e0fd68b",
+        "parentId" : null,
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "Question(not strongly related to this PR): Why scala 212 not 213?",
+        "createdAt" : "2020-03-31T14:58:12Z",
+        "updatedAt" : "2020-04-15T13:50:25Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9ca08aaa-0f67-4459-a92c-8780a033ce83",
+        "parentId" : "b5aee341-9068-4840-aaf3-60d85e0fd68b",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "It's the one used in Metals and we're most likely more sure about it. But there is no particular reason aside from that. ",
+        "createdAt" : "2020-04-03T16:57:08Z",
+        "updatedAt" : "2020-04-15T13:50:25Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1142490703f832961ac0df1debd14b4f3b12ce7d",
+    "line" : 12,
+    "diffHunk" : "@@ -1,1 +261,265 @@          if (!isSupported) {\n            scribe.warn(\n              s\"worksheet: unsupported Scala version '${scalaVersion}', using Scala version '${BuildInfo.scala212}' without classpath instead.\\n\" +\n                s\"worksheet: to fix this problem use Scala version '${BuildInfo.scala212}'.\"\n            )"
+  },
+  {
+    "id" : "7b874af0-48a6-4754-a74e-ee7fe14c3be2",
+    "prId" : 1498,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1498",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "84e7f6ca-8793-4704-9611-2378b93441b3",
+        "parentId" : null,
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "catching all exceptions is handled in mdoc and they are converted to NonFatal errors which are already handled, this case is not related to mentioned issue, right?",
+        "createdAt" : "2020-03-13T09:47:42Z",
+        "updatedAt" : "2020-03-13T09:47:42Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "de13df2b-6a37-44c4-b004-2359b105d2d1",
+        "parentId" : "84e7f6ca-8793-4704-9611-2378b93441b3",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "It's correct that they should be caught by mdoc now but I added this case nevertheless to be sure. If there's something fatally broken about the JVM I suspect it will show up in the logs regardless.",
+        "createdAt" : "2020-03-13T12:43:12Z",
+        "updatedAt" : "2020-03-13T12:43:12Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a7b2e97c71c369fcf2ba52cb52e01680d3951447",
+    "line" : 18,
+    "diffHunk" : "@@ -1,1 +123,127 @@        None\n      case e: Throwable =>\n        // NOTE(olafur): we catch all exceptions because of https://github.com/scalameta/metals/issues/1456\n        scribe.error(s\"worksheet: $path\", e)\n        None"
+  },
+  {
+    "id" : "74a5f9ed-1e2f-4c1c-8777-4d90d18e54ed",
+    "prId" : 1070,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1070",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "9c0af047-2fb2-400f-8135-36b3edadf7d7",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "`s` seems to get a bit lost in the code. Maybe at least `stmt` ? You can test rename on this :sweat_smile: ",
+        "createdAt" : "2019-11-18T10:22:02Z",
+        "updatedAt" : "2019-11-20T13:47:26Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8e9ddf5e5c6478ce25ea66ea4938fa0c64f27aba",
+    "line" : 292,
+    "diffHunk" : "@@ -1,1 +214,218 @@          .iterator()\n          .asScala\n          .map { s =>\n            new DecorationOptions(\n              toLsp(s.position()),"
+  },
+  {
+    "id" : "259632e5-06eb-41ef-a7af-00b334a73ca5",
+    "prId" : 1041,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1041",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "3238a589-e771-4560-bc0b-0785b8a8eb38",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Maybe this would be a bit more clear:\r\n```\r\nval color = binder.tpe.render(TPrintColors.BlackWhite)\r\nout.append(s\"\\n${binder.name}: $color: \")\r\n``` \r\n?",
+        "createdAt" : "2019-11-07T11:19:49Z",
+        "updatedAt" : "2019-11-09T20:01:12Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ec115a6e-5ea8-4407-b4dd-355df526a34a",
+        "parentId" : "3238a589-e771-4560-bc0b-0785b8a8eb38",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Not really IMO. When using string builders it's usually best to append individual strings",
+        "createdAt" : "2019-11-09T00:12:36Z",
+        "updatedAt" : "2019-11-09T20:01:12Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a2902a65a77773398f8ac710483906215a06bcf8",
+    "line" : 227,
+    "diffHunk" : "@@ -1,1 +225,229 @@    if (!isEmptyValue) {\n      statement.binders.iterator.foreach { binder =>\n        out\n          .append(\"\\n\")\n          .append(binder.name)"
+  }
+]

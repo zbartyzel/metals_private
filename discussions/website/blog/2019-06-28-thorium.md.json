@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "44140b8e-6d49-424a-baf7-84352dbf581e",
+    "prId" : 800,
+    "prUrl" : "https://github.com/scalameta/metals/pull/800",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "bc8b783b-64d9-4867-845c-592f5ab64065",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "maybe link to the ticket here?",
+        "createdAt" : "2019-06-28T14:47:09Z",
+        "updatedAt" : "2019-06-28T14:54:18Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "5ef14786616cc095dc789ac6006152883fc0fe0f",
+    "line" : 81,
+    "diffHunk" : "@@ -1,1 +79,83 @@- whitebox string interpolator macros, we had to disable one unit test for 2.13.\n  See [#777](https://github.com/scalameta/metals/issues/777).\n- better-monadic-for compile plugin, we had to disable one unit test for 2.13.\n  See [#777](https://github.com/scalameta/metals/issues/777).\n"
+  }
+]

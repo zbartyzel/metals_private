@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "c66a7996-5341-46cb-b391-da6d9a989142",
+    "prId" : 2154,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2154",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "7616a091-992d-4fd5-8854-b1a39a193bd9",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I think this might be None if the user just resigns.",
+        "createdAt" : "2020-10-28T15:51:45Z",
+        "updatedAt" : "2020-10-30T17:54:40Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "04bcd937-8dd8-498a-bde7-d21645edb25e",
+        "parentId" : "7616a091-992d-4fd5-8854-b1a39a193bd9",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "🤔 yea true. I'll have to play with this a bit. This will only _ever_ be hit if there are two bsp server available to generate apart from bloop. At the moment, that impossible, since we don't have two BuildTools that extend `BuildServerProvider`, but still good to check.",
+        "createdAt" : "2020-10-29T13:54:34Z",
+        "updatedAt" : "2020-10-30T17:54:40Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8eab66607688c713397334de6750fab0ca346fc8",
+    "line" : 48,
+    "diffHunk" : "@@ -1,1 +46,50 @@  ): Future[(BuildTool, BspConfigGenerationStatus)] = {\n    for {\n      Some(buildTool) <- chooseBuildServerProvider(buildTools)\n      status <- buildTool.generateBspConfig(\n        workspace,"
+  }
+]

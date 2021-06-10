@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "ff47aab7-7a1a-406b-9a3c-4df66c66ebc8",
+    "prId" : 1953,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1953",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "fa0c236a-f003-4b8d-9087-98c8c73b71a5",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This is needed so that we save a fingerprint of a working file, which we produce a semanticDB for. SemanticDB has positions that might need to be adjusted in case of a broken/unsaved code and we need the difference between last working and current to figure out how to adjust those positions.",
+        "createdAt" : "2020-07-29T10:01:30Z",
+        "updatedAt" : "2020-07-29T10:01:30Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e5ae4deec700724213f99d4fbeee5535331d1873",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +172,176 @@           |}\"\"\".stripMargin\n      )\n      _ <- server.didOpen(\"a/src/main/scala/Main.scala\")\n      _ <- assertCodeLenses(\n        \"a/src/main/scala/Main.scala\","
+  }
+]

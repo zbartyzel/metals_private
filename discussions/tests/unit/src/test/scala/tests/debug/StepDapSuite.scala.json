@@ -1,0 +1,46 @@
+[
+  {
+    "id" : "372b4511-f59f-4ab2-8288-e0c52ac1e6fc",
+    "prId" : 1163,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1163",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "7942b027-bbcb-4918-a5c1-8781f8712615",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Could we avoid hardcoding the line numbers here somehow? For example, using comment markers \r\n```scala\r\n             |>>  println() // debug: step 1\r\n             \r\n// ...\r\n           |    foo() // debug: step 2\r\n// ...\r\n                .at(\"a/src/main/scala/Main.scala\", line = \"step 1\")(StepOut)\r\n                .at(\"a/src/main/scala/Main.scala\", line = \"step 2\")(Continue)\r\n```",
+        "createdAt" : "2019-12-16T11:23:20Z",
+        "updatedAt" : "2019-12-18T11:36:11Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1d948c58-9be2-41a7-8b24-0078b681f655",
+        "parentId" : "7942b027-bbcb-4918-a5c1-8781f8712615",
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "That would be problematic for cases when a single line is hit multiple times. Also, developer would have to either declare the methods in order of breakpoints or somehow indicate the order within the commit markers which I think would be less readable than having all of the steps in one place. Also, we would need to encode the step type in the comment and it all becomes not worth the hassle in my opinion. \r\nThe test cases are small enough that they shouldn't be changed that often, so let's hope we won't have too many reasons to do so.",
+        "createdAt" : "2019-12-17T09:14:49Z",
+        "updatedAt" : "2019-12-18T11:36:11Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b534d53e-5474-475f-9925-7cab59f1e36a",
+        "parentId" : "7942b027-bbcb-4918-a5c1-8781f8712615",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Fair enough, as a general principle I try to avoid hardcoded line numbers in test cases because the line numbers change when you change the code.",
+        "createdAt" : "2019-12-17T09:49:53Z",
+        "updatedAt" : "2019-12-18T11:36:11Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "04ef30f47759c2620cd886265e4c50169245a539",
+    "line" : 27,
+    "diffHunk" : "@@ -1,1 +25,29 @@      steps\n        .at(\"a/src/main/scala/Main.scala\", line = 5)(StepOut)\n        .at(\"a/src/main/scala/Main.scala\", line = 9)(Continue)\n  )\n"
+  }
+]

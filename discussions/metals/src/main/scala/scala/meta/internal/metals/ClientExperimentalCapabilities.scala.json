@@ -1,0 +1,57 @@
+[
+  {
+    "id" : "08a59833-844d-434b-b618-0de2c929db32",
+    "prId" : 1898,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1898",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ad4fc628-58b7-46da-b0ad-5a7b1e6b88d3",
+        "parentId" : null,
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "https://github.com/scalameta/metals/blob/48b20201f3357738ce472c40dcae47b0cccc56fb/docs/editors/new-editor.md\r\n\r\nHere we say `statusBarProvider` is Boolean :thinking: ",
+        "createdAt" : "2020-07-10T11:22:28Z",
+        "updatedAt" : "2020-07-10T20:39:59Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "eb74b99b-2106-4e6c-b5db-9b8cbe3d6cc7",
+        "parentId" : "ad4fc628-58b7-46da-b0ad-5a7b1e6b88d3",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "🤔 that's a mistake in the docs then. Good catch. I'll change this there.",
+        "createdAt" : "2020-07-10T12:01:52Z",
+        "updatedAt" : "2020-07-10T20:39:59Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "24c5be22-79be-4102-8ea4-9789c188e0a2",
+        "parentId" : "ad4fc628-58b7-46da-b0ad-5a7b1e6b88d3",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Updated this.",
+        "createdAt" : "2020-07-10T14:42:48Z",
+        "updatedAt" : "2020-07-10T20:39:59Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0042165c-f685-4b34-84c6-5b29e52316b7",
+        "parentId" : "ad4fc628-58b7-46da-b0ad-5a7b1e6b88d3",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Changed.",
+        "createdAt" : "2020-07-10T14:44:21Z",
+        "updatedAt" : "2020-07-10T20:39:59Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a09c54df4983c2390e8b249633004d3433d16915",
+    "line" : 36,
+    "diffHunk" : "@@ -1,1 +21,25 @@    quickPickProvider: Option[Boolean],\n    slowTaskProvider: Option[Boolean],\n    statusBarProvider: Option[String],\n    treeViewProvider: Option[Boolean]\n) {"
+  }
+]

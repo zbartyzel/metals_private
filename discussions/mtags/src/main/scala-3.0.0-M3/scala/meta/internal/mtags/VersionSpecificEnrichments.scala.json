@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "8269d38a-23df-47e4-9dd7-38dfedceb9aa",
+    "prId" : 2504,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2504",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "7be84c08-2144-4db7-a45d-a332eb80a754",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "There is one extra parameter here, which is missing in M1 and M2",
+        "createdAt" : "2021-02-18T14:16:03Z",
+        "updatedAt" : "2021-02-18T14:16:04Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4dcfcda7-46a7-4ff6-aa71-b8756115762c",
+        "parentId" : "7be84c08-2144-4db7-a45d-a332eb80a754",
+        "authorId" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "body" : "Oops, didn't realize it, thanks for fixing it 👍 \r\nit looks good! (and good to see the use of the `extension` keyword!)",
+        "createdAt" : "2021-02-18T15:05:20Z",
+        "updatedAt" : "2021-02-18T15:05:20Z",
+        "lastEditedBy" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1ca76fba3fb60396b09fcdec3edfde98d74f0b6b",
+    "line" : 18,
+    "diffHunk" : "@@ -1,1 +16,20 @@        defn(using context).AnyType,\n        EmptyFlags,\n        EmptyFlags,\n        NoSourcePosition\n      )(using context)"
+  }
+]

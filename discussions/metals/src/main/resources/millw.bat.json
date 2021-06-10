@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "7bb3ab49-30ab-47be-8708-43904a7dcaf2",
+    "prId" : 1715,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1715",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "319800e3-5fc6-4d0f-a658-2128c9c699c7",
+        "parentId" : null,
+        "authorId" : "0eff8569-3d3f-41fe-aa70-8e8a203520e3",
+        "body" : "So what happens here in this somewhat cryptic code:\r\n\r\n1) `for /f` - is used for processing text by breaking the line up into individual items of data called 'tokens'. By default breaks occur at a space character.\r\n2) `\"tokens=1-2*\"` - this specifies that the first 2 parameters in our text should be allocated to the first 2 letters, i.e \"%%a\" and \"%%b\" and the asterisk specifies that the remaining parameters should be allocated to the letter \"%%c\".\r\n3) `%%a` - a replaceable parameter. We start at \"%%a\" for the first parameter, then \"%%b\" for the second and so on.\r\n4) `in (\"%*\")` - text string that we are processing\r\n\r\nMore details on: https://ss64.com/nt/for_f.html",
+        "createdAt" : "2020-05-08T10:34:07Z",
+        "updatedAt" : "2020-05-08T11:49:28Z",
+        "lastEditedBy" : "0eff8569-3d3f-41fe-aa70-8e8a203520e3",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "24ecc7bf5deb674a29cd65e6c7ca0bc9c52f745f",
+    "line" : 16,
+    "diffHunk" : "@@ -1,1 +85,89 @@\nif defined STRIP_VERSION_PARAMS (\n    for /f \"tokens=1-2*\" %%a in (\"%*\") do (\n        rem strip %%a - It's the \"--mill-version\" option.\n        rem strip %%b - it's the version number that comes after the option."
+  }
+]

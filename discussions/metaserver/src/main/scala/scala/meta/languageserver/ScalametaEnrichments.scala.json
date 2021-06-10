@@ -1,0 +1,101 @@
+[
+  {
+    "id" : "161664f2-dd59-4a60-a163-954bb92d2843",
+    "prId" : 93,
+    "prUrl" : "https://github.com/scalameta/metals/pull/93",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "65228187-aab8-4d8a-bb6a-e95bc9e4d805",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "You will actually need additional logic to handle `val (a, b)`, it currently handles only `val a, b` which is different. I think we may produce weird/local symbols for `val (a, b)` because of desugarings in scalac so that can be left to be fixed in the future.",
+        "createdAt" : "2017-12-04T07:02:06Z",
+        "updatedAt" : "2017-12-04T23:49:22Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e06c0fd1-d1cf-4d95-9e11-f105c2cc82c4",
+        "parentId" : "65228187-aab8-4d8a-bb6a-e95bc9e4d805",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "Thanks for pointing it out. I'll check it 🤔 ",
+        "createdAt" : "2017-12-04T20:17:41Z",
+        "updatedAt" : "2017-12-04T23:49:22Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "90529162-d6dd-4443-b29e-3e48d83e296b",
+        "parentId" : "65228187-aab8-4d8a-bb6a-e95bc9e4d805",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "No need to do it here, I think `val (a, b)` will need special treatment in scalameta similar to other patterns like `val Foo(a, b) = `",
+        "createdAt" : "2017-12-04T21:55:21Z",
+        "updatedAt" : "2017-12-04T23:49:22Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "73777023-8208-4230-984f-2b432c1eaae9",
+        "parentId" : "65228187-aab8-4d8a-bb6a-e95bc9e4d805",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "OK. I'll just use this one simple change. Does it solve the problem or is it still more complicated?\r\n\r\n```scala\r\n@ q\"val (x, y) = (1, 2)\".pats.flatMap { _.collect { case Pat.Var(name) => name.value } }\r\nres4: List[String] = List(\"x\", \"y\")\r\n\r\n@ q\"val Foo(x, y) = (1, 'a')\".pats.flatMap { _.collect { case Pat.Var(name) => name.value } }\r\nres8: List[String] = List(\"x\", \"y\")\r\n```\r\n",
+        "createdAt" : "2017-12-04T22:45:33Z",
+        "updatedAt" : "2017-12-04T23:49:22Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1fda928f-f6cf-4f92-8ace-775a41a4b4c2",
+        "parentId" : "65228187-aab8-4d8a-bb6a-e95bc9e4d805",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "For outline I think that solution is fine 👍 ",
+        "createdAt" : "2017-12-04T22:49:00Z",
+        "updatedAt" : "2017-12-04T23:49:22Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "097b1314-f4e9-4ee7-a02a-a64e6f1749a4",
+        "parentId" : "65228187-aab8-4d8a-bb6a-e95bc9e4d805",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "Done in cb484756b5b01b25bfcbfdde90df436667cbd6fe",
+        "createdAt" : "2017-12-04T23:40:34Z",
+        "updatedAt" : "2017-12-04T23:49:22Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7b17cbf33208eb27890af0e9b1a6a7b9016afbcb",
+    "line" : 19,
+    "diffHunk" : "@@ -1,1 +68,72 @@    /** All names within the node.\n     * - if it's a package, it will have its qualified name: `package foo.bar.buh`\n     * - if it's a val/var, it may contain several names in the pattern: `val (x, y, z) = ...`\n     * - for everything else it's just its normal name (if it has one)\n     */"
+  },
+  {
+    "id" : "2f5f2b2b-96cc-4027-a25a-f7f2032004c9",
+    "prId" : 78,
+    "prUrl" : "https://github.com/scalameta/metals/pull/78",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "00363fa2-a44c-44fb-8522-0ee2e63a107f",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "👍 ",
+        "createdAt" : "2017-12-01T20:32:17Z",
+        "updatedAt" : "2017-12-02T23:22:47Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "71da2fa975b8fb36cd888c23d0a8b0214a68e679",
+    "line" : 43,
+    "diffHunk" : "@@ -1,1 +75,79 @@      l.Position(line = range.endLine, character = range.endColumn)\n    )\n    def contains(line: Int, column: Int): Boolean = {\n      range.startLine <= line &&\n      range.startColumn <= column &&"
+  }
+]

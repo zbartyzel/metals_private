@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "407194df-1632-4413-9101-bc8a0d8d94c6",
+    "prId" : 45,
+    "prUrl" : "https://github.com/scalameta/metals/pull/45",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "eefeec56-47d4-4b87-8afe-9511ff8e649d",
+        "parentId" : null,
+        "authorId" : "ef0069c2-046a-496d-a83f-80db27f0d990",
+        "body" : "I'm guessing this is safe for now but I worry this pattern will become dangerous in the future if the first task is mutating compiler globals and the second independent task is also working inside compiler.  I fear concurrency and mutation together in general though.",
+        "createdAt" : "2017-11-22T21:16:46Z",
+        "updatedAt" : "2017-11-22T21:53:24Z",
+        "lastEditedBy" : "ef0069c2-046a-496d-a83f-80db27f0d990",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d13c1732-46d5-41e4-b576-0a4dbe2028a3",
+        "parentId" : "eefeec56-47d4-4b87-8afe-9511ff8e649d",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "The indexDependencyClasspath should be moved out of Compiler.scala since it doesn't do anything related to the compiler. Opened https://github.com/scalameta/language-server/issues/48",
+        "createdAt" : "2017-11-22T21:20:05Z",
+        "updatedAt" : "2017-11-22T21:53:24Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "07b899d0ababc60348d3fbfc05eefbfd0ba43538",
+    "line" : 24,
+    "diffHunk" : "@@ -1,1 +44,48 @@        Observable.fromTask(\n          Task(loadNewCompilerGlobals(config))\n            .zip(Task(indexDependencyClasspath(config.sourceJars)))\n        )\n      }"
+  },
+  {
+    "id" : "a24064c1-22e5-4dd9-bdd8-449b15cc11b7",
+    "prId" : 45,
+    "prUrl" : "https://github.com/scalameta/metals/pull/45",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "56f91bdf-a26d-4f0a-ade7-c04fe005792d",
+        "parentId" : null,
+        "authorId" : "ef0069c2-046a-496d-a83f-80db27f0d990",
+        "body" : "Is there any value in taking smaller locks during each individual indexDatabase call to give others time to jump in the gaps if it takes a long time to load indexes?",
+        "createdAt" : "2017-11-22T21:19:07Z",
+        "updatedAt" : "2017-11-22T21:53:24Z",
+        "lastEditedBy" : "ef0069c2-046a-496d-a83f-80db27f0d990",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0672fbba-9417-4996-85e9-5e5d3228c96d",
+        "parentId" : "56f91bdf-a26d-4f0a-ade7-c04fe005792d",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "There is, I've opened https://github.com/scalameta/language-server/issues/49 to track improvements on this.",
+        "createdAt" : "2017-11-22T21:22:50Z",
+        "updatedAt" : "2017-11-22T21:53:24Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "07b899d0ababc60348d3fbfc05eefbfd0ba43538",
+    "line" : 65,
+    "diffHunk" : "@@ -1,1 +127,131 @@    val sourceJarsToIndex = buf.result()\n    // Acquire a lock on the leveldb cache only during indexing.\n    LevelDBMap.withDB(cacheDirectory.resolve(\"leveldb\").toFile) { db =>\n      sourceJarsToIndex.foreach { path =>\n        logger.info(s\"Indexing classpath entry $path...\")"
+  }
+]

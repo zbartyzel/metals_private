@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "39e242e0-f711-4d22-bf1d-464b40caa784",
+    "prId" : 1834,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1834",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f21119a5-33e8-41fe-a74b-9f2fd779b1e7",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "This was causing worksheet decorations not to work for clients that had `isHttpEnabled` set to true.",
+        "createdAt" : "2020-06-16T16:13:02Z",
+        "updatedAt" : "2020-06-16T17:07:03Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3086e42a12b5aab98de0d5e2e7b81434babbe611",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +185,189 @@  override def metalsPublishDecorations(\n      params: PublishDecorationsParams\n  ): Unit = {\n    if (clientConfig.isDecorationProvider) {\n      underlying.metalsPublishDecorations(params)"
+  }
+]

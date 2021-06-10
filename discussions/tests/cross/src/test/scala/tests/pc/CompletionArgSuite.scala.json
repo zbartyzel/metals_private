@@ -1,0 +1,178 @@
+[
+  {
+    "id" : "d0b2f285-616d-4d43-9604-ab8dbb7f0fb1",
+    "prId" : 2369,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2369",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "0775b62e-0fcf-4823-aaa5-1bae08ecebbb",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Should it not be just:\r\n```scala\r\n\"\"\"|argument: Int\r\n    |argument = : Int\r\n\"\"\".stripMargin\r\n```",
+        "createdAt" : "2021-01-06T18:19:38Z",
+        "updatedAt" : "2021-01-15T09:43:12Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "116cfee998582331a841318061e5d2439b74235e",
+    "line" : 149,
+    "diffHunk" : "@@ -1,1 +273,277 @@       |argument = argument : Int\n       |\"\"\".stripMargin,\n    topLines = Some(3),\n    compat = Map(\n      \"3.0\" ->"
+  },
+  {
+    "id" : "b1bfb8f5-3c5f-418d-af24-dbd0df0c5429",
+    "prId" : 2369,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2369",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b9a35dd2-adb6-4f47-9664-92ba480ed061",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This can be removed since we ignore the test.",
+        "createdAt" : "2021-01-14T15:41:12Z",
+        "updatedAt" : "2021-01-15T09:43:12Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "19deb235-2bfe-4db1-bc74-c4afdad81b6c",
+        "parentId" : "b9a35dd2-adb6-4f47-9664-92ba480ed061",
+        "authorId" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "body" : "Actually, this `compat` is for test `arg1` which is not ignored.\r\n(I'm also confused because GitHub folded the code  😅 )",
+        "createdAt" : "2021-01-15T08:53:12Z",
+        "updatedAt" : "2021-01-15T09:43:13Z",
+        "lastEditedBy" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5259ac75-1dc0-4272-9a41-3e82b6ca232d",
+        "parentId" : "b9a35dd2-adb6-4f47-9664-92ba480ed061",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Ach! Sorry about that!",
+        "createdAt" : "2021-01-15T09:39:17Z",
+        "updatedAt" : "2021-01-15T09:43:13Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "116cfee998582331a841318061e5d2439b74235e",
+    "line" : 28,
+    "diffHunk" : "@@ -1,1 +34,38 @@    topLines = Option(3),\n    compat = Map(\n      \"3.0\" ->\n        \"\"\"|message = : => Any\n           |\"\"\".stripMargin"
+  },
+  {
+    "id" : "6d964f48-c6c2-4530-ad24-96933d677db2",
+    "prId" : 2369,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2369",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "d6db7ed6-62c3-4a5e-bbb8-0abf167f2adb",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Compat section can be removed here also.",
+        "createdAt" : "2021-01-14T15:42:04Z",
+        "updatedAt" : "2021-01-15T09:43:13Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "641e4832-4ee4-401e-99ab-fd088e1af3e4",
+        "parentId" : "d6db7ed6-62c3-4a5e-bbb8-0abf167f2adb",
+        "authorId" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "body" : "It's for `arg5` not `arg4`",
+        "createdAt" : "2021-01-15T08:53:31Z",
+        "updatedAt" : "2021-01-15T09:43:13Z",
+        "lastEditedBy" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "71aa29c4-61fb-4f51-bd91-a43455d66b1a",
+        "parentId" : "d6db7ed6-62c3-4a5e-bbb8-0abf167f2adb",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "My brain filtered out the line numbers :sweat: ",
+        "createdAt" : "2021-01-15T09:39:58Z",
+        "updatedAt" : "2021-01-15T09:43:13Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "116cfee998582331a841318061e5d2439b74235e",
+    "line" : 78,
+    "diffHunk" : "@@ -1,1 +120,124 @@       |\"\"\".stripMargin,\n    topLines = Option(4),\n    compat = Map(\n      \"3.0\" ->\n        \"\"\"|age = : Int"
+  },
+  {
+    "id" : "79517a73-027c-4dcf-aade-6031b731b57e",
+    "prId" : 2369,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2369",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ca6648ef-73ef-4d26-bdb0-fd33e299da25",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "If the test case is ignored we can remove the compat section.",
+        "createdAt" : "2021-01-14T15:43:07Z",
+        "updatedAt" : "2021-01-15T09:43:13Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6fde6991-8947-465a-bbe8-ee7306ac210c",
+        "parentId" : "ca6648ef-73ef-4d26-bdb0-fd33e299da25",
+        "authorId" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "body" : "This is for `arg14` not for `arg9`",
+        "createdAt" : "2021-01-15T08:53:54Z",
+        "updatedAt" : "2021-01-15T09:43:13Z",
+        "lastEditedBy" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "116cfee998582331a841318061e5d2439b74235e",
+    "line" : 136,
+    "diffHunk" : "@@ -1,1 +254,258 @@       |isResourceFile = isLargeBanana : Boolean\n       |\"\"\".stripMargin,\n    compat = Map(\n      \"3.0\" ->\n        \"\"\"|isResourceFile = : Boolean"
+  },
+  {
+    "id" : "3b3c91e5-973e-4b7f-897c-1e206b0be924",
+    "prId" : 827,
+    "prUrl" : "https://github.com/scalameta/metals/pull/827",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "a2dda5fb-0765-427d-a6a0-584a75692904",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I am concerned we're trying to be too smart in this particular case. I think it's fine to complete only one thing at a time, for example there may be variables in scope that start with `arg*`.",
+        "createdAt" : "2019-08-25T20:14:59Z",
+        "updatedAt" : "2019-08-28T16:34:18Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9faf7520-5722-4484-a3f1-3fb7a9c7a517",
+        "parentId" : "a2dda5fb-0765-427d-a6a0-584a75692904",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "We first check for values with the name, then for named arguments, named arguments with values and the autocomplete is last.\r\n\r\nI think that's the best option and is compatible with the current behaviour. Wouldn't cause users to need to scroll more then now to use the current capabilities.",
+        "createdAt" : "2019-08-28T11:20:03Z",
+        "updatedAt" : "2019-08-28T16:34:18Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ab71afec148a55c6f3f1f6f237920e8bec11622e",
+    "line" : 54,
+    "diffHunk" : "@@ -1,1 +225,229 @@        |\"\"\".stripMargin,\n    \"\"\"|argument = : Int\n       |argument = number : Int\n       |argument = number2 : Int\n       |argument = number4 : Int"
+  }
+]

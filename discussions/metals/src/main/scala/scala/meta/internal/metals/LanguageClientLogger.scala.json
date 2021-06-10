@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "c9b26ab7-1968-4797-9974-ba8b555ea34f",
+    "prId" : 2275,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2275",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "e01bd0bf-3e98-4f65-b70a-fcb54cfd4672",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Small change needed here. The signature for `write` has changed to need `outputFormat`.",
+        "createdAt" : "2020-12-01T07:30:49Z",
+        "updatedAt" : "2020-12-01T07:30:49Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ef3a02fab4e9580d88a9dddc7e13a790e6699c05",
+    "line" : 16,
+    "diffHunk" : "@@ -1,1 +16,20 @@      record: LogRecord[M],\n      output: LogOutput,\n      outputFormat: OutputFormat\n  ): Unit = {\n    languageClient.foreach { client =>"
+  }
+]

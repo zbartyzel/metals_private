@@ -1,0 +1,79 @@
+[
+  {
+    "id" : "1329dd20-9d6b-4b72-afc0-7a44fb96e5cc",
+    "prId" : 2668,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2668",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b1343b89-9f2d-474b-aa41-580ae53defe4",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "We should be able to get the build target from `DebugProxy` so that when stack trace is printed in console we can make sure the proper file is picked up. This probably require additional `definitionProvider.fromSymbol` that takes an Option[BuildTagetId], but maybe we can do a follow up issue about it? This should not be a big deal really",
+        "createdAt" : "2021-04-22T11:43:56Z",
+        "updatedAt" : "2021-04-23T16:07:37Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d7d555bf-1177-487a-9b59-d7406bb45b43",
+        "parentId" : "b1343b89-9f2d-474b-aa41-580ae53defe4",
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "There is not enough data currently - only stacktrace as a string. I will mention it in the issue for step 2",
+        "createdAt" : "2021-04-23T16:09:58Z",
+        "updatedAt" : "2021-04-23T16:09:59Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3fcc251f9126b13a9372df15273d675aff8f745",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +69,73 @@  def fileLocationFromLine(line: String): Option[l.Location] = {\n    def findLocationForSymbol(s: String): Option[Location] =\n      definitionProvider.fromSymbol(s, None).asScala.headOption\n\n    for {"
+  },
+  {
+    "id" : "ae183c9b-fcba-4899-b308-b27df213f8f0",
+    "prId" : 1966,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1966",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "9afc98a6-cf33-47e9-a5b6-d69ac69af6b2",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I don't think you can properly get symbol from stacktrace and the logic will always be flaky. Jumping to the line is enough. For example:\r\n```\r\nException in thread \"main\" java.lang.Exception\r\n\tat Main$.$anonfun$main$1(Main.scala:13)\r\n\tat Main$.$anonfun$main$1$adapted(Main.scala:10)\r\n\tat scala.collection.immutable.Range.foreach(Range.scala:190)\r\n\tat Main$.main(Main.scala:10)\r\n\tat Main.main(Main.scala)\r\n```\r\n\r\nIt's not possible to map the full symbol `Main$.$anonfun$main$1` to anything similar in sematicDB. We can only map a part of it, which will make the logic flaky. I would drop going to definition.",
+        "createdAt" : "2020-08-14T16:33:47Z",
+        "updatedAt" : "2020-08-20T09:03:33Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6d5de506-4952-40f2-9f30-3d74d7bd3654",
+        "parentId" : "9afc98a6-cf33-47e9-a5b6-d69ac69af6b2",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Although we could do `toplevelFromLine` and just get the toplevel via:\r\n```scala\r\nprivate def getSymbolFromLine(line: String): String = {\r\n  val toplevel = line.substring(line.indexOf(\"at \") + 3, line.indexOf(\".\"))\r\n  val descriptor = if(toplevel.endsWith(\"$\")) List(Descriptor.Term) else List(Descriptor.Type)\r\n  BuildTargetClasses.symbolFromClassName(toplevel.stripSuffix(\"$\"), descriptor)\r\n}\r\n```\r\n\r\nWe might need to move the method from BuildTargetClasses if it makes sense. It's in the class, so some modification will be needed.",
+        "createdAt" : "2020-08-17T17:39:11Z",
+        "updatedAt" : "2020-08-20T09:03:33Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3162e207-f602-4de5-a3ce-9a5801b127d3",
+        "parentId" : "9afc98a6-cf33-47e9-a5b6-d69ac69af6b2",
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "okay dropping",
+        "createdAt" : "2020-08-17T17:58:31Z",
+        "updatedAt" : "2020-08-20T09:03:33Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "6f7e1db4a0dcdfe6522e0116b20085a2f3f04584",
+    "line" : 138,
+    "diffHunk" : "@@ -1,1 +136,140 @@\n  private def symbolFromLine(line: String): String = {\n    line.substring(line.indexOf(\"at \") + 3, line.indexOf(\"(\"))\n  }\n"
+  }
+]

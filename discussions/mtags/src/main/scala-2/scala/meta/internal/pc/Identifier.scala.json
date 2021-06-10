@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "ebe70b08-d893-4c0e-a5f6-033273da8ecd",
+    "prId" : 2617,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2617",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "a160e1a1-0253-4365-b715-96f82a7d108a",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "I've seen this in a couple places where it prefaces with an empty string. What's the reasoning for that?",
+        "createdAt" : "2021-03-17T06:02:52Z",
+        "updatedAt" : "2021-03-17T06:03:08Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "fdee5fb7-c26c-4b77-9e9e-256afd225e7f",
+        "parentId" : "a160e1a1-0253-4365-b715-96f82a7d108a",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I was also confused, but it seems the reason is https://scalacenter.github.io/scala-3-migration-guide/docs/incompatibilities/dropped-features.html#any2stringadd-conversion",
+        "createdAt" : "2021-03-17T10:01:49Z",
+        "updatedAt" : "2021-03-17T10:01:50Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9a01616c-59d2-4602-891f-4da2883093f0",
+        "parentId" : "a160e1a1-0253-4365-b715-96f82a7d108a",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "huh, alright, thanks for linking that. I hope this doesn't become confusing for someone in the future that comes across this and wonders why there is a `\"\"` prefacing it. I can see myself seeing that just removing it 😆 ",
+        "createdAt" : "2021-03-17T10:06:46Z",
+        "updatedAt" : "2021-03-17T10:06:46Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c237b6c3-e709-4fc4-b8b6-4a27be7df304",
+        "parentId" : "a160e1a1-0253-4365-b715-96f82a7d108a",
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "Hm. I've just realized that this line might look less weird if at least the first backtick was a type of `String`:\r\n```scala\r\nelse if (needsBacktick(s)) \"`\"+ s + \"`\"`\r\n```",
+        "createdAt" : "2021-03-17T10:15:55Z",
+        "updatedAt" : "2021-03-17T10:15:55Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "987b17ae-e4b4-4edb-b8d0-15dcac39836f",
+        "parentId" : "a160e1a1-0253-4365-b715-96f82a7d108a",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "ach yes, I didn't notice the comments when merging, sorry!",
+        "createdAt" : "2021-03-17T10:36:52Z",
+        "updatedAt" : "2021-03-17T10:36:52Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "caddf0dae5ced3ffc99eb4bb39e603fa2b190911",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +63,67 @@    if (s.isEmpty) \"``\"\n    else if (s(0) == '`' && s.last == '`') s\n    else if (needsBacktick(s)) \"\" + ('`') + s + '`'\n    else s\n  }"
+  }
+]

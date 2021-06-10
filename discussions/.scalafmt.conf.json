@@ -1,0 +1,90 @@
+[
+  {
+    "id" : "c5653d7e-aae7-4c32-bc16-4da976ba6769",
+    "prId" : 2587,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2587",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "c0e60744-6ae7-47b6-9f2b-a4d2b8d4d15a",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Ignored this for now, so that we can format those directories manually using scala3 dialect. There is still a bunch of work on scalafmt to make it all work out of the box.",
+        "createdAt" : "2021-03-10T13:10:16Z",
+        "updatedAt" : "2021-03-10T13:17:40Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ebfb8fb30084738578f72985974d164332784a8d",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +15,19 @@  \"metals-bench/src/main/resources\"\n  \"mtags/src/main/scala-3.0/\"\n  \"mtags/src/main/scala-3.0.0-M1/\"\n  \"mtags/src/main/scala-3.0.0-M2/\"\n  \"mtags/src/main/scala-3.0.0-M3/\""
+  },
+  {
+    "id" : "06c6ef50-e578-4a92-975a-99fe27c6cd0c",
+    "prId" : 429,
+    "prUrl" : "https://github.com/scalameta/metals/pull/429",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "0a49726a-cb7d-4bd3-a32a-c486e86a77e3",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "not related, but this change is necessary for my Scalafmt VSCode extension to work (due to config parser differences in JS)",
+        "createdAt" : "2018-12-19T18:17:43Z",
+        "updatedAt" : "2018-12-22T11:11:14Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ec1161fecfaec6824cba1eb2a21806f972c8f67f",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +15,19 @@  \"test-workspace\"\n  \"tests/unit/src/test/resources\"\n  \"sbt-metals/src/sbt-test\"\n]"
+  },
+  {
+    "id" : "dd3bf628-af12-418f-96a1-a9592fae39ed",
+    "prId" : 429,
+    "prUrl" : "https://github.com/scalameta/metals/pull/429",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "61442fb0-7835-4217-b3af-310033f8aba3",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "the `scalafmt` binary in the repo uses v1.3 iirc, we should upgrade it as well",
+        "createdAt" : "2018-12-22T10:23:41Z",
+        "updatedAt" : "2018-12-22T11:11:14Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f82a558c-675e-44b5-afda-b35c09a83686",
+        "parentId" : "61442fb0-7835-4217-b3af-310033f8aba3",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Ah, I assumed we were on 1.6 because of the `trailingCommas` setting.\r\nI'll double check",
+        "createdAt" : "2018-12-22T11:02:42Z",
+        "updatedAt" : "2018-12-22T11:11:14Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7d99e7a4-4a6a-47c3-93ef-7fa00436c6e6",
+        "parentId" : "61442fb0-7835-4217-b3af-310033f8aba3",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "We were indeed on 1.3.0. I've updated the binary to 1.6.0-RC4",
+        "createdAt" : "2018-12-22T11:11:46Z",
+        "updatedAt" : "2018-12-22T11:11:46Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ec1161fecfaec6824cba1eb2a21806f972c8f67f",
+    "line" : 1,
+    "diffHunk" : "@@ -1,1 +-1,3 @@version = \"1.6.0-RC4\"\nproject.git = true\nalign = none"
+  }
+]

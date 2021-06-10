@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "3e0bfc74-5586-4de5-8ae5-0162369330e5",
+    "prId" : 137,
+    "prUrl" : "https://github.com/scalameta/metals/pull/137",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "9addb1ac-caa2-4dc6-b925-1e12934448eb",
+        "parentId" : null,
+        "authorId" : "ab0ad1d5-d2b5-4abb-aa0d-3dd38072269d",
+        "body" : "I was exactly looking for this, but can this be enable without touching any of the `sbt` files?",
+        "createdAt" : "2017-12-18T20:54:53Z",
+        "updatedAt" : "2017-12-18T20:59:48Z",
+        "lastEditedBy" : "ab0ad1d5-d2b5-4abb-aa0d-3dd38072269d",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b0ace544-0da2-41b9-b532-3dc9757b6f81",
+        "parentId" : "9addb1ac-caa2-4dc6-b925-1e12934448eb",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Yes, this works without touching any sbt files.",
+        "createdAt" : "2017-12-18T20:59:19Z",
+        "updatedAt" : "2017-12-18T20:59:48Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c0a22d5b4b0bec14b8334b06379a15781329cd9e",
+    "line" : 22,
+    "diffHunk" : "@@ -1,1 +43,47 @@```\n\nThe second option is to enable `semanticdb-scalac` only for an active sbt session by running `semanticdbEnable` from the sbt shell.\n```scala\n$ sbt"
+  },
+  {
+    "id" : "49f24a5e-666f-41ec-a13f-730cabb77c2c",
+    "prId" : 79,
+    "prUrl" : "https://github.com/scalameta/metals/pull/79",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "178d6aaa-ce45-4a24-862f-4ecffb1dee4a",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Should we mention addCompilerPlugin(semanticdb)? It's currently required for definitions.",
+        "createdAt" : "2017-11-30T21:24:15Z",
+        "updatedAt" : "2017-12-01T15:49:11Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "66efa5a6-495c-46ba-bd2b-215d185ffc67",
+        "parentId" : "178d6aaa-ce45-4a24-862f-4ecffb1dee4a",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "ah, yes, totally forgot about that, thanks",
+        "createdAt" : "2017-11-30T21:31:36Z",
+        "updatedAt" : "2017-12-01T15:49:11Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a2b2357bcf2208d48b22765e74dc151800c0218d",
+    "line" : 59,
+    "diffHunk" : "@@ -1,1 +57,61 @@\nFinally, since most features currently rely on a successful compilation step, make sure you incrementally\ncompile your project by running `~compile` in `sbt`."
+  }
+]

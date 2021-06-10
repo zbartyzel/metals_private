@@ -1,0 +1,79 @@
+[
+  {
+    "id" : "d024ab14-cf8f-41bc-91c5-7168f47f242e",
+    "prId" : 2825,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2825",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "fced4d5a-6d52-45d1-b134-2fad52777cac",
+        "parentId" : null,
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "A nitpick: I know that in scala2 it's done in a similar way but maybe we can avoid having this non a real type instance?\r\n\r\nI mean that we can introduce smth like and use it as a resulting type of `shortType`\r\n```\r\nsealed trait TypeRepr\r\nobject TypeRepr {\r\n  case class Real(tpe: Type) extends TypeRepr\r\n  case class Shortened(fullName: String) extends TypeRepr\r\n}\r\n```",
+        "createdAt" : "2021-05-31T16:39:36Z",
+        "updatedAt" : "2021-05-31T17:47:17Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f4cdb415-d823-493e-8659-b0e656c51325",
+        "parentId" : "fced4d5a-6d52-45d1-b134-2fad52777cac",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "It would be best to probably just print the types on the go, but that is rather complex. Anyway, looks like a good idea, I will see if I can use it here.",
+        "createdAt" : "2021-06-01T15:59:49Z",
+        "updatedAt" : "2021-06-01T15:59:50Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "eee33f48-d492-405a-ba85-5cc42146cbe1",
+        "parentId" : "fced4d5a-6d52-45d1-b134-2fad52777cac",
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "Cool but anyway - feel free to ignore that. It's more a thing of taste and as it works for scala2 it shouldn't introduce any significant problem.",
+        "createdAt" : "2021-06-01T20:30:59Z",
+        "updatedAt" : "2021-06-01T20:30:59Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c0b19136-785a-4ede-aa7d-054497ced04f",
+        "parentId" : "fced4d5a-6d52-45d1-b134-2fad52777cac",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Ok, let's leave it for now, we might need to work on it anyway in the future.",
+        "createdAt" : "2021-06-09T18:25:20Z",
+        "updatedAt" : "2021-06-09T18:25:20Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "4c925bb564b537775be70666582c8e6f17d58fd2",
+    "line" : 57,
+    "diffHunk" : "@@ -1,1 +90,94 @@  def computeHash(bind: Binders) = hash\n  override def toString = name\n}\n\n/**"
+  },
+  {
+    "id" : "6c5b9713-c64e-4ddc-8de7-ebb8820774d6",
+    "prId" : 2637,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2637",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "1a685b20-6661-4068-b958-296751eddd29",
+        "parentId" : null,
+        "authorId" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "body" : "to here",
+        "createdAt" : "2021-03-28T16:01:14Z",
+        "updatedAt" : "2021-04-20T11:55:47Z",
+        "lastEditedBy" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cb0dd9260bcbd1c2b38bcd118ac763772baf4a4c",
+    "line" : 20,
+    "diffHunk" : "@@ -1,1 +18,22 @@  def lookupSymbol(short: ShortName): Type = {\n    context.findRef(short.name)\n  }\n\n  def tryShortenName(short: ShortName)(using Context): Boolean = {"
+  }
+]

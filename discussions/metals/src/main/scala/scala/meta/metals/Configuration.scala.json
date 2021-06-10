@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "7e571ae7-75c3-492a-8f69-ff08b73fd86b",
+    "prId" : 236,
+    "prUrl" : "https://github.com/scalameta/metals/pull/236",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "fba80ed3-ef62-4827-b517-a637873eab0d",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "can you make this change also on the vscode extension?",
+        "createdAt" : "2018-04-04T08:11:20Z",
+        "updatedAt" : "2018-04-04T08:11:20Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2af184d5-6eff-4f1c-b9fd-647c1885bd4b",
+        "parentId" : "fba80ed3-ef62-4827-b517-a637873eab0d",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "ah, nvm, it's already on!",
+        "createdAt" : "2018-04-04T08:11:39Z",
+        "updatedAt" : "2018-04-04T08:11:39Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1d665dc7b442fd5fa732042e9aa737bb0a7d2888",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +39,43 @@  @JsonCodec case class ScalacDiagnostics(enabled: Boolean = false)\n\n  @JsonCodec case class Hover(enabled: Boolean = true)\n  @JsonCodec case class Highlight(enabled: Boolean = false)\n  @JsonCodec case class Rename(enabled: Boolean = false)"
+  },
+  {
+    "id" : "5631a5b2-e613-4032-9428-02f032b87404",
+    "prId" : 204,
+    "prUrl" : "https://github.com/scalameta/metals/pull/204",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "afc1c5d2-67d1-4a3d-86d6-b9f350f74ea2",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Might be nice to add a `def enabled: Boolean = completions.enabled || diagnostics.enabled` ",
+        "createdAt" : "2018-03-26T13:44:53Z",
+        "updatedAt" : "2018-03-26T21:54:32Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5dcf005e-8fac-417c-aabc-bd7848a72d31",
+        "parentId" : "afc1c5d2-67d1-4a3d-86d6-b9f350f74ea2",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "Added in 15398a1",
+        "createdAt" : "2018-03-26T21:54:51Z",
+        "updatedAt" : "2018-03-26T21:54:52Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "15398a10a92978b2096e501f8c36977849adc782",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +30,34 @@      command: String = \"test:compile\"\n  )\n  @JsonCodec case class Scalac(\n      completions: ScalacCompletions = ScalacCompletions(),\n      diagnostics: ScalacDiagnostics = ScalacDiagnostics(),"
+  }
+]

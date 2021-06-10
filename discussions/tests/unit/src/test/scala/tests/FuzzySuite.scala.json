@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "aec0d8ad-8a91-4821-867f-dceaa54a1329",
+    "prId" : 498,
+    "prUrl" : "https://github.com/scalameta/metals/pull/498",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "2afef64c-bdc7-478b-8347-773a1760e76a",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "🎉 ",
+        "createdAt" : "2019-01-25T10:30:47Z",
+        "updatedAt" : "2019-01-25T10:30:57Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "4bd614a412b00eb78ec7c8d6030d85b9dd3e7c5a",
+    "line" : 38,
+    "diffHunk" : "@@ -1,1 +44,48 @@  checkOK(\"coll.TrieMap\", \"scala/collection/concurrent/TrieMap.\")\n  checkOK(\"m.Pos.\", \"scala/meta/Position.Range#\")\n  checkNO(\"m.Posi.\", \"scala/meta/Position.\")\n\n  def checkWords(in: String, expected: String): Unit = {"
+  }
+]

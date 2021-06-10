@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "1d365cf6-4e6e-4dfd-8372-a90a87930900",
+    "prId" : 2288,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2288",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "e89ca20a-c24f-4b82-9e80-5db327ce1513",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Does anyone else find it ironic that we say our tests in `slow` are the quickets tests to run?",
+        "createdAt" : "2020-12-02T17:44:02Z",
+        "updatedAt" : "2020-12-02T17:58:58Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "67b84d42-87eb-4c0c-811f-0175c49cd784",
+        "parentId" : "e89ca20a-c24f-4b82-9e80-5db327ce1513",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : " I think that comment was wrong really, it's for the cross test, which are the quickest to run, not sure why we said `slow` before :O",
+        "createdAt" : "2020-12-02T17:50:29Z",
+        "updatedAt" : "2020-12-02T17:58:58Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "655dfd3dec22e8d0b611a62945717b26487d3de5",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +85,89 @@# run slow integration tests, takes several minutes.\n> slow/test\n# run presentation compiler tests, these are the quickest tests to run.\n> cross/test\n# run presentation compiler tests for all Scala versions."
+  },
+  {
+    "id" : "4ee8f839-f7cd-4445-b60b-b872ac4151dd",
+    "prId" : 370,
+    "prUrl" : "https://github.com/scalameta/metals/pull/370",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b4d95c19-b25a-40ab-8cca-215d403b0bbc",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "maybe add metals-vscode to the related projects?",
+        "createdAt" : "2018-12-02T10:44:26Z",
+        "updatedAt" : "2018-12-02T13:58:41Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "37907b1e-0de7-4071-8db1-9a27133fec3b",
+        "parentId" : "b4d95c19-b25a-40ab-8cca-215d403b0bbc",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Good idea!",
+        "createdAt" : "2018-12-02T13:58:59Z",
+        "updatedAt" : "2018-12-02T13:58:59Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "965f0a75947bae0c87b07abc268c424850dbc53c",
+    "line" : 30,
+    "diffHunk" : "@@ -1,1 +27,31 @@- `test-workspace` demo project for manually testing Metals through an editor.\n\n## Related projects\n\nThe improvement you are looking to contribute may belong in a separate"
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "id" : "9507f10b-247a-4d4f-91b5-b08bb6625165",
+    "prId" : 1534,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1534",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "9eee83bc-51c3-4885-85c8-3926980f0435",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : ":+ new TestTransform ?",
+        "createdAt" : "2020-03-25T13:52:25Z",
+        "updatedAt" : "2020-03-25T13:55:15Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2aba61ba-a32b-4ca6-8fc3-86fdca97d8ec",
+        "parentId" : "9eee83bc-51c3-4885-85c8-3926980f0435",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "But this is a list of the new `FlakyWindows` and `munitFlakyTransform`?",
+        "createdAt" : "2020-03-25T13:54:19Z",
+        "updatedAt" : "2020-03-25T13:55:15Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1d515b48-56c8-49ca-8002-52f52a816e82",
+        "parentId" : "9eee83bc-51c3-4885-85c8-3926980f0435",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Ah, I hadn’t noticed. Sorry",
+        "createdAt" : "2020-03-25T13:55:30Z",
+        "updatedAt" : "2020-03-25T13:55:30Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ef5d4b7c53eb3cc408ce35d7c1b7223026636ccf",
+    "line" : 29,
+    "diffHunk" : "@@ -1,1 +37,41 @@\n  override def munitTestTransforms: List[TestTransform] =\n    super.munitTestTransforms ++ List(\n      new TestTransform(\n        \"FlakyWindows\","
+  },
+  {
+    "id" : "3a269735-8cc7-4dc3-93b3-7fe86753e8b0",
+    "prId" : 1523,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1523",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "52d7e310-6b95-42a0-9bec-7f7f966cd954",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Changed this to startsWith, so that we can use \"0.\" -> for Scala 3. We can also just add a condition for major version, opinions?",
+        "createdAt" : "2020-03-25T22:12:05Z",
+        "updatedAt" : "2020-04-15T13:50:25Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8e15b8cc-c8cb-4421-9aa1-09b3b6830fdb",
+        "parentId" : "52d7e310-6b95-42a0-9bec-7f7f966cd954",
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "startsWith looks okay, (collect + headOption == collectFirst)",
+        "createdAt" : "2020-04-01T08:41:38Z",
+        "updatedAt" : "2020-04-15T13:50:25Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "75882df1-1fca-41c6-b138-ab35df7d2b44",
+        "parentId" : "52d7e310-6b95-42a0-9bec-7f7f966cd954",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Thanks, fixed!",
+        "createdAt" : "2020-04-06T17:59:58Z",
+        "updatedAt" : "2020-04-15T13:50:25Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1142490703f832961ac0df1debd14b4f3b12ce7d",
+    "line" : 42,
+    "diffHunk" : "@@ -1,1 +53,57 @@    val postProcess = compatProcess\n      .collectFirst {\n        case (ver, process) if scalaVersion.startsWith(ver) => process\n      }\n      .getOrElse(identity[String] _)"
+  },
+  {
+    "id" : "1a1fe02f-017e-4851-87fa-99d2c7113212",
+    "prId" : 1277,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1277",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "60963039-13e0-4783-8d12-aea3d2a2f4eb",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "s/flak/flaky",
+        "createdAt" : "2020-01-26T04:11:38Z",
+        "updatedAt" : "2020-01-26T10:34:42Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "49287d98409399c613ea481aeb08529f827e5982",
+    "line" : 173,
+    "diffHunk" : "@@ -1,1 +33,37 @@  override def munitTimeout: Duration = Duration(\"10min\")\n\n  // NOTE(olafur): always ignore flak test failures.\n  override def munitFlakyOK = true\n  override def munitRunTest("
+  }
+]

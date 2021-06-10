@@ -1,0 +1,233 @@
+[
+  {
+    "id" : "be837bc6-bf91-44f5-93de-b987a2a3985a",
+    "prId" : 2668,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2668",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "83c3a510-2a7f-443c-9acf-8fa745253d9c",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "I wish we had a `nonEmptySet` to use here.",
+        "createdAt" : "2021-04-09T13:56:34Z",
+        "updatedAt" : "2021-04-23T16:07:36Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f3bc8931-207d-4ef7-9057-ae718d74fb13",
+        "parentId" : "83c3a510-2a7f-443c-9acf-8fa745253d9c",
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "I wish the same but as it used in the index too it's required to implement it without additional mem-overhead.\r\nI've seen such implementation in [cats](https://github.com/typelevel/cats/blob/main/core/src/main/scala/cats/data/NonEmptySet.scala) but I don't know if it worths copy-paste their implementation for these two cases.\r\n",
+        "createdAt" : "2021-04-12T13:47:23Z",
+        "updatedAt" : "2021-04-23T16:07:36Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c969fb24-a43a-4635-85e4-5a59860d8b76",
+        "parentId" : "83c3a510-2a7f-443c-9acf-8fa745253d9c",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Ha, for sure not worth it. Was just thinking out loud :)",
+        "createdAt" : "2021-04-17T13:53:49Z",
+        "updatedAt" : "2021-04-23T16:07:36Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3fcc251f9126b13a9372df15273d675aff8f745",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +50,54 @@    TrieMap.empty[BuildTargetIdentifier, util.Set[AbsolutePath]]\n  private val inverseDependencySources =\n    TrieMap.empty[AbsolutePath, Set[BuildTargetIdentifier]]\n  private val isSourceRoot =\n    ConcurrentHashSet.empty[AbsolutePath]"
+  },
+  {
+    "id" : "b8e583a8-c798-4b1f-84fe-80945a54943f",
+    "prId" : 1865,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1865",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "a6bb98b0-9b12-46c7-9dbd-2879f959b304",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Do we return the right sbt target for the Scala files located in `project` directories? I think if Bloop doesn't provide use with proper source roots we could add a custom logic for resolving target by source file in `inverseSources`. If no build target is found we can look if this file should belong to an sbt build target. What do you think?",
+        "createdAt" : "2020-07-27T13:01:46Z",
+        "updatedAt" : "2020-07-31T11:55:17Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "888395dc-00da-49ac-bf23-b2831d03d60a",
+        "parentId" : "a6bb98b0-9b12-46c7-9dbd-2879f959b304",
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "This method is only for `.*sbt` files.\r\nFor `*.scala` files from meta build `inverseSources` is used as usual.\r\n\r\nI think when we start implementing compilation for `.*sbt` files it would be better to move this logic into `inverseSources` method. But for now, I'm not sure if there is a need for that.\r\n",
+        "createdAt" : "2020-07-27T17:24:04Z",
+        "updatedAt" : "2020-07-31T11:55:17Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1ecc085ce9f65d042e2055d19fd627c5d49e7918",
+    "line" : 72,
+    "diffHunk" : "@@ -1,1 +246,250 @@   *   because `*.sbt` aren't included in `sourceFiles` set\n   */\n  def sbtBuildScalaTarget(file: AbsolutePath): Option[ScalaTarget] = {\n    val targetMetaBuildDir = file.parent.resolve(\"project\")\n    buildTargetInfo.values"
+  },
+  {
+    "id" : "789d8945-ed92-4ff8-ac58-f56f3ce687ff",
+    "prId" : 1781,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1781",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "c00f811d-24f8-4ef3-9ef9-b322e0207dc6",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "So I _think_ I understand what is going on here, but why when used up above do we so a `sortBy` and below we use `max`?. Also, what's the benefit of using binary shift operators here? I've actually never came across these in the wild before 😬 ",
+        "createdAt" : "2020-05-27T12:05:48Z",
+        "updatedAt" : "2020-05-27T12:07:41Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7ae759c0-887c-42d8-9204-d40874924b5f",
+        "parentId" : "c00f811d-24f8-4ef3-9ef9-b322e0207dc6",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "We are using maxBy in a scenario that we know the list is not empty and it produces a single element. `sortBy` still produces a list, which is useful in the other scenario.\r\n\r\nBinary shift is I think just an easy way to introduce priority.",
+        "createdAt" : "2020-05-27T12:16:58Z",
+        "updatedAt" : "2020-05-27T12:16:58Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a492098b-7f47-4f2f-bcbd-a071054f6839",
+        "parentId" : "c00f811d-24f8-4ef3-9ef9-b322e0207dc6",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Sounds good. Thanks for explaining.",
+        "createdAt" : "2020-05-27T12:29:11Z",
+        "updatedAt" : "2020-05-27T12:29:11Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "376535f14d761d5513fd67b015e9ab10588f0ac7",
+    "line" : 23,
+    "diffHunk" : "@@ -1,1 +72,76 @@\n      score\n  }\n\n  def setTables(newTables: Tables): Unit = {"
+  },
+  {
+    "id" : "16ffe7dc-29a8-4520-a2ec-77d17527e84f",
+    "prId" : 1145,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1145",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "0dbda2b3-e02a-4022-9dae-09631030b6e6",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "`.toOption`?",
+        "createdAt" : "2019-12-04T17:28:38Z",
+        "updatedAt" : "2019-12-05T11:14:30Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e3c50204-cc8a-45a7-a93e-001bb2111b63",
+        "parentId" : "0dbda2b3-e02a-4022-9dae-09631030b6e6",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "This code is unchanged from before, it just moved. I think `toOption.flatten` is a valid refactoring but it's unrelated to this PR.",
+        "createdAt" : "2019-12-05T10:26:24Z",
+        "updatedAt" : "2019-12-05T11:14:30Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c032fa899f1747d53cf2025b6e1cf03227b19980",
+    "line" : 54,
+    "diffHunk" : "@@ -1,1 +254,258 @@  ): Option[BuildTargetIdentifier] = {\n    if (source.isDependencySource(workspace)) {\n      Try(unsafeInferBuildTarget(source)).getOrElse(None)\n    } else {\n      val fromInference ="
+  },
+  {
+    "id" : "481cd2bb-838e-4037-a599-ab8859888878",
+    "prId" : 1145,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1145",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "7ad087f6-da60-45cf-9195-39b89cc4ebb5",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Same for buildTargetReference?",
+        "createdAt" : "2019-12-04T18:27:21Z",
+        "updatedAt" : "2019-12-05T11:14:30Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "bbbdaa32-6fc0-4f3e-9296-4c796e209ff3",
+        "parentId" : "7ad087f6-da60-45cf-9195-39b89cc4ebb5",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Nice catch! Fixed.",
+        "createdAt" : "2019-12-05T11:14:08Z",
+        "updatedAt" : "2019-12-05T11:14:30Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c032fa899f1747d53cf2025b6e1cf03227b19980",
+    "line" : 15,
+    "diffHunk" : "@@ -1,1 +62,66 @@    buildTargetSources.clear()\n    inverseDependencySources.clear()\n    isSourceRoot.clear()\n    buildTargetInference.clear()\n  }"
+  },
+  {
+    "id" : "7b9784db-623f-49d1-b665-d8164a1a9fe5",
+    "prId" : 948,
+    "prUrl" : "https://github.com/scalameta/metals/pull/948",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "2fb4f75c-1676-45ed-bfbd-84375367420e",
+        "parentId" : null,
+        "authorId" : "1977d0df-25a0-4fd9-a417-470eafe55f98",
+        "body" : "Nice👌",
+        "createdAt" : "2019-09-27T10:31:57Z",
+        "updatedAt" : "2019-09-27T10:32:40Z",
+        "lastEditedBy" : "1977d0df-25a0-4fd9-a417-470eafe55f98",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "468f3ce838bfa1ab613b941981f8aefa06619232",
+    "line" : 39,
+    "diffHunk" : "@@ -1,1 +205,209 @@          t => ScalaVersions.isSupportedScalaVersion(t.getScalaVersion())\n        )\n        if (isSupportedScalaVersion) score <<= 2\n\n        val isJVM = scalacOptions(t).exists(_.isJVM)"
+  },
+  {
+    "id" : "8333c373-0ea5-4f7a-82f7-0783442187f1",
+    "prId" : 857,
+    "prUrl" : "https://github.com/scalameta/metals/pull/857",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "2d6ffbfe-10b1-431e-b072-e8c97a2d0844",
+        "parentId" : null,
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "I was thinking about renaming the `sourceItems` to just `sources` whenever we find it ;)",
+        "createdAt" : "2019-08-08T06:15:50Z",
+        "updatedAt" : "2019-08-08T16:25:02Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0dd3eede29c603619dd79001b736615bb5743729",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +32,36 @@  }\n  private var tables: Option[Tables] = None\n  private val sourceItemsToBuildTarget =\n    TrieMap.empty[AbsolutePath, ConcurrentLinkedQueue[BuildTargetIdentifier]]\n  private val buildTargetInfo ="
+  }
+]

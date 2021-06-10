@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "f80f1c66-aff2-4eed-99d2-cd7cf4374702",
+    "prId" : 2121,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2121",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "6a4b3252-1915-4a3d-997b-24bbdd583a58",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "This is a super nitpick, but I sort of feel like these should be capitalized.",
+        "createdAt" : "2020-10-03T18:32:29Z",
+        "updatedAt" : "2020-10-03T18:32:30Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b3614f451091ada666284ee702b11b64a4ca69bd",
+    "line" : 18,
+    "diffHunk" : "@@ -1,1 +67,71 @@object PopupChoiceReset {\n  final val BuildTool = \"Build tool selection\"\n  final val BuildImport = \"Build import\"\n}"
+  }
+]

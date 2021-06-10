@@ -1,0 +1,46 @@
+[
+  {
+    "id" : "6c7654b4-7458-4473-b4da-b5a61a05c7ef",
+    "prId" : 155,
+    "prUrl" : "https://github.com/scalameta/metals/pull/155",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "9e3a19c6-0556-4c83-b29d-39ace09f48df",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "I've also renamed `DidChangeWatchedFiles` to `DidChangeWatchedFilesParams` for consistency.",
+        "createdAt" : "2017-12-22T23:28:09Z",
+        "updatedAt" : "2017-12-23T10:25:08Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e4fee53d524b6b2ef8bcc79da80bace874e50c86",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +40,44 @@    case DidSaveTextDocumentParams(td) => onSaveTextDocument(td)\n    case DidCloseTextDocumentParams(td) => onCloseTextDocument(td)\n    case DidChangeWatchedFilesParams(changes) => onChangeWatchedFiles(changes)\n    case DidChangeConfigurationParams(settings) => onChangeConfiguration(settings)\n    case e => logger.error(s\"Unknown notification $e\")"
+  },
+  {
+    "id" : "0af347fb-dd18-4580-a133-1e682cdf7f5e",
+    "prId" : 57,
+    "prUrl" : "https://github.com/scalameta/metals/pull/57",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "815c2c04-76c5-4957-9f52-87c8581b00cc",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "it's been bugging me that `connection.showMessage` is red in IJ because this was missing, guess I should consider switching editors soon ^^",
+        "createdAt" : "2017-11-24T09:19:13Z",
+        "updatedAt" : "2017-11-24T13:33:31Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ef29dee59b9a4b875a1912b928ec99c601b0286a",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +14,18 @@ */\nclass LanguageServer(inStream: InputStream, outStream: OutputStream) extends LazyLogging {\n  val connection: Connection = (new Connection(inStream, outStream)) { (method, params) =>\n    (method, params) match {\n      case (_, InitializeParams(pid, rootPath, capabilities)) =>"
+  }
+]

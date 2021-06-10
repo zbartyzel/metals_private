@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "933d258c-b38b-4398-ba8c-c88ce54cb57c",
+    "prId" : 373,
+    "prUrl" : "https://github.com/scalameta/metals/pull/373",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "d4156511-338b-4e42-a123-cf1b5855ecd6",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "You can also link directly to atom://settings-view/show-package?package=ide-scala",
+        "createdAt" : "2018-12-04T17:54:52Z",
+        "updatedAt" : "2018-12-04T19:25:16Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "cc21269b-a7a9-43e8-9a7f-0400be761b50",
+        "parentId" : "d4156511-338b-4e42-a123-cf1b5855ecd6",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "done, made it a button\r\n\r\n![screenshot 2018-12-04 at 20 20 53](https://user-images.githubusercontent.com/1408093/49467173-20e06500-f802-11e8-92ab-febec650f9d6.png)\r\n",
+        "createdAt" : "2018-12-04T19:21:11Z",
+        "updatedAt" : "2018-12-04T19:25:16Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "59bd43b3c80624f41b57e5f4cc8c0beb011dac2a",
+    "line" : 23,
+    "diffHunk" : "@@ -1,1 +19,23 @@```sh\napm install ide-scala\n```\n\n[![Install Metals package](https://img.shields.io/badge/install-metals-blue.png)](atom://settings-view/show-package?package=ide-scala)"
+  },
+  {
+    "id" : "4fe324e6-7106-421a-a93b-5f7364c678d8",
+    "prId" : 342,
+    "prUrl" : "https://github.com/scalameta/metals/pull/342",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "177b8d13-d8db-4633-aff6-adb6632ea239",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "FYI @laughedelic ",
+        "createdAt" : "2018-11-28T14:29:59Z",
+        "updatedAt" : "2018-11-28T14:29:59Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "07dd0594-605a-4c4d-9078-bc08da8b8c1e",
+        "parentId" : "177b8d13-d8db-4633-aff6-adb6632ea239",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "Great, I'll send a PR to update this once it's ready.",
+        "createdAt" : "2018-11-28T14:52:14Z",
+        "updatedAt" : "2018-11-28T14:52:14Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e550a104d08797befbaaebbb3c2d8528d1d93c83",
+    "line" : 11,
+    "diffHunk" : "@@ -1,1 +4,8 @@---\n\nMetals will soon work with Atom thanks to the\n[`ide-scala`](https://atom.io/packages/ide-scala) plugin. The `ide-scala` plugin\nis currently in the process of adding support for latest Metals version. Stay"
+  }
+]

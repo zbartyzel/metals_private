@@ -1,0 +1,46 @@
+[
+  {
+    "id" : "3dbab0bf-b490-43e4-a273-f1fc322b321e",
+    "prId" : 2012,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2012",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b85c049f-e8c8-45c9-bcf5-3b9579ccf76b",
+        "parentId" : null,
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "If we did:\r\n`def isExcludedPackage(pkg: String): Boolean = cachedExclusions.exists(excluded => pkg.startsWith(excluded))`\r\n\r\nIt would not work only in 1 case where we created this class but did not call update yet, because `cachedExclusions` would be empty list.\r\n\r\nBut if we did:\r\n`private var cachedExclusions: List[String] = prepareCache(pkgsToExclude)`\r\n\r\nThen this should work? \r\n\r\nFine as it now, just curious what you think?",
+        "createdAt" : "2020-09-01T07:11:39Z",
+        "updatedAt" : "2020-09-01T08:04:55Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "488a656b-209c-4581-96b2-b88c99fc7997",
+        "parentId" : "b85c049f-e8c8-45c9-bcf5-3b9579ccf76b",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "So my main reason for doing it this is that since this is created right after the user configuration, it will get the default user configuration value, which is `None`. Then if the user has any value set, it will run the update right away as soon as the initialize happens. My thinking was then that we'd run this twice no matter what whenever it was used. So my attempt to avoid that was to hold off on running the `prepareCache` until it's needed to index the first time, or when the `initialize` process happens and the change is picked up during the `didChangeConfiguration`. So I don't think it matters a ton, but again, was trying to avoid running `prepareCache` twice right in a row. I'm open to maybe changing this, but also don't see a downside of having it this way. WDYT?",
+        "createdAt" : "2020-09-01T07:55:07Z",
+        "updatedAt" : "2020-09-01T08:04:55Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9b588b06-c6f3-4c05-ab97-45dedd53ed87",
+        "parentId" : "b85c049f-e8c8-45c9-bcf5-3b9579ccf76b",
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "Ahh yes right!, I did not notice it will be called twice in that case, all good :+1:",
+        "createdAt" : "2020-09-01T08:04:41Z",
+        "updatedAt" : "2020-09-01T08:04:55Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "742d615938b7ae27e2a94fdcb0daa3d765c5a4ba",
+    "line" : 62,
+    "diffHunk" : "@@ -1,1 +60,64 @@   */\n  def isExcludedPackage(pkg: String): Boolean = {\n    if (cachedExclusions.nonEmpty) {\n      cachedExclusions.exists(excluded => pkg.startsWith(excluded))\n    } else {"
+  }
+]

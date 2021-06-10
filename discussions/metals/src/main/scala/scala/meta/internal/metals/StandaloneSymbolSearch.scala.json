@@ -1,0 +1,46 @@
+[
+  {
+    "id" : "97ea6632-2436-439a-88fa-55d975239aec",
+    "prId" : 2268,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2268",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f0bc9603-893e-47d8-8a09-ab29bcc1d57a",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "`scalaVersion` is actually never used. ",
+        "createdAt" : "2020-11-30T19:26:06Z",
+        "updatedAt" : "2020-12-01T12:32:25Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f0605208-0060-48c4-9c53-5f4144fb1bd8",
+        "parentId" : "f0bc9603-893e-47d8-8a09-ab29bcc1d57a",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Whoops, added this in the start and forgot to remove it.",
+        "createdAt" : "2020-11-30T19:29:07Z",
+        "updatedAt" : "2020-12-01T12:32:25Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "63613886-2843-42cb-96e2-07b2eba480f2",
+        "parentId" : "f0bc9603-893e-47d8-8a09-ab29bcc1d57a",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Actually kept this in, but made sure to actually use it.",
+        "createdAt" : "2020-11-30T19:36:47Z",
+        "updatedAt" : "2020-12-01T12:32:25Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "189e5169129bba044808da337aa45ef613a1f80f",
+    "line" : 97,
+    "diffHunk" : "@@ -1,1 +175,179 @@   */\n  private def getScala(\n      scalaVersion: String\n  ): (Seq[AbsolutePath], Seq[AbsolutePath]) =\n    Embedded"
+  }
+]

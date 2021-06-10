@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "70068aa1-6090-4537-82ab-040bd36311c0",
+    "prId" : 2497,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2497",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "da1a5a77-b802-4c76-bea3-218289bdb12c",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This is needed so that we only use auto import position when inserting actual imports:\r\n```scala\r\npackage a\r\nimport java.nio.Paths\r\n<<import_position>>\r\n\r\nobject A{\r\n  class Path\r\n  val a<<actual_position>>  = Paths.get(\".\")\r\n}\r\n\r\n```\r\nview from the `actual_position` differs from `import_position`",
+        "createdAt" : "2021-02-11T19:39:05Z",
+        "updatedAt" : "2021-02-17T15:54:49Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a3da8a9cf97b46b15072db2b6898bb3237b2919c",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +26,30 @@  def doLocateImportContext(\n      pos: Position,\n      autoImport: Option[AutoImportPosition] = None\n  ): Context = {\n    try doLocateContext("
+  }
+]

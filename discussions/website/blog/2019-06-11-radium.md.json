@@ -1,0 +1,46 @@
+[
+  {
+    "id" : "a1693f34-bc8b-460c-96dc-958f7afecb87",
+    "prId" : 752,
+    "prUrl" : "https://github.com/scalameta/metals/pull/752",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "3b99ad15-ffa8-4b23-85de-b41b787b7d9c",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "```suggestion\r\n[Scala Center](https://scala.epfl.ch/) and [VirtusLab](???) along with contributors from the\r\n```",
+        "createdAt" : "2019-06-11T11:27:43Z",
+        "updatedAt" : "2019-06-11T13:43:02Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f93d3bf127bfb04521817c612f4a4d73cb27f642",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +12,16 @@Metals is a language server for Scala that works with VS Code, Atom, Vim,\nSublime Text and Emacs. Metals is developed at the\n[Scala Center](https://scala.epfl.ch/) along with contributors from the\ncommunity.\n"
+  },
+  {
+    "id" : "f842928b-8194-4604-ac86-40c6791db793",
+    "prId" : 752,
+    "prUrl" : "https://github.com/scalameta/metals/pull/752",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ea99d4a5-7309-414a-83e7-5bae2f7a5c19",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "> Keywords are suggested based on the context (e.g. you won't see `throw` suggested if the cursor is not inside a declaration)",
+        "createdAt" : "2019-06-11T11:49:45Z",
+        "updatedAt" : "2019-06-11T13:10:11Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f93d3bf127bfb04521817c612f4a4d73cb27f642",
+    "line" : 74,
+    "diffHunk" : "@@ -1,1 +72,76 @@    import\n}\n```\n\nKeywords are suggested based on the context (e.g. you won't see throw suggested"
+  }
+]

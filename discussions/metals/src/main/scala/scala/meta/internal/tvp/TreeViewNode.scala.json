@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "ef2be731-b61a-406a-8a31-dcc892fed470",
+    "prId" : 1677,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1677",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "17a3402f-4560-4bd2-b077-744d9069ddb9",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Somehow this didn't work with the new command, since the ones declared all have the `metals.` prefix\r\n\r\nThis might not be needed, but I haven't been able to make the new command work otherwise.\r\n\r\nI think we could also just use an echo command for all server commands here.",
+        "createdAt" : "2020-04-29T17:26:11Z",
+        "updatedAt" : "2020-05-04T13:57:13Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "38751291a84f683f8d8eb60ed8a73ce8657936c9",
+    "line" : 16,
+    "diffHunk" : "@@ -1,1 +35,39 @@      command = MetalsCommand(\n        command.title,\n        \"metals.\" + command.id,\n        command.description\n      ),"
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "c62587c4-a825-468f-adc1-1816501f27c2",
+    "prId" : 1547,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1547",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "1f74640f-cb74-4c5d-abd3-0354d648dbe8",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Really small nitpick. I'd add something to end the article. I always find it a bit odd when a blog article ends with a code snippet. Just a summary or ideas about where this will go in the future might be a nice addition, and a good way to end the article.",
+        "createdAt" : "2020-03-26T11:58:06Z",
+        "updatedAt" : "2020-03-27T19:26:28Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "35497031-d761-47d7-8b4b-b5169012238a",
+        "parentId" : "1f74640f-cb74-4c5d-abd3-0354d648dbe8",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Haha, I have thought about this as well. I added a new \"Open questions\" section that documents some concerns I have about this approach and the to stress that this is an experimental feature.",
+        "createdAt" : "2020-03-26T18:15:19Z",
+        "updatedAt" : "2020-03-27T19:26:28Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "922329228964c110122b6e35a403b21a3c4d3f3e",
+    "line" : 151,
+    "diffHunk" : "@@ -1,1 +149,153 @@  }\n]\n```\n\n## Open questions"
+  }
+]

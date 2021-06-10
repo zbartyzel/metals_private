@@ -1,0 +1,90 @@
+[
+  {
+    "id" : "4356a5dc-9789-41bc-b84d-fb3f4eb37cf1",
+    "prId" : 1640,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1640",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "80d05640-da2d-4459-a15e-cce249637611",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "In case of Scala 3 we get additional reference for Descriptor.Type when using main methods, so we can use that. In the future it could change to a method, but that depends on the changes in Dotty.",
+        "createdAt" : "2020-04-20T14:24:13Z",
+        "updatedAt" : "2020-04-20T14:24:13Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "72071e33226d4f770c565ba8cec004944bbad53d",
+    "line" : 19,
+    "diffHunk" : "@@ -1,1 +93,97 @@      descriptors = {\n        if (ScalaVersions.isScala3Version(buildTarget.scalaVersion))\n          List(Descriptor.Term, Descriptor.Type)\n        else List(Descriptor.Term)\n      }"
+  },
+  {
+    "id" : "e93b5f96-7a19-425b-bb27-11d9bb421a65",
+    "prId" : 1466,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1466",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "bb35cb67-90af-4fdf-b78e-c735d63a6151",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Would `Option` not be enough at least here?",
+        "createdAt" : "2020-03-30T15:13:44Z",
+        "updatedAt" : "2020-04-03T11:50:57Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1d7bf410-4b43-4555-8e36-b5669a0d3e4e",
+        "parentId" : "bb35cb67-90af-4fdf-b78e-c735d63a6151",
+        "authorId" : "58f39866-9870-40fc-83e0-d68edbbcb6f7",
+        "body" : "actually, I've made it a List motivated by your idea to report multiple source targets https://github.com/scalameta/metals/pull/1466#discussion_r384661635",
+        "createdAt" : "2020-03-30T15:56:10Z",
+        "updatedAt" : "2020-04-03T11:50:57Z",
+        "lastEditedBy" : "58f39866-9870-40fc-83e0-d68edbbcb6f7",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1fe26650-d77b-4f23-b0b7-d50923eeb0de",
+        "parentId" : "bb35cb67-90af-4fdf-b78e-c735d63a6151",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Ach, nvm. I just thought it's `toList` from Option. Nevermind then :sweat_smile: ",
+        "createdAt" : "2020-03-30T16:11:49Z",
+        "updatedAt" : "2020-04-03T11:50:57Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d72fc182a42fd127dd0593dfbb3028ac615338b9",
+    "line" : 16,
+    "diffHunk" : "@@ -1,1 +41,45 @@  private def findClassesBy[A](\n      f: Classes => Option[A]\n  ): List[(A, b.BuildTargetIdentifier)] = {\n    index\n      .mapValues(f)"
+  },
+  {
+    "id" : "20e9beaa-d847-4e77-be41-29f99228ab9f",
+    "prId" : 728,
+    "prUrl" : "https://github.com/scalameta/metals/pull/728",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "941bd978-b7ac-4709-a8f4-58043f1f65a5",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Docstring proposal\r\n\r\n> Manages in-memory index of main/test class symbols grouped by their enclosing build targets.",
+        "createdAt" : "2019-05-23T13:13:20Z",
+        "updatedAt" : "2019-05-24T09:17:46Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "9d3f311622eae8bedf5d893e5016c35523e74815",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +12,16 @@ * In-memory index of main class symbols grouped by their enclosing build target\n */\nfinal class BuildTargetClasses(\n    buildServer: () => Option[BuildServerConnection]\n)(implicit val ec: ExecutionContext) {"
+  }
+]

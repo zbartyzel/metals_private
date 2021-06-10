@@ -1,0 +1,112 @@
+[
+  {
+    "id" : "1431c1d9-9d16-40aa-bc5c-1d9a685bb1d9",
+    "prId" : 2118,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2118",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "d9e18db1-601a-4e93-9956-71f4bf3f1cb3",
+        "parentId" : null,
+        "authorId" : "738aec58-9f58-4f37-9683-4fee40d4f4f9",
+        "body" : "I've tried to adapt this test to reflect my changes from #2123, but this test keeps failing for me even when I try to run it locally from the main branch and I can't quite figure out yet why. 🤔 \r\n\r\nWhen I run `sbt unit/testOnly *DebugProtocolSuite* -- *.start*` I get the following:\r\n```diff\r\n=> Diff (- obtained, + expected)\r\n-FooBar\r\n+FooBarFoo\r\n```\r\n\r\nDo I need to do anything special with my local setup or the way those tests are run to get this test to pass?\r\n\r\nI tried running them via `bin/test.sh \"unit/testOnly *DebugProtocolSuite* -- *.start*\"` and I can see in the logs bloop being set to `v1.4.4-13` rather than `1.4.4-17` which is what you changed it to in this PR.\r\n\r\nAm I missing something obvious here? Any help or pointers would be much appreciated.\r\n\r\nedit: It appears I had a sneaky old version of bloop running in the background and killing it has made the test pass. It's a bit of a tricky and fiddly setup because you kind of need to bootstrap your dev environment using a local snapshot and make sure you have the right version of bloop running etc. to get everything working, but anyway, I got it working eventually; apologies for the noise 😄 ",
+        "createdAt" : "2020-10-07T00:34:52Z",
+        "updatedAt" : "2020-10-07T00:55:37Z",
+        "lastEditedBy" : "738aec58-9f58-4f37-9683-4fee40d4f4f9",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1bc67724-7457-4a76-b825-b918f8a0f52e",
+        "parentId" : "d9e18db1-601a-4e93-9956-71f4bf3f1cb3",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "no worries, we should not be probably using snapshot Bloop versions. I always creates additional confusion. ",
+        "createdAt" : "2020-10-07T09:51:17Z",
+        "updatedAt" : "2020-10-07T09:51:17Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "6ffd438b874a96cbe6e7ccf11149da05daa88044",
+    "line" : 40,
+    "diffHunk" : "@@ -1,1 +55,59 @@      _ <- debugger.shutdown\n      output <- debugger.allOutput\n    } yield assertNoDiff(output, \"FooBarFoo\")\n  }\n"
+  },
+  {
+    "id" : "4e7f2afa-ba9d-4a1f-97a8-1a71f4fa0426",
+    "prId" : 1625,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1625",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "81ec7837-f98c-4240-9fb6-5061c36c546e",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Status bar is actually updated concurrently, which is causing spurious errors in CI",
+        "createdAt" : "2020-05-08T18:11:04Z",
+        "updatedAt" : "2020-05-11T14:17:44Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b7c6f9fa61606c4021d0457804114d0f344e41a8",
+    "line" : 97,
+    "diffHunk" : "@@ -1,1 +310,314 @@        .recover {\n          case WorkspaceErrorsException =>\n            WorkspaceErrorsException\n        }\n    } yield assertContains("
+  },
+  {
+    "id" : "c4d4e2ef-3a54-4748-ae5c-9ad2f59117f0",
+    "prId" : 1625,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1625",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "3ff13461-24d2-47a5-b04b-d1f9845cb4cd",
+        "parentId" : null,
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "We could add an automatic test during`server.startDebugging` checking if the main class contains the `System.exit(0)` string - it would be relatively fast and straight-forward smoke test preventing recurrence of this issue.",
+        "createdAt" : "2020-05-11T09:31:59Z",
+        "updatedAt" : "2020-05-11T14:17:44Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "cd8575ce-8b68-4cba-8fc7-0aaf7b5e1016",
+        "parentId" : "3ff13461-24d2-47a5-b04b-d1f9845cb4cd",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Added and it actually detected one bad test.",
+        "createdAt" : "2020-05-11T14:19:50Z",
+        "updatedAt" : "2020-05-11T14:19:51Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b7c6f9fa61606c4021d0457804114d0f344e41a8",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +11,15 @@\n// note(@tgodzik) all test have `System.exit(0)` added to avoid occasional issue due to:\n// https://stackoverflow.com/questions/2225737/error-jdwp-unable-to-get-jni-1-2-environment\nclass DebugProtocolSuite extends BaseDapSuite(\"debug-protocol\") {\n"
+  },
+  {
+    "id" : "f5efc1ff-5766-4d07-aefb-ff974387d729",
+    "prId" : 1020,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1020",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "e8f759de-a90e-4292-81e6-fe5621bcfeed",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Debug is not working - ignored",
+        "createdAt" : "2019-10-27T19:15:05Z",
+        "updatedAt" : "2019-10-28T15:54:32Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "bf83d588297229d15d4ae4ac49c6d318dae867af",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +9,13 @@import scala.concurrent.Future\n\nobject DebugProtocolSuite extends BaseLspSuite(\"debug-protocol\") {\n\n  override def testAsync("
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "934670fd-9b99-42c4-a157-ee979c26e034",
+    "prId" : 2600,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2600",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "e0bf9520-cbf5-421d-aece-60c5ab5738e6",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "why is this excluded?",
+        "createdAt" : "2021-03-17T15:50:02Z",
+        "updatedAt" : "2021-04-01T21:54:41Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "82d2e772-c22d-4269-922a-397cf7d3a387",
+        "parentId" : "e0bf9520-cbf5-421d-aece-60c5ab5738e6",
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "To suppress errors because #2627",
+        "createdAt" : "2021-03-22T13:26:30Z",
+        "updatedAt" : "2021-04-01T21:54:41Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "028b3ff710580df42fff3574f99c743c9649e48c",
+    "line" : 112,
+    "diffHunk" : "@@ -1,1 +184,188 @@      dialect = dialects.Scala3,\n      badFileNames = List(\n        \"Extension.scala\"\n      )\n    )"
+  }
+]

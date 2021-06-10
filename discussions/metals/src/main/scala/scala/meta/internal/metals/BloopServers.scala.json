@@ -1,0 +1,288 @@
+[
+  {
+    "id" : "3081cd49-5255-4fae-9701-b566e9130b95",
+    "prId" : 1677,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1677",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "3a6438d5-1964-45c9-b331-2f9565350bb6",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This promise is used to determine whether the launcher is finished.",
+        "createdAt" : "2020-04-29T17:17:04Z",
+        "updatedAt" : "2020-05-04T13:57:13Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "41f37a00-8491-4840-ae95-49a9afb3cda4",
+        "parentId" : "3a6438d5-1964-45c9-b331-2f9565350bb6",
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "then maybe it could be called: `launched` instead of `finished`?",
+        "createdAt" : "2020-05-04T09:03:37Z",
+        "updatedAt" : "2020-05-04T13:57:13Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1ffcdc6a-3750-42be-ac4c-870d8e63fee4",
+        "parentId" : "3a6438d5-1964-45c9-b331-2f9565350bb6",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "`finished` is updated when the launcher finishes and not when it launches, so I think this is better. ",
+        "createdAt" : "2020-05-04T10:03:41Z",
+        "updatedAt" : "2020-05-04T13:57:13Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "38751291a84f683f8d8eb60ed8a73ce8657936c9",
+    "line" : 24,
+    "diffHunk" : "@@ -1,1 +99,103 @@      )\n\n    val finished = Promise[Unit]()\n    val job = ec.submit(new Runnable {\n      override def run(): Unit = {"
+  },
+  {
+    "id" : "f2101b0c-ba94-430c-ae6d-bc2fdcb1056c",
+    "prId" : 1004,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1004",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "a9ecd7f7-1210-42e7-8e43-9189135d0808",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "super tiny, but this can probably be a SAM\r\n\r\n```scala\r\nec.submit(_ => launcher.runLauncher(...))\r\n```",
+        "createdAt" : "2019-10-20T08:23:14Z",
+        "updatedAt" : "2019-10-21T15:12:38Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2eaf29f0-4703-4153-82ff-3b4537a21ff1",
+        "parentId" : "a9ecd7f7-1210-42e7-8e43-9189135d0808",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "It would need to be something like:\r\n```scala\r\n    val runServer: Runnable = () =>\r\n      launcher.runLauncher(\r\n        BuildInfo.bloopVersion,\r\n        skipBspConnection = false,\r\n        Nil\r\n      )\r\n    val job = ec.submit(runServer)\r\n```\r\n\r\nI can change it, but doesn't seem like much of an improvement, because we need the explicit type there :/",
+        "createdAt" : "2019-10-20T11:06:47Z",
+        "updatedAt" : "2019-10-21T15:12:38Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0209e4b3-3688-4e98-bd59-c92846b8cdb8",
+        "parentId" : "a9ecd7f7-1210-42e7-8e43-9189135d0808",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Ah, I recall @olafurpg had a similar issue, does it work if you do\r\n\r\n```scala\r\nval job = ec.submit[Unit](_ => launcher.runLauncher(\r\n  BuildInfo.bloopVersion,\r\n  skipBspConnection = false,\r\n  Nil\r\n))\r\n```\r\n?\r\n\r\nThe `Unit` annotation should help disambiguate `Runnable` from `Callable`.\r\n\r\nAnyway, it's a super tiny thing, sorry for digressing ^^ ",
+        "createdAt" : "2019-10-20T11:12:59Z",
+        "updatedAt" : "2019-10-21T15:12:38Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f158ef2d-f069-440d-978c-b68e6fb1e3c8",
+        "parentId" : "a9ecd7f7-1210-42e7-8e43-9189135d0808",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Doesn't work either, but thanks for the suggestion. I would love to have it simpler than what it currently is. It feels a bit too Java currently :smile:  \r\n\r\n",
+        "createdAt" : "2019-10-20T11:19:38Z",
+        "updatedAt" : "2019-10-21T15:12:38Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d4d5d353-bcaa-495d-b8e1-21e3302862da",
+        "parentId" : "a9ecd7f7-1210-42e7-8e43-9189135d0808",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "ahah, ok, I surrender. ",
+        "createdAt" : "2019-10-20T11:45:56Z",
+        "updatedAt" : "2019-10-21T15:12:38Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1cf9cd839582af566a3a23662339b476303b4c96",
+    "line" : 103,
+    "diffHunk" : "@@ -1,1 +52,56 @@      )\n\n    val job = ec.submit(new Runnable {\n      override def run(): Unit = {\n        launcher.runLauncher("
+  },
+  {
+    "id" : "2d33bab8-1944-4924-a8f1-8428662847be",
+    "prId" : 566,
+    "prUrl" : "https://github.com/scalameta/metals/pull/566",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "6f586da4-fe4f-474b-ae92-4fa212a19e88",
+        "parentId" : null,
+        "authorId" : "1977d0df-25a0-4fd9-a417-470eafe55f98",
+        "body" : "Interesting, what is this useful for?",
+        "createdAt" : "2019-03-14T09:23:31Z",
+        "updatedAt" : "2019-03-15T09:14:14Z",
+        "lastEditedBy" : "1977d0df-25a0-4fd9-a417-470eafe55f98",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "bc1168f6-f078-4a5d-8a43-82e1e005bfb3",
+        "parentId" : "6f586da4-fe4f-474b-ae92-4fa212a19e88",
+        "authorId" : "670bdad4-bf9b-431f-80f0-e86350cc0bd5",
+        "body" : "The OS will allow you to reopen a closed socket within a specific timeframe if you set that flag. Depending on the OS it's either when you first open it, or when you reopen it. Pretty good explanation here - https://stackoverflow.com/questions/14388706/socket-options-so-reuseaddr-and-so-reuseport-how-do-they-differ-do-they-mean-t ",
+        "createdAt" : "2019-03-14T09:39:23Z",
+        "updatedAt" : "2019-03-15T09:14:14Z",
+        "lastEditedBy" : "670bdad4-bf9b-431f-80f0-e86350cc0bd5",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "581d2e85-aec1-46c1-bd40-9c307d6812ab",
+        "parentId" : "6f586da4-fe4f-474b-ae92-4fa212a19e88",
+        "authorId" : "670bdad4-bf9b-431f-80f0-e86350cc0bd5",
+        "body" : "And sure, I can do a PR on the launcher, no problem.",
+        "createdAt" : "2019-03-14T09:48:37Z",
+        "updatedAt" : "2019-03-15T09:14:14Z",
+        "lastEditedBy" : "670bdad4-bf9b-431f-80f0-e86350cc0bd5",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a3b88823-3132-4352-9376-edba18b52d4c",
+        "parentId" : "6f586da4-fe4f-474b-ae92-4fa212a19e88",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "My previous attempts to move to the Bloop launcher have so far failed to pass CI. I believe if we use the launcher as a library instead of shelling out to it then it will work better, and we could clean up a lot of hairy code in Metals.",
+        "createdAt" : "2019-03-15T09:17:27Z",
+        "updatedAt" : "2019-03-15T09:17:27Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3239af5c9a8b0e7a11f46e719c810f3ef74cbdad",
+    "line" : 35,
+    "diffHunk" : "@@ -1,1 +90,94 @@  private def randomPort(host: String): Int = {\n    val s = new ServerSocket()\n    s.setReuseAddress(true)\n    s.bind(new InetSocketAddress(host, 0))\n    val port = s.getLocalPort"
+  },
+  {
+    "id" : "5697ec08-c3dc-404b-a5e5-12decc40c83c",
+    "prId" : 566,
+    "prUrl" : "https://github.com/scalameta/metals/pull/566",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "49808ea1-9b7a-48ce-939f-26cbc1a79e37",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "🙈 nice catch!",
+        "createdAt" : "2019-03-14T22:23:24Z",
+        "updatedAt" : "2019-03-15T09:15:25Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3239af5c9a8b0e7a11f46e719c810f3ef74cbdad",
+    "line" : 44,
+    "diffHunk" : "@@ -1,1 +104,108 @@  private def callBSP(): Future[(BloopSocket, Cancelable)] = {\n    if (config.bloopProtocol.isNamedPipe) callNamedPipeBsp()\n    else if (config.bloopProtocol.isTcp) callTcpBsp()\n    else callUnixBsp()\n  }"
+  },
+  {
+    "id" : "701b5636-dff3-44b8-a355-456dc5247a5a",
+    "prId" : 359,
+    "prUrl" : "https://github.com/scalameta/metals/pull/359",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "11316fe5-06f7-4f97-a76c-66b58fe5839a",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Great change 👍",
+        "createdAt" : "2018-11-30T07:14:31Z",
+        "updatedAt" : "2018-11-30T07:16:06Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e0b4f84461956add7e6c74d022bcc2c2265b8b31",
+    "line" : 23,
+    "diffHunk" : "@@ -1,1 +224,228 @@      Cancelable(() => bspProcess.destroy())\n    } else {\n      scribe.info(s\"running embedded 'bloop ${args.mkString(\" \")}'\")\n      embedded.bloopJars match {\n        case Some(classloaders) =>"
+  },
+  {
+    "id" : "ac89ab63-1489-4d39-8e22-927594f45994",
+    "prId" : 359,
+    "prUrl" : "https://github.com/scalameta/metals/pull/359",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "60aac333-eefe-4e0c-aa14-2c3f565a8c83",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "This produce quite a lot of noise iirc, are you sure it should be enabled by default?",
+        "createdAt" : "2018-11-30T07:15:23Z",
+        "updatedAt" : "2018-11-30T07:16:06Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "25285e42-19d1-488c-8f96-5bb3b71c1a75",
+        "parentId" : "60aac333-eefe-4e0c-aa14-2c3f565a8c83",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "It it turns out to be too noisy we can introduce a `-Dmetals.verbose` property to control this behavior. Now in the early days I think it's a good idea to include this 👍 ",
+        "createdAt" : "2018-11-30T09:28:16Z",
+        "updatedAt" : "2018-11-30T09:28:16Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "75def444-a5f8-44a9-abe5-12033e5f1ed8",
+        "parentId" : "60aac333-eefe-4e0c-aa14-2c3f565a8c83",
+        "authorId" : "ea0c1efe-1515-4a52-bcb5-eb5429de97a0",
+        "body" : "Agreed WRT to early days. Definitely think this would be better under a non-default flag... Once the user (dev) expectation is not likely \"show me all the logging\" haha",
+        "createdAt" : "2018-11-30T14:26:29Z",
+        "updatedAt" : "2018-11-30T14:26:30Z",
+        "lastEditedBy" : "ea0c1efe-1515-4a52-bcb5-eb5429de97a0",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e0b4f84461956add7e6c74d022bcc2c2265b8b31",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +176,180 @@    val args = Array(\n      \"bsp\",\n      \"--verbose\",\n      \"--protocol\",\n      \"local\","
+  },
+  {
+    "id" : "f2a8343a-5d57-4eef-ad48-28efbd08e9fa",
+    "prId" : 337,
+    "prUrl" : "https://github.com/scalameta/metals/pull/337",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "dc6a2620-4699-47e7-b47b-f1123a89958e",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Note that this causes the installed bloop client not to work anymore on the same project, because the newly written 1.1.0 JSON files are not compatible with the installed 1.0.0 client.\r\n\r\nI don't think this is a Metals concern, but I just wanted to highlight this scenario /cc @jvican ",
+        "createdAt" : "2018-11-21T22:17:07Z",
+        "updatedAt" : "2018-11-27T10:23:41Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "23f546b6-44bd-42d7-88d4-0f360b0d09a1",
+        "parentId" : "dc6a2620-4699-47e7-b47b-f1123a89958e",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "That's a good point, maybe bloop v1.1 should be v2 instead?",
+        "createdAt" : "2018-11-25T11:14:57Z",
+        "updatedAt" : "2018-11-27T10:23:41Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8ab78d5883e2e77a843cca1ea641084e6e4a2875",
+    "line" : 33,
+    "diffHunk" : "@@ -1,1 +31,35 @@ * Connects to a running bloop server instance if it is installed on the user\n * machine and has compatible version (+v1.1.0). Ignores the installed bloop\n * server instance if it is v1.0.0.\n *\n * Otherwise, if the user doesn't have bloop installed on the machine, uses"
+  }
+]

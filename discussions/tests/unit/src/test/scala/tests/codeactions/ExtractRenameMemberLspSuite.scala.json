@@ -1,0 +1,57 @@
+[
+  {
+    "id" : "a51770da-c24d-47f1-92c4-37216b909744",
+    "prId" : 2723,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2723",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ae5d75a7-311b-409f-b6c9-e8bed2aa159e",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Could we include the name of the file if possible as a separate parameter (`\"filename = A.scala\"`)? It's hard to figure out what should be happening here. I think underneath it's A.scala, but not everyone will know it",
+        "createdAt" : "2021-05-06T09:53:12Z",
+        "updatedAt" : "2021-05-11T14:51:09Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "027c9bf78c700cb555e80ae8e2fab5e18678651e",
+    "line" : 150,
+    "diffHunk" : "@@ -1,1 +148,152 @@  checkActionProduced(\n    \"sealed-class-no-codeAction\",\n    \"\"\"|package a\n       |\n       |sealed case class <<A>>()"
+  },
+  {
+    "id" : "6867724e-86e7-4e53-8354-d457f2df1124",
+    "prId" : 2723,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2723",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "6fe378ce-ba68-4ba1-bd1e-4c3d21abaf7f",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "We should remove the package if it's also empty. We can check the parent of the extracted class and if there are no other children we can remove the package also.",
+        "createdAt" : "2021-05-06T09:56:46Z",
+        "updatedAt" : "2021-05-11T14:51:09Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "aa9fcba1-ed55-4417-b67c-68b4e207dc5c",
+        "parentId" : "6fe378ce-ba68-4ba1-bd1e-4c3d21abaf7f",
+        "authorId" : "1123d20b-c024-4d9e-9f44-70ccf9a2d237",
+        "body" : "I'll do it in the next commit! ",
+        "createdAt" : "2021-05-07T16:00:01Z",
+        "updatedAt" : "2021-05-11T14:51:09Z",
+        "lastEditedBy" : "1123d20b-c024-4d9e-9f44-70ccf9a2d237",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "027c9bf78c700cb555e80ae8e2fab5e18678651e",
+    "line" : 214,
+    "diffHunk" : "@@ -1,1 +212,216 @@       |case class A()\n       |\n       |package b {\n       |  object <<B>>{}\n       |}"
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "29209450-2efb-4909-8f93-c3e2538d365d",
+    "prId" : 1818,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1818",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ac317c35-7acd-428a-ab6c-672cce6f8f38",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Normally path was done `/src/main/scala/Main.scala`, but when Dotty is generating the file it's `src\\main\\scala\\Main.scala`",
+        "createdAt" : "2020-06-12T11:19:44Z",
+        "updatedAt" : "2020-06-12T18:22:32Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b6f62943-3be0-48cc-ba8a-c07e7ae538ba",
+        "parentId" : "ac317c35-7acd-428a-ab6c-672cce6f8f38",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "So this change this would only matter if we are looking for semantic information that dotty produced while the user is still in a scala-2 workspace right?",
+        "createdAt" : "2020-06-12T12:13:48Z",
+        "updatedAt" : "2020-06-12T18:22:32Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "16af1d9d-f726-49f8-a06d-0aa689afc555",
+        "parentId" : "ac317c35-7acd-428a-ab6c-672cce6f8f38",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "This sounds like a bug in Dotty, the `uri` field should always return a URI. I think it's OK to do this replace on the Metals side just-in-case but we should make sure this is also fixed upstream in Dotty.",
+        "createdAt" : "2020-06-12T13:45:16Z",
+        "updatedAt" : "2020-06-12T18:22:32Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9c3da683-eea8-49b6-b83b-afb38186a27c",
+        "parentId" : "ac317c35-7acd-428a-ab6c-672cce6f8f38",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Sure, we plan to follow up with a change to Dotty itself too.",
+        "createdAt" : "2020-06-12T18:19:37Z",
+        "updatedAt" : "2020-06-12T18:22:32Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6a7953f4-2ce7-4bcb-ae17-f91aa1662d7b",
+        "parentId" : "ac317c35-7acd-428a-ab6c-672cce6f8f38",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "@ckipp01 This only is an issue if someone compiles Dotty code on Windows, it doesn't influence Scala-2 codebases at all.. We will not use the semanticdb information due to the relative uri mismatch",
+        "createdAt" : "2020-06-12T19:35:01Z",
+        "updatedAt" : "2020-06-12T19:35:01Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3c1355b277c6e9749e35bb3eeddccc8a37755226",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +62,66 @@    val reluri = scalaRelativePath.toURI(false).toString\n    val sdocs = loadTextDocuments(semanticdbPath)\n    sdocs.documents.find(_.uri.replace(\"\\\\\", \"/\") == reluri) match {\n      case None => TextDocumentLookup.NoMatchingUri(scalaPath, sdocs)\n      case Some(sdoc) =>"
+  }
+]

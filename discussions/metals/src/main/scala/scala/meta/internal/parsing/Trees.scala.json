@@ -1,0 +1,79 @@
+[
+  {
+    "id" : "2a0ee912-3bdd-4283-9548-74b3be8d08dd",
+    "prId" : 2552,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2552",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "60336454-a729-4e43-8cac-ac9ddbbce203",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "We should probably remove it if possible.",
+        "createdAt" : "2021-02-25T13:47:24Z",
+        "updatedAt" : "2021-03-01T10:35:13Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1683e869-c2b6-47b5-8278-d0f32c0b5edf",
+        "parentId" : "60336454-a729-4e43-8cac-ac9ddbbce203",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Yea, I was thinking the same thing. Lemme see if I can tackle the rest of the places that use this as well.",
+        "createdAt" : "2021-02-25T13:53:51Z",
+        "updatedAt" : "2021-03-01T10:35:13Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6d9d62c4-f2b1-4516-bf85-57432e236bf2",
+        "parentId" : "60336454-a729-4e43-8cac-ac9ddbbce203",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Or really `scala.meta.dialects.Scala3` would probably work? We can make it a custom dialect, but might be simpler than in case of ScalaMtags",
+        "createdAt" : "2021-02-25T13:55:46Z",
+        "updatedAt" : "2021-03-01T10:35:13Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "879469a9-df0c-42e3-9bd7-c160a02c89e4",
+        "parentId" : "60336454-a729-4e43-8cac-ac9ddbbce203",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "🤔 so this is proving to be a bit harder than I thought since all the digests would need this as well. So it's not ideal to have to pass around `Trees` to them. I think it might be better to fix this here, and then to create a follow-up to figure out how to fully get rid of them.",
+        "createdAt" : "2021-02-25T15:04:01Z",
+        "updatedAt" : "2021-03-01T10:35:13Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "944516eb-4e5a-4d4a-8865-ad594d7db13d",
+        "parentId" : "60336454-a729-4e43-8cac-ac9ddbbce203",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "We don't really need Trees for digests. Sbt will stay on Scala 2 for a long while, I think the same with Mill.",
+        "createdAt" : "2021-02-25T15:11:59Z",
+        "updatedAt" : "2021-03-01T10:35:13Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "543e3b87-e7f2-4364-8d20-90a708a1b729",
+        "parentId" : "60336454-a729-4e43-8cac-ac9ddbbce203",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Ah then honestly the main other things that are using it then are bench tests and digests. So it shouldb be good then.",
+        "createdAt" : "2021-02-25T15:27:46Z",
+        "updatedAt" : "2021-03-01T10:35:13Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "08c23dae2958863b7585b9e94bc577f83001458d",
+    "line" : 15,
+    "diffHunk" : "@@ -1,1 +118,122 @@   * interested in having stable results. This is not the case for parsing.\n   */\n  val defaultTokenizerDialect: Dialect = scala.meta.dialects.Scala213\n\n}"
+  }
+]

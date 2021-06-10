@@ -1,0 +1,46 @@
+[
+  {
+    "id" : "0f520601-dc0a-4310-91b1-042d6b94c2ec",
+    "prId" : 1728,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1728",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "0d0ce9f3-9393-4a85-a40a-58b45b504d48",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Good idea switching these all over.",
+        "createdAt" : "2020-06-11T13:01:33Z",
+        "updatedAt" : "2020-06-15T12:58:29Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b8fc594e56a5aefca5b9a80fb273aca01de04ede",
+    "line" : 17,
+    "diffHunk" : "@@ -1,1 +42,46 @@  var workspace: AbsolutePath = _\n\n  protected def initializationOptions: Option[InitializationOptions] = None\n\n  override def afterAll(): Unit = {"
+  },
+  {
+    "id" : "55035bef-50ee-4984-899d-36334952ebac",
+    "prId" : 1277,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1277",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b17c6c86-319b-40da-9b31-7b801a324e47",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "moved `cancelServer` and `newServer` to separate methods to that we can invoke them without having to invoke `beforeEach`",
+        "createdAt" : "2020-01-09T12:05:13Z",
+        "updatedAt" : "2020-01-26T10:34:42Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "49287d98409399c613ea481aeb08529f827e5982",
+    "line" : 46,
+    "diffHunk" : "@@ -1,1 +88,92 @@    if (context.test.tags.contains(Ignore)) return\n    newServer(context.test.name)\n  }\n\n  protected def createWorkspace(name: String): AbsolutePath = {"
+  }
+]

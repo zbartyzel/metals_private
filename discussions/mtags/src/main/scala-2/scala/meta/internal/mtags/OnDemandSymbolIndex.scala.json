@@ -1,0 +1,46 @@
+[
+  {
+    "id" : "0b0b438b-7c53-42a8-af1c-7d469bf89fa3",
+    "prId" : 2668,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2668",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "dd3a0566-993e-4d0f-bb94-fc02583d18ac",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I am wondering whether we should use `definitions` everywhere and only decide at call site whether `headOption` is enough. What do you think? Is there a lot of places that use it still? I am fine leaving as is, but just wondering how correct it is now.",
+        "createdAt" : "2021-04-22T11:57:01Z",
+        "updatedAt" : "2021-04-23T16:07:37Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b841a7c6-4f29-4bc0-8c51-1843df871099",
+        "parentId" : "dd3a0566-993e-4d0f-bb94-fc02583d18ac",
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "Unfortunately, there are still a lot of places where it's used.\r\n\r\nInitially, I thought that this fix will take less time than I already spend on it.\r\nSo, I would prefer to turn it into an issue - a kind of the second interaction of fixing wrong definitions. \r\n\r\nI think I will return to it after completing scala 3 related things.",
+        "createdAt" : "2021-04-23T14:29:11Z",
+        "updatedAt" : "2021-04-23T16:07:37Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "19f3d7f3-1732-4204-920c-eb18b6e5b74c",
+        "parentId" : "dd3a0566-993e-4d0f-bb94-fc02583d18ac",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Sure! Let's create a follow up to make sure that all places are properly handled.",
+        "createdAt" : "2021-04-23T14:35:24Z",
+        "updatedAt" : "2021-04-23T16:07:37Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3fcc251f9126b13a9372df15273d675aff8f745",
+    "line" : 16,
+    "diffHunk" : "@@ -1,1 +52,56 @@\n  override def definition(symbol: Symbol): Option[SymbolDefinition] = {\n    try findSymbolDefinition(symbol, symbol).headOption\n    catch onErrorOption\n  }"
+  }
+]

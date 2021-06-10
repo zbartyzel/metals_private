@@ -1,0 +1,310 @@
+[
+  {
+    "id" : "08264921-ccd1-4533-860d-73cb1564fa73",
+    "prId" : 2668,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2668",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "294f2446-2c51-4b79-90ae-4e2c0c63abe8",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Do we also need to consider srcjars here? https://github.com/scalameta/metals/pull/2710",
+        "createdAt" : "2021-04-17T14:33:35Z",
+        "updatedAt" : "2021-04-23T16:07:37Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b755480a-1ded-4215-aa65-50db5d75d47d",
+        "parentId" : "294f2446-2c51-4b79-90ae-4e2c0c63abe8",
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "Good catch. Thx!",
+        "createdAt" : "2021-04-20T16:41:13Z",
+        "updatedAt" : "2021-04-23T16:07:37Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b3aa1f80-6102-4d3a-bd99-b63907f3aafb",
+        "parentId" : "294f2446-2c51-4b79-90ae-4e2c0c63abe8",
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "Ah. Actually, that's a filesystem scheme. For  filesystem over `.srcjar` it should be the same: \"jar\"",
+        "createdAt" : "2021-04-20T17:38:03Z",
+        "updatedAt" : "2021-04-23T16:07:37Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9b80c2d4-a95a-40ba-83e6-917402098765",
+        "parentId" : "294f2446-2c51-4b79-90ae-4e2c0c63abe8",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Ah ok, I wasn't 100% sure, that's why I brought it up.",
+        "createdAt" : "2021-04-20T18:55:56Z",
+        "updatedAt" : "2021-04-23T16:07:37Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3fcc251f9126b13a9372df15273d675aff8f745",
+    "line" : 20,
+    "diffHunk" : "@@ -1,1 +285,289 @@    def jarPath: Option[AbsolutePath] = {\n      val filesystem = path.toNIO.getFileSystem()\n      if (filesystem.provider().getScheme().equals(\"jar\")) {\n        Some(\n          AbsolutePath("
+  },
+  {
+    "id" : "f6dd39f0-5942-4777-83e1-e64f5e444342",
+    "prId" : 2668,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2668",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "15b1e1e0-59cc-469a-b8e8-5495005c10bd",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Is it possible that relative might be empty?",
+        "createdAt" : "2021-04-22T10:39:12Z",
+        "updatedAt" : "2021-04-23T16:07:37Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "84eb1a97-26ce-4b0c-98a7-4deb1e1be3b9",
+        "parentId" : "15b1e1e0-59cc-469a-b8e8-5495005c10bd",
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "Honestly, I'm not sure about Windows.\r\nIn Linux, it can't.",
+        "createdAt" : "2021-04-23T13:38:54Z",
+        "updatedAt" : "2021-04-23T16:07:37Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3fcc251f9126b13a9372df15273d675aff8f745",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +279,283 @@    def toRelativeInside(prefix: AbsolutePath): Option[RelativePath] = {\n      val relative = path.toRelative(prefix)\n      if (relative.toNIO.getName(0).filename != \"..\") Some(relative)\n      else None\n    }"
+  },
+  {
+    "id" : "3f6754b4-a2b6-46dd-998a-de5821685abc",
+    "prId" : 2374,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2374",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "e26fe05e-a725-49d0-9485-237d38430020",
+        "parentId" : null,
+        "authorId" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "body" : "[note] Previously, the tokenizer always use `Trees.defaultDialect`, now it uses an appropriate dialect for the input.",
+        "createdAt" : "2021-01-20T16:17:07Z",
+        "updatedAt" : "2021-01-22T16:41:19Z",
+        "lastEditedBy" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3bdee6d5b72cf6cfee580941ef1b1c2987b172b",
+    "line" : 20,
+    "diffHunk" : "@@ -1,1 +702,706 @@      tree.origin match {\n        case Origin.Parsed(input, dialect, pos) =>\n          val tokens = dialect(input).tokenize.get\n          tokens.slice(0, pos.start - 1).reverseIterator\n        case _ => Iterator.empty"
+  },
+  {
+    "id" : "0078bdf2-372a-4f24-b3d1-e1cb2ecaf4d8",
+    "prId" : 1523,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1523",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "1a71f747-3edf-4968-8f30-9e7d79412c62",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Ignorant question. This is just because Scala3 produces semanticdb, and therefore are checking for this rather than the plugin right?",
+        "createdAt" : "2020-04-04T08:48:59Z",
+        "updatedAt" : "2020-04-15T13:50:25Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "adb04f77-86c6-4284-b193-1e56c8bb7fcf",
+        "parentId" : "1a71f747-3edf-4968-8f30-9e7d79412c62",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Yes, we don't need to check for the plugin, since we don't need one.",
+        "createdAt" : "2020-04-04T09:55:10Z",
+        "updatedAt" : "2020-04-15T13:50:25Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1142490703f832961ac0df1debd14b4f3b12ce7d",
+    "line" : 112,
+    "diffHunk" : "@@ -1,1 +483,487 @@    def isSemanticdbEnabled(scalaVersion: String): Boolean = {\n      if (ScalaVersions.isScala3Version(scalaVersion)) {\n        item.getOptions.asScala.exists { opt => opt == \"-Ysemanticdb\" }\n      } else {\n        item.getOptions.asScala.exists { opt =>"
+  },
+  {
+    "id" : "c128b850-392b-4a04-9423-4d18e4c0458d",
+    "prId" : 1155,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1155",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "1a237958-8f3f-4225-a5be-6899c1c78d77",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "So there is still a risk we will have a non-atomic operation? Shouldn't we retry the atomic move again or resign altogether.",
+        "createdAt" : "2019-12-05T20:41:02Z",
+        "updatedAt" : "2019-12-05T20:41:11Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ce2fc1db-5ba3-4710-9c7b-9e54ad2db73f",
+        "parentId" : "1a237958-8f3f-4225-a5be-6899c1c78d77",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Some file systems don’t support atomic moves so the best we can do is fall back to a normal move. ",
+        "createdAt" : "2019-12-05T20:59:11Z",
+        "updatedAt" : "2019-12-05T20:59:11Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8090cf47-3f96-45cc-b057-53b9ba4863b3",
+        "parentId" : "1a237958-8f3f-4225-a5be-6899c1c78d77",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Could there be a more specific exception to catch here?",
+        "createdAt" : "2019-12-05T21:00:23Z",
+        "updatedAt" : "2019-12-05T21:00:23Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4524a4b4-61af-4ca7-9a30-42aa1293246e",
+        "parentId" : "1a237958-8f3f-4225-a5be-6899c1c78d77",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "The docs don't specify what exception will be thrown so I didn't want to be too specific. ",
+        "createdAt" : "2019-12-06T13:36:25Z",
+        "updatedAt" : "2019-12-06T13:36:26Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b68fb8c5f762e67fc61452fc9363fd1cebf0ac19",
+    "line" : 32,
+    "diffHunk" : "@@ -1,1 +365,369 @@      } catch {\n        case NonFatal(_) =>\n          Files.move(tmp, path.toNIO, StandardCopyOption.REPLACE_EXISTING)\n      }\n    }"
+  },
+  {
+    "id" : "1c2a212b-793c-4821-aeeb-0797712563e0",
+    "prId" : 1057,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1057",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "2924a8eb-ad68-489a-b6d0-375fc7a54919",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "🙈 ",
+        "createdAt" : "2019-11-11T04:03:20Z",
+        "updatedAt" : "2019-11-11T14:41:31Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "87131d0d-bac2-4c23-b93f-ea454bf7eac6",
+        "parentId" : "2924a8eb-ad68-489a-b6d0-375fc7a54919",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Wish this was easier to write...",
+        "createdAt" : "2019-11-11T04:03:29Z",
+        "updatedAt" : "2019-11-11T14:41:31Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c168fe3b-f5c3-43c4-acce-1edf4cee6505",
+        "parentId" : "2924a8eb-ad68-489a-b6d0-375fc7a54919",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "```scala\r\ntry initializeParams.getCapabilities.getTextDocument.getCompletion.getCompletionItem.getSnippetSupport.booleanValue\r\ncatch { case _: NPE => false }\r\n```\r\n 😅 ",
+        "createdAt" : "2019-11-11T04:04:34Z",
+        "updatedAt" : "2019-11-11T14:41:31Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2d8adf5d-74eb-48a0-984d-1b8f0b52de2b",
+        "parentId" : "2924a8eb-ad68-489a-b6d0-375fc7a54919",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "poor man's monad :P ",
+        "createdAt" : "2019-11-11T14:20:14Z",
+        "updatedAt" : "2019-11-11T14:41:31Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "03c3f686dd1789f90cd4b4dd18b979160753abb7",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +510,514 @@      } yield hierarchicalDocumentSymbolSupport.booleanValue).getOrElse(false)\n\n    def supportsCompletionSnippets: Boolean =\n      (for {\n        params <- initializeParams"
+  },
+  {
+    "id" : "88297edb-d739-494b-80c9-e69803b0cf73",
+    "prId" : 1048,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1048",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "42956011-f9cc-4cab-a303-39025d5d1321",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "`path.startsWith(workspace)` should strictly speaking be a condition as well",
+        "createdAt" : "2019-11-11T13:50:07Z",
+        "updatedAt" : "2019-11-11T16:33:17Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "72c7fcc7-edd6-4f5e-97c7-1cb966c3da34",
+        "parentId" : "42956011-f9cc-4cab-a303-39025d5d1321",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Added! ",
+        "createdAt" : "2019-11-11T16:33:44Z",
+        "updatedAt" : "2019-11-11T16:33:44Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "32617da1c138d4dd74af7289c14ff3aeb1bc9654",
+    "line" : 11,
+    "diffHunk" : "@@ -1,1 +254,258 @@        isInReadonlyDirectory(workspace)\n\n    def isWorkspaceSource(workspace: AbsolutePath): Boolean =\n      isLocalFileSystem(workspace) &&\n        !isInReadonlyDirectory(workspace) &&"
+  },
+  {
+    "id" : "d683ec3a-9301-496f-b909-6ea0db8c7685",
+    "prId" : 632,
+    "prUrl" : "https://github.com/scalameta/metals/pull/632",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "9f0c3a18-ce27-4452-a4b0-6a00e8f19061",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "\\o/",
+        "createdAt" : "2019-04-10T08:53:10Z",
+        "updatedAt" : "2019-04-10T09:48:55Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "79793f51fa23f5e83e6e9dc8e633ae708eeb17a1",
+    "line" : 21,
+    "diffHunk" : "@@ -1,1 +502,506 @@  }\n\n  implicit class XtensionTreeTokenStream(tree: Tree) {\n    def leadingTokens: Iterator[Token] = tree.origin match {\n      case Origin.Parsed(input, _, pos) =>"
+  }
+]

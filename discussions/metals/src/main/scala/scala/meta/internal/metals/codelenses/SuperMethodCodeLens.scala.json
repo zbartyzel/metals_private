@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "6e28e136-2eed-4d18-ae31-46cdc67fc981",
+    "prId" : 1487,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1487",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "e3376051-7b3b-4512-81b0-cd5595986112",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I wonder if it would be faster to go over symbols, check if they are field or method and only as the last step find occurence?",
+        "createdAt" : "2020-03-23T13:08:56Z",
+        "updatedAt" : "2020-03-24T16:45:28Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "55838e6c9f4127bc8d06a8d31a6df496a0b729a8",
+    "line" : 43,
+    "diffHunk" : "@@ -1,1 +41,45 @@\n    for {\n      occurrence <- textDocument.occurrences\n      if occurrence.role.isDefinition\n      symbol = occurrence.symbol"
+  }
+]

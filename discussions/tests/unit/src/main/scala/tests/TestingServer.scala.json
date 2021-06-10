@@ -1,0 +1,321 @@
+[
+  {
+    "id" : "5053b118-c3e8-42fa-b02d-a020761f5c58",
+    "prId" : 2532,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2532",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "133e3326-8db1-465c-bf28-7e0c13fbb38b",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Could we maybe wait on the indexingPromise in MetalsLanguageServer? We can make it public and it should work the same.",
+        "createdAt" : "2021-03-04T11:02:15Z",
+        "updatedAt" : "2021-03-08T13:25:41Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "fbb380d8-6f6b-40d9-b257-119e4e559348",
+        "parentId" : "133e3326-8db1-465c-bf28-7e0c13fbb38b",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "🤔 so I tried adding in this in place of it:\r\n```scala\r\n _ <- server.server.indexingPromise.future\r\n```\r\nWhich I assumed would wait for it, but it seems to not work. This is what you had in mind right?",
+        "createdAt" : "2021-03-04T19:43:48Z",
+        "updatedAt" : "2021-03-08T13:25:41Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "16fa7f6a-778f-43aa-acc4-f692a3d04548",
+        "parentId" : "133e3326-8db1-465c-bf28-7e0c13fbb38b",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "It should wait until the workspace is indexed, so maybe we should also wait on `didSave` (it will wait on the compilation)?  The test classes are still not available by then?",
+        "createdAt" : "2021-03-04T20:25:57Z",
+        "updatedAt" : "2021-03-08T13:25:41Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "33b952ac-d38d-4603-8759-5091a9c7de61",
+        "parentId" : "133e3326-8db1-465c-bf28-7e0c13fbb38b",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Yea but there already is a did save in the others that I tried this on. For example in `testTarget` we have the `didOpen`, `didSave`, and then the `indexingPromise.future`, and that still doesn't have the test classes. I have no idea why that takes more time.",
+        "createdAt" : "2021-03-04T21:31:34Z",
+        "updatedAt" : "2021-03-08T13:25:41Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "322ddb54-06fb-4abf-8d5a-1ec12a41ab61",
+        "parentId" : "133e3326-8db1-465c-bf28-7e0c13fbb38b",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Damn, it might have something to do with Bloop. Alternative would be to use SBT bsp here, but it's fine to leave it as is.",
+        "createdAt" : "2021-03-04T21:37:57Z",
+        "updatedAt" : "2021-03-08T13:25:41Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "159c3d59-52d7-447f-b176-1dbc8ea08918",
+        "parentId" : "133e3326-8db1-465c-bf28-7e0c13fbb38b",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "🤔 I'm thinking for now to leave it as I played around with this a bit more and still can't get it to work as expected.",
+        "createdAt" : "2021-03-05T16:30:43Z",
+        "updatedAt" : "2021-03-08T13:25:41Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "23bedef101619ed619520c4b121ecae6c358d874",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +474,478 @@  }\n\n  def waitFor(sec: Long): Future[Unit] = Future { Thread.sleep(sec) }\n\n  def startDebugging("
+  },
+  {
+    "id" : "44499ce6-f2ce-4a44-89e4-402a223b7fe8",
+    "prId" : 1898,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1898",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "e81b1d61-6082-475a-807c-59668ef6f15e",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "We must have missed this when we migrated to `InitilizationOptions` because we were actually still passing the values for that into the `ClientCapabilities` experimental param. Now we just pass in an empty object there and do the values here.",
+        "createdAt" : "2020-07-09T16:00:27Z",
+        "updatedAt" : "2020-07-10T20:39:59Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ca95ee7f-63b0-4f3b-a296-568456ba3f81",
+        "parentId" : "e81b1d61-6082-475a-807c-59668ef6f15e",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "I keep finding small fixes, but no the one that fixes my issue 😆 ",
+        "createdAt" : "2020-07-09T16:01:17Z",
+        "updatedAt" : "2020-07-10T20:39:59Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a09c54df4983c2390e8b249633004d3433d16915",
+    "line" : 30,
+    "diffHunk" : "@@ -1,1 +417,421 @@        .asJava\n\n    params.setInitializationOptions(existingInitOptions.toJson)\n    params.setCapabilities(\n      new ClientCapabilities("
+  },
+  {
+    "id" : "ac06fd76-e852-4f62-bde0-a9fabbdd65fc",
+    "prId" : 1898,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1898",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "a3e0bb55-7793-4bf0-8476-36696331d2b1",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I would just add a simple json library for tests that takes into account options for tests, would be much nicer. ",
+        "createdAt" : "2020-07-10T15:22:26Z",
+        "updatedAt" : "2020-07-10T20:39:59Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b1c1a2ed-acf3-4bca-87e6-b21196d10b05",
+        "parentId" : "a3e0bb55-7793-4bf0-8476-36696331d2b1",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Could you expand on what you mean by this?",
+        "createdAt" : "2020-07-10T16:59:41Z",
+        "updatedAt" : "2020-07-10T20:39:59Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "61380959-d094-42c6-af3e-96aa15512eab",
+        "parentId" : "a3e0bb55-7793-4bf0-8476-36696331d2b1",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Ach, that was totally not clear. I just meant adding something like upickle. Automatically transforming case class into a string and then using gson to parse that.  This should have the same effect as the reflective access.",
+        "createdAt" : "2020-07-10T17:06:58Z",
+        "updatedAt" : "2020-07-10T20:39:59Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7b2abf20-206b-4768-a0be-7fd6e954cdb8",
+        "parentId" : "a3e0bb55-7793-4bf0-8476-36696331d2b1",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "So it looks like in order for uPickle to handle this correctly I would need to define a serializer in the companion object of `InitializationOptions`, but we don't include uPickle. I'm hesitant to add a library just to do this. What do you think?",
+        "createdAt" : "2020-07-10T20:24:58Z",
+        "updatedAt" : "2020-07-10T20:39:59Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d2183b6e-1245-4655-bb20-a5f639091256",
+        "parentId" : "a3e0bb55-7793-4bf0-8476-36696331d2b1",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I haven't noticed that, I was thinking of only adding a library to the test project. This way we wouldn't be adding additional dependencies to the project itself.\r\n\r\nWe can leave it as is, it was just an idea.",
+        "createdAt" : "2020-07-10T20:38:07Z",
+        "updatedAt" : "2020-07-10T20:39:59Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a09c54df4983c2390e8b249633004d3433d16915",
+    "line" : 18,
+    "diffHunk" : "@@ -1,1 +405,409 @@    // collect the fields that are set, get the values, and then make them into\n    // a map that will become a JsonObject to pass in as the InitializationOptions\n    val existingInitOptions =\n      initOptions.getClass.getDeclaredFields\n        .map { field =>"
+  },
+  {
+    "id" : "6b247e03-7c80-4986-8a1d-511fc7b74c0e",
+    "prId" : 1753,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1753",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "a3ec1f24-b84e-468a-bf59-46e999fd8e92",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "`triggerCharacter` ?",
+        "createdAt" : "2020-05-15T15:29:47Z",
+        "updatedAt" : "2020-05-29T09:53:41Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a0c3db8e-d468-4e7d-871c-6ade0f88ca6e",
+        "parentId" : "a3ec1f24-b84e-468a-bf59-46e999fd8e92",
+        "authorId" : "da2cd095-1f8f-45c7-9ea4-3315cad4b0b7",
+        "body" : "ok",
+        "createdAt" : "2020-05-15T16:10:53Z",
+        "updatedAt" : "2020-05-29T09:53:41Z",
+        "lastEditedBy" : "da2cd095-1f8f-45c7-9ea4-3315cad4b0b7",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d1994009-0663-4c61-a896-48dd1029d22e",
+        "parentId" : "a3ec1f24-b84e-468a-bf59-46e999fd8e92",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I think this might have been fixed in the other commit we had issues with. Could you change it again?",
+        "createdAt" : "2020-05-20T16:08:50Z",
+        "updatedAt" : "2020-05-29T09:53:41Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "60e701e5d87db159576e92e8239681d2abd92c6e",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +608,612 @@      expected: String,\n      autoIndent: String,\n      replaceWith: String,\n      root: AbsolutePath = workspace\n  )(implicit loc: munit.Location): Future[Unit] = {"
+  },
+  {
+    "id" : "2a640af2-790c-4b0a-8346-21d054b02506",
+    "prId" : 1286,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1286",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ff5c2c5a-e072-499f-b8fc-55637ae13204",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "the `endOffset` is adjusted to account for the removal of the range markers",
+        "createdAt" : "2020-01-11T16:13:53Z",
+        "updatedAt" : "2020-01-11T17:12:09Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "172f556f-06fe-496c-ac12-7837efb07b2e",
+        "parentId" : "ff5c2c5a-e072-499f-b8fc-55637ae13204",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "A lot of this code seem duplicate to what we already have. Would it be possible to reuse the methods that we use for changing to the position in params? ",
+        "createdAt" : "2020-01-12T16:48:48Z",
+        "updatedAt" : "2020-01-12T16:49:11Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ef3b160c-4f30-4f99-90cf-7c1526dd703a",
+        "parentId" : "ff5c2c5a-e072-499f-b8fc-55637ae13204",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "@tgodzik which method? Anyway, sure, I'll open a tech debt issue.",
+        "createdAt" : "2020-01-14T09:20:07Z",
+        "updatedAt" : "2020-01-14T09:20:07Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7e6135a896a913f6ec9a1ae82ca098806ffdfea3",
+    "line" : 25,
+    "diffHunk" : "@@ -1,1 +606,610 @@    val path = root.resolve(filename)\n    path.touch()\n    val pos = m.Position.Range(input, startOffset, endOffset - \"<<>>\".length())\n    for {\n      _ <- didChange(filename)(_ => text)"
+  },
+  {
+    "id" : "37f8ab05-6b64-4158-9874-d082f9c8c9ca",
+    "prId" : 934,
+    "prUrl" : "https://github.com/scalameta/metals/pull/934",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "1f6b0471-e45e-441a-b46b-08c63abd9ec2",
+        "parentId" : null,
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "I know we have a convention of calling those names `assertFoo` but I would like to propose that at one point we rename those `assertFoo` to `verifyFoo` because after reading `assert implementation` I want to ask `assert that implementation *what*?` Let's make the act of verification explicit in the name.",
+        "createdAt" : "2019-09-19T15:21:04Z",
+        "updatedAt" : "2019-10-03T13:51:34Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d837625e03b77aa42a76d4f700137294452174fa",
+    "line" : 9,
+    "diffHunk" : "@@ -1,1 +617,621 @@  }\n\n  def assertImplementation(\n      filename: String,\n      query: String,"
+  },
+  {
+    "id" : "3c5a88b7-f0dc-4c0c-a031-cda2569488c3",
+    "prId" : 621,
+    "prUrl" : "https://github.com/scalameta/metals/pull/621",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "410444db-96f1-460b-bd43-284d61f1a947",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I think we might be able to avoid `expected` by encoding the `<<` ranges in the `query` string.\r\n```scala\r\nassertHover(\r\n\"\"\"\r\nobject Main {\r\n  val <<abc>> = 1\r\n  println(<<a@@bc>> + <<abc>>)\r\n}\r\n```\r\n\r\nI don't feel strongly about it, you can use the approach you prefer",
+        "createdAt" : "2019-04-02T15:08:19Z",
+        "updatedAt" : "2019-04-05T09:13:03Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c9cdcf13-231b-483b-9b5b-815a7bf56300",
+        "parentId" : "410444db-96f1-460b-bd43-284d61f1a947",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "It's one string now, should be simpler to write new tests.",
+        "createdAt" : "2019-04-04T14:05:34Z",
+        "updatedAt" : "2019-04-05T09:13:03Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "6f03d2264f9c4e8e28d2e258ca99d24915c82e17",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +433,437 @@      filename: String,\n      query: String,\n      expected: String,\n      root: AbsolutePath = workspace\n  ): Future[Unit] = {"
+  }
+]

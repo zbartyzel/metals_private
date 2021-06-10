@@ -1,0 +1,112 @@
+[
+  {
+    "id" : "17b0250e-f8ad-4c36-a2e8-e9ccae079b9d",
+    "prId" : 2668,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2668",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "d1c27f83-4ab7-48b2-b9d2-a84fedf76b0f",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Out of curiosity, why the change from the `TrieMap` to `List`? Normally I prefer to have a Map for this over a list of tuples unless there is a good reason not to.",
+        "createdAt" : "2021-04-09T14:11:20Z",
+        "updatedAt" : "2021-04-23T16:07:36Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2394e014-5a69-465a-84b1-d3d8e3a6aa96",
+        "parentId" : "d1c27f83-4ab7-48b2-b9d2-a84fedf76b0f",
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "`scala.collection.concurrent.TrieMap` is too complex type for this method. It was used because `OnDemandSymbolIndex.toplevels` had this signature and there was this tricky method: https://github.com/scalameta/metals/blob/03704c17b5397bd8feb4771d0bedf9a6dfe0a660/mtags/src/main/scala-2/scala/meta/internal/mtags/OnDemandSymbolIndex.scala#L96-L104\r\n\r\nBut as `toplevels` signature was changed to `TrieMap[String, Set[AbsolutePath]]` it became inconvenient to use `addSourceJarTopLevels`  as they were so I changed this part and replaced `TrieMap` here on smth more suitable.\r\n\r\nIt might be `Map` but it anyway used only as a `List`.",
+        "createdAt" : "2021-04-12T14:23:35Z",
+        "updatedAt" : "2021-04-23T16:07:36Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3f6d9764-f418-4639-8421-37dcde24230a",
+        "parentId" : "d1c27f83-4ab7-48b2-b9d2-a84fedf76b0f",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Alright, sounds good and thanks for the explanation.",
+        "createdAt" : "2021-04-17T14:36:04Z",
+        "updatedAt" : "2021-04-23T16:07:37Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3fcc251f9126b13a9372df15273d675aff8f745",
+    "line" : 18,
+    "diffHunk" : "@@ -1,1 +31,35 @@    try {\n      val fs = PlatformFileIO.newJarFileSystem(path, create = false)\n      val toplevels = List.newBuilder[(String, AbsolutePath)]\n      conn()\n        .query("
+  },
+  {
+    "id" : "9da1656c-6bc0-46c5-9436-b26db43a801a",
+    "prId" : 2668,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2668",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "db80f608-054e-41d3-b29f-9c8a47f0d960",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Any reason to change from using a Map to a list? Typically I prefer Maps over List of tuples for this type of thing.",
+        "createdAt" : "2021-04-09T14:33:59Z",
+        "updatedAt" : "2021-04-23T16:07:36Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3fcc251f9126b13a9372df15273d675aff8f745",
+    "line" : 18,
+    "diffHunk" : "@@ -1,1 +31,35 @@    try {\n      val fs = PlatformFileIO.newJarFileSystem(path, create = false)\n      val toplevels = List.newBuilder[(String, AbsolutePath)]\n      conn()\n        .query("
+  },
+  {
+    "id" : "f4dba8b0-e977-40e1-9e63-da2b2625c141",
+    "prId" : 534,
+    "prUrl" : "https://github.com/scalameta/metals/pull/534",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "72c93712-10fd-4e32-907e-ea23adf088b7",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "What happens for foreign key references in `toplevel_symbol`? Does h2 support cascade deletes?",
+        "createdAt" : "2019-02-24T13:11:20Z",
+        "updatedAt" : "2019-02-24T16:00:43Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b3226116-91e4-4fd3-af3c-559027e30b35",
+        "parentId" : "72c93712-10fd-4e32-907e-ea23adf088b7",
+        "authorId" : "670bdad4-bf9b-431f-80f0-e86350cc0bd5",
+        "body" : "H2 support cascade deletes, when the jar entry in indexex_jar is deleted, the entries in toplevel_symbol entries referencing that jar will go as well.",
+        "createdAt" : "2019-02-24T15:10:39Z",
+        "updatedAt" : "2019-02-24T16:00:43Z",
+        "lastEditedBy" : "670bdad4-bf9b-431f-80f0-e86350cc0bd5",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "276a2eb1-d5d8-42f5-b8d8-113d0b0d172a",
+        "parentId" : "72c93712-10fd-4e32-907e-ea23adf088b7",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "@olafurpg see for reference https://github.com/scalameta/metals/pull/534/files#diff-d0c092f838650407c2e87cb728cd09baR11",
+        "createdAt" : "2019-02-24T16:38:31Z",
+        "updatedAt" : "2019-02-24T16:38:31Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "68a865709d6bc7d432ff4ffaa2fe1eac07d7409a",
+    "line" : 102,
+    "diffHunk" : "@@ -1,1 +100,104 @@    val md5s = usedPaths.map(getMD5Digest).map(\"'\" + _ + \"'\").mkString(\",\")\n    conn().update {\n      s\"delete from indexed_jar where md5 not in ($md5s)\"\n    } { _ =>\n      ()"
+  }
+]

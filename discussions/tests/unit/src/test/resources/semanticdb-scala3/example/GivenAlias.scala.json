@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "47009277-d921-4730-a5f3-acd85939fbb3",
+    "prId" : 2589,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2589",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "2928504c-423a-41bf-ad7a-d9eda9ba02fa",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "https://github.com/lampepfl/dotty/issues/11692",
+        "createdAt" : "2021-03-10T17:20:04Z",
+        "updatedAt" : "2021-03-11T14:26:31Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "12fbb0bb50d972bd724663e2c2d6eee8c85cb404",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +2,6 @@\n/*example.GivenAlias$package.*/given intValue/*example.GivenAlias$package.intValue.*/: Int/*scala.Int#*/ = 4\ngiven String/*scala.Predef.String#*/ = \"st/*example.GivenAlias$package.given_String.*/r\""
+  }
+]

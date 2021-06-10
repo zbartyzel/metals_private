@@ -1,0 +1,46 @@
+[
+  {
+    "id" : "486dcd16-edd7-4f68-9224-39b28e97c341",
+    "prId" : 184,
+    "prUrl" : "https://github.com/scalameta/metals/pull/184",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "79fe0e42-4683-4416-b358-92724b8f1194",
+        "parentId" : null,
+        "authorId" : "1977d0df-25a0-4fd9-a417-470eafe55f98",
+        "body" : "The test should check not only two messages, but what happens when you receive two split up bytebuffers (the first with only the header, and the second one with the body of the first one + the header of the next message).\r\n  \r\nThe previous scenario can happen according to the spec, since it's only the order of buffering what you're testing. ",
+        "createdAt" : "2018-01-18T21:27:08Z",
+        "updatedAt" : "2018-01-19T09:27:18Z",
+        "lastEditedBy" : "1977d0df-25a0-4fd9-a417-470eafe55f98",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "44470314-7129-4e41-9e00-9069957b5047",
+        "parentId" : "79fe0e42-4683-4416-b358-92724b8f1194",
+        "authorId" : "1977d0df-25a0-4fd9-a417-470eafe55f98",
+        "body" : "Ok, 👌 re reading this now and it seems that you’re handling the scenario.",
+        "createdAt" : "2018-01-19T08:37:42Z",
+        "updatedAt" : "2018-01-19T09:27:18Z",
+        "lastEditedBy" : "1977d0df-25a0-4fd9-a417-470eafe55f98",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a31071c6-e84f-4cae-94f7-e4b8d177c91f",
+        "parentId" : "79fe0e42-4683-4416-b358-92724b8f1194",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I added a property test that checks that messages can come chunked at any offset, this should hopefully catch any off-by-one errors.",
+        "createdAt" : "2018-01-19T09:48:00Z",
+        "updatedAt" : "2018-01-19T09:48:00Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e8f46f9f766b796b4404ccf47a66c79f4474d83f",
+    "line" : 91,
+    "diffHunk" : "@@ -1,1 +89,93 @@      drop(10) ::\n      Nil\n  )\n\n  test(\"chunked-property\") {"
+  }
+]

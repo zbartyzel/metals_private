@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "b0f44a1e-9ecb-4abf-9a6c-9728391ea6fd",
+    "prId" : 2339,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2339",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "30d314ba-3eea-40cf-85ca-8df7bbbee3a0",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "More of just a curiosity, but I notice in a lot of Scalameta projects we prefer `abstract class` over `trait`. What's the main reason we do that?",
+        "createdAt" : "2020-12-31T12:18:26Z",
+        "updatedAt" : "2021-01-05T13:57:53Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "230b5865-a054-4641-af08-af0b2173b3d0",
+        "parentId" : "30d314ba-3eea-40cf-85ca-8df7bbbee3a0",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Haha, no idea, I didn't even realize I created an abstract class. :sweat_smile: ",
+        "createdAt" : "2020-12-31T14:56:19Z",
+        "updatedAt" : "2021-01-05T13:57:53Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ea21652384312e578cb028088e52572a7c0a6ac6",
+    "line" : 12,
+    "diffHunk" : "@@ -1,1 +10,14 @@ * with an explanation on how to fix it.\n */\nsealed abstract class ScalaProblem {\n\n  /**"
+  }
+]

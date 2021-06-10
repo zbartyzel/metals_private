@@ -1,0 +1,211 @@
+[
+  {
+    "id" : "bb545fae-496b-43b9-82dd-471a41c2249d",
+    "prId" : 1978,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1978",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "1178f01e-2cca-4acc-8f37-893d25602454",
+        "parentId" : null,
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "I think it should check the existence for `.scala` files too, not only `.sbt`.\r\n\r\nHowever, it's probably it's hard to find a project that has sbt-scala sources somewhere deeper than in `.project/` directory",
+        "createdAt" : "2020-08-07T10:52:07Z",
+        "updatedAt" : "2020-08-07T10:52:07Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "81f5597a-68c8-48ad-ba41-3d006aab74d4",
+        "parentId" : "1178f01e-2cca-4acc-8f37-893d25602454",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "We are not really registering those files within the correct build target, I will fix up together later.",
+        "createdAt" : "2020-08-07T11:04:58Z",
+        "updatedAt" : "2020-08-07T11:04:58Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "6bc3195e72fd6abcbe2ea77ab110577e0477ca73",
+    "line" : 39,
+    "diffHunk" : "@@ -1,1 +95,99 @@        val files = meta.list.toList\n        val hasSbtSrc = files.exists(f => f.isSbt && f.filename != \"metals.sbt\")\n        if (hasSbtSrc) {\n          val forSbtSupport = meta.resolve(\"project/project\")\n          sbtMetaDirs(meta.resolve(\"project\"), acc + forSbtSupport)"
+  },
+  {
+    "id" : "f5b13307-b76f-42b3-9750-bac2e5500462",
+    "prId" : 1865,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1865",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "48ca04ec-141f-4614-8417-bd24b20e1539",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "We should also check if these directories exist.",
+        "createdAt" : "2020-07-06T17:50:17Z",
+        "updatedAt" : "2020-07-31T11:55:17Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5599a9f1-a9db-4ff1-8e61-789372dd2c4f",
+        "parentId" : "48ca04ec-141f-4614-8417-bd24b20e1539",
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "If they aren't then they will be created in function below.\r\nhttps://github.com/scalameta/metals/blob/71ebf3d7b546d98483b4426d176d01a84bd70d69/metals/src/main/scala/scala/meta/internal/builds/SbtBuildTool.scala#L117-L125",
+        "createdAt" : "2020-07-21T11:12:26Z",
+        "updatedAt" : "2020-07-31T11:55:17Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b1abeb07-4694-4bc3-815a-f51f0f47db0c",
+        "parentId" : "48ca04ec-141f-4614-8417-bd24b20e1539",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Cool. One additional thing that I did notice is that when we create `metals.sbt` file then the next `bloopInstall` will create a next level and then the next during consequtive install, which we should not do. We should only create those files if `metals.sbt` is not the only thing in the project directory.",
+        "createdAt" : "2020-07-21T13:47:55Z",
+        "updatedAt" : "2020-07-31T11:55:17Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1ecc085ce9f65d042e2055d19fd627c5d49e7918",
+    "line" : 38,
+    "diffHunk" : "@@ -1,1 +113,117 @@    }\n\n    val mainMeta = workspace.resolve(\"project\")\n    val dirs = sbtMetaDirs(mainMeta, true, List(mainMeta))\n"
+  },
+  {
+    "id" : "56c8feb6-0ba8-4182-858a-13bd0a11a070",
+    "prId" : 852,
+    "prUrl" : "https://github.com/scalameta/metals/pull/852",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "37ca0ea0-d2d7-4355-a81d-0cdaa1fd1a4e",
+        "parentId" : null,
+        "authorId" : "1977d0df-25a0-4fd9-a417-470eafe55f98",
+        "body" : "Should we not also create this file in `project/project/metals.sbt` if any Scala files are defined under `project`?",
+        "createdAt" : "2019-08-05T16:10:20Z",
+        "updatedAt" : "2019-10-02T17:05:22Z",
+        "lastEditedBy" : "1977d0df-25a0-4fd9-a417-470eafe55f98",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "35d31fc3-28f0-433d-9de2-5f06ef04b6f6",
+        "parentId" : "37ca0ea0-d2d7-4355-a81d-0cdaa1fd1a4e",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "The sbt targets are not yet supported, so this will only be needed once we actually add sbt support",
+        "createdAt" : "2019-08-09T09:03:12Z",
+        "updatedAt" : "2019-10-02T17:05:22Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0b7f658a-53a1-45a0-94b3-2768350373da",
+        "parentId" : "37ca0ea0-d2d7-4355-a81d-0cdaa1fd1a4e",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Additionally we can add to metals.sbt `bloopExportJarClassifiers := Some(Set(\\\"source\\\"))` if we add plugin to project/project. Should be easy to do when working on sbt support",
+        "createdAt" : "2019-08-12T11:49:43Z",
+        "updatedAt" : "2019-10-02T17:05:22Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "21f992f2b66ce835b0205c99a71b743ae3ba960f",
+    "line" : 75,
+    "diffHunk" : "@@ -1,1 +99,103 @@    val projectDir = workspace.resolve(\"project\")\n    projectDir.toFile.mkdir()\n    val metalsPluginfile = projectDir.resolve(\"metals.sbt\")\n    val pluginFileShouldChange = !metalsPluginfile.isFile ||\n      !metalsPluginfile.readAllBytes.sameElements(bytes)"
+  },
+  {
+    "id" : "5220efb7-7b7c-432c-aec0-a959415f8392",
+    "prId" : 852,
+    "prUrl" : "https://github.com/scalameta/metals/pull/852",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "9a4ce7d9-3f19-42ca-a80e-491417649bd8",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "\r\n```suggestion\r\n    val isPreReleaseVersion = bloopSbtVersion.contains(\"+\") || bloopSbtVersion.contains(\"-\")\r\n```\r\nStrictly speaking, a snapshot version should end with `-SNAPSHOT`. Including `-` also guards us if bloop changes it's usage of `+` versions. Some filesystems require weird encodings for filenames with `+`.",
+        "createdAt" : "2019-08-25T17:56:28Z",
+        "updatedAt" : "2019-10-02T17:05:22Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1cd9d4e7-42ae-4b0e-ac30-4fce8204edc5",
+        "parentId" : "9a4ce7d9-3f19-42ca-a80e-491417649bd8",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I don't think bloop ever releases with `version-SNAPSHOT`, but I can add it here, just don't think it will change much.",
+        "createdAt" : "2019-08-28T12:58:23Z",
+        "updatedAt" : "2019-10-02T17:05:22Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3544b698-020e-4437-af68-d9714ae77e79",
+        "parentId" : "9a4ce7d9-3f19-42ca-a80e-491417649bd8",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Fair point.",
+        "createdAt" : "2019-08-28T22:25:36Z",
+        "updatedAt" : "2019-10-02T17:05:22Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "21f992f2b66ce835b0205c99a71b743ae3ba960f",
+    "line" : 113,
+    "diffHunk" : "@@ -1,1 +133,137 @@   */\n  private def sbtPlugin(bloopSbtVersion: String): String = {\n    val isSnapshotVersion = bloopSbtVersion.contains(\"+\")\n    val resolvers = if (isSnapshotVersion) {\n      \"\"\"resolvers += Resolver.bintrayRepo(\"scalacenter\", \"releases\")\"\"\""
+  },
+  {
+    "id" : "a7f1c6c2-ded4-4896-9e74-9319c927fb9e",
+    "prId" : 852,
+    "prUrl" : "https://github.com/scalameta/metals/pull/852",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "395b4096-33f1-4474-bfe2-77f820256461",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "What do you think about adding the following entries as well?\r\n```\r\n.metals/\r\n.bloop/\r\n```\r\nThese entries should ideally be in the workspace .gitignore instead of the global .gitignore because VS Code only uses the workspace gitignore in \"Open file\".",
+        "createdAt" : "2019-08-25T21:02:59Z",
+        "updatedAt" : "2019-10-02T17:05:22Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3a3cf889-a148-4f01-b1bd-a7a9290bc9b6",
+        "parentId" : "395b4096-33f1-4474-bfe2-77f820256461",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I was thinking about it, but decided not to do in this PR, but I can for sure do it here.",
+        "createdAt" : "2019-08-28T13:00:22Z",
+        "updatedAt" : "2019-10-02T17:05:22Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "227ac176-3bbb-4919-8650-d03a36569154",
+        "parentId" : "395b4096-33f1-4474-bfe2-77f820256461",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "It can be done as a separate PR.",
+        "createdAt" : "2019-08-28T22:25:51Z",
+        "updatedAt" : "2019-10-02T17:05:22Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "21f992f2b66ce835b0205c99a71b743ae3ba960f",
+    "line" : 50,
+    "diffHunk" : "@@ -1,1 +84,88 @@  private def gitignoreMetals(workspace: AbsolutePath) = {\n    val gitignore = workspace.resolve(\".gitignore\")\n    val gitIgnoreContents = \"project/metals.sbt\"\n    if (gitignore.exists && !gitignore.readText.contains(gitIgnoreContents)) {\n      gitignore.appendText(s\"\\n$gitIgnoreContents\\n\")"
+  }
+]

@@ -1,0 +1,123 @@
+[
+  {
+    "id" : "81927b50-8da1-4b0d-8334-8e7e0d0415aa",
+    "prId" : 1466,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1466",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "e4c30b3b-e404-4221-99e6-4a54a2774909",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This should fixed the issues with missing logs.",
+        "createdAt" : "2020-03-30T15:31:24Z",
+        "updatedAt" : "2020-04-03T11:50:57Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d72fc182a42fd127dd0593dfbb3028ac615338b9",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +153,157 @@      name: String\n  ): RemoteEndpoint = {\n    val trace = GlobalTrace.setupTracePrinter(name)\n    if (trace == null) endpoint\n    else new EndpointLogger(endpoint, trace)"
+  },
+  {
+    "id" : "6b9d2be5-f481-4e61-9ec3-6977e8322e61",
+    "prId" : 1163,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1163",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "38c305b7-2958-4b09-9ae0-66f093082f27",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Can we pack this in option maybe? ",
+        "createdAt" : "2019-12-16T11:43:49Z",
+        "updatedAt" : "2019-12-18T11:36:11Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "04ef30f47759c2620cd886265e4c50169245a539",
+    "line" : 43,
+    "diffHunk" : "@@ -1,1 +48,52 @@\n  private val handleClientMessage: MessageConsumer = {\n    case null =>\n      () // ignore\n    case _ if cancelled.get() =>"
+  },
+  {
+    "id" : "2fad57fe-1a42-492a-b735-3c22ecff89ac",
+    "prId" : 1163,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1163",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "924d5b68-1fdd-468c-b431-3e1983da4997",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Here also - pack it into option maybe?",
+        "createdAt" : "2019-12-16T12:01:11Z",
+        "updatedAt" : "2019-12-18T11:36:11Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "04ef30f47759c2620cd886265e4c50169245a539",
+    "line" : 71,
+    "diffHunk" : "@@ -1,1 +69,73 @@  }\n\n  private val handleServerMessage: Message => Unit = {\n    case null =>\n      () // ignore"
+  },
+  {
+    "id" : "88869d30-2c07-46eb-a182-3d553eea7965",
+    "prId" : 1163,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1163",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "37985d06-b054-43eb-8692-eaecec9a8262",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "```suggestion\r\n   message => Option(message).foreach{\r\n```",
+        "createdAt" : "2019-12-17T08:36:24Z",
+        "updatedAt" : "2019-12-18T11:36:11Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "04ef30f47759c2620cd886265e4c50169245a539",
+    "line" : 43,
+    "diffHunk" : "@@ -1,1 +48,52 @@\n  private val handleClientMessage: MessageConsumer = {\n    case null =>\n      () // ignore\n    case _ if cancelled.get() =>"
+  },
+  {
+    "id" : "16b0fc20-aa33-4ab3-b7ab-b0aee00e3dbb",
+    "prId" : 935,
+    "prUrl" : "https://github.com/scalameta/metals/pull/935",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "c8410af0-94bc-4b4e-9d0d-cdc89ce7e049",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Can we pack it into an Option like:\r\n```scala\r\n{ message =>\r\n    Option(message) match {\r\n      case _ if cancelled.get() =>\r\n      // ignore\r\n      case Some(OutputNotification()) if outputTerminated =>\r\n      // ignore. When restarting, the output keeps getting printed for a short while after the\r\n      // output window gets refreshed resulting in stale messages being printed on top, before\r\n      // any actual logs from the restarted process\r\n\r\n      case Some(msg) =>\r\n        client.consume(msg)\r\n      case None =>\r\n    }\r\n  }\r\n```",
+        "createdAt" : "2019-12-05T16:08:55Z",
+        "updatedAt" : "2019-12-05T19:30:31Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f96d68b3-66f3-4171-94e5-e175e7210544",
+        "parentId" : "c8410af0-94bc-4b4e-9d0d-cdc89ce7e049",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "This change is unrelated to the PR, let's refactor it separately. I just wanted to fix a NPE",
+        "createdAt" : "2019-12-05T19:28:14Z",
+        "updatedAt" : "2019-12-05T19:30:31Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a95ae87fd9621161d156685f32480fcb7bb451a4",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +46,50 @@      outputTerminated = true\n      server.consume(message)\n    case null =>\n      () // do nothing\n    case message =>"
+  }
+]

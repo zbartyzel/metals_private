@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "a6e79223-1590-4bb4-a46a-6ba67b813e74",
+    "prId" : 1266,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1266",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "c81dc8a1-f23f-4034-82a7-e4cfe171f557",
+        "parentId" : null,
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "Why we don't treat this case as the stream being closed?",
+        "createdAt" : "2020-01-09T11:11:15Z",
+        "updatedAt" : "2020-01-09T19:41:06Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "db45e3ca-7dd5-4312-b78c-9490e2d7382f",
+        "parentId" : "c81dc8a1-f23f-4034-82a7-e4cfe171f557",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Actually this wasn't working properly this way. Should be better now.",
+        "createdAt" : "2020-01-09T17:36:44Z",
+        "updatedAt" : "2020-01-09T19:41:06Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0f92bf439ec2e556ef2dd37eb204d08963b7f24b",
+    "line" : 17,
+    "diffHunk" : "@@ -1,1 +15,19 @@      }\n    } catch {\n      case _: IOException =>\n    }\n  }"
+  },
+  {
+    "id" : "2d766eee-0476-4f85-90d9-0e6d8bc26e24",
+    "prId" : 1266,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1266",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "50fecb83-c048-4899-9c01-ca558e853dbd",
+        "parentId" : null,
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "It's worth commenting that any IOException means that the stream is `closed`, since it is not necessarily intuitive",
+        "createdAt" : "2020-01-09T11:21:33Z",
+        "updatedAt" : "2020-01-09T19:41:06Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ca58f06a-ab9b-406b-a6d0-3dc389e5eafc",
+        "parentId" : "50fecb83-c048-4899-9c01-ca558e853dbd",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Added",
+        "createdAt" : "2020-01-09T19:26:01Z",
+        "updatedAt" : "2020-01-09T19:41:06Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0f92bf439ec2e556ef2dd37eb204d08963b7f24b",
+    "line" : 32,
+    "diffHunk" : "@@ -1,1 +30,34 @@        isClosed = true\n        throw e\n    }\n  }\n}"
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "id" : "81072027-e425-47fd-a0cf-30b8a8faad0a",
+    "prId" : 1145,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1145",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "45208fb5-9c0f-4580-9807-8c390259a5bd",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "should this commit be in the Pants PR? (not a big deal anyway)",
+        "createdAt" : "2019-12-04T17:57:17Z",
+        "updatedAt" : "2019-12-05T11:14:30Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "77c52014-bafe-4b92-98a8-739eb9dd3504",
+        "parentId" : "45208fb5-9c0f-4580-9807-8c390259a5bd",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "It should be but it doesn't matter much, `BuildTools` already has logic to detect a Bazel workspace in order to display a message that \"bazel is not supported\"",
+        "createdAt" : "2019-12-05T10:34:27Z",
+        "updatedAt" : "2019-12-05T11:14:30Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "11de5969-b2df-47b0-8d0b-a96ab7e3a93c",
+        "parentId" : "45208fb5-9c0f-4580-9807-8c390259a5bd",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Ah, it makes sense 👍",
+        "createdAt" : "2019-12-05T10:54:26Z",
+        "updatedAt" : "2019-12-05T11:14:30Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c032fa899f1747d53cf2025b6e1cf03227b19980",
+    "line" : 26,
+    "diffHunk" : "@@ -1,1 +37,41 @@      check(\n        layout,\n        p => BuildTools.default(p).isPants,\n        isTrue\n      )"
+  }
+]

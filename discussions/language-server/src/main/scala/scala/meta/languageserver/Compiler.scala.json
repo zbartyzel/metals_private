@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "0df386c6-30ce-41bb-8ae1-9f32f5dcc4fb",
+    "prId" : 13,
+    "prUrl" : "https://github.com/scalameta/metals/pull/13",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "9170fb1b-eb6b-400a-8aa7-1aeba5ff8ac9",
+        "parentId" : null,
+        "authorId" : "1977d0df-25a0-4fd9-a417-470eafe55f98",
+        "body" : "Don't you need the scala version here?",
+        "createdAt" : "2017-11-08T10:04:41Z",
+        "updatedAt" : "2017-11-08T10:06:35Z",
+        "lastEditedBy" : "1977d0df-25a0-4fd9-a417-470eafe55f98",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8d88a5a6-b562-416b-b1cf-495fac01d43d",
+        "parentId" : "9170fb1b-eb6b-400a-8aa7-1aeba5ff8ac9",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "We will need to classload the compiler for it to work for more scala versions, that's the next step. Currently it's hardcoded for 2.12.3. We will likely only support the 2.11/2.12 releases supported by semanticdb, in order to provide scalafix linting as you type alongside completions.",
+        "createdAt" : "2017-11-08T10:33:57Z",
+        "updatedAt" : "2017-11-08T10:33:58Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c96d35e3100f36e275a98639498d78a3fa5a737a",
+    "line" : 17,
+    "diffHunk" : "@@ -1,1 +15,19 @@import org.langmeta.io.AbsolutePath\n\ncase class CompilerConfig(\n    sources: List[AbsolutePath],\n    scalacOptions: List[String],"
+  }
+]

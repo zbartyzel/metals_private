@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "7f3df8be-fd94-4216-a2b4-f13b629ead4d",
+    "prId" : 8,
+    "prUrl" : "https://github.com/scalameta/metals/pull/8",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "24a856e6-0f1f-414c-afdf-aebc272e26b1",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "is this `asInstanceOf` safe?",
+        "createdAt" : "2017-11-06T09:42:22Z",
+        "updatedAt" : "2017-11-06T20:58:35Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a154d42708a1a97e34a23a7c79a153d4ee52f44b",
+    "line" : 30,
+    "diffHunk" : "@@ -1,1 +28,32 @@  }\n  implicit class XtensionInputLSP(val input: m.Input) extends AnyVal {\n    def contents: String = input.asInstanceOf[m.Input.VirtualFile].value\n  }\n  implicit class XtensionAbsolutePathLSP(val path: m.AbsolutePath)"
+  }
+]

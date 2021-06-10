@@ -1,0 +1,46 @@
+[
+  {
+    "id" : "7cbfa95b-aba2-42a0-856a-1ce1de7150f1",
+    "prId" : 424,
+    "prUrl" : "https://github.com/scalameta/metals/pull/424",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "e36d2af0-1b71-49ce-8489-a239db0bc334",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "👍 ",
+        "createdAt" : "2018-12-18T15:39:23Z",
+        "updatedAt" : "2018-12-19T13:35:23Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "eade48fd8ffbc5572cad7092e373fee0027e4f0f",
+    "line" : 63,
+    "diffHunk" : "@@ -1,1 +61,65 @@      // check that when closing the buffer, the snapshot is lost, and no symbols\n      // are found for unparseable code\n      _ <- server.didClose(\"a/src/main/scala/a/Main.scala\")\n      _ = assertNoDiff(\n        server.documentSymbols(\"a/src/main/scala/a/Main.scala\"),"
+  },
+  {
+    "id" : "a70009be-8c4b-4119-aa6e-4bdf0b52c8f1",
+    "prId" : 424,
+    "prUrl" : "https://github.com/scalameta/metals/pull/424",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "bc36c4cb-1d62-4482-80f3-11e999ae7368",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Thanks! Forgot 😅 ",
+        "createdAt" : "2018-12-19T13:49:07Z",
+        "updatedAt" : "2018-12-19T13:49:07Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "eade48fd8ffbc5572cad7092e373fee0027e4f0f",
+    "line" : 42,
+    "diffHunk" : "@@ -1,1 +40,44 @@        \"\"\"|\n           |/*Outer(Module):4*/object Outer {\n           |  /*Outer.Inner(Class):3*/class Inner\n           |}\"\"\".stripMargin\n      )"
+  }
+]

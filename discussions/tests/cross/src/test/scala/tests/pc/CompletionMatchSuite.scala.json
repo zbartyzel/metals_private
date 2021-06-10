@@ -1,0 +1,123 @@
+[
+  {
+    "id" : "d5fdbc10-e736-4a9b-b23f-a440f999faf1",
+    "prId" : 1787,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1787",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "3afbd5c6-a9a7-457a-b755-4538117fdcfd",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Could we maybe add a test also with `def testExhaustive[T <: TestA](test: T): Boolean =`\r\n\r\nTo be sure it works without refinement too?",
+        "createdAt" : "2020-06-05T15:02:50Z",
+        "updatedAt" : "2020-06-05T16:00:28Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a73fd7eb-a0f2-4289-af74-02712100bf69",
+        "parentId" : "3afbd5c6-a9a7-457a-b755-4538117fdcfd",
+        "authorId" : "e999650b-8bb0-4f94-bc0d-356f3ca8023f",
+        "body" : "Added",
+        "createdAt" : "2020-06-05T15:56:31Z",
+        "updatedAt" : "2020-06-05T16:00:28Z",
+        "lastEditedBy" : "e999650b-8bb0-4f94-bc0d-356f3ca8023f",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "5dbc361817838563154efde0e38d589afc1909ac",
+    "line" : 48,
+    "diffHunk" : "@@ -1,1 +287,291 @@      |\n      |object Main {\n      |  def testExhaustive[T <: TestA with TestB](test: T): Boolean =\n      |    test m@@\n      |}\"\"\".stripMargin,"
+  },
+  {
+    "id" : "d6fdd7d0-20bf-45ec-935b-006c37492a31",
+    "prId" : 1254,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1254",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "7f69cf01-f7f4-48d1-b4ae-575fcb31fa65",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "here's an example. You could technically also do \r\n\r\n```suggestion\r\n    \"exhaustive-fully-qualify\".tag(Tag.ExpectedFailure),\r\n```\r\n\r\nbut since we'll reasonably have a few tags, I opted for a utility \"DSL\" method",
+        "createdAt" : "2020-01-05T17:06:10Z",
+        "updatedAt" : "2020-01-05T17:30:54Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ee48bbe3-5b9c-45fe-98aa-8f90d02dea9d",
+        "parentId" : "7f69cf01-f7f4-48d1-b4ae-575fcb31fa65",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I think it's fine to have a method here to ease discovery.",
+        "createdAt" : "2020-01-05T17:38:33Z",
+        "updatedAt" : "2020-01-05T17:40:53Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8c01432863b62a73bbfb809ed6739a6bf33ed62f",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +188,192 @@  // https://github.com/scalameta/metals/issues/1253\n  checkEdit(\n    \"exhaustive-fully-qualify\".expectedToFail,\n    \"\"\"\n      |package example"
+  },
+  {
+    "id" : "bfffea4d-e17c-4dc3-9c2d-d0700c12b19d",
+    "prId" : 1174,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1174",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "d7684923-edac-407f-b837-9dd9e90c3270",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Can we add another cross test case for 3rd party defined symbols? Cross tests have the ability to index library dependencies, see `indexScalaLibrary()`",
+        "createdAt" : "2019-12-13T12:36:29Z",
+        "updatedAt" : "2019-12-16T12:57:43Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0d5f96fb977b6c73c44b8b5c061480393ecb1c82",
+    "line" : 16,
+    "diffHunk" : "@@ -1,1 +109,113 @@\n  checkEdit(\n    \"exhaustive-sorting\",\n    \"\"\"package sort\n      |sealed abstract class TestTree"
+  },
+  {
+    "id" : "aeb40fc0-ebf1-4f58-b439-4297434efda9",
+    "prId" : 712,
+    "prUrl" : "https://github.com/scalameta/metals/pull/712",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "42852aba-6317-4a43-8d65-e5ae27781cc7",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Is this used any other way than `_ => false` or `_=> true` ? It could just be a flag then",
+        "createdAt" : "2019-05-07T14:52:35Z",
+        "updatedAt" : "2019-05-24T13:32:42Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "589812a5-7364-43b2-8cfe-7e0896ed5321",
+        "parentId" : "42852aba-6317-4a43-8d65-e5ae27781cc7",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "The `filter: String => Boolean` parameter is identical to the `checkEditLine` method.",
+        "createdAt" : "2019-05-07T15:17:43Z",
+        "updatedAt" : "2019-05-24T13:32:42Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c468269d2e0e47b5eaffc75cab0b2c825678b7fe",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +45,49 @@      |\"\"\".stripMargin,\n    \"\",\n    filter = _ => false\n  )\n  if (!isScala211)"
+  }
+]

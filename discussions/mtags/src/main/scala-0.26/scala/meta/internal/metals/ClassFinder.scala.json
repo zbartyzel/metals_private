@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "64f16c8d-b23e-437b-98b2-378ffeec596d",
+    "prId" : 1951,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1951",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "5c604d1e-2f55-448f-bd7c-b31d0482f150",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This is just copied for 0.26",
+        "createdAt" : "2020-07-28T08:53:56Z",
+        "updatedAt" : "2020-07-28T10:22:12Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "35af46a840e42c7d504259701e528f73c6787281",
+    "line" : 1,
+    "diffHunk" : "@@ -1,1 +-1,3 @@package scala.meta.internal.metals\n\nimport org.eclipse.lsp4j.Position"
+  }
+]

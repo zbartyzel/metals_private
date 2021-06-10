@@ -1,0 +1,134 @@
+[
+  {
+    "id" : "a2e56107-749b-4597-853d-77cfc8c5a70a",
+    "prId" : 994,
+    "prUrl" : "https://github.com/scalameta/metals/pull/994",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b4178867-de64-4de4-a40f-b56883cb7cf3",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Nit: Could you keep the braces consistent?",
+        "createdAt" : "2019-10-17T09:12:18Z",
+        "updatedAt" : "2019-10-18T19:07:35Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "aaf364fe67cd256af8a8f743e5008246635310ce",
+    "line" : 22,
+    "diffHunk" : "@@ -1,1 +76,80 @@      case ClientCommands.RefreshModel.id =>\n        if (refreshedOnIndex) {\n          refreshModelHandler()\n        } else {\n          refreshedOnIndex = true"
+  },
+  {
+    "id" : "12a54c21-610e-4b54-b9c9-35db23a48410",
+    "prId" : 862,
+    "prUrl" : "https://github.com/scalameta/metals/pull/862",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f553a04c-4878-4a90-b278-47d7ebdb6ae4",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I would lose the additional newlines here too.",
+        "createdAt" : "2019-08-09T14:24:06Z",
+        "updatedAt" : "2019-08-13T18:51:32Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "97eda30a-9f3e-42fa-98df-689ce96d8a05",
+        "parentId" : "f553a04c-4878-4a90-b278-47d7ebdb6ae4",
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "newlines are great. And here they separate the three steps of the function quite well:\r\n1. prepare the input\r\n2. apply the edit\r\n3. write the new content\r\n\r\nmaybe 1. and 2. could be aggregated into?\r\n```scala\r\n      val content = uri.toAbsolutePath.readText\r\n      val editedContent = \r\n        TextEdits.applyEdits(content, textEdits.asScala.toList)\r\n```",
+        "createdAt" : "2019-08-09T19:34:24Z",
+        "updatedAt" : "2019-08-13T18:51:32Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3ceb1de1-92c6-47fb-b917-0ecba134fdf0",
+        "parentId" : "f553a04c-4878-4a90-b278-47d7ebdb6ae4",
+        "authorId" : "f19bf047-3a04-41dc-83df-0bf2e4ba58e6",
+        "body" : "It doesn't work.\r\n`Illegal character in path at index 44: /home/tdudzik/Projects/metals/target/e2e/add package/single-level/a/src/main/scala/a/Main.scala` \r\n\r\nAlso, `AbsolutePath` is used two times (`readText` and `writeText`) so I think it's good idea to have the `path` value. ",
+        "createdAt" : "2019-08-12T10:02:38Z",
+        "updatedAt" : "2019-08-13T18:51:32Z",
+        "lastEditedBy" : "f19bf047-3a04-41dc-83df-0bf2e4ba58e6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "aa7b77a1-ac4d-4094-892a-809ce18705f5",
+        "parentId" : "f553a04c-4878-4a90-b278-47d7ebdb6ae4",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Illegal path seems to be because of the whitespace I think.",
+        "createdAt" : "2019-08-12T10:12:26Z",
+        "updatedAt" : "2019-08-13T18:51:32Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "46401aaa-6630-4c6a-b21d-0d8112a234b7",
+        "parentId" : "f553a04c-4878-4a90-b278-47d7ebdb6ae4",
+        "authorId" : "f19bf047-3a04-41dc-83df-0bf2e4ba58e6",
+        "body" : "Yes but after fixing whitespace issue another exception is thrown `Missing scheme\r\njava.lang.IllegalArgumentException: Missing scheme`",
+        "createdAt" : "2019-08-12T10:21:57Z",
+        "updatedAt" : "2019-08-13T18:51:32Z",
+        "lastEditedBy" : "f19bf047-3a04-41dc-83df-0bf2e4ba58e6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "332436a7-ab9b-492d-9d61-98738880607f",
+        "parentId" : "f553a04c-4878-4a90-b278-47d7ebdb6ae4",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Ok, let's jsut leave whatever works, that's jsut the testing client",
+        "createdAt" : "2019-08-12T10:34:59Z",
+        "updatedAt" : "2019-08-13T18:51:32Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "909e79755bb7dc96fad63232599fe13092152914",
+    "line" : 27,
+    "diffHunk" : "@@ -1,1 +76,80 @@    def applyEdits(uri: String, textEdits: java.util.List[TextEdit]): Unit = {\n      val path = AbsolutePath(uri)\n\n      val content = path.readText\n      val editedContent ="
+  },
+  {
+    "id" : "063f5f3d-3535-4db6-b39d-2d7955d058f0",
+    "prId" : 862,
+    "prUrl" : "https://github.com/scalameta/metals/pull/862",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "bbfa2f12-2ef3-4f37-a824-4105f81a03a0",
+        "parentId" : null,
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "this does some additional magic to string uri (see [XtensionStringUriProtocol::toAbsolutePath](https://github.com/scalameta/metals/blob/7f85d79c3596721e3afe7b7443860c8582648c86/metals/src/main/scala/scala/meta/internal/metals/MetalsEnrichments.scala#L329))\r\n```suggestion\r\n      val path = uri.toAbsolutePath\r\n```",
+        "createdAt" : "2019-08-09T19:33:35Z",
+        "updatedAt" : "2019-08-13T18:51:32Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0a92e197-f56d-4543-9a87-192d3be06fd0",
+        "parentId" : "bbfa2f12-2ef3-4f37-a824-4105f81a03a0",
+        "authorId" : "f19bf047-3a04-41dc-83df-0bf2e4ba58e6",
+        "body" : "After this change exception is thrown: `Missing scheme java.lang.IllegalArgumentException: Missing scheme`. It seems that `uri` is actually not a valid URI. ",
+        "createdAt" : "2019-08-12T10:20:34Z",
+        "updatedAt" : "2019-08-13T18:51:32Z",
+        "lastEditedBy" : "f19bf047-3a04-41dc-83df-0bf2e4ba58e6",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "909e79755bb7dc96fad63232599fe13092152914",
+    "line" : 26,
+    "diffHunk" : "@@ -1,1 +75,79 @@  ): CompletableFuture[ApplyWorkspaceEditResponse] = {\n    def applyEdits(uri: String, textEdits: java.util.List[TextEdit]): Unit = {\n      val path = AbsolutePath(uri)\n\n      val content = path.readText"
+  }
+]

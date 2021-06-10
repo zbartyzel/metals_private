@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "9094ab29-f65f-42a2-af56-8c8543a9ee2a",
+    "prId" : 2825,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2825",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "6e9e81cf-abeb-43f6-8408-d37b49e15786",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This is the last problematic case, it's depended on fixing the `shortType` method in case of conflicts, which doesn't work perfectly currently.",
+        "createdAt" : "2021-05-31T15:14:06Z",
+        "updatedAt" : "2021-05-31T15:14:07Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "4c925bb564b537775be70666582c8e6f17d58fd2",
+    "line" : 152,
+    "diffHunk" : "@@ -1,1 +336,340 @@\n  checkEdit(\n    \"path\".tag(IgnoreScala3),\n    \"\"\"|import java.nio.file.Paths\n       |object ExplicitResultTypesPrefix {"
+  }
+]

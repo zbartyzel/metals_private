@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "64ac1f42-68a8-4feb-a4e9-6c9f5a078d02",
+    "prId" : 867,
+    "prUrl" : "https://github.com/scalameta/metals/pull/867",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "bb1ade52-fe8e-4d7d-8c1b-9f2d926642ad",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "FYI @tgodzik / @olafurpg ",
+        "createdAt" : "2019-08-20T11:34:40Z",
+        "updatedAt" : "2019-08-20T20:31:52Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "2f90eee9bd1ece9b9d4b3e435edeef22779d00b7",
+    "line" : 20,
+    "diffHunk" : "@@ -1,1 +103,107 @@  // FIXME(gabro): the tests don't pass with 2.12.9, although the plugins seem to work fine when\n  // tested manually\n  if (BuildInfo.scalaVersion != \"2.12.9\") {\n    checkPlugin(\n      \"kind-projector\","
+  }
+]

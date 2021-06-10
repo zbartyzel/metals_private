@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "2c1afbfc-4076-4559-affc-b9a433e65ce9",
+    "prId" : 128,
+    "prUrl" : "https://github.com/scalameta/metals/pull/128",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "1f6d5944-0abc-4ae8-a528-7aad00f6071f",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "I'll report the comment as a review comment, so it's easier to see.\r\nUnder what circumstances is this a `StringCorrelationId`? Should we ignore it?",
+        "createdAt" : "2017-12-15T14:46:56Z",
+        "updatedAt" : "2017-12-15T21:25:34Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1844cab2-864d-4b81-98a6-3c99b2873bb9",
+        "parentId" : "1f6d5944-0abc-4ae8-a528-7aad00f6071f",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "I've seen https://github.com/scalameta/language-server/pull/128#commitcomment-26300800, that makes sense.",
+        "createdAt" : "2017-12-15T14:48:49Z",
+        "updatedAt" : "2017-12-15T21:25:34Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "baa275778ef3f4f47fbd5cf8309f788fb8829473",
+    "line" : 72,
+    "diffHunk" : "@@ -1,1 +180,184 @@    }.runAsync\n    id match {\n      case NumericCorrelationId(value) =>\n        activeRequestsById.put(value.toIntExact, future)\n      case _ =>"
+  },
+  {
+    "id" : "152a9b1d-4e45-4470-85d5-647007ab96ed",
+    "prId" : 103,
+    "prUrl" : "https://github.com/scalameta/metals/pull/103",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "1f63f10d-e2ce-4013-85b8-500c8ae2f463",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "How about making this a `trait`? TBH I never understood the `abstract class` vs `trait` thing in Scala, hence I always used traits.",
+        "createdAt" : "2017-12-09T13:38:09Z",
+        "updatedAt" : "2017-12-09T13:43:06Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e12e2fcc-6caa-45bd-9134-d97aa4befa6b",
+        "parentId" : "1f63f10d-e2ce-4013-85b8-500c8ae2f463",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I prefer abstract class unless I expect it to be mixed into another class. abstract classes can accept parameters (traits get that ability too in dotty) and they also make it easier to keep compatibility pre-2.12 (although that's irrelevant here). I think it's best to keep this as a class here, I can make it non-abstract by implementing commandHandler, but it doesn't really matter for us much here.",
+        "createdAt" : "2017-12-09T13:47:51Z",
+        "updatedAt" : "2017-12-09T13:47:51Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b806662917cd1a44afa64fabbb83717dd0bbefe5",
+    "line" : 28,
+    "diffHunk" : "@@ -1,1 +28,32 @@ *       and that can't subclass anything other than Any\n */\nabstract class Connection(inStream: InputStream, outStream: OutputStream)(implicit s: Scheduler)\n    extends LazyLogging with Notifications {\n  private val msgReader = new MessageReader(inStream)"
+  }
+]

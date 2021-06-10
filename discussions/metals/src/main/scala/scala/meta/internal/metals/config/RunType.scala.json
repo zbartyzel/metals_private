@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "01ce2f0e-6306-47dd-890a-a61a7a354367",
+    "prId" : 2532,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2532",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "6d0ea811-203c-4cf2-9aa9-be8296d0d663",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "we can have just test and if a target is specified and not file it would mean it's supposed to test all test in target?",
+        "createdAt" : "2021-02-24T11:47:34Z",
+        "updatedAt" : "2021-03-08T13:25:41Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6767f0ad-e65d-4996-916b-2e8579bd0709",
+        "parentId" : "6d0ea811-203c-4cf2-9aa9-be8296d0d663",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "But then where would the target come from? A user would have to include it? This way, there is no need need, a user can either bind a `testFile` or a `testTarget` to whatever they want, without any need to have to provide a target.",
+        "createdAt" : "2021-02-24T11:58:06Z",
+        "updatedAt" : "2021-03-08T13:25:41Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c8bc3dbb-04f4-4e09-a259-7578014fb560",
+        "parentId" : "6d0ea811-203c-4cf2-9aa9-be8296d0d663",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Hmm.. that is a tough one. Your solution might be best here if we want to provide the functionality to run all tests in the current target.\r\n\r\nOne improvement could be that if a user doesn't specify file and type is `testFile` or `testTarget` we could use focusedDocument (or focusedTarget which I think exists.)",
+        "createdAt" : "2021-02-24T12:12:49Z",
+        "updatedAt" : "2021-03-08T13:25:41Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8559aae0-d6fc-4297-8b53-d1816e236811",
+        "parentId" : "6d0ea811-203c-4cf2-9aa9-be8296d0d663",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Yea it's a good point. I'm just not convinced that on the client side if we are using `testFile` or `testTarget`, there shouldn't really be a reason why we can't send along uri since it should be quite easy to. Do you think this might be an issue from VS Code if someone is trying to trigger from like the side panel or something? I don't think it's unreasonable to just expect a uri.",
+        "createdAt" : "2021-02-25T08:14:53Z",
+        "updatedAt" : "2021-03-08T13:25:41Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "919678cb-920e-4619-85a7-d9a9ee966471",
+        "parentId" : "6d0ea811-203c-4cf2-9aa9-be8296d0d663",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "We should be able to always send a URI - especially if we start from a command. The only exception would be if we wanted to have a `launch.json` configuration that would just run anything in the current file. This would allow to just use the existing shortcut for debug (F5), but on the other hand we can always add a separate command for that and `launch.json` might be a hack. So maybe leave it out for now and I will see how best to implement it on the vs code side.",
+        "createdAt" : "2021-02-25T10:22:00Z",
+        "updatedAt" : "2021-03-08T13:25:41Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "23bedef101619ed619520c4b121ecae6c358d874",
+    "line" : 12,
+    "diffHunk" : "@@ -1,1 +10,14 @@    string match {\n      case \"run\" => Some(Run)\n      case \"testFile\" => Some(TestFile)\n      case \"testTarget\" => Some(TestTarget)\n      case _ => None"
+  }
+]

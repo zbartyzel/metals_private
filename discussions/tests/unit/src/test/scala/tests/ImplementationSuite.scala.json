@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "c251a610-507a-4053-842a-32ca8c47399f",
+    "prId" : 934,
+    "prUrl" : "https://github.com/scalameta/metals/pull/934",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "436109b9-5a81-4df2-8de4-03eb79d51559",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "👍 ",
+        "createdAt" : "2019-09-20T09:34:43Z",
+        "updatedAt" : "2019-10-03T13:51:34Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d837625e03b77aa42a76d4f700137294452174fa",
+    "line" : 466,
+    "diffHunk" : "@@ -1,1 +464,468 @@\n  // TODO needs scalameta update\n  // check(\n  //   \"anon\",\n  //   \"\"\"|/a/src/main/scala/a/Main.scala"
+  }
+]

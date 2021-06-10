@@ -1,0 +1,79 @@
+[
+  {
+    "id" : "f8618721-bd5d-4e44-afcd-b28d23f50551",
+    "prId" : 2490,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2490",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "1a84202e-10b2-485a-bca9-904148078a4d",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "is this a safe/desired refactor? \r\n\r\nTurning \r\n\r\n```scala\r\ndef a: Int = ???\r\na match {\r\n  case n if n > 2 => ??? \r\n  case n          => ???\r\n}\r\n```\r\n\r\ninto\r\n\r\n```scala\r\ndef a: Int = ???\r\na match {\r\n  case n if n > 2 => ??? \r\n  case n: Int     => ???\r\n}\r\n```\r\n\r\nit's not a type annotation, but it's actually inserting a runtime check. I'm not sure I would put it in the same basket as the other refactors this PR covers.",
+        "createdAt" : "2021-02-09T17:32:16Z",
+        "updatedAt" : "2021-02-10T18:07:56Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0beba21a-46c0-4087-83e0-2366cb04afe3",
+        "parentId" : "1a84202e-10b2-485a-bca9-904148078a4d",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I think that should be safe. It's the actual type of a, so the check is basically checking if Int is Int. If anyone changes the type of a the compiler will issue a warning.\r\n\r\nWe could name it differently similar to how Intellij does it `add type annotation to pattern definition`.",
+        "createdAt" : "2021-02-09T17:42:44Z",
+        "updatedAt" : "2021-02-10T18:07:56Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5cadbd58-44a8-43c7-aa08-f26b9644db2e",
+        "parentId" : "1a84202e-10b2-485a-bca9-904148078a4d",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "👍 on naming it like that",
+        "createdAt" : "2021-02-09T19:45:48Z",
+        "updatedAt" : "2021-02-10T18:07:56Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "88669a5f-fccc-45af-838b-da5952cebc8e",
+        "parentId" : "1a84202e-10b2-485a-bca9-904148078a4d",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Changed!",
+        "createdAt" : "2021-02-10T14:50:37Z",
+        "updatedAt" : "2021-02-10T18:07:56Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "35b8cef77f49a5dbfaea65336ba01706bc959133",
+    "line" : 149,
+    "diffHunk" : "@@ -1,1 +147,151 @@       * `case t: Int =>`\n       */\n      case bind @ Bind(name, body) =>\n        def openingParenPos = body.pos.withEnd(body.pos.start)\n        def openingParen = new TextEdit(openingParenPos.toLSP, \"(\")"
+  },
+  {
+    "id" : "1817dc0b-d957-4787-afff-7a9fdb268de4",
+    "prId" : 2490,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2490",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b401122a-9a1d-40ab-b419-06b085b522bf",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Thanks a lot for including all of these, super helpful 🙏🏼 ",
+        "createdAt" : "2021-02-09T18:52:14Z",
+        "updatedAt" : "2021-02-10T18:07:56Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "35b8cef77f49a5dbfaea65336ba01706bc959133",
+    "line" : 69,
+    "diffHunk" : "@@ -1,1 +67,71 @@       *     turns into\n       * `val a: Int = 1` or `var b: Int = 2`\n       */\n      case vl @ ValDef(_, name, tpt, _) if !vl.symbol.isParameter =>\n        // dropLocal will remove a space that might appear at the of a name in some places"
+  }
+]

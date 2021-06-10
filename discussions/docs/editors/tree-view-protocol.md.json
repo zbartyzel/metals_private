@@ -1,0 +1,90 @@
+[
+  {
+    "id" : "7376785d-9a7a-4855-8050-c3752b3c0cc6",
+    "prId" : 797,
+    "prUrl" : "https://github.com/scalameta/metals/pull/797",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "dbe542e1-f8ff-478a-8430-f5e3a7730a99",
+        "parentId" : null,
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "```suggestion\r\n   * Whether this node should be collapsed, expanded or if it has no children.\r\n```",
+        "createdAt" : "2019-06-27T06:33:30Z",
+        "updatedAt" : "2019-06-28T12:28:04Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a43e250d79a91a6cadd98f502fb91b0993c3b5d8",
+    "line" : 42,
+    "diffHunk" : "@@ -1,1 +40,44 @@  tooltip?: string;\n  /**\n   * Whether this tree node should be collapsed, expanded or if it has no children.\n   *\n   * - undefined: this node has no children."
+  },
+  {
+    "id" : "6f323b81-fdc6-46dd-9503-33d66b3e2e8f",
+    "prId" : 797,
+    "prUrl" : "https://github.com/scalameta/metals/pull/797",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "e4a36ac6-abe0-4aa3-8f77-34146ee1f887",
+        "parentId" : null,
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "```suggestion\r\n   * - expanded: this node has children and this node should be auto-expanded\r\n```",
+        "createdAt" : "2019-06-27T06:34:33Z",
+        "updatedAt" : "2019-06-28T12:28:04Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f9995b01-96dd-4afe-bab2-b4078f0d966f",
+        "parentId" : "e4a36ac6-abe0-4aa3-8f77-34146ee1f887",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Good catch!",
+        "createdAt" : "2019-06-27T08:51:20Z",
+        "updatedAt" : "2019-06-28T12:28:04Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a43e250d79a91a6cadd98f502fb91b0993c3b5d8",
+    "line" : 45,
+    "diffHunk" : "@@ -1,1 +43,47 @@   *\n   * - undefined: this node has no children.\n   * - collapsed: this node has children and this node should be auto-expanded\n   *   on the first load.\n   * - expanded: this node has children and the user should manually expand"
+  },
+  {
+    "id" : "d3f6a028-6e12-4912-9e58-7886007dd63e",
+    "prId" : 797,
+    "prUrl" : "https://github.com/scalameta/metals/pull/797",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b6737e81-dbeb-494c-a14a-a8bf0691d808",
+        "parentId" : null,
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "```suggestion\r\n```",
+        "createdAt" : "2019-06-27T06:52:09Z",
+        "updatedAt" : "2019-06-28T12:28:04Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9d813ef7-8b57-42bc-b59f-31e02a453a03",
+        "parentId" : "b6737e81-dbeb-494c-a14a-a8bf0691d808",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I agree it feels a bit redundant but I think it's helpful to establish the terminology that `collapsed=false` means the node is \"expanded\".",
+        "createdAt" : "2019-06-27T09:02:57Z",
+        "updatedAt" : "2019-06-28T12:28:04Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a43e250d79a91a6cadd98f502fb91b0993c3b5d8",
+    "line" : 212,
+    "diffHunk" : "@@ -1,1 +210,214 @@  /** The URI of the node that was collapsed or expanded. */\n  nodeUri: string;\n  /** True if the node is collapsed, false if the node was expanded. */\n  collapsed: boolean;\n}"
+  }
+]

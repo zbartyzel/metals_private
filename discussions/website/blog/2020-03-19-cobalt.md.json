@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "9ac29ccc-5c70-4c63-b346-1522f292f76b",
+    "prId" : 1515,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1515",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "79a1e08f-b6ee-4d8e-b63e-6015bc0fb7ae",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "- fix issue with string alignment when multiple multiline strings were present in a file",
+        "createdAt" : "2020-03-18T21:35:36Z",
+        "updatedAt" : "2020-03-19T09:52:28Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ce4537796f68ff2efd7c4dc2ab0f9f506d8b4791",
+    "line" : 65,
+    "diffHunk" : "@@ -1,1 +63,67 @@- fix issue with string alignment when multiple multiline strings were present\n  in a file\n\n## Contributors\n"
+  }
+]

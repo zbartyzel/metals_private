@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "52fdf977-85e4-41c9-b015-977c1d957fe5",
+    "prId" : 1558,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1558",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "39712f17-8172-41a4-81bc-5df85320fd90",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I'm OK with monthly or bi-weekly if you think that is too infrequent. ",
+        "createdAt" : "2020-03-28T20:23:19Z",
+        "updatedAt" : "2020-03-28T20:23:25Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "81a692da-c8d1-44a4-8dd3-8c67346ce341",
+        "parentId" : "39712f17-8172-41a4-81bc-5df85320fd90",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Maybe let's try bi-weekly. If we get annoyed, we can change it to monthly.",
+        "createdAt" : "2020-03-28T20:43:14Z",
+        "updatedAt" : "2020-03-28T20:43:14Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c9d6ad94ce21cb54465b6fd7c526422627800cc4",
+    "line" : 1,
+    "diffHunk" : "@@ -1,1 +-1,3 @@pullRequests.frequency = \"0 0 1,15 * ?\""
+  }
+]

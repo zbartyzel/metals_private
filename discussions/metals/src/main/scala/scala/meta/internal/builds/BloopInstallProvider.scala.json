@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "13d4ceb8-7b5f-43c8-adbe-b2946235acd2",
+    "prId" : 2154,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2154",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "1d50ba3e-c3a9-4a6f-87e0-f706c9a1b09c",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "This used to actually be the `BloopPluginBuildTool.scala`.  I've changed this to a trait mainly to allow it to be a mixing alongside of `BuildServerProvider.scala` for build tools that can also serve as build servers. My hope is that as we move forward to for example support Mill BSP, it will be much simpler to be able to just add the `BuildServerProvider` mixin to the `MillBuildTool`, add in the args for the bsp config generation, and that's literally almost all that would be needed.",
+        "createdAt" : "2020-10-25T12:31:55Z",
+        "updatedAt" : "2020-10-30T17:54:40Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8eab66607688c713397334de6750fab0ca346fc8",
+    "line" : 10,
+    "diffHunk" : "@@ -1,1 +8,12 @@ * Helper trait for build tools that have a Bloop plugin\n */\ntrait BloopInstallProvider { this: BuildTool =>\n\n  /**"
+  }
+]

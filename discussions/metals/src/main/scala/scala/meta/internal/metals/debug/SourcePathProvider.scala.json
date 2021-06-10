@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "e1408ec3-5dd2-493c-9215-07d8da208833",
+    "prId" : 2427,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2427",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ce9b45a2-74d6-44a1-8e2a-e43f3cb7e9dd",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This is just so that we don't search for class if an object was already found.",
+        "createdAt" : "2021-01-24T08:52:05Z",
+        "updatedAt" : "2021-01-24T08:52:06Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "236d51b95a99953e085701478620c7b04cbca110",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +29,33 @@    val symbolBase = if (base.contains(\"/\")) base else \"_empty_/\" + base\n    val symbols = for {\n      symbol <- Set(symbolBase + \".\", symbolBase + \"#\").toIterator\n      definition <- definitionProvider.fromSymbol(symbol).asScala\n    } yield definition.getUri.toAbsolutePath"
+  }
+]

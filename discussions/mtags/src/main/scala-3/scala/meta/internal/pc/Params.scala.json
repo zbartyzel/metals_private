@@ -1,0 +1,46 @@
+[
+  {
+    "id" : "351d280c-3748-4ab0-a0f2-0631de898625",
+    "prId" : 2637,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2637",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "5ed6c102-aa7d-4fff-bdb4-22ab69374da5",
+        "parentId" : null,
+        "authorId" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "body" : "something like https://github.com/scalameta/metals/blob/5345a236983e5fcbaa1d1cae7e03b7590979ab3d/mtags/src/main/scala-2/scala/meta/internal/pc/Params.scala",
+        "createdAt" : "2021-03-28T16:02:03Z",
+        "updatedAt" : "2021-04-20T11:55:47Z",
+        "lastEditedBy" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f547d043-bccc-47c9-b206-621221ccd44f",
+        "parentId" : "5ed6c102-aa7d-4fff-bdb4-22ab69374da5",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Could we reuse that? It's cool to use the new enums, but that duplicates the logic in two places. We can add `paramsKind` as an extensione method.",
+        "createdAt" : "2021-03-29T11:43:25Z",
+        "updatedAt" : "2021-04-20T11:55:47Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "97f2a53b-9b0e-46e7-aa85-bbedfc467928",
+        "parentId" : "5ed6c102-aa7d-4fff-bdb4-22ab69374da5",
+        "authorId" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "body" : "Since I added `Using` kind to Params (in scala3) which shouldn't exist in scala2, it might be reasonable to define two different `Params` classes for scala2 and scala3.",
+        "createdAt" : "2021-04-19T12:42:22Z",
+        "updatedAt" : "2021-04-20T11:55:47Z",
+        "lastEditedBy" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cb0dd9260bcbd1c2b38bcd118ac763772baf4a4c",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +5,9 @@import dotty.tools.dotc.core.Flags._\n\ncase class Params(\n    labels: Seq[String],\n    kind: Params.Kind"
+  }
+]

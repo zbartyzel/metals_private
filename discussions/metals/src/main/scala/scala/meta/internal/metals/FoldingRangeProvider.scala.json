@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "f7bc44e0-9ec5-4f9b-a69b-65db5abb0012",
+    "prId" : 632,
+    "prUrl" : "https://github.com/scalameta/metals/pull/632",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b3c68d6d-e2d3-4ff5-ac31-8d09a13ed61f",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Thanks 🙏 ",
+        "createdAt" : "2019-04-04T10:11:59Z",
+        "updatedAt" : "2019-04-10T09:48:54Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "79793f51fa23f5e83e6e9dc8e633ae708eeb17a1",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +6,10 @@import org.eclipse.lsp4j.InitializeParams\nimport scala.meta.inputs.Position\nimport scala.meta.internal.metals.FoldingRangeProvider._\nimport scala.meta.io.AbsolutePath\n"
+  }
+]

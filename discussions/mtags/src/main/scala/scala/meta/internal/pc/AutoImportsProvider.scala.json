@@ -1,0 +1,90 @@
+[
+  {
+    "id" : "67453e26-d30f-4c8f-8a71-9bc4832d9cc0",
+    "prId" : 1065,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1065",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b655bfc6-f9ff-4bce-ab09-c9726619957e",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "@olafurpg is there a smarter way of doing this? If I omit it `autoImportPosition` fails because `pos.source` isn't loaded yet.",
+        "createdAt" : "2019-12-10T12:36:55Z",
+        "updatedAt" : "2019-12-11T15:30:45Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3537c406-0853-41ef-9a5f-8b5a7e2b686b",
+        "parentId" : "b655bfc6-f9ff-4bce-ab09-c9726619957e",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "There isn't. This is needed.",
+        "createdAt" : "2019-12-10T14:19:56Z",
+        "updatedAt" : "2019-12-11T15:30:45Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3b2e431f-93fd-487b-9413-28a68da14d39",
+        "parentId" : "b655bfc6-f9ff-4bce-ab09-c9726619957e",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Fair enough! ¯\\\\\\_(ツ)\\_/¯",
+        "createdAt" : "2019-12-10T14:21:45Z",
+        "updatedAt" : "2019-12-11T15:30:45Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1e046b2b878d476d389f19bdcaa73ae4b7c121c9",
+    "line" : 24,
+    "diffHunk" : "@@ -1,1 +22,26 @@    val pos = unit.position(params.offset)\n    // make sure the compilation unit is loaded\n    typedTreeAt(pos)\n    val importPosition = autoImportPosition(pos, params.text())\n    val context = doLocateImportContext(pos, importPosition)"
+  },
+  {
+    "id" : "7dcfe39b-6a68-4179-8b02-7c477f62b049",
+    "prId" : 1065,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1065",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f1807e8e-f92d-49e8-862e-53dd21f0ff49",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "this is needed since `search` above will return partially matching results, whereas we only want exact results for symbols.\r\n\r\n@olafurpg is there a different way we could do this? I tried, but I couldn't find a way to instruct `search` to only return exact matches",
+        "createdAt" : "2019-12-10T15:44:58Z",
+        "updatedAt" : "2019-12-11T15:30:45Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b7726e2b-b47e-49cd-8cb6-096e75e2f824",
+        "parentId" : "f1807e8e-f92d-49e8-862e-53dd21f0ff49",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "It's possible to do exact searches and the index is optimized for this use-case, I can't remember the most relevant place to look into, maybe\r\n\r\nhttps://github.com/scalameta/metals/blob/24cfabf16cae3d6187a094e0711d71c125e9e79f/mtags/src/main/scala/scala/meta/internal/metals/WorkspaceSymbolQuery.scala#L35",
+        "createdAt" : "2019-12-10T15:47:12Z",
+        "updatedAt" : "2019-12-11T15:30:45Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b2ccb265-5842-4b2e-a2b2-b32ba95c6e34",
+        "parentId" : "f1807e8e-f92d-49e8-862e-53dd21f0ff49",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "I saw that, but it seems `exact` still produces a list of alternatives. Anyway, it's fast enough not to be a concern (it's upper bound by completions, by definition)",
+        "createdAt" : "2019-12-10T15:48:48Z",
+        "updatedAt" : "2019-12-11T15:30:45Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1e046b2b878d476d389f19bdcaa73ae4b7c121c9",
+    "line" : 45,
+    "diffHunk" : "@@ -1,1 +43,47 @@\n    def isExactMatch(sym: Symbol, name: String): Boolean =\n      sym.name.dropLocal.decoded == name\n\n    symbols.result.collect {"
+  }
+]

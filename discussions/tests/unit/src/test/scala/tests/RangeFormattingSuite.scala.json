@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "ee3ca645-3c12-4a52-ad2b-0dff06a32ddd",
+    "prId" : 1505,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1505",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "825c1e36-a5dc-437b-b1bf-b9e20e229250",
+        "parentId" : null,
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "can we modify this test to paste multiple lines? (also one below)",
+        "createdAt" : "2020-03-17T10:19:07Z",
+        "updatedAt" : "2020-03-17T14:46:42Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "883e9637-ba47-46d5-88d5-0ba350274d30",
+        "parentId" : "825c1e36-a5dc-437b-b1bf-b9e20e229250",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Sure! I added in two more tests to account for this.",
+        "createdAt" : "2020-03-17T14:49:34Z",
+        "updatedAt" : "2020-03-17T14:49:34Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "fdb5a38d8231228e2f26bf5f72437a9a6868eb6e",
+    "line" : 15,
+    "diffHunk" : "@@ -1,1 +75,79 @@       |                |'''.stripMargin\n       |}\"\"\".stripMargin,\n    s\"\"\"|  some text\"\"\".stripMargin,\n    s\"\"\"\n       |object Main {"
+  },
+  {
+    "id" : "8bb4ab2f-7202-4b0a-a39a-794ce0465884",
+    "prId" : 968,
+    "prUrl" : "https://github.com/scalameta/metals/pull/968",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "fff06f5d-62e6-46b5-9175-d95f8e0e73d8",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Maybe also another test that add single `|` ?",
+        "createdAt" : "2019-10-10T07:50:06Z",
+        "updatedAt" : "2019-10-14T05:25:56Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0e400ffc-a25b-4227-8322-6194f44e04b6",
+        "parentId" : "fff06f5d-62e6-46b5-9175-d95f8e0e73d8",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Ha, yes. Seeing that it was breaking if I did that, good call.",
+        "createdAt" : "2019-10-11T09:18:03Z",
+        "updatedAt" : "2019-10-14T05:25:56Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f64d2110efe05696503246eef780ee3f06207249",
+    "line" : 31,
+    "diffHunk" : "@@ -1,1 +110,114 @@       |  '''.stripMargin\n       |}\"\"\".stripMargin,\n    s\"\"\"| |first line\n        | |second line\n        | | different indent\"\"\".stripMargin,"
+  }
+]

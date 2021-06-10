@@ -1,0 +1,46 @@
+[
+  {
+    "id" : "16e020ad-c691-4018-9d08-51d6a77fa9b0",
+    "prId" : 2330,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2330",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "cad3d0da-0592-4cfe-b066-4291948dcea3",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Out of sheer curiosity, was this change needed or is it just a style preference?",
+        "createdAt" : "2020-12-17T19:09:11Z",
+        "updatedAt" : "2020-12-18T20:51:29Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "143a0e1c-9b0d-42e9-b814-1d535680476a",
+        "parentId" : "cad3d0da-0592-4cfe-b066-4291948dcea3",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "It's so that we can cross compile 3.0.0-M2 and 3.0.0-M3 - given syntax changed between those two versions.",
+        "createdAt" : "2020-12-17T19:13:03Z",
+        "updatedAt" : "2020-12-18T20:51:29Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "cd366b21-fe5b-4a79-81ae-e902c6a8c376",
+        "parentId" : "cad3d0da-0592-4cfe-b066-4291948dcea3",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Aha, smart!",
+        "createdAt" : "2020-12-17T19:41:27Z",
+        "updatedAt" : "2020-12-18T20:51:29Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "2368510bda33c05ac21993258896f1c31f01ddfa",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +14,18 @@  override def resetReporter(): Unit = {\n    val ctx = driver.currentCtx\n    ctx.reporter.removeBufferedMessages(using ctx)\n  }\n"
+  }
+]

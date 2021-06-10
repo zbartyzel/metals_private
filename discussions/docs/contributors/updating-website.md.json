@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "324feb51-a82e-4f98-937a-b3b3bbaca310",
+    "prId" : 1197,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1197",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "9ae44971-d4b8-4aed-a5a3-2d58a40b1427",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "👍 ",
+        "createdAt" : "2019-12-18T10:26:54Z",
+        "updatedAt" : "2019-12-20T09:44:11Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "968aa6191e574d41442ecf5e3205b82234974d58",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +18,22 @@In addition to Docusaurus, we preprocess the markdown files using:\n\n- [mdoc](https://github.com/scalameta/mdoc), to type-check, interpret Scala\n  code fences, and to generate the site using its [built-in Docusaurus support](https://scalameta.org/mdoc/docs/docusaurus.html).\n"
+  }
+]

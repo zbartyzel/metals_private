@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "e0d05563-a569-4839-a835-5f6b3fa84e0d",
+    "prId" : 1023,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1023",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "6474c0c8-7d09-437f-ac54-94fa3a609b54",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Does it work with the inspector tool? It would be nice to keep it compatible.",
+        "createdAt" : "2019-10-28T10:23:48Z",
+        "updatedAt" : "2019-10-28T10:23:48Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d054923a-fb66-4aac-b084-a6ab2a0a1f13",
+        "parentId" : "6474c0c8-7d09-437f-ac54-94fa3a609b54",
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "Sadly, no - the format is too much of a hassle to implement it manually. Reusing the implementation present in the `lsp4j.jsonrpc` library is also not viable because it is tightly coupled with their launcher implementation.\r\n\r\nAt one point we might want to change the format to accomodate the inspector but let's delay it for now as it is better to have some logs than none at all.",
+        "createdAt" : "2019-10-30T09:29:02Z",
+        "updatedAt" : "2019-10-30T09:29:03Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "bea61421ff9c77d2973dbb3c90e1997b6fba3a14",
+    "line" : 40,
+    "diffHunk" : "@@ -1,1 +38,42 @@\n  private def log(direction: Direction, message: Message): Unit = {\n    logger.println(s\"[Trace][$time] $direction ${typeOf(message)}:\")\n    writer.serialize(message, logger)\n    logger.println()"
+  }
+]

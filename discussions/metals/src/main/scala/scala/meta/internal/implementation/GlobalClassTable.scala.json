@@ -1,0 +1,46 @@
+[
+  {
+    "id" : "19acfabb-f89e-4a25-8cdd-74581573571b",
+    "prId" : 1041,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1041",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "c32032f8-7fee-4c8a-8a6a-2387ea966d90",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "why is this needed?",
+        "createdAt" : "2019-11-04T11:45:30Z",
+        "updatedAt" : "2019-11-09T20:01:12Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "545cd3dc-9466-4a6c-9aa2-db15200ff580",
+        "parentId" : "c32032f8-7fee-4c8a-8a6a-2387ea966d90",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This actually makes sense, the name was a bit misleading before - I added it while doing implmentation.",
+        "createdAt" : "2019-11-04T15:41:11Z",
+        "updatedAt" : "2019-11-09T20:01:12Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9e4a7e00-02a0-4fd8-b393-bbcd57b9035a",
+        "parentId" : "c32032f8-7fee-4c8a-8a6a-2387ea966d90",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "It took me a while to actually debug this issue, I just saw the extension method `.classpath` and didn't realize it filtered out directory entries",
+        "createdAt" : "2019-11-06T06:23:16Z",
+        "updatedAt" : "2019-11-09T20:01:12Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a2902a65a77773398f8ac710483906215a06bcf8",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +38,42 @@      buildTargetId <- buildTargets.inverseSources(source)\n      scalaTarget <- buildTargets.scalaTarget(buildTargetId)\n      classpath = new Classpath(scalaTarget.jarClasspath)\n    } yield {\n      buildTargetsIndexes.getOrElseUpdate("
+  }
+]

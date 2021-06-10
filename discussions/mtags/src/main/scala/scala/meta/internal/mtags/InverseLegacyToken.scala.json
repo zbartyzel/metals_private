@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "94754ad8-76f4-4e9d-8486-1e884f1542b9",
+    "prId" : 332,
+    "prUrl" : "https://github.com/scalameta/metals/pull/332",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "4ffc278f-fc4a-44d1-be53-4df3e22786a4",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "What's this file for?",
+        "createdAt" : "2018-10-13T12:35:56Z",
+        "updatedAt" : "2018-10-17T09:17:09Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "08692f42-4ecb-486f-ab86-1fc2ffd76451",
+        "parentId" : "4ffc278f-fc4a-44d1-be53-4df3e22786a4",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Added docstring, \r\n\r\n> Utility to print helpful messages for parse errors. ",
+        "createdAt" : "2018-10-13T13:20:20Z",
+        "updatedAt" : "2018-10-17T09:17:09Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "889b282a30a7ddd72b09da4b9328f7779b1cfae9",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +4,8 @@\n/** Utility to print helpful messages for parse errors. */\nobject InverseLegacyToken {\n  val category: Map[Int, String] = Map[Int, String](\n    EMPTY -> \"EMPTY\","
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "740415ce-74dd-4b11-8a91-d7672b11ff37",
+    "prId" : 2450,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2450",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "0266d7d9-a02d-4cd5-80af-987df3b83e2c",
+        "parentId" : null,
+        "authorId" : "fc134940-5902-4ae8-ac80-45926bce2332",
+        "body" : "I am not really sure about this - should it not compile all inverse dependencies and not just leaves? Should it even care about inverse dependencies?",
+        "createdAt" : "2021-01-30T12:36:31Z",
+        "updatedAt" : "2021-01-30T12:40:16Z",
+        "lastEditedBy" : "fc134940-5902-4ae8-ac80-45926bce2332",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d6ba8058-072a-4e0c-b0bb-b9d8a9babf68",
+        "parentId" : "0266d7d9-a02d-4cd5-80af-987df3b83e2c",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Leaves will trigger also the compilation of their dependencies, so we should be good.",
+        "createdAt" : "2021-02-01T14:08:43Z",
+        "updatedAt" : "2021-02-01T14:29:42Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "aa7fe079b0e12a163f61899e25eccce6647aec55",
+    "line" : 30,
+    "diffHunk" : "@@ -1,1 +97,101 @@\n  def cascadeCompile(targets: Seq[BuildTargetIdentifier]): Future[Unit] = {\n    val inverseDependencyLeaves =\n      targets.flatMap(buildTargets.inverseDependencyLeaves).distinct\n    cascadeBatch(inverseDependencyLeaves).map(_ => ())"
+  },
+  {
+    "id" : "7c39fa97-1c5e-473f-b4ea-ecfa0625e89b",
+    "prId" : 1538,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1538",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "fe6d168d-6cef-4650-bd3c-39ef04b37d44",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Why the change? I think it's better to keep the result rather than just return unit.",
+        "createdAt" : "2020-03-31T16:57:04Z",
+        "updatedAt" : "2020-05-21T11:17:43Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8564c333-5c1d-4cd4-ac6e-81af42d144f7",
+        "parentId" : "fe6d168d-6cef-4650-bd3c-39ef04b37d44",
+        "authorId" : "343802b0-b5d4-488b-944f-b7fca9ffb64f",
+        "body" : "See my comment above.",
+        "createdAt" : "2020-04-02T20:08:20Z",
+        "updatedAt" : "2020-05-21T11:17:44Z",
+        "lastEditedBy" : "343802b0-b5d4-488b-944f-b7fca9ffb64f",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0681fa0b1417b7ac622101d279667c6900a2506e",
+    "line" : 69,
+    "diffHunk" : "@@ -1,1 +75,79 @@  }\n\n  def compileFiles(paths: Seq[AbsolutePath]): Future[Unit] = {\n    val targets = expand(paths)\n    for {"
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "ddcf23e7-4d5b-4ff4-a259-e1965107d7be",
+    "prId" : 632,
+    "prUrl" : "https://github.com/scalameta/metals/pull/632",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "62c5923a-3983-4f64-a289-81ba61e3f845",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "👍 ",
+        "createdAt" : "2019-04-10T08:55:32Z",
+        "updatedAt" : "2019-04-10T09:48:55Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "79793f51fa23f5e83e6e9dc8e633ae708eeb17a1",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +4,8 @@\nobject FoldingRangeSlowSuite extends BaseSlowSuite(\"foldingRange\") {\n  testAsync(\"parse-error\") {\n    for {\n      _ <- server.initialize("
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "b169bcab-d356-4fa6-8aac-bfc10c607e1e",
+    "prId" : 154,
+    "prUrl" : "https://github.com/scalameta/metals/pull/154",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f3681ef9-31c7-429b-8595-d883f151a001",
+        "parentId" : null,
+        "authorId" : "ef0069c2-046a-496d-a83f-80db27f0d990",
+        "body" : "👍 ",
+        "createdAt" : "2017-12-23T15:26:19Z",
+        "updatedAt" : "2017-12-29T12:34:28Z",
+        "lastEditedBy" : "ef0069c2-046a-496d-a83f-80db27f0d990",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c5527ca9-76a9-49e0-913b-18ee73b755e3",
+        "parentId" : "f3681ef9-31c7-429b-8595-d883f151a001",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I think we can actually remove this with the next scalafix release, Guillaume already refactored this API to support --diff and `// scalafix:off` for rewrites",
+        "createdAt" : "2017-12-23T22:27:08Z",
+        "updatedAt" : "2017-12-29T12:34:28Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "fdc9c838e9c14f4d811f77cd7768c91f492170e0",
+    "line" : 23,
+    "diffHunk" : "@@ -1,1 +21,25 @@// We should expose a package private API to get a list of token patches from\n// a Patch.\n// TODO(olafur): Figure out how to expose a minimal public API in scalafix.Patch\n// that supports this use-case.\n// All of the copy-paste below could be avoided with a single:"
+  }
+]

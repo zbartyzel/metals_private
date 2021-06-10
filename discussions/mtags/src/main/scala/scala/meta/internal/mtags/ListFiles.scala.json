@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "7289070a-f62b-4328-916e-e0a69f0ad185",
+    "prId" : 889,
+    "prUrl" : "https://github.com/scalameta/metals/pull/889",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ff22111c-784c-4e83-a433-9e02ba3a857a",
+        "parentId" : null,
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "this should be in an extension method for `AbsolutePath`, like `list` or `children`",
+        "createdAt" : "2019-09-02T09:08:48Z",
+        "updatedAt" : "2019-09-02T09:44:25Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1d94d47dda18e6abac0dc30392fcff0b3883fd5c",
+    "line" : 16,
+    "diffHunk" : "@@ -1,1 +6,10 @@\nobject ListFiles {\n  def apply(root: AbsolutePath): mutable.ArrayBuffer[AbsolutePath] = {\n    val buf = mutable.ArrayBuffer.empty[AbsolutePath]\n    foreach(root)(file => buf += file)"
+  },
+  {
+    "id" : "62ab9a08-a321-4078-bae1-d716b882329a",
+    "prId" : 889,
+    "prUrl" : "https://github.com/scalameta/metals/pull/889",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "6ae56bab-d1e7-4ee5-a760-2a943edb8e8a",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "It would be useful to have the couple of methods to use like `map` or `forall` or `exist`. Shouldn't be difficult to do.",
+        "createdAt" : "2019-09-02T09:15:44Z",
+        "updatedAt" : "2019-09-02T09:22:18Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1d94d47dda18e6abac0dc30392fcff0b3883fd5c",
+    "line" : 53,
+    "diffHunk" : "@@ -1,1 +11,15 @@    buf\n  }\n  def foreach(root: AbsolutePath)(fn: AbsolutePath => Unit): Unit = {\n    val ls = Files.list(root.toNIO)\n    try {"
+  },
+  {
+    "id" : "c82b8b7e-1965-4557-818b-82f8ba454f5f",
+    "prId" : 889,
+    "prUrl" : "https://github.com/scalameta/metals/pull/889",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "6c30fce4-35ba-4bbc-bc93-286d2f8534de",
+        "parentId" : null,
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "The name can be misleading, as it lists both files and directories",
+        "createdAt" : "2019-09-02T09:15:58Z",
+        "updatedAt" : "2019-09-02T09:44:26Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1d94d47dda18e6abac0dc30392fcff0b3883fd5c",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +5,9 @@import scala.collection.mutable\n\nobject ListFiles {\n  def apply(root: AbsolutePath): mutable.ArrayBuffer[AbsolutePath] = {\n    val buf = mutable.ArrayBuffer.empty[AbsolutePath]"
+  }
+]

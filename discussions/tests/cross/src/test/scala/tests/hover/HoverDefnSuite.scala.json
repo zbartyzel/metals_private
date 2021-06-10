@@ -1,0 +1,57 @@
+[
+  {
+    "id" : "ddea4cef-04a9-49a9-9f95-565a980a230a",
+    "prId" : 2852,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2852",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "afefe76e-89c6-4255-a3b5-e9a1cd43c69b",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "`object` is the name of the package, same in all the other tests.",
+        "createdAt" : "2021-06-04T10:10:26Z",
+        "updatedAt" : "2021-06-04T10:12:52Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "55f4accb32b50673f57ca811cee234a7bcea5792",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +148,152 @@    \"\",\n    compat = Map(\n      \"3.0\" -> \"object MyObject: object\".hover\n    )\n  )"
+  },
+  {
+    "id" : "d02a1aea-2353-4b9a-b00f-d384d2def1b6",
+    "prId" : 1523,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1523",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "32cc7994-fc36-431a-b1c1-63ab0c31a3e7",
+        "parentId" : null,
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "this is a change also for scala2, something was also fixed for scala2 here?",
+        "createdAt" : "2020-04-01T08:18:31Z",
+        "updatedAt" : "2020-04-15T13:50:25Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6f00f730-ca44-4805-8764-18ec0e4ab0bb",
+        "parentId" : "32cc7994-fc36-431a-b1c1-63ab0c31a3e7",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "It's just a simpler way of adding the additional quotes. It wasn't used in this test case, but doesn't change anything.",
+        "createdAt" : "2020-04-03T16:59:12Z",
+        "updatedAt" : "2020-04-15T13:50:25Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1142490703f832961ac0df1debd14b4f3b12ce7d",
+    "line" : 91,
+    "diffHunk" : "@@ -1,1 +203,207 @@      |}\n      |\"\"\".stripMargin,\n    \"head: Int\".hover,\n    compat = Map(\n      \"0.\" -> \"val head: Int\".hover"
+  }
+]

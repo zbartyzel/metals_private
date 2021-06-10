@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "a39b8fb6-a8e7-4444-b524-ec3cc09cd5dd",
+    "prId" : 632,
+    "prUrl" : "https://github.com/scalameta/metals/pull/632",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ba4d4a25-d934-43e6-9146-3804ee17e027",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Nice job, this test suite looks great 👏 ",
+        "createdAt" : "2019-04-05T06:51:05Z",
+        "updatedAt" : "2019-04-10T09:48:55Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "79793f51fa23f5e83e6e9dc8e633ae708eeb17a1",
+    "line" : 12,
+    "diffHunk" : "@@ -1,1 +10,14 @@import scala.meta.io.AbsolutePath\n\nobject FoldingRangeSuite extends DirectoryExpectSuite(\"foldingRange/expect\") {\n  private val buffers = Buffers()\n  private val trees = TestingTrees(buffers)"
+  }
+]

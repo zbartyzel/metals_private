@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "3c9e77c2-2fcd-4383-8080-7620a54e2caa",
+    "prId" : 104,
+    "prUrl" : "https://github.com/scalameta/metals/pull/104",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "0a0c71f0-b34a-49fe-94a6-91a29fb5b55e",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "`@BeanProperty` generates `getEncoder` and `setEncoder` which are required",
+        "createdAt" : "2017-12-09T14:36:17Z",
+        "updatedAt" : "2017-12-09T15:38:34Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3330c2f2d79e2c56d07a18df0981e227b3ca9179",
+    "line" : 12,
+    "diffHunk" : "@@ -1,1 +10,14 @@import scala.beans.BeanProperty\n\nclass LSPLogger(@BeanProperty var encoder: PatternLayoutEncoder)\n    extends AppenderBase[ILoggingEvent] {\n  import LSPLogger._"
+  }
+]

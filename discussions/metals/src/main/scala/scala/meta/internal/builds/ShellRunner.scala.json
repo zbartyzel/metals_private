@@ -1,0 +1,46 @@
+[
+  {
+    "id" : "6a79f5d1-5357-4942-a422-0bb8d16abe44",
+    "prId" : 1840,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1840",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f526a120-b2a6-4dc4-a512-299575edd66a",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Personally I'm a bit torn by this. I don't like having custom settings for scalafmt. The closer to vanilla the better. Howerver, I also dislike the way the implicit is for this. \r\n\r\n```\r\nnewlines.implicitParamListModifierPrefer   = before\r\n```\r\nI prefer that setting above, but then it adds another setting. Any preference on this? Again, I don't have a strong feeling, because my desire to not add another setting is the same as my dislike for this formatting.",
+        "createdAt" : "2020-06-18T17:33:58Z",
+        "updatedAt" : "2020-06-19T09:40:38Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b77b0291-2a66-4c20-9a47-2e72e9152bef",
+        "parentId" : "f526a120-b2a6-4dc4-a512-299575edd66a",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Let's leave the default in my opinion. I think it's better what was before. ",
+        "createdAt" : "2020-06-18T18:01:32Z",
+        "updatedAt" : "2020-06-19T09:40:38Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1e5578eb-a1db-4dc4-ae12-6dd201da41bc",
+        "parentId" : "f526a120-b2a6-4dc4-a512-299575edd66a",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "👍 sounds good.",
+        "createdAt" : "2020-06-18T18:03:17Z",
+        "updatedAt" : "2020-06-19T09:40:38Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "961d6ddc05eac5a93c79be85a06377fe25b9317c",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +26,30 @@    time: Time,\n    statusBar: StatusBar\n)(implicit\n    executionContext: scala.concurrent.ExecutionContext\n) extends Cancelable {"
+  }
+]

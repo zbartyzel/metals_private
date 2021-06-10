@@ -1,0 +1,123 @@
+[
+  {
+    "id" : "ea6582f3-ef66-4d9d-a51e-760f13fd1765",
+    "prId" : 1856,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1856",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "bf985e73-b1b1-4135-8582-4628d59226c8",
+        "parentId" : null,
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "just curious, why double $$, when in PR description you use $dep?\r\nIs it related to some replacements happening in tests?",
+        "createdAt" : "2020-06-25T22:18:11Z",
+        "updatedAt" : "2020-06-26T14:08:31Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "cc3ebe15-529c-4f83-9a55-28078835bce2",
+        "parentId" : "bf985e73-b1b1-4135-8582-4628d59226c8",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "$$ is just so that we have $ in a string interpolation, since $ is a special character.",
+        "createdAt" : "2020-06-26T06:19:17Z",
+        "updatedAt" : "2020-06-26T14:08:31Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1f17edfb786b6f5af2def3bdb1d0b49714512fb2",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +65,69 @@           |}\n           |/a/src/main/scala/foo/Main.worksheet.sc\n           |import $$dep.`com.lihaoyi::scalatags:0.9.0`\n           |import scalatags.Text.all._\n           |"
+  },
+  {
+    "id" : "4c451cf4-b921-4aff-b3fd-20f9d51f20bf",
+    "prId" : 1674,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1674",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "7c7932cc-35b4-4539-ab7f-b35c80f8198f",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "`new ClientExperimentalCapabilities(decorationProvider = true) ` ?",
+        "createdAt" : "2020-05-01T15:38:19Z",
+        "updatedAt" : "2020-05-01T16:10:33Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d64335b8-ce68-486f-965c-b11c415ab0f5",
+        "parentId" : "7c7932cc-35b4-4539-ab7f-b35c80f8198f",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Yea, this won't work anymore because of the type of constructor we have.",
+        "createdAt" : "2020-05-01T15:56:21Z",
+        "updatedAt" : "2020-05-01T16:10:33Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a12083c7-157a-4ccc-9bcf-b54e1089fe28",
+        "parentId" : "7c7932cc-35b4-4539-ab7f-b35c80f8198f",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Ach, yeah. You are right!",
+        "createdAt" : "2020-05-01T16:01:49Z",
+        "updatedAt" : "2020-05-01T16:10:33Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "2d61baa4f3f23f311fc6754cf97d955a84d0ac9b",
+    "line" : 15,
+    "diffHunk" : "@@ -1,1 +10,14 @@  override def experimentalCapabilities\n      : Option[ClientExperimentalCapabilities] =\n    Some(ClientExperimentalCapabilities.Default.copy(decorationProvider = true))\n  override def userConfig: UserConfiguration =\n    super.userConfig.copy(worksheetScreenWidth = 40, worksheetCancelTimeout = 1)"
+  },
+  {
+    "id" : "dca1f67b-e917-4ec9-b2d8-0e03046372e3",
+    "prId" : 1277,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1277",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "8772e6fb-f339-454f-a198-61b770259fc0",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "`assume` saves us from indentation",
+        "createdAt" : "2020-01-09T12:05:41Z",
+        "updatedAt" : "2020-01-26T10:34:42Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "49287d98409399c613ea481aeb08529f827e5982",
+    "line" : 49,
+    "diffHunk" : "@@ -1,1 +17,21 @@\n  test(\"completion\") {\n    assume(!isWindows, \"This test is flaky on Windows\")\n    for {\n      _ <- server.initialize("
+  },
+  {
+    "id" : "7b2edfec-0bf3-456e-9832-4c36207ba8fa",
+    "prId" : 1096,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1096",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "89792d19-98c6-4e4e-9ca8-ce10fc90f79f",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I think it's because the filesystem might be slower on Windows - it seems like a race. I will need to do another \"Windows session\" and try to fix the rest of the test.",
+        "createdAt" : "2019-12-02T11:11:41Z",
+        "updatedAt" : "2019-12-02T12:02:05Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "421192cd5655164bd9e3fd2dbcc3d9f1c5ce1350",
+    "line" : 25,
+    "diffHunk" : "@@ -1,1 +298,302 @@  }\n\n  // NOTE(olafur) this test fails unpredicatly on Windows with\n  //      \"\"\"|/a/src/main/scala/Main.worksheet.sc\n  //         |val message/*<no symbol>*/ = \"Hello World!\""
+  }
+]

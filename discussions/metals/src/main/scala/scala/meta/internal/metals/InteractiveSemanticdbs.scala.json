@@ -1,0 +1,167 @@
+[
+  {
+    "id" : "6388e497-3dd7-48b7-ab4b-53bd712aded2",
+    "prId" : 2539,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2539",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "9e0dde73-c389-492a-a0a0-81832fca66f5",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "We don't want to index worksheets globally at least until we can distinguish different build targets and unrelated symbols with the same name. Also, worksheet definitions are only available inside the worksheet itself.",
+        "createdAt" : "2021-02-22T16:33:17Z",
+        "updatedAt" : "2021-02-22T17:56:53Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b53145da24136554bef3e6fc28bc77a7dcfd5a62",
+    "line" : 23,
+    "diffHunk" : "@@ -1,1 +81,85 @@            Option(compiled).foreach(doc =>\n              // don't index dependency source files or worksheets, since their definitions are local\n              if (!source.isDependencySource(workspace) && !source.isWorksheet)\n                semanticdbIndexer().onChange(source, doc)\n            )"
+  },
+  {
+    "id" : "b1cae7e5-0e4a-4d2d-b3ed-4705c8667bff",
+    "prId" : 2538,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2538",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "6d576742-021d-43c2-9e77-8e5bb1cdca07",
+        "parentId" : null,
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "Is this check required?\r\nIt looks like `SemanticdbTextDocumentProvider` sets up `text` value correctly.",
+        "createdAt" : "2021-02-22T13:56:16Z",
+        "updatedAt" : "2021-02-22T14:00:06Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e826675b-0f08-4b63-a288-9197d19e10e3",
+        "parentId" : "6d576742-021d-43c2-9e77-8e5bb1cdca07",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "It's actually not serialized to bytes, which I think might be the default way to write it to file.",
+        "createdAt" : "2021-02-22T14:08:31Z",
+        "updatedAt" : "2021-02-22T14:08:32Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "099a722a1cd2f24e0c0d88f5d766a4ba70c613fe",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +179,183 @@    val textDocument = {\n      val doc = s.TextDocument.parseFrom(bytes)\n      if (doc.text.isEmpty()) doc.withText(text)\n      else doc\n    }"
+  },
+  {
+    "id" : "93d7e039-b0a0-4db5-acad-d60b30cb47bf",
+    "prId" : 2412,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2412",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "79b9aa4d-bd38-4d27-a742-9dd0725164fc",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Let's maybe move some of the logic (prepending imports, calculating semanticdb and adjusting ranges) to `Compilers` and we can use `AdjustLspData` the same as with any other cases? We would probably need to add `adjustRange` from here to `AdjustLspData`",
+        "createdAt" : "2021-01-20T13:39:05Z",
+        "updatedAt" : "2021-01-25T08:49:45Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d8c5eb40-85c8-4550-96da-1453900920b3",
+        "parentId" : "79b9aa4d-bd38-4d27-a742-9dd0725164fc",
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "In the beginning, I thought to implement it as you suggest.\r\n\r\nHowever, I found that `references` and `rename` are based on `DefinitionProvider.positionOccurence`.\r\nIt internally uses `TokenEditDistance` between buffer and TextDocument. So for sbt files, it means that TextDocument has to be cleaned from sbt-specific imports before it will be passed into `TokenEditDistance`. Otherwise, it's method `toOriginal` fails.\r\nIt might be handled by adding sbt/adjust-specific logic into `DefinitionProvider` but I don't think that it's the right way to go.\r\n\r\nSo, I decided that it would be better just to leave these hacks in `IntercativeSemanticdb` because in this case adjustment is applied on TextDocument, not on LSP positions.",
+        "createdAt" : "2021-01-21T18:11:05Z",
+        "updatedAt" : "2021-01-25T08:49:45Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ec6413e6-4bdd-4171-8034-0fd214601a5f",
+        "parentId" : "79b9aa4d-bd38-4d27-a742-9dd0725164fc",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I think that should not be an issue. DefinitionProvider would still use `InteractiveSemanticdb`, so there would be no need to add sbt specific logic anywhere. However, I see now that it's a bigger refactor here, so maybe I can take a look a bit later while taking a look at how we infer build targets (especially for worksheets, which I guess might not work perfectly now) and how we could improve it. ",
+        "createdAt" : "2021-01-22T09:58:00Z",
+        "updatedAt" : "2021-01-25T08:49:45Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "65917e67c7a40c22e3e50becfb28cb3aafcad030",
+    "line" : 112,
+    "diffHunk" : "@@ -1,1 +169,173 @@    val textDocument = s.TextDocument.parseFrom(bytes)\n    if (prependedLinesSize > 0)\n      cleanupAutoImports(textDocument, text, prependedLinesSize)\n    else textDocument\n  }"
+  },
+  {
+    "id" : "de77e8d0-6488-459e-abf0-daf03e2d93f6",
+    "prId" : 2345,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2345",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "96ebe35b-9bea-41e1-9f5b-9ce266fc8145",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I added two fallbacks here - worksheet presentation compiler and the standalone one as a last resort.",
+        "createdAt" : "2020-12-29T15:43:05Z",
+        "updatedAt" : "2020-12-31T10:33:41Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d9cd2ac8f7fbab36622dcb13d1c272c4f968a361",
+    "line" : 111,
+    "diffHunk" : "@@ -1,1 +169,173 @@          .flatMap(compilers().loadWorksheetCompiler)\n      }\n      .getOrElse(compilers().ramboCompiler)\n\n    val uri = source.toURI.toString"
+  },
+  {
+    "id" : "155f645d-df24-4a59-b0b2-4c44574e43cf",
+    "prId" : 337,
+    "prUrl" : "https://github.com/scalameta/metals/pull/337",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "83e95e21-bbe1-4261-bf8e-f2fe3e4ee885",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Have you considered the trade-offs wrt `ConcurrentHashMap`? I'm asking because `ConcurrentHashMap` is my go-to for these scenarios since it's generally faster.",
+        "createdAt" : "2018-11-24T20:05:01Z",
+        "updatedAt" : "2018-11-27T10:23:41Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5876c3b7-4767-4c36-abbb-13b6eac5984f",
+        "parentId" : "83e95e21-bbe1-4261-bf8e-f2fe3e4ee885",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I didn't use `ConcurrentHashMap` since the `computeIfAbsent` instructions say the compute function should be \"short and simple\" and in this class it's expensive. However, worst case it blocks with synchronized either way so can just use `ConcurrentHashMap`. I agree that's better for consistency 👍 ",
+        "createdAt" : "2018-11-25T11:24:05Z",
+        "updatedAt" : "2018-11-27T10:23:41Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8c39d718-cd43-4062-9d12-cc5512ffd081",
+        "parentId" : "83e95e21-bbe1-4261-bf8e-f2fe3e4ee885",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Turns out that `ConcurrentHashMap` results in a deadlock or infinite loop at\r\n\r\n```\r\n\"ForkJoinPool.commonPool-worker-1\" #96 daemon prio=5 os_prio=31 tid=0x00007f9cec46c000 nid=0x7323 runnable [0x0000700008402000]\r\n   java.lang.Thread.State: RUNNABLE\r\n        at java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1069)\r\n        at java.util.concurrent.ConcurrentHashMap.put(ConcurrentHashMap.java:1006)\r\n        at scala.meta.internal.metals.InteractiveSemanticdbs.$anonfun$compile$3(InteractiveSemanticdbs.scala:98)\r\n```\r\n\r\nBack to `Collections.synchronizedMap` it is then.",
+        "createdAt" : "2018-11-26T10:48:34Z",
+        "updatedAt" : "2018-11-27T10:23:41Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8ab78d5883e2e77a843cca1ea641084e6e4a2875",
+    "line" : 57,
+    "diffHunk" : "@@ -1,1 +55,59 @@  private val textDocumentCache = Collections.synchronizedMap(\n    new java.util.HashMap[AbsolutePath, s.TextDocument]()\n  )\n\n  def reset(): Unit = {"
+  }
+]

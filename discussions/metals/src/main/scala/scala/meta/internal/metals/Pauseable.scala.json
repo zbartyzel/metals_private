@@ -1,0 +1,101 @@
+[
+  {
+    "id" : "afe267ee-3698-46c3-9c10-365f3885beab",
+    "prId" : 709,
+    "prUrl" : "https://github.com/scalameta/metals/pull/709",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "57990931-2ff0-477e-8185-8f9a8358cfd9",
+        "parentId" : null,
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "`Pauseable` or `Pausable`? (I honestly don't know) ;)",
+        "createdAt" : "2019-05-31T14:05:07Z",
+        "updatedAt" : "2019-05-31T14:07:10Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e6fccbd0-2ab7-49cb-beab-0ef500a07e87",
+        "parentId" : "57990931-2ff0-477e-8185-8f9a8358cfd9",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I googled myself, seems pauseable is OK, similar to `Cancelable`.",
+        "createdAt" : "2019-05-31T14:49:53Z",
+        "updatedAt" : "2019-05-31T14:49:54Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e996d0d719a59efbb86d5727fb306a454ea1623b",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +6,10 @@ * Interface for something that can be paused and unpaused, for example a stream of compile requests.\n */\ntrait Pauseable {\n  final val isPaused = new AtomicBoolean(false)\n"
+  },
+  {
+    "id" : "5fdc733e-7c7b-4af2-9f67-2abfe4b716ff",
+    "prId" : 709,
+    "prUrl" : "https://github.com/scalameta/metals/pull/709",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "965e6b64-8088-4bee-942b-d7110ab0a39b",
+        "parentId" : null,
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "or maybe `resume`?",
+        "createdAt" : "2019-05-31T14:05:41Z",
+        "updatedAt" : "2019-05-31T14:07:10Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1ee56231-8934-4a27-b502-2448e757b7ef",
+        "parentId" : "965e6b64-8088-4bee-942b-d7110ab0a39b",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I prefer `unpause` for consistency with `pause`",
+        "createdAt" : "2019-05-31T14:50:11Z",
+        "updatedAt" : "2019-05-31T14:50:11Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e996d0d719a59efbb86d5727fb306a454ea1623b",
+    "line" : 15,
+    "diffHunk" : "@@ -1,1 +13,17 @@    doPause()\n  }\n  final def unpause(): Unit = {\n    isPaused.set(false)\n    doUnpause()"
+  },
+  {
+    "id" : "46e3bb5f-e783-4b1f-8ac3-c6c61b8bb083",
+    "prId" : 709,
+    "prUrl" : "https://github.com/scalameta/metals/pull/709",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "35a22680-f350-4bfa-bb11-88a925429d9b",
+        "parentId" : null,
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "why not `from` - the fact that it is from `Pauseables` is already expressed in the type. Unless it is to circumvent the generics?",
+        "createdAt" : "2019-05-31T14:06:41Z",
+        "updatedAt" : "2019-05-31T14:07:10Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "76cf72ea-cf86-4510-b26d-b1b2a53f100a",
+        "parentId" : "35a22680-f350-4bfa-bb11-88a925429d9b",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "No issue with generics, just `fromX` feels consistent with similar APIs like `Json.fromString`. `Pauseable.fromPauseables` can be read as \"create a single pauseable from this list of pauseables\"",
+        "createdAt" : "2019-05-31T14:51:40Z",
+        "updatedAt" : "2019-05-31T14:51:41Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e996d0d719a59efbb86d5727fb306a454ea1623b",
+    "line" : 27,
+    "diffHunk" : "@@ -1,1 +25,29 @@\n  /** Merges a list of Pausables into a single Pauseable. */\n  def fromPausables(all: Iterable[Pauseable]): Pauseable = new Pauseable {\n    override def doPause(): Unit = Cancelable.cancelEach(all)(_.pause())\n    override def doUnpause(): Unit = Cancelable.cancelEach(all)(_.unpause())"
+  }
+]

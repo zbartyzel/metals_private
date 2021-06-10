@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "3020b1a3-4650-4259-b41f-1c7534ee0a9f",
+    "prId" : 1171,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1171",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "d20f4466-6a83-4447-ac57-c7da442d49e4",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Thank you for fixing this! 👏\r\n\r\nThe biggest reason for delaying the upgrade to jdk 11 in our ci was that tests needed to be updated. ",
+        "createdAt" : "2019-12-09T08:41:56Z",
+        "updatedAt" : "2019-12-16T16:29:10Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "9e846caa6fa993ed1b3cd404be6e07dc74d46b64",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +11,15 @@   *       files have moved to become modules on JVM > 8.\n   */\n  val expectedLibraries: SortedSet[String] = {\n    lazy val jdk8Libraries = SortedSet(\n      \"charsets\","
+  }
+]

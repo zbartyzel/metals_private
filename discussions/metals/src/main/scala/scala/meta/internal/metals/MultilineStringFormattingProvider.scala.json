@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "00362384-4b5b-4f40-970d-d965161a4af4",
+    "prId" : 1427,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1427",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b8d6722a-6d92-4df7-9098-3b580859fadb",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Since we check previously if there is a pipe in the line, the lastPipe inex will be correct.",
+        "createdAt" : "2020-02-13T12:03:54Z",
+        "updatedAt" : "2020-02-13T12:03:55Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e673d27c52888fd69c6c7e20b1a3b2839ff8b93f",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +42,46 @@\n  private def determineDefaultIndent(sourceText: String, start: Int): String = {\n    val lastPipe = sourceText.indexOf('|')\n    val lastNewline = sourceText.lastIndexBetween('\\n', upperBound = lastPipe)\n    space * (lastPipe - lastNewline - 1)"
+  },
+  {
+    "id" : "6fbea1cd-5b52-4631-9842-4ad526cbadbd",
+    "prId" : 1245,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1245",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "34ab3d8b-47c0-4565-9b36-92d8a20456ba",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "What happens if the line doesn’t have a pipe? It’s optional ",
+        "createdAt" : "2020-01-04T09:27:50Z",
+        "updatedAt" : "2020-01-04T09:27:55Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "66ccf2df-4373-4080-a753-7284e9093182",
+        "parentId" : "34ab3d8b-47c0-4565-9b36-92d8a20456ba",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "If there is no pipe on the line it gets filtered out beforehand and the line never enters the `formatPipeLine` method. I suppose I should have added a test for this as well. I did just check it locally and that indeed is how it works.",
+        "createdAt" : "2020-01-04T09:35:18Z",
+        "updatedAt" : "2020-01-04T09:35:18Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "844640a3-f257-4a18-b4ae-2298850557fa",
+        "parentId" : "34ab3d8b-47c0-4565-9b36-92d8a20456ba",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "I just added another test for this https://github.com/scalameta/metals/pull/1249",
+        "createdAt" : "2020-01-04T09:44:57Z",
+        "updatedAt" : "2020-01-04T09:44:57Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "25ddacc3853e17014cc610d9cfe8136470e9df4b",
+    "line" : 27,
+    "diffHunk" : "@@ -1,1 +170,174 @@        }\n      case _ =>\n        val isFirstLineOfMultiLine = lineText.trim.contains(\"\\\"\\\"\\\"|\")\n        if (isFirstLineOfMultiLine) {\n          None"
+  }
+]

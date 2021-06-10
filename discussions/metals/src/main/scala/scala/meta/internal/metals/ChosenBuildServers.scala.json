@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "9fadd220-3a76-4972-8432-33ef0dbee5de",
+    "prId" : 2154,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2154",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "301e294a-78f4-48ba-b83b-c7fc2bfb1066",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "This `EXPLICIT` stuff is probably just going to be temporary as long as we treat Bloop as the defacto standard. Once that changes, this distinction can just go away.",
+        "createdAt" : "2020-10-25T12:35:26Z",
+        "updatedAt" : "2020-10-30T17:54:40Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8eab66607688c713397334de6750fab0ca346fc8",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +7,11 @@\nclass ChosenBuildServers(conn: () => Connection, time: Time) {\n  final val explicit = \"EXPLICIT\"\n\n  def selectedServer(md5: String = explicit): Option[String] = {"
+  }
+]

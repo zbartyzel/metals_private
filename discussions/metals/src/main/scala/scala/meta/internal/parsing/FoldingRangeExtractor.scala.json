@@ -1,0 +1,79 @@
+[
+  {
+    "id" : "5efe1d4b-cc7d-4d8a-90cd-d8d6b5304788",
+    "prId" : 2767,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2767",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "e8b7449a-1eba-45d5-a9fa-76f0335e9384",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "I wonder why this is popping up now?",
+        "createdAt" : "2021-05-10T08:50:29Z",
+        "updatedAt" : "2021-05-10T08:50:41Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ab815226-be27-4df7-bc31-896c9009a6ef",
+        "parentId" : "e8b7449a-1eba-45d5-a9fa-76f0335e9384",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This might have been an issue before, but only popped up recently due to my changes.",
+        "createdAt" : "2021-05-10T09:05:57Z",
+        "updatedAt" : "2021-05-10T09:05:57Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a67dfcea-8913-47b4-858d-dcb69be55b06",
+        "parentId" : "e8b7449a-1eba-45d5-a9fa-76f0335e9384",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Could we instead only fix it in tests? This should not be an issue on windows really. I think editors handle it correctly.",
+        "createdAt" : "2021-05-10T09:19:24Z",
+        "updatedAt" : "2021-05-10T09:19:28Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4c00bd07-d88f-46cd-837e-417ef192e3e9",
+        "parentId" : "e8b7449a-1eba-45d5-a9fa-76f0335e9384",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Too late, I will take a look at it.",
+        "createdAt" : "2021-05-10T09:19:47Z",
+        "updatedAt" : "2021-05-10T09:19:47Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6981de9b-bd8c-4e1a-bcc0-c0a6c3b8736f",
+        "parentId" : "e8b7449a-1eba-45d5-a9fa-76f0335e9384",
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "Opps, sorry)\r\n\r\nYep, I thought that it would be better to check how it works in the editor but I was too lazy to install Windows VM.\r\nHowever, to be sure we have to test it on several editor.",
+        "createdAt" : "2021-05-10T09:42:22Z",
+        "updatedAt" : "2021-05-10T09:42:22Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a1cfbcfa-536e-40ab-88b3-ab3f121ca7d3",
+        "parentId" : "e8b7449a-1eba-45d5-a9fa-76f0335e9384",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I have a Windows machine set up and will test it out. Shouldn't take long to look at it. Thanks for fixing this btw! ",
+        "createdAt" : "2021-05-10T09:52:47Z",
+        "updatedAt" : "2021-05-10T09:52:47Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "80e8906a4c884eddf1830d0a5ad61f494ab339f6",
+    "line" : 21,
+    "diffHunk" : "@@ -1,1 +112,116 @@   * Due to logic thats forcibly shifts position in `Foldable`\n   * `end` might point at `\\r>>range.end<<\\n`\n   * that causes problems on Windows (at least in tests)\n   */\n  private def adjustEnd(pos: Position, tokens: Tokens): Position = {"
+  }
+]

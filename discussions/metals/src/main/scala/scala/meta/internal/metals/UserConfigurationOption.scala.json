@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "3752d37b-fd9c-4381-8243-b68a978955d7",
+    "prId" : 1390,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1390",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "db9b35dd-3ddc-4ccb-abc4-59b305cfd04c",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "You can actually pattern match on an Array:\r\n```\r\n  case Array(head, tail @_*) =>\r\n    head ++ tail.flatMap(_.capitalize)\r\n```\r\nNot 100 % sure if more readable, but an interesting side note.",
+        "createdAt" : "2020-02-10T13:56:26Z",
+        "updatedAt" : "2020-02-10T13:56:37Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "319211a9-8406-48a9-b67f-eca128df07be",
+        "parentId" : "db9b35dd-3ddc-4ccb-abc4-59b305cfd04c",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Ahh, nice. I _think_ in terms of readability, I'd prefer the other one, but thanks!",
+        "createdAt" : "2020-02-10T14:40:38Z",
+        "updatedAt" : "2020-02-10T14:40:38Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b9eb42a8dee6b90cc97fbb5ba687e303c6f5a5b8",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +17,21 @@  }\n  def camelCaseKey: String =\n    key.split('-').toList match {\n      case head :: tail => head ++ tail.flatMap(_.capitalize)\n      case _ => key"
+  }
+]

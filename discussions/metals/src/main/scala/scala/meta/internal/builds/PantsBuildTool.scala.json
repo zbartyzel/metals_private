@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "d911b28d-4b5c-4191-abfe-604902a9fc57",
+    "prId" : 935,
+    "prUrl" : "https://github.com/scalameta/metals/pull/935",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f81a64a4-e15a-4009-87d8-bc80b7675ff4",
+        "parentId" : null,
+        "authorId" : "1977d0df-25a0-4fd9-a417-470eafe55f98",
+        "body" : "Is the plan to move some of this logic eventually to Bloop? I'm open to maintaining the appropriate code there so that we can have first-class Pants support regardless of the use of Metals like we do with the rest of the build tools.",
+        "createdAt" : "2019-10-12T12:12:14Z",
+        "updatedAt" : "2019-12-05T19:30:31Z",
+        "lastEditedBy" : "1977d0df-25a0-4fd9-a417-470eafe55f98",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "962969c7-0912-431b-80c8-2c39517ef614",
+        "parentId" : "f81a64a4-e15a-4009-87d8-bc80b7675ff4",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Once this component stabilizes I think it would be best to contribute it upstream to Pants, where it can be kept up-to-date with latest Pants changes and also maybe be improved to take advantage of more suitable Pants APIs.\r\n\r\nSo far, we're still experimenting the Pants->Bloop translation, which makes it most convenient to keep it here in Metals for now.",
+        "createdAt" : "2019-10-20T09:41:33Z",
+        "updatedAt" : "2019-12-05T19:30:31Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a95ae87fd9621161d156685f32480fcb7bb451a4",
+    "line" : 70,
+    "diffHunk" : "@@ -1,1 +68,72 @@  }\n\n  def bloopInstall(\n      workspace: AbsolutePath,\n      languageClient: MetalsLanguageClient,"
+  },
+  {
+    "id" : "0d14a3de-80d4-4199-9845-ef2b72983085",
+    "prId" : 935,
+    "prUrl" : "https://github.com/scalameta/metals/pull/935",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "0482c2ba-0f1f-4357-b647-65c3eefe3f17",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Not sure I understand the logic here? Why for `.sc` files we are looking for the same but with `.scala`?",
+        "createdAt" : "2019-12-05T15:37:03Z",
+        "updatedAt" : "2019-12-05T19:30:31Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "05a1bb17-c16e-4ace-b692-c45ef6344a49",
+        "parentId" : "0482c2ba-0f1f-4357-b647-65c3eefe3f17",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I added a comment\r\n```\r\n        // Convert Scala script name into a `*.scala` filename to find out what\r\n        // target it should belong to. Pants doesn't support Scala scripts so\r\n        // using the script name unchanged would return no targets.\r\n```",
+        "createdAt" : "2019-12-05T19:24:31Z",
+        "updatedAt" : "2019-12-05T19:30:31Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a95ae87fd9621161d156685f32480fcb7bb451a4",
+    "line" : 52,
+    "diffHunk" : "@@ -1,1 +50,54 @@          .pantsOwnerOf(\n            workspace,\n            source.resolveSibling(_.stripSuffix(\".sc\") + \".scala\")\n          )\n          .map("
+  }
+]

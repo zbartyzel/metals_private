@@ -1,0 +1,46 @@
+[
+  {
+    "id" : "a5842d5e-72eb-43ce-8f1e-4a2f91ac2a61",
+    "prId" : 2589,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2589",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "e6a8bb2d-85ad-4e82-9fe7-4724d6a3c5ff",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "https://github.com/lampepfl/dotty/issues/11689",
+        "createdAt" : "2021-03-10T17:15:22Z",
+        "updatedAt" : "2021-03-11T14:26:31Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c41b6db0-961a-4f5c-94ed-428defcc4c68",
+        "parentId" : "e6a8bb2d-85ad-4e82-9fe7-4724d6a3c5ff",
+        "authorId" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "body" : "What do you think about adding a link to this issue on a line comment in `ColorEnum.scala`, so we can see what's wrong with the test later? ",
+        "createdAt" : "2021-03-11T11:39:55Z",
+        "updatedAt" : "2021-03-11T14:26:31Z",
+        "lastEditedBy" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4b0c0dac-b0db-4bfd-bd8e-18618f33f268",
+        "parentId" : "e6a8bb2d-85ad-4e82-9fe7-4724d6a3c5ff",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "The problem is that it will show up for any other tests too. I will put it into the test suite itself.",
+        "createdAt" : "2021-03-11T14:23:41Z",
+        "updatedAt" : "2021-03-11T14:26:31Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "12fbb0bb50d972bd724663e2c2d6eee8c85cb404",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +2,6 @@\nenum Color/*example.Color#*/(val rgb/*example.Color#rgb.*/: Int/*scala.Int#*/):\n   case Red/*example.Color.Red.*/   extends Color/*example.Color#*/(0xFF0000)/*scala.runtime.EnumValue#*/\n   case Green/*example.Color.Green.*/ extends Color/*example.Color#*/(0x00FF00)/*scala.runtime.EnumValue#*/\n   case Blue/*example.Color.Blue.*/  extends Color/*example.Color#*/(0x0000FF)/*scala.runtime.EnumValue#*/"
+  }
+]

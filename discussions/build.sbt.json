@@ -1,0 +1,1586 @@
+[
+  {
+    "id" : "1cd435a2-c07f-4157-97bb-55f059b58826",
+    "prId" : 2860,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2860",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ee17d35c-3ec1-49a3-8800-d2c9eec2368e",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "What does this do?",
+        "createdAt" : "2021-06-05T17:19:06Z",
+        "updatedAt" : "2021-06-05T17:19:40Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b1c5fc89-fc40-43fd-96c8-56ecd3479888",
+        "parentId" : "ee17d35c-3ec1-49a3-8800-d2c9eec2368e",
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "sbt wrongly warns that `scalafixConfig` setting isn't used",
+        "createdAt" : "2021-06-05T17:47:07Z",
+        "updatedAt" : "2021-06-05T17:47:07Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "efec24ae-edd3-4055-b3ed-441565369a10",
+        "parentId" : "ee17d35c-3ec1-49a3-8800-d2c9eec2368e",
+        "authorId" : "e74af9aa-71ac-4d06-b0d7-514da8b2f746",
+        "body" : "I just opened https://github.com/scalacenter/sbt-scalafix/pull/233 to avoid that",
+        "createdAt" : "2021-06-05T20:07:24Z",
+        "updatedAt" : "2021-06-05T20:07:24Z",
+        "lastEditedBy" : "e74af9aa-71ac-4d06-b0d7-514da8b2f746",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d8c6569fb7bca098ca57e7eb72f51645512984ae",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +172,176 @@}\nGlobal / cancelable := true\nGlobal / excludeLintKeys += scalafixConfig\ncrossScalaVersions := Nil\n"
+  },
+  {
+    "id" : "f461a9a5-ea6a-43c1-8ad7-cacc6c2e668a",
+    "prId" : 2826,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2826",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "493efa71-a196-4d5b-b50f-4382a014e7bb",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "You should change scala212 to be `2.12.14`, we try to keep on the latest version in Metals, and add `2.12.13` here. You will most likely need to set ammonite212Version to `2.12.14` if it's not yet published.\r\n\r\nAlso, please update `bin/test-release.sh`",
+        "createdAt" : "2021-05-28T15:03:24Z",
+        "updatedAt" : "2021-05-28T15:03:25Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "93f914cc-1902-482d-8bde-3fafca94b7a3",
+        "parentId" : "493efa71-a196-4d5b-b50f-4382a014e7bb",
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "scalafix isn't published for 2.12.14 yet and fails with:\r\n```\r\n[error] error: The ExplicitResultTypes rule only supports the exact Scala versions \r\n'List(2.12.13, 2.12.11, 2.12.12)' for this binary version.\r\n```",
+        "createdAt" : "2021-05-28T15:10:18Z",
+        "updatedAt" : "2021-05-28T15:10:18Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c05be9db-9c08-4ecc-abf4-31cb452ed039",
+        "parentId" : "493efa71-a196-4d5b-b50f-4382a014e7bb",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "ach, ok, we can update it later.",
+        "createdAt" : "2021-05-28T15:37:48Z",
+        "updatedAt" : "2021-05-28T15:37:49Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9a047f11-f5d0-4e67-911c-d235d709ebf0",
+        "parentId" : "493efa71-a196-4d5b-b50f-4382a014e7bb",
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "and the same for ammonite",
+        "createdAt" : "2021-05-28T15:42:51Z",
+        "updatedAt" : "2021-05-28T15:42:52Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1fe78c8d5ea5e5c36be5ed16dc82532a22ba9be2",
+    "line" : 21,
+    "diffHunk" : "@@ -1,1 +227,231 @@      scala213,\n      scala212,\n      \"2.12.14\",\n      \"2.12.12\",\n      \"2.12.11\","
+  },
+  {
+    "id" : "4cb20bf3-7de6-46ff-af25-dae0c577e1a3",
+    "prId" : 2826,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2826",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f161b73c-fe24-4f4a-8b4e-743d886aa294",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "I know this is already merged, but does the snapshot resolver need to stay in here?",
+        "createdAt" : "2021-05-28T19:48:53Z",
+        "updatedAt" : "2021-05-28T19:48:54Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c4d59eed-8036-4200-a0a7-e9e65a68ec1b",
+        "parentId" : "f161b73c-fe24-4f4a-8b4e-743d886aa294",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "It's useful for testing out snapshot releases. We can remove it for sure, but it shouldn't matter too much.",
+        "createdAt" : "2021-05-28T19:59:37Z",
+        "updatedAt" : "2021-05-28T19:59:37Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1fe78c8d5ea5e5c36be5ed16dc82532a22ba9be2",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +135,139 @@    testFrameworks := List(),\n    resolvers += Resolver.sonatypeRepo(\"public\"),\n    resolvers += Resolver.sonatypeRepo(\"snapshot\"),\n    dependencyOverrides += V.guava,\n    // faster publishLocal:"
+  },
+  {
+    "id" : "d7e8f9ba-378a-4c22-9163-11fa9a6bfee4",
+    "prId" : 2779,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2779",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "736997e1-13a9-4fe9-80dd-0f587fc318a3",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Those RC versions are still used for courses at EPFL, so I will hold off dropping them until end of the semester most likely.",
+        "createdAt" : "2021-05-14T12:52:17Z",
+        "updatedAt" : "2021-05-14T12:52:30Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b14dcc6e504c6df35a5797bf8f1c0fafef689627",
+    "line" : 25,
+    "diffHunk" : "@@ -1,1 +228,232 @@  // Scala 3\n  def nonDeprecatedScala3Versions =\n    Seq(scala3, \"3.0.0-RC3\", \"3.0.0-RC2\", \"3.0.0-RC1\")\n  def deprecatedScala3Versions = Seq()\n  def scala3Versions = nonDeprecatedScala3Versions ++ deprecatedScala3Versions"
+  },
+  {
+    "id" : "a3b1c7a7-c074-4c14-b060-50270d1d1daf",
+    "prId" : 2531,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2531",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "715c69dc-235f-47f9-ad24-2f9d06fe3eff",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "There were issues in the build because mtags3 were lacking the version specific directory.",
+        "createdAt" : "2021-02-20T11:22:57Z",
+        "updatedAt" : "2021-02-20T11:22:57Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1e136f11-dcff-46ae-bfc2-f7122e3c093f",
+        "parentId" : "715c69dc-235f-47f9-ad24-2f9d06fe3eff",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Ironic I just hit on this when I cleaned and tried to build everything locally. It was on my list to look at after reviewing this, ha.",
+        "createdAt" : "2021-02-20T12:28:25Z",
+        "updatedAt" : "2021-02-20T12:29:59Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c112958defe7b37db9aa0bbb3c39c47933d013d8",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +294,298 @@    result += base / \"scala-3\"\n  }\n  result += base / s\"scala-$scalaVersion\"\n  result.toList\n}"
+  },
+  {
+    "id" : "3ed5f922-b804-4a93-b961-464a76c15b03",
+    "prId" : 2457,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2457",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "cba9769e-5c08-4a7e-951a-1fa6d5d8b11e",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "The file related stuff that we use got extracted out into it's own module and published separately. So that's the reason for this addition.",
+        "createdAt" : "2021-02-01T09:14:57Z",
+        "updatedAt" : "2021-02-01T10:13:16Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c554e4212897184ebcb0389966752b8b178eb0b0",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +430,434 @@      // for logging\n      \"com.outr\" %% \"scribe\" % \"3.3.1\",\n      \"com.outr\" %% \"scribe-file\" % \"3.3.1\",\n      \"com.outr\" %% \"scribe-slf4j\" % \"3.3.1\", // needed for flyway database migrations\n      // for debugging purposes, not strictly needed but nice for productivity"
+  },
+  {
+    "id" : "8dac550d-0ac8-4700-adab-b48ace6aea93",
+    "prId" : 2448,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2448",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "df6a9149-c879-412d-86b6-739e47aacd66",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Could we add it as cross version to `input` ? We could have separate `scala-3` directory like in case of mtags.",
+        "createdAt" : "2021-02-02T13:12:01Z",
+        "updatedAt" : "2021-02-08T17:02:33Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "bb0d126b-bf6a-455c-bae3-e5cdce7cf127",
+        "parentId" : "df6a9149-c879-412d-86b6-739e47aacd66",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "If it's too complicated it's okay to leave it separate.",
+        "createdAt" : "2021-02-02T17:08:23Z",
+        "updatedAt" : "2021-02-08T17:02:33Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "87ca1d61-3cbd-4ff2-b21c-76b576b09354",
+        "parentId" : "df6a9149-c879-412d-86b6-739e47aacd66",
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "Yep, that will be hard. It requires to do smth like in `crossPublishLocal`.\r\n\r\nAlso, there is an option not to use `input` as a project.\r\nThe only advantage it provides is that before running `unit` it checks that `input` compiles.",
+        "createdAt" : "2021-02-02T18:25:56Z",
+        "updatedAt" : "2021-02-08T17:02:33Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1b34d30c-10c2-40fc-8b1a-a8570537a01a",
+        "parentId" : "df6a9149-c879-412d-86b6-739e47aacd66",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Ok, I think it's fine to leave it as is then. It looks pretty sensible currently.",
+        "createdAt" : "2021-02-02T19:46:57Z",
+        "updatedAt" : "2021-02-08T17:02:33Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "90878c4d641b8a8eb4b4e0bd4a7b43460e8f769f",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +513,517 @@  .settings(\n    sharedSettings,\n    scalaVersion := V.scala3,\n    skip.in(publish) := true\n  )"
+  },
+  {
+    "id" : "1ea4f7d8-4111-4dd0-a083-0bcee29e8c80",
+    "prId" : 2440,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2440",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "5792311d-1f64-4184-80ff-d81d6a29034a",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "You may want to leave a comment on what Google account owns this bucket to help the next person investigate the failing CI 😅 ",
+        "createdAt" : "2021-01-27T10:49:53Z",
+        "updatedAt" : "2021-01-27T10:52:55Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a45c0c46-7267-4767-9529-6929a9bc149a",
+        "parentId" : "5792311d-1f64-4184-80ff-d81d6a29034a",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I think I should be able to give more people access to it. I will try to do that later if it works, but I added a comment for now.",
+        "createdAt" : "2021-01-27T10:53:07Z",
+        "updatedAt" : "2021-01-27T10:53:07Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "dec8329936203da502120bdf8f0bc58b59cc795f",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +695,699 @@    moduleName := \"metals-docs\",\n    // note bucket created by @tgodzik\n    munitBucketName := Some(\"scala-metals-test-reports\"),\n    mdoc := run.in(Compile).evaluated,\n    munitRepository := Some(\"scalameta/metals\"),"
+  },
+  {
+    "id" : "c223ba1f-dc94-4d7a-8496-e9a39f8fb649",
+    "prId" : 2404,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2404",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f9f0ebb2-f334-445a-b4dc-52c6a64d0b8d",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Can we just bump the version of Ammonite right away to not have to worry about this? It looks like it's available for 2.12.13 -> `2.3.8-32-64308dc3`. Or were you purposefully not including that?",
+        "createdAt" : "2021-01-18T17:40:34Z",
+        "updatedAt" : "2021-01-18T19:36:06Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d35bfa25-969f-452f-aef9-25903556c48d",
+        "parentId" : "f9f0ebb2-f334-445a-b4dc-52c6a64d0b8d",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "So turns out there was a regression, but once https://github.com/lihaoyi/Ammonite/pull/1146 is released we can upgrade.",
+        "createdAt" : "2021-01-18T17:43:17Z",
+        "updatedAt" : "2021-01-18T19:36:06Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "23788145-16cb-4562-85d1-c5fbe465585f",
+        "parentId" : "f9f0ebb2-f334-445a-b4dc-52c6a64d0b8d",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "![](https://media.giphy.com/media/H3qWY13eGZUomKxOs6/source.gif)\r\n\r\n\r\nRegressions this week...",
+        "createdAt" : "2021-01-18T17:49:40Z",
+        "updatedAt" : "2021-01-18T19:36:06Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8ecb05f5d5e9bbda7f30f18731695522ef5aa16d",
+    "line" : 27,
+    "diffHunk" : "@@ -1,1 +576,580 @@          V.sbtScala,\n          V.scala212,\n          // TODO https://github.com/scalameta/metals/issues/2392\n          \"2.12.12\",\n          V.scala213,"
+  },
+  {
+    "id" : "61e9cb28-b9b5-4a03-923e-9f38d5c33781",
+    "prId" : 2383,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2383",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f9622a7d-68e6-468a-ae18-2d750cb67cb6",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I decided to add support for 2.12.13, but keep Metals on 2.12.12 until we can just calmly update. I should have done it in the beginning, but it seemed I would be able to just do one more thing and they just kept poping up.",
+        "createdAt" : "2021-01-17T10:01:38Z",
+        "updatedAt" : "2021-01-17T10:01:38Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c2543282-429b-4020-8d83-ac9577cc6714",
+        "parentId" : "f9622a7d-68e6-468a-ae18-2d750cb67cb6",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "No worries at all. We can easily just do it after.",
+        "createdAt" : "2021-01-17T10:07:55Z",
+        "updatedAt" : "2021-01-17T10:11:05Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "2d9d79ab2be4fc541bb617efbf06aae1c43dfcd0",
+    "line" : 23,
+    "diffHunk" : "@@ -1,1 +214,218 @@    Seq(scala211, \"2.12.8\", \"2.12.9\", \"2.13.0\", \"2.13.1\")\n  def nonDeprecatedScala2Versions =\n    Seq(scala213, scala212, \"2.12.13\", \"2.12.11\", \"2.12.10\", \"2.13.2\", \"2.13.3\")\n  def scala2Versions = nonDeprecatedScala2Versions ++ deprecatedScala2Versions\n"
+  },
+  {
+    "id" : "8cba0aad-f42b-4520-9692-dc41765e86d6",
+    "prId" : 2374,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2374",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "86d9bb52-4ea5-40a2-b211-9412faa29687",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "It makes me happy to be simplifying in this :)",
+        "createdAt" : "2021-01-21T17:38:58Z",
+        "updatedAt" : "2021-01-22T16:41:19Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3bdee6d5b72cf6cfee580941ef1b1c2987b172b",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +10,14 @@def isScala213(v: Option[(Long, Long)]): Boolean = v.contains((2, 13))\ndef isScala2(v: Option[(Long, Long)]): Boolean = v.exists(_._1 == 2)\ndef isScala3(v: Option[(Long, Long)]): Boolean = v.exists(_._1 == 3)\n\ndef crossSetting[A]("
+  },
+  {
+    "id" : "6de2b4bd-03b2-4145-a6b4-3ba274eb965a",
+    "prId" : 2260,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2260",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "52370d6a-8ec2-49a2-b1cb-1cb34a6addd5",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Just because I don't fully remember where we ended up on this. How long will we keep 0.27.0-RC1 around as non-deprecated?",
+        "createdAt" : "2020-11-25T17:05:30Z",
+        "updatedAt" : "2020-11-25T17:26:36Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "26119f31-7fc4-4626-a14e-fb25127a8974",
+        "parentId" : "52370d6a-8ec2-49a2-b1cb-1cb34a6addd5",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Probably under the end of the course at EPFL.",
+        "createdAt" : "2020-11-25T17:09:05Z",
+        "updatedAt" : "2020-11-25T17:26:36Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "bad2ebdafddec4a185f9f657fbafabdb58cac798",
+    "line" : 23,
+    "diffHunk" : "@@ -1,1 +215,219 @@\n  // Scala 3\n  def nonDeprecatedScala3Versions = Seq(scala3, \"3.0.0-M1\", \"0.27.0-RC1\")\n  def deprecatedScala3Versions = Seq(\"0.26.0\")\n  def scala3Versions = nonDeprecatedScala3Versions ++ deprecatedScala3Versions"
+  },
+  {
+    "id" : "cb7ea5ee-7c7a-4db4-8985-79a988bf3f93",
+    "prId" : 2190,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2190",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "cff7ec59-670b-4b72-b8f0-c4d71e2dce5d",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "`isScala3`\r\n`isScala30`\r\n`isScala3Prerelease`\r\n\r\n🙈 \r\n\r\nI'll be happy when we can just have a `isScala3`",
+        "createdAt" : "2020-11-04T18:56:36Z",
+        "updatedAt" : "2020-11-06T10:08:14Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b135a6d205cffd61ee131ead0d6326569af38c30",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +13,17 @@  v.exists(_._1 == 3) || v.exists(_._1 == 0)\ndef isScala30(v: Option[(Long, Long)]): Boolean = v.exists(_._1 == 3)\ndef isScala3Prerelease(v: Option[(Long, Long)]): Boolean = v.exists(_._1 == 0)\n\ndef crossSetting[A]("
+  },
+  {
+    "id" : "2a761675-51bd-4899-a283-abb72b5548c6",
+    "prId" : 2161,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2161",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "bb6a62fb-e3fb-4956-9b08-c03a0cbfef52",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Since Metals is not a library, I imagine this will not be needed.",
+        "createdAt" : "2020-10-28T18:14:29Z",
+        "updatedAt" : "2020-10-28T18:41:16Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d9cc8e96-bfad-42aa-9926-b7e7009bd1aa",
+        "parentId" : "bb6a62fb-e3fb-4956-9b08-c03a0cbfef52",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Ahh, good point. I should have thought of this before. 👍 ",
+        "createdAt" : "2020-10-29T08:24:19Z",
+        "updatedAt" : "2020-10-29T08:24:20Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "9eb21fe4071e224acb0aab7c9d1deb6701c93aaa",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +294,298 @@  ),\n  // @note needed to deal with issues in https://github.com/scalameta/metals/pull/2157\n  sources in (Compile, doc) := Seq.empty,\n  libraryDependencies ++= crossSetting(\n    scalaVersion.value,"
+  },
+  {
+    "id" : "fd7a247d-aea8-4d7a-aa95-4f02e5461d4c",
+    "prId" : 2058,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2058",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "31a8d4c7-0a7e-4cc2-8df0-aacedd827cac",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "It seems that we have a large regression in 0.27 and no completions coming from scala library are not displayed.\r\nThis way most large tests will be run on 0.26, which works and I will focus on fixing it upstream before the release.\r\n",
+        "createdAt" : "2020-09-09T15:25:28Z",
+        "updatedAt" : "2020-09-09T16:12:31Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6b104687-a5ff-47eb-8ccb-c484fca95769",
+        "parentId" : "31a8d4c7-0a7e-4cc2-8df0-aacedd827cac",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Link to the regression https://github.com/lampepfl/dotty/issues/9760",
+        "createdAt" : "2020-09-09T16:49:54Z",
+        "updatedAt" : "2020-09-09T16:49:54Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e11a69983e1a8daa20e5799f5ecff8caae86da92",
+    "line" : 23,
+    "diffHunk" : "@@ -1,1 +203,207 @@\n  // Scala 3\n  def nonDeprecatedScala3Versions = Seq(scala3, scala3Candidate)\n  def deprecatedScala3Versions = Seq(\"0.25.0\", \"0.26.0-RC1\")\n  def scala3Versions = nonDeprecatedScala3Versions ++ deprecatedScala3Versions"
+  },
+  {
+    "id" : "6855023e-ba71-40f7-b8f6-095b6122bc0b",
+    "prId" : 1985,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1985",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "d70b28a0-d404-454a-80e1-a2589e2b5c85",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This ensures that if the test is not found then it will go into the first group",
+        "createdAt" : "2020-08-21T14:18:56Z",
+        "updatedAt" : "2020-08-21T14:58:03Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "32c5f725-49e3-44fd-a54e-5eb881a922a4",
+        "parentId" : "d70b28a0-d404-454a-80e1-a2589e2b5c85",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Just a note, but I've noticed the build definition is getting pretty large. I'm normally in favor of starting to move methods out into `project/x` once things start getting this large. Just something to think about for the future as we continually add more.",
+        "createdAt" : "2020-08-21T17:12:26Z",
+        "updatedAt" : "2020-08-21T17:14:26Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8e26e2d8d28a3d420f4f5bc7efb45ebe19ab460b",
+    "line" : 16,
+    "diffHunk" : "@@ -1,1 +577,581 @@  } else {\n    val groupIndex = TestGroups.testGroups.indexWhere(group => group(name))\n    val groupId = Math.max(0, groupIndex) + 1\n    System.getenv(\"TEST_SHARD\").toInt == groupId\n  }"
+  },
+  {
+    "id" : "579b8433-8525-4330-80d7-69d6b4a62bdc",
+    "prId" : 1954,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1954",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "4368cd98-6772-4d14-a70c-269c2535819a",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "The package name seems odd, but it is indeed just `testng`. I figured this was a nice small one to include for this purpose.",
+        "createdAt" : "2020-07-29T19:05:46Z",
+        "updatedAt" : "2020-07-29T19:05:46Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "531fc337172050dd6b7e6d5ed0a73ff72d1646c7",
+    "line" : 26,
+    "diffHunk" : "@@ -1,1 +580,584 @@      // will pick them up and update them. They aren't actually used.\n      \"com.lihaoyi\" %% \"ammonite-util\" % V.ammonite intransitive (),\n      \"com.lihaoyi\" % \"mill-contrib-testng\" % V.mill intransitive ()\n    ),\n    buildInfoPackage := \"tests\","
+  },
+  {
+    "id" : "54a42afd-96ce-40d3-ae2a-00089f4879f5",
+    "prId" : 1938,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1938",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "194aec33-6c5a-4045-ade2-5f4d25941ece",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "So I see this is added in order to access `BuildInfo` in `ScalaPresentationCompiler.scala`, but why isn't it detected by default here?",
+        "createdAt" : "2020-07-23T07:01:26Z",
+        "updatedAt" : "2020-07-23T07:05:07Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ead4a4ac-aacc-4374-92eb-15fc96868f22",
+        "parentId" : "194aec33-6c5a-4045-ade2-5f4d25941ece",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "It's the `mtags3` module, which I added so that we have the additional target. It uses `mtags3` directory by default, so every source dir from mtags needs to be added manually.",
+        "createdAt" : "2020-07-23T08:40:50Z",
+        "updatedAt" : "2020-07-23T08:40:50Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e89d5db21a92fd0c08f0da2ef3cc57e754b8a4ee",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +343,347 @@    managedSourceDirectories.in(Compile) += baseDirectory\n      .in(ThisBuild)\n      .value / \"mtags\" / \"target\" / (\"scala-\" + scalaVersion.value) / \"src_managed\" / \"main\",\n    moduleName := \"mtags3\",\n    scalaVersion := V.scala3,"
+  },
+  {
+    "id" : "82239285-5d7c-4bfc-b73f-5d095ba2ab27",
+    "prId" : 1857,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1857",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "094a0fea-6424-4d19-a576-1483b581af29",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Added this back, since I figured it we should not be just dropping it on users.",
+        "createdAt" : "2020-07-01T06:49:48Z",
+        "updatedAt" : "2020-07-01T09:27:36Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0c011d61-02ae-4f42-8f4d-c902b8e0b1fd",
+        "parentId" : "094a0fea-6424-4d19-a576-1483b581af29",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Also added 0.23.0, which doesn't influence the tests",
+        "createdAt" : "2020-07-01T07:16:53Z",
+        "updatedAt" : "2020-07-01T09:27:36Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "86d2c3c2df7dbe98f1c72c521448ffc89827baa6",
+    "line" : 27,
+    "diffHunk" : "@@ -1,1 +193,197 @@  // Scala 3\n  def nonDeprecatedScala3Versions = Seq(scala3, \"0.24.0\")\n  def deprecatedScala3Versions = Seq(\"0.24.0-RC1\")\n  def scala3Versions = nonDeprecatedScala3Versions ++ deprecatedScala3Versions\n"
+  },
+  {
+    "id" : "1f13f93f-19a5-421b-8e2d-2581b2f1b7dd",
+    "prId" : 1842,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1842",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "60e611e2-ef23-46ff-b1a8-5abbc7496c8e",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This should simplify things and make it more future proof.",
+        "createdAt" : "2020-06-19T08:26:57Z",
+        "updatedAt" : "2020-06-19T08:33:47Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ea120d6b-78a6-41fd-a9ac-6f1fa8dbd2e4",
+        "parentId" : "60e611e2-ef23-46ff-b1a8-5abbc7496c8e",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Ah, I like this. Good idea 👍 ",
+        "createdAt" : "2020-06-19T08:30:09Z",
+        "updatedAt" : "2020-06-19T08:33:47Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c3fbaf90e4bab47cd7640ee843f739bd647ff19f",
+    "line" : 27,
+    "diffHunk" : "@@ -1,1 +258,262 @@  val result = mutable.ListBuffer.empty[File]\n  val partialVersion = CrossVersion.partialVersion(scalaVersion)\n  partialVersion.collect {\n    case (major, minor) =>\n      result += base / s\"scala-$major.$minor\""
+  },
+  {
+    "id" : "666b49c1-bb92-4ff0-9197-a4c59beef127",
+    "prId" : 1842,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1842",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "8bc59a06-0a3b-4121-a097-d62131c68c2f",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "In order not to add `.mtags` directories, although it seems that sbt now created the `.mtags` directory anyway.",
+        "createdAt" : "2020-06-19T08:28:53Z",
+        "updatedAt" : "2020-06-19T08:33:47Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c3fbaf90e4bab47cd7640ee843f739bd647ff19f",
+    "line" : 37,
+    "diffHunk" : "@@ -1,1 +326,330 @@  .in(file(\".mtags\"))\n  .settings(\n    unmanagedSourceDirectories.in(Compile) := Seq(),\n    sharedSettings,\n    mtagsSettings,"
+  },
+  {
+    "id" : "acc9cf91-f7e0-42df-80e8-559bbd90776a",
+    "prId" : 1671,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1671",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "4367d337-9116-4f1a-aeb1-bc70458aa50a",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "👍 ",
+        "createdAt" : "2020-04-30T08:51:44Z",
+        "updatedAt" : "2020-04-30T08:54:57Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "5f0f6639a389d9c3b8d4989d855f47e04163d7ab",
+    "line" : 77,
+    "diffHunk" : "@@ -1,1 +313,317 @@        scalaVersion.value,\n        if211 = List(\"com.lihaoyi\" %% \"pprint\" % \"0.5.4\"),\n        ifLaterThan211 = List(\"com.lihaoyi\" %% \"pprint\" % \"0.5.9\"),\n        if3 = List(\n          (\"com.lihaoyi\" %% \"pprint\" % \"0.5.9\")"
+  },
+  {
+    "id" : "e49b743a-7ee2-4b54-a929-43fc6270bcfe",
+    "prId" : 1659,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1659",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "80131a11-aac5-4216-b760-8544c0fa8fd0",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This caused issues with a workflow like:\r\n```\r\n++2.13.2\r\ncross/test\r\n```",
+        "createdAt" : "2020-04-24T22:26:08Z",
+        "updatedAt" : "2020-04-24T22:26:08Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "067b7cb4b8d79cba130e03ee94521e2e7590dabe",
+    "line" : 68,
+    "diffHunk" : "@@ -1,1 +545,549 @@      \"scalaVersion\" -> scalaVersion.value\n    ),\n    crossScalaVersions := V.nonDeprecatedScalaVersions,\n    unmanagedSourceDirectories.in(Compile) ++= multiScalaDirectories(\n      baseDirectory.in(ThisBuild).value / \"tests\" / \"mtest\","
+  },
+  {
+    "id" : "6d656c6a-8a4c-419d-aae6-579aa0fb73ca",
+    "prId" : 1659,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1659",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b5ee09e7-3cb3-4082-93a2-6a907fb17040",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Fixes pprint to be available in mtags. Otherwise branch was never hit.",
+        "createdAt" : "2020-04-24T22:26:31Z",
+        "updatedAt" : "2020-04-24T22:26:31Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "067b7cb4b8d79cba130e03ee94521e2e7590dabe",
+    "line" : 56,
+    "diffHunk" : "@@ -1,1 +303,307 @@        scalaVersion.value,\n        if211 = List(\"com.lihaoyi\" %% \"pprint\" % \"0.5.4\"),\n        if2 = List(\"com.lihaoyi\" %% \"pprint\" % \"0.5.9\"),\n        if3 = List(\n          (\"com.lihaoyi\" %% \"pprint\" % \"0.5.9\")"
+  },
+  {
+    "id" : "e87eb4ee-d60d-47e6-82de-9753dd127bbe",
+    "prId" : 1523,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1523",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "bec211fc-2fd5-4715-98bd-231562703ee1",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "I know we briefly hit on this before, but why do we say that `2.13.0` is deprecated, but not `2.12.10`. I fee like we should be consistent with that across 2.12 and 2.13.",
+        "createdAt" : "2020-04-04T08:19:06Z",
+        "updatedAt" : "2020-04-15T13:50:25Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "883c9350-5de4-403a-a1f7-652acced4d50",
+        "parentId" : "bec211fc-2fd5-4715-98bd-231562703ee1",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "`2.13.0` was released a while ago and had a couple of issue, so I don't think we can recommend that. `2.13.1` was quickly released with the fixes. `2.12.10` is still in use by a lot of codebases and it`s only recently that the new version was released.\r\n",
+        "createdAt" : "2020-04-04T09:57:11Z",
+        "updatedAt" : "2020-04-15T13:50:25Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1989be22-c4ad-4452-879e-65467f3e46e4",
+        "parentId" : "bec211fc-2fd5-4715-98bd-231562703ee1",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Alright, that makes sense.",
+        "createdAt" : "2020-04-06T18:29:15Z",
+        "updatedAt" : "2020-04-15T13:50:25Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1142490703f832961ac0df1debd14b4f3b12ce7d",
+    "line" : 61,
+    "diffHunk" : "@@ -1,1 +182,186 @@  // Scala 2\n  def deprecatedScala2Versions =\n    Seq(scala211, \"2.12.8\", \"2.12.9\", \"2.13.0\")\n  def nonDeprecatedScala2Versions = Seq(scala213, scala212, \"2.12.10\")\n  def scala2Versions ="
+  },
+  {
+    "id" : "c9887ad1-249f-4e52-9000-eb2277e60f35",
+    "prId" : 1523,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1523",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "a0dc0d76-2e47-4b6c-aa0b-c4941369a6e6",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "I might be missing it, but is `s` not used at all?",
+        "createdAt" : "2020-04-04T08:25:37Z",
+        "updatedAt" : "2020-04-15T13:50:25Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "82d9a227-9bc7-42bf-b4a0-a71cbdf21fa2",
+        "parentId" : "a0dc0d76-2e47-4b6c-aa0b-c4941369a6e6",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "You are right, it's removed.",
+        "createdAt" : "2020-04-06T18:04:07Z",
+        "updatedAt" : "2020-04-15T13:50:25Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1142490703f832961ac0df1debd14b4f3b12ce7d",
+    "line" : 317,
+    "diffHunk" : "@@ -1,1 +504,508 @@      state.value\n    )\n  val (s, _) = Project\n    .extract(newState)\n    .runTask(publishLocal.in(mtags), newState)"
+  },
+  {
+    "id" : "36b34114-3639-4e33-a2a5-93f9bc6c0a30",
+    "prId" : 1145,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1145",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "acd553e6-c0fd-4afd-a2c7-13660198c7e3",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "out of curiosity, why is this necessary?",
+        "createdAt" : "2019-12-04T16:50:14Z",
+        "updatedAt" : "2019-12-05T11:14:30Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7bf17e46-6de5-4f54-81d7-7f4860d4ef28",
+        "parentId" : "acd553e6-c0fd-4afd-a2c7-13660198c7e3",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "It may no longer be necessary but it won't hurt. I believe there was a moment after we removed sbt-metals where this line was necessary.",
+        "createdAt" : "2019-12-05T10:24:58Z",
+        "updatedAt" : "2019-12-05T11:14:30Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "08036979-0bfe-4af0-9429-8035c1594e2a",
+        "parentId" : "acd553e6-c0fd-4afd-a2c7-13660198c7e3",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "That might have been before the latest bloop version I think. We didn't add sourceroot if the semanticdb plugin option was already there. Should be fine now.",
+        "createdAt" : "2019-12-05T10:54:02Z",
+        "updatedAt" : "2019-12-05T11:14:30Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c032fa899f1747d53cf2025b6e1cf03227b19980",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +30,34 @@      \"org.scalameta\" % \"semanticdb-scalac\" % V.scalameta cross CrossVersion.full\n    ),\n    scalacOptions += s\"-P:semanticdb:sourceroot:${baseDirectory.in(ThisBuild).value}\",\n    organization := \"org.scalameta\",\n    licenses := Seq("
+  },
+  {
+    "id" : "d324372a-299a-4f07-b719-2280d5fcf9da",
+    "prId" : 1096,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1096",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b4e3c2be-ae5d-4f34-b539-41a3c52e90ac",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "1.3.5 was a failed release, there's no longer a v1.3.5 tag in the Bloop repo. The new version was released last night https://scalacenter.github.io/bloop/setup",
+        "createdAt" : "2019-12-02T09:39:04Z",
+        "updatedAt" : "2019-12-02T12:02:05Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "edf906ca-ef6b-4dcb-b1ff-023da8b6d2c0",
+        "parentId" : "b4e3c2be-ae5d-4f34-b539-41a3c52e90ac",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "It would be nice to reenable windows DAP tests, but I can do it later.",
+        "createdAt" : "2019-12-02T09:59:38Z",
+        "updatedAt" : "2019-12-02T12:02:05Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "fa45a894-68bb-4d8d-9aeb-ec65367f27e8",
+        "parentId" : "b4e3c2be-ae5d-4f34-b539-41a3c52e90ac",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I re-enabled the DAP tests on Windows, let's see how they do!",
+        "createdAt" : "2019-12-02T10:58:37Z",
+        "updatedAt" : "2019-12-02T12:02:05Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "421192cd5655164bd9e3fd2dbcc3d9f1c5ce1350",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +149,153 @@  val semanticdb = scalameta\n  val bsp = \"2.0.0-M4+10-61e61e87\"\n  val bloop = \"1.3.4+251-1d81dfe5\"\n  val sbtBloop = \"1.3.5\"\n  val gradleBloop = bloop"
+  },
+  {
+    "id" : "9d332e7b-921c-464c-a582-205680aa3627",
+    "prId" : 949,
+    "prUrl" : "https://github.com/scalameta/metals/pull/949",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f94e0d8a-38c4-4016-842f-59c5feb13e1a",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I was just gonna open a PR to do this ❤️ ",
+        "createdAt" : "2019-09-27T16:45:12Z",
+        "updatedAt" : "2019-09-27T16:45:12Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "db5259d9e5f0856077bafb6ca95e8bc6ba5cfdb3",
+    "line" : 2,
+    "diffHunk" : "@@ -1,1 +-1,3 @@def localSnapshotVersion = \"0.7.7-SNAPSHOT\"\ndef isCI = System.getenv(\"CI\") != null\n"
+  },
+  {
+    "id" : "b207aa39-7c3e-4fbe-b1f7-c9f6768f05c8",
+    "prId" : 935,
+    "prUrl" : "https://github.com/scalameta/metals/pull/935",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ca282936-cc88-423a-a261-4ac7da5fb621",
+        "parentId" : null,
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "is `gson` not suitable for exporting? It is already pulled in from `lsp4j`",
+        "createdAt" : "2019-09-24T12:41:55Z",
+        "updatedAt" : "2019-12-05T19:30:31Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9e55edac-0ac7-41ed-9281-1eef6d699941",
+        "parentId" : "ca282936-cc88-423a-a261-4ac7da5fb621",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "The bloop export logic originally started as a separate project that I ended up folding into the Metals codebase. I would prefer not to refactor to gson since it requires a fair amount of work for questionable gain. ujson is a pretty small dependency as well.\r\n\r\nWe're also bringing circe via `bloop-config` so we'd actually have three json libraries on the classpath 🙈 ",
+        "createdAt" : "2019-09-26T14:43:15Z",
+        "updatedAt" : "2019-12-05T19:30:31Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a95ae87fd9621161d156685f32480fcb7bb451a4",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +284,288 @@      \"com.lihaoyi\" %% \"pprint\" % \"0.5.6\",\n      // For exporting Pants builds.\n      \"com.lihaoyi\" %% \"ujson\" % \"0.7.5\",\n      \"ch.epfl.scala\" %% \"bloop-config\" % V.bloop,\n      // for producing SemanticDB from Scala source files"
+  },
+  {
+    "id" : "b2f59ec6-0672-4741-853f-65b7ff8dfa4c",
+    "prId" : 913,
+    "prUrl" : "https://github.com/scalameta/metals/pull/913",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "3ac560bd-a437-4527-b739-79a1cd85289c",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Let's maybe drop 2.12.7 and make 2.12.8 deprecated?",
+        "createdAt" : "2019-09-11T13:14:41Z",
+        "updatedAt" : "2019-09-11T13:15:18Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "68367dd3-b24b-4bac-951f-614c56d67962",
+        "parentId" : "3ac560bd-a437-4527-b739-79a1cd85289c",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "We can deprecate it with the next version, since it's working now.",
+        "createdAt" : "2019-09-13T09:22:14Z",
+        "updatedAt" : "2019-09-13T09:22:14Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "74bd65dd97ca4ebf3172bae4a58071e6c1ed8060",
+    "line" : 18,
+    "diffHunk" : "@@ -1,1 +151,155 @@  def supportedScalaVersions =\n    Seq(scala213, \"2.12.8\", \"2.12.9\", scala212) ++ deprecatedScalaVersions\n  def deprecatedScalaVersions = Seq(\"2.12.7\", scala211)\n  def guava = \"com.google.guava\" % \"guava\" % \"28.0-jre\"\n  def lsp4j = \"org.eclipse.lsp4j\" % \"org.eclipse.lsp4j\" % \"0.8.0\""
+  },
+  {
+    "id" : "0cef389b-cb26-4190-ab68-fa55b8ea7f0d",
+    "prId" : 887,
+    "prUrl" : "https://github.com/scalameta/metals/pull/887",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "7e53f6ae-5956-4bcf-968f-d4cbc33631b6",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "\r\n```suggestion\r\n    Seq(scala213, scala212, scala212) ++ deprecatedScalaVersions\r\n```",
+        "createdAt" : "2019-08-30T21:21:40Z",
+        "updatedAt" : "2019-08-30T21:24:23Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b69c3190-be2d-4d54-af89-14dbf1a46172",
+        "parentId" : "7e53f6ae-5956-4bcf-968f-d4cbc33631b6",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Nevermind, I didn't see it was already there 😅 ",
+        "createdAt" : "2019-08-30T21:24:48Z",
+        "updatedAt" : "2019-08-30T21:24:48Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "9d25469a820a46b033091b6f1c5734396310755a",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +149,153 @@  // for every SemanticDB upgrade.\n  def supportedScalaVersions =\n    Seq(scala213, \"2.12.8\", scala212) ++ deprecatedScalaVersions\n  def deprecatedScalaVersions = Seq(\"2.12.7\", scala211)\n}"
+  },
+  {
+    "id" : "6fc600d6-fb4f-4ec9-afbf-e947b9e4ef44",
+    "prId" : 887,
+    "prUrl" : "https://github.com/scalameta/metals/pull/887",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "679c2b3e-8bb0-477d-aad5-019f1f9e815e",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "```suggestion\r\n  def deprecatedScalaVersions = Seq(\"2.12.7\", \"2.12.8\", scala211)\r\n```",
+        "createdAt" : "2019-08-30T21:21:56Z",
+        "updatedAt" : "2019-08-30T21:24:02Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ff6cbfde-1aa4-45c5-9d39-8f8d086419e6",
+        "parentId" : "679c2b3e-8bb0-477d-aad5-019f1f9e815e",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Nevermind, not needed.",
+        "createdAt" : "2019-08-30T21:25:02Z",
+        "updatedAt" : "2019-08-30T21:25:02Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "9d25469a820a46b033091b6f1c5734396310755a",
+    "line" : 15,
+    "diffHunk" : "@@ -1,1 +150,154 @@  def supportedScalaVersions =\n    Seq(scala213, \"2.12.8\", scala212) ++ deprecatedScalaVersions\n  def deprecatedScalaVersions = Seq(\"2.12.7\", scala211)\n}\n"
+  },
+  {
+    "id" : "1e5ffa43-bb11-434b-8009-de5148333125",
+    "prId" : 872,
+    "prUrl" : "https://github.com/scalameta/metals/pull/872",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "6f30f6b9-d061-4ba8-b924-2460627f73d4",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "@olafurpg Travis is complaining about a missing `mtags-interfaces`, which I guess is normal now that the optimization about transitive dependencies is not in place anymore?\r\n\r\nI've added this to run `interfaces/publishLocal` in addition to `mtags/publishLocal` before running slow tests",
+        "createdAt" : "2019-08-24T20:30:34Z",
+        "updatedAt" : "2019-08-24T20:30:34Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1db7e491c3ced0aeda05b52a7367ded3d36958a9",
+    "line" : 10,
+    "diffHunk" : "@@ -1,1 +424,428 @@  Project\n    .extract(s)\n    .runTask(publishLocal.in(interfaces), s)\n}\nlazy val slow = project"
+  },
+  {
+    "id" : "1602994b-d61c-4f7e-8c9b-dffe91214555",
+    "prId" : 763,
+    "prUrl" : "https://github.com/scalameta/metals/pull/763",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "0fe13a89-c05e-4e00-bf0f-138c6859341b",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Missing `scala213`",
+        "createdAt" : "2019-06-18T09:12:35Z",
+        "updatedAt" : "2019-06-18T18:13:44Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f06f210b-de79-491e-b15b-4ba6859fabf8",
+        "parentId" : "0fe13a89-c05e-4e00-bf0f-138c6859341b",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "I'll add it for consistency, but it's not used anywhere.",
+        "createdAt" : "2019-06-18T09:43:36Z",
+        "updatedAt" : "2019-06-18T18:13:44Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8b8f8c663ffe7481455869fe747514f96e7e658b",
+    "line" : 142,
+    "diffHunk" : "@@ -1,1 +349,353 @@    buildInfoKeys := Seq[BuildInfoKey](\n      \"scala211\" -> V.scala211,\n      \"scala212\" -> V.scala212,\n      \"scalaVersion\" -> scalaVersion.value\n    )"
+  },
+  {
+    "id" : "14d2f2a1-7118-4033-a60e-d819da97362a",
+    "prId" : 736,
+    "prUrl" : "https://github.com/scalameta/metals/pull/736",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "a90baf94-82d0-453d-8908-e650a3e109c0",
+        "parentId" : null,
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "Why do we need it?",
+        "createdAt" : "2019-05-29T13:18:14Z",
+        "updatedAt" : "2019-06-01T12:08:36Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8c90d7c9-2a6d-43a9-93c9-a0b4e855b548",
+        "parentId" : "a90baf94-82d0-453d-8908-e650a3e109c0",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Added a comment, it's needed for SAM types on 2.11.",
+        "createdAt" : "2019-05-31T08:55:32Z",
+        "updatedAt" : "2019-06-01T12:08:36Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3cd39a3dc1957ac5b5e4e60da9c3eae356702ace",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +147,151 @@    scalacOptions ++= List(\n      // Needed for SAM types on 2.11.\n      \"-Xexperimental\"\n    ),\n    libraryDependencies ++= List("
+  },
+  {
+    "id" : "da8844a3-4925-4939-b6f9-fdf9e6498aa8",
+    "prId" : 452,
+    "prUrl" : "https://github.com/scalameta/metals/pull/452",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "c6ccd361-ffea-4144-b6f6-172020eeb4a7",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "this comment is now on the wrong line",
+        "createdAt" : "2019-01-10T09:50:45Z",
+        "updatedAt" : "2019-01-10T22:04:54Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d97ab59d-bb65-4cf9-a314-30fbb7068af3",
+        "parentId" : "c6ccd361-ffea-4144-b6f6-172020eeb4a7",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Also, do we still need the `com.typesafe.config` dependency?",
+        "createdAt" : "2019-01-10T11:50:28Z",
+        "updatedAt" : "2019-01-10T22:04:54Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d5958105-aead-47df-91b3-33dfd129c2f1",
+        "parentId" : "c6ccd361-ffea-4144-b6f6-172020eeb4a7",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Removed, it's still brought in via scalafmt-dynamic.",
+        "createdAt" : "2019-01-10T21:38:35Z",
+        "updatedAt" : "2019-01-10T22:08:24Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8608594853cf5db043276c958c0a7d99aaf93005",
+    "line" : 18,
+    "diffHunk" : "@@ -1,1 +152,156 @@      // ==================\n      \"org.scalameta\" %% \"scalafmt-dynamic\" % V.scalafmt,\n      // for fetching ch.epfl.scala:bloop-frontend and other library dependencies\n      \"com.geirsson\" %% \"coursier-small\" % \"1.3.1\",\n      // undeclared transitive dependency of coursier-small"
+  },
+  {
+    "id" : "ab739a39-1ab2-42bf-81a8-0808b8afebb3",
+    "prId" : 350,
+    "prUrl" : "https://github.com/scalameta/metals/pull/350",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "e84aae96-e083-475e-9bb6-436ffb43802d",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "where is this used?",
+        "createdAt" : "2018-11-29T09:55:01Z",
+        "updatedAt" : "2018-11-29T10:20:22Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "86ee33fb-bcc8-4d26-8b50-b390063fb94a",
+        "parentId" : "e84aae96-e083-475e-9bb6-436ffb43802d",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "answering myself: in #351 ",
+        "createdAt" : "2018-11-29T09:56:01Z",
+        "updatedAt" : "2018-11-29T10:20:22Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "107ec528-5e77-45fa-b4c0-26dc13b7d0a8",
+        "parentId" : "e84aae96-e083-475e-9bb6-436ffb43802d",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Just a habit, generally useful to have although not used atm",
+        "createdAt" : "2018-11-29T09:58:35Z",
+        "updatedAt" : "2018-11-29T10:20:22Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "fc1506e1a10f093c975842de0eab0cb0515c9b94",
+    "line" : 17,
+    "diffHunk" : "@@ -1,1 +187,191 @@    buildInfoPackage := \"scala.meta.internal.sbtmetals\",\n    buildInfoKeys := Seq[BuildInfoKey](\n      \"metalsVersion\" -> version.value,\n      \"scalametaVersion\" -> V.scalameta\n    )"
+  },
+  {
+    "id" : "f018a944-1172-4bcd-9695-c2879d7165a4",
+    "prId" : 329,
+    "prUrl" : "https://github.com/scalameta/metals/pull/329",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "79964bee-549c-4b47-b35b-3301025d6e82",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "maybe move this into `V`?",
+        "createdAt" : "2018-09-28T13:59:33Z",
+        "updatedAt" : "2018-09-28T14:04:00Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "01f55899-d3b7-48ec-abdc-6d95471e537a",
+        "parentId" : "79964bee-549c-4b47-b35b-3301025d6e82",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "This is a setting and not a version so I decided to keep it outside. This will go soon once the scalameta upgrade is complete.",
+        "createdAt" : "2018-09-28T14:06:02Z",
+        "updatedAt" : "2018-09-28T14:06:02Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "891756b4-bae0-4c72-a6bd-c7796974ff1e",
+        "parentId" : "79964bee-549c-4b47-b35b-3301025d6e82",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Makes sense 👍 ",
+        "createdAt" : "2018-09-28T14:06:20Z",
+        "updatedAt" : "2018-09-28T14:06:21Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "77dd6fafbcc8891fa042f7027ad9fef6b14759e1",
+    "line" : 64,
+    "diffHunk" : "@@ -1,1 +70,74 @@}\n\nlazy val legacyScala212 = List(\n  addCompilerPlugin(MetalsPlugin.semanticdbScalac),\n  scalaVersion := V.scala212,"
+  },
+  {
+    "id" : "ea432646-d7c9-4704-a488-d7ff5de3a6fb",
+    "prId" : 329,
+    "prUrl" : "https://github.com/scalameta/metals/pull/329",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "6f0a6f81-cdee-4188-90e2-f4c04b173ab6",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "are you replicating the `^` logic by hand? Was it broken?",
+        "createdAt" : "2018-09-28T14:00:09Z",
+        "updatedAt" : "2018-09-28T14:04:00Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "dbf427c2-1218-4cac-801e-2a4eed6fc678",
+        "parentId" : "6f0a6f81-cdee-4188-90e2-f4c04b173ab6",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "I get it now, thanks :) ",
+        "createdAt" : "2018-09-28T14:06:29Z",
+        "updatedAt" : "2018-09-28T14:06:29Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0d4222e0-042b-4459-a9d7-79e73e819df6",
+        "parentId" : "6f0a6f81-cdee-4188-90e2-f4c04b173ab6",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "The primary motivation was to use `+` instead of `^`, it's conceptually easier IMO to have to only think about the Scala version, especially when it comes to publishing all modules. I think sbt doesn't work this way by default in order to be able to hypothetically support multiple sbt versions on the same Scala version.",
+        "createdAt" : "2018-09-28T14:07:35Z",
+        "updatedAt" : "2018-09-28T14:07:35Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "77dd6fafbcc8891fa042f7027ad9fef6b14759e1",
+    "line" : 98,
+    "diffHunk" : "@@ -1,1 +124,128 @@        case \"2.12\" => \"1.0.4\"\n      }\n    },\n    publishMavenStyle := false,\n    libraryDependencies --= libraryDependencies.in(ThisBuild).value,"
+  },
+  {
+    "id" : "6952fa5a-4f44-4e99-9b18-6941a94450e3",
+    "prId" : 313,
+    "prUrl" : "https://github.com/scalameta/metals/pull/313",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ab3ce577-2f71-47f8-bf4a-32857f346cc8",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "This will effectively introduce a regression wrt the PR merged yesterday that made pid optional during initialization. Can we release a 0.1.1 of lsp4s and depend on it?",
+        "createdAt" : "2018-06-23T09:52:52Z",
+        "updatedAt" : "2018-06-27T09:31:45Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f68336dd-f0ae-49df-a0ba-afb66be49bff",
+        "parentId" : "ab3ce577-2f71-47f8-bf4a-32857f346cc8",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Good point, I've pushed a v0.2.0 tag to lsp4s. Fortunately, we were able to bundle the breaking change with other jsonrpc breaking changes so this time it's fine to release jsonrpc and ls4s together.",
+        "createdAt" : "2018-06-23T10:04:15Z",
+        "updatedAt" : "2018-06-27T09:31:45Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "4ddead1cefd9da4ca338f88a09d0b2265171ec18",
+    "line" : 65,
+    "diffHunk" : "@@ -1,1 +115,119 @@      \"me.xdrop\" % \"fuzzywuzzy\" % \"1.1.9\", // for workspace/symbol\n      \"org.fusesource.leveldbjni\" % \"leveldbjni-all\" % \"1.8\", // for caching classpath index\n      \"org.scalameta\" %% \"lsp4s\" % \"0.1.0\",\n      \"org.scalameta\" %% \"semanticdb-scalac\" % V.scalameta cross CrossVersion.full,\n      \"org.scalameta\" %% \"testkit\" % V.scalameta % Test"
+  },
+  {
+    "id" : "dfe25425-5057-415f-ba26-cde65e7fc6f9",
+    "prId" : 313,
+    "prUrl" : "https://github.com/scalameta/metals/pull/313",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "77df114b-8f69-4066-8cf9-54ea7b8ed5b0",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Do we need this option at all if we're not cross-building?",
+        "createdAt" : "2018-06-23T09:53:36Z",
+        "updatedAt" : "2018-06-27T09:31:45Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "66f20953-f97b-45eb-ab38-c8112b020111",
+        "parentId" : "77df114b-8f69-4066-8cf9-54ea7b8ed5b0",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I added it to ensure `+compile` does the right thing, just in case",
+        "createdAt" : "2018-06-23T10:21:08Z",
+        "updatedAt" : "2018-06-27T09:31:45Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ed6e91c0-1173-4335-a870-32a28f61e3c8",
+        "parentId" : "77df114b-8f69-4066-8cf9-54ea7b8ed5b0",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Out of curiosity, what does +compile do if there is crossScalaVersions is not set? I thought it would already do the right thing.",
+        "createdAt" : "2018-06-23T10:23:13Z",
+        "updatedAt" : "2018-06-27T09:31:45Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "83fb8060-138a-4991-a26b-e7e1fad40803",
+        "parentId" : "77df114b-8f69-4066-8cf9-54ea7b8ed5b0",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I don't know what `+compile` does when crossScalaVersions is unset",
+        "createdAt" : "2018-06-27T09:30:57Z",
+        "updatedAt" : "2018-06-27T09:31:45Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "4ddead1cefd9da4ca338f88a09d0b2265171ec18",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +6,10 @@    },\n    scalaVersion := V.scala212,\n    crossScalaVersions := List(V.scala212),\n    scalacOptions ++= List(\n      \"-Yrangepos\","
+  },
+  {
+    "id" : "ea275895-6663-47b9-9e3b-3e24b9c32fdb",
+    "prId" : 268,
+    "prUrl" : "https://github.com/scalameta/metals/pull/268",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "25bcf2c4-777a-4310-8822-7099bb1db691",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "are all these `disablePlugins` necessary even after https://github.com/sbt/sbt/pull/3875?",
+        "createdAt" : "2018-04-08T09:48:24Z",
+        "updatedAt" : "2018-04-08T20:12:42Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1ca06cd3-edc1-45ee-872a-4a6591058d69",
+        "parentId" : "25bcf2c4-777a-4310-8822-7099bb1db691",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "I'm not sure. I saw this failure: https://travis-ci.org/laughedelic/metals/jobs/363624534#L931\r\n\r\nand then I also saw this commit in bloop: https://github.com/scalacenter/bloop/commit/7b45b9b8120867a258520f0aba42f6ade87471d1",
+        "createdAt" : "2018-04-08T17:16:10Z",
+        "updatedAt" : "2018-04-08T20:12:42Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "aef83a46-7486-40a2-89c6-9d9d1db83473",
+        "parentId" : "25bcf2c4-777a-4310-8822-7099bb1db691",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "Oh, and https://github.com/sbt/sbt/pull/3875 isn't in sbt 1.1 yet, it's targeted to 1.2.",
+        "createdAt" : "2018-04-08T17:51:11Z",
+        "updatedAt" : "2018-04-08T20:12:42Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "45a935487f9cef20c54bd959355900b832d644cd",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +94,98 @@\nlazy val benchmarks = project\n  .disablePlugins(ScriptedPlugin)\n  .enablePlugins(JmhPlugin)\n  .dependsOn(metals)"
+  },
+  {
+    "id" : "1ede68ef-6f03-4545-a607-3e87ff8d6f2c",
+    "prId" : 196,
+    "prUrl" : "https://github.com/scalameta/metals/pull/196",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "d83c6f0b-8d34-4ae3-8267-e540dff6dd1a",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Can we set `name := \"metalsRoot\"` in the top-level? By default sbt names the root project after the directory name, unless there is a project with a conflicting in which case it creates a bogus name like \"default-fd2bf4\". This name appears in IntelliJ after importing the build so I think \"metalsRoot\" would be nice",
+        "createdAt" : "2018-02-12T20:15:02Z",
+        "updatedAt" : "2018-02-13T09:34:28Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6a79b973-e3c4-493a-8d1a-9cf6ea842c71",
+        "parentId" : "d83c6f0b-8d34-4ae3-8267-e540dff6dd1a",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "👍 done. Thanks for explaining where the bogus name came from, also the sbt launcher displays it and I was confused.",
+        "createdAt" : "2018-02-13T09:34:21Z",
+        "updatedAt" : "2018-02-13T09:34:28Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "71b2c0246d19b6de4f086cbf655f0def15283b13",
+    "line" : 35,
+    "diffHunk" : "@@ -1,1 +129,133 @@  .settings(crossScalaVersions := List(V.scala211, V.scala212))\n  .dependsOn(jsonrpc)\n\nlazy val metals = project\n  .settings("
+  },
+  {
+    "id" : "342cd070-7d19-4326-9400-3ee437bf64f9",
+    "prId" : 100,
+    "prUrl" : "https://github.com/scalameta/metals/pull/100",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "2fd84762-f9e8-40c3-bdea-495ef8fa1641",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "FWIW, `%%` can be replaced with `%`, but it doesn't matter which one is used",
+        "createdAt" : "2017-12-09T10:54:42Z",
+        "updatedAt" : "2017-12-09T10:57:50Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c31555716bcfd52dabfb0b643423e255d5a5badd",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +114,118 @@      \"io.get-coursier\" %% \"coursier-cache\" % coursier.util.Properties.version,\n      \"ch.epfl.scala\" % \"scalafix-cli\" % \"0.5.7\" cross CrossVersion.full,\n      \"org.scalameta\" %% \"semanticdb-scalac\" % V.scalameta cross CrossVersion.full,\n      \"com.lihaoyi\" %% \"utest\" % \"0.6.0\" % Test,\n      \"org.scalameta\" %% \"testkit\" % V.scalameta % Test,"
+  },
+  {
+    "id" : "f0de71dc-33ea-435a-96a1-e6c130e76197",
+    "prId" : 100,
+    "prUrl" : "https://github.com/scalameta/metals/pull/100",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "0bb65ecf-4509-4295-831f-55f3369aac16",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Trailing commas 🙏 😄 ",
+        "createdAt" : "2017-12-09T10:55:01Z",
+        "updatedAt" : "2017-12-09T10:57:50Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c31555716bcfd52dabfb0b643423e255d5a5badd",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +116,120 @@      \"org.scalameta\" %% \"semanticdb-scalac\" % V.scalameta cross CrossVersion.full,\n      \"com.lihaoyi\" %% \"utest\" % \"0.6.0\" % Test,\n      \"org.scalameta\" %% \"testkit\" % V.scalameta % Test,\n    )\n  )"
+  },
+  {
+    "id" : "da017d1c-450e-4992-ae43-f815344aa61a",
+    "prId" : 99,
+    "prUrl" : "https://github.com/scalameta/metals/pull/99",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "7dc296e5-ce1e-4c7c-ae80-d64087a57c1c",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "out of curiosity, why not\r\n\r\n```scala\r\nobject V {\r\n  val scalameta = \"2.1.3\"\r\n}\r\n```",
+        "createdAt" : "2017-12-07T18:12:14Z",
+        "updatedAt" : "2017-12-07T18:12:29Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "324bc9ca-e9c0-4916-819a-a477af8adaa1",
+        "parentId" : "7dc296e5-ce1e-4c7c-ae80-d64087a57c1c",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "No objects allowed in build.sbt I think ",
+        "createdAt" : "2017-12-07T18:54:03Z",
+        "updatedAt" : "2017-12-07T18:54:03Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e1420acb72b911833576526ab64a31b8c4452568",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +55,59 @@)\n\nlazy val V = new {\n  val scalameta = \"2.1.3\"\n}"
+  }
+]

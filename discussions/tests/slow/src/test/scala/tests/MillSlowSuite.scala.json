@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "3762824e-6d60-4d29-a3f2-f990cb1bcea5",
+    "prId" : 737,
+    "prUrl" : "https://github.com/scalameta/metals/pull/737",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "096096bd-d08a-45e2-91ca-01b0f765a26f",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "This test can be removed since we don't modify the build settings, it's failing right now.",
+        "createdAt" : "2019-06-05T13:33:14Z",
+        "updatedAt" : "2019-06-05T15:06:18Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3b0b2cfc5be483b031004060e57b22729000de09",
+    "line" : 208,
+    "diffHunk" : "@@ -1,1 +206,210 @@  }\n\n  testAsync(\"fatal-warnings\") {\n    cleanWorkspace()\n    for {"
+  }
+]

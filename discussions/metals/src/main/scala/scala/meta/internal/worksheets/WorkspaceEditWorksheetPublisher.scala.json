@@ -1,0 +1,79 @@
+[
+  {
+    "id" : "9b64ecb0-b43c-469d-8382-d031b74bb803",
+    "prId" : 1561,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1561",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "57db4f02-6433-4a4a-9791-3247d01f9326",
+        "parentId" : null,
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "I don't remember where exactly but when you did similar change you wrapped whole body in ```scala block, shouldn't it be similar here?",
+        "createdAt" : "2020-03-28T20:46:09Z",
+        "updatedAt" : "2020-03-29T12:41:57Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a27234a2-7ad4-443f-81b2-130bfdd12fe5",
+        "parentId" : "57db4f02-6433-4a4a-9791-3247d01f9326",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "I ended up making that happen in the apply method of `HoverMarkup`, so it is happening there :)",
+        "createdAt" : "2020-03-28T20:47:07Z",
+        "updatedAt" : "2020-03-29T12:41:57Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e47ba5a4-7413-4994-8a21-285d7e460ba6",
+        "parentId" : "57db4f02-6433-4a4a-9791-3247d01f9326",
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "perfect! 🥇 ",
+        "createdAt" : "2020-03-28T20:50:08Z",
+        "updatedAt" : "2020-03-29T12:41:57Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ccc307a6cf459e197d161c82c20a4a935b9baa9d",
+    "line" : 37,
+    "diffHunk" : "@@ -1,1 +49,53 @@      new MarkupContent(\n        MarkupKind.MARKDOWN,\n        HoverMarkup(message)\n      )\n    )"
+  },
+  {
+    "id" : "c82b6a5b-0312-4ba9-8372-d88db20bd63c",
+    "prId" : 1089,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1089",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "d675168b-74d2-4c9c-88cc-f806cb7b2ae5",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "let's move these to the toplevel, we're already in the worksheets package.",
+        "createdAt" : "2019-12-06T13:40:04Z",
+        "updatedAt" : "2019-12-06T16:11:03Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "43e19ecb-1484-467b-8f3a-a97b820f7c3c",
+        "parentId" : "d675168b-74d2-4c9c-88cc-f806cb7b2ae5",
+        "authorId" : "58f39866-9870-40fc-83e0-d68edbbcb6f7",
+        "body" : "but `RenderResult` does not really make sense outside of the class, don't you think?",
+        "createdAt" : "2019-12-06T14:22:21Z",
+        "updatedAt" : "2019-12-06T16:11:03Z",
+        "lastEditedBy" : "58f39866-9870-40fc-83e0-d68edbbcb6f7",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c2b310420ce80e33b8c8e4977b94f75be9e4f986",
+    "line" : 167,
+    "diffHunk" : "@@ -1,1 +165,169 @@object WorkspaceEditWorksheetPublisher {\n\n  case class HoverMessage(range: Range, message: String)\n  case class HoverMap(textSnapshot: String, hovers: Seq[HoverMessage])\n"
+  }
+]

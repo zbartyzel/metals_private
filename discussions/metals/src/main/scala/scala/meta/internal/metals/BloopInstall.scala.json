@@ -1,0 +1,200 @@
+[
+  {
+    "id" : "c5e20861-e56d-4d3d-af42-7a793d453d94",
+    "prId" : 727,
+    "prUrl" : "https://github.com/scalameta/metals/pull/727",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "c6f0aa43-8cd3-437c-98fa-89856401979f",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Should we flush the buffer on exit?",
+        "createdAt" : "2019-05-22T15:06:54Z",
+        "updatedAt" : "2019-05-24T09:56:49Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8e410372-e40c-4f43-91d4-2bc5301863c2",
+        "parentId" : "c6f0aa43-8cd3-437c-98fa-89856401979f",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Which buffer? We just use the logger and pretty sure it has autoflush set.",
+        "createdAt" : "2019-05-22T15:20:37Z",
+        "updatedAt" : "2019-05-24T09:56:49Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f122c02e-e500-4d96-8b08-050d0002c4fa",
+        "parentId" : "c6f0aa43-8cd3-437c-98fa-89856401979f",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "What happens in the following scenario?\r\n\r\n- stdout prints `\"Hello\"`, with no newline\r\n- process exits\r\n\r\nI expect `\"Hello\"` to get printed out on exit.",
+        "createdAt" : "2019-05-23T06:25:32Z",
+        "updatedAt" : "2019-05-24T09:56:49Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "814cb0ed-2d7b-4710-be20-6e6257c0ec9a",
+        "parentId" : "c6f0aa43-8cd3-437c-98fa-89856401979f",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "But that is not going to happen, we only run build tools using this class.  \r\n\r\nI can account for scenario, but it seems really hypothetical.",
+        "createdAt" : "2019-05-23T07:26:19Z",
+        "updatedAt" : "2019-05-24T09:56:49Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "13afa394-17b3-4f81-b635-2d5d7f0f755c",
+        "parentId" : "c6f0aa43-8cd3-437c-98fa-89856401979f",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Ok, added additional logging on exit.",
+        "createdAt" : "2019-05-23T07:33:00Z",
+        "updatedAt" : "2019-05-24T09:56:49Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ec9c0395fa83c2e41f0331e8f4bddea0b2709085",
+    "line" : 26,
+    "diffHunk" : "@@ -1,1 +217,221 @@    val stderr = new LineListener(line => scribe.error(line))\n\n    override def onStart(nuProcess: NuProcess): Unit = {\n      nuProcess.closeStdin(false)\n    }"
+  },
+  {
+    "id" : "90d8be38-2ee3-45b0-939f-5679f02ffe46",
+    "prId" : 351,
+    "prUrl" : "https://github.com/scalameta/metals/pull/351",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "eab47aec-c371-49b0-8805-9279a8a79223",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Can it ever be just \"SNAPSHOT\" like in the past?",
+        "createdAt" : "2018-11-29T09:56:47Z",
+        "updatedAt" : "2018-11-29T09:56:48Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "de74a4bf-ec4d-439e-80a8-6f56ba62eae4",
+        "parentId" : "eab47aec-c371-49b0-8805-9279a8a79223",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "nope, it was nice while it lasted but caused troubles when the vscode plugin picked up ancient local builds from people who tried metals ages ago",
+        "createdAt" : "2018-11-29T10:04:38Z",
+        "updatedAt" : "2018-11-29T10:04:38Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "836fd11722c43ba821d53f192ab7f3bac35643f9",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +208,212 @@  private def globalMetalsSbt: String = {\n    val resolvers =\n      if (BuildInfo.metalsVersion.endsWith(\"-SNAPSHOT\")) {\n        \"\"\"|resolvers ++= {\n           |  if (System.getenv(\"METALS_ENABLED\") == \"true\") {"
+  },
+  {
+    "id" : "a1dc52d4-e08c-4a6d-b1dc-47422b55758e",
+    "prId" : 337,
+    "prUrl" : "https://github.com/scalameta/metals/pull/337",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "01457675-8f4f-4b6a-a2c0-62fb269b8f83",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Isn't this the same as the fix for 4395 above?",
+        "createdAt" : "2018-11-21T21:43:31Z",
+        "updatedAt" : "2018-11-27T10:23:41Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a33da5ff-9554-4d4c-9cba-bd1fbf88571f",
+        "parentId" : "01457675-8f4f-4b6a-a2c0-62fb269b8f83",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Yes, that workaround wasn't necessary after all since we don't use -addPluginSbtFile",
+        "createdAt" : "2018-11-23T19:36:47Z",
+        "updatedAt" : "2018-11-27T10:23:41Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8ab78d5883e2e77a843cca1ea641084e6e4a2875",
+    "line" : 191,
+    "diffHunk" : "@@ -1,1 +189,193 @@      if (sbt.version.startsWith(\"0.13\")) pluginsDirectory(\"0.13\")\n      else pluginsDirectory(\"1.0\")\n    Files.createDirectories(plugins.toNIO)\n    val bytes = globalMetalsSbt.getBytes(StandardCharsets.UTF_8)\n    val destination = plugins.resolve(\"metals.sbt\")"
+  },
+  {
+    "id" : "afa722c9-91b2-4955-97a5-399e9f27909b",
+    "prId" : 337,
+    "prUrl" : "https://github.com/scalameta/metals/pull/337",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "10d83f55-ec82-4dd1-9017-21eaa35bac8a",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "![](https://i.imgflip.com/2n5b2l.jpg)",
+        "createdAt" : "2018-11-21T22:01:44Z",
+        "updatedAt" : "2018-11-27T10:23:41Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "519a35b6-2895-4760-bd11-1f5aea3fe0c2",
+        "parentId" : "10d83f55-ec82-4dd1-9017-21eaa35bac8a",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "This was just a bad method overall, the logic wasn't even good. I've refactored it into smaller components and hopefully cleaned up handling of sbt checksums. It's still not ideal but livable.",
+        "createdAt" : "2018-11-23T19:36:20Z",
+        "updatedAt" : "2018-11-27T10:23:41Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8ab78d5883e2e77a843cca1ea641084e6e4a2875",
+    "line" : 126,
+    "diffHunk" : "@@ -1,1 +124,128 @@        Future.successful(result)\n      case None =>\n        for {\n          userResponse <- requestImport(buildTools, languageClient, digest)\n          installResult <- {"
+  },
+  {
+    "id" : "cfa95945-04fb-485a-97fe-f60cd2e9e889",
+    "prId" : 337,
+    "prUrl" : "https://github.com/scalameta/metals/pull/337",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ee7d2a3a-6a7b-49c5-859d-3e83feab5dc5",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "The check seems redundant. Is there anything wrong in writing the file unconditionally?",
+        "createdAt" : "2018-11-21T22:04:55Z",
+        "updatedAt" : "2018-11-27T10:23:41Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "cc5c564f-ef4a-4316-85d2-3d1bd12d7fab",
+        "parentId" : "ee7d2a3a-6a7b-49c5-859d-3e83feab5dc5",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I added a detailed commit. I haven't validated 100% but the idea is to avoid triggering sbt re-compilation of global plugins, that can slow down the import by 5-10 seconds",
+        "createdAt" : "2018-11-23T19:39:07Z",
+        "updatedAt" : "2018-11-27T10:23:41Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8ab78d5883e2e77a843cca1ea641084e6e4a2875",
+    "line" : 202,
+    "diffHunk" : "@@ -1,1 +200,204 @@    } else {\n      Files.write(destination.toNIO, bytes)\n    }\n  }\n"
+  }
+]

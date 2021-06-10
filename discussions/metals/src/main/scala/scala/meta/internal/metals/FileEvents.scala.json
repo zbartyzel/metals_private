@@ -1,0 +1,79 @@
+[
+  {
+    "id" : "06d94b62-38c5-40c3-8380-47a7148f53e6",
+    "prId" : 427,
+    "prUrl" : "https://github.com/scalameta/metals/pull/427",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "67b9fa1c-934d-44f5-9705-49980afe0076",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "the check is redundant",
+        "createdAt" : "2018-12-18T22:35:55Z",
+        "updatedAt" : "2018-12-19T15:27:54Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0fd2367581ea78fe416c15f14ea826d3ce3ff35b",
+    "line" : 83,
+    "diffHunk" : "@@ -1,1 +50,54 @@    val paths = new util.ArrayList[Path]()\n    buildTargets.sourceDirectories.foreach { dir =>\n      if (!dir.isDirectory) {\n        dir.createDirectories()\n      }"
+  },
+  {
+    "id" : "38521d40-295d-498b-a7f9-75548497bc75",
+    "prId" : 427,
+    "prUrl" : "https://github.com/scalameta/metals/pull/427",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "475bc1af-d6fe-4a57-9864-18e4e49b5fb8",
+        "parentId" : null,
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "👍 ",
+        "createdAt" : "2018-12-19T01:12:49Z",
+        "updatedAt" : "2018-12-19T15:27:54Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0fd2367581ea78fe416c15f14ea826d3ce3ff35b",
+    "line" : 35,
+    "diffHunk" : "@@ -1,1 +24,28 @@ * Given we rely on file watching for critical functionality like Goto Definition and it's\n * really difficult to reproduce/investigate file watching issues, I think it's best to\n * have a single file watching solution that we have control over.\n *\n * This class does not watch for changes in `*.sbt` files in the workspace directory and"
+  },
+  {
+    "id" : "0b4232c9-86e9-4e7f-9202-31f5e151f348",
+    "prId" : 337,
+    "prUrl" : "https://github.com/scalameta/metals/pull/337",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "6cf19c33-f899-4852-af6f-fba90fe3db62",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "what happens on Windows?",
+        "createdAt" : "2018-11-24T13:11:11Z",
+        "updatedAt" : "2018-11-27T10:23:41Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "30fe2f7a-1af4-4652-94ad-33ebc28e6a75",
+        "parentId" : "6cf19c33-f899-4852-af6f-fba90fe3db62",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "BOOM 💥 (aka. not supported)\r\n\r\nAdded comment",
+        "createdAt" : "2018-11-25T11:21:07Z",
+        "updatedAt" : "2018-11-27T10:23:41Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8ab78d5883e2e77a843cca1ea641084e6e4a2875",
+    "line" : 65,
+    "diffHunk" : "@@ -1,1 +63,67 @@    }\n    val buildSbt = workspace.resolve(\"build.sbt\").toNIO\n    if (!Properties.isWin && Files.isRegularFile(buildSbt)) {\n      // Don't add individual files on Windows because it crashes.\n      paths.add(buildSbt)"
+  }
+]

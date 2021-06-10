@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "f696c8ea-920f-4aa6-96fc-6915ec311e7f",
+    "prId" : 934,
+    "prUrl" : "https://github.com/scalameta/metals/pull/934",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "622ebbfe-d909-444f-8127-0169697fdf20",
+        "parentId" : null,
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "Maybe  InheritanceHierarchy",
+        "createdAt" : "2019-10-02T09:50:50Z",
+        "updatedAt" : "2019-10-03T13:51:34Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c96e585f-ab99-4ef1-8143-1531244bea7c",
+        "parentId" : "622ebbfe-d909-444f-8127-0169697fdf20",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I think I prefer the Context.",
+        "createdAt" : "2019-10-03T13:01:44Z",
+        "updatedAt" : "2019-10-03T13:51:34Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d837625e03b77aa42a76d4f700137294452174fa",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +5,9 @@import scala.collection.mutable\n\ncase class InheritanceContext(\n    findSymbol: String => Option[SymbolInformation],\n    private val inheritance: Map[String, Set[ClassLocation]]"
+  }
+]

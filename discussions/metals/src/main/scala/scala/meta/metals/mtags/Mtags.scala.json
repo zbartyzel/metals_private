@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "c6af4010-45d7-4a92-961d-2654bdd557cd",
+    "prId" : 324,
+    "prUrl" : "https://github.com/scalameta/metals/pull/324",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "1dc56287-b2a8-410a-a06e-88968391a75d",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Nitpick, when scalafmt produces weird output like this I tend to bind the splice into a variable `val baseFragment = fragment.base.toURI.normalize()` and the splice it with `$baseFragment`.",
+        "createdAt" : "2018-09-15T11:09:15Z",
+        "updatedAt" : "2018-09-17T08:41:02Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1f6f4ca0ab5523c7ce903ea2fc798ba98aef8a9d",
+    "line" : 18,
+    "diffHunk" : "@@ -1,1 +128,132 @@      // Need special handling because https://github.com/scalameta/scalameta/issues/1163\n      if (isZip(base) || isJar(base))\n        new URI(s\"jar:${fragment.base.toURI\n          .normalize()}!/${fragment.name.toString().replace('\\\\', '/')}\")\n      else fragment.uri"
+  }
+]

@@ -1,0 +1,200 @@
+[
+  {
+    "id" : "08287b39-37d8-4412-b16e-02ec4cdd1427",
+    "prId" : 2605,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2605",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "fd2212c3-def7-4be6-96e8-410030a73f68",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "If new name is checked to have backticks then this is not needed.",
+        "createdAt" : "2021-03-15T13:31:34Z",
+        "updatedAt" : "2021-03-15T15:32:17Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "6f1a4c3242bb93ce1e872665b12ff3b7319d1c6b",
+    "line" : 95,
+    "diffHunk" : "@@ -1,1 +245,249 @@      if occ.symbol == occurence.symbol &&\n        withoutBacktick(realName) == withoutBacktick(renameName)\n    } yield new Location(uri, rng.toLSP)\n\n    val result = for {"
+  },
+  {
+    "id" : "c7b7afcc-c8f8-4717-b9ba-593c820f7ca9",
+    "prId" : 1754,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1754",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "97b9f335-06e9-46fe-9dfa-e176a4740cd0",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This should also be added to the `prepareRename` method, which is normally run before rename itself.",
+        "createdAt" : "2020-05-22T17:17:03Z",
+        "updatedAt" : "2020-06-05T10:53:32Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "01ca026c-aac5-4e7c-92da-36cbb85d637d",
+        "parentId" : "97b9f335-06e9-46fe-9dfa-e176a4740cd0",
+        "authorId" : "e999650b-8bb0-4f94-bc0d-356f3ca8023f",
+        "body" : "fixed",
+        "createdAt" : "2020-06-05T09:57:48Z",
+        "updatedAt" : "2020-06-05T10:53:32Z",
+        "lastEditedBy" : "e999650b-8bb0-4f94-bc0d-356f3ca8023f",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "358d0bb5dfeb1e5bd52553e256f53c9f76a3d670",
+    "line" : 38,
+    "diffHunk" : "@@ -1,1 +86,90 @@  ): Future[WorkspaceEdit] = {\n    val source = params.getTextDocument.getUri.toAbsolutePath\n    compilationFinished(source).flatMap { _ =>\n      definitionProvider.definition(source, params, token).map { definition =>\n        val textParams = new TextDocumentPositionParams("
+  },
+  {
+    "id" : "6515489d-15d4-4781-bce4-0ee6da940dd7",
+    "prId" : 1637,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1637",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "89e08915-9ec1-4dc5-a532-edd61cbb725a",
+        "parentId" : null,
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "I think you try to bind symbol with AbsolutePath and propagate them together through multiple functions, maybe it is worth making case class containing those 2 things and just pass one thing. Also it will be easier to see this path is related to this symbol",
+        "createdAt" : "2020-04-23T17:16:19Z",
+        "updatedAt" : "2020-04-27T09:08:00Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5fd8f839-1dcd-423d-a14a-77b06703152a",
+        "parentId" : "89e08915-9ec1-4dc5-a532-edd61cbb725a",
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "Okay actually I would go with symbol <-> List[AbsolutePath] as it looks like there can be multiple definitions of a symbol. This would fix a problem with `<-` above ",
+        "createdAt" : "2020-04-23T17:36:53Z",
+        "updatedAt" : "2020-04-27T09:08:00Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b7e9f184-8725-4077-818c-c2f2d10f4d33",
+        "parentId" : "89e08915-9ec1-4dc5-a532-edd61cbb725a",
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "And then you can decide in `symbolIsLocal` if given symbol with all definition locations is local or not. \r\nPreviously we did `.exists` which means at least one location must be in workspace, but maybe `.all` would make more sense here?\r\nI don't know many multi def locations examples, is it only class/trait + object scenario?",
+        "createdAt" : "2020-04-23T17:43:17Z",
+        "updatedAt" : "2020-04-27T09:08:00Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3746e51f-d5b1-4495-a2aa-fe7b147ef241",
+        "parentId" : "89e08915-9ec1-4dc5-a532-edd61cbb725a",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I don't think we have multiple definitions anywhere currently really. And even if we get one, I can't imagine one being inside workspace and the other outside.\r\n\r\nI can rework it a bit, but I don't think we need to add a case class just for 2 methods.",
+        "createdAt" : "2020-04-24T07:44:06Z",
+        "updatedAt" : "2020-04-27T09:08:00Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6f29929e-c7f0-441e-9ecb-6401ec350157",
+        "parentId" : "89e08915-9ec1-4dc5-a532-edd61cbb725a",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Moved `isWorkspaceSymbol` up, so that we don't propagate the path now.",
+        "createdAt" : "2020-04-27T09:06:35Z",
+        "updatedAt" : "2020-04-27T09:08:00Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "fc20da6a0b4a0d2f5db919a1ac7119940549f1f3",
+    "line" : 281,
+    "diffHunk" : "@@ -1,1 +283,287 @@\n  private def canRenameSymbol(\n      symbol: String,\n      newName: Option[String]\n  ) = {"
+  },
+  {
+    "id" : "ddcd7285-4450-4bfb-86e7-12277d9efd30",
+    "prId" : 1637,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1637",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f6aedaae-7f35-4b96-b767-ea412c0e70b9",
+        "parentId" : null,
+        "authorId" : "da2cd095-1f8f-45c7-9ea4-3315cad4b0b7",
+        "body" : "OPT: same than Some(newName)",
+        "createdAt" : "2020-04-27T09:13:36Z",
+        "updatedAt" : "2020-04-27T10:40:36Z",
+        "lastEditedBy" : "da2cd095-1f8f-45c7-9ea4-3315cad4b0b7",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b42dc4bb-27f8-411b-bcae-6da39e3d88ee",
+        "parentId" : "f6aedaae-7f35-4b96-b767-ea412c0e70b9",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Will fix it maybe next time, shouldn't be a big issue.",
+        "createdAt" : "2020-04-27T11:15:28Z",
+        "updatedAt" : "2020-04-27T11:15:28Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "fc20da6a0b4a0d2f5db919a1ac7119940549f1f3",
+    "line" : 138,
+    "diffHunk" : "@@ -1,1 +112,116 @@          definitionLoc <- definition.locations.asScala.headOption.toIterable\n          definitionPath = definitionLoc.getUri().toAbsolutePath\n          if canRenameSymbol(occurence.symbol, Option(newName)) &&\n            isWorkspaceSymbol(occurence.symbol, definitionPath)\n          parentSymbols = implementationProvider"
+  },
+  {
+    "id" : "904ba9e7-4271-4720-819c-8876f811af5d",
+    "prId" : 1382,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1382",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "788ed7da-62ca-4d7e-9839-4061556e9243",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "what happens if the file has no package definition?",
+        "createdAt" : "2020-02-03T20:40:47Z",
+        "updatedAt" : "2020-02-03T20:55:49Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "fe8af5fe-b9f2-4c62-bb72-8e7724652d15",
+        "parentId" : "788ed7da-62ca-4d7e-9839-4061556e9243",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I believe it returns “empty/“",
+        "createdAt" : "2020-02-03T20:46:40Z",
+        "updatedAt" : "2020-02-03T20:55:49Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7784dddf-cf77-45da-ae40-3a3e7c7b4f9a",
+        "parentId" : "788ed7da-62ca-4d7e-9839-4061556e9243",
+        "authorId" : "9e7527c3-80f5-4247-80f7-2f5781d2b629",
+        "body" : "I can see it's `_empty_/` :)",
+        "createdAt" : "2020-02-03T20:57:39Z",
+        "updatedAt" : "2020-02-03T20:57:40Z",
+        "lastEditedBy" : "9e7527c3-80f5-4247-80f7-2f5781d2b629",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "90ddb580583ac5d22a8f5d2a64a3dd57717061db",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +178,182 @@      .find { file =>\n        isOccurence { str =>\n          str.owner.isPackage &&\n          (str.desc.isType || str.desc.isTerm) &&\n          file.endsWith(s\"/${str.desc.name.value}.scala\")"
+  }
+]

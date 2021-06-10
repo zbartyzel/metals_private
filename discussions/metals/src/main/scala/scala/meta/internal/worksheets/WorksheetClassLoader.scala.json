@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "9147d069-e985-4f74-8825-d44744396cb4",
+    "prId" : 1070,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1070",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f9cfc931-eac1-4782-9f12-90c899d3c588",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Why do we need this classloader? It just loads mdoc, but aside from filtering doesn't do anything.",
+        "createdAt" : "2019-11-18T10:16:23Z",
+        "updatedAt" : "2019-11-20T13:47:26Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ebf47b15-ac06-479c-ad94-f547c67bf6aa",
+        "parentId" : "f9cfc931-eac1-4782-9f12-90c899d3c588",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I updated the docstring to explain why this classloader is necessary, it isolates the mdoc classloader from the metals classloader so that we can call mdoc 2.11/2.13 from the metals 2.12 server.",
+        "createdAt" : "2019-11-18T10:49:47Z",
+        "updatedAt" : "2019-11-20T13:47:26Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8e9ddf5e5c6478ce25ea66ea4938fa0c64f27aba",
+    "line" : 11,
+    "diffHunk" : "@@ -1,1 +9,13 @@ * versions.\n */\nclass MdocClassLoader(parent: ClassLoader) extends ClassLoader(null) {\n  override def findClass(name: String): Class[_] = {\n    val isShared = name.startsWith(\"mdoc.interfaces\")"
+  }
+]

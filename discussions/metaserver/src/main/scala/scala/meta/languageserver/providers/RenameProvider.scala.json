@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "86b12921-dbae-48f4-bc50-1404d5b82538",
+    "prId" : 150,
+    "prUrl" : "https://github.com/scalameta/metals/pull/150",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "34bf7722-22b9-4cb3-8706-0d5fddc0a77b",
+        "parentId" : null,
+        "authorId" : "ef0069c2-046a-496d-a83f-80db27f0d990",
+        "body" : "Love this",
+        "createdAt" : "2017-12-22T15:31:26Z",
+        "updatedAt" : "2017-12-22T15:31:26Z",
+        "lastEditedBy" : "ef0069c2-046a-496d-a83f-80db27f0d990",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a4426b5e7bab61970f17a76134c70d5fae680431",
+    "line" : 52,
+    "diffHunk" : "@@ -1,1 +50,54 @@          }\n        }\n        data <- symbolIndex.referencesData(symbol)\n        reference <- data.referencePositions(true)\n      } yield {"
+  }
+]

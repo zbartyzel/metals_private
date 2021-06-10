@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "a3edea3f-fe69-4cf7-a438-eea59e606363",
+    "prId" : 1250,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1250",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f544ecda-676c-42df-b801-7d9fbcff89fb",
+        "parentId" : null,
+        "authorId" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "body" : "If we don't close the comment here, the whole code below the `/**` will be commented out, and we cannot traverse the AST (retrieved from a compilation unit) below the comment ",
+        "createdAt" : "2020-01-04T12:24:53Z",
+        "updatedAt" : "2020-01-13T13:44:04Z",
+        "lastEditedBy" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cf8e6070092ac693251e01568b009a7f1bfce601",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +31,35 @@            params.text().charAt(i - 2) == '/' =>\n        // Insert potentially missing `*/` to avoid comment out all codes after the \"/**\".\n        CURSOR + \"*/\"\n      case _ =>\n        // Default _CURSOR_ instrumentation."
+  },
+  {
+    "id" : "7a256228-b397-4e04-baad-522e66a2508a",
+    "prId" : 1092,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1092",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "83e22213-05e1-48c6-9851-0e87b3e969bf",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "The only thing I wasn't 100% sure on is here do we need to also encode this again before we pass it into `matchesSubCharacters` or `matches` since the `entered.toString`?",
+        "createdAt" : "2019-11-29T06:03:31Z",
+        "updatedAt" : "2019-11-29T06:05:08Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "deb41fa7-f951-4b9e-a403-4fcfcb5c8a41",
+        "parentId" : "83e22213-05e1-48c6-9851-0e87b3e969bf",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Not sure either, but might be good to encode it again. Situations like: `weird_method@Name`",
+        "createdAt" : "2019-11-29T10:26:13Z",
+        "updatedAt" : "2019-11-29T10:26:13Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "48faf1e9-c147-4f32-a9c2-1f4a4fa86ab8",
+        "parentId" : "83e22213-05e1-48c6-9851-0e87b3e969bf",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "We always want to fuzzy match against the decoded name, it would be weird to include `::` if the user types `foo.$colon$col@@`",
+        "createdAt" : "2019-11-29T11:34:00Z",
+        "updatedAt" : "2019-11-29T11:34:08Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a8c3e9fd388b949abe04c1a0fa6eda1c14cfe9ab",
+    "line" : 24,
+    "diffHunk" : "@@ -1,1 +394,398 @@            val startOfWord =\n              if (lastSpace < lastDot && lastSpace >= 0) lastSpace else lastDot\n            reversedString.slice(0, startOfWord).reverse\n          } else {\n            entered.toString"
+  }
+]

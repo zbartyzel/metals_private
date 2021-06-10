@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "282342db-3922-489c-8c99-5d57dda07b36",
+    "prId" : 1526,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1526",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "93f248f2-68f8-4771-b7eb-e4dbf17e450e",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "So I originally had written a test that sorted the `Location`s that all came back and asserted that they were in the same order. However, I realized (I hope correctly), that this will actually implicitly test the same thing. If for some reason the references returned are out of order, this expected mapping with the string representation of what we gave the test won't match later on when we assert that the references returned match this. Let me know if this is indeed a good enough test for the actual ordering.",
+        "createdAt" : "2020-03-24T13:43:42Z",
+        "updatedAt" : "2020-03-26T06:02:00Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4d929ed1-e2fa-4cd6-a3b1-2116cd598363",
+        "parentId" : "93f248f2-68f8-4771-b7eb-e4dbf17e450e",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I don't think it will work that way though. We just replace all the ranges regardless of their sorting. But you can just add an assert . I will point to where to add it.",
+        "createdAt" : "2020-03-24T17:04:18Z",
+        "updatedAt" : "2020-03-26T06:02:00Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "13e263e8bec9aef93562dd691f75ec7caa748212",
+    "line" : 28,
+    "diffHunk" : "@@ -1,1 +26,30 @@        )\n      }\n    val expected = files.map {\n      case (fileName, code) =>\n        fileName -> code.replaceAll(\"@@\", \"\")"
+  }
+]

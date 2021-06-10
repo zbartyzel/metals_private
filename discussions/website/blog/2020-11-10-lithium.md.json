@@ -1,0 +1,123 @@
+[
+  {
+    "id" : "410235a3-7a6a-4b05-ba9b-6f06cf054b7a",
+    "prId" : 2197,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2197",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "c23da061-4faa-413d-9696-787d643de4ce",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "lol it's actually Ascii, not alphabetically. Why do I point this out? Because yesterday at work I had to fix a bug where `Scalafix` ran using `organize-imports`, and then we forgot to remove `SortImport` from Scalafmt, which ran after. So Scalafix would do this `{B, a}`, and then scalafmt would do this `{a, B}`, and then our CI would fail on the Scalafix check 😆 . So if you mentioned the default, maybe best to not just say alphabetically, but Ascii.",
+        "createdAt" : "2020-11-09T19:20:16Z",
+        "updatedAt" : "2020-11-10T17:55:05Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0c344247-9d29-4c97-ac29-ae5e4d5155ef",
+        "parentId" : "c23da061-4faa-413d-9696-787d643de4ce",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "wow, good catch! Should we report it as an issue? I think it would make more sense to do it alphabetically, no?",
+        "createdAt" : "2020-11-10T11:15:58Z",
+        "updatedAt" : "2020-11-10T17:55:05Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3637474c-c672-4d4f-bdef-4c8a2773452f",
+        "parentId" : "c23da061-4faa-413d-9696-787d643de4ce",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Changed the wording to `Ascii ordering` What do you think?",
+        "createdAt" : "2020-11-10T11:27:17Z",
+        "updatedAt" : "2020-11-10T17:55:05Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7892d8ff-cb7a-47d3-9572-222516c26b0b",
+        "parentId" : "c23da061-4faa-413d-9696-787d643de4ce",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Looks good on the wording. As for the issue, I'm not sure. It's a bit tricky because depending on your situation, I'd say you shouldn't use both at the same time. Since they both do the same thing, but the defaults are different. Actually thinking about it, maybe I'll just create an issue there. Maybe the solution is to just put a warning about using both in the docs.",
+        "createdAt" : "2020-11-10T12:22:27Z",
+        "updatedAt" : "2020-11-10T17:55:05Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "33a635453a20e21641e7c2cc3cb5536a05f2b79d",
+    "line" : 79,
+    "diffHunk" : "@@ -1,1 +77,81 @@\nThe rule can be used to automatically sort imports in a file by the Ascii order,\nwhich is the default setting, or use the user specific configuration defined\nusing scalafix configuration file. This file can be either `.scalafix.conf` in\nthe current workspace or an absolute file specified in the"
+  },
+  {
+    "id" : "187e5c55-c214-42d3-bb06-60db76330b7b",
+    "prId" : 2197,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2197",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "0eb0ffe2-6078-46c9-8387-678b4e2d8943",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Is it maybe worth explicitly mentioning this warning:\r\n\r\n> Please do NOT use the Scalafix built-in RemoveUnused.imports together with OrganizeImports to remove unused imports. ",
+        "createdAt" : "2020-11-09T19:23:13Z",
+        "updatedAt" : "2020-11-10T17:55:05Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "62eba22f-d4e2-4b3b-b615-faaec79db381",
+        "parentId" : "0eb0ffe2-6078-46c9-8387-678b4e2d8943",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Good idea, added!",
+        "createdAt" : "2020-11-10T11:27:38Z",
+        "updatedAt" : "2020-11-10T17:55:05Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "33a635453a20e21641e7c2cc3cb5536a05f2b79d",
+    "line" : 126,
+    "diffHunk" : "@@ -1,1 +124,128 @@code.\n\nMore information can be found in the\n[liancheng/scalafix-organize-imports](https://github.com/liancheng/scalafix-organize-imports)\nrepository."
+  },
+  {
+    "id" : "c0acb561-6a64-45a1-9deb-bac4cd413882",
+    "prId" : 2197,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2197",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "62af4fe1-ca3e-4626-8f25-c8e743945d5b",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "I can confidently say I've never read the word `auspices` in release notes before 😆 ",
+        "createdAt" : "2020-11-09T19:26:13Z",
+        "updatedAt" : "2020-11-10T17:55:05Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4f0d9c95-055d-4337-82fc-80c2f567dfde",
+        "parentId" : "62af4fe1-ca3e-4626-8f25-c8e743945d5b",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I had to check if I was actually using the word right :smile: ",
+        "createdAt" : "2020-11-10T11:20:16Z",
+        "updatedAt" : "2020-11-10T17:55:05Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "33a635453a20e21641e7c2cc3cb5536a05f2b79d",
+    "line" : 162,
+    "diffHunk" : "@@ -1,1 +160,164 @@\nIn recent months, [eed3si9n](https://github.com/eed3si9n) and\n[adpi2](https://github.com/adpi2) worked, under the auspices of Scala Center, on\nmaking sbt capable of acting as a\n[Build Server Protocol](https://build-server-protocol.github.io/) server. This"
+  }
+]

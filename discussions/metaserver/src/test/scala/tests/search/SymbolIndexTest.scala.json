@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "77f6f60f-f717-4681-960d-92dcf2848dd6",
+    "prId" : 78,
+    "prUrl" : "https://github.com/scalameta/metals/pull/78",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "c41cf829-8d3c-4f56-af2d-e1c559d01e46",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "👍 ",
+        "createdAt" : "2017-12-02T22:40:18Z",
+        "updatedAt" : "2017-12-02T23:22:47Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "71da2fa975b8fb36cd888c23d0a8b0214a68e679",
+    "line" : 199,
+    "diffHunk" : "@@ -1,1 +182,186 @@    \"references\" - {\n      \"<<User>>(...)\" -\n        assertSymbolReferences(3, 17, withDefinition = true)(\n          ref(path.User, (2, 11), (2, 15)),\n          ref(path.UserTest, (3, 15), (3, 19))"
+  }
+]

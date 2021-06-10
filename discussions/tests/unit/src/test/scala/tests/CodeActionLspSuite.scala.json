@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "b3acf50a-355d-481d-ab84-1ee3d5dd4bd0",
+    "prId" : 1065,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1065",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "68efd6df-b7f5-43ef-8ca7-67c4d953965a",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "@tgodzik this is my proposal. You have three main elements:\r\n\r\n- the input text (using `@@` as the cursor position)\r\n- the expected list of code actions (I'm checking the `title` property of code actions)\r\n- the expected text after applying one of the code actions (I'm selecting the first one by default, but it's configurable)\r\n\r\nThis can be expanded to support other common test cases, but I think it's a decent start",
+        "createdAt" : "2019-12-11T14:36:22Z",
+        "updatedAt" : "2019-12-11T15:30:45Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "aa9e7a3f-055e-47ec-98fd-c1544d56feaa",
+        "parentId" : "68efd6df-b7f5-43ef-8ca7-67c4d953965a",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "That's exactly what I was thinking about. Looks awesome!",
+        "createdAt" : "2019-12-11T15:04:01Z",
+        "updatedAt" : "2019-12-11T15:30:45Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1e046b2b878d476d389f19bdcaa73ae4b7c121c9",
+    "line" : 27,
+    "diffHunk" : "@@ -1,1 +25,29 @@       |}\n       |\"\"\".stripMargin\n  )\n\n  def check("
+  }
+]

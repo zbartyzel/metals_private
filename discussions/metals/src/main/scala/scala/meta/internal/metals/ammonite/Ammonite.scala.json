@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "62c88130-3b6d-4829-8d33-14c08e49a8ed",
+    "prId" : 2333,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2333",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "18d86c12-2256-4b4e-970c-56b614514429",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Also, previously we created this `msg` here, bu this would never be shown to the user. Now if this ever happens, it is caught in the `recoverWith` down below which was added.",
+        "createdAt" : "2020-12-18T19:48:56Z",
+        "updatedAt" : "2020-12-18T19:48:56Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d42102634376909de06786427866da9ec706fd57",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +241,245 @@          else \"No open document is not an Ammonite script\"\n        scribe.error(msg)\n        Future.failed(new AmmoniteMetalsException(msg))\n      }\n"
+  }
+]

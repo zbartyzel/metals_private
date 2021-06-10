@@ -1,0 +1,189 @@
+[
+  {
+    "id" : "4b248f2e-88b3-45d8-9f64-342a20378a86",
+    "prId" : 23,
+    "prUrl" : "https://github.com/scalameta/metals/pull/23",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "08493921-bfde-4605-adc2-7df9baacb0eb",
+        "parentId" : null,
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "@olafurpg I was reading this code and I find it very similar to what I wanted to do for symbols outline. I started implementing something similar to this to traverse the tree just for the \"global\" symbols, but then I saw this and I'm wondering where is this `Traverser` from and how to use it. Direct search in Scalameta repo didn't give me a definition (I'm completely lost in Scalameta's project structure 🙁 )",
+        "createdAt" : "2017-11-26T05:06:59Z",
+        "updatedAt" : "2017-11-26T05:07:07Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4e5bd467-5c58-4bac-978d-e6a281f715fc",
+        "parentId" : "08493921-bfde-4605-adc2-7df9baacb0eb",
+        "authorId" : "ef0069c2-046a-496d-a83f-80db27f0d990",
+        "body" : "@laughedelic I don’t have a computer in front of me to verify this but I believe some of the bits that you can’t tell where they are defined from scalameta are actually bits of the compiler plugin.  Scala has a standard format for compiler plugins where they hook into a global content and supply their own traversed that the compiler uses to walk the ast and pull information out.  It can appear a bit magic because it’s not fully scalameta code, but partially code for the plugin framework.  I think traverser is one of these things.",
+        "createdAt" : "2017-11-26T05:14:57Z",
+        "updatedAt" : "2017-11-26T05:14:57Z",
+        "lastEditedBy" : "ef0069c2-046a-496d-a83f-80db27f0d990",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6b3c3f62-f9e4-4c94-a58d-da692a9ac86e",
+        "parentId" : "08493921-bfde-4605-adc2-7df9baacb0eb",
+        "authorId" : "ef0069c2-046a-496d-a83f-80db27f0d990",
+        "body" : "For example, see this scala plugin demo project.  Every one I have seen folllows a similar structure.  https://github.com/cb372/scalac-plugin-basic/blob/master/src/main/scala/basic/BasicPlugin.scala#L56",
+        "createdAt" : "2017-11-26T05:16:15Z",
+        "updatedAt" : "2017-11-26T05:16:16Z",
+        "lastEditedBy" : "ef0069c2-046a-496d-a83f-80db27f0d990",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "36edc281-d905-4f1f-98aa-41c2db4d01e7",
+        "parentId" : "08493921-bfde-4605-adc2-7df9baacb0eb",
+        "authorId" : "ef0069c2-046a-496d-a83f-80db27f0d990",
+        "body" : "In general, I think of scalameta as being intertwined with scalac so I don’t have to be, but when trying to understand scalameta source you will end up having to dig into scalac source as well as it is translating between the two ASTs. ",
+        "createdAt" : "2017-11-26T05:20:14Z",
+        "updatedAt" : "2017-11-26T05:20:15Z",
+        "lastEditedBy" : "ef0069c2-046a-496d-a83f-80db27f0d990",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "89e88722-f5e4-41bf-b47a-ce6c3e271a04",
+        "parentId" : "08493921-bfde-4605-adc2-7df9baacb0eb",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "@ShaneDelmore thanks a lot! This is quite enlightening. I didn't know anything about it. I'm not sure if I want to dig in the scalac's source just yet, but how can one use Scalameta without reading its sources? \"_ ",
+        "createdAt" : "2017-11-26T05:24:29Z",
+        "updatedAt" : "2017-11-26T05:24:29Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "36a23331-a6f7-4dca-abc8-6444cd82da85",
+        "parentId" : "08493921-bfde-4605-adc2-7df9baacb0eb",
+        "authorId" : "ef0069c2-046a-496d-a83f-80db27f0d990",
+        "body" : "Hmmm....any examples of what you are trying to do?  I get by mostly by keeping quasiquotes.md open, and by parsing structures I am trying to work with and looking at their .structure output.",
+        "createdAt" : "2017-11-26T06:28:39Z",
+        "updatedAt" : "2017-11-26T06:28:39Z",
+        "lastEditedBy" : "ef0069c2-046a-496d-a83f-80db27f0d990",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1859fcc2-6efb-4295-a3a8-9e169109cfcc",
+        "parentId" : "08493921-bfde-4605-adc2-7df9baacb0eb",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "@laughedelic I think `Traverser` is generated with macro annotations, it's essentially one big boilerplate pattern match on an ADT with 100s of nodes. Same for `Transformer`. The `Traverser` contract is quite simple however, override `apply`, do somthing with the tree node, optionally continue visiting children with `super.apply(tree)`.\r\n\r\n`.collect` is for example implemented on top of `Traverser`",
+        "createdAt" : "2017-11-26T08:30:29Z",
+        "updatedAt" : "2017-11-26T08:30:29Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5aa73060-e687-413b-a6ae-c9b8e62a9d66",
+        "parentId" : "08493921-bfde-4605-adc2-7df9baacb0eb",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "scalameta doesn't convert between compiler data structures, the `scalameta` module doesn't depend on scala-compiler in fact. However, scalameta (ab)uses macro annotations so a lot of the source code is hidden inside quasiquotes to be expanded at compile time. To understand the macros it's helpful to know a bit about scalac",
+        "createdAt" : "2017-11-26T08:33:58Z",
+        "updatedAt" : "2017-11-26T08:34:12Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "50049ad8-fcb3-402d-a799-035959169d74",
+        "parentId" : "08493921-bfde-4605-adc2-7df9baacb0eb",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "@laughedelic Here's how I picked up things about meta\r\n- https://github.com/scalameta/scalameta/blob/23de1ca839e53ad6387981bd7cced35122a2cf76/scalameta/trees/shared/src/main/scala/scala/meta/Trees.scala\r\n- http://scalameta.org/tutorial/#Trees\r\n- a lot of exploration in the ammonite repl\r\n```scala\r\n\r\n@ import $ivy.`org.scalameta::contrib:2.0.0`, scala.meta._, contrib._\r\nimport $ivy.$                             , scala.meta._, contrib._\r\n\r\n@ q\"trait A { val x: Int }\"\r\nres1: Defn.Trait = Defn.Trait(\r\n  List(),\r\n  Type.Name(\"A\"),\r\n  List(),\r\n  Ctor.Primary(List(), _, List()),\r\n  Template(List(), List(), Self(_, None), List(Decl.Val(List(), List(Pat.Var(Term.Name(\"x\"))), Type.Name(\"Int\"))))\r\n)\r\n```\r\n-\r\n https://astexplorer.net/#/gist/104048fb30df84e64a3e46d774f26b0f/f4b78594d5b1716f5d2821ef76e8d48b3fafc8ba\r\n\r\nwriting new docs on more detailed parts like `Transformer`/`Traverser` is on my TODO!",
+        "createdAt" : "2017-11-26T08:38:21Z",
+        "updatedAt" : "2017-11-26T08:38:21Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7060cc5b-7053-4c90-8aa1-d25436251d20",
+        "parentId" : "08493921-bfde-4605-adc2-7df9baacb0eb",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "@olafurpg hey! thanks a lot for explaining the things. I'm using the same \"exploratory\"  approach too, it's quite enough for simple uses. \r\nI just often wonder what is available in general (not to reinvent the wheel): normally if there's a generated scaladoc, it may be enough or (more often) I just check the sources and see the \"global symbols outline\" 😄 but with this \"macrofull\" code it's kind of hard (I'm also very superficially familiar with macros). \r\nAnother thing that bothers me is that I don't understand how code is organized in the scalameta repo. Probably there is some development dcoumentation for it that I didn't find?",
+        "createdAt" : "2017-11-27T11:34:35Z",
+        "updatedAt" : "2017-11-27T11:34:48Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "858c3abf-0c9a-45d5-9646-b735f3ef5b5b",
+        "parentId" : "08493921-bfde-4605-adc2-7df9baacb0eb",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "@ShaneDelmore btw, thanks for mentioning `quasiquotes.md`, I didn't notice it before 👍 (I had `Trees.scala` open instead 😅 )",
+        "createdAt" : "2017-11-27T11:36:46Z",
+        "updatedAt" : "2017-11-27T11:40:25Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "5e9272f240feb4f00bdea5ee50e2808699cd0d0e",
+    "line" : 9,
+    "diffHunk" : "@@ -1,1 +7,11 @@  def index(input: Input.VirtualFile): CtagsIndexer = {\n    val root: Source = input.parse[Source].get\n    new Traverser with CtagsIndexer {\n      override def language: String = \"Scala212\" // TODO(olafur) more accurate dialect\n      override def indexRoot(): Unit = apply(root)"
+  },
+  {
+    "id" : "288a99c0-439c-4bce-af77-106484514cd3",
+    "prId" : 23,
+    "prUrl" : "https://github.com/scalameta/metals/pull/23",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b10c526c-3bc1-4094-ad18-08c0bbde5779",
+        "parentId" : null,
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "@olafurpg What about declarations? For example if we have somewhere defined\r\n\r\n```\r\ntrait T { \r\n  type X\r\n  val x: X \r\n}\r\n```\r\n\r\n`X` will be a `Decl.Type` and `x` a `Decl.Val`, so if later in the code we encounter something like `def foo(t: T): t.X` and want to lookup that `t.X`... No, this example is bad, but I think you got the idea. If not, I'll think of a better example, sorry 😅 ",
+        "createdAt" : "2017-11-26T05:15:44Z",
+        "updatedAt" : "2017-11-26T05:15:44Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "14afc94a-664e-437f-b3e6-8c31e1176a20",
+        "parentId" : "b10c526c-3bc1-4094-ad18-08c0bbde5779",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Those are actually not handled! This is a bug 😅 ",
+        "createdAt" : "2017-11-26T08:31:02Z",
+        "updatedAt" : "2017-11-26T08:31:02Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "08443df5-d711-4c30-be6c-469b418f38bd",
+        "parentId" : "b10c526c-3bc1-4094-ad18-08c0bbde5779",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "OK, I'll try to add it then. \r\n\r\nAnother question here: as I see from the definition of those `term`/`type` indexer methods they just use the name position, but for the outline we need the definition position instead. Do you think it could be also useful for the general indexer to use that wider position range? e.g.\r\n\r\n```scala\r\ncase t: Defn.Def => term(t.name, t.pos, DEF)\r\n```\r\n\r\nSymbols outline would be then just a simple reindexing of the document on every `documentSymbol` request. ",
+        "createdAt" : "2017-11-27T11:48:10Z",
+        "updatedAt" : "2017-11-27T11:56:10Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4d59a166-802e-4be5-b6d4-7c8767224e36",
+        "parentId" : "b10c526c-3bc1-4094-ad18-08c0bbde5779",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "> Do you think it could be also useful for the general indexer to use that wider position range? e.g.\r\n\r\nYes! I've been considering refactoring the indexer to construct a custom data structure that we can tweak for our needs. Then we can reuse it for multiple features like outline + go to definition.\r\n\r\nCan you open a ticket to discuss details?",
+        "createdAt" : "2017-11-27T12:36:49Z",
+        "updatedAt" : "2017-11-27T12:36:49Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "5e9272f240feb4f00bdea5ee50e2808699cd0d0e",
+    "line" : 24,
+    "diffHunk" : "@@ -1,1 +22,26 @@          case t: Defn.Def => term(t.name, DEF); Stop\n          case Defn.Val(_, Pat.Var(name) :: Nil, _, _) => term(name, DEF); Stop\n          case Defn.Var(_, Pat.Var(name) :: Nil, _, _) => term(name, DEF); Stop\n          case _ => Stop\n        }"
+  }
+]

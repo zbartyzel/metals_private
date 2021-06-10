@@ -1,0 +1,112 @@
+[
+  {
+    "id" : "0c00cbe1-c704-4138-b0a6-06cffd9e8dfc",
+    "prId" : 1834,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1834",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "24f77b26-1463-4b15-9ca2-e7384767e5ab",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "In this scenario I think that `isHttpEnabled` should win. Mainly due to the fact that while all clients _should_ support all the commands that the server can send, they may not. For example in nvim-metals, we are setting the client as `isExecuteClientCommandProvider` to true because we handle some stuff (for the new scala file command, toggle logs, goto location), but we still want the doctor to be in the browser without having to handle that functionality client side. Without this change, doing that is impossible. What are your thoughts on this? I feel like this is a unique scenario where we'd want this.",
+        "createdAt" : "2020-06-16T16:12:29Z",
+        "updatedAt" : "2020-06-16T17:14:59Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3086e42a12b5aab98de0d5e2e7b81434babbe611",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +73,77 @@      onServer: MetalsHttpServer => Unit\n  ): Unit = {\n    if (clientConfig.isExecuteClientCommandProvider && !clientConfig.isHttpEnabled) {\n      val output =\n        if (clientConfig.doctorFormatIsJson)"
+  },
+  {
+    "id" : "376ec9ec-0379-4de5-bf8f-2833bbf14d5d",
+    "prId" : 1414,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1414",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f53a9692-f367-4714-a618-b91955faebbc",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "I flipped the order of these since both default to html. So, I assume that if either is set to Json, it was intentionally set, and we then go with that.",
+        "createdAt" : "2020-02-19T10:08:29Z",
+        "updatedAt" : "2020-02-19T14:01:31Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "2b45c0ea6b216649b70b0a2e98445d20fe09d872",
+    "line" : 19,
+    "diffHunk" : "@@ -1,1 +73,77 @@    if (config.executeClientCommand.isOn || clientExperimentalCapabilities.executeClientCommandProvider) {\n      val output =\n        if (config.doctorFormat.isJson || clientExperimentalCapabilities.doctorFormatIsJson)\n          buildTargetsJson()\n        else buildTargetsHtml()"
+  },
+  {
+    "id" : "fd5add5a-bf3e-4723-99cc-843f0edc94b9",
+    "prId" : 1235,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1235",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "fb8c989e-00f0-4d7a-8559-7efafac31b89",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Can we introduce a case class that wraps all the columns here? It would be great to avoid passing around a `Tuple7`",
+        "createdAt" : "2019-12-31T09:29:46Z",
+        "updatedAt" : "2019-12-31T14:09:08Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "2c8c78247edf1c5829edf6eb83fcd0d93f2ea1f2",
+    "line" : 164,
+    "diffHunk" : "@@ -1,1 +298,302 @@  }\n\n  private def extractTargetInfo(target: ScalaTarget) = {\n    val scala = target.info.asScalaBuildTarget\n    val scalaVersion ="
+  },
+  {
+    "id" : "8f942865-44a1-46f5-b268-8feb472a812d",
+    "prId" : 374,
+    "prUrl" : "https://github.com/scalameta/metals/pull/374",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "4547db17-cfc7-4ad4-98f2-35a189bfe1f1",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "is this useful?",
+        "createdAt" : "2018-12-06T13:32:53Z",
+        "updatedAt" : "2018-12-06T13:34:33Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e95c2e57-315a-4b35-8b89-1c2f84882eff",
+        "parentId" : "4547db17-cfc7-4ad4-98f2-35a189bfe1f1",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Just to avoid double analysis that runs through all workspace build targets (which could be large), but I admit this is probably not a bottle-neck",
+        "createdAt" : "2018-12-06T13:35:40Z",
+        "updatedAt" : "2018-12-06T13:35:40Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7cbd58e4-32dd-42cf-ad95-6a0adf17e78e",
+        "parentId" : "4547db17-cfc7-4ad4-98f2-35a189bfe1f1",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Ah! I didn't realize `problemSummary` was a method",
+        "createdAt" : "2018-12-06T13:36:58Z",
+        "updatedAt" : "2018-12-06T13:36:58Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "df7f8d5a1264977806c0962631a996acb5646f64",
+    "line" : 70,
+    "diffHunk" : "@@ -1,1 +76,80 @@  /** Checks if there are any potential problems and if any, notifies the user. */\n  def check(): Unit = {\n    val summary = problemSummary\n    executeReloadDoctor(summary)\n    summary match {"
+  }
+]

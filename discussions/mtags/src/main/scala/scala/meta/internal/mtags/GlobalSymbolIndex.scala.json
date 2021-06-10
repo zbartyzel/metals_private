@@ -1,0 +1,145 @@
+[
+  {
+    "id" : "41793281-5a1a-4e82-8154-ab0211a28c3b",
+    "prId" : 332,
+    "prUrl" : "https://github.com/scalameta/metals/pull/332",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "c5747fbf-afdc-4927-8528-e4d7bc51d127",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "This signature means the method swallows errors. Could it be useful to report them back to the caller in case something goes wrong (e.g., the file doesn't exist, or it's not a Scala/Java file?). The caller can decide to discard it anyway.",
+        "createdAt" : "2018-10-13T12:33:03Z",
+        "updatedAt" : "2018-10-17T09:17:09Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "72edc355-a641-4013-a32b-4694cc775fad",
+        "parentId" : "c5747fbf-afdc-4927-8528-e4d7bc51d127",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Currently this throws an exception for errors like tokenization failures. I'm not sure yet what the best error handling method so I'd prefer to refine it down the road once we have a clearer picture of how it will be used in the language server. Maybe the underlying implementation can accept a `Reporter` 🤔 ",
+        "createdAt" : "2018-10-13T13:37:23Z",
+        "updatedAt" : "2018-10-17T09:17:09Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "99d2c8af-ffc9-4d36-b6f8-bbb229b66910",
+        "parentId" : "c5747fbf-afdc-4927-8528-e4d7bc51d127",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Ok, let's wait and see. I was thinking of something like \"Either\" or \"Try\" here, nothing fancy but still better than Unit.",
+        "createdAt" : "2018-10-13T15:13:25Z",
+        "updatedAt" : "2018-10-17T09:17:09Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "889b282a30a7ddd72b09da4b9328f7779b1cfae9",
+    "line" : 53,
+    "diffHunk" : "@@ -1,1 +51,55 @@      file: AbsolutePath,\n      sourceDirectory: Option[AbsolutePath]\n  ): Unit\n\n  /**"
+  },
+  {
+    "id" : "9ae7afaa-6cc3-48b5-a2aa-0b295c02856d",
+    "prId" : 332,
+    "prUrl" : "https://github.com/scalameta/metals/pull/332",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "44136ab6-0b59-4dde-b985-d897796ff422",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Much <3 for the comments in this file",
+        "createdAt" : "2018-10-13T12:33:26Z",
+        "updatedAt" : "2018-10-17T09:17:09Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "889b282a30a7ddd72b09da4b9328f7779b1cfae9",
+    "line" : 10,
+    "diffHunk" : "@@ -1,1 +8,12 @@ * Only indexes plain Scala and Java source files, no compilation needed.\n */\ntrait GlobalSymbolIndex {\n\n  /**"
+  },
+  {
+    "id" : "5440d47c-8113-41ad-ade1-d30a210d11b1",
+    "prId" : 332,
+    "prUrl" : "https://github.com/scalameta/metals/pull/332",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "0e013397-d7c3-4e34-b5fe-9703ac0c16c3",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Same comment as above about returning `Unit` vs a more expressive error-aware type",
+        "createdAt" : "2018-10-13T12:34:12Z",
+        "updatedAt" : "2018-10-17T09:17:09Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "60cfdc55-35aa-40f0-a23c-22bdc86a2547",
+        "parentId" : "0e013397-d7c3-4e34-b5fe-9703ac0c16c3",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "It's a good question but I'm still not sure what the best solution  is",
+        "createdAt" : "2018-10-13T13:37:43Z",
+        "updatedAt" : "2018-10-17T09:17:09Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "889b282a30a7ddd72b09da4b9328f7779b1cfae9",
+    "line" : 83,
+    "diffHunk" : "@@ -1,1 +81,85 @@   *                   literal.\n   */\n  def addSourceJar(jar: AbsolutePath): Unit\n\n}"
+  },
+  {
+    "id" : "b490a4d9-53fd-480a-bdf8-6469694cdfb7",
+    "prId" : 332,
+    "prUrl" : "https://github.com/scalameta/metals/pull/332",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "93821c38-33bd-442b-a197-89a43e9b6ac3",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Maybe `SymbolDefinitionPath` or `SymbolDefinitionFile`?",
+        "createdAt" : "2018-10-13T12:35:17Z",
+        "updatedAt" : "2018-10-17T09:17:09Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5441787d-24cb-4f2c-9037-dcfe3230d257",
+        "parentId" : "93821c38-33bd-442b-a197-89a43e9b6ac3",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Ending with `Path` makes the `querySymbol/definitionSymbol` fields a bit confusing IMO",
+        "createdAt" : "2018-10-13T13:38:53Z",
+        "updatedAt" : "2018-10-17T09:17:09Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0d80f348-bf52-4155-9ac2-ad592024d0a8",
+        "parentId" : "93821c38-33bd-442b-a197-89a43e9b6ac3",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "At the same time, this is not really a symbol definition. It's the file where the symbol is defined, so that was confusing at a first read",
+        "createdAt" : "2018-10-13T15:14:19Z",
+        "updatedAt" : "2018-10-17T09:17:09Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "889b282a30a7ddd72b09da4b9328f7779b1cfae9",
+    "line" : 87,
+    "diffHunk" : "@@ -1,1 +85,89 @@}\n\ncase class SymbolDefinition(\n    querySymbol: Symbol,\n    definitionSymbol: Symbol,"
+  }
+]

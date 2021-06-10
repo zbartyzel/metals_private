@@ -1,0 +1,420 @@
+[
+  {
+    "id" : "70cc343c-75bf-4426-a30c-4be2ddd33631",
+    "prId" : 158,
+    "prUrl" : "https://github.com/scalameta/metals/pull/158",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "315ed272-c255-461c-8a8f-bfdf3bfa2796",
+        "parentId" : null,
+        "authorId" : "ef0069c2-046a-496d-a83f-80db27f0d990",
+        "body" : "Why do we have connection here as well as lspIn and lspOut passed in?  I thought connection was just a wrapper around lspIn and lspOut.",
+        "createdAt" : "2017-12-23T16:13:46Z",
+        "updatedAt" : "2018-01-02T19:54:18Z",
+        "lastEditedBy" : "ef0069c2-046a-496d-a83f-80db27f0d990",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "35fb0f00-48bf-499f-b6dd-4aa202dc9202",
+        "parentId" : "315ed272-c255-461c-8a8f-bfdf3bfa2796",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "connection has higher level methods such as `showMessage`.\r\n\r\n`lspIn` and `lspOut` are just used to initialize it (via the `LanguageServer` constructor)",
+        "createdAt" : "2017-12-23T16:15:27Z",
+        "updatedAt" : "2018-01-02T19:54:18Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "affa2ea127de9483cd4eeda3dfcfcb3bb80a4322",
+    "line" : 56,
+    "diffHunk" : "@@ -1,1 +97,101 @@    )\n  val (configurationSubscriber, configurationPublisher) =\n    ScalametaLanguageServer.configurationStream(connection)\n  val buffers: Buffers = Buffers()\n  val symbolIndex: SymbolIndex ="
+  },
+  {
+    "id" : "81df63ae-eaa8-459c-a1b2-095651d9a8bc",
+    "prId" : 157,
+    "prUrl" : "https://github.com/scalameta/metals/pull/157",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "18bda841-764b-4709-88e7-5334a0ac559e",
+        "parentId" : null,
+        "authorId" : "ef0069c2-046a-496d-a83f-80db27f0d990",
+        "body" : "\\o/",
+        "createdAt" : "2017-12-23T15:36:40Z",
+        "updatedAt" : "2017-12-23T20:00:10Z",
+        "lastEditedBy" : "ef0069c2-046a-496d-a83f-80db27f0d990",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "02644898b8f2599b71ec40803a680168214c8fd9",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +293,297 @@      request: TextDocumentHoverRequest\n  ): Task[Hover] = Task {\n    HoverProvider.hover(\n      symbolIndex,\n      Uri(request.params.textDocument),"
+  },
+  {
+    "id" : "da4cec8b-90ca-4579-bbf3-6d96fbc8bc14",
+    "prId" : 131,
+    "prUrl" : "https://github.com/scalameta/metals/pull/131",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "84200407-2feb-47d1-af16-e2d73391bff1",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "if somebody knows a better way of recursively deleting a directory with Java NIO, please let me know!",
+        "createdAt" : "2017-12-15T11:14:50Z",
+        "updatedAt" : "2017-12-15T11:25:20Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c990b41f-ee9c-4625-ac66-0ea51286f5ef",
+        "parentId" : "84200407-2feb-47d1-af16-e2d73391bff1",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "This is the best way to do it IMO :) It should be verbose!",
+        "createdAt" : "2017-12-15T11:41:03Z",
+        "updatedAt" : "2017-12-15T11:43:33Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1f18b2a8-61ae-46ca-8bd8-5335050b603e",
+        "parentId" : "84200407-2feb-47d1-af16-e2d73391bff1",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "On a more serious note, this might merit inclusion in `org.langmeta.io.FileIO` where we have similar utils ",
+        "createdAt" : "2017-12-15T11:41:41Z",
+        "updatedAt" : "2017-12-15T11:43:33Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "867e5b2b0a081dfb481be2a14c9b7bffa47a2d98",
+    "line" : 66,
+    "diffHunk" : "@@ -1,1 +348,352 @@  }\n\n  def clearCacheDirectory(): Unit =\n    Files.walkFileTree(\n      cacheDirectory.toNIO,"
+  },
+  {
+    "id" : "16088387-cda7-4984-baf1-c9616dbefa73",
+    "prId" : 78,
+    "prUrl" : "https://github.com/scalameta/metals/pull/78",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "291b6d59-e393-4459-a476-fe98823684b5",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "🎉 ",
+        "createdAt" : "2017-12-01T20:32:30Z",
+        "updatedAt" : "2017-12-02T23:22:47Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "71da2fa975b8fb36cd888c23d0a8b0214a68e679",
+    "line" : 51,
+    "diffHunk" : "@@ -1,1 +117,121 @@      ),\n      definitionProvider = true,\n      referencesProvider = true,\n      documentSymbolProvider = true,\n      documentFormattingProvider = true,"
+  },
+  {
+    "id" : "4ed9d003-d778-4a0a-8891-1b14a593a0aa",
+    "prId" : 34,
+    "prUrl" : "https://github.com/scalameta/metals/pull/34",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f5b1c3dd-7b6a-45cb-b405-f3732b5a0cfb",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "What about `package a`?",
+        "createdAt" : "2017-11-15T10:45:34Z",
+        "updatedAt" : "2017-11-19T16:29:37Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4fc1daf4-ec11-45f1-83ca-0f5a4caf409e",
+        "parentId" : "f5b1c3dd-7b6a-45cb-b405-f3732b5a0cfb",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "It falls into the `Member` case, so it will be just its `name` `a`. \r\nThis whole `qualifiedName` method is here **only** for the packages with `Select`, because their default `name` is just the last part and I think it's useful to see the full name in the outline.",
+        "createdAt" : "2017-11-15T12:42:54Z",
+        "updatedAt" : "2017-11-19T16:29:37Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "659586c4-8d73-4465-b444-46ad9db3e45a",
+        "parentId" : "f5b1c3dd-7b6a-45cb-b405-f3732b5a0cfb",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I see, nice!",
+        "createdAt" : "2017-11-15T21:04:34Z",
+        "updatedAt" : "2017-11-19T16:29:37Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f22b970a071cd204e5269d09dea51d6223971e22",
+    "line" : 34,
+    "diffHunk" : "@@ -1,1 +225,229 @@      case Term.Select(qual, name) =>\n        qualifiedName(qual).map { prefix => s\"${prefix}.${name}\" }\n      case Pkg(sel: Term.Select, _) =>\n        qualifiedName(sel)\n      case m: Member =>"
+  },
+  {
+    "id" : "5935afed-6442-4ec5-8cad-0bd5b115c051",
+    "prId" : 34,
+    "prUrl" : "https://github.com/scalameta/metals/pull/34",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "bc101452-ecf5-486a-a66e-c19235cd372c",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Glad you found this! Took me a while to learn about it :)",
+        "createdAt" : "2017-11-15T10:45:49Z",
+        "updatedAt" : "2017-11-19T16:29:37Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "135a027f-f65f-4640-8404-4c73db884de5",
+        "parentId" : "bc101452-ecf5-486a-a66e-c19235cd372c",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "What do you mean? 😅 ",
+        "createdAt" : "2017-11-15T12:43:54Z",
+        "updatedAt" : "2017-11-19T16:29:37Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d561040e-f6b9-4310-962c-419c7566065d",
+        "parentId" : "bc101452-ecf5-486a-a66e-c19235cd372c",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I wasn't aware of `Member` until quite recently, always found it frustrating to handle all val/val/def/class/trait/object cases",
+        "createdAt" : "2017-11-15T21:04:24Z",
+        "updatedAt" : "2017-11-19T16:29:37Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1ac03aef-1cf8-4521-b680-f0e14c117b5c",
+        "parentId" : "bc101452-ecf5-486a-a66e-c19235cd372c",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "Ah, yes, it's very helpful. I just searched for whatever with `name`, when I wanted to match it with symbols from the indexer 😄 ",
+        "createdAt" : "2017-11-15T21:31:22Z",
+        "updatedAt" : "2017-11-19T16:29:37Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f22b970a071cd204e5269d09dea51d6223971e22",
+    "line" : 36,
+    "diffHunk" : "@@ -1,1 +227,231 @@      case Pkg(sel: Term.Select, _) =>\n        qualifiedName(sel)\n      case m: Member =>\n        Some(m.name.value)\n      case _ => None"
+  },
+  {
+    "id" : "93bdce9d-7aa0-4e64-8881-29ca979bd639",
+    "prId" : 34,
+    "prUrl" : "https://github.com/scalameta/metals/pull/34",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "7e111347-c452-4960-882c-a468c8f20843",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "FYI `scala.meta.contrib._` adds a `.filter` on `Tree`",
+        "createdAt" : "2017-11-15T21:08:20Z",
+        "updatedAt" : "2017-11-19T16:29:37Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "07fe187b-9bdc-43c7-a91c-c38c8e65b6fc",
+        "parentId" : "7e111347-c452-4960-882c-a468c8f20843",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "Thanks, I was looking for it but found after I wrote this and then forgot to change it.",
+        "createdAt" : "2017-11-15T21:38:00Z",
+        "updatedAt" : "2017-11-19T16:29:37Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f22b970a071cd204e5269d09dea51d6223971e22",
+    "line" : 45,
+    "diffHunk" : "@@ -1,1 +236,240 @@    for {\n      tree <- contents.parse[Source].toOption.toList\n      node <- tree.collect {\n        case n if n.is[Member.Type] || n.is[Member.Term] => n\n      }"
+  },
+  {
+    "id" : "8990e11d-9c57-4904-9dcd-25d34536f7c3",
+    "prId" : 23,
+    "prUrl" : "https://github.com/scalameta/metals/pull/23",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "7759fe89-c73c-4637-aaf9-4a80af6a4a2f",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "should we also preload all existing `compilerconfig`files at launch, similarly to what we do with `semanticdb` files?",
+        "createdAt" : "2017-11-14T09:21:37Z",
+        "updatedAt" : "2017-11-14T20:08:40Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "47dd06cb-755a-40a8-8491-08566b6b96ae",
+        "parentId" : "7759fe89-c73c-4637-aaf9-4a80af6a4a2f",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "We do actually, since we call this method from loadAllSemanticdbs... method, I've renamed the method to be more descriptive.",
+        "createdAt" : "2017-11-14T19:36:57Z",
+        "updatedAt" : "2017-11-14T20:08:40Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ead25baf-2afb-41f9-bacb-4afacd3c65a9",
+        "parentId" : "7759fe89-c73c-4637-aaf9-4a80af6a4a2f",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "NB, we should really run that method asynchronously from the initialize method since it slows down server startup.",
+        "createdAt" : "2017-11-14T19:37:27Z",
+        "updatedAt" : "2017-11-14T20:08:40Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "041b1e4d-5476-448d-95e5-0142687e4e60",
+        "parentId" : "7759fe89-c73c-4637-aaf9-4a80af6a4a2f",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Yeah, in general I think initialize should return immediately and run the rest of the work asynchronously. We can even dynamically register for capabilities when the single services finish initializing.",
+        "createdAt" : "2017-11-14T21:00:10Z",
+        "updatedAt" : "2017-11-14T21:00:10Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "5e9272f240feb4f00bdea5ee50e2808699cd0d0e",
+    "line" : 116,
+    "diffHunk" : "@@ -1,1 +138,142 @@    name match {\n      case \"semanticdb\" => semanticdbSubscriber.onNext(path)\n      case \"compilerconfig\" => compilerConfigSubscriber.onNext(path)\n      case _ => fallback(path)\n    }"
+  },
+  {
+    "id" : "161f9c0b-7bbb-4529-b1fa-7450d3e0085a",
+    "prId" : 23,
+    "prUrl" : "https://github.com/scalameta/metals/pull/23",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "31e4aaba-c612-4a18-9ab0-a8cb1e8b7794",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "why is the overflow strategy gone?",
+        "createdAt" : "2017-11-14T09:48:02Z",
+        "updatedAt" : "2017-11-14T20:08:40Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8795f353-18d3-4c20-b9c9-ba9f5ed3c151",
+        "parentId" : "31e4aaba-c612-4a18-9ab0-a8cb1e8b7794",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I added it without knowing what it does. I think we should use the default unless we know what we're doing.",
+        "createdAt" : "2017-11-14T19:34:18Z",
+        "updatedAt" : "2017-11-14T20:08:40Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "5e9272f240feb4f00bdea5ee50e2808699cd0d0e",
+    "line" : 37,
+    "diffHunk" : "@@ -1,1 +48,52 @@    ScalametaLanguageServer.semanticdbStream\n  val (compilerConfigSubscriber, compilerConfigPublisher) =\n    Observable.multicast[AbsolutePath](MulticastStrategy.Publish)\n  def onError(e: Throwable): Unit = {\n    logger.error(e.getMessage, e)"
+  },
+  {
+    "id" : "217f9201-d483-43d4-afad-cf8cbf3458a4",
+    "prId" : 21,
+    "prUrl" : "https://github.com/scalameta/metals/pull/21",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "6f862e7c-1cd9-4135-a1ac-7c375b924ca5",
+        "parentId" : null,
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "Is it 100% sure that `tpeName` is never empty? 😄 ",
+        "createdAt" : "2017-11-10T15:03:40Z",
+        "updatedAt" : "2017-11-10T15:03:40Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b43474a3-833f-41fd-a072-4ec1830c5b5f",
+        "parentId" : "6f862e7c-1cd9-4135-a1ac-7c375b924ca5",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "I tried hovering on everything and it never showed empty boxes 💃 \r\n\r\nOf course I may be wrong ^^",
+        "createdAt" : "2017-11-10T15:05:06Z",
+        "updatedAt" : "2017-11-10T15:05:06Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1c68a056-994f-4a90-8178-e67ef3481c19",
+        "parentId" : "6f862e7c-1cd9-4135-a1ac-7c375b924ca5",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "I would still add a check here, if it's not an a priori known fact that `tpeName` cannot be empty.\r\n\r\nAnother question here: why did you remove the range parameter?",
+        "createdAt" : "2017-11-10T15:07:31Z",
+        "updatedAt" : "2017-11-10T15:07:31Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4767bacf-15c2-4a5f-8884-a94eef36d60f",
+        "parentId" : "6f862e7c-1cd9-4135-a1ac-7c375b924ca5",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "I didn't find an easy way to retrieve that from the PC. I admit I didn't look hard for it, because vscode seems to handle it pretty well even without it.",
+        "createdAt" : "2017-11-10T15:09:01Z",
+        "updatedAt" : "2017-11-10T15:09:16Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "42209d3f-8d86-4d92-96e6-dc6cff1ab162",
+        "parentId" : "6f862e7c-1cd9-4135-a1ac-7c375b924ca5",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "As per the check, it'd be weird that `tree.tpe.widen` would return an empty string. I suppose if it ever comes up we can handle it pretty easily :)",
+        "createdAt" : "2017-11-10T15:10:46Z",
+        "updatedAt" : "2017-11-10T15:10:46Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "fde14258-146e-4d2f-87af-100005f27305",
+        "parentId" : "6f862e7c-1cd9-4135-a1ac-7c375b924ca5",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "Works great! 💯 So cool!\r\nAnd yes, I thought that without range symbols won't be highlighted correctly, but both VS Code and Atom handle it very well.",
+        "createdAt" : "2017-11-10T15:36:46Z",
+        "updatedAt" : "2017-11-10T15:36:46Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "122ec665a5096b2c5408dc9d9320eac87adb0549",
+    "line" : 10,
+    "diffHunk" : "@@ -1,1 +252,256 @@    compiler.typeAt(path, position.line, position.character) match {\n      case None => Hover(Nil, None)\n      case Some(tpeName) =>\n        Hover(\n          contents = List("
+  }
+]

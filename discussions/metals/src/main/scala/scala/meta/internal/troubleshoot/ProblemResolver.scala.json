@@ -1,0 +1,90 @@
+[
+  {
+    "id" : "ef32ef44-cacd-4592-873d-b1ad0fcd748e",
+    "prId" : 2339,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2339",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "8582b219-c2bb-4fb7-8aa5-423b009dc24f",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "For some of these, it seems like we have an extra middle step that isn't really necessary. For example for these, we find the issue, and if it's one of these two, we set it to true, then down below we check if it's true and create a Message. Couldn't we just skip the middle step and instead here instead of returning a Boolean return `Some(message)` or None right away and then there is no need to check for it down below?",
+        "createdAt" : "2020-12-31T12:37:07Z",
+        "updatedAt" : "2021-01-05T13:57:53Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "984be9fa-45ab-404d-a574-13f68f056a3b",
+        "parentId" : "8582b219-c2bb-4fb7-8aa5-423b009dc24f",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I think it's easier to understand the way it is. First we check what problems we have and only then translate to the messages. Otherwise we will have to mix those two steps, but I do understand what you mean and I can change it if you feel like it will be better.",
+        "createdAt" : "2021-01-05T13:45:06Z",
+        "updatedAt" : "2021-01-05T13:57:53Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "adb9d83b-c2e9-46b5-ac05-c17657195111",
+        "parentId" : "8582b219-c2bb-4fb7-8aa5-423b009dc24f",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "I get what you mean. For consistency then feel free to just leave it as is.",
+        "createdAt" : "2021-01-05T13:47:15Z",
+        "updatedAt" : "2021-01-05T13:57:53Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ea21652384312e578cb028088e52572a7c0a6ac6",
+    "line" : 59,
+    "diffHunk" : "@@ -1,1 +57,61 @@        case _: MissingSourceRoot => misconfiguredProjects += 1\n        case UnsupportedSbtVersion => unsupportedSbt = true\n        case DeprecatedSbtVersion => deprecatedSbt = true\n        case FutureSbtVersion => futureSbt = true\n      }"
+  },
+  {
+    "id" : "c8b9d453-fb96-45f0-973e-bd0f9fe390fb",
+    "prId" : 2339,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2339",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f12300f0-d1cc-4a40-8efa-5bc7245d3390",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "So in this scenario, we do all the work up above to potentially get multiple messages, but then we never show them to the user, we just show `Multiple problems detected in your build`? Wouldn't it be better to actually show them to the user? I'd assume that `problemSummary` would include the summary of issues, not just a message saying there is issues.",
+        "createdAt" : "2020-12-31T12:40:36Z",
+        "updatedAt" : "2021-01-05T13:57:53Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "82e5279b-ce27-41b7-adeb-174e038e8204",
+        "parentId" : "f12300f0-d1cc-4a40-8efa-5bc7245d3390",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "So problem summary will be shown as a message to the user and if we get too much problems then it will be quite bloated. \r\n\r\n`Multiple problems detected in your build` will be accompanied by `More information`, so people can easily take a look. Though I have never honestly seen more than one issue at the same time, so it's highly improbable scenario.",
+        "createdAt" : "2020-12-31T14:59:39Z",
+        "updatedAt" : "2021-01-05T13:57:53Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "533303c8-e47e-4f54-b621-137256d94577",
+        "parentId" : "f12300f0-d1cc-4a40-8efa-5bc7245d3390",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Ah ok I totally missed the `More information` part. If that's there, then nevermind.",
+        "createdAt" : "2021-01-05T13:47:54Z",
+        "updatedAt" : "2021-01-05T13:57:53Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ea21652384312e578cb028088e52572a7c0a6ac6",
+    "line" : 135,
+    "diffHunk" : "@@ -1,1 +133,137 @@        Some(\n          s\"Multiple problems detected in your build.\"\n        )\n    }\n  }"
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "4f1c8af8-311f-46db-85b6-d9c1244460f6",
+    "prId" : 278,
+    "prUrl" : "https://github.com/scalameta/metals/pull/278",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "00ba289c-0958-48af-8a9a-782c5c28ab57",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Out of curiosity, why did you remove the callback argument? I can imagine it could be useful at some point, but we could add it then.",
+        "createdAt" : "2018-04-11T10:55:52Z",
+        "updatedAt" : "2018-04-12T16:12:17Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "78ebb3a9-9b6d-4af5-84b5-cf56b22f93f0",
+        "parentId" : "00ba289c-0958-48af-8a9a-782c5c28ab57",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "Because it was used as `fallback(path)` i.e. with the `path` argument which is in the scope anyway, i.e. when you call `onChangedFile(x) { path => ... }`, that `path` will be exactly the same `x`.",
+        "createdAt" : "2018-04-11T13:01:56Z",
+        "updatedAt" : "2018-04-12T16:12:17Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d7eb53335ae7b0a1e1003d93d1df9d89acb3a2bf",
+    "line" : 78,
+    "diffHunk" : "@@ -1,1 +477,481 @@  private def onChangedFile(\n      path: AbsolutePath\n  )(fallback: => Unit): Unit = {\n    logger.info(s\"File $path changed\")\n    path.toRelative(cwd) match {"
+  }
+]

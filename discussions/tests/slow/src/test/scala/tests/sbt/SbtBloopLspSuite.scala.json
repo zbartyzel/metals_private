@@ -1,0 +1,46 @@
+[
+  {
+    "id" : "6e215a13-ba26-4a59-9deb-ed24ea7f4734",
+    "prId" : 2668,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2668",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "794f3b05-9826-498d-85de-c99432a51ae1",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Shouldn't this still be in `.metals/readonly` or is it relative now? I commented on this in another file as well, but it might be clearer to just have the full path.",
+        "createdAt" : "2021-04-09T14:36:16Z",
+        "updatedAt" : "2021-04-23T16:07:36Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5aa8c0ac-c002-4828-b0cc-5f838314636a",
+        "parentId" : "794f3b05-9826-498d-85de-c99432a51ae1",
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "They still are in `.metals/readonly` but the path became much longer - `.metals/readonly/dependencies/sbt-${version}-sources.jar/sbt/Keys.scala`.\r\nHonestly, it was easier to fix tests by leaving these paths without full prefix than investigating the right one per every test. Anyway, there isn't a lot of meaning in seeing them.\r\n\r\nAlso, I think it might be annoying to update jar names in these paths in case if some dependency version will be changed in tests",
+        "createdAt" : "2021-04-12T14:55:01Z",
+        "updatedAt" : "2021-04-23T16:07:36Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "15297d55-e233-4f22-a74a-79af154fa83d",
+        "parentId" : "794f3b05-9826-498d-85de-c99432a51ae1",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Yea good point about changing these in the future. 👍🏼 ",
+        "createdAt" : "2021-04-17T14:36:47Z",
+        "updatedAt" : "2021-04-23T16:07:37Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3fcc251f9126b13a9372df15273d675aff8f745",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +454,458 @@        \"build.sbt\",\n        \"sc@@alaVersion := \\\"2.12.11\\\"\",\n        \"sbt/Keys.scala\",\n        expectedLine = 190\n      )"
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "4fe05b05-b111-4811-a089-f4a7ec30e269",
+    "prId" : 498,
+    "prUrl" : "https://github.com/scalameta/metals/pull/498",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "8e4e9509-7534-4d57-a8b8-633031d0656e",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "isn't this equivalent to just\r\n\r\n```scala\r\nval actualQuery = query.stripSuffix(\".\")\r\n```\r\n\r\n?",
+        "createdAt" : "2019-01-25T10:30:21Z",
+        "updatedAt" : "2019-01-25T10:30:57Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a607085b-79e1-4057-99a2-64b7350843d4",
+        "parentId" : "8e4e9509-7534-4d57-a8b8-633031d0656e",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "It is indeed, but I like it like this to stress the query changes only when there is a trailing `.`",
+        "createdAt" : "2019-01-25T10:33:05Z",
+        "updatedAt" : "2019-01-25T10:33:05Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "4bd614a412b00eb78ec7c8d6030d85b9dd3e7c5a",
+    "line" : 20,
+    "diffHunk" : "@@ -1,1 +29,33 @@    val actualQuery =\n      if (isTrailingDot) query.stripSuffix(\".\")\n      else query\n    WorkspaceSymbolQuery(\n      actualQuery,"
+  }
+]

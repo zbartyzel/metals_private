@@ -1,0 +1,310 @@
+[
+  {
+    "id" : "2824b5ee-2712-40d6-bb94-c841c5afb453",
+    "prId" : 2668,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2668",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "5d26a6cb-ff2e-4b22-8a2d-c119f2e7af10",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Couldn't this be simplified to just `List`? Whenever I see `Option[List]` I always think that unless there is a real difference between `None` and `Some(List.empty)`.",
+        "createdAt" : "2021-04-17T14:31:34Z",
+        "updatedAt" : "2021-04-23T16:07:36Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9555034b-6c72-41ae-a8ce-30a0aeec33fe",
+        "parentId" : "5d26a6cb-ff2e-4b22-8a2d-c119f2e7af10",
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "Yep, I agree that in most cases `Option[List[A]]` should be reduced to `List[A]`.\r\n\r\nHowever, here it's used only in inner functions just to take benefits from `orElse` combinator in usage below - https://github.com/scalameta/metals/blob/a82a14240bd55284ba220650fe5a70c4198b5cde/metals/src/main/scala/scala/meta/internal/metals/DefinitionProvider.scala#L305-L308\r\nOtherwise, I had to introduce smth like `orElseIfNil` for `List` for this small part of code.",
+        "createdAt" : "2021-04-20T16:40:40Z",
+        "updatedAt" : "2021-04-23T16:07:37Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5e6ac2f0-b302-477a-b44b-dabd84a0d604",
+        "parentId" : "5d26a6cb-ff2e-4b22-8a2d-c119f2e7af10",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Alright sounds good 👍🏼 ",
+        "createdAt" : "2021-04-20T18:55:30Z",
+        "updatedAt" : "2021-04-23T16:07:37Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3fcc251f9126b13a9372df15273d675aff8f745",
+    "line" : 136,
+    "diffHunk" : "@@ -1,1 +310,314 @@  ): List[BuildTargetIdentifier] = {\n    def trivialSource: Option[List[BuildTargetIdentifier]] =\n      Option(buildTargets.sourceBuildTargets(source).toList).filter(_.nonEmpty)\n\n    def dependencySource: Option[List[BuildTargetIdentifier]] = {"
+  },
+  {
+    "id" : "e589ab0a-bc51-41e1-b9f3-26262a52ef37",
+    "prId" : 2668,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2668",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "4df422c0-63f1-4367-8fdc-0d2f1f7fca59",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Same question as above, is the `Option[List` necessary?",
+        "createdAt" : "2021-04-17T14:32:06Z",
+        "updatedAt" : "2021-04-23T16:07:37Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3fcc251f9126b13a9372df15273d675aff8f745",
+    "line" : 138,
+    "diffHunk" : "@@ -1,1 +312,316 @@      Option(buildTargets.sourceBuildTargets(source).toList).filter(_.nonEmpty)\n\n    def dependencySource: Option[List[BuildTargetIdentifier]] = {\n      source.jarPath\n        .map(path => buildTargets.inverseDependencySource(path).toList)"
+  },
+  {
+    "id" : "d92f5671-8fc3-4982-b096-91fa632a272e",
+    "prId" : 1953,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1953",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "075c33df-a63e-4b79-a623-d1613cc74d86",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This is essencialy the same code.",
+        "createdAt" : "2020-07-28T16:34:12Z",
+        "updatedAt" : "2020-07-29T09:58:03Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e5ae4deec700724213f99d4fbeee5535331d1873",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +255,259 @@      destinationDoc = bestTextDocument(symbolDefinition)\n      destinationPath = symbolDefinition.path.toFileOnDisk(workspace)\n      destinationDistance =\n        buffers.tokenEditDistance(destinationPath, destinationDoc.text)\n    } yield {"
+  },
+  {
+    "id" : "f292abfa-dcd8-4660-a607-5f9f1cc6a1e2",
+    "prId" : 1547,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1547",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "41390638-0381-41d7-9faf-df819e6b4098",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Maybe `Option[RemoteLanguageServer]` ? It will be more clear that it might not be available.",
+        "createdAt" : "2020-03-27T15:43:13Z",
+        "updatedAt" : "2020-03-27T19:26:28Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "150093c7-14fc-4c19-a7e2-4bc5384fe22b",
+        "parentId" : "41390638-0381-41d7-9faf-df819e6b4098",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "The remote language server can be configured at runtime based on the `remoteLanguageServer` user option. The `isEnabledForPath` method is the way to determine if it's enabled or not.",
+        "createdAt" : "2020-03-27T15:50:06Z",
+        "updatedAt" : "2020-03-27T19:26:42Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "922329228964c110122b6e35a403b21a3c4d3f3e",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +47,51 @@    warnings: Warnings,\n    compilers: () => Compilers,\n    remote: RemoteLanguageServer\n)(implicit ec: ExecutionContext) {\n"
+  },
+  {
+    "id" : "ca46c91a-cd62-473c-a179-c3fdd19b8aa6",
+    "prId" : 1547,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1547",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "60b7a772-440c-4d4e-80d4-2521efcef5b6",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Is ` fromSemanticdb.isEmpty` needed?  If the `result.isEmpty` is true then ` fromSemanticdb.isEmpty` must also be true.",
+        "createdAt" : "2020-03-27T19:42:49Z",
+        "updatedAt" : "2020-03-27T19:45:33Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "21b8afac-bdcf-4f72-8d60-c59f428bf2e2",
+        "parentId" : "60b7a772-440c-4d4e-80d4-2521efcef5b6",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "We can get an empty result when the cursor is over a non-symbol position even if there’s a SemanticDB file. My goal was to try and isolate the “SemanticDB world” from the “remote language server world”",
+        "createdAt" : "2020-03-27T21:57:20Z",
+        "updatedAt" : "2020-03-27T21:57:20Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "922329228964c110122b6e35a403b21a3c4d3f3e",
+    "line" : 43,
+    "diffHunk" : "@@ -1,1 +81,85 @@        compilers().definition(params, token)\n      } else {\n        if (result.isEmpty && fromSemanticdb.isEmpty) {\n          warnings.noSemanticdb(path)\n        }"
+  },
+  {
+    "id" : "ceb89643-5925-41c1-9b38-446dd0ef8369",
+    "prId" : 1523,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1523",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "461f4c1c-9c68-4ef4-9dde-bd013c9c20ba",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Nice improvement to readability 👍 ",
+        "createdAt" : "2020-04-04T08:00:30Z",
+        "updatedAt" : "2020-04-15T13:50:25Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1142490703f832961ac0df1debd14b4f3b12ce7d",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +131,135 @@  ): ResolvedSymbolOccurrence = {\n    // Convert dirty buffer position to snapshot position in \"source\"\n    val sourceDistance = buffers.tokenEditDistance(source, snapshot.text)\n    val snapshotPosition = sourceDistance.toOriginal(\n      dirtyPosition.getLine,"
+  },
+  {
+    "id" : "897f7c77-7714-45f2-819e-6ef4adb65d55",
+    "prId" : 1487,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1487",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "65cf7154-13c5-44cb-aba0-37db234f8354",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Maybe we could do it the other way, switch the parameters in the rest to Position, and just add methods that extract position from TextDocumentParams",
+        "createdAt" : "2020-03-12T11:37:39Z",
+        "updatedAt" : "2020-03-24T16:45:28Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "55838e6c9f4127bc8d06a8d31a6df496a0b729a8",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +93,97 @@      .map(symDef => symDef.path.toInputFromBuffers(buffers))\n\n  def symbolOccurrence(\n      source: AbsolutePath,\n      dirtyPosition: Position"
+  },
+  {
+    "id" : "8c68ef45-3169-4a50-879f-4fd57db9d904",
+    "prId" : 651,
+    "prUrl" : "https://github.com/scalameta/metals/pull/651",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "4579ee85-3272-4819-aa72-593af814b6c9",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "does it make sense to warn even in cases in which there's a fallback available?\r\nMaybe the warning could include info about whether Metals has found the fallback or not ",
+        "createdAt" : "2019-04-12T07:48:56Z",
+        "updatedAt" : "2019-04-12T09:54:09Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b8268836-8a0d-45bc-9c4a-a12ba8e953df",
+        "parentId" : "4579ee85-3272-4819-aa72-593af814b6c9",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I decided to keep the warning and leave it to a separate PR to overall improve the UX (reduce warnings/noise) when semanticdb-scalac is not enabled.",
+        "createdAt" : "2019-04-12T07:50:32Z",
+        "updatedAt" : "2019-04-12T09:54:09Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ec955cb5-3a11-4f0c-93e2-81b104288edd",
+        "parentId" : "4579ee85-3272-4819-aa72-593af814b6c9",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "This warning only happens when using \"rambo mode\" (editing a source file outside a build target).",
+        "createdAt" : "2019-04-12T07:51:01Z",
+        "updatedAt" : "2019-04-12T09:54:09Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "72e29939-4a1a-446d-b7b4-5545bd21d6f0",
+        "parentId" : "4579ee85-3272-4819-aa72-593af814b6c9",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "We don't have the classpath for those source files so I suspect definition/completions won't work very reliably.",
+        "createdAt" : "2019-04-12T07:51:47Z",
+        "updatedAt" : "2019-04-12T09:54:09Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c7cb79cc-6f99-40d7-b145-c68d25a5c55c",
+        "parentId" : "4579ee85-3272-4819-aa72-593af814b6c9",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Got it, makes sense.\r\nIncidentally local completions now work in project/*.scala files, which was an unexpected treat 😅",
+        "createdAt" : "2019-04-12T07:52:54Z",
+        "updatedAt" : "2019-04-12T09:54:09Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2079214c-7dbf-438a-93f9-09839ce5cd12",
+        "parentId" : "4579ee85-3272-4819-aa72-593af814b6c9",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "After this PR goto definition will also work there for local variables :)",
+        "createdAt" : "2019-04-12T07:54:01Z",
+        "updatedAt" : "2019-04-12T09:54:09Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a2dbd8ce82a5565161c5e2376068dbc4b1651817",
+    "line" : 33,
+    "diffHunk" : "@@ -1,1 +55,59 @@          definitionFromSnapshot(path, params, doc)\n        case _ =>\n          warnings.noSemanticdb(path)\n          DefinitionResult.empty\n      }"
+  },
+  {
+    "id" : "32048510-6dee-45d6-8210-4f368de90c1b",
+    "prId" : 337,
+    "prUrl" : "https://github.com/scalameta/metals/pull/337",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "09308f95-0f4b-44e8-8fc4-6c513e914682",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "mutability hurts my head, I would prefer to bind a new `location` as `revisedLocation` to make the intent clear.",
+        "createdAt" : "2018-11-24T19:56:12Z",
+        "updatedAt" : "2018-11-27T10:23:41Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "23454d89-66a9-4bcc-8627-33d9620a59a1",
+        "parentId" : "09308f95-0f4b-44e8-8fc4-6c513e914682",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I agree, it hurt my head too when writing this. Good catch, it is 100x better without setters",
+        "createdAt" : "2018-11-25T11:17:14Z",
+        "updatedAt" : "2018-11-27T10:23:41Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8ab78d5883e2e77a843cca1ea641084e6e4a2875",
+    "line" : 129,
+    "diffHunk" : "@@ -1,1 +127,131 @@              )\n          ),\n          () => Some(location),\n          () => None\n        )"
+  }
+]

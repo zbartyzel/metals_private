@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "e402c196-706f-4f49-89f3-01a2ee947303",
+    "prId" : 256,
+    "prUrl" : "https://github.com/scalameta/metals/pull/256",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "a183fbbc-5bc5-4f4c-9461-8f9fb2cfabc6",
+        "parentId" : null,
+        "authorId" : "347234be-fc0d-4548-a883-7588a4894e0e",
+        "body" : "This link is broken.",
+        "createdAt" : "2018-04-06T13:22:16Z",
+        "updatedAt" : "2018-04-06T13:46:43Z",
+        "lastEditedBy" : "347234be-fc0d-4548-a883-7588a4894e0e",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1a971d2c-c1ef-49b9-be75-9d9b88e753b3",
+        "parentId" : "a183fbbc-5bc5-4f4c-9461-8f9fb2cfabc6",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Good catch, added link at the bottom.",
+        "createdAt" : "2018-04-06T13:26:46Z",
+        "updatedAt" : "2018-04-06T13:46:43Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ffb45040378457f2159326840393d913cd081213",
+    "line" : 101,
+    "diffHunk" : "@@ -1,1 +99,103 @@\nA full list of server configuration options can be found in\n[Configuration.scala][]. All configuration options have default values. An\nexample of how the configuration options are used from the VS Code plugin can be\nseen in the"
+  },
+  {
+    "id" : "6471929e-84e0-4803-be1c-9be7439cab43",
+    "prId" : 256,
+    "prUrl" : "https://github.com/scalameta/metals/pull/256",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "139140cf-d1db-4105-a362-96079d4e06ea",
+        "parentId" : null,
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "❤️ ",
+        "createdAt" : "2018-04-06T13:49:03Z",
+        "updatedAt" : "2018-04-06T13:49:11Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a456f272-1504-4f0a-9b26-9e0323fd13e4",
+        "parentId" : "139140cf-d1db-4105-a362-96079d4e06ea",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "perfect 👍 ",
+        "createdAt" : "2018-04-06T13:58:35Z",
+        "updatedAt" : "2018-04-06T13:58:35Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ffb45040378457f2159326840393d913cd081213",
+    "line" : 126,
+    "diffHunk" : "@@ -1,1 +124,128 @@`\"editor.formatOnSave\": true` to trigger a `textDocument/formatting` request on\nfile save and for that reason the VS Code metals plugin does not support\n`scalafmt.onSave`.\n\n## Commands"
+  }
+]

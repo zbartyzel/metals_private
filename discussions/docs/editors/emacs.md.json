@@ -1,0 +1,332 @@
+[
+  {
+    "id" : "cf270a9d-cf57-4dbe-9f55-ed3458ea8f3a",
+    "prId" : 2733,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2733",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f7cfc3ff-3814-49b7-aad8-3705759cb2b5",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "I left a comment on the pr in the other repo, but since using `cs install` doesn't work at all to get the Metals snapshots, it might be better to use bootstrap instead and allow the user to just give a version or default to `latest.stable`. WDYT?",
+        "createdAt" : "2021-04-22T08:27:07Z",
+        "updatedAt" : "2021-04-22T08:27:07Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7ba2a455-2c66-40b2-af4b-6adf08c95d25",
+        "parentId" : "f7cfc3ff-3814-49b7-aad8-3705759cb2b5",
+        "authorId" : "b4d26571-ec10-4bb1-8742-de41e7be0e54",
+        "body" : "I thought that `cs install` is a preferable way to install metals now, as has been said in https://github.com/scalameta/metals/issues/1884 . As for myself I don't use metals snapshots, so not sure how good they are and whether we should provide an easy option to do that :)",
+        "createdAt" : "2021-04-22T08:41:35Z",
+        "updatedAt" : "2021-04-22T08:41:35Z",
+        "lastEditedBy" : "b4d26571-ec10-4bb1-8742-de41e7be0e54",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e390a0fa-6236-4f4c-a8bd-f4c8104b0277",
+        "parentId" : "f7cfc3ff-3814-49b7-aad8-3705759cb2b5",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Ha, I'm probably on the far other end where I only use snapshots, but I'm not the norm there. I'd say that yea if a user is going to install it themselves, then `cs install metals` is by far the easiest way to install ithe recommended way. However, imo if a client is going to abstract over that and just use Coursier under the hood, then using `cs bootstrap` offers a way to also automate the installation and provide a way to install snapshots if they want.",
+        "createdAt" : "2021-04-22T08:56:00Z",
+        "updatedAt" : "2021-04-22T08:56:00Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "10b2295b-2c32-4f1b-920b-bf88b0108c33",
+        "parentId" : "f7cfc3ff-3814-49b7-aad8-3705759cb2b5",
+        "authorId" : "b4d26571-ec10-4bb1-8742-de41e7be0e54",
+        "body" : "This way of installing has one drawback - if something is changed here https://github.com/coursier/apps/blob/f6ad7f3dffd2bf6fddc8991853a32919fd62e44d/apps/resources/metals.json we have to reflect this change in each client, and it easily can remain unnoticed.",
+        "createdAt" : "2021-04-22T09:27:40Z",
+        "updatedAt" : "2021-04-22T09:27:40Z",
+        "lastEditedBy" : "b4d26571-ec10-4bb1-8742-de41e7be0e54",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e6717855-fb5c-47d3-a0d6-fea6412a935c",
+        "parentId" : "f7cfc3ff-3814-49b7-aad8-3705759cb2b5",
+        "authorId" : "b4d26571-ec10-4bb1-8742-de41e7be0e54",
+        "body" : "Should we create an issue for coursier to add `--version` flag to `cs install`? :)",
+        "createdAt" : "2021-04-22T10:01:06Z",
+        "updatedAt" : "2021-04-22T10:01:06Z",
+        "lastEditedBy" : "b4d26571-ec10-4bb1-8742-de41e7be0e54",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "11ec3c77-8bf8-4cd9-8dea-7d12c68ec0f7",
+        "parentId" : "f7cfc3ff-3814-49b7-aad8-3705759cb2b5",
+        "authorId" : "b4d26571-ec10-4bb1-8742-de41e7be0e54",
+        "body" : "Hm, looks like it already can handle versions: https://github.com/coursier/coursier/issues/1249",
+        "createdAt" : "2021-04-22T10:03:41Z",
+        "updatedAt" : "2021-04-22T10:03:41Z",
+        "lastEditedBy" : "b4d26571-ec10-4bb1-8742-de41e7be0e54",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ed683a64-51be-4840-bce1-bada88d2cdf8",
+        "parentId" : "f7cfc3ff-3814-49b7-aad8-3705759cb2b5",
+        "authorId" : "b4d26571-ec10-4bb1-8742-de41e7be0e54",
+        "body" : "Yes, works like `cs install metals:version`, so I'll add it then.",
+        "createdAt" : "2021-04-22T10:07:39Z",
+        "updatedAt" : "2021-04-22T10:07:39Z",
+        "lastEditedBy" : "b4d26571-ec10-4bb1-8742-de41e7be0e54",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1103e3d1-adcf-4d68-a97c-4ea0d3b50d2c",
+        "parentId" : "f7cfc3ff-3814-49b7-aad8-3705759cb2b5",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Sorry if I wasn't clear before, but this won't work. That was partly what I was getting at with there is no way to install snapshots with `cs install metals`. For example in the above if you try it locally you get:\r\n\r\n```\r\n❯ cs install metals:0.10.2+5-919c430c-SNAPSHOT\r\nhttps://repo1.maven.org/maven2/io/get-coursier/apps/maven-metadata.xml\r\n  No new update since 2021-03-31 19:34:20\r\nException in thread \"main\" java.lang.Exception: coursier.install.AppArtifacts$ScalaDependenciesNotFound: Can't find a scala version suffix for org.scalameta::metals:0.10.2+5-919c430c-SNAPSHOT (likely a non existing module or version)\r\n        at coursier.install.AppDescriptor.artifacts(AppDescriptor.scala:66)\r\n        at coursier.install.InstallDir.update$1(InstallDir.scala:259)\r\n        at coursier.install.InstallDir.$anonfun$createOrUpdate$21(InstallDir.scala:385)\r\n        at coursier.install.InstallDir.$anonfun$createOrUpdate$21$adapted(InstallDir.scala:384)\r\n        at coursier.install.Updatable$.get$1(Updatable.scala:55)\r\n        at coursier.install.Updatable$.$anonfun$writing$1(Updatable.scala:96)\r\n        at coursier.cache.CacheLocks$.loop$1(CacheLocks.scala:72)\r\n        at coursier.cache.CacheLocks$.withLockOr(CacheLocks.scala:98)\r\n        at coursier.install.Updatable$.writing(Updatable.scala:96)\r\n        at coursier.install.InstallDir.createOrUpdate(InstallDir.scala:384)\r\n        at coursier.install.InstallDir.createOrUpdate(InstallDir.scala:87)\r\n        at coursier.cli.install.Install$.$anonfun$run$7(Install.scala:108)\r\n        at coursier.cli.install.Install$.$anonfun$run$7$adapted(Install.scala:95)\r\n        at scala.collection.immutable.List.foreach(List.scala:431)\r\n        at coursier.cli.install.Install$.run(Install.scala:95)\r\n        at coursier.cli.Coursier$.$anonfun$runA$2(Coursier.scala:152)\r\n        at coursier.cli.Coursier$.$anonfun$runA$2$adapted(Coursier.scala:140)\r\n        at coursier.cli.CommandAppPreA.run(CommandAppPreA.scala:22)\r\n        at caseapp.core.app.CommandAppWithPreCommand.$anonfun$main$5(CommandAppWithPreCommand.scala:99)\r\n        at caseapp.core.app.CommandAppWithPreCommand.$anonfun$main$5$adapted(CommandAppWithPreCommand.scala:99)\r\n        at scala.util.Either.fold(Either.scala:191)\r\n        at caseapp.core.app.CommandAppWithPreCommand.$anonfun$main$3(CommandAppWithPreCommand.scala:99)\r\n        at caseapp.core.app.CommandAppWithPreCommand.$anonfun$main$3$adapted(CommandAppWithPreCommand.scala:85)\r\n        at scala.Option.foreach(Option.scala:407)\r\n        at caseapp.core.app.CommandAppWithPreCommand.main(CommandAppWithPreCommand.scala:85)\r\n        at coursier.cli.Coursier$.main(Coursier.scala:105)\r\n        at coursier.cli.Coursier.main(Coursier.scala)\r\nCaused by: coursier.install.AppArtifacts$ScalaDependenciesNotFound: Can't find a scala version suffix for org.scalameta::metals:0.10.2+5-919c430c-SNAPSHOT (likely a non existing module or version)\r\n        at coursier.install.AppDescriptor.$anonfun$processDependencies$9(AppDescriptor.scala:184)\r\n        at scala.Option.toRight(Option.scala:485)\r\n        at coursier.install.AppDescriptor.processDependencies(AppDescriptor.scala:184)\r\n        at coursier.install.AppDescriptor.artifacts(AppDescriptor.scala:64)\r\n        ... 26 more\r\n```\r\n\r\nEven if you specify the repository you still have issues.",
+        "createdAt" : "2021-04-22T10:17:40Z",
+        "updatedAt" : "2021-04-22T10:17:40Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "95e05925-b835-44b1-a107-dbe075201386",
+        "parentId" : "f7cfc3ff-3814-49b7-aad8-3705759cb2b5",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "In that case above I use Scala 2.13 locally, and Metals isn't published for 2.13, so it won't find the `metals_2.13` artifact.",
+        "createdAt" : "2021-04-22T10:18:42Z",
+        "updatedAt" : "2021-04-22T10:18:51Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "893ae871-99de-4f09-ba06-d37e667cae8a",
+        "parentId" : "f7cfc3ff-3814-49b7-aad8-3705759cb2b5",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "There is also some issues in general when trying to get the latest snapshot as you can see here https://github.com/coursier/coursier/issues/1700",
+        "createdAt" : "2021-04-22T10:19:53Z",
+        "updatedAt" : "2021-04-22T10:19:53Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "75ddd02a-0c2b-4e6f-a275-29078a610787",
+        "parentId" : "f7cfc3ff-3814-49b7-aad8-3705759cb2b5",
+        "authorId" : "b4d26571-ec10-4bb1-8742-de41e7be0e54",
+        "body" : "That's sad :(",
+        "createdAt" : "2021-04-22T10:42:45Z",
+        "updatedAt" : "2021-04-22T10:42:45Z",
+        "lastEditedBy" : "b4d26571-ec10-4bb1-8742-de41e7be0e54",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cf5efab2240e33e548cb0d81b4848c415980fda1",
+    "line" : 30,
+    "diffHunk" : "@@ -1,1 +119,123 @@is enabled in a scala buffer or via `lsp-install-server` command. Also you can\ndo it manually executing `coursier install metals` and configuring `$PATH`\nvariable properly.\n\n```scala mdoc:editor:emacs"
+  },
+  {
+    "id" : "a8030d4e-c250-40e3-afea-20b50f30af18",
+    "prId" : 2733,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2733",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "1eed989c-10e8-4ad5-97e9-68d85dc14ddf",
+        "parentId" : null,
+        "authorId" : "7b79e1ce-ed0c-406b-9530-6e82817d8e7b",
+        "body" : "why `coursier install metals`? isn't it `coursier install metals-emacs`?",
+        "createdAt" : "2021-04-22T09:35:16Z",
+        "updatedAt" : "2021-04-22T10:08:44Z",
+        "lastEditedBy" : "7b79e1ce-ed0c-406b-9530-6e82817d8e7b",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "88650982-32b4-41b8-8fea-bfbd748f4e06",
+        "parentId" : "1eed989c-10e8-4ad5-97e9-68d85dc14ddf",
+        "authorId" : "b4d26571-ec10-4bb1-8742-de41e7be0e54",
+        "body" : "No, we don't need metals hacks for emacs anymore. Everything can be configured on `lsp-metals` side, so we can use generic metals.",
+        "createdAt" : "2021-04-22T10:09:44Z",
+        "updatedAt" : "2021-04-22T10:09:44Z",
+        "lastEditedBy" : "b4d26571-ec10-4bb1-8742-de41e7be0e54",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e1f30c9c-472f-45f9-b2f1-3cf7a9006525",
+        "parentId" : "1eed989c-10e8-4ad5-97e9-68d85dc14ddf",
+        "authorId" : "7b79e1ce-ed0c-406b-9530-6e82817d8e7b",
+        "body" : "But you still mention `metals-emacs` below:\r\n```\r\nIf you start Emacs now then it will fail since the `metals-emacs` binary does\r\n￼not exist yet.\r\n￼\r\n￼```scala mdoc:bootstrap:metals-emacs emacs\r\n￼\r\n￼```\r\n￼\r\n￼The `-Dmetals.client=emacs` flag is important since it configures Metals for\r\n￼usage with Emacs.\r\n￼\r\n```",
+        "createdAt" : "2021-04-22T10:13:27Z",
+        "updatedAt" : "2021-04-22T10:13:44Z",
+        "lastEditedBy" : "7b79e1ce-ed0c-406b-9530-6e82817d8e7b",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0d579d34-e0bf-443a-926b-023de8010e94",
+        "parentId" : "1eed989c-10e8-4ad5-97e9-68d85dc14ddf",
+        "authorId" : "b4d26571-ec10-4bb1-8742-de41e7be0e54",
+        "body" : "Yes, it's for those who prefer [eglot](https://github.com/joaotavora/eglot). I don't maintain nor use it and will leave for eglot users to decide how it should be installed (they still use [metals-emacs](https://github.com/joaotavora/eglot/blob/a0a6218af2dfb476573b2e564f43ab82bfcaaca2/eglot.el#L122)).",
+        "createdAt" : "2021-04-22T10:34:22Z",
+        "updatedAt" : "2021-04-22T10:40:09Z",
+        "lastEditedBy" : "b4d26571-ec10-4bb1-8742-de41e7be0e54",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cf5efab2240e33e548cb0d81b4848c415980fda1",
+    "line" : 29,
+    "diffHunk" : "@@ -1,1 +118,122 @@Next you have to install metals server. Emacs can do it for you when `lsp-mode`\nis enabled in a scala buffer or via `lsp-install-server` command. Also you can\ndo it manually executing `coursier install metals` and configuring `$PATH`\nvariable properly.\n"
+  },
+  {
+    "id" : "a836a2c3-422e-4e30-9511-75541f263f32",
+    "prId" : 1438,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1438",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "7f3f777b-d4e5-423d-88b0-c9a0e1a0f743",
+        "parentId" : null,
+        "authorId" : "8fdc5ee8-9798-4ec9-a583-0bf09abc3ae3",
+        "body" : "You can find more details on DAP at its [github project](https://github.com/emacs-lsp/dap-mode)",
+        "createdAt" : "2020-02-15T18:29:43Z",
+        "updatedAt" : "2020-02-15T18:29:43Z",
+        "lastEditedBy" : "8fdc5ee8-9798-4ec9-a583-0bf09abc3ae3",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "5d0a7d10bf062e9a202d905875537c26c64ee546",
+    "line" : 31,
+    "diffHunk" : "@@ -1,1 +79,83 @@(use-package company-lsp)\n\n;; Use the Debug Adapter Protocol for running tests and debugging\n(use-package posframe\n  ;; Posframe is a pop-up tool that must be manually installed for dap-mode"
+  },
+  {
+    "id" : "223e2b0d-29c0-40d2-a905-574da08d1705",
+    "prId" : 1438,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1438",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "20ed1618-53b7-4b21-91a6-fad81992ffa4",
+        "parentId" : null,
+        "authorId" : "8fdc5ee8-9798-4ec9-a583-0bf09abc3ae3",
+        "body" : "`lsp-treemacs` has a Metals specific treeview, as documented in it's [readme](https://github.com/emacs-lsp/lsp-treemacs#lsp-metals-treeview)",
+        "createdAt" : "2020-02-15T18:31:34Z",
+        "updatedAt" : "2020-02-15T18:31:35Z",
+        "lastEditedBy" : "8fdc5ee8-9798-4ec9-a583-0bf09abc3ae3",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "5d0a7d10bf062e9a202d905875537c26c64ee546",
+    "line" : 41,
+    "diffHunk" : "@@ -1,1 +89,93 @@  )\n\n;; Use the Tree View Protocol for viewing the project structure and triggering compilation\n(use-package lsp-treemacs\n  :config"
+  },
+  {
+    "id" : "b5e19462-ea6a-4803-80b0-bc79b63d79ed",
+    "prId" : 419,
+    "prUrl" : "https://github.com/scalameta/metals/pull/419",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b478f5dd-1240-4510-80bc-2c45b2c3ebf1",
+        "parentId" : null,
+        "authorId" : "347234be-fc0d-4548-a883-7588a4894e0e",
+        "body" : "I've never had to do anything special for this to work.",
+        "createdAt" : "2018-12-17T16:44:22Z",
+        "updatedAt" : "2018-12-17T17:01:11Z",
+        "lastEditedBy" : "347234be-fc0d-4548-a883-7588a4894e0e",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9e918a6e-bbb2-45ec-a77f-3a1d7e9ed73c",
+        "parentId" : "b478f5dd-1240-4510-80bc-2c45b2c3ebf1",
+        "authorId" : "c96fe45f-419a-4811-b974-0183b0425799",
+        "body" : "This enables `scala-mode` in `.sbt` and `.scala` files. Reading the doc for [`:mode` and `:interpreter`](https://jwiegley.github.io/use-package/keywords/#mode-interpreter) it seems to do the same. I can revert that one.",
+        "createdAt" : "2018-12-17T16:52:52Z",
+        "updatedAt" : "2018-12-17T17:01:11Z",
+        "lastEditedBy" : "c96fe45f-419a-4811-b974-0183b0425799",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c7e3158f-94ec-43fd-bbbb-ab3dab438063",
+        "parentId" : "b478f5dd-1240-4510-80bc-2c45b2c3ebf1",
+        "authorId" : "347234be-fc0d-4548-a883-7588a4894e0e",
+        "body" : "I don't have `:mode` or `:interpreter` in mine, and I get scala-mode for both `*.sbt` and `*.scala`.  What you've done is explicit and doesn't hurt anything, but I got this for free.",
+        "createdAt" : "2018-12-17T16:54:59Z",
+        "updatedAt" : "2018-12-17T17:01:11Z",
+        "lastEditedBy" : "347234be-fc0d-4548-a883-7588a4894e0e",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "91c23730-4369-4e44-a377-742fab818ba9",
+        "parentId" : "b478f5dd-1240-4510-80bc-2c45b2c3ebf1",
+        "authorId" : "c96fe45f-419a-4811-b974-0183b0425799",
+        "body" : "Good to know :+1: ",
+        "createdAt" : "2018-12-17T17:03:18Z",
+        "updatedAt" : "2018-12-17T17:03:19Z",
+        "lastEditedBy" : "c96fe45f-419a-4811-b974-0183b0425799",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e0785642f746dcaeb5e007748bc96005d3f86aad",
+    "line" : 15,
+    "diffHunk" : "@@ -1,1 +38,42 @@;; Enable scala-mode and sbt-mode\n(use-package scala-mode\n  :mode \"\\\\.s\\\\(cala\\\\|bt\\\\)$\")\n\n(use-package sbt-mode"
+  },
+  {
+    "id" : "491ba3f5-4d46-4cea-a232-b9e6cbe60a9d",
+    "prId" : 397,
+    "prUrl" : "https://github.com/scalameta/metals/pull/397",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "59c54579-c6f5-441e-b3bc-51b6776c6504",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I dumped everything I ended up needing in a clean `init.el` to get all the functionality working. It can definitely be improved, and ideally simplified once `lsp-scala` is up on MELPA.\r\n\r\nI have no experience with emacs so I suspect this hacky config would be illegal is certain Emacs circles.\r\n\r\nAny thoughts @rossabaker?",
+        "createdAt" : "2018-12-10T15:38:36Z",
+        "updatedAt" : "2018-12-11T10:26:59Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "dc4a390c004e0da54976f66fea7feb0469ca9621",
+    "line" : 30,
+    "diffHunk" : "@@ -1,1 +28,32 @@dependencies\n\n```el\n;; Enable scala-mode and sbt-mode\n(use-package scala-mode"
+  },
+  {
+    "id" : "d675025e-8249-4ce3-82a5-3607ba23a44d",
+    "prId" : 397,
+    "prUrl" : "https://github.com/scalameta/metals/pull/397",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "9e0741c4-6704-45c7-9fb9-eb09a4eccc3a",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "This command does not exist yet in `lsp-scala`, it would be good to add it https://scalameta.org/metals/docs/editors/new-editor.html#run-doctor",
+        "createdAt" : "2018-12-10T19:43:57Z",
+        "updatedAt" : "2018-12-11T10:26:59Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "dc4a390c004e0da54976f66fea7feb0469ca9621",
+    "line" : 87,
+    "diffHunk" : "@@ -1,1 +85,89 @@## Run doctor\n\nRun `M-x lsp-scala-doctor-run` to troubleshoot potential configuration problems\nin your build.\n"
+  }
+]

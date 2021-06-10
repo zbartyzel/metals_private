@@ -1,0 +1,156 @@
+[
+  {
+    "id" : "ae8fa53e-e590-48ba-b01e-44e7ccf77893",
+    "prId" : 1846,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1846",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "eeacb982-6125-4689-9316-d6204184b679",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Ah, good call adding this in 👍 ",
+        "createdAt" : "2020-06-19T19:58:10Z",
+        "updatedAt" : "2020-06-21T18:57:33Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "10223975ce00488d39a58765d57e434b217aeb21",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +35,39 @@  private val worksheetPick =\n    MetalsQuickPickItem(id = \"worksheet\", label = \"Worksheet\")\n  private val ammonitePick =\n    MetalsQuickPickItem(id = \"ammonite\", label = \"Ammonite script\")\n"
+  },
+  {
+    "id" : "201cd28a-5d9d-44c0-ac8d-d171b9a3931f",
+    "prId" : 1528,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1528",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "bf5abd2c-2459-49ab-a063-87535ca6cc9b",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "I've changed this to also accept a `name`, so that we can skip the name-picking dialog and just ask for a file kind.\r\n\r\nThis allows the code action to fully re-use the existing provider's flow, which I think is really nice",
+        "createdAt" : "2020-03-23T10:23:00Z",
+        "updatedAt" : "2020-03-23T15:05:32Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "29e8820c0560d7d7e678b124344d3884ba5c2bda",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +35,39 @@  def createNewFileDialog(\n      directoryUri: Option[URI],\n      name: Option[String]\n  ): Future[Unit] = {\n    val directory = directoryUri"
+  },
+  {
+    "id" : "d3934fff-ef48-42b2-a626-d9746e1e07b3",
+    "prId" : 1528,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1528",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "14ecd05e-71d3-4080-bb2e-c2aba7d9e810",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "My editor is set to strip out whitespaces on save, so I've been struggling with this.\r\n\r\nI think it's much clearer this way, anyway.",
+        "createdAt" : "2020-03-23T11:41:18Z",
+        "updatedAt" : "2020-03-23T15:05:32Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ae1a3477-0afb-404a-9229-56a45dabdcf5",
+        "parentId" : "14ecd05e-71d3-4080-bb2e-c2aba7d9e810",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I agree this is clearer. I also have my editor remove trailing whitespace on save, intellij has this enabled by default, so we should not rely on it in our tests",
+        "createdAt" : "2020-03-23T12:23:16Z",
+        "updatedAt" : "2020-03-23T15:05:32Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "82372ba0-4b4e-4ccb-af97-1b8a12d93baa",
+        "parentId" : "14ecd05e-71d3-4080-bb2e-c2aba7d9e810",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "I also like this as I get a warning in vim about trailing whitespaces all the time ha.",
+        "createdAt" : "2020-03-23T12:30:24Z",
+        "updatedAt" : "2020-03-23T15:05:32Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "29e8820c0560d7d7e678b124344d3884ba5c2bda",
+    "line" : 53,
+    "diffHunk" : "@@ -1,1 +199,203 @@    val indent = \"  \"\n    s\"\"\"|$kind $name {\n        |$indent\n        |}\n        |\"\"\".stripMargin"
+  },
+  {
+    "id" : "63e95e6d-63a1-47e2-9466-3c3198cacb79",
+    "prId" : 1447,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1447",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "a19fa4cb-f346-4027-a7c2-2fac8b9303b5",
+        "parentId" : null,
+        "authorId" : "58f39866-9870-40fc-83e0-d68edbbcb6f7",
+        "body" : "I've made some kind of DSL here, to cover `Future[Option[_]]` handling (making this method more or readable). `Future` is for about remote requests, and `Option` reflect that the request can be cancelled (thus, nothing should be returned eventually).\r\nNot sure, if it's good here.",
+        "createdAt" : "2020-02-17T19:04:26Z",
+        "updatedAt" : "2020-02-21T16:40:07Z",
+        "lastEditedBy" : "58f39866-9870-40fc-83e0-d68edbbcb6f7",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "948961c16a2b407e9b6be832f69458537ee4bc93",
+    "line" : 48,
+    "diffHunk" : "@@ -1,1 +37,41 @@\n    val newlyCreatedFile =\n      askForKind\n        .flatMapOption {\n          case kind @ (classPick.id | objectPick.id | traitPick.id) =>"
+  },
+  {
+    "id" : "362c743b-1f13-4813-80cc-15c9818520d2",
+    "prId" : 1447,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1447",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "3be24c55-0acd-4f5d-8277-f5f0bb4caea6",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "What happens if the name is `a/b/c/A` - I think we should create the directories there. Most likely `createFile` should also create directories? Package will then be added automatically which is neat.",
+        "createdAt" : "2020-02-19T18:36:55Z",
+        "updatedAt" : "2020-02-21T16:40:07Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "23cdb0ee-39e2-4c27-83d7-7f47c04725eb",
+        "parentId" : "3be24c55-0acd-4f5d-8277-f5f0bb4caea6",
+        "authorId" : "58f39866-9870-40fc-83e0-d68edbbcb6f7",
+        "body" : "it fails. Not really sure, it looks neat to ask for the name for the new class `foo/Bar` to create `class Bar`at `foo/Bar.scala`",
+        "createdAt" : "2020-02-20T15:41:14Z",
+        "updatedAt" : "2020-02-21T16:40:07Z",
+        "lastEditedBy" : "58f39866-9870-40fc-83e0-d68edbbcb6f7",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b36363b3-4325-48d0-8ea8-008417274cb3",
+        "parentId" : "3be24c55-0acd-4f5d-8277-f5f0bb4caea6",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Could we implement it here? I think we just need to do `getParent.mkdirs`",
+        "createdAt" : "2020-02-21T13:09:48Z",
+        "updatedAt" : "2020-02-21T16:40:07Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "948961c16a2b407e9b6be832f69458537ee4bc93",
+    "line" : 124,
+    "diffHunk" : "@@ -1,1 +100,104 @@      kind: String\n  ): Future[AbsolutePath] = {\n    val path = directory.getOrElse(workspace).resolve(name + \".scala\")\n    //name can be actually be \"foo/Name\", where \"foo\" is a folder to create\n    val className = directory.getOrElse(workspace).resolve(name).filename"
+  }
+]

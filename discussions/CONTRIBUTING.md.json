@@ -1,0 +1,343 @@
+[
+  {
+    "id" : "5e659949-5f09-4a40-b8c1-789d05c54fa6",
+    "prId" : 294,
+    "prUrl" : "https://github.com/scalameta/metals/pull/294",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "9392beb3-4e05-4e18-81da-f38fbdb95edc",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "👍 ",
+        "createdAt" : "2018-05-08T07:21:29Z",
+        "updatedAt" : "2018-05-08T16:31:25Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c40a1413bb611d9c7cbe341adbcd54306b22398b",
+    "line" : 144,
+    "diffHunk" : "@@ -1,1 +1,5 @@# Contributing\n\nPlease refer to the documentation for contributors [on our website](https://scalameta.org/metals/docs/getting-started-contributors.html#troubleshooting)."
+  },
+  {
+    "id" : "8bbf2ce2-78e5-4299-8402-4f4ab914830d",
+    "prId" : 214,
+    "prUrl" : "https://github.com/scalameta/metals/pull/214",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "c88afc2a-ac9a-4a0c-b30b-45bb0407cc7b",
+        "parentId" : null,
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "👍 ",
+        "createdAt" : "2018-03-31T14:21:38Z",
+        "updatedAt" : "2018-03-31T22:01:15Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8a3e65cd-625d-4de5-8d40-0bb81d06258a",
+        "parentId" : "c88afc2a-ac9a-4a0c-b30b-45bb0407cc7b",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "VSCode-specific part should mention that you need to install some basic Scala extension first, without it Metals extension won't get activated.",
+        "createdAt" : "2018-03-31T14:25:51Z",
+        "updatedAt" : "2018-03-31T22:01:15Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f5b63ae1-b564-4c02-84cc-18bc8195bede",
+        "parentId" : "c88afc2a-ac9a-4a0c-b30b-45bb0407cc7b",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Done.",
+        "createdAt" : "2018-03-31T15:38:50Z",
+        "updatedAt" : "2018-03-31T22:01:15Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f7060933-fd95-4c32-a00d-56b4ce2d125c",
+        "parentId" : "c88afc2a-ac9a-4a0c-b30b-45bb0407cc7b",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "That may explain some setup issues I've had with some colleagues! Very nice catch, @laughedelic!",
+        "createdAt" : "2018-03-31T17:52:07Z",
+        "updatedAt" : "2018-03-31T22:01:15Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d3146fa5e1de6aea4434fb7ac94da886a8657feb",
+    "line" : 57,
+    "diffHunk" : "@@ -1,1 +53,57 @@cd vscode-extension\nnpm install\ncode .\n> Debug > \"Start debugging\" (shortcut: F5)\n          # Inside vscode, F5 will open a new window with the latest"
+  },
+  {
+    "id" : "09eb4a1a-7323-4b87-8fb4-62c31770de4b",
+    "prId" : 196,
+    "prUrl" : "https://github.com/scalameta/metals/pull/196",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "233e27e6-ed69-4ea1-b8c6-682600ea459f",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "unrelated to this PR, but guess lsp4s is barely a fork anymore",
+        "createdAt" : "2018-02-12T20:11:41Z",
+        "updatedAt" : "2018-02-13T09:34:28Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "71b2c0246d19b6de4f086cbf655f0def15283b13",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +9,13 @@\n## Project structure\n- `lsp4s` contains a Scala implementation of the [Language Server Protocol specification](https://github.com/Microsoft/language-server-protocol/blob/master/protocol.md) (this is a fork of https://github.com/dragos/dragos-vscode-scala)\n- `metals` contains a Scala implementation of a language server based on Scalameta, which uses `lsp4s`\n- `vscode-extension` contains a Visual Studio Code extension, implementing a client for the language server"
+  },
+  {
+    "id" : "129db029-9887-48a7-a9e2-f6c2eec0461d",
+    "prId" : 14,
+    "prUrl" : "https://github.com/scalameta/metals/pull/14",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "788418cd-fee0-4c96-a5e9-56030cf65443",
+        "parentId" : null,
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "I think that there should be also `npm run download-coursier` or `vscode:prepublish`, because coursier jar is assumed to be in the plugin's directory. \r\n\r\nI don't know about other npm scripts, what's `postinstall` for?",
+        "createdAt" : "2017-11-08T14:40:03Z",
+        "updatedAt" : "2017-11-08T18:17:00Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "dfdf0e66-f948-473d-b5a5-4050cb896ffd",
+        "parentId" : "788418cd-fee0-4c96-a5e9-56030cf65443",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "For contributing, it's also useful to know how to run tests and what to expect from it. Sorry if it's something obvious in the npm/js/ts context, I'm just totally new to it 😅 ",
+        "createdAt" : "2017-11-08T14:55:22Z",
+        "updatedAt" : "2017-11-08T18:17:01Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d13ec782-79ac-4c28-85fd-eb16bae7398b",
+        "parentId" : "788418cd-fee0-4c96-a5e9-56030cf65443",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "We currently don't have any test (currently trying to get them running in #12).\r\n\r\n`postinstall` allows the vscode to setup itself after it has been installed. It's an automatic step that runs after `install` so it's not essential in the contribution guide I think.",
+        "createdAt" : "2017-11-08T15:00:34Z",
+        "updatedAt" : "2017-11-08T18:17:01Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5e0c395e-a5dc-4869-a090-805be83062ad",
+        "parentId" : "788418cd-fee0-4c96-a5e9-56030cf65443",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "OK, I see. So no other npm tasks are of interest for a contributor?",
+        "createdAt" : "2017-11-08T15:15:39Z",
+        "updatedAt" : "2017-11-08T18:17:01Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4882a5af-9ac6-40de-b752-f8aa52a61674",
+        "parentId" : "788418cd-fee0-4c96-a5e9-56030cf65443",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "I would say that `npm install` and `npm run build` are enough for most cases.",
+        "createdAt" : "2017-11-08T15:37:16Z",
+        "updatedAt" : "2017-11-08T18:17:01Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "349c42d1-76b0-4ab6-9314-12aea4eabcab",
+        "parentId" : "788418cd-fee0-4c96-a5e9-56030cf65443",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "@olafurpg could you still add `npm run download-coursier` before `npm install`? Because I think without it coursier will be missing.",
+        "createdAt" : "2017-11-08T18:03:58Z",
+        "updatedAt" : "2017-11-08T18:17:01Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "95ce7cbb-dfbb-4c29-9ef2-2978e6b90d60",
+        "parentId" : "788418cd-fee0-4c96-a5e9-56030cf65443",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Done @laughedelic I didn't need to run that command, but it's better to include more than too little 😄 ",
+        "createdAt" : "2017-11-08T18:11:55Z",
+        "updatedAt" : "2017-11-08T18:17:01Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "44e33dd0-7ecd-4095-bc0f-93fe1ebfe50b",
+        "parentId" : "788418cd-fee0-4c96-a5e9-56030cf65443",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "I think that coursier should be downloaded by the client on the first launch, so this pre-installation step won't be needed.",
+        "createdAt" : "2017-11-08T18:15:15Z",
+        "updatedAt" : "2017-11-08T18:17:01Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "dd66b739-47cb-451a-9df6-c88e61f8c469",
+        "parentId" : "788418cd-fee0-4c96-a5e9-56030cf65443",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I just added the coursier binary to the repo (it's only 20kb) so this step should no longer be needed. The binary was excluded for some reason",
+        "createdAt" : "2017-11-08T18:18:34Z",
+        "updatedAt" : "2017-11-08T18:18:34Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "17a8e440-4257-410b-8289-7ac741f7f340",
+        "parentId" : "788418cd-fee0-4c96-a5e9-56030cf65443",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "I just noticed that you added coursier to the repo",
+        "createdAt" : "2017-11-08T18:18:38Z",
+        "updatedAt" : "2017-11-08T18:18:38Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7939bde0a143d3f1f5ebc5076a377ad6baafa86b",
+    "line" : 46,
+    "diffHunk" : "@@ -1,1 +44,48 @@# Inside a new terminal window\ncd vscode-extension\nnpm install\ncode vscode-extension\n> Debug > \"Start debugging\" (shortcut: F5)"
+  },
+  {
+    "id" : "60ba9c86-3f5c-4712-845a-89ccacf75448",
+    "prId" : 14,
+    "prUrl" : "https://github.com/scalameta/metals/pull/14",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "988a1ca4-3d03-4261-9a2e-7345434da3e8",
+        "parentId" : null,
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "I think this is  not essential, because once you run `sbt language-server/publishLocal`, you can forget about it and continue with the vscode extension.",
+        "createdAt" : "2017-11-08T14:50:09Z",
+        "updatedAt" : "2017-11-08T18:17:01Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4c040e5f-5798-479b-8f23-3fd4eb693bbc",
+        "parentId" : "988a1ca4-3d03-4261-9a2e-7345434da3e8",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I'm hesitant to advertise that workflow since this guide is primarily intended for local development of the plugin. This plugin requires more work to be usable for day-to-day for novice Scala users.",
+        "createdAt" : "2017-11-08T15:57:24Z",
+        "updatedAt" : "2017-11-08T18:17:01Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1c3f083d-ef37-4dc6-830c-328de554566c",
+        "parentId" : "988a1ca4-3d03-4261-9a2e-7345434da3e8",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I personally use two terminal windows since it avoids exiting/starting sbt between the test workspace and language-server project.",
+        "createdAt" : "2017-11-08T17:26:52Z",
+        "updatedAt" : "2017-11-08T18:17:01Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "44c7734e-f67f-4dc3-9709-f852b69a0de0",
+        "parentId" : "988a1ca4-3d03-4261-9a2e-7345434da3e8",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "Don't mind my comment, I realised that it makes sense when you simultaneously change the server code and test the client.",
+        "createdAt" : "2017-11-08T18:02:42Z",
+        "updatedAt" : "2017-11-08T18:17:01Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7939bde0a143d3f1f5ebc5076a377ad6baafa86b",
+    "line" : 26,
+    "diffHunk" : "@@ -1,1 +24,28 @@\nTo try out the language-server locally, it's best to keep two open terminal\nwindows.\n\n```"
+  },
+  {
+    "id" : "14c80159-5e0a-47a2-b931-a6a19a3659f0",
+    "prId" : 14,
+    "prUrl" : "https://github.com/scalameta/metals/pull/14",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "82cdfa0a-f646-4d9b-84c7-f21473cbc1cb",
+        "parentId" : null,
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "How can I install the plugin locally, so that I don't need to open it in debug mode every time? I guess it's some combination of the npm tasks/scripts?",
+        "createdAt" : "2017-11-08T14:53:57Z",
+        "updatedAt" : "2017-11-08T18:17:01Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "bd0e6eb8-e5ee-453e-aeda-1b887ea5355e",
+        "parentId" : "82cdfa0a-f646-4d9b-84c7-f21473cbc1cb",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Good point, it should as easy as\r\n\r\n```js\r\nnpm install\r\nnpm run build // produces a .vsxi file\r\n```\r\n\r\nThen use VSCode to install the .vsxi file.\r\n\r\nWe can add this.",
+        "createdAt" : "2017-11-08T15:02:28Z",
+        "updatedAt" : "2017-11-08T18:17:01Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "24e6b81b-102f-4a5b-a50d-c382f52b5b36",
+        "parentId" : "82cdfa0a-f646-4d9b-84c7-f21473cbc1cb",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "I see that `npm run build` also downloads coursier. \r\n\r\n> Then use VSCode to install the .vsxi file.\r\n\r\nI found how to do it in the GUI, but it's not very convenient. Is there a way to do it with the command line? ",
+        "createdAt" : "2017-11-08T15:19:24Z",
+        "updatedAt" : "2017-11-08T18:17:01Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "78ce3991-17a3-478a-a02c-3cfb349ed5cb",
+        "parentId" : "82cdfa0a-f646-4d9b-84c7-f21473cbc1cb",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "good point, I just found out that\r\n\r\n```\r\ncode --install-extension myextension.vsix\r\n```\r\n\r\nshould work!",
+        "createdAt" : "2017-11-08T15:36:40Z",
+        "updatedAt" : "2017-11-08T18:17:01Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5be58e04-212c-46b8-ab64-dbad86331537",
+        "parentId" : "82cdfa0a-f646-4d9b-84c7-f21473cbc1cb",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Updated.",
+        "createdAt" : "2017-11-08T17:33:51Z",
+        "updatedAt" : "2017-11-08T18:17:01Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7939bde0a143d3f1f5ebc5076a377ad6baafa86b",
+    "line" : 55,
+    "diffHunk" : "@@ -1,1 +53,57 @@> File > Open > language-server/test-workspace (shortcut Cmd+O on MacOS)\n          # Open the test-workspace folder in the debugging window\n          # of vscode. Open a file in the project.\n\n(optional) to install the plugin for your default vscode"
+  }
+]

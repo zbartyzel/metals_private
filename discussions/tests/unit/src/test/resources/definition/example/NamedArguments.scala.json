@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "c27a2c8b-2035-4e67-a814-eec01742a80b",
+    "prId" : 2247,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2247",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "49edbb4c-b8f3-4d1c-a211-f9f035df2657",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "So this is fixed, but the main issue I tried to fix needed to be reopened unfortunately https://github.com/scalameta/scalameta/issues/2144",
+        "createdAt" : "2020-11-19T18:07:06Z",
+        "updatedAt" : "2020-11-19T19:15:43Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "70e6073dc5a2657aacdf9c86a4f40c6bb0cf48ff",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +23,27 @@  // anonymous classes\n  @deprecated/*deprecated.scala*/(\n    message/*deprecated.scala fallback to scala.deprecated#*/ = \"a\",\n    since/*deprecated.scala fallback to scala.deprecated#*/ = susan/*NamedArguments.scala*/\n  ) def b/*NamedArguments.scala*/ = 1"
+  }
+]

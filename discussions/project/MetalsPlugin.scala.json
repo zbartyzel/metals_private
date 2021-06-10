@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "3de6c70d-5f15-49b1-8c1d-23fb717365ff",
+    "prId" : 229,
+    "prUrl" : "https://github.com/scalameta/metals/pull/229",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "6c420bfc-5490-4d1a-ade0-db959b3b7c5b",
+        "parentId" : null,
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "This conflicts with `semanticdbSettings` defined in `build.sbt` (just remove it there)",
+        "createdAt" : "2018-04-03T02:40:15Z",
+        "updatedAt" : "2018-04-03T23:23:39Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d78b2e041f5b5d77e2502faaf1eb7c932f20e6e4",
+    "line" : 30,
+    "diffHunk" : "@@ -1,1 +23,27 @@      ),\n      scalacOptions += \"-Yrangepos\"\n    )\n\n    def metalsConfig(c: Configuration) = Seq("
+  }
+]

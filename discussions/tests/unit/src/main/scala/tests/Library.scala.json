@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "4c6c3c2f-d2d5-4bae-8b3e-a6ebac553c58",
+    "prId" : 2600,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2600",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "294b8b50-b06f-45c8-b7f4-5923422e5769",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Can we use Embedded for this? There might be some utilities there already (not sure.)",
+        "createdAt" : "2021-03-29T16:14:23Z",
+        "updatedAt" : "2021-04-01T21:54:41Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4f14477a-fcb6-4540-8a52-05f6fa8f4b72",
+        "parentId" : "294b8b50-b06f-45c8-b7f4-5923422e5769",
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "Unfortunately, there aren't any. It might be but need to refactor `Embedded`",
+        "createdAt" : "2021-03-30T19:32:11Z",
+        "updatedAt" : "2021-04-01T21:54:41Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "028b3ff710580df42fff3574f99c743c9649e48c",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +29,33 @@\n  def scala3: Library = {\n    val dependencies = List(\n      Dependency.of(\n        \"org.scala-lang\","
+  }
+]

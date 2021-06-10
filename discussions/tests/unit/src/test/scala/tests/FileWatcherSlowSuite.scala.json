@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "aae24962-ece3-465c-acff-cd3439f03cdc",
+    "prId" : 506,
+    "prUrl" : "https://github.com/scalameta/metals/pull/506",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "fd14399d-3997-48ae-abdc-da665cd4022c",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "We can use `cleanWorkspace()` to clean everything",
+        "createdAt" : "2019-02-01T09:34:06Z",
+        "updatedAt" : "2019-02-01T09:34:21Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d0327f55623bffb4aa6e971e1d6771361879e81a",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +10,14 @@    cleanCompileCache(\"c\")\n    RecursivelyDelete(workspace.resolve(\"a\"))\n    RecursivelyDelete(workspace.resolve(\"b\"))\n    RecursivelyDelete(workspace.resolve(\"c\"))\n    val JavaFileEvent ="
+  }
+]

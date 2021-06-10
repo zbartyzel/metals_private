@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "93e33182-71b5-4abd-b831-3f8ba613ee7a",
+    "prId" : 1487,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1487",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "db968445-23c3-4440-9302-fb2d7a759b1a",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Awesome!",
+        "createdAt" : "2020-03-12T11:52:45Z",
+        "updatedAt" : "2020-03-24T16:45:28Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "55838e6c9f4127bc8d06a8d31a6df496a0b729a8",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +11,15 @@      \"\"\"\n        |package a\n        |trait A { def <<1->0>>xxx: String = \"A\" }\n        |trait B extends A { override def <<2->1>>xxx: String = \"B -> \" + super.xxx }\n        |trait C extends A { override def <<3->1>>xxx: String = \"C -> \" + super.xxx }"
+  },
+  {
+    "id" : "3968af3e-d0bd-4e55-b78c-24825f00b18a",
+    "prId" : 1487,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1487",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "e5a27832-6452-4cd6-a4d1-78ffefa0b7c9",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Same as in SuperHierarchyLspSuite, this can be simplified by finding the offset and using the scalameta Postion\r\n\r\n",
+        "createdAt" : "2020-03-12T11:56:50Z",
+        "updatedAt" : "2020-03-24T16:45:28Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5d5924e6-d11d-4e85-b65b-49305f124dff",
+        "parentId" : "e5a27832-6452-4cd6-a4d1-78ffefa0b7c9",
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "I can understand searching for <<1>> <<2>> until not found, but searching for every <<X->Y>> ?\r\nI might not get idea, can you provide more defails how it should work?",
+        "createdAt" : "2020-03-13T15:59:59Z",
+        "updatedAt" : "2020-03-24T16:45:28Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "61dc7d8c-1183-4e24-a496-931c54a61eff",
+        "parentId" : "e5a27832-6452-4cd6-a4d1-78ffefa0b7c9",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Ok, I was thinking we could make it simpler, but after thinking it might be more complex to rework.",
+        "createdAt" : "2020-03-13T16:26:00Z",
+        "updatedAt" : "2020-03-24T16:45:28Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "55838e6c9f4127bc8d06a8d31a6df496a0b729a8",
+    "line" : 293,
+    "diffHunk" : "@@ -1,1 +291,295 @@  private def parse(\n      code: String\n  ): (Map[Int, Position], Map[Int, Option[Int]]) = {\n    var line: Int = 0\n    var character: Int = 0"
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "c0769344-1362-41fe-8e73-5be186696f03",
+    "prId" : 1020,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1020",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "c26dd1b6-52c8-4ec2-b9f4-19ddceaf3aab",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Seems that doesn't work with cursor at last position - doesn't seem like a big issue and might not make sense to debug until someone reports. Looks to be working outside of tests.",
+        "createdAt" : "2019-10-27T19:16:10Z",
+        "updatedAt" : "2019-10-28T15:54:32Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "09357a7f-aec3-4484-9a97-20d466ffec0a",
+        "parentId" : "c26dd1b6-52c8-4ec2-b9f4-19ddceaf3aab",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Hmm, I wonder what's going on here 🤔 ",
+        "createdAt" : "2019-10-28T21:35:42Z",
+        "updatedAt" : "2019-10-28T21:36:29Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "bf83d588297229d15d4ae4ac49c6d318dae867af",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +26,30 @@      |object Main {\n      |  val abc = 123\n      |  abc.<<to@@Int>>\n      |  134l.toInt\n      |}\"\"\".stripMargin"
+  }
+]

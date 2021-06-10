@@ -1,0 +1,57 @@
+[
+  {
+    "id" : "a3052d7c-ac7f-4c3b-b562-8695f983e36e",
+    "prId" : 1547,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1547",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "2b259530-fd99-4f79-a114-b0d14f920e3a",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "`isOutsideBuildTargets` ? `isEnabledForPath` is rather misleading as it looks like there is some kind of configuration.\r\n\r\nTogether with using `Option[RemoteLanguageServer]` it would be the same result, but clearer.",
+        "createdAt" : "2020-03-27T15:42:42Z",
+        "updatedAt" : "2020-03-27T19:26:28Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "02e92e42-4cf7-4734-9184-63a3c577c60c",
+        "parentId" : "2b259530-fd99-4f79-a114-b0d14f920e3a",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Though probably then it's not possible to just change the `remoteLanguageServer` setting to attach the remote server. Maybe just return None in references if `remoteLanguageServer` is not defined?",
+        "createdAt" : "2020-03-27T18:31:12Z",
+        "updatedAt" : "2020-03-27T19:26:28Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d7916a46-f537-48b7-96c3-46310b705cc8",
+        "parentId" : "2b259530-fd99-4f79-a114-b0d14f920e3a",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I prefer to keep distinguishing when the remote server is enabled vs. returning empty results. The key motivation to keep the distinction is that I don't want to use the remote language server to be enabled for files that are exported in the build graph.",
+        "createdAt" : "2020-03-27T19:23:03Z",
+        "updatedAt" : "2020-03-27T19:26:42Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f7172b57-7205-4be7-9a43-b102b1a5b023",
+        "parentId" : "2b259530-fd99-4f79-a114-b0d14f920e3a",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Sure, I just felt it's a bit counter intuitive. `isEnabledForPath` actually checks if file is not in buildTarget. So anything outside the source sets also fits the bill.",
+        "createdAt" : "2020-03-27T19:40:47Z",
+        "updatedAt" : "2020-03-27T19:40:47Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "922329228964c110122b6e35a403b21a3c4d3f3e",
+    "line" : 33,
+    "diffHunk" : "@@ -1,1 +31,35 @@)(implicit ec: ExecutionContext) {\n  val timeout: Duration = Duration(serverConfig.remoteTimeout)\n  def isEnabledForPath(path: AbsolutePath): Boolean =\n    userConfig().remoteLanguageServer.isDefined &&\n      buildTargets.inverseSources(path).isEmpty"
+  }
+]

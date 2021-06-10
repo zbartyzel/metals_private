@@ -1,0 +1,57 @@
+[
+  {
+    "id" : "2908c718-8653-4a04-a46d-86d14ca7c494",
+    "prId" : 294,
+    "prUrl" : "https://github.com/scalameta/metals/pull/294",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "0acc82e2-188e-43f5-b89b-733f96dae55a",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "![wow](https://user-images.githubusercontent.com/1408093/39279566-776d8d30-48e9-11e8-94db-152429c11b1c.jpg)\r\n",
+        "createdAt" : "2018-04-26T00:33:53Z",
+        "updatedAt" : "2018-05-08T16:31:25Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c40a1413bb611d9c7cbe341adbcd54306b22398b",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +6,10 @@ */\n\nconst React = require('react');\n\nconst CompLibrary = require('../../core/CompLibrary.js');"
+  },
+  {
+    "id" : "4f4363da-8c5c-4e57-a280-11baeafec948",
+    "prId" : 294,
+    "prUrl" : "https://github.com/scalameta/metals/pull/294",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ebe94b7d-a973-429b-a445-0bdb118d15ed",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "how much work would it be to reuse the same setup for scalafmt/scalameta docs? Would we have to copy-paste these components or is there a smarter way to share code?",
+        "createdAt" : "2018-04-26T00:41:39Z",
+        "updatedAt" : "2018-05-08T16:31:25Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2168ac50-453d-4257-8f30-879a658acaa2",
+        "parentId" : "ebe94b7d-a973-429b-a445-0bdb118d15ed",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Docusaurus provides some basic building blocks (https://docusaurus.io/docs/en/api-pages.html#provided-components), the rest we'll have to copy paste.",
+        "createdAt" : "2018-05-05T15:38:32Z",
+        "updatedAt" : "2018-05-08T16:31:25Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c40a1413bb611d9c7cbe341adbcd54306b22398b",
+    "line" : 29,
+    "diffHunk" : "@@ -1,1 +27,31 @@}\n\nclass Button extends React.Component {\n  render() {\n    return ("
+  }
+]

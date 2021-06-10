@@ -1,0 +1,123 @@
+[
+  {
+    "id" : "95ae2f6f-e5d7-4f6b-b6be-7f59886813f2",
+    "prId" : 621,
+    "prUrl" : "https://github.com/scalameta/metals/pull/621",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "570872cc-4af0-4a23-8758-b09352321370",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Thanks for updating the import settings 🙏 ",
+        "createdAt" : "2019-04-05T07:29:58Z",
+        "updatedAt" : "2019-04-05T09:13:03Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "6f03d2264f9c4e8e28d2e258ca99d24915c82e17",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +5,9 @@import org.eclipse.lsp4j.TextDocumentPositionParams\nimport scala.meta.internal.metals.MetalsEnrichments._\nimport scala.meta.internal.mtags.DefinitionAlternatives.GlobalSymbol\nimport scala.meta.internal.mtags.Semanticdbs\nimport scala.meta.internal.mtags.Symbol"
+  },
+  {
+    "id" : "27cdc193-d02d-4131-968a-af8a0df02358",
+    "prId" : 621,
+    "prUrl" : "https://github.com/scalameta/metals/pull/621",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "c9758c7e-23e9-44a7-9e54-29950e0af047",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Can we get `MatchError` here?",
+        "createdAt" : "2019-04-05T07:40:05Z",
+        "updatedAt" : "2019-04-05T09:13:03Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "df11f5df-b995-4e9a-8ba5-e27606c4ee87",
+        "parentId" : "c9758c7e-23e9-44a7-9e54-29950e0af047",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Added a default with an empty set",
+        "createdAt" : "2019-04-05T09:10:45Z",
+        "updatedAt" : "2019-04-05T09:13:03Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "6f03d2264f9c4e8e28d2e258ca99d24915c82e17",
+    "line" : 102,
+    "diffHunk" : "@@ -1,1 +100,104 @@        )\n      case _ => Set.empty\n    }\n  }\n"
+  },
+  {
+    "id" : "ebdfaa38-59fe-4fa4-bf91-1d97d59ef7b5",
+    "prId" : 621,
+    "prUrl" : "https://github.com/scalameta/metals/pull/621",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "5584a7ee-d55d-45da-9fe6-21c1bfef4380",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Can we get `MatchError` here?",
+        "createdAt" : "2019-04-05T07:40:23Z",
+        "updatedAt" : "2019-04-05T09:13:03Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "00f92a7b-7a71-485c-8390-fc5fc88370d0",
+        "parentId" : "5584a7ee-d55d-45da-9fe6-21c1bfef4380",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "this method is just used to generate all possible alternatives - no matches here.",
+        "createdAt" : "2019-04-05T08:59:54Z",
+        "updatedAt" : "2019-04-05T09:13:03Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2e10f7c3-e42d-49a7-b60c-83a98bc28812",
+        "parentId" : "5584a7ee-d55d-45da-9fe6-21c1bfef4380",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Whoops, look good!",
+        "createdAt" : "2019-04-05T09:30:24Z",
+        "updatedAt" : "2019-04-05T09:31:08Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "6f03d2264f9c4e8e28d2e258ca99d24915c82e17",
+    "line" : 165,
+    "diffHunk" : "@@ -1,1 +163,167 @@      )\n    )\n  }\n}"
+  },
+  {
+    "id" : "9ed5ddcb-d30f-4893-b37c-140ee6c38177",
+    "prId" : 621,
+    "prUrl" : "https://github.com/scalameta/metals/pull/621",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "0b1b0fa4-5ef3-45f7-881e-ffbdcecf3c59",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Looks good, I agree it came out nicely to not build on top of reference provider 👍 ",
+        "createdAt" : "2019-04-05T07:41:16Z",
+        "updatedAt" : "2019-04-05T09:13:03Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "6f03d2264f9c4e8e28d2e258ca99d24915c82e17",
+    "line" : 72,
+    "diffHunk" : "@@ -1,1 +70,74 @@  }\n\n  private def methodAlternatives(info: SymbolInformation): Set[String] = {\n\n    def isInObject(desc: Descriptor) = desc match {"
+  }
+]

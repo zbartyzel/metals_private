@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "a663f84b-26de-4813-8655-1532f4e5491e",
+    "prId" : 424,
+    "prUrl" : "https://github.com/scalameta/metals/pull/424",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "70a5ceb8-1782-4803-a9e1-9cb5a686a03a",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "👍 ",
+        "createdAt" : "2018-12-18T15:34:52Z",
+        "updatedAt" : "2018-12-19T13:35:23Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "eade48fd8ffbc5572cad7092e373fee0027e4f0f",
+    "line" : 10,
+    "diffHunk" : "@@ -1,1 +8,12 @@ *  but only for tests\n */\nobject MetalsTestEnrichments {\n\n  implicit class XtensionDocumentSymbolOccurrence(info: l.SymbolInformation) {"
+  }
+]

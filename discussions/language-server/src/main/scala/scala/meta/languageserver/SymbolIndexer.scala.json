@@ -1,0 +1,57 @@
+[
+  {
+    "id" : "bc7dc3eb-e05a-4497-b64e-9c910480342b",
+    "prId" : 8,
+    "prUrl" : "https://github.com/scalameta/metals/pull/8",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "987e7086-d6e5-4eae-8093-de585fad875b",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Why `java.util.Map`? Performance?",
+        "createdAt" : "2017-11-06T09:49:43Z",
+        "updatedAt" : "2017-11-06T20:58:35Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "adb8943f-a164-43fc-b742-f8243a143bc8",
+        "parentId" : "987e7086-d6e5-4eae-8093-de585fad875b",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "ah, I see, you're using `ConcurrentHashMap` in the implementation.",
+        "createdAt" : "2017-11-06T09:53:38Z",
+        "updatedAt" : "2017-11-06T20:58:35Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a154d42708a1a97e34a23a7c79a153d4ee52f44b",
+    "line" : 21,
+    "diffHunk" : "@@ -1,1 +19,23 @@    connection: Connection,\n    buffers: Buffers,\n    documents: JMap[RelativePath, Document],\n    definitions: JMap[Symbol, Position.Range],\n    denotations: JMap[Symbol, Denotation],"
+  },
+  {
+    "id" : "72378e19-3b41-4a43-8896-9d7f805b1fea",
+    "prId" : 8,
+    "prUrl" : "https://github.com/scalameta/metals/pull/8",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "967f709a-1808-4978-a9ed-ebb9189a4fa7",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "does this pattern act as a filter?",
+        "createdAt" : "2017-11-06T09:54:30Z",
+        "updatedAt" : "2017-11-06T20:58:35Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a154d42708a1a97e34a23a7c79a153d4ee52f44b",
+    "line" : 36,
+    "diffHunk" : "@@ -1,1 +34,38 @@      document <- Option(documents.get(path)).toList\n      _ <- isFreshSemanticdb(path, document).toList\n      ResolvedName(pos: Position.Range, symbol: Symbol.Global, true) <- document.names\n      denotation <- Option(denotations.get(symbol))\n      if ! {"
+  }
+]

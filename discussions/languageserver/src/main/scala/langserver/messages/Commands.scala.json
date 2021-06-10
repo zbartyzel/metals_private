@@ -1,0 +1,57 @@
+[
+  {
+    "id" : "7afb08ac-6f25-44fa-89ee-ba3cbf7438a3",
+    "prId" : 73,
+    "prUrl" : "https://github.com/scalameta/metals/pull/73",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "0b4257e0-b5cf-4ffa-9738-e65f524b440e",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "I think this fixes a bug for which all messages where displayed as Info",
+        "createdAt" : "2017-11-29T09:30:57Z",
+        "updatedAt" : "2017-11-29T09:32:44Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "62b55271-a266-4d46-9445-a96698a0ef93",
+        "parentId" : "0b4257e0-b5cf-4ffa-9738-e65f524b440e",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "It's strange, but I don't get any of those messages now.. 🤔 how do I break it to get one of those warnings? 😄 ",
+        "createdAt" : "2017-11-29T10:04:06Z",
+        "updatedAt" : "2017-11-29T10:04:06Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1fa1e5ca-1de9-40cc-9394-fce0b13a0b9c",
+        "parentId" : "0b4257e0-b5cf-4ffa-9738-e65f524b440e",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Editing a file, and try jumping to a definition without compiling it. It should prompt a message.",
+        "createdAt" : "2017-11-29T10:38:15Z",
+        "updatedAt" : "2017-11-29T10:38:15Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2a226e02-90dd-4b94-97be-521a3d40ca3d",
+        "parentId" : "0b4257e0-b5cf-4ffa-9738-e65f524b440e",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "I guess, I can't do it now because go-to-definition is broken for me.. Thanks anyway.",
+        "createdAt" : "2017-11-29T13:00:42Z",
+        "updatedAt" : "2017-11-29T13:00:42Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f0984ffba258f1c27392fee995757c63a71755eb",
+    "line" : 31,
+    "diffHunk" : "@@ -1,1 +160,164 @@  */\ncase class ShowMessageRequestParams(\n  `type`: MessageType,\n  message: String,\n  actions: Seq[MessageActionItem]"
+  }
+]

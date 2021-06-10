@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "0f6d8ab7-5633-4877-95a2-ab09d330ecf8",
+    "prId" : 2008,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2008",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "95e8b0c7-b00f-4264-a7a0-4bb379fa9d7d",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I simplified the usage a bit.",
+        "createdAt" : "2020-08-19T17:08:40Z",
+        "updatedAt" : "2020-08-19T17:08:40Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7fd5b61ccb3d7e97c5e9199d0be9c74b36148eca",
+    "line" : 12,
+    "diffHunk" : "@@ -1,1 +39,43 @@  ```\n  cs install ammonite\n  amm ./bin/merged_prs.sc <tag1> <tag2> \"<github_api_token>\"\n  ```\n"
+  }
+]

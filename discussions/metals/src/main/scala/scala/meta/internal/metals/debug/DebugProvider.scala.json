@@ -1,0 +1,134 @@
+[
+  {
+    "id" : "68d3f381-953d-4402-beba-75f715a5e9b2",
+    "prId" : 2696,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2696",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ad99d6a6-a518-468a-8f82-d446da0eee11",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Bumping up this one, maybe it'll help :thermometer: ",
+        "createdAt" : "2021-04-09T13:08:07Z",
+        "updatedAt" : "2021-04-12T07:17:01Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a2d517481a923ddb3e7c1e50776d53d41df479ac",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +498,502 @@\n    val address = new InetSocketAddress(uri.getHost, uri.getPort)\n    val timeout = TimeUnit.SECONDS.toMillis(20).toInt\n    socket.connect(address, timeout)\n"
+  },
+  {
+    "id" : "1d00fac3-286d-4c3c-847e-7476acf2464d",
+    "prId" : 1781,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1781",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f6007464-dd6b-42eb-a8aa-3568ae277b97",
+        "parentId" : null,
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "good idea to act smart here! :+1: ",
+        "createdAt" : "2020-05-27T11:20:35Z",
+        "updatedAt" : "2020-05-27T11:20:35Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "376535f14d761d5513fd67b015e9ab10588f0ac7",
+    "line" : 24,
+    "diffHunk" : "@@ -1,1 +235,239 @@        json.as[b.ScalaMainClass].foreach { main =>\n          val translated = main.getJvmOptions().asScala.map { param =>\n            if (!param.startsWith(\"-J\"))\n              s\"-J$param\"\n            else"
+  },
+  {
+    "id" : "e886ec94-3a28-4b3d-9ecb-537ee15a4ae9",
+    "prId" : 1466,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1466",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "71401167-35a7-48d6-936f-b41b1e672af4",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This will fail on Nil, could you handle that case?",
+        "createdAt" : "2020-04-03T08:35:28Z",
+        "updatedAt" : "2020-04-03T11:50:57Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d72fc182a42fd127dd0593dfbb3028ac615338b9",
+    "line" : 140,
+    "diffHunk" : "@@ -1,1 +138,142 @@          Option(params.buildTarget)\n        )\n    }).map {\n      case (clazz, target) :: others =>\n        if (others.nonEmpty) {"
+  },
+  {
+    "id" : "d5b82120-66aa-47a3-a8ba-db23341c0e9e",
+    "prId" : 1466,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1466",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b5492faa-e169-4dcf-8458-e858b8d2ab32",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This will also fail on Nil, could you handle that case?",
+        "createdAt" : "2020-04-03T08:35:43Z",
+        "updatedAt" : "2020-04-03T11:50:57Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "fa72760c-93ef-41af-9ae5-ffe65d4ee8a7",
+        "parentId" : "b5492faa-e169-4dcf-8458-e858b8d2ab32",
+        "authorId" : "58f39866-9870-40fc-83e0-d68edbbcb6f7",
+        "body" : "as I commented on `BuildTargetClassFinder#findMainClassAndItsBuildTarget` (above method def), it either returns `Success` with non-empty list, or `Failure`. So it should not be the case. I wish we had a type-level solution for that.",
+        "createdAt" : "2020-04-03T10:21:29Z",
+        "updatedAt" : "2020-04-03T11:50:57Z",
+        "lastEditedBy" : "58f39866-9870-40fc-83e0-d68edbbcb6f7",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a1584141-9615-41fe-b86b-02cec82bb87e",
+        "parentId" : "b5492faa-e169-4dcf-8458-e858b8d2ab32",
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "Solution for NonEmptyList? You have `scalaz.NonEmptyList`, `cats.data.NonEmptyList`, everything is already included in dependencies",
+        "createdAt" : "2020-04-03T11:08:54Z",
+        "updatedAt" : "2020-04-03T11:50:57Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0dc863ef-c346-4142-af8f-d6aeb92e5929",
+        "parentId" : "b5492faa-e169-4dcf-8458-e858b8d2ab32",
+        "authorId" : "58f39866-9870-40fc-83e0-d68edbbcb6f7",
+        "body" : "hmm, last time I checked (several months ago), `cats` just got eliminated from Metals, and it was said it's better to have less dependencies. Okay, thanks, @kpbochenek !",
+        "createdAt" : "2020-04-03T11:27:41Z",
+        "updatedAt" : "2020-04-03T11:50:57Z",
+        "lastEditedBy" : "58f39866-9870-40fc-83e0-d68edbbcb6f7",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4d01f5e1-f07d-458a-ba55-54cfe3985ab9",
+        "parentId" : "b5492faa-e169-4dcf-8458-e858b8d2ab32",
+        "authorId" : "58f39866-9870-40fc-83e0-d68edbbcb6f7",
+        "body" : "okay, seems like there's no cats used in the main code, and @tgodzik recommended not to start.\r\n^ fixed with `throw NoSuchElement(Exception)` for the `Nil` case",
+        "createdAt" : "2020-04-03T11:58:44Z",
+        "updatedAt" : "2020-04-03T11:58:44Z",
+        "lastEditedBy" : "58f39866-9870-40fc-83e0-d68edbbcb6f7",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d72fc182a42fd127dd0593dfbb3028ac615338b9",
+    "line" : 107,
+    "diffHunk" : "@@ -1,1 +105,109 @@        )\n    ).map {\n      case (clazz, target) :: others =>\n        if (others.nonEmpty) {\n          reportOtherBuildTargets("
+  }
+]

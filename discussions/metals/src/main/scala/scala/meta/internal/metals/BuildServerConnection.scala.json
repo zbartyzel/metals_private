@@ -1,0 +1,167 @@
+[
+  {
+    "id" : "53592eb6-bd5f-4a62-bbb5-bc6320fc42db",
+    "prId" : 2184,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2184",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "95dfa6fa-ba88-4518-8d69-a6167d7b1a83",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "This was 5 in the past as well before the sbt pr, so hopefully this being a bit longer will help as well.",
+        "createdAt" : "2020-11-02T19:25:00Z",
+        "updatedAt" : "2020-11-04T19:26:09Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1999ac26f803e1ac22b7fe73fabf3372b3f4f87b",
+    "line" : 93,
+    "diffHunk" : "@@ -1,1 +358,362 @@        initializeResult.get(60, TimeUnit.SECONDS)\n      } else {\n        initializeResult.get(20, TimeUnit.SECONDS)\n      }\n"
+  },
+  {
+    "id" : "b4f452e6-dc4f-43f9-b636-d35d009d425a",
+    "prId" : 1985,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1985",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "5de06ae0-e4f3-465f-9df2-aad92da9f60a",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This is to avoid timeouts we were having from time to time.",
+        "createdAt" : "2020-08-21T14:18:29Z",
+        "updatedAt" : "2020-08-21T14:58:03Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8e26e2d8d28a3d420f4f5bc7efb45ebe19ab460b",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +311,315 @@    val result =\n      try {\n        def isCI: Boolean = \"true\" == System.getenv(\"CI\")\n        if (isCI)\n          initializeResult.get(20, TimeUnit.SECONDS)"
+  },
+  {
+    "id" : "00c11f50-a402-440b-ba39-6d8ab9af208d",
+    "prId" : 1677,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1677",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "d66bd1de-d5dc-47e3-89ab-1ed874888ece",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "We need to reindex the workspace and this is to make sure that we will only try to reindex once we finished the indexing at least once.",
+        "createdAt" : "2020-04-29T17:19:25Z",
+        "updatedAt" : "2020-05-04T13:57:13Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "38751291a84f683f8d8eb60ed8a73ce8657936c9",
+    "line" : 43,
+    "diffHunk" : "@@ -1,1 +62,66 @@      index: BuildServerConnection => Future[Unit]\n  ): Unit = {\n    onReconnection.set(index)\n  }\n"
+  },
+  {
+    "id" : "01cb6d94-3d4f-4942-842e-3dcd0f638499",
+    "prId" : 1677,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1677",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "603c4e0c-b18b-4c21-b25b-8f728afdba51",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Depends now on the user configuration.",
+        "createdAt" : "2020-04-29T17:19:51Z",
+        "updatedAt" : "2020-05-04T13:57:13Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "38751291a84f683f8d8eb60ed8a73ce8657936c9",
+    "line" : 86,
+    "diffHunk" : "@@ -1,1 +142,146 @@\n  private def askUser(): Future[BuildServerConnection.LauncherConnection] = {\n    if (config.askToReconnect) {\n      val notification = tables.dismissedNotifications.ReconnectBsp\n      if (!notification.isDismissed) {"
+  },
+  {
+    "id" : "18a81ff0-1ef2-47b5-afa6-3bf2cd1d4784",
+    "prId" : 1266,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1266",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "4ef0964a-8aed-46b0-8aaf-b34779f1932e",
+        "parentId" : null,
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "I think \r\n```scala\r\ncase connection =>\r\n``` \r\nwould be more readable. we could use `connection.output` and `connection.input` where applicable",
+        "createdAt" : "2020-01-09T11:09:25Z",
+        "updatedAt" : "2020-01-09T19:41:06Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4da740a1-a885-4bad-9cb5-a092b5a1e085",
+        "parentId" : "4ef0964a-8aed-46b0-8aaf-b34779f1932e",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Changed the code, so this is no longer relevant.",
+        "createdAt" : "2020-01-09T17:36:04Z",
+        "updatedAt" : "2020-01-09T19:41:06Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0f92bf439ec2e556ef2dd37eb204d08963b7f24b",
+    "line" : 250,
+    "diffHunk" : "@@ -1,1 +191,195 @@    def setupServer(): Future[LauncherConnection] = {\n      connect().map {\n        case conn @ SocketConnection(name, output, input, cancelables) =>\n          val tracePrinter = GlobalTrace.setupTracePrinter(\"BSP\")\n          val launcher = new Launcher.Builder[MetalsBuildServer]()"
+  },
+  {
+    "id" : "bf4cac4c-5074-4f92-a5a4-8674ef2eecf1",
+    "prId" : 942,
+    "prUrl" : "https://github.com/scalameta/metals/pull/942",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "331eef38-c7ef-43d9-98ef-f9d2ca7f102a",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Would it make sense to add a guard here to make sure we only send this request to an up-to-date Bloop server that supports debugging? I wonder if we should introduce a debug capability to BSP during the `build/initialize` handshake 🤔 ",
+        "createdAt" : "2019-10-01T10:30:00Z",
+        "updatedAt" : "2019-10-04T07:32:50Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "744db775-a7fa-475c-8480-ffc283b4251a",
+        "parentId" : "331eef38-c7ef-43d9-98ef-f9d2ca7f102a",
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "What do you mean by \"up to date Bloop server\"?\r\nI think it would be much simpler to just let the bsp server tell us by responding\"I don't support debugging because: A or B or C\" (which already happens, for example when bloop runs on jre and not on jdk). The cost is relatively low, because running is a seldom triggered action. \r\n\r\nOf course, in principle you are right, the debug capability should also be included in the capabilities of the server but in this case the gain would be minuscule",
+        "createdAt" : "2019-10-02T07:17:22Z",
+        "updatedAt" : "2019-10-04T07:32:50Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9aff5eec-fc89-491d-8cc3-a4c8c7e123a2",
+        "parentId" : "331eef38-c7ef-43d9-98ef-f9d2ca7f102a",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I see, thanks for the explanation. For now this is fine. It would be nice to introduce a \"debug capability\" in BSP so that we only send debug requests to build servers that support it. Currently, Metals even ignores the \"compile capability\".",
+        "createdAt" : "2019-10-02T14:01:36Z",
+        "updatedAt" : "2019-10-04T07:32:50Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "47ea581fbaa603a2dc171e3e913392f05fc4ba11",
+    "line" : 40,
+    "diffHunk" : "@@ -1,1 +83,87 @@  }\n\n  def startDebugSession(params: DebugSessionParams): CompletableFuture[URI] = {\n    register(\n      server"
+  }
+]

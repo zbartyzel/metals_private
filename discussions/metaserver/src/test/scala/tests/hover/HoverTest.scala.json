@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "7ae97720-4006-4f3b-b6a2-b38171ae9d3b",
+    "prId" : 126,
+    "prUrl" : "https://github.com/scalameta/metals/pull/126",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f9f0b4c2-89e4-4159-ab6e-fc232c43e21f",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Assert result.contents.isEmpty?",
+        "createdAt" : "2017-12-14T15:47:34Z",
+        "updatedAt" : "2017-12-14T15:50:11Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4421dcb0-fb69-461a-9cda-c41268b8ef13",
+        "parentId" : "f9f0b4c2-89e4-4159-ab6e-fc232c43e21f",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "ah, yes, that makes more sense.",
+        "createdAt" : "2017-12-14T15:49:29Z",
+        "updatedAt" : "2017-12-14T15:50:11Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3855422d55570f801089e05a3395aadcd5546c32",
+    "line" : 11,
+    "diffHunk" : "@@ -1,1 +35,39 @@      filename,\n      code, { point =>\n        val result = HoverProvider.hover(compiler, point)\n        assert(result.contents.isEmpty)\n      }"
+  }
+]

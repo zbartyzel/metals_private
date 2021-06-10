@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "872f5edd-73ef-48d5-b060-611d54fac9bd",
+    "prId" : 1671,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1671",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ce30ff98-78c4-4402-9555-4ade8a1735f2",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Probably not ideal, but it _could_ depend on what the diagnostic is, but if it is relevant to an entire file for example, we could just detect it, give it a position at the beginning of the file and display it.",
+        "createdAt" : "2020-04-30T08:53:37Z",
+        "updatedAt" : "2020-04-30T08:54:57Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a4e23994-fd9f-4a16-9251-e01e7c3ffb0c",
+        "parentId" : "ce30ff98-78c4-4402-9555-4ade8a1735f2",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Good idea, this message comes from Dotty though. Might have copied it with the code :O",
+        "createdAt" : "2020-04-30T09:16:05Z",
+        "updatedAt" : "2020-04-30T09:16:06Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "5f0f6639a389d9c3b8d4989d855f47e04163d7ab",
+    "line" : 43,
+    "diffHunk" : "@@ -1,1 +41,45 @@  private def diagnostic(mc: MessageContainer): Option[l.Diagnostic] =\n    if (!mc.pos.exists)\n      None // diagnostics without positions are not supported: https://github.com/Microsoft/language-server-protocol/issues/249\n    else {\n      def severity(level: Int): l.DiagnosticSeverity = {"
+  }
+]

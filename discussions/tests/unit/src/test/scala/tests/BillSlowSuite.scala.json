@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "93c21055-7e71-429b-88e1-f9b1d16a1580",
+    "prId" : 731,
+    "prUrl" : "https://github.com/scalameta/metals/pull/731",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "3afcdd7a-0456-4528-8f60-733d7c0795df",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I manually verified that this test failed on the current master.",
+        "createdAt" : "2019-05-28T09:16:32Z",
+        "updatedAt" : "2019-05-28T09:44:11Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "67beac1837db3ca5e0a8bbd050c867571583a150",
+    "line" : 51,
+    "diffHunk" : "@@ -1,1 +75,79 @@          // Assert that \"Connect to build server\" waits for the shutdown\n          // response from the build server before sending \"initialize\".\n          \"\"\"|trace: initialize\n             |trace: shutdown\n             |trace: initialize"
+  }
+]

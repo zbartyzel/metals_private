@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "d25057e9-fd99-4be9-ae5b-c635eea48c33",
+    "prId" : 2383,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2383",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "9ae6a083-4930-47c1-a073-21ba92853c59",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This will be useful to test out semanticdb snapshot versions in tests.",
+        "createdAt" : "2021-01-17T10:02:05Z",
+        "updatedAt" : "2021-01-17T10:02:06Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "2d9d79ab2be4fc541bb617efbf06aae1c43dfcd0",
+    "line" : 17,
+    "diffHunk" : "@@ -1,1 +310,314 @@          Repository.ivy2Local(),\n          MavenRepository.of(\n            \"https://oss.sonatype.org/content/repositories/public\"\n          )\n        )"
+  }
+]

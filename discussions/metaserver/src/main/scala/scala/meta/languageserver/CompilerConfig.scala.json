@@ -1,0 +1,90 @@
+[
+  {
+    "id" : "d0eb7e8c-857a-4bd6-a588-99b490c3662f",
+    "prId" : 23,
+    "prUrl" : "https://github.com/scalameta/metals/pull/23",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "1bbf5cb7-20a0-46ac-9d49-b4735e1b476b",
+        "parentId" : null,
+        "authorId" : "ef0069c2-046a-496d-a83f-80db27f0d990",
+        "body" : "Why are we using IO and NIO?",
+        "createdAt" : "2017-11-11T16:42:11Z",
+        "updatedAt" : "2017-11-14T20:08:40Z",
+        "lastEditedBy" : "ef0069c2-046a-496d-a83f-80db27f0d990",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "189a2e17-86c8-482f-8a62-c899ac45abff",
+        "parentId" : "1bbf5cb7-20a0-46ac-9d49-b4735e1b476b",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "java.io is only for `File.pathSeparator`, otherwise we use nio for I/O work",
+        "createdAt" : "2017-11-11T16:46:34Z",
+        "updatedAt" : "2017-11-14T20:08:40Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a40107e3-24d8-4e2c-a18d-3845c3b30efa",
+        "parentId" : "1bbf5cb7-20a0-46ac-9d49-b4735e1b476b",
+        "authorId" : "ef0069c2-046a-496d-a83f-80db27f0d990",
+        "body" : "NIO Filesystem has a platform independent separator if you want to stick with the NIO api.",
+        "createdAt" : "2017-11-11T16:59:42Z",
+        "updatedAt" : "2017-11-14T20:08:40Z",
+        "lastEditedBy" : "ef0069c2-046a-496d-a83f-80db27f0d990",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5a6593b1-006c-4a3f-bc74-40ae4c332d47",
+        "parentId" : "1bbf5cb7-20a0-46ac-9d49-b4735e1b476b",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I think I prefer java.io.File.pathSeparator over FileSystems.getDefault.getSeparator",
+        "createdAt" : "2017-11-11T17:03:46Z",
+        "updatedAt" : "2017-11-14T20:08:40Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "5e9272f240feb4f00bdea5ee50e2808699cd0d0e",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +2,6 @@\nimport java.io.File\nimport java.nio.file.Files\nimport java.nio.file.Paths\nimport java.util.Properties"
+  },
+  {
+    "id" : "1ae85353-f9bc-4d85-a771-6cc14d992a68",
+    "prId" : 23,
+    "prUrl" : "https://github.com/scalameta/metals/pull/23",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "59ef2748-c602-4f3c-92cd-f8cdf4a2f296",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "since we have pprint as a dependency, you can probably just do `pprint.stringify(this)`",
+        "createdAt" : "2017-11-14T09:36:04Z",
+        "updatedAt" : "2017-11-14T20:08:40Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "58b726f4-30cb-4523-8044-bfee059941a4",
+        "parentId" : "59ef2748-c602-4f3c-92cd-f8cdf4a2f296",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I can't find `pprint.stringify`, it seems to have been removed in 0.5. I don't think pprint includes the names of the fields. This string appears in the logs whenever a new presentation compiler is loaded so I customized it to make it compact and readable (full classpath can be huge).",
+        "createdAt" : "2017-11-14T18:43:57Z",
+        "updatedAt" : "2017-11-14T20:08:40Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "5e9272f240feb4f00bdea5ee50e2808699cd0d0e",
+    "line" : 35,
+    "diffHunk" : "@@ -1,1 +33,37 @@) {\n  override def toString: String =\n    s\"CompilerConfig(\" +\n      s\"sources={+${sources.length}}, \" +\n      s\"scalacOptions=${scalacOptions.mkString(\" \")}, \" +"
+  }
+]

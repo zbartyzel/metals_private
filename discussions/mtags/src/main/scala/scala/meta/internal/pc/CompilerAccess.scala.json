@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "df2607cd-5c07-41ae-92d4-8f2a4d658b0d",
+    "prId" : 736,
+    "prUrl" : "https://github.com/scalameta/metals/pull/736",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "318bfc05-f20e-41fd-9aff-13b0947f1cd8",
+        "parentId" : null,
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "I feel that this should be somehow abstracted away - but I have no idea how :)",
+        "createdAt" : "2019-05-29T15:10:09Z",
+        "updatedAt" : "2019-06-01T12:08:36Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "db82115f-fbfe-4073-9f70-38084f103e6f",
+        "parentId" : "318bfc05-f20e-41fd-9aff-13b0947f1cd8",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I removed the `Thread.interrupted()` from `withInterruptableCompiler` since it was redundant. Otherwise, I don't think there's a need to abstract over anything here.",
+        "createdAt" : "2019-05-31T09:17:15Z",
+        "updatedAt" : "2019-06-01T12:08:36Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3cd39a3dc1957ac5b5e4e60da9c3eae356702ace",
+    "line" : 181,
+    "diffHunk" : "@@ -1,1 +186,190 @@  ): CompletableFuture[T] = {\n    val result = new CompletableFuture[T]()\n    jobs.submit(result, { () =>\n      token.checkCanceled()\n      Thread.interrupted() // clear interrupt bit"
+  }
+]

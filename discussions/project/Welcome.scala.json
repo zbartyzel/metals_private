@@ -1,0 +1,57 @@
+[
+  {
+    "id" : "673ec892-1a94-4232-aae0-6ecc787672e8",
+    "prId" : 2288,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2288",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "cffd21bb-59b7-4142-ae96-e92656976d78",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Changed to a more metals feel :metal: ",
+        "createdAt" : "2020-12-02T17:59:42Z",
+        "updatedAt" : "2020-12-02T17:59:42Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "291b8981-1c06-4523-9072-a731a53ac53c",
+        "parentId" : "cffd21bb-59b7-4142-ae96-e92656976d78",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "⚡ ",
+        "createdAt" : "2020-12-02T18:02:33Z",
+        "updatedAt" : "2020-12-02T18:02:53Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "655dfd3dec22e8d0b611a62945717b26487d3de5",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +4,8 @@\n  val logo =\n    \"\"\"|             _        _     \n       |  /\\/\\   ___| |_ __ _| |___ \n       | /    \\ / _ \\ __/ _` | / __|"
+  },
+  {
+    "id" : "193ed032-bf4a-4461-ad68-65e1dacd5e22",
+    "prId" : 2288,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2288",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "80f01916-7257-475c-a887-ebe5e8c69329",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "@ckipp01 I added the additional command for publishing a single version.",
+        "createdAt" : "2020-12-02T18:00:13Z",
+        "updatedAt" : "2020-12-02T18:00:13Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "655dfd3dec22e8d0b611a62945717b26487d3de5",
+    "line" : 52,
+    "diffHunk" : "@@ -1,1 +50,54 @@    UsefulTask(\n      \"\",\n      \"++3.0.0-M2 mtags/publishLocal\",\n      \"publish changes for a single Scala version, especially useful if working on a feature inside mtags module.\" +\n        \" `publishLocal` will still need to be run before at least once.\""
+  }
+]

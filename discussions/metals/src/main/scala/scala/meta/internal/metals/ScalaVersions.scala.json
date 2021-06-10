@@ -1,0 +1,145 @@
+[
+  {
+    "id" : "cd4c1d04-114b-45a4-8f84-0beb213313b7",
+    "prId" : 2600,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2600",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "01c88521-8abc-47b7-864d-00cc7b40dee2",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Could you add examples here an how it will be matched? \r\n\r\nAlso are we just able to just:\r\n1. Get the version suffix\r\n2. Check if binary version exists\r\n3. If it doesn't exist the it's full scala version and let's use scalaBinaryVersionFromJarName",
+        "createdAt" : "2021-03-16T17:41:22Z",
+        "updatedAt" : "2021-04-01T21:54:41Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7c788f22-f0ce-441c-a5a3-34d3a7c2cb4c",
+        "parentId" : "01c88521-8abc-47b7-864d-00cc7b40dee2",
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "Added doc.\r\n\r\n> Get the version suffix\r\n\r\nHypothetically there might be some artifacts which version matches on scala version.\r\nSmth like `library-name_3.0.0-RC1-2.12` .\r\nAnd it's anyway unclear where is the version suffix starts in case if artifact name has `-` symbols",
+        "createdAt" : "2021-03-23T13:42:52Z",
+        "updatedAt" : "2021-04-01T21:54:41Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "028b3ff710580df42fff3574f99c743c9649e48c",
+    "line" : 28,
+    "diffHunk" : "@@ -1,1 +122,126 @@        val minor = m.group(3)\n        val ending = Option(m.group(4)).map(s => s\"$s\").getOrElse(\"\")\n        val version = s\"$major.$minor$ending\"\n        if (isSupportedScalaBinaryVersion(version))\n          Some(version -> hasUnderscorePrefix)"
+  },
+  {
+    "id" : "5b0858dc-515a-4612-befa-68dfa140f772",
+    "prId" : 2600,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2600",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f92d2173-6724-437b-bf64-c70ac3f55020",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Could you add a link to the BSP PR to provide a context on how we plan to make it not depend on regex,",
+        "createdAt" : "2021-03-29T15:09:15Z",
+        "updatedAt" : "2021-04-01T21:54:41Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "361e0cc5-3c71-4968-a921-c914dcd59c82",
+        "parentId" : "f92d2173-6724-437b-bf64-c70ac3f55020",
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "Unfortunately, we will anyway have to keep this thing. The new BSP method will be optional.\r\nThere will be an additional less creepy version of this method for it.",
+        "createdAt" : "2021-03-30T19:42:45Z",
+        "updatedAt" : "2021-04-01T21:54:41Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "028b3ff710580df42fff3574f99c743c9649e48c",
+    "line" : 9,
+    "diffHunk" : "@@ -1,1 +103,107 @@\n  /**\n   * Extract scala binary version from dependency jar name.\n   * The version that starts from `_` prefix takes more precedence.\n   * Example:"
+  },
+  {
+    "id" : "c3bb6177-5d09-421b-94a3-3baca846742e",
+    "prId" : 2264,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2264",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "44ca13a7-14ea-4a4e-9e96-a80540ed6ee8",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This was the main issue. `3.0.0-M1` was equal to `3.0.0-M2`, because we were comparing only major/minor/patch. \r\nI fixed it twofold: \r\n- it will not say it's a future version if it's equal \r\n- it  support also milestones/release candidates now\r\n",
+        "createdAt" : "2020-11-26T18:56:32Z",
+        "updatedAt" : "2020-11-27T14:42:44Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ebff9647fa554cc267882722df8ff7f1a60d894e",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +61,65 @@      .map(latest =>\n        latest != scalaVersion && SemVer\n          .isLaterVersion(latest, scalaVersion)\n      )\n      .getOrElse {"
+  },
+  {
+    "id" : "0d07d6e7-56ed-41c4-b671-2c544eee854a",
+    "prId" : 2190,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2190",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "95b7ab1c-448a-4af5-bc65-dbeefbfec92e",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "I wasn't expecting the binary version here to be `3.0.0-M1`. At the same time, I was also wasn't expected `org.scala-lang:scala3-library_3.0.0-M1:3.0.0-M1` but rather just `org.scala-lang:scala3-library:3.0.0-M1`. 🤔 ",
+        "createdAt" : "2020-11-04T19:04:46Z",
+        "updatedAt" : "2020-11-06T10:08:14Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2494d053-6e85-4499-ade3-2fb6ece5fc9b",
+        "parentId" : "95b7ab1c-448a-4af5-bc65-dbeefbfec92e",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Yeah, I was surprised by it too, but it seems that's how it's done currently :thinking: ",
+        "createdAt" : "2020-11-04T19:10:50Z",
+        "updatedAt" : "2020-11-06T10:08:14Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b135a6d205cffd61ee131ead0d6326569af38c30",
+    "line" : 27,
+    "diffHunk" : "@@ -1,1 +78,82 @@  def scalaBinaryVersionFromFullVersion(scalaVersion: String): String = {\n    if (scalaVersion == \"3.0.0-M1\")\n      scalaVersion\n    else\n      scalaVersion.split('.').take(2).mkString(\".\")"
+  },
+  {
+    "id" : "d4580743-acbb-425b-a2ee-581d787ad7ad",
+    "prId" : 818,
+    "prUrl" : "https://github.com/scalameta/metals/pull/818",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "7c981637-3c32-4bd5-9a65-7594e190443e",
+        "parentId" : null,
+        "authorId" : "e0fdc8b4-c0c2-48be-9778-beccdbcf6280",
+        "body" : "I guess it's fine to leave 2.12.8 as the recommended version for now?",
+        "createdAt" : "2019-07-08T11:41:27Z",
+        "updatedAt" : "2019-07-08T11:41:27Z",
+        "lastEditedBy" : "e0fdc8b4-c0c2-48be-9778-beccdbcf6280",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "6ef9cb7e64a9e60e4a63baea23dd3c8afce7cf9d",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +23,27 @@    Set(BuildInfo.scala213, BuildInfo.scala212, BuildInfo.scala211)\n\n  def recommendedVersion(scalaVersion: String): String = BuildInfo.scala212\n\n}"
+  }
+]

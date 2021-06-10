@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "a3c6aed8-0994-4b30-83e2-0716148a6170",
+    "prId" : 373,
+    "prUrl" : "https://github.com/scalameta/metals/pull/373",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "df94efd9-2381-4855-b0c9-7251a0212d4f",
+        "parentId" : null,
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "I think that both files are the same image and the first one should be different (first time import)",
+        "createdAt" : "2018-12-04T18:56:33Z",
+        "updatedAt" : "2018-12-04T19:25:16Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5c4dea4c-e88c-4342-9ee9-7322f492a35d",
+        "parentId" : "df94efd9-2381-4855-b0c9-7251a0212d4f",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Good catch, updated the Atom \"import via bloop\" image.",
+        "createdAt" : "2018-12-04T19:23:22Z",
+        "updatedAt" : "2018-12-04T19:25:16Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "59bd43b3c80624f41b57e5f4cc8c0beb011dac2a",
+    "line" : 21,
+    "diffHunk" : "@@ -1,1 +19,23 @@       |import step.\n       |\n       |![Import build](../assets/$editor-import-via-bloop.png)\n       |\n       |- you don't need Bloop installed on your machine to run this step."
+  }
+]

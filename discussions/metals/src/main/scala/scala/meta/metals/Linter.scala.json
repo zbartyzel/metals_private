@@ -1,0 +1,90 @@
+[
+  {
+    "id" : "e66b850f-c531-4c44-be40-215ec9f50acf",
+    "prId" : 199,
+    "prUrl" : "https://github.com/scalameta/metals/pull/199",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "21b6e248-2889-4daa-89ed-0aecf0dccd91",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Does this get re-evaluated if the file is created after the warning but the setting remains unchanged? I think we should do the `Files.isRegularFile` check every time so that it's OK to create the file after defining the setting to a non-existent file",
+        "createdAt" : "2018-02-22T16:56:59Z",
+        "updatedAt" : "2018-02-22T16:59:30Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1c9c4418-0bda-4a26-b65c-bab62f2bd76e",
+        "parentId" : "21b6e248-2889-4daa-89ed-0aecf0dccd91",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I think it would make sense to re-run `Files.isRegularFile` every time scalafix is invoked to allow the file to get picked up if it's created after the server starts. ",
+        "createdAt" : "2018-03-21T16:41:23Z",
+        "updatedAt" : "2018-03-21T16:42:23Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "69cefe0a15f6fe7cdf80d75092c6fb9322ea2bb2",
+    "line" : 52,
+    "diffHunk" : "@@ -1,1 +74,78 @@        case None =>\n          val default = cwd.resolve(Configuration.Scalafix.defaultConfPath)\n          if (Files.isRegularFile(default.toNIO))\n            Right(Some(Input.File(default)))\n          else Right(None)"
+  },
+  {
+    "id" : "57648e9a-fa09-4069-8529-07e72cfac9b1",
+    "prId" : 199,
+    "prUrl" : "https://github.com/scalameta/metals/pull/199",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "d49350d1-f573-455d-8bab-1c54b870a761",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Can we keep the old signature? I would like to refactor lsp4s to make responses `Task[T]` instead of `Either[Response.Error, T]`. I've noticed that at least vsode doesn't display Response.Error responses unless they're server errors.",
+        "createdAt" : "2018-02-22T16:59:04Z",
+        "updatedAt" : "2018-02-22T16:59:30Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d3337e05-b9ac-4814-9910-700bd242b22c",
+        "parentId" : "d49350d1-f573-455d-8bab-1c54b870a761",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "We can't really keep the old signature, because now the implementation needs to read the configuration, which may fail. Would you prefer for this to be `Task[Seq[Diagnostic]]` where I make the `Task` fail if something goes wrong with the config?",
+        "createdAt" : "2018-03-10T15:51:08Z",
+        "updatedAt" : "2018-03-10T15:51:08Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c50b7702-2129-4eb2-a37b-6f3ccdc6bb87",
+        "parentId" : "d49350d1-f573-455d-8bab-1c54b870a761",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I don't think `Left(Response.Error)` responses are reported in at least vsode, which makes it better to showMessage or throw \"internal error\". Either way, we can keep it like this and later refactor the signature. The plan is to make it `Task[T]` with custom recovering logic for a handful of exceptions.",
+        "createdAt" : "2018-03-11T11:55:45Z",
+        "updatedAt" : "2018-03-11T11:55:46Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "49d6c20d-86a2-4306-a28b-f0a5cde7d139",
+        "parentId" : "d49350d1-f573-455d-8bab-1c54b870a761",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Opened https://github.com/scalameta/metals/issues/206 to track this",
+        "createdAt" : "2018-03-21T16:40:15Z",
+        "updatedAt" : "2018-03-21T16:42:23Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "69cefe0a15f6fe7cdf80d75092c6fb9322ea2bb2",
+    "line" : 87,
+    "diffHunk" : "@@ -1,1 +91,95 @@      document: m.Document,\n      index: SemanticdbIndex\n  ): Task[Either[Response.Error, Seq[Diagnostic]]] = Task {\n    val linterResult = for {\n      scalafixConfig <- config()"
+  }
+]

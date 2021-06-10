@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "b1bb6aad-c482-41a1-89b3-10a2eb22bf31",
+    "prId" : 852,
+    "prUrl" : "https://github.com/scalameta/metals/pull/852",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "d30fc927-d6e8-48fb-af77-b7c616653e4f",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : ":clap:",
+        "createdAt" : "2019-08-25T20:58:05Z",
+        "updatedAt" : "2019-10-02T17:05:22Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "21f992f2b66ce835b0205c99a71b743ae3ba960f",
+    "line" : 79,
+    "diffHunk" : "@@ -1,1 +238,242 @@        \"\"\".stripMargin\n      )\n      // we should still have references despite fatal warning\n      _ = assertNoDiff(\n        server.workspaceReferences().references.map(_.symbol).mkString(\"\\n\"),"
+  }
+]

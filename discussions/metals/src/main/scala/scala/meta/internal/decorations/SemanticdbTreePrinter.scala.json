@@ -1,0 +1,123 @@
+[
+  {
+    "id" : "0e4b5975-b9e4-4431-a485-750e0f1fe25c",
+    "prId" : 2449,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2449",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "31772b77-037c-4cf3-8190-67279e01e054",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Just a nit, but did you want a `...` or `…` here for this?",
+        "createdAt" : "2021-02-01T07:40:47Z",
+        "updatedAt" : "2021-02-01T12:26:19Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b8e27208-76dd-4c34-9fb9-4246eac07020",
+        "parentId" : "31772b77-037c-4cf3-8190-67279e01e054",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I actually intended to change it :sweat_smile:  Changed to using ellpsis when applicable.",
+        "createdAt" : "2021-02-01T12:27:15Z",
+        "updatedAt" : "2021-02-01T12:27:15Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "4cc143492a501a2c67de5c3930ebd2f8b9d54405",
+    "line" : 61,
+    "diffHunk" : "@@ -1,1 +77,81 @@\n  def printScope(scope: Option[s.Scope]): String = {\n    if (scope.exists(_.hardlinks.nonEmpty)) \"...\" else \"\"\n  }\n"
+  },
+  {
+    "id" : "d673707e-5d07-4654-a075-0918c4244bb6",
+    "prId" : 2435,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2435",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "fe4be5d2-a986-4172-bb47-5093aa4ce774",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This is the main change here, everything else was mostly moved around.",
+        "createdAt" : "2021-01-25T15:45:39Z",
+        "updatedAt" : "2021-01-28T12:14:39Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c4f8c1edc27375c09baea128c304e6ddbb915c2a",
+    "line" : 31,
+    "diffHunk" : "@@ -1,1 +24,28 @@        s\"${printPrefix(prefix)}${printSymbol(symbol)}\"\n      case s.TypeRef(prefix, symbol, typeArguments) =>\n        val isTuple = symbol.startsWith(\"scala/Tuple\")\n        val isFunction = symbol.startsWith(\"scala/Function\")\n        val sym = if (isTuple || isFunction) \"\" else printSymbol(symbol)"
+  },
+  {
+    "id" : "628d8717-c8fa-4045-b6ec-fa4e51d38047",
+    "prId" : 2103,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2103",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "eb5d972d-b786-442b-8cf6-38c3cd312ae7",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Super random, but I happened to look at the git blame for this file and it shows that this was added 2019-11-30? Why is it showing that?",
+        "createdAt" : "2020-10-01T09:21:13Z",
+        "updatedAt" : "2020-10-05T15:15:06Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "489c9778-065b-48e2-bf61-d37c1b524474",
+        "parentId" : "eb5d972d-b786-442b-8cf6-38c3cd312ae7",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "<img width=\"999\" alt=\"Screenshot 2020-10-01 at 11 23 13\" src=\"https://user-images.githubusercontent.com/13974112/94791877-84288780-03d8-11eb-8cb6-1f12dad3ee6e.png\">\r\n\r\nActually I think somehow your force push is showing up as last year?",
+        "createdAt" : "2020-10-01T09:23:59Z",
+        "updatedAt" : "2020-10-05T15:15:06Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "cd0c9824-5850-4d73-ab70-ba1af7c3a26b",
+        "parentId" : "eb5d972d-b786-442b-8cf6-38c3cd312ae7",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "haha, that's when I started looking into it :P so actually it's kind of right. Maybe I overdid it with the amends though.",
+        "createdAt" : "2020-10-01T09:45:04Z",
+        "updatedAt" : "2020-10-05T15:15:06Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "040704bc-3e24-4148-b03a-81a0fe27eb3a",
+        "parentId" : "eb5d972d-b786-442b-8cf6-38c3cd312ae7",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "O wow haha, ok. I might be best to ammend the commit date to better reflect _this year_ 😆 ",
+        "createdAt" : "2020-10-01T09:57:33Z",
+        "updatedAt" : "2020-10-05T15:15:06Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2dfa4bb8-82e2-40db-a5a0-0fab919e532e",
+        "parentId" : "eb5d972d-b786-442b-8cf6-38c3cd312ae7",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Amended it with current dat, thanks for noticing!",
+        "createdAt" : "2020-10-01T10:50:25Z",
+        "updatedAt" : "2020-10-05T15:15:06Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d41415a1ce39fbc08c6ed741ee8b6bf37978a983",
+    "line" : 9,
+    "diffHunk" : "@@ -1,1 +7,11 @@import scala.meta.metap.Format\n\nobject SemanticdbTreePrinter {\n\n  def printSyntheticInfo("
+  }
+]

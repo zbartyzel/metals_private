@@ -1,0 +1,79 @@
+[
+  {
+    "id" : "30f9c59f-4e0a-4979-ab57-25a2c7aba780",
+    "prId" : 2448,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2448",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "e9a0c877-c1fe-4e84-bc82-64f02613d2a9",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "We also have `Decl.Given` we should handle.",
+        "createdAt" : "2021-02-02T16:50:36Z",
+        "updatedAt" : "2021-02-08T17:02:33Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d943796f-81f1-4375-9e8f-3199cd429ee7",
+        "parentId" : "e9a0c877-c1fe-4e84-bc82-64f02613d2a9",
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "It's handled below",
+        "createdAt" : "2021-02-05T17:14:06Z",
+        "updatedAt" : "2021-02-08T17:02:33Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "dfe1fef3-9dad-410e-8fbb-c7fc378415a9",
+        "parentId" : "e9a0c877-c1fe-4e84-bc82-64f02613d2a9",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "That's `Defn.Given` not `Decl.Given` - it's a bit confusing, but one is for given definitions and the other for abstract givens.",
+        "createdAt" : "2021-02-08T13:39:37Z",
+        "updatedAt" : "2021-02-08T17:02:33Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "90878c4d641b8a8eb4b4e0bd4a7b43460e8f769f",
+    "line" : 43,
+    "diffHunk" : "@@ -1,1 +290,294 @@          )\n          newOwner()\n        case t: Defn.GivenAlias =>\n          addChild(\n            t.name.value,"
+  },
+  {
+    "id" : "f6df5671-54d4-4743-9c7d-1cc6dce1e43e",
+    "prId" : 2448,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2448",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "57f8cab0-3213-4d35-8c61-642e6f9f2a2c",
+        "parentId" : null,
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "I've tried to pass an empty string as a name but it breaks smth.\r\n\r\nThere are no exceptions in log and vscode displays as `No symbols found in document $filename`",
+        "createdAt" : "2021-02-05T18:23:28Z",
+        "updatedAt" : "2021-02-08T17:02:33Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e5c76031-52d7-4a88-ad9e-e631702df44b",
+        "parentId" : "57f8cab0-3213-4d35-8c61-642e6f9f2a2c",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Maybe then just put `tpeName` into name and leave the detail empty?",
+        "createdAt" : "2021-02-08T13:40:52Z",
+        "updatedAt" : "2021-02-08T17:02:33Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "90878c4d641b8a8eb4b4e0bd4a7b43460e8f769f",
+    "line" : 62,
+    "diffHunk" : "@@ -1,1 +309,313 @@          val (name, pos) =\n            t.name match {\n              case Name.Anonymous() => (\" \", initPos)\n              case name => (name.value, name.pos)\n            }"
+  }
+]

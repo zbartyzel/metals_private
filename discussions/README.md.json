@@ -1,0 +1,79 @@
+[
+  {
+    "id" : "2b0e1214-b2fe-43f8-b616-40f720b11eaf",
+    "prId" : 207,
+    "prUrl" : "https://github.com/scalameta/metals/pull/207",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "410200d8-875b-48d2-9893-4e9a89ff21c6",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "strictly speaking we don't use scalafix for rename because it's such a simple text edit",
+        "createdAt" : "2018-03-23T23:28:42Z",
+        "updatedAt" : "2018-03-23T23:30:09Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "5c3682099146050081a2e3e206fc0c57cd20dae2",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +37,41 @@  - [ ] Quick-fix inspections (`textDocument/codeAction`)\n    + [x] Remove unused imports\n  - [x] Rename local symbol (`textDocument/rename`)\n  - [ ] Rename global symbol (`textDocument/rename`)\n* Formatting with Scalafmt:"
+  },
+  {
+    "id" : "0583ec6f-1141-4b29-aa74-2a8bdc728d8b",
+    "prId" : 207,
+    "prUrl" : "https://github.com/scalameta/metals/pull/207",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "1d45e622-765d-45a6-b04d-006d464fd936",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "👍 ",
+        "createdAt" : "2018-03-23T23:28:47Z",
+        "updatedAt" : "2018-03-23T23:30:09Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "5c3682099146050081a2e3e206fc0c57cd20dae2",
+    "line" : 19,
+    "diffHunk" : "@@ -1,1 +42,46 @@  - [x] Whole file (`textDocument/formatting`)\n  - [ ] Selected range (`textDocument/rangeFormatting`)\n  - [x] On save (`textDocument/willSaveWaitUntil`)\n  - [ ] As you type (`textDocument/onTypeFormatting`)\n* Code assistance:"
+  },
+  {
+    "id" : "fb8aa92f-e2b2-437c-b070-811b89d26b6a",
+    "prId" : 95,
+    "prUrl" : "https://github.com/scalameta/metals/pull/95",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "3c5f4846-b4ea-4deb-875e-870c0773bd4e",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I agree \"intellisense\" is maybe too microsoft specific, but they use it as a general term for exactly these features \r\n\r\n> IntelliSense is the general term for a number of features: List Members, Parameter Info, Quick Info, and Complete Word. These features help you to learn more about the code you are using, keep track of the parameters you are typing, and add calls to properties and methods with only a few keystrokes.\r\n",
+        "createdAt" : "2017-12-06T08:46:31Z",
+        "updatedAt" : "2017-12-06T08:51:24Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "feb3d115-0cc7-434c-b80a-740976fc2a67",
+        "parentId" : "3c5f4846-b4ea-4deb-875e-870c0773bd4e",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "I see your point about multiple connotations, but I'm not sure whether it's a commonly understandable term. I had a general idea when I saw this word before, but when you mentioned it yesterday I had to google the exact meaning because I wasn't sure. Probably it's just me 😅 ",
+        "createdAt" : "2017-12-06T11:51:26Z",
+        "updatedAt" : "2017-12-06T11:51:26Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "2b8a6231c02a9df92c5fb8066bd217254209bb47",
+    "line" : 27,
+    "diffHunk" : "@@ -1,1 +30,34 @@  - [ ] Selected range (`textDocument/rangeFormatting`)\n  - [ ] As you type (`textDocument/onTypeFormatting`)\n* Context-aware code completion:\n  - [x] Autocompletion as you type (`textDocument/completions`)\n  - [x] Show parameter list as you type (`textDocument/signatureHelp`)"
+  }
+]

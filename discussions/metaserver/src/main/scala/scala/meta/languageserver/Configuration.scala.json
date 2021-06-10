@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "5b92bb72-5afe-422c-92e4-986fa2faa0b0",
+    "prId" : 158,
+    "prUrl" : "https://github.com/scalameta/metals/pull/158",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "74e0ad63-c826-4723-add1-70ba6a21fef7",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "It's quite ironic that we complain about boilerplate invoking macros that relieve us from so much more boilerplate!",
+        "createdAt" : "2017-12-30T13:04:46Z",
+        "updatedAt" : "2018-01-02T19:54:18Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "affa2ea127de9483cd4eeda3dfcfcb3bb80a4322",
+    "line" : 57,
+    "diffHunk" : "@@ -1,1 +51,55 @@  // TODO(gabro): Json.format[A] is tedious to write.\n  // We should use an annotation macro to cut the boilerplate\n  object Scalac {\n    implicit val format: OFormat[Scalac] =\n      Json.using[Json.WithDefaultValues].format[Scalac]"
+  }
+]

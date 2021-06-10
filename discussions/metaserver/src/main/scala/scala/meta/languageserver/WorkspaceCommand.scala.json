@@ -1,0 +1,57 @@
+[
+  {
+    "id" : "93ef870e-9226-4622-8aae-28e3ebf32f06",
+    "prId" : 154,
+    "prUrl" : "https://github.com/scalameta/metals/pull/154",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ad3144ee-c266-46a5-8c06-87f68d23f5f8",
+        "parentId" : null,
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "Would it be possible (in the future) to adapt Scalafix rewrites to code actions so that it won't be necessary to define a `WorkspaceCommand` for each type of rewrite? ",
+        "createdAt" : "2017-12-26T01:46:26Z",
+        "updatedAt" : "2017-12-29T12:34:28Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2a0a2991-be54-463d-b2bc-ca9477ca1cad",
+        "parentId" : "ad3144ee-c266-46a5-8c06-87f68d23f5f8",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Scalafix absolutely, scalafix can run custom rules from configuration in .scalafix.conf, we can probably embed that config as command arguments to get away with only a single `Scalafix` WorkspaceCommand. ",
+        "createdAt" : "2017-12-29T12:26:00Z",
+        "updatedAt" : "2017-12-29T12:34:28Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "fdc9c838e9c14f4d811f77cd7768c91f492170e0",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +11,15 @@  case object ClearIndexCache extends WorkspaceCommand\n  case object ResetPresentationCompiler extends WorkspaceCommand\n  case object ScalafixUnusedImports extends WorkspaceCommand\n\n  val values = findValues"
+  },
+  {
+    "id" : "4d7f58dc-4da8-4fea-8a8b-5ad0ae3fda15",
+    "prId" : 131,
+    "prUrl" : "https://github.com/scalameta/metals/pull/131",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "45e43bc9-7322-4e8b-a0b9-cbed94a4251b",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "I went for a `lowerCamelCase` convention here and thanks to `Uncapitalised` this is automatically handled by `withNameOption` and `entryName`",
+        "createdAt" : "2017-12-15T11:17:41Z",
+        "updatedAt" : "2017-12-15T11:25:20Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "867e5b2b0a081dfb481be2a14c9b7bffa47a2d98",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +5,9 @@import enumeratum.EnumEntry.Uncapitalised\n\nsealed trait WorkspaceCommand extends EnumEntry with Uncapitalised\n\ncase object WorkspaceCommand extends Enum[WorkspaceCommand] {"
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "id" : "8e6b8185-e0f1-42b6-bb8c-bdad5a87e33e",
+    "prId" : 218,
+    "prUrl" : "https://github.com/scalameta/metals/pull/218",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "9bdf234e-d2f9-4715-92b2-338d37bda181",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "these prebuild/postbuild tricks are needed to include README/LICENSE in the extension package, so that they're displayed on the Marketplace page.\r\n\r\nI've tried other approaches involving relative paths and symlinks but none worked.",
+        "createdAt" : "2018-04-02T10:38:27Z",
+        "updatedAt" : "2018-04-02T13:59:00Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "068a26e77742148e377252e19071478495c26d1e",
+    "line" : 120,
+    "diffHunk" : "@@ -1,1 +165,169 @@    \"prebuild\": \"cp ../README.md . && cp ../LICENSE LICENSE.md\",\n    \"build\": \"vsce package\",\n    \"postbuild\": \"rm README.md && rm LICENSE.md\"\n  },\n  \"devDependencies\": {"
+  },
+  {
+    "id" : "521fc809-e6e5-440a-894b-0cbe646fbdd4",
+    "prId" : 218,
+    "prUrl" : "https://github.com/scalameta/metals/pull/218",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "7efa50ae-ddbe-49c4-a1ba-9f9b8554ebec",
+        "parentId" : null,
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "😬🤘 ",
+        "createdAt" : "2018-04-02T15:28:28Z",
+        "updatedAt" : "2018-04-02T15:32:14Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "068a26e77742148e377252e19071478495c26d1e",
+    "line" : 39,
+    "diffHunk" : "@@ -1,1 +33,37 @@    \"url\": \"https://github.com/scalameta/metals.git\"\n  },\n  \"homepage\": \"http://metals.rocks\",\n  \"engines\": {\n    \"vscode\": \"^1.17.0\""
+  },
+  {
+    "id" : "1c8cc166-7994-4572-9463-3d0984d2dd72",
+    "prId" : 218,
+    "prUrl" : "https://github.com/scalameta/metals/pull/218",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "df4d3e2b-46e4-4191-b5b5-28c384b5a2bc",
+        "parentId" : null,
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "How about setting it to the latest published version (`e1b3a1fa`)? Then we can update it once `0.1.0` is out.",
+        "createdAt" : "2018-04-02T15:30:25Z",
+        "updatedAt" : "2018-04-02T15:32:14Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "dc9f1326-fd8f-4c3e-a76c-59c9970007fa",
+        "parentId" : "df4d3e2b-46e4-4191-b5b5-28c384b5a2bc",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "We could, but I don't intend to publish this until 0.1.0 is out, and I expect metals devs to override this to point to a local snapshot.\r\n\r\nSo I think it's not an important change now.\r\n\r\nDoes it make sense?",
+        "createdAt" : "2018-04-02T15:34:08Z",
+        "updatedAt" : "2018-04-02T15:34:08Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1cac93b7-2775-4f9f-8fed-2206b75dbbce",
+        "parentId" : "df4d3e2b-46e4-4191-b5b5-28c384b5a2bc",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "It's up to you. I'd publish it before _and_ after 0.1.0 release 😄 ",
+        "createdAt" : "2018-04-02T15:37:00Z",
+        "updatedAt" : "2018-04-02T15:37:00Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "dfd7d8a9-8247-4512-b02e-afe4191e9221",
+        "parentId" : "df4d3e2b-46e4-4191-b5b5-28c384b5a2bc",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Ideally we should be able to publish betas on every commit, but there's no such thing on the Marketplace :( See https://github.com/Microsoft/vscode/issues/15756 and also the lack of API for publishing.\r\n\r\nSo every time we'll be publishing an extension to the store, it will be in correspondence of a new stable release. That's why I think we should default to the latest (in this case the first) stable release.",
+        "createdAt" : "2018-04-02T15:40:54Z",
+        "updatedAt" : "2018-04-02T15:41:14Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "068a26e77742148e377252e19071478495c26d1e",
+    "line" : 101,
+    "diffHunk" : "@@ -1,1 +127,131 @@        \"metals.serverVersion\": {\n          \"type\": \"string\",\n          \"default\": \"0.1.0\",\n          \"description\": \"The version of the server artifact. Requires reloading the window. Change only if you know what you're doing\"\n        }"
+  },
+  {
+    "id" : "217a6c75-2ef1-4117-994e-f306cbc87e47",
+    "prId" : 195,
+    "prUrl" : "https://github.com/scalameta/metals/pull/195",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "278b8cd3-c924-41d3-ae69-af93618e33ed",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "this is a bit strange in VSCode (because there's already a `formatOnSave` option from VSCode itself), but I guess VSCode users can just ignore it.",
+        "createdAt" : "2018-02-11T20:06:18Z",
+        "updatedAt" : "2018-02-11T20:06:18Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "09edd4f2-de4c-4579-b3fb-c4a5149bf1d2",
+        "parentId" : "278b8cd3-c924-41d3-ae69-af93618e33ed",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "See https://github.com/scalameta/metals/pull/195#discussion_r167445526. There's a difference between them and we cannot rely on it, because it's VSCode specific.\r\n\r\nA possible improvement to this situation: VSCode extension could check the state of these two options and warn user when both are on (which means that formatting (probably) will be done twice)",
+        "createdAt" : "2018-02-11T21:26:12Z",
+        "updatedAt" : "2018-02-11T21:26:12Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "37ef516caf63a83cb2af533a23f0de32c02ba087",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +40,44 @@          \"default\": false,\n          \"description\": \"Format file before saving it\"\n        },\n        \"metals.scalafmt.version\": {\n          \"type\": \"string\","
+  }
+]

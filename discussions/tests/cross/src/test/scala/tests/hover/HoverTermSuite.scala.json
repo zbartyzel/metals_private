@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "a600b231-1644-4735-9437-e5b6192ad63a",
+    "prId" : 2852,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2852",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "869114bf-5096-4565-8065-b91c1d43cb38",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This is wrong anyway, we can fix it in a separate PR.",
+        "createdAt" : "2021-06-04T10:11:07Z",
+        "updatedAt" : "2021-06-04T10:12:52Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "55f4accb32b50673f57ca811cee234a7bcea5792",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +148,152 @@    compat = Map(\n      // https://github.com/lampepfl/dotty/issues/8835\n      \"3.0\" -> \"object num: interpolator-unapply.a$.Xtension\".hover\n    )\n  )"
+  }
+]

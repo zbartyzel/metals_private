@@ -1,0 +1,79 @@
+[
+  {
+    "id" : "a2e74882-3f39-48f1-9c31-94d026245f64",
+    "prId" : 2825,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2825",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "1d9ca14c-9707-40d1-b949-e9839c295b22",
+        "parentId" : null,
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "There is also `inspectImports` - it can provide renames too",
+        "createdAt" : "2021-05-31T16:29:43Z",
+        "updatedAt" : "2021-05-31T17:47:17Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "15450f06-6538-4d15-a4cf-5e9e56b7f631",
+        "parentId" : "1d9ca14c-9707-40d1-b949-e9839c295b22",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Och, do you mean that imports such as:\r\n```\r\nobject A{\r\n  import a.b.C as D\r\n}\r\n```\r\n?",
+        "createdAt" : "2021-06-01T15:58:41Z",
+        "updatedAt" : "2021-06-01T15:58:41Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "aa148e22-b961-475d-bbc9-2e750fb805d5",
+        "parentId" : "1d9ca14c-9707-40d1-b949-e9839c295b22",
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "no, I mean that import renames are processed in `inspectImports` too and probably should be merged with renames that comes from `ctx.importInfo`: https://github.com/scalameta/metals/blob/7318b90e9782efc12632779119aee7f389515d56/mtags/src/main/scala-3/scala/meta/internal/pc/NamesInScope.scala#L170-L173\r\n",
+        "createdAt" : "2021-06-01T20:27:36Z",
+        "updatedAt" : "2021-06-01T20:27:36Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5fa1e1be-d6fa-4db4-abbe-fdea335abdf7",
+        "parentId" : "1d9ca14c-9707-40d1-b949-e9839c295b22",
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "This isn't actual anymore. I found the original problem and will delete this method soon",
+        "createdAt" : "2021-06-08T14:36:16Z",
+        "updatedAt" : "2021-06-08T14:36:17Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "4c925bb564b537775be70666582c8e6f17d58fd2",
+    "line" : 55,
+    "diffHunk" : "@@ -1,1 +101,105 @@            sel.renamed match {\n              case Ident(name) if name.toString != \"_\" =>\n                renames += ((sel.imported.name.toSimpleName, name.toString))\n              case _ =>\n            }"
+  },
+  {
+    "id" : "c82462c5-404a-456e-802a-f0f2aeafe269",
+    "prId" : 2728,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2728",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "bb118de8-b894-4e49-9505-b578309cf246",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Could you add comments explaining how we are searching for symbols?",
+        "createdAt" : "2021-04-27T11:57:10Z",
+        "updatedAt" : "2021-05-10T11:58:32Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "10c763add43198a40377d84ab7a67c9f6a77ac84",
+    "line" : 81,
+    "diffHunk" : "@@ -1,1 +79,83 @@    }\n\n    val fromTree =\n      tree.typeOpt match {\n        case site: NamedType if site.symbol.is(Package) =>"
+  }
+]

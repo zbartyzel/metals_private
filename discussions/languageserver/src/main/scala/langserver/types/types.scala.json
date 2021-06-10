@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "246e4cc1-c175-487d-b96c-bc51fb8c3447",
+    "prId" : 131,
+    "prUrl" : "https://github.com/scalameta/metals/pull/131",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "cb668f87-6c41-4a84-859b-951e8c1ebcc0",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "`arguments` is `any[]` in the LSP, so I figured `JsValue` is a good type is.",
+        "createdAt" : "2017-12-15T11:25:48Z",
+        "updatedAt" : "2017-12-15T11:25:48Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "867e5b2b0a081dfb481be2a14c9b7bffa47a2d98",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +318,322 @@}\n\ncase class WorkspaceExecuteCommandParams(command: String, arguments: Option[Seq[JsValue]])\nobject WorkspaceExecuteCommandParams {\n  implicit val format = Json.format[WorkspaceExecuteCommandParams]"
+  }
+]

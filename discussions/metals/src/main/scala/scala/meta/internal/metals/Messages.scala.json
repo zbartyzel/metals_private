@@ -1,0 +1,167 @@
+[
+  {
+    "id" : "f0897881-feea-4dbb-a544-84f54dc91e6e",
+    "prId" : 2391,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2391",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b369fadc-5181-4e8f-a2b0-770eaf4acbe8",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "`No workspace folder detected` ?\r\n\r\n`rootUri` and `rootPath` seem internal to LSP, so might be confusing to users",
+        "createdAt" : "2021-01-15T11:41:02Z",
+        "updatedAt" : "2021-01-15T11:41:48Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c4d19cf1-81dd-4720-b2a0-b303bdd901eb",
+        "parentId" : "b369fadc-5181-4e8f-a2b0-770eaf4acbe8",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "So I guess I was purposefully avoiding that term since `workspaceFolder` is part of the LSP spec that we don't support. So I was trying to avoid using the term. Do you still think it may be clearer to use it?",
+        "createdAt" : "2021-01-15T12:27:06Z",
+        "updatedAt" : "2021-01-15T12:27:06Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ff42b1f7-3942-4588-a96d-c4dea762b795",
+        "parentId" : "b369fadc-5181-4e8f-a2b0-770eaf4acbe8",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Right, it might be fine then with the current message. I was mostly thinking aloud here.",
+        "createdAt" : "2021-01-15T12:46:29Z",
+        "updatedAt" : "2021-01-15T12:46:29Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "128d18c143146159f289e0402ad515753e17f3d5",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +21,25 @@  val noRoot = new MessageParams(\n    MessageType.Error,\n    \"\"\"|No rootUri or rootPath detected.\n       |Metals will not function correctly without either of these set since a workspace is needed.\n       |Try opening your project at the workspace root.\"\"\".stripMargin"
+  },
+  {
+    "id" : "f1a7d5af-236a-41fd-b2bb-0fc5b9d558b0",
+    "prId" : 1538,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1538",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "57aeef9e-2085-4694-b78f-a1672edba0b4",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Shouldn't we just always import if a script is opened? Especially that this should be much more lightweight than normal Bloop import.",
+        "createdAt" : "2020-03-31T16:26:38Z",
+        "updatedAt" : "2020-05-21T11:17:43Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "fa1922a8-10cd-43d1-92ea-e6d405072930",
+        "parentId" : "57aeef9e-2085-4694-b78f-a1672edba0b4",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "I would say until we do have mill `build.sc` support, it might be best to have this. If not, it might not be the best experience with the mill build files with spurious errors everywhere. What do you think?",
+        "createdAt" : "2020-04-02T07:42:47Z",
+        "updatedAt" : "2020-05-21T11:17:43Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "bbc087ae-65f2-4047-9b68-61f5f433b6e3",
+        "parentId" : "57aeef9e-2085-4694-b78f-a1672edba0b4",
+        "authorId" : "343802b0-b5d4-488b-944f-b7fca9ffb64f",
+        "body" : "It's even for me, although making that on-demand is probably safer, yes. Note that importing Ammonite scripts also re-indexes the whole workspace, main project included.",
+        "createdAt" : "2020-04-02T17:23:40Z",
+        "updatedAt" : "2020-05-21T11:17:43Z",
+        "lastEditedBy" : "343802b0-b5d4-488b-944f-b7fca9ffb64f",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0681fa0b1417b7ac622101d279667c6900a2506e",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +484,488 @@    val message: String = \"Ammonite script detected.\"\n    val importAll: String = \"Import scripts automatically\"\n    val doImport: String = \"Import\"\n    val dismiss: String = \"Dismiss\"\n    def params(): ShowMessageRequestParams = {"
+  },
+  {
+    "id" : "9491eb7a-4f13-4261-9d64-d1ea171de679",
+    "prId" : 1447,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1447",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "20804f51-9f43-4622-ac62-cf39fc59de13",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Super nitpicky, but I just tested this, and is it possible to just add a `:` in here?\r\n```suggestion\r\n      s\"Enter the name for the new $kind:\"\r\n```",
+        "createdAt" : "2020-02-24T12:45:56Z",
+        "updatedAt" : "2020-02-24T12:45:57Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "424be3d4-58e8-45cc-8f82-ab2b63026f2d",
+        "parentId" : "20804f51-9f43-4622-ac62-cf39fc59de13",
+        "authorId" : "58f39866-9870-40fc-83e0-d68edbbcb6f7",
+        "body" : "it seems not to be going look good here:\r\n![image](https://user-images.githubusercontent.com/10850363/73563467-adfe6880-445d-11ea-89f6-a9a6398034da.gif)\r\n",
+        "createdAt" : "2020-02-24T12:59:45Z",
+        "updatedAt" : "2020-02-24T12:59:45Z",
+        "lastEditedBy" : "58f39866-9870-40fc-83e0-d68edbbcb6f7",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "93063f50-06bc-47cb-8152-24fde5f00b4f",
+        "parentId" : "20804f51-9f43-4622-ac62-cf39fc59de13",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Let's leave it as is, I don't think it adds that much visually and it's not really being used in UI anywhere.",
+        "createdAt" : "2020-02-24T13:00:38Z",
+        "updatedAt" : "2020-02-24T13:00:38Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3b7146e0-af14-43a4-a779-4286afa96551",
+        "parentId" : "20804f51-9f43-4622-ac62-cf39fc59de13",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Hmmm, yea I see what you're saying. That's tricky, because in `coc-metals` there isn't a nice break, so it seems like there should really be a `:`. No worries, I'll just add it in on the vim side.\r\n\r\n<img width=\"438\" alt=\"Screenshot 2020-02-24 at 14 01 42\" src=\"https://user-images.githubusercontent.com/13974112/75154558-3b0ba900-570e-11ea-81fa-d6ef9b2fbfd5.png\">\r\n",
+        "createdAt" : "2020-02-24T13:03:09Z",
+        "updatedAt" : "2020-02-24T13:03:09Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c7ef63b7-909d-4c2f-a2d3-c17793946cff",
+        "parentId" : "20804f51-9f43-4622-ac62-cf39fc59de13",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Also, this feature works great 🎉 !!",
+        "createdAt" : "2020-02-24T13:05:40Z",
+        "updatedAt" : "2020-02-24T13:05:40Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b4691e35-c2be-480d-9932-8671111a7560",
+        "parentId" : "20804f51-9f43-4622-ac62-cf39fc59de13",
+        "authorId" : "58f39866-9870-40fc-83e0-d68edbbcb6f7",
+        "body" : "thanks :relieved: ",
+        "createdAt" : "2020-02-24T13:07:41Z",
+        "updatedAt" : "2020-02-24T13:07:41Z",
+        "lastEditedBy" : "58f39866-9870-40fc-83e0-d68edbbcb6f7",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "948961c16a2b407e9b6be832f69458537ee4bc93",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +387,391 @@    def selectTheKindOfFileMessage = \"Select the kind of file to create\"\n    def enterNameMessage(kind: String): String =\n      s\"Enter the name for the new $kind\"\n  }\n}"
+  }
+]

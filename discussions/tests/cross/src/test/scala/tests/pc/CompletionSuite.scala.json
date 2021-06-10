@@ -1,0 +1,101 @@
+[
+  {
+    "id" : "365c6260-8803-4a14-96c8-a551a3211a2a",
+    "prId" : 2637,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2637",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "fd7ab939-2ab5-4436-9c85-80fc771ccf52",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "It seems this is done for the description in CompletionItem, but requires SingleDenotation and TermRef? I haven't dug too much into it.",
+        "createdAt" : "2021-03-30T14:54:53Z",
+        "updatedAt" : "2021-04-20T11:55:47Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d7edd735-0756-431d-9b67-9df127bc9c62",
+        "parentId" : "fd7ab939-2ab5-4436-9c85-80fc771ccf52",
+        "authorId" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "body" : "The `description` in [Completion](https://github.com/tanishiking/dotty/blob/65b17af639e17a5d526581ff68fc17bfa08e6299/compiler/src/dotty/tools/dotc/interactive/Completion.scala#L36) returned from `Interactive.Completion.completions` has resolved type signature.\r\n\r\nHowever, now we compute the type signature by ourselves, we need to compute type parameters based on the given qualifiers as Scala2 does:  \r\nhttps://github.com/tanishiking/metals/blob/ac3a29e022062326b6feb63baa9929cdcdaca5e2/mtags/src/main/scala-2/scala/meta/internal/pc/completions/Completions.scala#L258-L262\r\n\r\nWhile this is a kinda regression, should we tackle this problem in this PR? or can we leave this as a future work for now?\r\n",
+        "createdAt" : "2021-04-19T12:37:39Z",
+        "updatedAt" : "2021-04-20T11:55:47Z",
+        "lastEditedBy" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a037a2ed-e4dd-41dc-bc44-e2555739379f",
+        "parentId" : "fd7ab939-2ab5-4436-9c85-80fc771ccf52",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "We can leave it for future work for sure.",
+        "createdAt" : "2021-04-20T11:31:59Z",
+        "updatedAt" : "2021-04-20T11:55:47Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cb0dd9260bcbd1c2b38bcd118ac763772baf4a4c",
+    "line" : 25,
+    "diffHunk" : "@@ -1,1 +54,58 @@  )\n\n  // TODO: scala3, compute type parameters based on the qualifier.\n  check(\n    \"tparam\","
+  },
+  {
+    "id" : "1c5c7e79-bc69-4af9-b937-c400b0ad7162",
+    "prId" : 2544,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2544",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ed25a32b-ecd6-4433-9edb-9ba8e55f2b80",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "There was a fix in presentation compiler that will only propose objects in positions that are not valid for types. That is why I added the import clause here and in some other places.",
+        "createdAt" : "2021-02-23T17:07:33Z",
+        "updatedAt" : "2021-02-23T18:42:53Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "98912dde9153e0d1b8d41e43360729847a17b082",
+    "line" : 19,
+    "diffHunk" : "@@ -1,1 +499,503 @@      |\n      |object Main{\n      |  import scala.Function@@\n      |}\n      |\"\"\".stripMargin,"
+  },
+  {
+    "id" : "ee4ef437-63eb-43e8-bd52-b6a729bbe9aa",
+    "prId" : 2058,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2058",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "6f758085-7dd1-4621-8d12-59e60a517d03",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Not sure why, but in 0.27.0-RC1 completions stopped working from things in the standard library.",
+        "createdAt" : "2020-09-09T14:10:48Z",
+        "updatedAt" : "2020-09-09T16:12:31Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d806c0c1-053b-4e19-bd70-126720a60f5f",
+        "parentId" : "6f758085-7dd1-4621-8d12-59e60a517d03",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I will follow up in dotty and ask.",
+        "createdAt" : "2020-09-09T14:12:13Z",
+        "updatedAt" : "2020-09-09T16:12:31Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e11a69983e1a8daa20e5799f5ecff8caae86da92",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +461,465 @@\n  check(\n    \"commit1\".tag(IgnoreScalaVersion(\"0.27.0-RC1\")),\n    \"\"\"\n      |package a"
+  }
+]

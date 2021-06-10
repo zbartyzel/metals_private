@@ -1,0 +1,46 @@
+[
+  {
+    "id" : "f77663ea-e57a-4e33-bc3c-81d716f929ed",
+    "prId" : 2600,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2600",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "3009b555-4117-4340-9263-363e123542aa",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Should we also pass the dialect here?",
+        "createdAt" : "2021-03-16T17:43:05Z",
+        "updatedAt" : "2021-04-01T21:54:41Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e061621f-c666-4682-b797-c2b1041ca3b8",
+        "parentId" : "3009b555-4117-4340-9263-363e123542aa",
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "Yep, but this method is used in search. \r\nI will create an issue because it would be better to do it in a separate PR. Getting the right dialect at call-sites of this method isn't trivial now.",
+        "createdAt" : "2021-03-22T12:01:59Z",
+        "updatedAt" : "2021-04-01T21:54:41Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "acf5609f-667e-4e9a-9b8c-9b4beca2087f",
+        "parentId" : "3009b555-4117-4340-9263-363e123542aa",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Sure, makes sense",
+        "createdAt" : "2021-03-22T13:59:15Z",
+        "updatedAt" : "2021-04-01T21:54:41Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "028b3ff710580df42fff3574f99c743c9649e48c",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +44,48 @@    input.toLanguage match {\n      case Language.SCALA =>\n        val mtags = new ScalaToplevelMtags(input, true, dialects.Scala213) {\n          override def visitOccurrence(\n              occ: SymbolOccurrence,"
+  }
+]

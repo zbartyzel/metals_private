@@ -1,0 +1,112 @@
+[
+  {
+    "id" : "2e1cfc90-d620-4f21-bb32-af2ce1a4b7d5",
+    "prId" : 1685,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1685",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "de80d2f0-9bbd-4a72-87dc-489f9c4f9c9e",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "```suggestion\r\n       |  val str = $tripleQuote|$tripleQuote.stripMargin\r\n```",
+        "createdAt" : "2020-05-07T12:06:11Z",
+        "updatedAt" : "2020-05-12T13:29:45Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b6a0f6a2-bd2d-41f5-a3ba-06855760f0ab",
+        "parentId" : "de80d2f0-9bbd-4a72-87dc-489f9c4f9c9e",
+        "authorId" : "111a9150-7ee0-442a-8973-64d93d8a024e",
+        "body" : "I find it less readable actually, do you think it is really important ?",
+        "createdAt" : "2020-05-08T08:03:39Z",
+        "updatedAt" : "2020-05-12T13:29:45Z",
+        "lastEditedBy" : "111a9150-7ee0-442a-8973-64d93d8a024e",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "47d5037d-3f8f-4044-9599-931338f22486",
+        "parentId" : "de80d2f0-9bbd-4a72-87dc-489f9c4f9c9e",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Yeah, you're right. It's more readable this way. Let's leave it.",
+        "createdAt" : "2020-05-08T10:51:02Z",
+        "updatedAt" : "2020-05-12T13:29:45Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7f5ec374d50f73ff7a549073d2da0e635cd14ded",
+    "line" : 19,
+    "diffHunk" : "@@ -1,1 +17,21 @@       |\n       |object A {\n       |  val str = '''|'''.stripMargin\n       |}\n       |\"\"\".stripMargin.replace(\"'\", \"\\\"\")"
+  },
+  {
+    "id" : "96ff902a-4ef1-4641-8100-6144612a51ac",
+    "prId" : 1685,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1685",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "437653eb-e3c6-4c91-b4d4-d4bd0a0a3b93",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Let's add a test case with an already existing multiline string to check if we don't propose it flakily.\r\n\r\nAnd maybe a test case with multiple strings on the same line?",
+        "createdAt" : "2020-05-07T12:07:06Z",
+        "updatedAt" : "2020-05-12T13:29:45Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "24849e27-90f5-49b8-a7ee-743f865da12c",
+        "parentId" : "437653eb-e3c6-4c91-b4d4-d4bd0a0a3b93",
+        "authorId" : "111a9150-7ee0-442a-8973-64d93d8a024e",
+        "body" : "Thanks a lot for all your comments!\r\nI've refactored everything. it looks better from my point of view :)\r\n\r\nI just have a problem with multilines when testing. \r\nwhen I test that\r\n```scala\r\n\"\"\"|package a\r\n   |\r\n   |object A {\r\n   |  val str = s'''|Hello\r\n   |                |there'''.stripMargin + '''the <<cursor>> is actually here'''\r\n   |}\r\n   |\"\"\".stripMargin.replace(\"'\", \"\\\"\")\r\n```\r\nit actually gives me that \r\n```scala\r\n\"\"\"|package a\r\n   |\r\n   |object A {\r\n   |  val str = s'''|Hello\r\n   |there'''.stripMargin + '''the <<cursor>> is actually here'''\r\n   |}\r\n   |\"\"\".stripMargin.replace(\"'\", \"\\\"\")\r\n```\r\nI'm already testing all the triple quotes cases so I'm not sure this test is useful",
+        "createdAt" : "2020-05-08T07:54:50Z",
+        "updatedAt" : "2020-05-12T13:29:45Z",
+        "lastEditedBy" : "111a9150-7ee0-442a-8973-64d93d8a024e",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5e491901-d2c6-473f-a4e0-bbdeb121e90e",
+        "parentId" : "437653eb-e3c6-4c91-b4d4-d4bd0a0a3b93",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Hmm... does it work in the editor? Maybe it's a problem with range formatting?",
+        "createdAt" : "2020-05-08T10:50:19Z",
+        "updatedAt" : "2020-05-12T13:29:45Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "66393aea-6e9f-402b-8dae-0ab94ef5c129",
+        "parentId" : "437653eb-e3c6-4c91-b4d4-d4bd0a0a3b93",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I think we can skip this test then.",
+        "createdAt" : "2020-05-08T14:36:40Z",
+        "updatedAt" : "2020-05-12T13:29:45Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "627b3f3b-1fa3-494c-b4f8-791d2ba27a04",
+        "parentId" : "437653eb-e3c6-4c91-b4d4-d4bd0a0a3b93",
+        "authorId" : "111a9150-7ee0-442a-8973-64d93d8a024e",
+        "body" : "okay we will skip that one, but we need some others :)",
+        "createdAt" : "2020-05-08T15:52:59Z",
+        "updatedAt" : "2020-05-12T13:29:45Z",
+        "lastEditedBy" : "111a9150-7ee0-442a-8973-64d93d8a024e",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7f5ec374d50f73ff7a549073d2da0e635cd14ded",
+    "line" : 207,
+    "diffHunk" : "@@ -1,1 +205,209 @@       |\"\"\".stripMargin.replace(\"'\", \"\\\"\")\n  )\n\n  check(\n    \"mix-triple-quotes-no-codeAction\","
+  }
+]

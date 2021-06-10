@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "ddbf37f5-2421-4b97-b136-bcac7de7fcfd",
+    "prId" : 2490,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2490",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "9f88dd53-8056-47f9-b9bb-b23248a43b9e",
+        "parentId" : null,
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "Is it leftover from testing ?)",
+        "createdAt" : "2021-02-09T19:46:36Z",
+        "updatedAt" : "2021-02-10T18:07:56Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "28d0b7fc-5296-40ba-8140-b36b71fab894",
+        "parentId" : "9f88dd53-8056-47f9-b9bb-b23248a43b9e",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Actually no, it's needed to pass it as AnyRef. It's automatically converted to `java.lang.Integer`, but the compiler requires the annotation.",
+        "createdAt" : "2021-02-10T14:57:31Z",
+        "updatedAt" : "2021-02-10T18:07:56Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "35b8cef77f49a5dbfaea65336ba01706bc959133",
+    "line" : 42,
+    "diffHunk" : "@@ -1,1 +40,44 @@            params.getTextDocument().getUri(),\n            range.getLine(): java.lang.Integer,\n            range.getCharacter(): java.lang.Integer\n          )\n        )"
+  }
+]

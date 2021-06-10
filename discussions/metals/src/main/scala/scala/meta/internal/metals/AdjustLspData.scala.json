@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "faccf631-8eb5-4d64-9e9d-1bd39867f81b",
+    "prId" : 1972,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1972",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "cbd2d52b-4caf-4b53-9115-bdf2a23206fc",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This failed for any additional edits that were put into line 0.",
+        "createdAt" : "2020-08-05T21:30:38Z",
+        "updatedAt" : "2020-08-05T21:30:38Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "bf3746729a34caa3602fdfe79552925187a2b3b6",
+    "line" : 29,
+    "diffHunk" : "@@ -1,1 +62,66 @@  def create(f: Position => Position): AdjustLspData =\n    new AdjustLspData {\n      override def adjustPos(pos: Position): Position = {\n        val newPos = f(pos)\n        if (newPos.getLine() < 0)"
+  }
+]

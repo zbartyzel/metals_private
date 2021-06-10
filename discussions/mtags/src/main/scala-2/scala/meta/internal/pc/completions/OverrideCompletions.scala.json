@@ -1,0 +1,79 @@
+[
+  {
+    "id" : "1f04be4e-a012-4e56-9577-84d31ae59fe6",
+    "prId" : 2497,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2497",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "c8597146-fac1-44f0-8008-7d5f88adeeeb",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Without isStale, we would pick up classes that are no longer here. This actually showed up in `CompletionMatchSuite.stale2`, which seems to now have worked correctly.",
+        "createdAt" : "2021-02-11T19:45:19Z",
+        "updatedAt" : "2021-02-17T15:54:49Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a3da8a9cf97b46b15072db2b6898bb3237b2919c",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +190,194 @@      val history = new ShortenedNames(\n        lookupSymbol = { name =>\n          context.lookupSymbol(name, sym => !sym.isStale) :: Nil\n        },\n        config = renameConfig,"
+  },
+  {
+    "id" : "93e09da8-66a5-421d-b805-91d89049f589",
+    "prId" : 1762,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1762",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "07b815ff-2ddf-4629-a7d7-d3f6f93ed3be",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Will this work if we want to override lazy vals? They cannot be abstract but we can override them and this compilation is also used for non-abstract symbols.",
+        "createdAt" : "2020-05-18T17:02:57Z",
+        "updatedAt" : "2020-05-19T13:33:30Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "90fc79b2-70cf-45e0-88fe-e5d8d58e6b65",
+        "parentId" : "07b815ff-2ddf-4629-a7d7-d3f6f93ed3be",
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "lazy should be in modifs already, I wanted to just get rid of lzy and only use modifs but it is used to match against what user typed and matching against modifiers is probably not what user wants.\r\nGonna double check lazy is there :+1:",
+        "createdAt" : "2020-05-18T17:45:39Z",
+        "updatedAt" : "2020-05-19T13:33:30Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e8d83384-9973-44b4-a82d-f69112baa1eb",
+        "parentId" : "07b815ff-2ddf-4629-a7d7-d3f6f93ed3be",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Cool, let's add a test if there is none.",
+        "createdAt" : "2020-05-18T18:23:17Z",
+        "updatedAt" : "2020-05-19T13:33:30Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ff37843f-8b52-441e-831f-35ad51d83677",
+        "parentId" : "07b815ff-2ddf-4629-a7d7-d3f6f93ed3be",
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "yes, there is already a test :+1:\r\n```\r\n  checkEditLine(\r\n    \"lazy\",\r\n    \"\"\"|package q\r\n       |abstract class Val {\r\n       |  lazy val hello: Int = 2\r\n       |}\r\n       |class Main extends Val {\r\n       |   ___\r\n       |}\r\n       |\"\"\".stripMargin,\r\n    \"override val hel@@\",\r\n    \"override lazy val hello: Int = ${0:???}\"\r\n  )\r\n```",
+        "createdAt" : "2020-05-19T07:35:50Z",
+        "updatedAt" : "2020-05-19T13:33:30Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "154a1cb5e658d16597917aba8f7f326db0ade0f9",
+    "line" : 22,
+    "diffHunk" : "@@ -1,1 +245,249 @@      val filterText: String = s\"${overrideKeyword}${lzy}${keyword}${name}\"\n      val insertText: String =\n        s\"${overrideKeyword}${modifs}${keyword}${name}$signature\"\n\n      // if we had no val or def then filter will be empty"
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "d2bafad3-6081-4cb2-8ff3-1aae0b18d72e",
+    "prId" : 2586,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2586",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "71e668d4-00a9-46b0-9779-ba1b9569f11d",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Without this, when rename failed due to compilation errors it was difficult to recognize that.",
+        "createdAt" : "2021-03-09T16:19:17Z",
+        "updatedAt" : "2021-03-10T08:52:26Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d58a05d72a615e9338e2c28245343d6fa1d3aa30",
+    "line" : 34,
+    "diffHunk" : "@@ -1,1 +108,112 @@          }\n        }\n        _ = if (!expectedError) assertNoDiagnostics()\n        // change the code to make sure edit distance is being used\n        _ <- Future.sequence {"
+  }
+]

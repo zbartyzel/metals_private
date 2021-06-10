@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "245c8898-2206-44bb-b403-b63de67cdcfb",
+    "prId" : 294,
+    "prUrl" : "https://github.com/scalameta/metals/pull/294",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "66ca02bb-109a-4119-b74e-12dd11dd15ad",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "The \"N.B\" and \"troubleshooting tips\" links on this page give a 404\r\n\r\n```md\r\n***N.B.***  This project is still in development - right now you will need to run the VSCode plugin as described in the [contributing guide](../CONTRIBUTING.md#running-a-local-version-of-the-vscode-extension)\r\n\r\n...\r\n\r\n[**Troubleshooting tips**](../CONTRIBUTING.md#troubleshooting)\r\n```\r\n\r\nSeems we can remove them.",
+        "createdAt" : "2018-05-08T07:23:59Z",
+        "updatedAt" : "2018-05-08T16:31:25Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "55179d41-08d7-4c1e-a51b-1ae41e937520",
+        "parentId" : "66ca02bb-109a-4119-b74e-12dd11dd15ad",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Ah, yes, this was a leftover of the rebase. I'll remove/fix the links",
+        "createdAt" : "2018-05-08T16:21:42Z",
+        "updatedAt" : "2018-05-08T16:31:25Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c40a1413bb611d9c7cbe341adbcd54306b22398b",
+    "line" : 22,
+    "diffHunk" : "@@ -1,1 +21,25 @@\n```scala\naddSbtPlugin(\"org.scalameta\" % \"sbt-metals\" % \"@VERSION@\")\n```\n"
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "id" : "45cbb055-c821-4205-ba9e-ebd6c4e99a6a",
+    "prId" : 2605,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2605",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ca0b64e8-36dd-4e6b-bd4d-9a269694d1fd",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "That was actually a wrongly named method - `method:` should be wrapped in backticks, which it started doing.",
+        "createdAt" : "2021-03-15T11:28:44Z",
+        "updatedAt" : "2021-03-15T15:32:17Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "6f1a4c3242bb93ce1e872665b12ff3b7319d1c6b",
+    "line" : 20,
+    "diffHunk" : "@@ -1,1 +289,293 @@       |}\n       |\"\"\".stripMargin,\n    newName = \"+++:\"\n  )\n"
+  },
+  {
+    "id" : "dd97f897-1fc3-429d-aab4-5143e76d4dd5",
+    "prId" : 1499,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1499",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "d1f5f3a2-c33a-4503-ac78-43fef8cd68d0",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "\\o/",
+        "createdAt" : "2020-03-13T16:04:25Z",
+        "updatedAt" : "2020-03-13T16:48:15Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "13ab75c9-95c5-4a99-9f17-b6eea585d758",
+        "parentId" : "d1f5f3a2-c33a-4503-ac78-43fef8cd68d0",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "small victories :smile: ",
+        "createdAt" : "2020-03-13T16:11:01Z",
+        "updatedAt" : "2020-03-13T16:48:15Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "14d436243b78fc9282e7019b92aba5bd4c55b3c2",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +577,581 @@       |\n       |object Main {\n       |  val name1 = Name(<<value>> = \"42\")\n       |   .copy(<<value>> = \"43\")\n       |   .copy(<<value>> = \"43\")"
+  },
+  {
+    "id" : "e98539b5-e3c6-4dcd-ae03-a07048ccd822",
+    "prId" : 1095,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1095",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "991ecd42-1171-4202-96e6-a26cfd8b6eb8",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "What happens if you rename an `Animal` reference from another file?",
+        "createdAt" : "2019-12-01T21:04:45Z",
+        "updatedAt" : "2019-12-02T20:34:45Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "044d33dc-0f6d-4213-a6f7-f39685fd63b5",
+        "parentId" : "991ecd42-1171-4202-96e6-a26cfd8b6eb8",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "That works - I can add another test for that.",
+        "createdAt" : "2019-12-01T21:19:18Z",
+        "updatedAt" : "2019-12-02T20:34:45Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2b36e436-3674-4eb7-85ac-1c6de3d3786c",
+        "parentId" : "991ecd42-1171-4202-96e6-a26cfd8b6eb8",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "It would be good to add a test for this I think just in case.",
+        "createdAt" : "2019-12-02T11:07:41Z",
+        "updatedAt" : "2019-12-02T20:34:45Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "05735d05-550e-4c23-b6fd-bdef92ea5e77",
+        "parentId" : "991ecd42-1171-4202-96e6-a26cfd8b6eb8",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Added another case, fortunately works :sweat_smile: ",
+        "createdAt" : "2019-12-02T20:39:13Z",
+        "updatedAt" : "2019-12-02T20:39:13Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0cfe3c7e0b96620a4cdb9c4c993c7e3f984c8977",
+    "line" : 10,
+    "diffHunk" : "@@ -1,1 +398,402 @@       |import io.circe.generic.JsonCodec\n       |trait LivingBeing\n       |@JsonCodec sealed trait <<An@@imal>> extends LivingBeing\n       |object <<Animal>> {\n       |  case object Dog extends <<Animal>>"
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "23f4bf77-0e3f-498b-9f1a-705345999053",
+    "prId" : 1198,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1198",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "caf765a8-9574-46b1-b3b6-898e47727bed",
+        "parentId" : null,
+        "authorId" : "13e45e0d-7c54-4d12-8662-68857534b597",
+        "body" : "why not `map` for these case matches?",
+        "createdAt" : "2019-12-17T17:59:07Z",
+        "updatedAt" : "2019-12-17T17:59:07Z",
+        "lastEditedBy" : "13e45e0d-7c54-4d12-8662-68857534b597",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e8be2aae2bc2f9c0d85a0cc1f1fe7bdcddb946a4",
+    "line" : 51,
+    "diffHunk" : "@@ -1,1 +49,53 @@    case Obj(obj) =>\n      obj.get(\"globs\") match {\n        case Some(arr: Arr) =>\n          arr.value.iterator.collect {\n            case Str(glob) => glob"
+  }
+]

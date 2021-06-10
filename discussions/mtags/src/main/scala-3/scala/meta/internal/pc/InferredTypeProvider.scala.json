@@ -1,0 +1,57 @@
+[
+  {
+    "id" : "93d4b54d-60bd-400a-94ce-d40a995744ac",
+    "prId" : 2825,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2825",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b618b46b-83b7-4626-a2a2-daeee48b9e1b",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Same as the other comment, I'm assuming it's fine, but we don't need to worry about the `head` call here?",
+        "createdAt" : "2021-05-29T09:39:48Z",
+        "updatedAt" : "2021-05-29T09:45:16Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b2eeb089-3880-42a3-b111-c0d2e681bf02",
+        "parentId" : "b618b46b-83b7-4626-a2a2-daeee48b9e1b",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "We shouldn't need to worry, that head is the just parsed source file. We can add a check, but this is not the only place we are doing it and there seems to be no issues around it.",
+        "createdAt" : "2021-05-31T08:31:03Z",
+        "updatedAt" : "2021-05-31T08:31:03Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3147a5fa-f636-425c-8e27-2cacaaa40f40",
+        "parentId" : "b618b46b-83b7-4626-a2a2-daeee48b9e1b",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "No need to add a check then. I was just curious :)",
+        "createdAt" : "2021-05-31T08:33:09Z",
+        "updatedAt" : "2021-05-31T08:33:09Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a10814cf-8b0c-4acd-93d5-924e208d90de",
+        "parentId" : "b618b46b-83b7-4626-a2a2-daeee48b9e1b",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "And this is basically produced by `driver.run(uri, source)`",
+        "createdAt" : "2021-05-31T08:37:23Z",
+        "updatedAt" : "2021-05-31T08:37:24Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "4c925bb564b537775be70666582c8e6f17d58fd2",
+    "line" : 54,
+    "diffHunk" : "@@ -1,1 +52,56 @@    val source = SourceFile.virtual(filePath.toString, params.text)\n    driver.run(uri, source)\n    val unit = driver.currentCtx.run.units.head\n    val pos = driver.sourcePosition(params)\n    val path ="
+  }
+]

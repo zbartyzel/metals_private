@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "f8fcb99d-9409-47c3-9109-40ea6b6f33cf",
+    "prId" : 2098,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2098",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "50e50279-7317-4167-9b6f-c08b42b423a2",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "the unhandled \"left\" case is the deprecated `MarkedString | String` case, which we never produce",
+        "createdAt" : "2020-09-25T19:52:54Z",
+        "updatedAt" : "2020-09-25T19:52:54Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "9c565ab44e959a840cae1bd13a3d8a4487a7614b",
+    "line" : 27,
+    "diffHunk" : "@@ -1,1 +28,32 @@    hover match {\n      case Some(value) =>\n        val types = value.getContents.getRight.getValue()\n        val range = Option(value.getRange) match {\n          case Some(value) if includeRange =>"
+  }
+]

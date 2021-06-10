@@ -1,0 +1,123 @@
+[
+  {
+    "id" : "902416f2-5eb1-41fa-bff1-2d218330ca88",
+    "prId" : 1145,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1145",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "a5900a42-eb4e-4bf2-8495-a79d77cd25a9",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "`== BUILD` ?",
+        "createdAt" : "2019-12-05T10:47:48Z",
+        "updatedAt" : "2019-12-05T11:14:30Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3f61c411-a77d-4b48-a61d-fa4de942a3ce",
+        "parentId" : "a5900a42-eb4e-4bf2-8495-a79d77cd25a9",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Nevermind, found Marek's comment :sweat_smile: ",
+        "createdAt" : "2019-12-05T10:55:33Z",
+        "updatedAt" : "2019-12-05T11:14:30Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c032fa899f1747d53cf2025b6e1cf03227b19980",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +101,105 @@      }\n    def isBuild: Boolean =\n      file.filename.startsWith(\"BUILD\")\n    def isScalaOrJava: Boolean = {\n      toLanguage match {"
+  },
+  {
+    "id" : "3e3e5c88-59b2-4109-acdc-2ab6a801169c",
+    "prId" : 1041,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1041",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "caaa0c1a-ec06-4b5d-87f4-e280e6198345",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "I'm a bit confused in general on whether this feature supports `.sc` or `.worksheet.sc`.",
+        "createdAt" : "2019-11-04T12:09:30Z",
+        "updatedAt" : "2019-11-09T20:01:12Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8b5bd0ea-654e-4deb-81c9-a12dc267cf50",
+        "parentId" : "caaa0c1a-ec06-4b5d-87f4-e280e6198345",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Completions work in `*.sc` files even if they are not `*.worksheet.sc`. The \"eval on file save and display decorations\" feature only works for `*.worksheet.sc`",
+        "createdAt" : "2019-11-06T06:34:47Z",
+        "updatedAt" : "2019-11-09T20:01:12Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "308b029d-b1e2-4019-aa74-1f9b7da73171",
+        "parentId" : "caaa0c1a-ec06-4b5d-87f4-e280e6198345",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "The new `isScalaFilename` method name could make it clearer\r\n\r\n* \"scala filename\": completions/hover/... work\r\n* \"scala worksheet\": eval with mdoc and display decorations",
+        "createdAt" : "2019-11-06T06:35:29Z",
+        "updatedAt" : "2019-11-09T20:01:12Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a2902a65a77773398f8ac710483906215a06bcf8",
+    "line" : 9,
+    "diffHunk" : "@@ -1,1 +104,108 @@    def isScalaFilename: Boolean = {\n      extension match {\n        case \"scala\" | \"sc\" => true\n        case _ => false\n      }"
+  },
+  {
+    "id" : "15589d53-695b-431f-9178-389c6a048cb2",
+    "prId" : 621,
+    "prUrl" : "https://github.com/scalameta/metals/pull/621",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "fdc3bd09-cfd4-4a91-aa64-2a1a0b236bf1",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Can we introduce an overload instead `enclosesIncludingLastCharacter`?",
+        "createdAt" : "2019-04-02T14:26:39Z",
+        "updatedAt" : "2019-04-05T09:13:03Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d42b1496-c663-4d93-9eed-0339b51f5ed0",
+        "parentId" : "fdc3bd09-cfd4-4a91-aa64-2a1a0b236bf1",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "The problem is that that flag is introduced in a couple of methods on the way and not used directly in HighlightingProvider, so an additional metod doesn't help I think.",
+        "createdAt" : "2019-04-04T11:06:57Z",
+        "updatedAt" : "2019-04-05T09:13:03Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e5d3d923-f7be-4fb8-a2df-d3252a913795",
+        "parentId" : "fdc3bd09-cfd4-4a91-aa64-2a1a0b236bf1",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Sounds good 👍 ",
+        "createdAt" : "2019-04-05T07:39:09Z",
+        "updatedAt" : "2019-04-05T09:13:03Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "6f03d2264f9c4e8e28d2e258ca99d24915c82e17",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +203,207 @@      new l.Range(start, end)\n    }\n    def encloses(\n        other: l.Position,\n        includeLastCharacter: Boolean = false"
+  }
+]

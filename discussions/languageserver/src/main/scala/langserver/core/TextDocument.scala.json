@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "1aac0373-a9d7-45ae-9b14-44b3805a7120",
+    "prId" : 22,
+    "prUrl" : "https://github.com/scalameta/metals/pull/22",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "1d29a6ba-ceab-4fd0-8dcf-40318c230f4f",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I hadn't noticed this was implemented, we should use it instead of the buggy implementation I added on monday.",
+        "createdAt" : "2017-11-09T18:40:56Z",
+        "updatedAt" : "2017-11-09T18:47:55Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a1f90934-91a7-47f8-900c-954f808a178d",
+        "parentId" : "1d29a6ba-ceab-4fd0-8dcf-40318c230f4f",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Ah nice, it's the first time I notice it too!",
+        "createdAt" : "2017-11-09T18:51:08Z",
+        "updatedAt" : "2017-11-09T18:51:08Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f5a08cec9d466f68f9b683a3fae08d09b2b1025b",
+    "line" : 58,
+    "diffHunk" : "@@ -1,1 +56,60 @@   * Return the offset in the current document, for a given 0-based line/col position.\n   */\n  def positionToOffset(pos: Position): Int = {\n    val Position(line, col) = pos\n"
+  }
+]

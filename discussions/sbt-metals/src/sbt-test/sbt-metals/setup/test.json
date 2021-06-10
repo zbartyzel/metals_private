@@ -1,0 +1,57 @@
+[
+  {
+    "id" : "1932a1d5-be53-43fe-ba63-2464d34d5915",
+    "prId" : 268,
+    "prUrl" : "https://github.com/scalameta/metals/pull/268",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "3dbeb844-857e-42d3-a02d-4948dfeb1a8e",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "I would also test that metalsSetup enables semanticdb-scalac (probably running a compile and checking for the .semanticdb file)",
+        "createdAt" : "2018-04-08T21:03:13Z",
+        "updatedAt" : "2018-04-09T08:55:10Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "25bbbb39-53f3-411f-9280-58052bf17b7b",
+        "parentId" : "3dbeb844-857e-42d3-a02d-4948dfeb1a8e",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "`semanticdb-scalac` test does exactly this 👌 check also my comment above on why it's separate: https://github.com/scalameta/metals/pull/268#issuecomment-379579423 ",
+        "createdAt" : "2018-04-09T08:58:05Z",
+        "updatedAt" : "2018-04-09T08:58:05Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c0d54a94-e8c3-4dbe-823d-acdc2851a55a",
+        "parentId" : "3dbeb844-857e-42d3-a02d-4948dfeb1a8e",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "ah sorry, I missed that that test used `metalsSetup`. 👍 then",
+        "createdAt" : "2018-04-09T09:04:07Z",
+        "updatedAt" : "2018-04-09T09:04:07Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a3bf73d8-d761-49af-86f6-8f8b0b2eeb2d",
+        "parentId" : "3dbeb844-857e-42d3-a02d-4948dfeb1a8e",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "The tests naming could be improved, so suggestions are welcome 😉 ",
+        "createdAt" : "2018-04-09T09:05:16Z",
+        "updatedAt" : "2018-04-09T09:05:16Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "45a935487f9cef20c54bd959355900b832d644cd",
+    "line" : 2,
+    "diffHunk" : "@@ -1,1 +0,4 @@$ absent .metals/buildinfo/\n> metalsSetup\n$ exists .metals/buildinfo/setup/compile.properties\n$ exists .metals/buildinfo/setup/test.properties"
+  }
+]

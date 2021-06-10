@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "03db9d60-8392-406a-8887-7b2ea0b1b706",
+    "prId" : 158,
+    "prUrl" : "https://github.com/scalameta/metals/pull/158",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "74db58a0-dce1-49dd-81a0-6165221e52b8",
+        "parentId" : null,
+        "authorId" : "ef0069c2-046a-496d-a83f-80db27f0d990",
+        "body" : "Is this ok to have two streams to the same file?  I have never tried it,  but would have expected err and out to point to the same stream, instead of having two streams point to the same file.",
+        "createdAt" : "2017-12-23T16:08:40Z",
+        "updatedAt" : "2018-01-02T19:54:18Z",
+        "lastEditedBy" : "ef0069c2-046a-496d-a83f-80db27f0d990",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7c2082d6-08f6-4221-93c0-83c08063b2cf",
+        "parentId" : "74db58a0-dce1-49dd-81a0-6165221e52b8",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "This was already here, but it's a good question. I guess it's ok since it never gave us problems.",
+        "createdAt" : "2017-12-23T16:10:09Z",
+        "updatedAt" : "2018-01-02T19:54:18Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "affa2ea127de9483cd4eeda3dfcfcb3bb80a4322",
+    "line" : 12,
+    "diffHunk" : "@@ -1,1 +19,23 @@    Files.createDirectories(configDir)\n    val out = new PrintStream(new FileOutputStream(logFile))\n    val err = new PrintStream(new FileOutputStream(logFile))\n    val stdin = System.in\n    val stdout = System.out"
+  }
+]

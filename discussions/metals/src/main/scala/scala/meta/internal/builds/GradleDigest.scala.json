@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "c42f3656-d03b-4d32-93d1-1a45ddf3c83b",
+    "prId" : 889,
+    "prUrl" : "https://github.com/scalameta/metals/pull/889",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b7fc2a22-5936-419a-bf18-be78c830cea8",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "It would be nice to have the forall method in ListFiles, returning `true` doesn't look good.",
+        "createdAt" : "2019-09-02T09:18:00Z",
+        "updatedAt" : "2019-09-02T09:22:18Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1d94d47dda18e6abac0dc30392fcff0b3883fd5c",
+    "line" : 20,
+    "diffHunk" : "@@ -1,1 +27,31 @@\n  def digestBuildSrc(path: AbsolutePath, digest: MessageDigest): Boolean = {\n    WalkFiles.foreach(path) { file =>\n      Digest.digestFile(file, digest)\n    }"
+  }
+]

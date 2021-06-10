@@ -1,0 +1,101 @@
+[
+  {
+    "id" : "a409e16d-fcff-4918-890e-b3d93629627a",
+    "prId" : 71,
+    "prUrl" : "https://github.com/scalameta/metals/pull/71",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "9bb255b0-2757-4eb5-a25a-3b07fb16d3f0",
+        "parentId" : null,
+        "authorId" : "ef0069c2-046a-496d-a83f-80db27f0d990",
+        "body" : "Should these be objects? Unit like marker effects feel like singletons to me.",
+        "createdAt" : "2017-11-28T21:46:12Z",
+        "updatedAt" : "2017-11-29T07:02:11Z",
+        "lastEditedBy" : "ef0069c2-046a-496d-a83f-80db27f0d990",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ecf3acdc-bb56-4a9e-97d8-212bed6058b6",
+        "parentId" : "9bb255b0-2757-4eb5-a25a-3b07fb16d3f0",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "They're vals to avoid `PublishLinterDiagnostics.type`",
+        "createdAt" : "2017-11-28T21:48:47Z",
+        "updatedAt" : "2017-11-29T07:02:11Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "65b5d7df-bc44-480a-a0bf-c9fa4b4e79e3",
+        "parentId" : "9bb255b0-2757-4eb5-a25a-3b07fb16d3f0",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "But you can consider them as singleton objects",
+        "createdAt" : "2017-11-28T21:50:01Z",
+        "updatedAt" : "2017-11-29T07:02:11Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "365c6e95ebfe230b3ab154f12e2d85bab13e5136",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +17,21 @@  final val InstallPresentationCompiler = new InstallPresentationCompiler\n  final class PublishLinterDiagnostics extends Effects\n  final val PublishLinterDiagnostics = new PublishLinterDiagnostics\n}"
+  },
+  {
+    "id" : "66656dfa-d20a-4df3-a06f-cb27229dee5c",
+    "prId" : 23,
+    "prUrl" : "https://github.com/scalameta/metals/pull/23",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ca1d7df7-a0c3-4426-8a7c-e2bab1404be6",
+        "parentId" : null,
+        "authorId" : "ef0069c2-046a-496d-a83f-80db27f0d990",
+        "body" : "Love this. ",
+        "createdAt" : "2017-11-12T16:37:37Z",
+        "updatedAt" : "2017-11-14T20:08:40Z",
+        "lastEditedBy" : "ef0069c2-046a-496d-a83f-80db27f0d990",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1eac38c1-43ff-4c5b-b9e7-6c22b84b887f",
+        "parentId" : "ca1d7df7-a0c3-4426-8a7c-e2bab1404be6",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Poor man's type-safety. I refactored to this in fact because I hit on bugs related to accidentally creating `Observable[Observable[T]]` from a `.map` when I should have been using `.flatMap` to build `Observable[Unit]`",
+        "createdAt" : "2017-11-12T16:57:30Z",
+        "updatedAt" : "2017-11-14T20:08:40Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a076be6f-1bd0-45ae-874c-3eea62336fab",
+        "parentId" : "ca1d7df7-a0c3-4426-8a7c-e2bab1404be6",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "are these phantom types?",
+        "createdAt" : "2017-11-14T09:08:09Z",
+        "updatedAt" : "2017-11-14T20:08:40Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b2594c61-85c0-481f-9919-3f1d1231ba5a",
+        "parentId" : "ca1d7df7-a0c3-4426-8a7c-e2bab1404be6",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Not really since those values also exist at runtime. I'm still not sure if this was necessary, maybe we can avoid it by using stricter scalac options (no discard unit). However, I think it's a nice replacement for `Observable[Unit]`.",
+        "createdAt" : "2017-11-14T18:45:14Z",
+        "updatedAt" : "2017-11-14T20:08:40Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "5e9272f240feb4f00bdea5ee50e2808699cd0d0e",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +6,10 @@ * Observable[Unit] is not descriptive of what the observable represents.\n * Instead, we create Unit-like types to better document what effects are\n * flowing through our application.\n */\nsealed abstract class Effects"
+  }
+]

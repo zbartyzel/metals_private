@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "38737459-c07f-4461-92f0-46a8f0317e72",
+    "prId" : 1390,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1390",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "54e8cc31-54dd-4279-9daf-dc3b600a73a9",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "You can't see it without expanding, but this is in the `lsp-config-coc` case, so it will only be used there.",
+        "createdAt" : "2020-02-05T15:25:27Z",
+        "updatedAt" : "2020-02-07T19:17:04Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b9eb42a8dee6b90cc97fbb5ba687e303c6f5a5b8",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +63,67 @@               |```json\n               |{\n               |  \"metals.${option.camelCaseKey}\": \"${option.example}\"\n               |}\n               |```"
+  }
+]

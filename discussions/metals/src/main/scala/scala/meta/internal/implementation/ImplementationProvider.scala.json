@@ -1,0 +1,156 @@
+[
+  {
+    "id" : "3186c395-dd8d-49de-b43c-0eb91054758b",
+    "prId" : 1679,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1679",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "e11d85bb-80cd-430e-bfea-4a2c06122ee2",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This will duplicate the GlobalClassTable and use twice as much memory for workspace, it should only have one instance in the workspace.",
+        "createdAt" : "2020-04-30T10:52:12Z",
+        "updatedAt" : "2020-04-30T11:31:56Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8637917b-1899-44a0-934b-dda9c02e24d4",
+        "parentId" : "e11d85bb-80cd-430e-bfea-4a2c06122ee2",
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "good catch! as globalTable is available in ImplementationProvider I changed this to:\r\n`globalTable.globalSymbolTableFor(anyWorkspacePath)`",
+        "createdAt" : "2020-04-30T11:33:07Z",
+        "updatedAt" : "2020-04-30T11:33:07Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ef497ba77ea264fe4a0d730a77c5fc2bbf3dbb8e",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +93,97 @@      textDocument: TextDocument\n  ): String => Option[SymbolInformation] = {\n    lazy val global =\n      globalTable.globalSymbolTableFor(anyWorkspacePath)\n    val textSymbolsMap = textDocument.symbols.map(s => s.symbol -> s).toMap"
+  },
+  {
+    "id" : "cd48b492-1f62-47df-80cf-cbcb51df2cb6",
+    "prId" : 1487,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1487",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "c85e9b11-8de2-4acc-a9b6-3537f4559476",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "the path can already be resolved via `workspace.resolve(document.uri)` - not sure if we need the additional case class.",
+        "createdAt" : "2020-03-12T11:32:05Z",
+        "updatedAt" : "2020-03-24T16:45:28Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "55838e6c9f4127bc8d06a8d31a6df496a0b729a8",
+    "line" : 163,
+    "diffHunk" : "@@ -1,1 +373,377 @@      symbolDefinition <- findSymbolDefinition(symbol)\n      document <- findSemanticdb(symbolDefinition.path)\n    } yield TextDocumentWithPath(document, symbolDefinition.path)\n  }\n"
+  },
+  {
+    "id" : "fa4efd22-bc14-4b2c-9f35-bcb70fad004c",
+    "prId" : 962,
+    "prUrl" : "https://github.com/scalameta/metals/pull/962",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "a2d5ea11-c0e7-4ff2-8921-a63b405ea579",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Later when we look for the implementation we load semanticDB for the file and find occurence in `textDocument.occurences`, can the same situation happen there? If the annotation is on the implementing class? ",
+        "createdAt" : "2019-10-05T17:15:52Z",
+        "updatedAt" : "2019-10-05T19:47:45Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a3badfcb-3bc6-4bdf-aa2c-c5cce235a631",
+        "parentId" : "a2d5ea11-c0e7-4ff2-8921-a63b405ea579",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "ah, I think so. The occurrence of the sealed trait is not a \"definition\" anymore in that case (it's a \"reference\" IIRC). Can you think of a test case for stressing it?",
+        "createdAt" : "2019-10-05T17:28:27Z",
+        "updatedAt" : "2019-10-05T19:47:45Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a7ac7189-e077-4524-b7c6-898ccd7812f1",
+        "parentId" : "a2d5ea11-c0e7-4ff2-8921-a63b405ea579",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "That could be a modified test case in this PR I think:\r\n```\r\n    \"\"\"|/a/src/main/scala/a/Main.scala\r\n       |package a\r\n       |import io.circe.generic.JsonCodec\r\n       |trait Be@@ing\r\n       |@JsonCodec sealed trait <<Animal>> extends Being\r\n       |object Animal {\r\n       |  case object <<Dog>> extends Animal\r\n       |  case object <<Cat>> extends Animal\r\n       |}\r\n       |\"\"\".stripMargin\r\n```\r\n\r\nthis most likely will not find `Animal`",
+        "createdAt" : "2019-10-05T18:04:56Z",
+        "updatedAt" : "2019-10-05T19:47:45Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a712a8eb-4d85-4d16-a09c-89beae56d65f",
+        "parentId" : "a2d5ea11-c0e7-4ff2-8921-a63b405ea579",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "you're right, I've added the (now failed) test, so that we can work on this tomorrow.",
+        "createdAt" : "2019-10-05T18:12:17Z",
+        "updatedAt" : "2019-10-05T19:47:45Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "acb349e7-70a7-4c62-9e45-9dc62a56f04a",
+        "parentId" : "a2d5ea11-c0e7-4ff2-8921-a63b405ea579",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "ok, I've pushed a fix for that case too. There's indeed a lot of repetion and I hope we can come up with a more harmonized strategy for finding a definition of a symbol in the next days.",
+        "createdAt" : "2019-10-05T19:48:59Z",
+        "updatedAt" : "2019-10-05T19:48:59Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "89106124-c149-43cb-ae98-f4cf9f164b30",
+        "parentId" : "a2d5ea11-c0e7-4ff2-8921-a63b405ea579",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Thanks @gabro !",
+        "createdAt" : "2019-10-05T20:56:59Z",
+        "updatedAt" : "2019-10-05T20:56:59Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "995c18d3e0d073e1c66f1accaf5efc94a5889a07",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +92,96 @@        currentDocument\n      )\n      symbolOccurrence <- {\n        lazy val mtagsOccurrence = Mtags\n          .allToplevels(source.toInput)"
+  },
+  {
+    "id" : "fcb711f5-79d5-48d6-9b5a-c833b521fbfc",
+    "prId" : 962,
+    "prUrl" : "https://github.com/scalameta/metals/pull/962",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "9c889e29-f5af-4e47-9880-8945be038de6",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "```suggestion\r\n        def mtagsOccurrence = Mtags\r\n```",
+        "createdAt" : "2019-10-06T06:57:17Z",
+        "updatedAt" : "2019-10-06T06:59:05Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "995c18d3e0d073e1c66f1accaf5efc94a5889a07",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +93,97 @@      )\n      symbolOccurrence <- {\n        lazy val mtagsOccurrence = Mtags\n          .allToplevels(source.toInput)\n          .occurrences"
+  }
+]

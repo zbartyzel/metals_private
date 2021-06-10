@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "3ae476cc-3bc9-4ad8-85cb-ae865ff24bc7",
+    "prId" : 2417,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2417",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "0ae8f53f-898d-46c9-bc20-88eb3b63fd61",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "We should show message in this case, that the selected version is not supported.",
+        "createdAt" : "2021-01-27T15:37:23Z",
+        "updatedAt" : "2021-01-30T10:31:04Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "32d6010a-c7f1-4f44-b5f5-029dca3d2bc5",
+        "parentId" : "0ae8f53f-898d-46c9-bc20-88eb3b63fd61",
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "Added warning about that on `workspace/didChangeConfiguration`",
+        "createdAt" : "2021-01-28T16:24:51Z",
+        "updatedAt" : "2021-01-30T10:31:04Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c6afe8859884b58401f8d9fa587922f6b6dfa0c7",
+    "line" : 25,
+    "diffHunk" : "@@ -1,1 +23,27 @@      selected\n    else\n      ScalaVersions.recommendedVersion(selected)\n  }\n}"
+  }
+]

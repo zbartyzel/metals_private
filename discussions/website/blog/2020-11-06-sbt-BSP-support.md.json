@@ -1,0 +1,112 @@
+[
+  {
+    "id" : "2cf067fb-7709-4837-ac40-d1c788aefa1d",
+    "prId" : 2193,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2193",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "12778d22-fb6b-44f8-8cab-4a2ac949c9c2",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Good idea to mention the advisory board :ok_hand: ",
+        "createdAt" : "2020-11-06T12:33:54Z",
+        "updatedAt" : "2020-11-06T18:23:51Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e8eeb8d7-9dd3-4eb4-a44b-fca7e1b9ccdc",
+        "parentId" : "12778d22-fb6b-44f8-8cab-4a2ac949c9c2",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "👍 ha yes, trying to do my duty as a good board member and bring attention to it.",
+        "createdAt" : "2020-11-06T13:29:35Z",
+        "updatedAt" : "2020-11-06T18:23:51Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "9465b512192be55141b332758d81a422eae31bf1",
+    "line" : 12,
+    "diffHunk" : "@@ -1,1 +10,14 @@features, one of those being BSP support. This effort was initiated by community\nmembers and proposed to the [Scala Center Advisory\nBoard.](https://github.com/scalacenter/advisoryboard/blob/master/proposals/023-bsp.md).\nThen thanks to the work of [Adrien Piquerez](https://twitter.com/adrienpi2) and\n[Eugene Yokota](https://twitter.com/eed3si9n) BSP support became a reality in"
+  },
+  {
+    "id" : "f0b5e1b3-0bca-4fb4-8bd9-5f8e25c87911",
+    "prId" : 2193,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2193",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "af746cd0-9b3f-48ac-8a5b-2deff04839a2",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Could you maybe add titles to each icon?",
+        "createdAt" : "2020-11-06T13:05:52Z",
+        "updatedAt" : "2020-11-06T18:23:51Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "91b73b65-f111-4110-a3ef-dfafbc5a3426",
+        "parentId" : "af746cd0-9b3f-48ac-8a5b-2deff04839a2",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Yea sure, I added them in before each image.",
+        "createdAt" : "2020-11-06T13:42:26Z",
+        "updatedAt" : "2020-11-06T18:23:51Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "9465b512192be55141b332758d81a422eae31bf1",
+    "line" : 39,
+    "diffHunk" : "@@ -1,1 +37,41 @@typical example of this can be illustrated like so:\n\n![LSP BSP example](https://i.imgur.com/0RRUDlU.png)\n\nYou have your editor (Emacs) communicating with Metals via LSP, and then Metals"
+  },
+  {
+    "id" : "6c6ad803-b322-4110-ae44-c0947e11959e",
+    "prId" : 2193,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2193",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f3f6c3e3-e4ae-48de-8133-a72157ad7b1d",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "```suggestion\r\nhesitate to ask questions on our various channels, submit issues or create new\r\n```\r\n\r\nI did comment on this in a couple of places, but maybe it's my bad knowledge of the English language. Do we need a coma before `and` or `or` ?",
+        "createdAt" : "2020-11-06T13:18:02Z",
+        "updatedAt" : "2020-11-06T18:23:51Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9d751ce0-56f7-4df7-80ba-9f9fa156a2b2",
+        "parentId" : "f3f6c3e3-e4ae-48de-8133-a72157ad7b1d",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Welcome to the oxford comma debate. https://www.grammarly.com/blog/oxford-comma-debate/\r\n\r\nIn short, both are correct 😆 ",
+        "createdAt" : "2020-11-06T13:38:18Z",
+        "updatedAt" : "2020-11-06T18:23:51Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "260ea1c2-bdc1-4c72-9ad4-2b8e33f4c01b",
+        "parentId" : "f3f6c3e3-e4ae-48de-8133-a72157ad7b1d",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Och no... :(",
+        "createdAt" : "2020-11-06T18:07:39Z",
+        "updatedAt" : "2020-11-06T18:23:51Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "9465b512192be55141b332758d81a422eae31bf1",
+    "line" : 149,
+    "diffHunk" : "@@ -1,1 +147,151 @@curious about the implementation details, much of the work was done in [this\npr](https://github.com/scalameta/metals/pull/2154). As always please don't\nhesitate to ask questions on our various channels, submit issues, or create new\nfeature requests."
+  }
+]

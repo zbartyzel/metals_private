@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "6e6f09ba-9749-40ae-b01c-f239097e3004",
+    "prId" : 763,
+    "prUrl" : "https://github.com/scalameta/metals/pull/763",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "dcadf591-1f55-4d3a-8a1f-b2466ad89dc4",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : ":+1:\r\n",
+        "createdAt" : "2019-06-18T09:20:58Z",
+        "updatedAt" : "2019-06-18T18:13:44Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8b8f8c663ffe7481455869fe747514f96e7e658b",
+    "line" : 47,
+    "diffHunk" : "@@ -1,1 +93,97 @@        Dependency(\n          mod\"org.scala-lang:scala-library\",\n          // NOTE(gabro): we should ideally just use BuildoInfoVersions.scalaVersion\n          // but using the 2.11 stdlib would cause a lot tests to break for little benefit.\n          // We can remove this switch once we drop support for 2.11"
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "id" : "d6b0a4ab-2154-46c9-ba8b-53bb4631e843",
+    "prId" : 2364,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2364",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "d37571f1-a649-4109-b350-db570181b10a",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "These changes do not seem to be related, why is it needed?",
+        "createdAt" : "2021-01-04T16:50:27Z",
+        "updatedAt" : "2021-01-04T16:51:26Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ece30d8a-a129-412d-9ae6-297f183ec905",
+        "parentId" : "d37571f1-a649-4109-b350-db570181b10a",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "So it's not _needed_ per se, but when you run docusaurus locally it generates all the i18n stuff for the various pages. Last time when I was moving stuff around I must have not ran it again for these last two, so they were never created. So I didn't do anything to create these apart from just building the website.",
+        "createdAt" : "2021-01-04T17:20:13Z",
+        "updatedAt" : "2021-01-04T17:20:13Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b5fb327647dbb43bcd6991c1c863dc85c8f7597e",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +102,106 @@        \"title\": \"Tree View Protocol\"\n      },\n      \"lsp-extensions/debug-adapter-protocol\": {\n        \"title\": \"Debug Adapter Protocol\",\n        \"sidebar_label\": \"Debug Adapter Protocol\""
+  },
+  {
+    "id" : "679a9abc-7376-43ec-b485-db5670eb1a43",
+    "prId" : 2234,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2234",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "67c5586f-6c10-4eca-8b2e-4fb96e3c5fb7",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I think lsp-extensions and integrations are pretty similar. Integrating a new editor for example might need to implement some of the extensions. I would keep it all under `integrations`",
+        "createdAt" : "2020-11-16T13:38:12Z",
+        "updatedAt" : "2020-11-16T14:22:31Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "68351807-534c-4d5f-8ee1-70d1dc9bc31b",
+        "parentId" : "67c5586f-6c10-4eca-8b2e-4fb96e3c5fb7",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Sounds good. I moved them all under integrations.",
+        "createdAt" : "2020-11-16T14:17:58Z",
+        "updatedAt" : "2020-11-16T14:22:31Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3875f0f0c61106789e6448888fb069895d985a4f",
+    "line" : 25,
+    "diffHunk" : "@@ -1,1 +105,109 @@        \"title\": \"Tree View Protocol\"\n      },\n      \"lsp-extensions/debug-adapter-protocol\": {\n        \"title\": \"Debug Adapter Protocol\",\n        \"sidebar_label\": \"Debug Adapter Protocol\""
+  },
+  {
+    "id" : "d30174b5-48b2-4b8e-98fb-2ac28899e583",
+    "prId" : 1584,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1584",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "da976282-ba9d-4e8f-a185-0c74166e830b",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "😬 thanks for this!",
+        "createdAt" : "2020-04-06T08:15:00Z",
+        "updatedAt" : "2020-04-08T10:30:39Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ba70749edb494f6da26064369a549085fcb87161",
+    "line" : 15,
+    "diffHunk" : "@@ -1,1 +57,61 @@      },\n      \"editors/decoration-protocol\": {\n        \"title\": \"Decoration Protocol v0.2.0\",\n        \"sidebar_label\": \"Decoration Protocol\"\n      },"
+  }
+]

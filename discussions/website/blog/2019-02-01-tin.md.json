@@ -1,0 +1,46 @@
+[
+  {
+    "id" : "f5516888-0e38-448e-8dc8-cf54a7cadf93",
+    "prId" : 514,
+    "prUrl" : "https://github.com/scalameta/metals/pull/514",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "a2ddd6e3-b671-44a3-8901-d3436a3e8755",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Maybe it's worth to mention the potential drawbacks of this approach? Like the chance of missing file events if those directories are created after?",
+        "createdAt" : "2019-02-01T15:05:48Z",
+        "updatedAt" : "2019-02-01T15:17:54Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "952f2b88-04c1-4cc1-a436-6522df7e195b",
+        "parentId" : "a2ddd6e3-b671-44a3-8901-d3436a3e8755",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I believe the cases the current approach will fail are rare enough that it won't make a difference to mention it here. The general troubleshooting advice \"Run 'connect to build server'\" fixes this issue along with other similar issue (that we're not aware of).",
+        "createdAt" : "2019-02-01T15:10:51Z",
+        "updatedAt" : "2019-02-01T15:17:54Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d62aacf4-896b-4e40-8b37-f5675440f9fb",
+        "parentId" : "a2ddd6e3-b671-44a3-8901-d3436a3e8755",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Fair enough 👍 ",
+        "createdAt" : "2019-02-01T15:11:18Z",
+        "updatedAt" : "2019-02-01T15:17:54Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "160385e2111f0affa85318e01d1b296678582c93",
+    "line" : 38,
+    "diffHunk" : "@@ -1,1 +36,40 @@directories but removes them again after the file watcher has started. Big\nthanks to first-time contributor [@mudsam](https://github.com/mudsam) for\nimplementing this fix!\n\n### Multiple workspace folders"
+  }
+]

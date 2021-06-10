@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "9e9fe7c3-5aef-46b6-8ce1-f910e94398d1",
+    "prId" : 1677,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1677",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "9c4beda6-d7fc-49df-bf91-b7cc0a27dd78",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Not 100% sure about this solution, need to test it with another BSP server.",
+        "createdAt" : "2020-04-29T17:17:54Z",
+        "updatedAt" : "2020-05-04T13:57:13Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f5457e24-c6f8-469f-9f91-3fd810a14da7",
+        "parentId" : "9c4beda6-d7fc-49df-bf91-b7cc0a27dd78",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Added a test for it in Bill Suite, seems to work pretty well.",
+        "createdAt" : "2020-04-30T08:42:57Z",
+        "updatedAt" : "2020-05-04T13:57:13Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "38751291a84f683f8d8eb60ed8a73ce8657936c9",
+    "line" : 24,
+    "diffHunk" : "@@ -1,1 +75,79 @@      val finished = Promise[Unit]()\n      Future {\n        process.waitFor()\n        finished.success(())\n      }"
+  },
+  {
+    "id" : "b22d951b-971a-4884-8696-f94bfbf9e44c",
+    "prId" : 1266,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1266",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "43bae5b3-3223-46cb-95e9-c47a717a73c4",
+        "parentId" : null,
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "creating connection cannot fail?",
+        "createdAt" : "2020-01-09T10:14:39Z",
+        "updatedAt" : "2020-01-09T19:41:06Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2e3fade8-49f9-42ce-bef7-aa507c69b28e",
+        "parentId" : "43bae5b3-3223-46cb-95e9-c47a717a73c4",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "It's just creating a case class.",
+        "createdAt" : "2020-01-09T12:17:15Z",
+        "updatedAt" : "2020-01-09T19:41:06Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0f92bf439ec2e556ef2dd37eb204d08963b7f24b",
+    "line" : 46,
+    "diffHunk" : "@@ -1,1 +71,75 @@      )\n\n      Future.successful {\n        SocketConnection(\n          details.getName(),"
+  }
+]

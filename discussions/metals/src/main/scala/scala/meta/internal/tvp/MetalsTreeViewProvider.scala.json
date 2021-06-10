@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "4e4e6b8d-eb5a-4891-af34-fe4f6e27a589",
+    "prId" : 2242,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2242",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "5ed9c1d6-f4a5-4970-bd2d-4eb200e6070b",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Should be good for a quick fix for sure. I haven't been able to take a proper look here, but I think this is perfectly fine.",
+        "createdAt" : "2020-11-17T16:53:15Z",
+        "updatedAt" : "2020-11-17T16:53:22Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "85e1ce8fe4fcca6f1338cc33c5113442580d741d",
+    "line" : 15,
+    "diffHunk" : "@@ -1,1 +69,73 @@    },\n    { (id, symbol) =>\n      if (isBloop()) doCompile(id)\n      buildTargets.scalacOptions(id) match {\n        case None =>"
+  }
+]

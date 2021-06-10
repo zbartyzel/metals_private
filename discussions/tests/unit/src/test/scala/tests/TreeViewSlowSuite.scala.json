@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "bc82b59d-b315-4936-bf9f-d6d51b9df925",
+    "prId" : 797,
+    "prUrl" : "https://github.com/scalameta/metals/pull/797",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "4657f4cc-3515-4a9a-9d0f-204b916c78e2",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "This test suite doesn't stress yet the \"did change\" notifications. I'm not sure yet if it's worth the effort, we similarly don't have many automated tests for features like the doctor. I feel like it might be good to test a few workflows however:\r\n\r\n- importing a build triggers a reload on project and library explorers\r\n- compiling a source triggers a reload on the project explorer for that given build target\r\n- dynamic compile progress updates should not be sent when the compile view is not visible",
+        "createdAt" : "2019-06-26T19:48:49Z",
+        "updatedAt" : "2019-06-28T12:28:04Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a43e250d79a91a6cadd98f502fb91b0993c3b5d8",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +3,7 @@import scala.meta.internal.tvp.TreeViewProvider\n\nobject TreeViewSlowSuite extends BaseSlowSuite(\"tree-view\") {\n  testAsync(\"projects\") {\n    cleanWorkspace()"
+  }
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "id" : "8c4141b7-1c6a-4c9d-83f7-bf390352af48",
+    "prId" : 1145,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1145",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "65a9575f-d5db-4d08-99b4-8776ac4f13aa",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I think this is not needed.",
+        "createdAt" : "2019-12-04T18:20:43Z",
+        "updatedAt" : "2019-12-05T11:14:30Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0c12ec0a-6817-43f4-a3d9-a0348acf5ce4",
+        "parentId" : "65a9575f-d5db-4d08-99b4-8776ac4f13aa",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "It's needed in the final version of the file",
+        "createdAt" : "2019-12-05T11:25:04Z",
+        "updatedAt" : "2019-12-05T11:25:04Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c032fa899f1747d53cf2025b6e1cf03227b19980",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +4,8 @@import scala.meta.io.AbsolutePath\nimport scala.meta.internal.metals.MetalsEnrichments._\nimport scala.meta.io.AbsolutePath\n\nobject MavenDigest extends Digestable {"
+  },
+  {
+    "id" : "ff402b81-d1e1-41f5-97f2-2d342b46665c",
+    "prId" : 889,
+    "prUrl" : "https://github.com/scalameta/metals/pull/889",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "7d85f430-8ed5-482b-aca0-32d444d8bdcc",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Also here it would be nicer to just have forall. ",
+        "createdAt" : "2019-09-02T09:18:49Z",
+        "updatedAt" : "2019-09-02T09:22:18Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1d94d47dda18e6abac0dc30392fcff0b3883fd5c",
+    "line" : 20,
+    "diffHunk" : "@@ -1,1 +12,16 @@  ): Boolean = {\n    Digest.digestFile(workspace.resolve(\"pom.xml\"), digest)\n    WalkFiles.foreach(workspace) { file =>\n      if (file.filename == \"pom.xml\") {\n        Digest.digestFile(file, digest)"
+  }
+]

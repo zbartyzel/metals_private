@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "8f3db1ae-60e8-447e-87b2-30397c3433f3",
+    "prId" : 2088,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2088",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "14545853-20ae-4114-b93d-744702dbca67",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "So this was causing issues where if I was trying to do `p@@` to complete package, the lsp edit position start was never 0 here if you were on line 0 and character 1. It was returning an edit with the start and end in the same position causing the edit to append to the previous character instead of replace.",
+        "createdAt" : "2020-09-21T16:06:31Z",
+        "updatedAt" : "2020-10-01T13:28:23Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "17cdafc208f0d4c3c6e79dc070909630cdd917c6",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +740,744 @@    def fallback: Int = {\n      var i = pos.point - 1\n      while (i >= 0 && Chars.isIdentifierPart(text.charAt(i))) {\n        i -= 1\n      }"
+  }
+]

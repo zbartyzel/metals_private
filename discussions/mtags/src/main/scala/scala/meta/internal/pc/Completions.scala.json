@@ -1,0 +1,167 @@
+[
+  {
+    "id" : "3446d49e-ee44-4984-9af0-009ca54eb03b",
+    "prId" : 1250,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1250",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b624976e-0327-48df-9b96-6190a00a96b7",
+        "parentId" : null,
+        "authorId" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "body" : "Removed a `sealed` modifier to split `Scaladoc` related logic into another file.\r\nI think we cannot avoid removing this for splitting each CompletionPosition logics into other files, and IMO it's ok with removing this modifier because we don't use exhaustive match for CompletionPosition 🤔 ",
+        "createdAt" : "2020-01-09T12:43:52Z",
+        "updatedAt" : "2020-01-13T13:44:04Z",
+        "lastEditedBy" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cf8e6070092ac693251e01568b009a7f1bfce601",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +337,341 @@  // implementation of `completionsAt(pos)`.\n  var lastVisistedParentTrees: List[Tree] = Nil\n  abstract class CompletionPosition {\n    def isType: Boolean = false\n    def isNew: Boolean = false"
+  },
+  {
+    "id" : "347db836-c4a6-4f4d-a85a-032122a7e6c4",
+    "prId" : 1057,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1057",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "5ccd46c2-0a00-48c8-a753-0cff3e62cb1c",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "this disables the `Autofill with default values` completion when the client does not support snippets, as per @tgodzik. Please review that it makes sense and that we can't find a good completion that works without snippets",
+        "createdAt" : "2019-11-11T14:28:47Z",
+        "updatedAt" : "2019-11-11T14:41:31Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9141d16b-b402-45dd-9d29-12c21fe61db1",
+        "parentId" : "5ccd46c2-0a00-48c8-a753-0cff3e62cb1c",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Let's disable it for now, I will think it over to see if it makes sense without the snippets.",
+        "createdAt" : "2019-11-11T20:34:25Z",
+        "updatedAt" : "2019-11-11T20:39:14Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "03c3f686dd1789f90cd4b4dd18b979160753abb7",
+    "line" : 37,
+    "diffHunk" : "@@ -1,1 +990,994 @@        val isExplicitlyCalled = suffix.startsWith(prefix)\n        val hasParamsToFill = allParams.count(!_.hasDefault) > 1\n        if ((shouldShow || isExplicitlyCalled) && hasParamsToFill && clientSupportsSnippets) {\n          val editText = allParams.zipWithIndex\n            .collect {"
+  },
+  {
+    "id" : "0eab6d1e-88c5-49e6-8526-ae80a2916e8c",
+    "prId" : 1057,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1057",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ffce5900-0f71-45f7-b7bf-0f2077637430",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "avoid the braces if we have no snippets. Inserting braces will result in a cursor out of place (`{}<CURSOR>`), which seems bad.",
+        "createdAt" : "2019-11-11T14:29:45Z",
+        "updatedAt" : "2019-11-11T14:41:31Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6318ce9c-3a91-452c-994a-e59f3ecb7323",
+        "parentId" : "ffce5900-0f71-45f7-b7bf-0f2077637430",
+        "authorId" : "5aa5edaf-106f-4908-af16-f3f311fb1590",
+        "body" : "From my point of view, it is bad to end up with `foo{}<CURSOR>` after completion. I ran into a similar case with Apple's swift server and it forced me to do [this](https://github.com/bstaletic/ycmd/blob/swift/ycmd/completers/swift/swift_completer.py#L106-L110) - overriding completion algorithm for swift to strip `()` from `foo()`, even if there's something in between `(` and `)`.",
+        "createdAt" : "2019-11-11T14:41:50Z",
+        "updatedAt" : "2019-11-11T14:41:50Z",
+        "lastEditedBy" : "5aa5edaf-106f-4908-af16-f3f311fb1590",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0058ae7e-80b8-4347-86b0-e1eb4415d128",
+        "parentId" : "ffce5900-0f71-45f7-b7bf-0f2077637430",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "thanks for the feedback! I'm actively avoiding that pattern, except in some cases where the completion is still very useful and/or it's opt-in (e.g. it's not the default case)",
+        "createdAt" : "2019-11-11T14:44:27Z",
+        "updatedAt" : "2019-11-11T14:44:27Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "03c3f686dd1789f90cd4b4dd18b979160753abb7",
+    "line" : 62,
+    "diffHunk" : "@@ -1,1 +1271,1275 @@              \"match {\\n\\tcase$0\\n}\"\n            } else {\n              \"match\"\n            }\n          ),"
+  },
+  {
+    "id" : "df512c19-ad21-451d-bca9-570ff5b287c2",
+    "prId" : 1057,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1057",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "817686a4-9149-472f-9594-178ef6eead06",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "not brilliant, but again, it's opt-in.",
+        "createdAt" : "2019-11-11T14:32:27Z",
+        "updatedAt" : "2019-11-11T14:41:31Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "03c3f686dd1789f90cd4b4dd18b979160753abb7",
+    "line" : 87,
+    "diffHunk" : "@@ -1,1 +1427,1431 @@            new l.TextEdit(\n              editRange,\n              if (clientSupportsSnippets) \"case ($0) =>\" else \"case () =>\"\n            ),\n            parents.selector.typeSymbol,"
+  },
+  {
+    "id" : "c4457247-b6e6-4345-9599-15d516ca2f70",
+    "prId" : 1056,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1056",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "9757685f-8a97-4667-964c-267b2aecb5ad",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "`vars` are not stable symbols, but we can still override them in some cases",
+        "createdAt" : "2019-11-10T10:57:54Z",
+        "updatedAt" : "2019-11-10T10:59:05Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cfc8b62667af7d1b6a67f9855fbaa83c52772c72",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +453,457 @@          text,\n          valdef.pos.start,\n          _ => true\n        )\n      case (m @ Match(_, Nil)) :: parent :: _ =>"
+  },
+  {
+    "id" : "a4ee8088-2ae0-4606-b1d3-ec886804c1c2",
+    "prId" : 1056,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1056",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "281d0985-cbb4-46b3-bdf6-03af7e5ce7f4",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "allow overriding vars, but only if they're abstract",
+        "createdAt" : "2019-11-10T11:12:06Z",
+        "updatedAt" : "2019-11-10T11:34:28Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cfc8b62667af7d1b6a67f9855fbaa83c52772c72",
+    "line" : 28,
+    "diffHunk" : "@@ -1,1 +1095,1099 @@        !sym.name.endsWith(CURSOR) &&\n        !sym.isConstructor &&\n        (!isVarSetter(sym) || (isVarSetter(sym) && sym.isAbstract)) &&\n        !sym.isSetter &&\n        isCandidate(sym)"
+  }
+]

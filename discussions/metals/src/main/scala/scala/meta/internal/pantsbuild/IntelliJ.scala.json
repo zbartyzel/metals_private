@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "bcdbf59b-c03c-457e-a10d-f2b8eeb1ccf8",
+    "prId" : 1506,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1506",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f788a401-7391-4ff2-b478-fefa24cc21a1",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "We need `-r sonatype:snapshots` for nightly builds to resolve correctly",
+        "createdAt" : "2020-03-18T11:40:27Z",
+        "updatedAt" : "2020-03-19T15:52:39Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "9624ad1f528eddc1d39ff76d077941c2bacadfaf",
+    "line" : 39,
+    "diffHunk" : "@@ -1,1 +92,96 @@      coursier.toString,\n      \"launch\",\n      s\"org.scalameta:metals_2.12:${V.metalsVersion}\",\n      \"-r\",\n      \"sonatype:snapshots\","
+  }
+]

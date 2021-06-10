@@ -1,0 +1,167 @@
+[
+  {
+    "id" : "92881da5-3aaa-4004-8a89-d00bba59ea20",
+    "prId" : 2532,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2532",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "cfc45681-a01e-4d09-bf9d-527efaf5b7eb",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Why not jsut add nullable/optional fields to DebugUnresolvedMainClassParams  and DebugUnresolvedTestClassParams ?",
+        "createdAt" : "2021-02-24T11:45:01Z",
+        "updatedAt" : "2021-03-08T13:25:41Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "754e0efb-c66f-46ad-8525-c17a942a9578",
+        "parentId" : "cfc45681-a01e-4d09-bf9d-527efaf5b7eb",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Yea true I'll try doing that.",
+        "createdAt" : "2021-02-24T12:00:56Z",
+        "updatedAt" : "2021-03-08T13:25:41Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c7863647-3a03-4d91-a1c3-be4b5b58b5bc",
+        "parentId" : "cfc45681-a01e-4d09-bf9d-527efaf5b7eb",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Alright, so I've been playing around with this a bit, and I'm getting pretty convinced that just adding some more `@Nullable` fields here isn't the answer. It adds way more complexity in trying to handle all of the various cases, and I'm finding it way easier to manage to just have another case class for it. Just to give a small example:\r\n\r\n### Current\r\n```\r\ncase class DebugUnresolvedTestClassParams(\r\n    testClass: String,\r\n    @Nullable buildTarget: String = null\r\n)\r\n```\r\n\r\n### Possible new\r\n```\r\ncase class DebugUnresolvedTestClassParams(\r\n    @Nullable testClass: String,\r\n\t@Nullable path: String,\r\n    @Nullable testType: String,\r\n    @Nullable buildTarget: String = null\r\n)\r\n```\r\nApart from not loving having every field nullable, you get into all sorts of interesting things that we have to handle server side. What if `testType` is set to `testTarget` and you are provided with a `testClass` that doesn't fit that target. What if for type you pass in `testTarget`, but then you pass in a `path` in one target and the `buildTarget` for another target. There are just so many possiblities that you end up making really strict rules on how they are all handled, but then you lose all that info since it's all contained in a class with all nullable fields. I think having a new class for the discover `DebugFullyUnresolvedParams` for this just makes it way cleaner on the server side. I'm open to maybe trying to figure this out more, but I'm not seeing the benefit of having to change the current functionality to account for the new nullables, and also account for all the crazy cases with the class having every field nullable vs just having a separate class for it. wdyt?",
+        "createdAt" : "2021-02-25T09:07:28Z",
+        "updatedAt" : "2021-03-08T13:25:41Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e5bcb180-9e2c-4052-8af9-f6155d3fceb6",
+        "parentId" : "cfc45681-a01e-4d09-bf9d-527efaf5b7eb",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "It it all becomes much more complex because of the change then sure, I agree it might be beneficial to have a separate class. I just thought it might work better for the existing client implementations, but I haven't dug much into it.",
+        "createdAt" : "2021-02-25T10:17:04Z",
+        "updatedAt" : "2021-03-08T13:25:41Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "23bedef101619ed619520c4b121ecae6c358d874",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +437,441 @@\ncase class DebugDiscoveryParams(\n    path: String,\n    runType: String,\n    @Nullable args: java.util.List[String] = null,"
+  },
+  {
+    "id" : "b283d66a-3ee2-44f2-9126-ef0236ba4a25",
+    "prId" : 2532,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2532",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "e143bc21-af8c-4a0c-8732-2100597c4192",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I've been thinking about adding a Position here to be able to run a specific test based on the current cursor position. We could use slightly modified `ClassFinder` for that instead of semanticdb. It would also allow us not to ask for a specific main class, but just run the one the cursor is at. However, that probably doesn't make sense until we are able to run a single test case. Multiple main classes are not that common and usually it's one test per file. We should probably go through related feature requests after merging this and close them or comment about what is the current status.\r\n\r\n",
+        "createdAt" : "2021-03-04T10:59:23Z",
+        "updatedAt" : "2021-03-08T13:25:41Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a19a04d2-4efd-463f-97a7-ff1dbe05036b",
+        "parentId" : "e143bc21-af8c-4a0c-8732-2100597c4192",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Yea for sure, I think once we can get this across the finish line, use it a bit, then we can start to fine tune what makes the most sense, and add more on top of it. That's my hope anyway.",
+        "createdAt" : "2021-03-04T21:32:26Z",
+        "updatedAt" : "2021-03-08T13:25:41Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "23bedef101619ed619520c4b121ecae6c358d874",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +436,440 @@)\n\ncase class DebugDiscoveryParams(\n    path: String,\n    runType: String,"
+  },
+  {
+    "id" : "a0babe77-5662-41eb-a456-d459da4ee0f5",
+    "prId" : 2075,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2075",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "91c1ab79-33dd-49d6-9ddd-d5bd657a13de",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "We actually had this just as a string before, when in reality this as an Array with a URI in the first position and a filename in the second position.",
+        "createdAt" : "2020-09-17T16:21:06Z",
+        "updatedAt" : "2020-09-17T19:56:13Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "42aceb96ae53255c6f79a177b0a6944f072a9689",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +256,260 @@       |Note: requires 'metals/inputBox' capability from language client.\n       |\"\"\".stripMargin,\n    \"\"\"|[string[]], where the first is a directory location for the new file.\n       |The second and third positions correspond to the file name and file type to allow for quick\n       |creation of a file if all are present."
+  },
+  {
+    "id" : "92704c87-4613-45c7-9fc1-52ac8dc74b75",
+    "prId" : 1339,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1339",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b6a21877-75e2-4dd0-a908-666e051879bd",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "We should be able to just pack it into Option? Or is it a gson limitation?",
+        "createdAt" : "2020-02-05T11:34:41Z",
+        "updatedAt" : "2020-02-06T14:07:14Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "88ba5521-6f7f-4d08-85e6-dae404ceb4b3",
+        "parentId" : "b6a21877-75e2-4dd0-a908-666e051879bd",
+        "authorId" : "58f39866-9870-40fc-83e0-d68edbbcb6f7",
+        "body" : "I just followed other params case class declaration, like `MetalsStatusParams`. I would guess, it's a lsp4j limitation, not sure. Maybe @olafurpg  can comment on this ?\r\nThen I do `Option(directory)`, yes.",
+        "createdAt" : "2020-02-05T11:41:58Z",
+        "updatedAt" : "2020-02-06T14:07:14Z",
+        "lastEditedBy" : "58f39866-9870-40fc-83e0-d68edbbcb6f7",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3afaf5b6-c5e3-43fd-b872-797d5d1b3db5",
+        "parentId" : "b6a21877-75e2-4dd0-a908-666e051879bd",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "We're using gson to serialize to JSON and I think you need custom gson adapters to support `Option[T]`",
+        "createdAt" : "2020-02-06T14:01:56Z",
+        "updatedAt" : "2020-02-06T14:07:14Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1cfa92e1-2b23-48cb-b026-7b87397d480d",
+        "parentId" : "b6a21877-75e2-4dd0-a908-666e051879bd",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "The `@Nullable` annotation isn't required, but I used it to document field where I would have preferred to use `Option[T]`",
+        "createdAt" : "2020-02-06T14:02:23Z",
+        "updatedAt" : "2020-02-06T14:07:14Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f1e1175d6c0f716c374b1bc575ac9a28a3290743",
+    "line" : 42,
+    "diffHunk" : "@@ -1,1 +223,227 @@\ncase class MetalsNewScalaFileParams(\n    @Nullable directory: String,\n    name: String,\n    kind: String"
+  }
+]

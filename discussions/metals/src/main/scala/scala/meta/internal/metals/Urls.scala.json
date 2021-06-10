@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "8becbf65-6e42-4b99-b4ab-c9a59e8c1bb4",
+    "prId" : 369,
+    "prUrl" : "https://github.com/scalameta/metals/pull/369",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f71cab55-135e-48f7-b57f-cdfc16fcc4aa",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Cool, I didn't know about that one 👍 ",
+        "createdAt" : "2018-12-01T22:24:31Z",
+        "updatedAt" : "2018-12-01T22:24:40Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ae07c23bee953261a3de7387b708fd0856b3bcde",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +22,26 @@        s\"open $url\".!!\n      } else if (Desktop.isDesktopSupported &&\n        Desktop.getDesktop.isSupported(BROWSE)) {\n        Desktop.getDesktop.browse(URI.create(url))\n      } else if (Properties.isLinux) {"
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "8da737a4-e800-4b17-b88a-ca2b26813995",
+    "prId" : 2345,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2345",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "df5a6eee-f555-4fb3-998f-afde63f519d8",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This is needed to link worksheets to dependency sources that were opened by them. This would not work properly before.",
+        "createdAt" : "2020-12-29T15:38:30Z",
+        "updatedAt" : "2020-12-31T10:33:41Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d9cd2ac8f7fbab36622dcb13d1c272c4f968a361",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +10,14 @@-- and worksheets they belong to. Required to know what classpath to use\n-- for compiling dependency sources.\ncreate table worksheet_dependency_source(\n  text_document_uri varchar primary key,\n  worksheet_uri varchar not null"
+  }
+]

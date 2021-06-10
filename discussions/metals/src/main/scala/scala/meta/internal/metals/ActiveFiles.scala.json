@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "38600aaa-1060-4b64-b3ec-d906879dc598",
+    "prId" : 337,
+    "prUrl" : "https://github.com/scalameta/metals/pull/337",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "49b46cd9-38da-4851-8140-e4d95c56dcae",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "This removes the file \"opportunistically\", meaning that `isRecentlyActive` will occasionally have imprecise results.\r\n\r\nIs that an ok semantic?",
+        "createdAt" : "2018-11-21T21:53:46Z",
+        "updatedAt" : "2018-11-27T10:23:41Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5cbe017c-aea0-48ee-8ac2-7b222176580e",
+        "parentId" : "49b46cd9-38da-4851-8140-e4d95c56dcae",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Good catch, `isRecentlyActive` should guard against `isStale`, fixed.",
+        "createdAt" : "2018-11-23T11:46:30Z",
+        "updatedAt" : "2018-11-27T10:23:41Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8ab78d5883e2e77a843cca1ea641084e6e4a2875",
+    "line" : 22,
+    "diffHunk" : "@@ -1,1 +20,24 @@  private val paths = new ConcurrentLinkedQueue[Event]()\n  def add(path: AbsolutePath): Unit = {\n    paths.removeIf(_.isStale)\n    paths.add(Event(new Timer(time), path))\n  }"
+  }
+]

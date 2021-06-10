@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "b08f6047-76ee-43db-ba0b-c84025b3618c",
+    "prId" : 1953,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1953",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "e4e3d0c4-07f8-48e6-98d0-d18354b5678c",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This is just in case, Bloop will be dropping the support for sbt `0.13`, so this test should fail if anyone wants to update to that Bloop version. We will need to freeze Bloop version for sbt 0.13 in that case",
+        "createdAt" : "2020-07-28T16:45:40Z",
+        "updatedAt" : "2020-07-29T09:58:03Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "bd9cbdfc-0909-4eff-b088-8c0c01b8633e",
+        "parentId" : "e4e3d0c4-07f8-48e6-98d0-d18354b5678c",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "At some point Metals should probably drop 0.13 as well. The times are ripe, I think",
+        "createdAt" : "2020-07-28T17:15:53Z",
+        "updatedAt" : "2020-07-29T09:58:03Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e5ae4deec700724213f99d4fbeee5535331d1873",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +422,426 @@  }\n\n  test(\"min-sbt-version\") {\n    val minimal =\n      SbtBuildTool(None, () => UserConfiguration.default).minimumVersion"
+  }
+]

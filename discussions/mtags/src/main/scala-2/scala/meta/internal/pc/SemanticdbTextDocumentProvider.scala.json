@@ -1,0 +1,46 @@
+[
+  {
+    "id" : "9c17c51e-2776-4378-a7c5-3daf20a6ea01",
+    "prId" : 2345,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2345",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "eb8f54bd-ab3f-4939-a643-2caced0fbb88",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "We expect this to be a relative URI (relative to sourceroot)",
+        "createdAt" : "2020-12-28T15:21:02Z",
+        "updatedAt" : "2020-12-31T10:33:41Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d9cd2ac8f7fbab36622dcb13d1c272c4f968a361",
+    "line" : 30,
+    "diffHunk" : "@@ -1,1 +37,41 @@      .map { workspacePath =>\n        val relativeUri = workspacePath.relativize(fileUri).toString()\n        document.withUri(relativeUri)\n      }\n      .getOrElse(document)"
+  },
+  {
+    "id" : "2434044b-50d8-4a6c-a763-26cc4c9d898f",
+    "prId" : 2345,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2345",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "e1ef6a0e-f345-4b42-8646-2edc40ebda98",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This seems to be caused by the assumption that the plugin would run only in scalac.",
+        "createdAt" : "2020-12-29T16:23:56Z",
+        "updatedAt" : "2020-12-31T10:33:41Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d9cd2ac8f7fbab36622dcb13d1c272c4f968a361",
+    "line" : 15,
+    "diffHunk" : "@@ -1,1 +21,25 @@    import semanticdbOps._\n    // This cache is never updated in semanticdb and will contain the old source\n    gSourceFileInputCache.remove(unit.source)\n    semanticdbOps.config = SemanticdbConfig.parse(\n      List("
+  }
+]

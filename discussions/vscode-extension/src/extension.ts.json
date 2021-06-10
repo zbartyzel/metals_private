@@ -1,0 +1,90 @@
+[
+  {
+    "id" : "eb9d5bc6-d818-47fc-9764-a8e304f97631",
+    "prId" : 218,
+    "prUrl" : "https://github.com/scalameta/metals/pull/218",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "c9b7a75c-fc2e-45ee-bafc-b9f2dbd7e679",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "I've tested this locally: the default currently returns an error (because there's no 0.1.0 artifact published yet), and changing it to `0.1-SNAPSHOT` works correctly.",
+        "createdAt" : "2018-04-02T10:39:24Z",
+        "updatedAt" : "2018-04-02T13:59:00Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "068a26e77742148e377252e19071478495c26d1e",
+    "line" : 10,
+    "diffHunk" : "@@ -1,1 +27,31 @@    \"launch\",\n    \"-r\", \"bintray:scalameta/maven\",\n    `org.scalameta:metals_2.12:${serverVersion}`,\n    \"-M\", \"scala.meta.metals.Main\"\n  ];"
+  },
+  {
+    "id" : "ea70d85d-ec80-45a5-ad01-27f44a4c96ca",
+    "prId" : 131,
+    "prUrl" : "https://github.com/scalameta/metals/pull/131",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "cbcc46c9-6261-452c-8a82-8e38262baadf",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Is this needed for every new command? I thought codeActions was a way for the server to list the commands it supports.",
+        "createdAt" : "2017-12-15T11:42:58Z",
+        "updatedAt" : "2017-12-15T11:43:33Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "540dfe6b-78a1-4f0e-934a-3f4d287ad65c",
+        "parentId" : "cbcc46c9-6261-452c-8a82-8e38262baadf",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Yes, it is. codeAction is not very well integrated in the client library, as of now. I guess it may depend by the requirement for extensions to statically include commands in the manifest",
+        "createdAt" : "2017-12-15T11:52:03Z",
+        "updatedAt" : "2017-12-15T11:52:04Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "867e5b2b0a081dfb481be2a14c9b7bffa47a2d98",
+    "line" : 15,
+    "diffHunk" : "@@ -1,1 +94,98 @@\n  client.onReady().then(() => {\n    const clearIndexCacheCommand = commands.registerCommand(\"scalameta.clearIndexCache\", async () => {\n      return client.sendRequest(ExecuteCommandRequest.type, { command: \"clearIndexCache\" });\n    });"
+  },
+  {
+    "id" : "36cdc820-b987-4251-bdce-be2c0ada2184",
+    "prId" : 108,
+    "prUrl" : "https://github.com/scalameta/metals/pull/108",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "bc036417-8617-498f-930a-1247ec40a67a",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "by the way, this and the other import above were added automatically as I was typing ❤️  /cc @olafurpg ",
+        "createdAt" : "2017-12-10T11:11:54Z",
+        "updatedAt" : "2017-12-10T17:08:36Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "46ceaf2c-aa09-4ade-a125-8c199fd17625",
+        "parentId" : "bc036417-8617-498f-930a-1247ec40a67a",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I've had this for Scala in IJ for a long time, hard to live without once you get used to it :)\r\n",
+        "createdAt" : "2017-12-10T11:12:48Z",
+        "updatedAt" : "2017-12-10T17:08:36Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d70930516287ca7b7c4d7cf5be37c376e93809bd",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +11,15 @@} from 'vscode-languageclient';\nimport { Requirements } from './requirements';\nimport { exec } from 'child_process';\n\nexport async function activate(context: ExtensionContext) {"
+  }
+]

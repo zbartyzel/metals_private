@@ -1,0 +1,112 @@
+[
+  {
+    "id" : "8345f1c8-e2fd-4980-a7c3-1025ef1af1dd",
+    "prId" : 2467,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2467",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "43307784-4cfd-4be2-9177-93be20b2595b",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I discovered that symbol signatures are not produced by interactive semanticdb :/",
+        "createdAt" : "2021-02-01T17:53:51Z",
+        "updatedAt" : "2021-02-02T12:16:15Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c8e340827464a5e7151fb6e1a653072cb791a959",
+    "line" : 56,
+    "diffHunk" : "@@ -1,1 +315,319 @@        client.workspaceDecorations,\n        \"\"\"|object Main{\n           |  val value = augmentString(\"asd.\").stripSuffix(\".\")\n           |}\n           |\"\"\".stripMargin"
+  },
+  {
+    "id" : "c1f99f1e-e111-4816-b077-0f07a4592ff6",
+    "prId" : 2449,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2449",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "5d47549c-3f98-409b-86d1-82cb08cab7c3",
+        "parentId" : null,
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "A minor addition.\r\n\r\nI've tried the following sample:\r\n```scala\r\nval runnable = new Runnable {\r\n  override def run(): Unit = {}\r\n}\r\n```\r\nAnd got printed type:\r\n```scala\r\nval runnable: Object with Runnable {} = new Runnable {\r\n   override def run(): Unit = {}\r\n}\r\n```\r\n\r\nProbably in this case, `Object` should be dropped in the same way as it's done for `AnyRef` in `WithType`",
+        "createdAt" : "2021-02-01T09:46:00Z",
+        "updatedAt" : "2021-02-01T12:26:19Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2a584136-6b3a-47bb-86ff-7764f44a13ce",
+        "parentId" : "5d47549c-3f98-409b-86d1-82cb08cab7c3",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Good catch, fixed it also!",
+        "createdAt" : "2021-02-01T12:26:31Z",
+        "updatedAt" : "2021-02-01T12:26:31Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "4cc143492a501a2c67de5c3930ebd2f8b9d54405",
+    "line" : 27,
+    "diffHunk" : "@@ -1,1 +467,471 @@           |  val job = ec.submit(new Runnable {\n           |     override def run(): Unit = {}\n           |  })\n           |  val runnable = new Runnable {\n           |    override def run(): Unit = {}"
+  },
+  {
+    "id" : "43408de7-7b01-4286-9f90-a42e9ca8835a",
+    "prId" : 2345,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2345",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "78f062d9-238d-44b5-a8cd-063a73700f06",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "It was easier to test out this issue with standalone files, because readonly files need to be opened from a build target to be associated to a compiler instance.",
+        "createdAt" : "2020-12-28T15:22:35Z",
+        "updatedAt" : "2020-12-31T10:33:41Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d9cd2ac8f7fbab36622dcb13d1c272c4f968a361",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +296,300 @@            |}\n            |\n            |/standalone/Main.scala\n            |object Main{\n            |  \"asd.\".stripSuffix(\".\")"
+  },
+  {
+    "id" : "79574da7-693c-4a81-9cc6-f2bdeb60d139",
+    "prId" : 2232,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2232",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "94573231-c377-43c4-bcd0-8537946d0be6",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "So this is a curious sample and I think it makes sense for to add some filters later on if people complain.\r\n\r\nLooking through metals codebase it doesn't seem too bothersome, but might be be in some cases.",
+        "createdAt" : "2020-11-16T16:01:16Z",
+        "updatedAt" : "2020-11-16T17:30:01Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b870bc2b-bf8d-4412-b7c9-f0940012be13",
+        "parentId" : "94573231-c377-43c4-bcd0-8537946d0be6",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "lol yea this example isn't awesome, at the same time, I think it's fine. If people do start to complain about it, we can think about fine tuning it.",
+        "createdAt" : "2020-11-16T16:16:22Z",
+        "updatedAt" : "2020-11-16T17:30:01Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "2d968b16f63bed12de7c49bbcbabc0559798e84e",
+    "line" : 140,
+    "diffHunk" : "@@ -1,1 +269,273 @@        client.workspaceDecorations,\n        \"\"\"|object Main{\n           |  (augmentString(augmentString(augmentString(\"1\" + \"2\"))\n           |    .stripSuffix(\".\"))\n           |    .stripSuffix(\"#\"))"
+  }
+]

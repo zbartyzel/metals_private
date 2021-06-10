@@ -1,0 +1,57 @@
+[
+  {
+    "id" : "4c9cf7d3-2e03-4463-b815-f86812b186b0",
+    "prId" : 2668,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2668",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f6d1ab0b-b7f3-475e-8360-7216d04d109b",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "You should also uncomment https://github.com/scalameta/metals/blob/03704c17b5397bd8feb4771d0bedf9a6dfe0a660/tests/unit/src/test/scala/tests/debug/BreakpointDapSuite.scala#L633\r\nto see if it's working correctly now.",
+        "createdAt" : "2021-04-22T16:30:29Z",
+        "updatedAt" : "2021-04-23T16:07:37Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "fbb4524b-3933-40f1-bb6b-3a66d4b7024d",
+        "parentId" : "f6d1ab0b-b7f3-475e-8360-7216d04d109b",
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "Thx! Now it works.",
+        "createdAt" : "2021-04-23T16:12:21Z",
+        "updatedAt" : "2021-04-23T16:12:21Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3fcc251f9126b13a9372df15273d675aff8f745",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +327,331 @@  }\n\n  test(\"clashing-references\") {\n    for {\n      _ <- server.initialize("
+  },
+  {
+    "id" : "c383dc50-a7d8-4927-9b6f-738ba38f911c",
+    "prId" : 1277,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1277",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "1b5f9dc3-589b-49d4-89c5-580792d6c6fa",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "This re-enables the test, but marks it as flaky",
+        "createdAt" : "2020-01-09T12:08:03Z",
+        "updatedAt" : "2020-01-26T10:34:42Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "49287d98409399c613ea481aeb08529f827e5982",
+    "line" : 31,
+    "diffHunk" : "@@ -1,1 +183,187 @@  // Navigation continues to mostly work, except for areas that have compilation\n  // errors.\n  test(\"missing-compiler-plugin\".flaky) {\n    for {\n      _ <- server.initialize("
+  }
+]

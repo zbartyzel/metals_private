@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "b1a0fca5-268d-4ca8-ae44-3b78688609b2",
+    "prId" : 2497,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2497",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "faff9abc-d128-404d-89f8-8b7af4513859",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Changes here and the two methods below come from:\r\nhttps://github.com/scalacenter/scalafix/blob/69c0369ab49c41b0473ca68fe0a8ade396d3157e/scalafix-rules/src/main/scala/scala/meta/internal/pc/ScalafixGlobal.scala#L382",
+        "createdAt" : "2021-02-11T19:42:39Z",
+        "updatedAt" : "2021-02-17T15:54:49Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a3da8a9cf97b46b15072db2b6898bb3237b2919c",
+    "line" : 30,
+    "diffHunk" : "@@ -1,1 +133,137 @@    }\n\n    def isSymbolInScope(sym: Symbol, prefix: Type = NoPrefix): Boolean = {\n      nameResolvesToSymbol(sym.name, sym, prefix)\n    }"
+  },
+  {
+    "id" : "db823b70-2678-4983-ab6b-883b0f473692",
+    "prId" : 2497,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2497",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "de34d3e1-9821-40ca-94d5-3336dbb91332",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This is a change I did here, since if lookup did not find anything then it should be false. Indeed a lot of tests seem to have unneccesarily long names.",
+        "createdAt" : "2021-02-11T19:44:25Z",
+        "updatedAt" : "2021-02-17T15:54:49Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a3da8a9cf97b46b15072db2b6898bb3237b2919c",
+    "line" : 42,
+    "diffHunk" : "@@ -1,1 +142,146 @@    ): Boolean = {\n      lookupSymbol(name) match {\n        case Nil => false\n        case lookup =>\n          lookup.exists {"
+  },
+  {
+    "id" : "834d5914-4b86-4f28-b1e1-65d42f0951e7",
+    "prId" : 2497,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2497",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "030f47b3-61f6-4d47-b113-a5928252852f",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Here we try to find type name or term name with the same name.",
+        "createdAt" : "2021-02-11T19:44:58Z",
+        "updatedAt" : "2021-02-17T15:54:49Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a3da8a9cf97b46b15072db2b6898bb3237b2919c",
+    "line" : 148,
+    "diffHunk" : "@@ -1,1 +261,265 @@  implicit class XtensionNameMetals(name: Name) {\n    def otherName: Name =\n      if (name.isTermName) name.toTypeName\n      else name.toTermName\n  }"
+  }
+]

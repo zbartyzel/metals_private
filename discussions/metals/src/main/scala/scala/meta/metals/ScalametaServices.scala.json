@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "71d6c771-8b7f-4da3-a7ae-7d529529c14f",
+    "prId" : 204,
+    "prUrl" : "https://github.com/scalameta/metals/pull/204",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "27a65c93-f99d-414a-9a58-b8bdfaac56b8",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Have you tried to dynamically unregister capabilities? I think it makes sense to keep this guard regardless because I'm not sure if we can rely on it in case a client like vim/sublime to respect dynamic capabilities. Just curious to see if it works.",
+        "createdAt" : "2018-03-21T18:07:10Z",
+        "updatedAt" : "2018-03-26T21:54:32Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "335e2055-3c9d-48e7-99b3-e8558ed0bd62",
+        "parentId" : "27a65c93-f99d-414a-9a58-b8bdfaac56b8",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "Sorry, didn't get what you're saying here. Do you really mean dynamically unregister capabilities or you mean just enable/disable this setting in the config?",
+        "createdAt" : "2018-03-25T00:01:32Z",
+        "updatedAt" : "2018-03-26T21:54:32Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3be4f190-3f66-4da4-8e57-2bbba215b14e",
+        "parentId" : "27a65c93-f99d-414a-9a58-b8bdfaac56b8",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I was thinking of using `client/unregisterCapability` https://microsoft.github.io/language-server-protocol/specification#client_unregisterCapability\r\n\r\nI think it's best to do it like here in the PR because dynamic capabilities may not be supported by all clients, but I was just wondering if you had tried to used `unregisterCapabilities`",
+        "createdAt" : "2018-03-26T13:49:10Z",
+        "updatedAt" : "2018-03-26T21:54:32Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b09721f4-8cb0-4213-85ae-72933bb000ce",
+        "parentId" : "27a65c93-f99d-414a-9a58-b8bdfaac56b8",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "Ah, now I understand: when some feature gets enabled/disabled in the config, we should register/unregister the corresponding capability. \r\n\r\nI agree that it's correct, but we don't register capabilities dynamically yet and you're right that it's not widely supported (Atom doesn't support it, for instance), so I'd suggest we address it later, probably after #163.",
+        "createdAt" : "2018-03-26T22:01:04Z",
+        "updatedAt" : "2018-03-26T22:01:04Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c1e36693-9142-4be3-bee6-84fddb5fc3b5",
+        "parentId" : "27a65c93-f99d-414a-9a58-b8bdfaac56b8",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I agree this should be explored later, esp. if it's not even supported by atom 👍 ",
+        "createdAt" : "2018-03-27T17:27:55Z",
+        "updatedAt" : "2018-03-27T17:28:32Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "15398a10a92978b2096e501f8c36977849adc782",
+    "line" : 92,
+    "diffHunk" : "@@ -1,1 +312,316 @@    }\n    .request(td.documentHighlight) { params =>\n      if (latestConfig().highlight.enabled) {\n        DocumentHighlightProvider.highlight(\n          symbolIndex,"
+  }
+]

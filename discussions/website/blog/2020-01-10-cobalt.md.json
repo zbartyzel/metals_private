@@ -1,0 +1,112 @@
+[
+  {
+    "id" : "5ce015f9-6f77-4dab-89e7-2850d9c979fb",
+    "prId" : 1278,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1278",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "22bfb418-b251-483c-9cac-94221724f4fd",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "- formatting on paste for multi-line strings\r\n- json doctor support",
+        "createdAt" : "2020-01-09T14:38:43Z",
+        "updatedAt" : "2020-01-13T16:05:42Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3e299ef4-df5c-432c-a9e2-a371d9f2a1b2",
+        "parentId" : "22bfb418-b251-483c-9cac-94221724f4fd",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "> formatting on paste for multi-line strings\r\n\r\nwasn't it in the previous release?\r\n\r\n> json doctor support\r\n\r\nIt seems not really user facing, we tend to include things that users might use themselves",
+        "createdAt" : "2020-01-09T15:04:13Z",
+        "updatedAt" : "2020-01-13T16:05:42Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6c531540-e40d-4efe-a449-ef271ac1b4f5",
+        "parentId" : "22bfb418-b251-483c-9cac-94221724f4fd",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "I believe the previous release had `onTypeFormatting`, but didn't support formatting on multiline string pastes. The PR is listed below https://github.com/scalameta/metals/pull/968.\r\n\r\nRegarding json doctor, that makes sense, didn't think of that 👍 ",
+        "createdAt" : "2020-01-09T15:09:05Z",
+        "updatedAt" : "2020-01-13T16:05:42Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "11eb4e27-eabc-4f17-b755-5d09781e6fca",
+        "parentId" : "22bfb418-b251-483c-9cac-94221724f4fd",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Actually on paste formatting  was included in 0.7.6 - must have forgotten to add the PR there",
+        "createdAt" : "2020-01-10T14:17:12Z",
+        "updatedAt" : "2020-01-13T16:05:42Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b07e9500-c395-4ee7-8bef-ada77a994902",
+        "parentId" : "22bfb418-b251-483c-9cac-94221724f4fd",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Actually nevermind. The fix was merged later.",
+        "createdAt" : "2020-01-10T14:23:28Z",
+        "updatedAt" : "2020-01-13T16:05:42Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9b5ec817-369b-4f3f-b1dc-7d599780b30e",
+        "parentId" : "22bfb418-b251-483c-9cac-94221724f4fd",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Added",
+        "createdAt" : "2020-01-10T14:41:21Z",
+        "updatedAt" : "2020-01-13T16:05:42Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "219a75cb06ea05adb9f9803fe11847a0104af7d5",
+    "line" : 291,
+    "diffHunk" : "@@ -1,1 +289,293 @@- add automatic formatting of multi-line `stripMargin` strings on paste\n- remove support for 2.12.7\n\n## Contributors\n"
+  },
+  {
+    "id" : "4a802a1b-5961-4b0a-9ba8-66939c07fe9c",
+    "prId" : 1278,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1278",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "2e8ee294-9a3a-4713-bcf2-1dc72feabedf",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "I would add a small intro:\r\n\r\n> Refactoring support is one of the most requested features in Metals. In this release, we started by implementing the most commonly used refactors: rename and import missing symbol.\r\n\r\n> We plan to add more common refactors along the way. Make sure to check out the [ones that have already been proposed](https://github.com/scalameta/metals/issues/707) and consider suggesting other refactors that are essential in your development workflow.",
+        "createdAt" : "2020-01-11T13:57:36Z",
+        "updatedAt" : "2020-01-13T16:05:42Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "32ba6659-3a45-4650-ad33-e3c2123491f5",
+        "parentId" : "2e8ee294-9a3a-4713-bcf2-1dc72feabedf",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Good idea, added.",
+        "createdAt" : "2020-01-13T12:24:19Z",
+        "updatedAt" : "2020-01-13T16:05:42Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "219a75cb06ea05adb9f9803fe11847a0104af7d5",
+    "line" : 87,
+    "diffHunk" : "@@ -1,1 +85,89 @@refactor (see below).\n\n## Refactor\n\nRefactoring support is one of the most requested features in Metals. In this"
+  }
+]

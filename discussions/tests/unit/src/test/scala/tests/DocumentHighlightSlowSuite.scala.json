@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "33a885fc-f3d2-4007-8894-7ee0baad5230",
+    "prId" : 621,
+    "prUrl" : "https://github.com/scalameta/metals/pull/621",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b6ec0a70-ad2d-48f7-bf4d-4b14c95c9e43",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Great job with the test suite 👏 \r\n",
+        "createdAt" : "2019-04-05T07:32:49Z",
+        "updatedAt" : "2019-04-05T09:13:03Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "6f03d2264f9c4e8e28d2e258ca99d24915c82e17",
+    "line" : 3,
+    "diffHunk" : "@@ -1,1 +1,5 @@package tests\n\nobject DocumentHighlightSlowSuite extends BaseSlowSuite(\"documentHighlight\") {\n\n  check("
+  }
+]

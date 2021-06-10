@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "4b029352-2faa-4617-bf21-cd8f45bfecc4",
+    "prId" : 904,
+    "prUrl" : "https://github.com/scalameta/metals/pull/904",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b5ff52c9-cb1a-4fcf-8fc1-b3f9f581e1cd",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Does this handle interpolated strings?\r\n\r\n```\r\ns\"\"\"\r\n  |Hello $world\r\n\"\"\".stripMargin\r\n```",
+        "createdAt" : "2019-09-06T19:43:55Z",
+        "updatedAt" : "2019-09-09T11:00:39Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b403a14b-1a3e-4b73-a873-2ba24d8bfab8",
+        "parentId" : "b5ff52c9-cb1a-4fcf-8fc1-b3f9f581e1cd",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Yes, however I don't think there is a test case for it. I will add that.",
+        "createdAt" : "2019-09-07T12:42:16Z",
+        "updatedAt" : "2019-09-09T11:00:39Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8e025828-903e-40ab-9a56-c163aba6e51e",
+        "parentId" : "b5ff52c9-cb1a-4fcf-8fc1-b3f9f581e1cd",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "I just tried the latest snapshot and the `|` addition didn't work for me when using an interpolator. Does this PR fix it?",
+        "createdAt" : "2019-09-07T17:39:41Z",
+        "updatedAt" : "2019-09-09T11:00:39Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "01c49169-7b37-49bb-92ec-4103cf2e0492",
+        "parentId" : "b5ff52c9-cb1a-4fcf-8fc1-b3f9f581e1cd",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Och, I think there might be an issue actually coming to think of that 🙁 Will add test cases and fix it here. ",
+        "createdAt" : "2019-09-07T17:59:32Z",
+        "updatedAt" : "2019-09-09T11:00:39Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "085737ca-f097-4bf3-afcc-a2995155c83b",
+        "parentId" : "b5ff52c9-cb1a-4fcf-8fc1-b3f9f581e1cd",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Ok, now I fixed it. I just assumed we tested it.",
+        "createdAt" : "2019-09-09T11:01:44Z",
+        "updatedAt" : "2019-09-09T11:01:45Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "82b8c0b0536dacc3bb76c002911a4239f9be8013",
+    "line" : 26,
+    "diffHunk" : "@@ -1,1 +28,32 @@  ): Boolean = {\n    var methodIndex = stringTokenIndex + 1\n    while (tokens(methodIndex).isWhiteSpaceOrComment ||\n      tokens(methodIndex).isInstanceOf[Token.Dot]) methodIndex += 1\n    tokens(methodIndex) match {"
+  }
+]

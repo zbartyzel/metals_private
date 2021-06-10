@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "d62a2079-9c1d-4daa-949e-195dc9787896",
+    "prId" : 1181,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1181",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "1d87e38a-3fae-4498-abb2-822f8e923f31",
+        "parentId" : null,
+        "authorId" : "13e45e0d-7c54-4d12-8662-68857534b597",
+        "body" : "nit: maybe put the hardcoded `\"target\"`, `\"transitive_targets\"`, etc. strings into `val`s?",
+        "createdAt" : "2019-12-10T19:54:39Z",
+        "updatedAt" : "2019-12-11T10:39:31Z",
+        "lastEditedBy" : "13e45e0d-7c54-4d12-8662-68857534b597",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "eda512b7-dc10-46d3-ba43-f0230444feac",
+        "parentId" : "1d87e38a-3fae-4498-abb2-822f8e923f31",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Done. Extracted all hardcoded keys into an `object PantsKeys`",
+        "createdAt" : "2019-12-11T10:22:38Z",
+        "updatedAt" : "2019-12-11T10:39:34Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "da92e30ee6e1e5d61ccb46ecfc290af2da243900",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +11,15 @@)\n\nobject PantsExport {\n  def fromJson(output: ujson.Value): PantsExport = {\n    val allTargets = output.obj(\"targets\").obj"
+  },
+  {
+    "id" : "7644056d-3921-448f-ab8f-e0744baf54e5",
+    "prId" : 1181,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1181",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "9da49249-1fe3-4c5c-8b34-85c3a0c1d749",
+        "parentId" : null,
+        "authorId" : "13e45e0d-7c54-4d12-8662-68857534b597",
+        "body" : "nit: `valueObj.obj.mapValues`?",
+        "createdAt" : "2019-12-10T20:04:29Z",
+        "updatedAt" : "2019-12-11T10:39:31Z",
+        "lastEditedBy" : "13e45e0d-7c54-4d12-8662-68857534b597",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1eabe1a5-9ab5-46d9-ba8a-c16a4bfa8e92",
+        "parentId" : "9da49249-1fe3-4c5c-8b34-85c3a0c1d749",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "`mapValues` does not work as you expect it to in 2.12, it creates a lazy map and re-evaluates the passed function on every access\r\n```scala\r\n  override def mapValues[C](f: B => C): scala.collection.Map[A, C] = new MappedValues(f)\r\n```\r\n\r\nI think it's eager in 2.13 but Metals is still on 2.12",
+        "createdAt" : "2019-12-11T10:24:10Z",
+        "updatedAt" : "2019-12-11T10:39:34Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "da92e30ee6e1e5d61ccb46ecfc290af2da243900",
+    "line" : 66,
+    "diffHunk" : "@@ -1,1 +64,68 @@    val libraries: Map[String, PantsLibrary] = allLibraries.iterator.map {\n      case (name, valueObj) =>\n        name -> PantsLibrary(name, valueObj.obj.map {\n          case (key, value) =>\n            key -> Paths.get(value.str)"
+  }
+]

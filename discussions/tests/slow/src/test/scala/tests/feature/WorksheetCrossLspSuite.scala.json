@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "4f79e190-72f9-4870-8697-e525674e8eeb",
+    "prId" : 2531,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2531",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "4afb924b-7a87-406c-9ff6-b5f25d3c1284",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Worksheets would show errors on a version specific code.",
+        "createdAt" : "2021-02-20T11:23:29Z",
+        "updatedAt" : "2021-02-20T11:23:29Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c112958defe7b37db9aa0bbb3c39c47933d013d8",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +5,9 @@class Worksheet211LspSuite extends tests.BaseWorksheetLspSuite(V.scala211)\nclass Worksheet3LspSuite extends tests.BaseWorksheetLspSuite(V.scala3) {\n  override def versionSpecificCodeToValidate: String =\n    \"\"\"given str: String = \"\"\"\"\"\n}"
+  }
+]

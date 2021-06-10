@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "9f313506-081e-476d-80a0-fe7ef8193e05",
+    "prId" : 2830,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2830",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "95d88202-ebb0-4c61-83f1-6ffacda8cc28",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I usually process it a bit, but it's not 100% needed I guess.\r\n\r\n```suggestion\r\n$ git shortlog -sn --no-merges v0.10.3..v0.10.4\r\n\tTomasz Godzik\r\n\tVadim Chelyshov\r\n\tLuigi Frunzio\r\n\tChris Kipp\r\n```",
+        "createdAt" : "2021-05-31T08:55:53Z",
+        "updatedAt" : "2021-05-31T08:57:45Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8a966f768ca5a1749fcdd9e6b2de5e2e4de542e5",
+    "line" : 55,
+    "diffHunk" : "@@ -1,1 +53,57 @@\n```\n$ git shortlog -sn --no-merges v0.10.3..v0.10.4\n\tTomasz Godzik\n\tVadim Chelyshov"
+  }
+]

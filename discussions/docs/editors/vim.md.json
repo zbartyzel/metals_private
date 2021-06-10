@@ -1,0 +1,233 @@
+[
+  {
+    "id" : "243fa40f-32e6-4ed2-b456-2a9cff068580",
+    "prId" : 1934,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1934",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "0a80b09f-7b15-4a0f-86d3-548a07f5feb5",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Just out of curiosity, since it's the same page this doesn't need to be prefaced with `vim.md` right?",
+        "createdAt" : "2020-07-20T14:38:54Z",
+        "updatedAt" : "2020-07-21T07:58:00Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "cee24e0a-2caa-4fb3-9011-42c9062f51d1",
+        "parentId" : "0a80b09f-7b15-4a0f-86d3-548a07f5feb5",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "ach, right. I will remove it. I never remember the exact syntax needed, so I experiment a bit.",
+        "createdAt" : "2020-07-20T15:24:42Z",
+        "updatedAt" : "2020-07-21T07:58:00Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8cd487cf-47b8-4b2f-bd34-32bd1126cb52",
+        "parentId" : "0a80b09f-7b15-4a0f-86d3-548a07f5feb5",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Actually, I am getting a warning without it, so I will leave it as is.",
+        "createdAt" : "2020-07-20T18:14:16Z",
+        "updatedAt" : "2020-07-21T07:58:00Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1f9f20c530b2152a24fddd4618793dbec859f696",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +324,328 @@coc-metals has a built-in implementation of the [Tree View\nProtocol](https://scalameta.org/metals/docs/editors/tree-view-protocol.html).\nIf you have the [recommended mappings](vim.md#recommended-cocnvim-mappings) copied, you'll notice\nthat in the bottom you'll have some TVP related settings. You can start by\nopening the TVP panel by using the default `<space> t`. Once open, you'll see"
+  },
+  {
+    "id" : "468aa069-5224-42ce-8e5b-86eb89f49a84",
+    "prId" : 1785,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1785",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "901a8810-f0f2-47b9-9227-759cd133fda5",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Everything above is just formatting changes (just text width), and I moved this section from above to here and added the `*.sc`.",
+        "createdAt" : "2020-05-28T18:30:25Z",
+        "updatedAt" : "2020-05-28T18:30:25Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d237a9f6-e5d6-4ee1-aeee-c532f33c1f99",
+        "parentId" : "901a8810-f0f2-47b9-9227-759cd133fda5",
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "checking docs: https://scalameta.org/metals/docs/editors/vim.html\r\nshould you not update this?\r\n`au BufRead,BufNewFile *.sbt set filetype=scala` ",
+        "createdAt" : "2020-05-28T20:55:47Z",
+        "updatedAt" : "2020-05-28T20:56:57Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ee3edc89-26cb-408b-a0b9-8beee667314a",
+        "parentId" : "901a8810-f0f2-47b9-9227-759cd133fda5",
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "ah nvm you moved it, sry :facepalm: ",
+        "createdAt" : "2020-05-28T20:56:35Z",
+        "updatedAt" : "2020-05-28T20:56:57Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d8627a465b78ad8bcc49943fdb2b9e04bd8fff0c",
+    "line" : 86,
+    "diffHunk" : "@@ -1,1 +99,103 @@\n\" Help Vim recognize *.sbt and *.sc as Scala files\nau BufRead,BufNewFile *.sbt,*.sc set filetype=scala\n\n\" Use tab for trigger completion with characters ahead and navigate."
+  },
+  {
+    "id" : "f173e8b6-663b-40c6-9081-0196423ba71e",
+    "prId" : 1651,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1651",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "24b4537d-e2b0-4ba7-a1eb-334717d849c0",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Needed for super-method stuff.",
+        "createdAt" : "2020-04-20T18:36:32Z",
+        "updatedAt" : "2020-04-20T18:36:59Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "74133fca6a8f760659261d309574fc60a71dc523",
+    "line" : 73,
+    "diffHunk" : "@@ -1,1 +180,184 @@\" Trigger for code actions\n\" Make sure `\"codeLens.enable\": true` is set in your coc config\nnnoremap <leader>cl :<C-u>call CocActionAsync('codeLensAction')<CR>\n\n\" Show all diagnostics"
+  },
+  {
+    "id" : "ba7ea279-e39e-4522-af8c-f333ab67f52a",
+    "prId" : 1651,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1651",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "6d63c9eb-4d8f-4546-aeaf-5c3c9d8f804d",
+        "parentId" : null,
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "awesome :+1: ",
+        "createdAt" : "2020-04-21T13:22:13Z",
+        "updatedAt" : "2020-04-21T13:22:13Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "74133fca6a8f760659261d309574fc60a71dc523",
+    "line" : 164,
+    "diffHunk" : "@@ -1,1 +361,365 @@`metals.treeviews.executeCommandAndOpenVSplit`  | Execute command and open node under cursor in horizontal split (if node is class, trait and so on) (default `v`)\n\n## Goto Super Method\n\nDepending on whether you're using Vim or Neovim, you'll have a slightly"
+  },
+  {
+    "id" : "0063a860-8ef2-4283-a86d-a6095bdeb7f5",
+    "prId" : 1289,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1289",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "08f00302-ba71-41e5-80e4-43be64f36b7f",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "I was working with `vim-lsc` this morning and realized these points weren't really accurate anymore since a lot of functionality has been updated. Same with `vim-lsp`. I think it might be best to just list what they are, and not really mention features for each one, but rather put a general note to keep in mind that there are varying levels of support.",
+        "createdAt" : "2020-01-13T08:58:34Z",
+        "updatedAt" : "2020-01-20T12:24:32Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ad476d73e6bcc01a78c333f64c12dc967204df36",
+    "line" : 171,
+    "diffHunk" : "@@ -1,1 +423,427 @@\nWhile we recommend using the `coc-metals` extension with `coc.nvim`, Metals will work\nwith these alternative LSP clients. Keep in mind that they have varying levels of LSP support.\n\n- [`vim-lsc`](https://github.com/natebosch/vim-lsc/): simple installation and written in Vimscript."
+  },
+  {
+    "id" : "6068feb7-5416-4ff5-8136-3e565c0d18ac",
+    "prId" : 1227,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1227",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "57963cf7-656c-4279-a4cb-df9059e52991",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "😻 ",
+        "createdAt" : "2019-12-27T16:46:57Z",
+        "updatedAt" : "2019-12-29T22:35:39Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0b8d38ea4e656b6d7a9effa3ab9622d50e9913ca",
+    "line" : 81,
+    "diffHunk" : "@@ -1,1 +256,260 @@having multiple windows, you can use `<C-w> + w` to jump into it.\n\n![Embedded Doctor](https://i.imgur.com/McaAFv5.png)\n\n## Other Available Command"
+  },
+  {
+    "id" : "282d4de9-6244-4b2b-b92e-621de90737b4",
+    "prId" : 665,
+    "prUrl" : "https://github.com/scalameta/metals/pull/665",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "90f9d2c0-f627-4cec-b463-3be474246f0d",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Nice job figuring this out 👍 ",
+        "createdAt" : "2019-04-15T12:38:31Z",
+        "updatedAt" : "2019-04-15T12:55:33Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a0f380e6296eba1dc393d74a247bd36bba2d29b8",
+    "line" : 251,
+    "diffHunk" : "@@ -1,1 +258,262 @@\n```vim\n:call CocRequest('metals', 'workspace/executeCommand', { 'command': 'doctor-run' })\n```\n"
+  },
+  {
+    "id" : "b0dd4b38-d9bd-463f-a90c-5e0a4d62be2a",
+    "prId" : 392,
+    "prUrl" : "https://github.com/scalameta/metals/pull/392",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ebd5e530-e968-454e-bda9-c8b4edd30c32",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Run PlugInstall (or the relevant command for your plugin manager)",
+        "createdAt" : "2018-12-09T21:29:19Z",
+        "updatedAt" : "2018-12-09T21:31:24Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f25844c2-f604-4e94-b8ff-48cfc9a2e219",
+        "parentId" : "ebd5e530-e968-454e-bda9-c8b4edd30c32",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "It already says \"assuming vim-plug above\" and highlights vundle works too. Nobody has complained about these instructions so far so I guess it's been fine. The main improvement in this PR was to move all `~/.vimrc` config into one code listing.",
+        "createdAt" : "2018-12-09T21:35:08Z",
+        "updatedAt" : "2018-12-09T21:35:08Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cc579357ed746a8f422aba05bcad10e202218f1e",
+    "line" : 46,
+    "diffHunk" : "@@ -1,1 +46,50 @@```\n\nRun `:PlugInstall` to install the plugin. If you already have `vim-lsc`\ninstalled, be sure to update to the latest version with `:PlugUpdate`.\n"
+  }
+]

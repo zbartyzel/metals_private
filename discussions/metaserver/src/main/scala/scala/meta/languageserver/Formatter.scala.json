@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "f2c45e22-3715-4e6c-bd13-c07cb68dd306",
+    "prId" : 158,
+    "prUrl" : "https://github.com/scalameta/metals/pull/158",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "7a076088-b4ca-4e84-829f-2ac1bb0616e1",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "this isn't strictly related to this PR, but I think it makes sense to save some allocations",
+        "createdAt" : "2017-12-23T15:55:48Z",
+        "updatedAt" : "2018-01-02T19:54:18Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "affa2ea127de9483cd4eeda3dfcfcb3bb80a4322",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +20,24 @@\n  /** Returns formatter that does nothing */\n  lazy val noop: Formatter = new Formatter {\n    override def format(\n        code: String,"
+  }
+]

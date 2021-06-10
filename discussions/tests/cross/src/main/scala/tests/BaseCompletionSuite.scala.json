@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "9dfc74dd-78d4-4176-90e3-c907ebd49e04",
+    "prId" : 1254,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1254",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "5dad97b4-10ed-443a-ba9e-745cde76eccb",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "tests suites that need tagging support, can gradually make this conversion",
+        "createdAt" : "2020-01-05T17:04:47Z",
+        "updatedAt" : "2020-01-05T17:30:54Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8c01432863b62a73bbfb809ed6739a6bf33ed62f",
+    "line" : 16,
+    "diffHunk" : "@@ -1,1 +71,75 @@\n  def checkEdit(\n      name: TestOptions,\n      original: String,\n      expected: String,"
+  }
+]

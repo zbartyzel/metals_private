@@ -1,0 +1,57 @@
+[
+  {
+    "id" : "ec5e2b02-db05-429f-943b-7784f2a71950",
+    "prId" : 83,
+    "prUrl" : "https://github.com/scalameta/metals/pull/83",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "4e8deed6-d480-4bdb-8647-2a9996f197cd",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "`offset + 1` because we want\r\n\r\n```\r\nPredef.assert(_CURSOR_\r\n```\r\n\r\nand not\r\n\r\n```\r\nPredef.assert_CURSOR_(\r\n```",
+        "createdAt" : "2017-12-01T19:43:35Z",
+        "updatedAt" : "2017-12-01T19:43:35Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "15f02807-0800-4911-94b0-ad4553deee0f",
+        "parentId" : "4e8deed6-d480-4bdb-8647-2a9996f197cd",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Did you check if this changed/improved the behavior anywhere?",
+        "createdAt" : "2017-12-01T20:00:38Z",
+        "updatedAt" : "2017-12-01T20:00:38Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "459ed559-cc35-46c7-a5cb-7006aa4cf66d",
+        "parentId" : "4e8deed6-d480-4bdb-8647-2a9996f197cd",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Honestly, no. I just made sure all tests still pass (and the first one didn't without the `+ 1`",
+        "createdAt" : "2017-12-01T20:02:27Z",
+        "updatedAt" : "2017-12-01T20:02:27Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "16b9e333-964d-4364-a112-14c118b5d6c4",
+        "parentId" : "4e8deed6-d480-4bdb-8647-2a9996f197cd",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Sounds good, I will keep my eyes open for what effect this has, maybe it's not as important for signatureHelp as I thought it would be",
+        "createdAt" : "2017-12-01T20:03:10Z",
+        "updatedAt" : "2017-12-01T20:03:10Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3f3fa68d9f3513d6aeac5afab1801dbc31975368",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +17,21 @@      code = cursor.contents,\n      filename = cursor.uri,\n      cursor = Some(cursor.offset + 1)\n    )\n    val position = unit.position(cursor.offset)"
+  }
+]

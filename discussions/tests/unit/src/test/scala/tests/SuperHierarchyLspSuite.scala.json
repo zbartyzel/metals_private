@@ -1,0 +1,57 @@
+[
+  {
+    "id" : "83b7b5a8-fc90-425e-a648-8d2f5eaff319",
+    "prId" : 1487,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1487",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "4060990c-8a73-49b7-89ad-27db0306b879",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Maybe just do indexOf(\"<<0>>\") and increment until none is found?\r\nYou can use the offset to create `m.Position.Range(input, offset, offset)`, which can easily be converted to LSP Position\r\nExample can be found in `TestServer.positionFromString`",
+        "createdAt" : "2020-03-12T11:52:26Z",
+        "updatedAt" : "2020-03-24T16:45:28Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "391b62dc-3f7b-484a-9753-64a93d0a16ee",
+        "parentId" : "4060990c-8a73-49b7-89ad-27db0306b879",
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "then for each marker I would have to copy whole code and convert to position which also iterates whole code again.\r\nAre you okay with this performance penalty?",
+        "createdAt" : "2020-03-13T15:52:49Z",
+        "updatedAt" : "2020-03-24T16:45:28Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "179ed576-1edc-49a7-991d-08c32fdd6225",
+        "parentId" : "4060990c-8a73-49b7-89ad-27db0306b879",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I don't believe the performance would be much worse in this case, I prefer readability in the tests here. No need to have a super optimized code for test.",
+        "createdAt" : "2020-03-13T16:06:13Z",
+        "updatedAt" : "2020-03-24T16:45:28Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1e4ac07d-9e60-4f21-a505-ebd965759776",
+        "parentId" : "4060990c-8a73-49b7-89ad-27db0306b879",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Ok nvm me, I think it might not be much easier to implement, let's leave it.",
+        "createdAt" : "2020-03-13T16:26:40Z",
+        "updatedAt" : "2020-03-24T16:45:28Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "55838e6c9f4127bc8d06a8d31a6df496a0b729a8",
+    "line" : 132,
+    "diffHunk" : "@@ -1,1 +130,134 @@  }\n\n  private def parse(\n      code: String\n  ): Map[Int, Position] = {"
+  }
+]

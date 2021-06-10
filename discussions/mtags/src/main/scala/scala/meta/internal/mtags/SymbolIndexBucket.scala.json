@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "13e18103-e8b1-46b0-8c03-bb5745d51ce2",
+    "prId" : 2780,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2780",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "440f3bef-1112-47d9-b2f9-7e1eeb1b844e",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "We should also pass the dialect here to avoid the fallback in https://github.com/scalameta/metals/blob/12db95cb14b1fefdc982243f0e4a1a6311914304/mtags/src/main/scala/scala/meta/internal/mtags/ScalaMtags.scala#L27",
+        "createdAt" : "2021-05-15T10:06:18Z",
+        "updatedAt" : "2021-05-15T10:11:01Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "870c517d-aef7-4efd-84ab-7d38669775e9",
+        "parentId" : "440f3bef-1112-47d9-b2f9-7e1eeb1b844e",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I will take a look at it",
+        "createdAt" : "2021-05-15T10:23:31Z",
+        "updatedAt" : "2021-05-15T10:23:31Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "39a9f38381f35c7406dded3b0c802813e3cbc7b1",
+    "line" : 187,
+    "diffHunk" : "@@ -1,1 +185,189 @@        val toIndexSource0 = toIndexSource(file).getOrElse(file)\n        val input = toIndexSource0.toInput\n        val document = mtags.index(language, input)\n        s.TextDocuments(List(document))\n      case _ =>"
+  }
+]

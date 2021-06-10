@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "9b673fe7-c366-4a63-895e-572fdcf08add",
+    "prId" : 1162,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1162",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "2c40bc59-0169-44a9-b909-b433826feaeb",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "👍",
+        "createdAt" : "2019-12-07T18:45:23Z",
+        "updatedAt" : "2019-12-07T18:45:41Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "886e79e91a8de301ecb9c6428a4cf31fef2a42a8",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +317,321 @@        assertNoDiff(\n          client.workspaceDiagnostics,\n          s\"\"\"|.scalafmt.conf:1:1: error: missing setting 'version'. To fix this problem, add the following line to .scalafmt.conf: 'version=${V.scalafmtVersion}'.\n              |maxColumn=40\n              |^^^^^^^^^^^^"
+  }
+]

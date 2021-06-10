@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "2b959e2f-12bd-4f13-b6e8-0da028c92bf7",
+    "prId" : 2600,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2600",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "3a86202c-ba6b-4310-9ac3-750bf974dc45",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Can we also add a usage of the anonymous given? Also for non toplevel.",
+        "createdAt" : "2021-03-17T15:30:06Z",
+        "updatedAt" : "2021-04-01T21:54:41Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "028b3ff710580df42fff3574f99c743c9649e48c",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +2,6 @@\ngiven intValue/*GivenAlias.scala*/: Int/*Int.scala*/ = 4\ngiven String/*Predef.scala*/ = \"str\"\n\ndef method/*GivenAlias.scala*/(using/*<no symbol>*/ Int/*Int.scala*/) = \"\""
+  }
+]

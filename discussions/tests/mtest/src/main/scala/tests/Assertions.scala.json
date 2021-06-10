@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "9aa042e4-8922-419c-a149-c7315ff7dcd6",
+    "prId" : 1526,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1526",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "1cc9e056-8ca8-4895-891d-77816f4ac203",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "So, I just took a step back and tried to make this as simple as possible. In order to actually be able to just leave the new reference suite the way you had it @tgodzik I just grab the locations when I have them, group them by uri, grab all the line starts, and then assert that they are in order for each uri. The alternative to this would be having to make an entirely different way to do the check. I feel like this is the easiest way to do a simple check on the ordering. What do you think?",
+        "createdAt" : "2020-03-26T06:04:55Z",
+        "updatedAt" : "2020-03-26T06:04:56Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "13e263e8bec9aef93562dd691f75ec7caa748212",
+    "line" : 11,
+    "diffHunk" : "@@ -1,1 +59,63 @@  }\n\n  def assertSimpleLocationOrdering(locations: List[lsp4j.Location]): Unit = {\n    val grouped = locations.groupBy(_.getUri)\n    grouped.foreach {"
+  }
+]

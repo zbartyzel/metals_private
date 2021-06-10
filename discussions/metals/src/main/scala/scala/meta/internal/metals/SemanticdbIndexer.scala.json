@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "f0d69784-8147-4e83-8c3e-77b1faea2d09",
+    "prId" : 1435,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1435",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "241f5fce-6ae9-4fbb-a4a3-da18fdaf63dd",
+        "parentId" : null,
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "Something to take into consideration, we use FixedThreadPool(1) to handle events, because reindexing is sync, we will stop processing events till reindexing is done.",
+        "createdAt" : "2020-02-17T13:06:50Z",
+        "updatedAt" : "2020-02-17T16:18:06Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4fd0d775-f71a-4721-88fb-fcc31a74630a",
+        "parentId" : "241f5fce-6ae9-4fbb-a4a3-da18fdaf63dd",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "changed to using future there",
+        "createdAt" : "2020-02-17T14:48:42Z",
+        "updatedAt" : "2020-02-17T16:18:06Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "fb025d5358f8296b853bbb7ede33b89e75356b35",
+    "line" : 23,
+    "diffHunk" : "@@ -1,1 +50,54 @@      val targetroot = item.targetroot\n      if (!targetroot.isJar) {\n        onChangeDirectory(targetroot.resolve(Directories.semanticdb).toNIO)\n      }\n    }"
+  }
+]

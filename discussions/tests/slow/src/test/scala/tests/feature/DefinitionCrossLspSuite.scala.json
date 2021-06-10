@@ -1,0 +1,79 @@
+[
+  {
+    "id" : "45a826bc-369f-4f7e-b8db-c92a22c3e537",
+    "prId" : 1898,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1898",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "6963af0c-197d-463b-9aec-0d60f6551f3d",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Unless I'm mistaken, this should have been happening all the time, but may not have been due to some misconfiguration. Mainly because looking at this, if this runs without the current compiler version, then it uses the embedded presentation compile, which should be happening here, and that's where we see the \"Preparing presentation compiler\". This was failing without this, and that makes sense right?",
+        "createdAt" : "2020-07-09T12:27:38Z",
+        "updatedAt" : "2020-07-10T20:39:59Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "00c86194-8dad-4864-b718-46daaab2cb46",
+        "parentId" : "6963af0c-197d-463b-9aec-0d60f6551f3d",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Is it not possible that some default changed?  Looks like the settings for TestClient. I am OK with the change but I wonder if the change might cause some other bigger problems. This could be something related to SlowTask",
+        "createdAt" : "2020-07-10T14:54:29Z",
+        "updatedAt" : "2020-07-10T20:39:59Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "74b5ec3c-bf74-4f26-b4a4-96cc2cdd640d",
+        "parentId" : "6963af0c-197d-463b-9aec-0d60f6551f3d",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Totally. Let me look a bit closer at this.",
+        "createdAt" : "2020-07-10T17:01:43Z",
+        "updatedAt" : "2020-07-10T20:39:59Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a09c54df4983c2390e8b249633004d3433d16915",
+    "line" : 26,
+    "diffHunk" : "@@ -1,1 +86,90 @@      _ = assertNoDiff(\n        client.workspaceMessageRequests,\n        \"Preparing presentation compiler\"\n      )\n      _ = assertNoDiff(client.workspaceDiagnostics, \"\")"
+  },
+  {
+    "id" : "49abde38-5c9e-42c2-9852-8f54887f203a",
+    "prId" : 1721,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1721",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "635d0570-3b37-4510-a478-1f5e3747b01d",
+        "parentId" : null,
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "This is unrelated to switching to default scala 2.13, correct?\r\nOr you wanted to test that default scala would be 2.13 by veryfing 2.13 only feature would be parsed?",
+        "createdAt" : "2020-05-12T06:36:29Z",
+        "updatedAt" : "2020-05-12T06:36:30Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "53bd3f8b-53b6-4583-99e2-bc01ce0a1900",
+        "parentId" : "635d0570-3b37-4510-a478-1f5e3747b01d",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "That is related, I wanted to make sure we properly parse 2.13 syntax.",
+        "createdAt" : "2020-05-12T08:58:37Z",
+        "updatedAt" : "2020-05-12T08:58:37Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "905caef62234679cbc000a50b625651326db0382",
+    "line" : 12,
+    "diffHunk" : "@@ -1,1 +28,32 @@           |{\n           |  \"a\": {\n           |    \"scalaVersion\": \"${BuildInfo.scala213}\"\n           |  }\n           |}"
+  }
+]

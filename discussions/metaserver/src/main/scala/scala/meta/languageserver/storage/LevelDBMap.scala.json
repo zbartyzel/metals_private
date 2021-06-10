@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "7e1e583d-1bbc-40d5-8feb-f282616831cc",
+    "prId" : 45,
+    "prUrl" : "https://github.com/scalameta/metals/pull/45",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "d66a57d5-f6d2-4f36-bea8-646d0584b541",
+        "parentId" : null,
+        "authorId" : "ef0069c2-046a-496d-a83f-80db27f0d990",
+        "body" : "Given that withDB looks safe and convenient, and createDBThatIPromiseToClose looks less attractive, when would I use the unsafe version?  Is there enough overhead to withDB that I don't want to use it in some scenarios?",
+        "createdAt" : "2017-11-22T21:33:28Z",
+        "updatedAt" : "2017-11-22T21:53:24Z",
+        "lastEditedBy" : "ef0069c2-046a-496d-a83f-80db27f0d990",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0412340d-8088-4172-a23f-e8cf475ebd87",
+        "parentId" : "d66a57d5-f6d2-4f36-bea8-646d0584b541",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I'm not sure yet. To be honest I'm kind of leaning towards sqlite with a single table\r\n\r\n```\r\ncreate table index(\r\nkey bytes primary key,\r\nvalue bytes,\r\nbinaryVersion string\r\n)\r\n```\r\nwhere we can upgrade binary version when we change the indexing algorithms and want clean up old indices.\r\n\r\nIt wouldn't be a big change from what we have now using plain jdbc, and we could avoid the locking issues.",
+        "createdAt" : "2017-11-22T21:41:46Z",
+        "updatedAt" : "2017-11-22T21:53:24Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "07b899d0ababc60348d3fbfc05eefbfd0ba43538",
+    "line" : 82,
+    "diffHunk" : "@@ -1,1 +80,84 @@  }\n\n  def withDB[T](directory: File)(f: LevelDBMap => T): T = {\n    // TODO(olafur) gracefully fallback when the db is in use by another thread.\n    // can happen with multiple language servers running at the same time."
+  }
+]

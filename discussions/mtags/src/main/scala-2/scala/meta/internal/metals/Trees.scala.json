@@ -1,0 +1,57 @@
+[
+  {
+    "id" : "a8d867a1-f748-456f-810d-65d884603e62",
+    "prId" : 1656,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1656",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ec378097-c499-4469-8f67-b902fd380590",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "We should still use `dialects.Sbt` for worksheets running in 2.12.x Scala version. You can use `\r\n  BuildInfo.scalaCompilerVersion` to check",
+        "createdAt" : "2020-04-22T10:13:39Z",
+        "updatedAt" : "2020-04-22T10:15:39Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9a947d0c-85ed-4a03-92d5-956ccf4e2d2c",
+        "parentId" : "ec378097-c499-4469-8f67-b902fd380590",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I think it's OK to use the 2.13 dialect for all worksheets. The users will still get syntax errors when they save a file that uses 2.13-only syntax with a 2.12 classpath",
+        "createdAt" : "2020-04-22T10:27:56Z",
+        "updatedAt" : "2020-04-22T10:27:56Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "db881b58-686d-4ef0-8e91-dd9916b629b7",
+        "parentId" : "ec378097-c499-4469-8f67-b902fd380590",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "This dialect only affects the syntax errors that we display on keystroke. It's helpful for setting errors like \"unbalanced parentheses\" or \"missing closing quote\". It's not latency sensitive that the user gets a syntax errors when they for example use literal types (2.13-only syntax)",
+        "createdAt" : "2020-04-22T10:29:47Z",
+        "updatedAt" : "2020-04-22T10:29:47Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "bcdf22f6-bede-4037-8397-5a1b73b8a019",
+        "parentId" : "ec378097-c499-4469-8f67-b902fd380590",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Yeah, you're actually right after thinking about it for a while.",
+        "createdAt" : "2020-04-22T10:32:53Z",
+        "updatedAt" : "2020-04-22T10:32:54Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c0ceaffc3cd4e8daf2b6ee831f6217e07628b0eb",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +69,73 @@      case \"sbt\" => dialects.Sbt\n      case \"sc\" =>\n        dialects.Scala213\n          .copy(allowToplevelTerms = true, toplevelSeparator = \"\")\n    }"
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "5463103d-e57f-48ba-80d9-28ead23ce7b4",
+    "prId" : 2600,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2600",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "9d359c17-97d0-4d31-b933-490204802ec0",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This is also in `ScalaToplevelMtags` - can we resue some parts of the code?",
+        "createdAt" : "2021-03-29T17:53:06Z",
+        "updatedAt" : "2021-04-01T21:54:41Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "789529d0-4e39-4ae6-be2f-c94f5bc4cdf5",
+        "parentId" : "9d359c17-97d0-4d31-b933-490204802ec0",
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "Yep, I thought about that.\r\n\r\nHowever, as this parser works well for Scala 2 too I planned to propose to left it as the only implementation after passing review/merge. So the work related to the extraction of common methods might be useless. wdyt?\r\n",
+        "createdAt" : "2021-03-30T17:12:59Z",
+        "updatedAt" : "2021-04-01T21:54:41Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "028b3ff710580df42fff3574f99c743c9649e48c",
+    "line" : 198,
+    "diffHunk" : "@@ -1,1 +196,200 @@   * Consume token stream like \"a.b.c\" and return List(a, b, c)\n   */\n  def parsePath(): List[Identifier] = {\n    val buf = List.newBuilder[Identifier]\n    def loop(): Unit = {"
+  },
+  {
+    "id" : "7eaf3305-3f39-46ea-aa00-e89d7d209b4f",
+    "prId" : 2600,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2600",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "0eb4f13b-4a85-4951-81c5-bd7bf5d39f49",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "```suggestion\r\n  private def acceptTrivial(): Unit = {\r\n```",
+        "createdAt" : "2021-03-30T11:52:22Z",
+        "updatedAt" : "2021-04-01T21:54:41Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "bc11d72c-616b-40ef-84ce-88cc03ec042c",
+        "parentId" : "0eb4f13b-4a85-4951-81c5-bd7bf5d39f49",
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "In `ScalaToplevelMtags` and in scalameta the block of whitespace symbols is called `trivia`",
+        "createdAt" : "2021-03-30T19:29:49Z",
+        "updatedAt" : "2021-04-01T21:54:41Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "028b3ff710580df42fff3574f99c743c9649e48c",
+    "line" : 300,
+    "diffHunk" : "@@ -1,1 +298,302 @@  }\n\n  private def acceptTrivia(): Unit = {\n    scanner.nextToken()\n    while ("
+  }
+]

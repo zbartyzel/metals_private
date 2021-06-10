@@ -1,0 +1,101 @@
+[
+  {
+    "id" : "7c243e35-6c37-4fe6-98ec-63124710860d",
+    "prId" : 2723,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2723",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "29245bdc-55e2-45a2-95a2-2a35e30b9359",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This one seems duplicated, we can remove the one in mtest.",
+        "createdAt" : "2021-04-21T20:24:28Z",
+        "updatedAt" : "2021-05-11T14:51:09Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "18a63959-9a94-4c1f-8fb5-e98b712f8f53",
+        "parentId" : "29245bdc-55e2-45a2-95a2-2a35e30b9359",
+        "authorId" : "1123d20b-c024-4d9e-9f44-70ccf9a2d237",
+        "body" : "Yup! I didn't realize there was still the one in mtest 😳",
+        "createdAt" : "2021-04-22T10:12:04Z",
+        "updatedAt" : "2021-05-11T14:51:09Z",
+        "lastEditedBy" : "1123d20b-c024-4d9e-9f44-70ccf9a2d237",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "027c9bf78c700cb555e80ae8e2fab5e18678651e",
+    "line" : 17,
+    "diffHunk" : "@@ -1,1 +15,19 @@ * Client implementation of how to interpret `ResourceOperation` from LSP, used for testing purposes.\n */\nobject ResourceOperations {\n\n  def applyResourceOperation(resourceOperation: ResourceOperation): Unit = {"
+  },
+  {
+    "id" : "732f37e6-4ece-436c-8bad-3da5d5089773",
+    "prId" : 2723,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2723",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "914d356d-c9cb-46d2-b3d7-478cd2747e79",
+        "parentId" : null,
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "```suggestion\r\n        .map(opt => opt.getOverwrite)\r\n```\r\n?",
+        "createdAt" : "2021-04-22T17:54:11Z",
+        "updatedAt" : "2021-05-11T14:51:09Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "553b166d-ecbf-42d8-82d4-7aa3a2af79d1",
+        "parentId" : "914d356d-c9cb-46d2-b3d7-478cd2747e79",
+        "authorId" : "1123d20b-c024-4d9e-9f44-70ccf9a2d237",
+        "body" : "Without it, since the `.getOverwrite` method returns a java.lang.Boolean, the return type of the whole `overwrite` is `Any`. With the `: Boolean` there, there is some sort of implicit conversion that makes the `overwrite` a scala Boolean. Not so sure what's causing the error, but it seems to work.\r\nI'm happy to change it in something more \"readable\", if you've got any suggestion! ",
+        "createdAt" : "2021-04-23T17:13:49Z",
+        "updatedAt" : "2021-05-11T14:51:09Z",
+        "lastEditedBy" : "1123d20b-c024-4d9e-9f44-70ccf9a2d237",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "cf8d5acb-fe9b-488e-b56f-b310f2df0430",
+        "parentId" : "914d356d-c9cb-46d2-b3d7-478cd2747e79",
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "Thx for the explanation!\r\n\r\nI think that's ok - I have not idea how to make it better. The only alternative here is to call map as `.map[Boolean](..` but I don't see much difference here\r\n",
+        "createdAt" : "2021-04-27T07:57:37Z",
+        "updatedAt" : "2021-05-11T14:51:09Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "027c9bf78c700cb555e80ae8e2fab5e18678651e",
+    "line" : 42,
+    "diffHunk" : "@@ -1,1 +40,44 @@    val overwrite =\n      options\n        .map(opt => opt.getOverwrite: Boolean)\n        .getOrElse(false)\n    val ignoreIfExists = options"
+  },
+  {
+    "id" : "22987425-7d8e-446b-889f-3469c12305ea",
+    "prId" : 2723,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2723",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "d458a7da-c3a9-4b22-b99f-12ba1c1b4632",
+        "parentId" : null,
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "```suggestion\r\n      .map(opt => opt.getIgnoreIfExists)\r\n```",
+        "createdAt" : "2021-04-22T17:54:31Z",
+        "updatedAt" : "2021-05-11T14:51:09Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "027c9bf78c700cb555e80ae8e2fab5e18678651e",
+    "line" : 45,
+    "diffHunk" : "@@ -1,1 +43,47 @@        .getOrElse(false)\n    val ignoreIfExists = options\n      .map(opt => opt.getIgnoreIfExists: Boolean)\n      .getOrElse(true.booleanValue())\n"
+  }
+]

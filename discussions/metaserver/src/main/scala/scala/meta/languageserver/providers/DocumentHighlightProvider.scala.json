@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "6f1442b9-ceab-4948-89a2-ecf0eecab1b0",
+    "prId" : 97,
+    "prUrl" : "https://github.com/scalameta/metals/pull/97",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "53c4820b-09ab-4405-94a0-7323b110c013",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "debug?",
+        "createdAt" : "2017-12-05T20:14:01Z",
+        "updatedAt" : "2017-12-05T20:14:12Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2ba6e3f8-215f-4077-8ed9-e0189d122a68",
+        "parentId" : "53c4820b-09ab-4405-94a0-7323b110c013",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "I'd leave it `info` for now, it's only once per call (note that `Found highlight` is `debug`). Tell me if you still want me to change it, I don't mind.",
+        "createdAt" : "2017-12-05T21:35:47Z",
+        "updatedAt" : "2017-12-05T21:35:47Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "2736afe574d51ebc7327dafc65baab5067a25f37",
+    "line" : 24,
+    "diffHunk" : "@@ -1,1 +22,26 @@        .toList\n      data <- symbolIndex.symbolIndexer.get(name.symbol).toList\n      _ = logger.info(s\"Highlighting symbol `${data.name}: ${data.signature}`\")\n      pos <- data.referencePositions(withDefinition = true)\n      if Uri.toPath(pos.uri) == Some(path)"
+  }
+]

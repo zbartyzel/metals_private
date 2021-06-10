@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "88a3c172-6d82-40b4-af15-eeaaf588ec71",
+    "prId" : 632,
+    "prUrl" : "https://github.com/scalameta/metals/pull/632",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "310f5e19-6b0f-4ef8-8849-4d30b5defcac",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "👍 ",
+        "createdAt" : "2019-04-05T06:49:08Z",
+        "updatedAt" : "2019-04-10T09:48:55Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "79793f51fa23f5e83e6e9dc8e633ae708eeb17a1",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +53,57 @@  }\n\n  def fromDirectory(directory: AbsolutePath): InputProperties =\n    InputProperties(directory, List(directory), Classpath(Nil), Classpath(Nil))\n}"
+  }
+]

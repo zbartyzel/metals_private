@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "9765a72d-888b-419b-8dd9-b6aa3ab9d409",
+    "prId" : 822,
+    "prUrl" : "https://github.com/scalameta/metals/pull/822",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "235059fb-7120-4988-a4c5-d6174f6bd019",
+        "parentId" : null,
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "We can also include the \"absolute time base\" for proper calculation of the elapsed nanoseconds:\r\n```suggestion\r\n    private val absoluteTimeBaseNanos: Long = {\r\n      val now = Instant.now()\r\n      val seconds = TimeUnit.SECONDS.toNanos(now.getEpochSecond)\r\n      val nanos = now.getNano\r\n      seconds + nanos\r\n    }\r\n\r\n    private val relativeTimeBaseNanos = System.nanoTime()\r\n\r\n    def nanos(): Long = {\r\n      absoluteTimeBaseNanos + elapsed\r\n    }\r\n\r\n    private def elapsed: Long = System.nanoTime() - relativeTimeBaseNanos\r\n```\r\n\r\n\r\nNote, that this does not handle the time zones at all. Probably it is safe to assume the time of the server as the valid one. At least for now",
+        "createdAt" : "2019-07-10T10:14:22Z",
+        "updatedAt" : "2019-07-10T10:15:06Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7a9c57cd-ce5c-40f8-a563-36046ef289cd",
+        "parentId" : "235059fb-7120-4988-a4c5-d6174f6bd019",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I think it might be too much complexity for now.",
+        "createdAt" : "2019-07-10T10:17:58Z",
+        "updatedAt" : "2019-07-10T10:17:58Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f20994dcbfc66fdb3c816ac8176102f2adfdf56d",
+    "line" : 18,
+    "diffHunk" : "@@ -1,1 +12,16 @@object Time {\n  object system extends Time {\n    def nanos(): Long = System.nanoTime()\n    def currentMillis(): Long = System.currentTimeMillis()\n  }"
+  }
+]

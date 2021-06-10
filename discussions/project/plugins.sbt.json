@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "1ea00851-61f8-4e07-823b-5463840ca45c",
+    "prId" : 89,
+    "prUrl" : "https://github.com/scalameta/metals/pull/89",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f07c8c40-4425-46c5-946d-5b133aaae30d",
+        "parentId" : null,
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "I'm note sure what this exclusion is for and whether it's still needed.",
+        "createdAt" : "2017-12-02T23:57:27Z",
+        "updatedAt" : "2017-12-02T23:57:27Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "714a238c-c94a-4d33-a523-88853e8c4956",
+        "parentId" : "f07c8c40-4425-46c5-946d-5b133aaae30d",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Doesn't seem needed anymore https://scalapb.github.io/sbt-settings.html it used to be recommended in the official docs",
+        "createdAt" : "2017-12-03T09:13:30Z",
+        "updatedAt" : "2017-12-03T09:13:47Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cfd8979d7c4639be3ce43a5c3d6c8773f4f7f545",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +3,7 @@addSbtPlugin(\"com.eed3si9n\" % \"sbt-buildinfo\" % \"0.7.0\")\naddSbtPlugin(\n  \"com.thesamet\" % \"sbt-protoc\" % \"0.99.13\" exclude (\"com.trueaccord.scalapb\", \"protoc-bridge_2.12\")\n)\nlibraryDependencies += \"com.trueaccord.scalapb\" %% \"compilerplugin-shaded\" % \"0.6.6\""
+  }
+]

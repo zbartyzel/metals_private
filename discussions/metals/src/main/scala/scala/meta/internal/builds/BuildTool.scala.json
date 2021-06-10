@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "6609f500-8c86-4a8e-830b-61fccf1381bd",
+    "prId" : 967,
+    "prUrl" : "https://github.com/scalameta/metals/pull/967",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "8113e5cc-af3b-44e1-ad59-383fb30f50c0",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "We're re-reading the `.gitignore` file on every path. It would be better to bind the value of `readText` to a variable.",
+        "createdAt" : "2019-10-08T06:37:54Z",
+        "updatedAt" : "2019-10-08T06:38:47Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "cc2ee999-200a-4c07-a172-0f7a5c2ec882",
+        "parentId" : "8113e5cc-af3b-44e1-ad59-383fb30f50c0",
+        "authorId" : "de69948e-931e-4c49-b849-bb78a20b018e",
+        "body" : "@olafurpg makes sense! I will do that",
+        "createdAt" : "2019-10-08T07:23:48Z",
+        "updatedAt" : "2019-10-08T07:23:49Z",
+        "lastEditedBy" : "de69948e-931e-4c49-b849-bb78a20b018e",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b098388f750fc2eba665a7f68e6e200cbcd4f1b7",
+    "line" : 16,
+    "diffHunk" : "@@ -1,1 +36,40 @@    if (gitignore.exists) {\n      paths\n        .filterNot(gitignore.readText.contains)\n        .foreach(path => gitignore.appendText(s\"\\n$path\"))\n    }"
+  }
+]

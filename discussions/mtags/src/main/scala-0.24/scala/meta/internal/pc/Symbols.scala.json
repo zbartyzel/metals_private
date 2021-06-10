@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "e3fdb2dd-317c-4802-b18a-b88cfc760168",
+    "prId" : 1951,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1951",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ca496083-dfa4-4f41-8e39-e68018558374",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "`dotty.tools.dotc.core.Annotations.AnnotInfo` was removed in 0.26",
+        "createdAt" : "2020-07-28T08:53:06Z",
+        "updatedAt" : "2020-07-28T10:22:12Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "35af46a840e42c7d504259701e528f73c6787281",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +5,9 @@import dotty.tools.dotc.core.Annotations.AnnotInfo\n\nobject Symbols {\n  def isDeprecated(symbol: Symbol)(implicit ctx: Context) = symbol.isDeprecated\n}"
+  }
+]

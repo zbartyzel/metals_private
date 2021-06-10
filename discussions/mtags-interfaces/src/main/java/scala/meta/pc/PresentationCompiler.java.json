@@ -1,0 +1,46 @@
+[
+  {
+    "id" : "e7e33701-9deb-4063-ab35-e47c032f03f1",
+    "prId" : 1065,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1065",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "30e162e9-a7c3-46cd-ad0b-518d96a2df13",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Maybe we could do something more general:\r\n```\r\npublic abstract CompletableFuture<List<CodeActionResult>> codeAction(String input, ActionType actionType, OffsetParams params);\r\n\r\nenum ActionType{\r\n  Import, Implement, TypeAnnotation\r\n}\r\n```\r\notherwise we will be adding a lot of different methods for each action. ",
+        "createdAt" : "2019-12-09T21:08:00Z",
+        "updatedAt" : "2019-12-11T15:30:45Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e77992e3-12f3-4a3f-a7e2-462bc277053b",
+        "parentId" : "30e162e9-a7c3-46cd-ad0b-518d96a2df13",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Good point: I'm torn about this. From one end, I share your concern, from another I'm not sure of what code actions will be implemented so I'm wary of generalizing the API without knowing the use cases.",
+        "createdAt" : "2019-12-10T09:55:11Z",
+        "updatedAt" : "2019-12-11T15:30:45Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9f764f52-00ff-4374-b285-de660644ad11",
+        "parentId" : "30e162e9-a7c3-46cd-ad0b-518d96a2df13",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Ok, let's leave it then and see if generalizing it will be useful in the future. ",
+        "createdAt" : "2019-12-11T10:24:51Z",
+        "updatedAt" : "2019-12-11T15:30:45Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1e046b2b878d476d389f19bdcaa73ae4b7c121c9",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +67,71 @@     * Return the necessary imports for a symbol at the given position.\n     */\n    public abstract CompletableFuture<List<AutoImportsResult>> autoImports(String name, OffsetParams params);\n\n    /**"
+  }
+]

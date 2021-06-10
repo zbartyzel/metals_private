@@ -1,0 +1,101 @@
+[
+  {
+    "id" : "d1378a27-2d4b-4bc2-b33f-b998738f93e0",
+    "prId" : 2529,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2529",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "65296163-571f-460e-8c11-440896b1b256",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "\\o/ TUNGSTEN!",
+        "createdAt" : "2021-02-19T18:38:52Z",
+        "updatedAt" : "2021-02-24T11:09:02Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "09338d8f327f26528f18edbd4f1a87c84fe2b4de",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +11,15 @@\nval defaultToken = sys.env.get(\"GITHUB_TOKEN\")\nval codename = \"Tungsten\"\n\n@main"
+  },
+  {
+    "id" : "f97f94bc-8b20-4c66-9d64-b856098b885f",
+    "prId" : 2197,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2197",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "9b5ddaf1-f877-4616-a7a4-5b254ba80a3c",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I added the template here, so anyone can just run `amm bin/merged_prs v0.9.4 v0.9.5 > new_file.md`\r\n\r\nNot everything is calculated, but I added anything that can be said for sure. ",
+        "createdAt" : "2020-11-09T17:51:12Z",
+        "updatedAt" : "2020-11-10T17:55:05Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "67a15a4f-6979-4b16-b490-f08507c77fb0",
+        "parentId" : "9b5ddaf1-f877-4616-a7a4-5b254ba80a3c",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Sort of a nit, but if it's expected for a user to use it this way and direct it to a file, then I'd just use the Ammonite `write(<target>, <data>)` to write it to disk as part of the script. Not super important though.",
+        "createdAt" : "2020-11-09T19:08:12Z",
+        "updatedAt" : "2020-11-10T17:55:05Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f6628775-e484-45fb-a735-d6c29546ed96",
+        "parentId" : "9b5ddaf1-f877-4616-a7a4-5b254ba80a3c",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Yeah, I was thinking about it, but was worried I was doing too many assumptions. I will add it.",
+        "createdAt" : "2020-11-10T10:58:20Z",
+        "updatedAt" : "2020-11-10T17:55:05Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4a149d88-dc85-46e0-915f-c2d8af180e56",
+        "parentId" : "9b5ddaf1-f877-4616-a7a4-5b254ba80a3c",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Added!",
+        "createdAt" : "2020-11-10T11:26:18Z",
+        "updatedAt" : "2020-11-10T17:55:05Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "33a635453a20e21641e7c2cc3cb5536a05f2b79d",
+    "line" : 79,
+    "diffHunk" : "@@ -1,1 +99,103 @@}\n\ndef template(\n    author: String,\n    firstTag: String,"
+  },
+  {
+    "id" : "6d52d232-1c4c-4233-9f1a-0490e2370af5",
+    "prId" : 1915,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1915",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "15deecf6-6b02-4866-8615-dba13b803f2d",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Added ammonite script, which should be easier to use and maintain. Java library was simpler than any available Scala library.",
+        "createdAt" : "2020-07-15T10:46:43Z",
+        "updatedAt" : "2020-07-15T11:08:55Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f42127e312fa4b6319ec9dfe593c9e7f2839cc1f",
+    "line" : 1,
+    "diffHunk" : "@@ -1,1 +-1,3 @@import $ivy.`org.kohsuke:github-api:1.114`\n\nimport scala.collection.JavaConverters._"
+  }
+]

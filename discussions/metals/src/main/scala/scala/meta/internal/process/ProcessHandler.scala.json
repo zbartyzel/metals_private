@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "58c9973a-54ed-4369-8982-d61db8685e74",
+    "prId" : 1145,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1145",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b38d6464-d481-4d9f-a3ab-4e331ed0e165",
+        "parentId" : null,
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "doesn't `trySuccess` cover the condition already?",
+        "createdAt" : "2019-12-05T08:21:15Z",
+        "updatedAt" : "2019-12-05T11:14:30Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "56c815aa-40cb-41f6-82f7-f67be3fa1c9c",
+        "parentId" : "b38d6464-d481-4d9f-a3ab-4e331ed0e165",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "This code is unchanged in this PR, it just moved causing a diff. Please open an issue if you want to follow up on this.",
+        "createdAt" : "2019-12-05T10:30:41Z",
+        "updatedAt" : "2019-12-05T11:14:30Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c032fa899f1747d53cf2025b6e1cf03227b19980",
+    "line" : 56,
+    "diffHunk" : "@@ -1,1 +54,58 @@    if (!completeProcess.isCompleted) {\n      completeProcess.trySuccess(statusCode)\n    }\n    scribe.info(s\"build tool exit: $statusCode\")\n    response.foreach(_.cancel(false))"
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "d24085e8-5d05-4c22-aefd-022b0aaf3cab",
+    "prId" : 2497,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2497",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "530eac24-0e02-42da-9e1a-634ab22fe4a2",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This is caused by the change to minimize the length of anything imported.",
+        "createdAt" : "2021-02-11T19:46:36Z",
+        "updatedAt" : "2021-02-17T15:54:49Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a3da8a9cf97b46b15072db2b6898bb3237b2919c",
+    "line" : 23,
+    "diffHunk" : "@@ -1,1 +64,68 @@       |}\n       |object B {\n       |  A.Nested.NestedLeaf\n       |}\n       |\"\"\".stripMargin"
+  },
+  {
+    "id" : "f90326e4-3f42-432c-a5b5-1f3a780236f2",
+    "prId" : 814,
+    "prUrl" : "https://github.com/scalameta/metals/pull/814",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "bc6b1a27-057c-4740-a3df-2b58d1a8d468",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Are completions supposed to be working when the comment is truly multiline?",
+        "createdAt" : "2019-07-03T17:24:52Z",
+        "updatedAt" : "2019-07-03T17:24:58Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "37e270fd-d589-4add-876a-34e83db10628",
+        "parentId" : "bc6b1a27-057c-4740-a3df-2b58d1a8d468",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I think they should. The code with long comments inside compiles, so we should provide completions. Though, it would be weird to write a code like that for sure :O ",
+        "createdAt" : "2019-07-03T17:37:48Z",
+        "updatedAt" : "2019-07-03T17:38:25Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e73aea36-33c8-476f-a41a-620c2a0dc151",
+        "parentId" : "bc6b1a27-057c-4740-a3df-2b58d1a8d468",
+        "authorId" : "5efb53ac-5f45-486b-b213-5f435c0347ed",
+        "body" : "I guess you're allowed to break the cascade of code calls with multiline comments and continue with a `.nextMethod(...)` on a new line, after all the comments should be stripped by the compiler sooner or later...\r\nIt's a weird practice tho, breaking the flow of calls like that, I wouldn't encourage it...",
+        "createdAt" : "2019-07-04T08:45:30Z",
+        "updatedAt" : "2019-07-04T08:45:31Z",
+        "lastEditedBy" : "5efb53ac-5f45-486b-b213-5f435c0347ed",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ffd7f2556596281adb98a7508c3a50a45c656348",
+    "line" : 59,
+    "diffHunk" : "@@ -1,1 +162,166 @@       |object Main {\n       |  Array(1, 1,10)\n       |  .map(_ + 1) /* comment breaks completions */\n       |  .fil@@ \n       |}"
+  }
+]

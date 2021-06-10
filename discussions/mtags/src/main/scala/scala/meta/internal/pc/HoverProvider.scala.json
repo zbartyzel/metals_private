@@ -1,0 +1,57 @@
+[
+  {
+    "id" : "b2372b85-8fbc-4752-bbb3-0a108d852e96",
+    "prId" : 1522,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1522",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "70c0c170-565b-44c8-9774-d27430452f73",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "I misunderstood this at first and put `scala`, but it looks like this should be `plainText` or `markdown` according to the spec. Then , you put ````scala` in the actual value. They give an example in the LSP docs.\r\n\r\nhttps://microsoft.github.io/language-server-protocol/specifications/specification-current/#markupContent",
+        "createdAt" : "2020-03-21T18:00:02Z",
+        "updatedAt" : "2020-03-22T12:53:13Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a1f157044a3d540463d614d0851071783f10aed1",
+    "line" : 26,
+    "diffHunk" : "@@ -1,1 +176,180 @@        new Hover(\n          new MarkupContent(\n            MarkupKind.MARKDOWN,\n            HoverMarkup(\n              s\"${symbol.javaClassSymbol.keyString} ${symbol.fullName}\""
+  },
+  {
+    "id" : "f8aff8df-2579-4b55-8812-d85614221035",
+    "prId" : 1025,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1025",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "9bd82d29-64c2-44fb-82e5-42479fa20179",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "🙈 ",
+        "createdAt" : "2019-10-28T18:12:30Z",
+        "updatedAt" : "2019-10-28T18:12:40Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1d3de6d3-ee09-47e7-b084-547de850764e",
+        "parentId" : "9bd82d29-64c2-44fb-82e5-42479fa20179",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "That's the only thing we didn't check haha",
+        "createdAt" : "2019-10-28T18:25:17Z",
+        "updatedAt" : "2019-10-28T18:25:17Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "4d8ee2c0f2d03855ca080a7ba9516d00c453a89c",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +35,39 @@            expanded.tpe != null &&\n            tree.symbol != null &&\n            expanded.symbol != null) {\n            val symbol =\n              if (expanded.symbol.isConstructor) expanded.symbol"
+  }
+]

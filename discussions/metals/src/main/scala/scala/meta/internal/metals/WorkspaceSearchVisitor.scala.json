@@ -1,0 +1,79 @@
+[
+  {
+    "id" : "434a58b5-9630-4b0a-816f-a84a3ab82d75",
+    "prId" : 2863,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2863",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "1db05250-d53c-4af7-95f0-a75a409143e0",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Just to make sure I understand this. In your example with:\r\n\r\n```\r\nio:netty.netty-all:4.0.43.Final - io.netty.util.collection.IntObjectMap#Entry\r\nio.netty.netty-common:4.1.17.Final - io.netty.util.collection.IntObjectMap#PrimitiveEntry\r\n```\r\nThis is to ensure that we are always getting the same one back right? But aren't these technically two different symbols? How come `index.definition(tpe)` was returning a random one if they are unique? I'm not super familiar with the GlobalSymbolIndex so I may just totally be missing something.",
+        "createdAt" : "2021-06-08T12:03:03Z",
+        "updatedAt" : "2021-06-08T12:03:53Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5aa9143b-4f8b-4292-ab56-733b062c4513",
+        "parentId" : "1db05250-d53c-4af7-95f0-a75a409143e0",
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "They are different but here `index.definitions` is performed only to find the location of a top-level class.\r\n\r\nIn this test  classpath search found these two class files wich has name that fit query:\r\n  - `io/netty/util/colletion/IntObjectMap$Entry.class`\r\n  - `io/netty/util/colletion/IntObjectMap$PrimitiveEntry.class`\r\n\r\nThen it calls `index.definition` to find toplevel symbols `io.netty.util.collection.IntObjectMap` to perform actual matching against semantic defitions extracted from source file.",
+        "createdAt" : "2021-06-08T16:06:45Z",
+        "updatedAt" : "2021-06-08T16:06:45Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "18a44661-638a-4c53-ac13-a8d989e0328a",
+        "parentId" : "1db05250-d53c-4af7-95f0-a75a409143e0",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Ahh ok, thanks for explaining 👍🏼 ",
+        "createdAt" : "2021-06-08T18:46:03Z",
+        "updatedAt" : "2021-06-08T18:46:03Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ba2370599dca459eaca43b33c25c5e4b25295028",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +94,98 @@    } else forTpe\n\n    defs.sortBy(_.path.toURI.toString).headOption\n  }\n  override def shouldVisitPackage(pkg: String): Boolean = true"
+  },
+  {
+    "id" : "6ea64674-6f8a-4a5e-8afc-b50dd90003f6",
+    "prId" : 2863,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2863",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "9f4cbc71-496b-41bf-ac25-539e2f20c026",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Does `forTpe` actually mean something here that I'm unaware of? Would it be more clear to just call this `symbolDefinitions` or something?",
+        "createdAt" : "2021-06-08T12:03:45Z",
+        "updatedAt" : "2021-06-08T12:04:06Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "647e7d52-2556-41fa-83b8-de5af42ac200",
+        "parentId" : "9f4cbc71-496b-41bf-ac25-539e2f20c026",
+        "authorId" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "body" : "It means that it tries to find a definition for typeSymbol.\r\nIf it's empty it also tries to find termSymbol.\r\nUnfortunately, there is no equivalent to `orElse` combinator for empty List so I had to extract it into val",
+        "createdAt" : "2021-06-08T16:14:16Z",
+        "updatedAt" : "2021-06-08T16:14:16Z",
+        "lastEditedBy" : "06570d45-e6f3-4137-96ae-d24d856bd275",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ba2370599dca459eaca43b33c25c5e4b25295028",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +88,92 @@    val tpe = Symbol(Symbols.Global(pkg, Descriptor.Type(nme)))\n\n    val forTpe = index.definitions(tpe)\n    val defs = if (forTpe.isEmpty) {\n      val term = Symbol(Symbols.Global(pkg, Descriptor.Term(nme)))"
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "474d7b3d-ff58-4d5e-9c5b-975e74b0eea3",
+    "prId" : 172,
+    "prUrl" : "https://github.com/scalameta/metals/pull/172",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "966b405c-7d59-497f-aea8-804f0a03a453",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "`LazyLogging` seems unused here.",
+        "createdAt" : "2018-01-10T18:36:51Z",
+        "updatedAt" : "2018-01-10T18:41:40Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cd4724d11b332145fac1ee90a6b0dffec98f69fd",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +22,26 @@}\n\nobject BaseProtocolMessage extends LazyLogging {\n  def fromInputStream(in: InputStream): Observable[BaseProtocolMessage] =\n    fromInputStream(in, logger)"
+  }
+]

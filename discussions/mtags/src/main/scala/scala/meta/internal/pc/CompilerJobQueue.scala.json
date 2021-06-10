@@ -1,0 +1,123 @@
+[
+  {
+    "id" : "40d043de-cede-4085-a104-e6426788551d",
+    "prId" : 736,
+    "prUrl" : "https://github.com/scalameta/metals/pull/736",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "2db2f4e2-78e1-4971-a4ba-303bd1a299cf",
+        "parentId" : null,
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "Can we somehow limit the capacity? Unbounded queues in multi-threaded environment make me uneasy",
+        "createdAt" : "2019-05-29T14:51:25Z",
+        "updatedAt" : "2019-06-01T12:08:36Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "068e7d1e-cc1b-4079-9d44-4e23674a3b25",
+        "parentId" : "2db2f4e2-78e1-4971-a4ba-303bd1a299cf",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "We construct the queue in the same way as `Executors.newSingleThreadExecutor()`. All submitted jobs are automatically cancelled after a configurable timeout and cancelled runnables exit immediately (they don't even call the submitted function).",
+        "createdAt" : "2019-05-31T09:20:12Z",
+        "updatedAt" : "2019-06-01T12:08:36Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3cd39a3dc1957ac5b5e4e60da9c3eae356702ace",
+    "line" : 79,
+    "diffHunk" : "@@ -1,1 +77,81 @@\n  /** Priority queue that runs the most recently submitted task first. */\n  private class LastInFirstOutBlockingQueue\n      extends PriorityBlockingQueue[Runnable](10, new ju.Comparator[Runnable] {\n        def compare(o1: Runnable, o2: Runnable): Int = {"
+  },
+  {
+    "id" : "8a9a1f3e-3566-49ca-9e64-3a41b4490765",
+    "prId" : 736,
+    "prUrl" : "https://github.com/scalameta/metals/pull/736",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "2801a0f7-748f-4e4b-aebb-4993334fecc8",
+        "parentId" : null,
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "Can we make it `PriorityBlockingQueue[Job]`?",
+        "createdAt" : "2019-05-29T14:52:03Z",
+        "updatedAt" : "2019-06-01T12:08:36Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "347f111d-e91e-4fb4-8e09-0f3effc92318",
+        "parentId" : "2801a0f7-748f-4e4b-aebb-4993334fecc8",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "We can but then we would have to move the cast to `asInstanceOf[BlockingQueue[Runnable]]` in the `ThreadPoolExecutor`. I added a comment why these casts are safe.",
+        "createdAt" : "2019-05-31T09:37:27Z",
+        "updatedAt" : "2019-06-01T12:08:36Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3cd39a3dc1957ac5b5e4e60da9c3eae356702ace",
+    "line" : 80,
+    "diffHunk" : "@@ -1,1 +78,82 @@  /** Priority queue that runs the most recently submitted task first. */\n  private class LastInFirstOutBlockingQueue\n      extends PriorityBlockingQueue[Runnable](10, new ju.Comparator[Runnable] {\n        def compare(o1: Runnable, o2: Runnable): Int = {\n          // Downcast is safe because we only submit `Job` runnables into this"
+  },
+  {
+    "id" : "2ec18ba2-31f3-4241-b8e0-35445d7b71f7",
+    "prId" : 736,
+    "prUrl" : "https://github.com/scalameta/metals/pull/736",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "76fdbcdf-7a4f-4568-91cf-b420b0793647",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "can it just be `=> Unit` ? Would avoid having to write additional () => when submitting any job.",
+        "createdAt" : "2019-05-30T14:56:02Z",
+        "updatedAt" : "2019-06-01T12:08:36Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "05d38f62-2a89-4b39-8ceb-d4edee934a2c",
+        "parentId" : "76fdbcdf-7a4f-4568-91cf-b420b0793647",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "It can be but I don't think it would make the code more readable. As a general rule of thumb I avoid by-name parameters until it's become painful to write the leading `() =>`. In this case, we only call `submit` once.  ",
+        "createdAt" : "2019-05-31T09:18:36Z",
+        "updatedAt" : "2019-06-01T12:08:36Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "180f9d5d-9f31-461c-be52-9b795c8e83e1",
+        "parentId" : "76fdbcdf-7a4f-4568-91cf-b420b0793647",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "It's also a couple times in tests, but it's ok with me.",
+        "createdAt" : "2019-05-31T10:06:41Z",
+        "updatedAt" : "2019-06-01T12:08:36Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5d284fc0-3e53-4ab9-b1d5-5f995bf16343",
+        "parentId" : "76fdbcdf-7a4f-4568-91cf-b420b0793647",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I personally think it's more readable with the leading `() =>` at call-sites. It's only for APIs that are used a lot like `Option[T].getOrElse(=>T)` where I think by-name is justified.",
+        "createdAt" : "2019-05-31T10:09:29Z",
+        "updatedAt" : "2019-06-01T12:08:36Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3cd39a3dc1957ac5b5e4e60da9c3eae356702ace",
+    "line" : 32,
+    "diffHunk" : "@@ -1,1 +30,34 @@  override def toString(): String = s\"CompilerJobQueue($executor)\"\n  def shutdown(): Unit = executor.shutdown()\n  def submit(fn: () => Unit): Unit = {\n    submit(new CompletableFuture[Unit](), fn)\n  }"
+  }
+]

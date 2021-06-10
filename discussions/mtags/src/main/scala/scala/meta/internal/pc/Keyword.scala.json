@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "b7a3b4ca-e712-4f24-84c0-5f5576681a38",
+    "prId" : 712,
+    "prUrl" : "https://github.com/scalameta/metals/pull/712",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "422545b4-002f-40cb-8d52-53e56415e5f5",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "@markus1189 FYI, I added `sealed class` since it's strictly speaking valid although less common",
+        "createdAt" : "2019-05-24T13:11:57Z",
+        "updatedAt" : "2019-05-24T13:34:43Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c468269d2e0e47b5eaffc75cab0b2c825678b7fe",
+    "line" : 72,
+    "diffHunk" : "@@ -1,1 +70,74 @@    Keyword(\"sealed trait\", isTemplate = true, isPackage = true),\n    Keyword(\"sealed abstract class\", isTemplate = true, isPackage = true),\n    Keyword(\"sealed class\", isTemplate = true, isPackage = true),\n    Keyword(\"super\", isExpression = true, commitCharacter = Some(\".\")),\n    Keyword(\"this\", isExpression = true, commitCharacter = Some(\".\")),"
+  }
+]

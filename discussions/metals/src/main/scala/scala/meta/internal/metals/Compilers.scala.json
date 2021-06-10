@@ -1,0 +1,299 @@
+[
+  {
+    "id" : "bcb2b144-66d2-4140-b337-2f9563bf729f",
+    "prId" : 2412,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2412",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "a4ec4937-4d51-41be-a952-ea3ef09204d1",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "`interactiveSemanticdbs` parameter is no longer needed.",
+        "createdAt" : "2021-01-26T13:45:06Z",
+        "updatedAt" : "2021-01-26T16:36:10Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "65917e67c7a40c22e3e50becfb28cb3aafcad030",
+    "line" : 47,
+    "diffHunk" : "@@ -1,1 +265,269 @@      params: TextDocumentPositionParams,\n      token: CancelToken,\n      interactiveSemanticdbs: InteractiveSemanticdbs\n  ): Future[Option[Hover]] =\n    withPCAndAdjustLsp(params) { (pc, pos, adjust) =>"
+  },
+  {
+    "id" : "4c4d3c50-43b8-4a86-8a19-b212edd5d906",
+    "prId" : 2345,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2345",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "eb517522-a35d-4889-a57f-0f8452595d40",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Previously, if a dependency source file would be open from worksheets this would cause the source not to be linked to any build target or worksheet.",
+        "createdAt" : "2020-12-29T15:39:25Z",
+        "updatedAt" : "2020-12-31T10:33:41Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d9cd2ac8f7fbab36622dcb13d1c272c4f968a361",
+    "line" : 21,
+    "diffHunk" : "@@ -1,1 +350,354 @@            c.locations(),\n            c.symbol(),\n            definitionPath,\n            None\n          )"
+  },
+  {
+    "id" : "132c193b-9ebb-4db8-812c-a4ac82db4910",
+    "prId" : 2215,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2215",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "46e4d1c8-80d4-4c66-a3d8-921acfd56857",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "I also added a small change to not publish syntax errors in library sources. It seems to happen sporadically for Scala 3 sources.",
+        "createdAt" : "2020-11-12T18:15:05Z",
+        "updatedAt" : "2020-11-12T18:15:06Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f14596c3ce5e06112391f788cfa50634bb174be6",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +227,231 @@        case None =>\n          diagnostics.onNoSyntaxError(path)\n        case Some(diagnostic) if !path.isInReadonlyDirectory(workspace) =>\n          diagnostics.onSyntaxError(path, adjust.adjustDiagnostic(diagnostic))\n      }"
+  },
+  {
+    "id" : "94b84c89-722a-481c-aef3-cf888851e5bb",
+    "prId" : 1856,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1856",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "3ad19f61-d6c3-4bbd-8cd2-00c7e30c2964",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "This code path didn't exist before, why is that? Would it be possible to somehow move the management of compilers to `Compilers.scala`? There seems to be some overlap, maybe we can generate `BuildTargetIdentifier` for worksheets?",
+        "createdAt" : "2020-06-25T17:17:02Z",
+        "updatedAt" : "2020-06-26T14:08:31Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "610a5cdf-66be-4ddd-8ce4-85698f17529a",
+        "parentId" : "3ad19f61-d6c3-4bbd-8cd2-00c7e30c2964",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Not sure what you mean? It's invoked after evaluating the worksheet in case of changed dependencies, which in essence is a build target change. I am not sure how otherwise to trigger on that particular event. \r\n\r\nAlternatively, we could have worksheets as a different target and update the build target if dependencies change, which will be effectively the same with more indirection. We do need to somehow restart the presentation compiler.\r\n\r\n> There seems to be some overlap, maybe we can generate BuildTargetIdentifier for worksheets?\r\n\r\nI was thinking about having a separate build target for each worksheet, but since the worksheets can be a part of another build target I decided against. It also seemed like it might cause more work really and I planned to have this for the release tomorrow.\r\n",
+        "createdAt" : "2020-06-25T18:47:36Z",
+        "updatedAt" : "2020-06-26T14:08:31Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "eec69464-6c59-4864-89fc-db6c6b620ebd",
+        "parentId" : "3ad19f61-d6c3-4bbd-8cd2-00c7e30c2964",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Sounds good. I agree with your conclusion to keep this as is ",
+        "createdAt" : "2020-06-26T09:02:33Z",
+        "updatedAt" : "2020-06-26T14:08:31Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1f17edfb786b6f5af2def3bdb1d0b49714512fb2",
+    "line" : 95,
+    "diffHunk" : "@@ -1,1 +380,384 @@      _ = {\n        if (!isSupported) {\n          scribe.warn(s\"unsupported Scala ${info.scalaVersion}\")\n        }\n      }"
+  },
+  {
+    "id" : "3596fd56-953f-4768-ab96-9b900428dc68",
+    "prId" : 1856,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1856",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "da8045b4-3626-40a0-bb46-4dd9f29d8f19",
+        "parentId" : null,
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "why are you updating `jworksheetsCache` twice?",
+        "createdAt" : "2020-06-25T21:48:54Z",
+        "updatedAt" : "2020-06-26T14:08:31Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ec153f9b-ac2d-4d3b-8e00-c5a0797718bc",
+        "parentId" : "da8045b4-3626-40a0-bb46-4dd9f29d8f19",
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "okay this is actually foreach if not present :D scala should add method like forempty {} :P",
+        "createdAt" : "2020-06-25T22:01:34Z",
+        "updatedAt" : "2020-06-26T14:08:31Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "47d791b5-050b-40e9-b23a-5ace41dbe578",
+        "parentId" : "da8045b4-3626-40a0-bb46-4dd9f29d8f19",
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "< resolved >",
+        "createdAt" : "2020-06-25T22:01:44Z",
+        "updatedAt" : "2020-06-26T14:08:31Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1f17edfb786b6f5af2def3bdb1d0b49714512fb2",
+    "line" : 119,
+    "diffHunk" : "@@ -1,1 +404,408 @@\n    created.getOrElse {\n      jworksheetsCache.put(\n        path,\n        createStandaloneCompiler(classpath, path.toString())"
+  },
+  {
+    "id" : "b9c4debb-242c-44e5-bfbd-c1654bc003cc",
+    "prId" : 1856,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1856",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "1a2ff039-0ad4-4e9a-b54a-3c6c147bd5dd",
+        "parentId" : null,
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "put returns previous value, `created` ends up being:\r\n```\r\nscala> val created = for {\r\n     |   x <- Option(3)\r\n     | } yield {\r\n     |   null\r\n     | }\r\nval created: Option[Null] = Some(null)\r\n```",
+        "createdAt" : "2020-06-25T21:55:23Z",
+        "updatedAt" : "2020-06-26T14:08:31Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c5c82512-f7f4-41ca-8798-897e2619ec65",
+        "parentId" : "1a2ff039-0ad4-4e9a-b54a-3c6c147bd5dd",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Added `()`, but this should not be an issue anyway, since that value is never used.",
+        "createdAt" : "2020-06-26T12:59:28Z",
+        "updatedAt" : "2020-06-26T14:08:31Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "fe78e60e-fddd-40a9-af7d-0934d8872b95",
+        "parentId" : "1a2ff039-0ad4-4e9a-b54a-3c6c147bd5dd",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Changed to explicit: Option[Unit], which looks better. ",
+        "createdAt" : "2020-06-26T14:32:42Z",
+        "updatedAt" : "2020-06-26T14:32:42Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1f17edfb786b6f5af2def3bdb1d0b49714512fb2",
+    "line" : 101,
+    "diffHunk" : "@@ -1,1 +386,390 @@      scalac <- buildTargets.scalacOptions(targetId)\n    } yield {\n      jworksheetsCache.put(\n        path,\n        statusBar.trackBlockingTask("
+  },
+  {
+    "id" : "26ebfd2d-fd06-42db-90e1-c7d2db504a1d",
+    "prId" : 1523,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1523",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "18234bbe-ad73-4782-a26c-68cac568c7fa",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Moved the configuration for `foldOnlyLines` here",
+        "createdAt" : "2020-04-15T13:41:36Z",
+        "updatedAt" : "2020-04-15T13:50:25Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1142490703f832961ac0df1debd14b4f3b12ce7d",
+    "line" : 117,
+    "diffHunk" : "@@ -1,1 +362,366 @@          isCompletionSnippetsEnabled =\n            initializeParams.supportsCompletionSnippets,\n          isFoldOnlyLines = initializeParams.foldOnlyLines\n        )\n      )"
+  },
+  {
+    "id" : "668c1585-9ff6-4517-bc76-a07c2500b7cf",
+    "prId" : 736,
+    "prUrl" : "https://github.com/scalameta/metals/pull/736",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b3a9faa2-8654-4c01-be03-a6f3c3dde0fa",
+        "parentId" : null,
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "Can we not mix the future/options? Other methods here have option/future. Is there a reason for breaking this consistency?",
+        "createdAt" : "2019-05-29T13:24:31Z",
+        "updatedAt" : "2019-06-01T12:08:36Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c178843a-0ca6-4281-ab53-754546df5635",
+        "parentId" : "b3a9faa2-8654-4c01-be03-a6f3c3dde0fa",
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "Or as @tgodzik suggested - the other way around :)",
+        "createdAt" : "2019-05-29T15:17:19Z",
+        "updatedAt" : "2019-06-01T12:08:36Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8ef603f5-364d-4b56-ad66-c2a1fc9fb85d",
+        "parentId" : "b3a9faa2-8654-4c01-be03-a6f3c3dde0fa",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I have changed all the signatures to return `Future[T]` for consistency, I agree this makes the code easier to reason about.",
+        "createdAt" : "2019-05-31T09:05:43Z",
+        "updatedAt" : "2019-06-01T12:08:36Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3cd39a3dc1957ac5b5e4e60da9c3eae356702ace",
+    "line" : 62,
+    "diffHunk" : "@@ -1,1 +155,159 @@      token: CancelToken,\n      interactiveSemanticdbs: InteractiveSemanticdbs\n  ): Future[Option[Hover]] =\n    withPC(params, Some(interactiveSemanticdbs)) { (pc, pos) =>\n      pc.hover("
+  },
+  {
+    "id" : "fb5fce96-a2a2-4158-b661-724444c4d092",
+    "prId" : 527,
+    "prUrl" : "https://github.com/scalameta/metals/pull/527",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "af174ed3-aa78-4170-8358-68ee2fcdbbc3",
+        "parentId" : null,
+        "authorId" : "1413d16f-e5c0-4297-84ea-93ed8efc911b",
+        "body" : "But why a synchronized version vs `java.util.concurrent.ConcurrentHashMap`?",
+        "createdAt" : "2019-02-20T23:19:24Z",
+        "updatedAt" : "2019-03-10T09:44:08Z",
+        "lastEditedBy" : "1413d16f-e5c0-4297-84ea-93ed8efc911b",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "acbcfad5-5394-47b1-aef8-8a03ffb56bf9",
+        "parentId" : "af174ed3-aa78-4170-8358-68ee2fcdbbc3",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "`j.u.c.ConcurrentHashMap` can deadlock in `computeIfAbsent` when the compute function is expensive",
+        "createdAt" : "2019-02-21T08:53:30Z",
+        "updatedAt" : "2019-03-10T09:44:08Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c7621ebcf6232d37856b167824069496131bae13",
+    "line" : 47,
+    "diffHunk" : "@@ -1,1 +45,49 @@  // Not a `j.u.c.ConcurrentHashMap` because it can deadlock in `computeIfAbsent` when the absent\n  // function is expensive, which is the case here.\n  val jcache = Collections.synchronizedMap(\n    new java.util.HashMap[BuildTargetIdentifier, PresentationCompiler]\n  )"
+  }
+]

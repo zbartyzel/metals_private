@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "93402367-76df-4ecc-b892-243c59e9c99f",
+    "prId" : 1953,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1953",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "38f9d8d1-d5cf-4e46-b7fe-a867f5945545",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "This could break otherwise. This situation means that we most likely do not know how the file looked when the semanticdb was compiled. This will result in anything depending on edit distance not to work, but will not create a risk for incorrect results.",
+        "createdAt" : "2020-07-28T16:44:34Z",
+        "updatedAt" : "2020-07-29T09:58:03Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "cca69084-9ba5-4477-9252-2f5069163c78",
+        "parentId" : "38f9d8d1-d5cf-4e46-b7fe-a867f5945545",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Also if one of them is empty we cannot match any tokens.",
+        "createdAt" : "2020-07-29T09:58:53Z",
+        "updatedAt" : "2020-07-29T09:58:53Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e5ae4deec700724213f99d4fbeee5535331d1873",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +290,294 @@      // Ignore non-scala Files.\n      unchanged\n    } else if (originalInput.value.isEmpty() || revisedInput.value.isEmpty()) {\n      noMatch\n    } else {"
+  }
+]

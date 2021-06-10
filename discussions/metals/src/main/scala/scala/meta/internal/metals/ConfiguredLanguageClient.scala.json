@@ -1,0 +1,57 @@
+[
+  {
+    "id" : "48cf7a08-3472-4321-aafb-d42e2f160835",
+    "prId" : 1414,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1414",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "67dc23df-a1e3-493b-83d3-7b426b4adcc1",
+        "parentId" : null,
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "I tried to order these in level of \"support\". So if either is fully turned on, we'll go with that, then showMessage, and then LogMessage.",
+        "createdAt" : "2020-02-19T10:07:26Z",
+        "updatedAt" : "2020-02-19T14:01:31Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "2b45c0ea6b216649b70b0a2e98445d20fe09d872",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +36,40 @@\n  override def metalsStatus(params: MetalsStatusParams): Unit = {\n    if (config.statusBar.isOn || clientCapabilities.statusBarIsOn) {\n      underlying.metalsStatus(params)\n    } else if (params.text.nonEmpty && !pendingShowMessage.get()) {"
+  },
+  {
+    "id" : "db0d8c02-b9ea-4c1d-9979-c47a0f854820",
+    "prId" : 465,
+    "prUrl" : "https://github.com/scalameta/metals/pull/465",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b0a73f1c-91de-4cbe-a43d-669ea7c7ac67",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "cc/ @ceedubs moving to `MessageType.Log` makes the message format as plaintext without a colorful blue background.",
+        "createdAt" : "2019-01-12T14:06:12Z",
+        "updatedAt" : "2019-01-12T14:06:12Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f8c18746-c131-4b5e-a63a-a9dbfe453eea",
+        "parentId" : "b0a73f1c-91de-4cbe-a43d-669ea7c7ac67",
+        "authorId" : "76b98364-e72f-42c6-850b-61c7ea9ec769",
+        "body" : "Nice. Thank you!",
+        "createdAt" : "2019-01-12T15:03:32Z",
+        "updatedAt" : "2019-01-12T15:03:32Z",
+        "lastEditedBy" : "76b98364-e72f-42c6-850b-61c7ea9ec769",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e4806988c140f7441335dc2c4d8f77698257c2b5",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +55,59 @@      underlying.metalsStatus(params)\n    } else if (config.statusBar.isLogMessage && !pendingShowMessage.get()) {\n      underlying.logMessage(new MessageParams(MessageType.Log, params.text))\n    } else {\n      ()"
+  }
+]

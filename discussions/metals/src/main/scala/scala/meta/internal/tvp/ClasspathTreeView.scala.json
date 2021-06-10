@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "88277d30-c986-463a-b1b5-9dd1b5eae80c",
+    "prId" : 797,
+    "prUrl" : "https://github.com/scalameta/metals/pull/797",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "9c55a0c0-7c14-445b-996e-103552a66bac",
+        "parentId" : null,
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "some new lines would increase the readability of this method",
+        "createdAt" : "2019-06-27T07:28:16Z",
+        "updatedAt" : "2019-06-28T12:28:04Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "165d5ec9-ff76-453c-a8a5-049bab8c3d9c",
+        "parentId" : "9c55a0c0-7c14-445b-996e-103552a66bac",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Done, also added more comments to explain what's going on. This implementation is probably the most involved part of the PR.",
+        "createdAt" : "2019-06-27T14:32:20Z",
+        "updatedAt" : "2019-06-28T12:28:04Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a43e250d79a91a6cadd98f502fb91b0993c3b5d8",
+    "line" : 44,
+    "diffHunk" : "@@ -1,1 +42,46 @@    else fromUri(uri).parent.map(_.toUri)\n\n  def children(uri: String): Array[TreeViewNode] = {\n    if (uri == rootUri) {\n      TreeViewNode.sortAlphabetically(toplevels().map(toViewNode).toArray)"
+  }
+]

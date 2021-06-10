@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "9932034f-3e85-42b3-86c3-20e8c37c470a",
+    "prId" : 1423,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1423",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "57c52d44-f85a-4bb0-ac93-cbe61e59fb69",
+        "parentId" : null,
+        "authorId" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "body" : "Contains `match` and `case` related logic.",
+        "createdAt" : "2020-02-12T23:48:19Z",
+        "updatedAt" : "2020-02-13T23:57:05Z",
+        "lastEditedBy" : "8a84f8b6-8e04-4802-937a-9ed4764e8556",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ce2b52a8d218744475d975f452c87e3167dadd7b",
+    "line" : 12,
+    "diffHunk" : "@@ -1,1 +10,14 @@import scala.meta.internal.jdk.CollectionConverters._\n\ntrait MatchCaseCompletions { this: MetalsGlobal =>\n\n  /**"
+  }
+]

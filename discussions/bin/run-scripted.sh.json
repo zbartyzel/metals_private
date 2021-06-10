@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "15d56857-a046-402c-b211-21515dc961e9",
+    "prId" : 329,
+    "prUrl" : "https://github.com/scalameta/metals/pull/329",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "e2911f7b-0326-4e8e-be6e-dffe2e841951",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "No more `^`? Has the syntax changed or are we now doing a different thing?",
+        "createdAt" : "2018-09-28T13:58:32Z",
+        "updatedAt" : "2018-09-28T14:04:00Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "32d28feb-a913-4ae1-beeb-46d7e40fc3a2",
+        "parentId" : "e2911f7b-0326-4e8e-be6e-dffe2e841951",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "We were doing it correctly but having `+test` for some things and `^scripted` for other things is unnecessary because we can use `+` for everything. I did this change so that `sbt ci-release` works out-of-the-box.",
+        "createdAt" : "2018-09-28T14:05:27Z",
+        "updatedAt" : "2018-09-28T14:05:27Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "77dd6fafbcc8891fa042f7027ad9fef6b14759e1",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +4,8 @@if [[ $(git diff master --name-only | grep sbt-metals) ]]; then\n  echo \"Diff detected in sbt-metals, running scripted tests\"\n  sbt \"+sbt-metals/scripted\"\nelse\n  echo \"No diff detected in sbt-metals, skipping scripted tests\""
+  }
+]

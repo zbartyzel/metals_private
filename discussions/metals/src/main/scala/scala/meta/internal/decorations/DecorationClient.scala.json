@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "22abfb2c-33ac-4b7e-873f-cd333db0d918",
+    "prId" : 1041,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1041",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f66e1642-3db1-45d9-ab20-e7de29d248ec",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Same as above, should this be\r\n\r\n```suggestion\r\ncase class DecorationRangesDidChangeParams(\r\n```\r\n\r\n?",
+        "createdAt" : "2019-11-04T11:49:02Z",
+        "updatedAt" : "2019-11-09T20:01:12Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c2fe0d93-b833-4085-a515-296593bc73e1",
+        "parentId" : "f66e1642-3db1-45d9-ab20-e7de29d248ec",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "The endpoint name is `metals/publishDecorations`",
+        "createdAt" : "2019-11-06T06:22:33Z",
+        "updatedAt" : "2019-11-09T20:01:12Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a2902a65a77773398f8ac710483906215a06bcf8",
+    "line" : 21,
+    "diffHunk" : "@@ -1,1 +19,23 @@)\n\ncase class PublishDecorationsParams(\n    uri: String,\n    options: Array[DecorationOptions]"
+  }
+]

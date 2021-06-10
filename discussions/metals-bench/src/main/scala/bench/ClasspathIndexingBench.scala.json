@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "4da3b934-1bc4-4879-a459-e26664ab180f",
+    "prId" : 2012,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2012",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "a35e6b75-bae6-457e-ad19-e11e62a6b31f",
+        "parentId" : null,
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "maybe we could make `pkgsToExclude` default value 'None' and drop providing it in those test cases. ",
+        "createdAt" : "2020-09-01T07:19:04Z",
+        "updatedAt" : "2020-09-01T08:04:55Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "59fde9c0-a18b-4901-bd8e-c93ecef99869",
+        "parentId" : "a35e6b75-bae6-457e-ad19-e11e62a6b31f",
+        "authorId" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "body" : "Sure, I've gone ahead and changed this.",
+        "createdAt" : "2020-09-01T08:00:53Z",
+        "updatedAt" : "2020-09-01T08:04:55Z",
+        "lastEditedBy" : "43e93173-6a0c-470b-b449-2889fd9eb639",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "742d615938b7ae27e2a94fdcb0daa3d765c5a4ba",
+    "line" : 15,
+    "diffHunk" : "@@ -1,1 +35,39 @@    ClasspathSearch.fromClasspath(\n      classpath,\n      new ExcludedPackagesHandler(None).isExcludedPackage\n    )\n  }"
+  }
+]

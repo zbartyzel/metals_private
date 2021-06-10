@@ -1,0 +1,46 @@
+[
+  {
+    "id" : "879a3bbd-f308-44c2-8861-da6d10df22a0",
+    "prId" : 1163,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1163",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b204d317-ea47-4e4c-8576-100ae680cc25",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Can we add a test case with symbolic identifiers? I noticed that `::` was displayed as `$colon$colon` in the variable view\r\n\r\n<img width=\"389\" alt=\"Screenshot 2019-12-16 at 11 03 07\" src=\"https://user-images.githubusercontent.com/1408093/70903058-f836a200-1ff5-11ea-9732-cb89f65bb37c.png\">\r\n\r\nNo need to change the current behavior, just document it with a test case.",
+        "createdAt" : "2019-12-16T11:20:15Z",
+        "updatedAt" : "2019-12-18T11:36:11Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "dbf1074f-72d3-4920-8c14-7ea6eb32f5cf",
+        "parentId" : "b204d317-ea47-4e4c-8576-100ae680cc25",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Did we add a test case with symbolic identifier?",
+        "createdAt" : "2019-12-18T10:25:17Z",
+        "updatedAt" : "2019-12-18T11:36:11Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8fbd91f1-4e7b-4183-8d53-a1c3edf70e65",
+        "parentId" : "b204d317-ea47-4e4c-8576-100ae680cc25",
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "Yup: https://github.com/scalameta/metals/pull/1163/files#diff-e39244aad5f9193c28b3779716ed886bR124",
+        "createdAt" : "2019-12-18T11:30:13Z",
+        "updatedAt" : "2019-12-18T11:36:11Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "04ef30f47759c2620cd886265e4c50169245a539",
+    "line" : 148,
+    "diffHunk" : "@@ -1,1 +146,150 @@  )\n\n  def assertStackFrame(\n      name: String,\n      disabled: Boolean = false"
+  }
+]

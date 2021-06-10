@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "c1614191-7ed6-4dd5-9e3c-b17b634b0534",
+    "prId" : 366,
+    "prUrl" : "https://github.com/scalameta/metals/pull/366",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "7dcd91e5-0ef5-46d6-9f5b-a34694373828",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "After the refactor there are no negative tests.\r\nI would add at least one case where there's no `build.sbt` or `build.properties` to prevent regressions.",
+        "createdAt" : "2018-12-01T09:57:01Z",
+        "updatedAt" : "2018-12-01T13:04:35Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b3babf9f-062f-4dd6-9bc2-e71e49d6fad7",
+        "parentId" : "7dcd91e5-0ef5-46d6-9f5b-a34694373828",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Good point, the tests have been updated for slightly more realistic scenarios.",
+        "createdAt" : "2018-12-01T13:04:52Z",
+        "updatedAt" : "2018-12-01T13:04:52Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "9e9aa2da3c7b958873d10380305a901603b0ca63",
+    "line" : 63,
+    "diffHunk" : "@@ -1,1 +61,65 @@       |import gradle._\n       |\"\"\".stripMargin\n  )\n\n}"
+  }
+]

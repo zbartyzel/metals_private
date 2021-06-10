@@ -1,0 +1,145 @@
+[
+  {
+    "id" : "76f44809-a292-4b0b-b14b-d0ae233f17dc",
+    "prId" : 2014,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2014",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "e1cf1540-23e1-44d7-a5a6-4ceea70231f3",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Maybe we could change it to :\r\n`@volatile private var repository: Option[FileTreeRepository[HashCode]] = None`\r\n?",
+        "createdAt" : "2020-08-21T10:39:23Z",
+        "updatedAt" : "2020-08-22T03:26:11Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "cdd242c3-fa32-411f-8ea8-c4373e4f8081",
+        "parentId" : "e1cf1540-23e1-44d7-a5a6-4ceea70231f3",
+        "authorId" : "f04cf3ed-ddc1-4f74-af4f-c25d7b14db43",
+        "body" : "This is obviously a coding preference thing but I prefer using `AtomicReference` to the `var foo: Option[X] = None` pattern. I know that using null is often considered an anti-pattern in scala but I find that atomic references work really nicely. They force you to think about the state of the variable more than a var does because you can't simply dereference it like a var, you have to call `get` on it. This makes me think more about the control flow that leads to the call to `get` and what state I expect the variable to be in which I find helpful for mutable references. Of course it could be `AtomicReference[Option[FileTreeRepository[HashCode]]]` to avoid null handling but I like avoiding unnecessary boxing where possible.\r\n\r\nThat being said, this is just my personal stylistic preference and isn't important to this particular change set so if you would feel more comfortable with a `var`, I'll make that change.",
+        "createdAt" : "2020-08-21T16:07:11Z",
+        "updatedAt" : "2020-08-22T03:26:11Z",
+        "lastEditedBy" : "f04cf3ed-ddc1-4f74-af4f-c25d7b14db43",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "44bf2162-7bd5-4d3f-a5f3-64ed73bb4794",
+        "parentId" : "e1cf1540-23e1-44d7-a5a6-4ceea70231f3",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Both are really not ideal. We can leave as is, thanks!",
+        "createdAt" : "2020-08-21T16:46:21Z",
+        "updatedAt" : "2020-08-22T03:26:11Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "13192ebb3ddfb265aceb4225904caf6a57ae07e0",
+    "line" : 84,
+    "diffHunk" : "@@ -1,1 +77,81 @@  override def cancel(): Unit = {\n    repository.getAndSet(null) match {\n      case null =>\n      case r => r.close()\n    }"
+  },
+  {
+    "id" : "eebe1745-e882-4fe6-97de-14e3c1ff7a18",
+    "prId" : 1629,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1629",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "09f55a20-df57-4d61-97d7-17ee10ab7332",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "Could you add a comment on why you need to sort and reverse it? It took me a while to realize what's going on.",
+        "createdAt" : "2020-04-16T14:06:49Z",
+        "updatedAt" : "2020-04-17T10:03:37Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b435617c-f200-4bf1-a567-5aa9e304b3bf",
+        "parentId" : "09f55a20-df57-4d61-97d7-17ee10ab7332",
+        "authorId" : "da2cd095-1f8f-45c7-9ea4-3315cad4b0b7",
+        "body" : "you're right. In fact we need to delete all children before parent paths.",
+        "createdAt" : "2020-04-16T14:10:07Z",
+        "updatedAt" : "2020-04-17T10:03:37Z",
+        "lastEditedBy" : "da2cd095-1f8f-45c7-9ea4-3315cad4b0b7",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "11a3ce5f2d61d4805920381b556695ad432792e5",
+    "line" : 22,
+    "diffHunk" : "@@ -1,1 +99,103 @@    startWatching(new ju.ArrayList(sourceDirectoriesToWatch))\n    // reverse sorting here is necessary to delete parent paths at the end\n    createdSourceDirectories.asScala.sortBy(_.toNIO).reverse.foreach { dir =>\n      if (dir.isEmptyDirectory) {\n        dir.delete()"
+  },
+  {
+    "id" : "32b11e88-e50c-4514-936c-fd31ddb11e8f",
+    "prId" : 1435,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1435",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "814f65d5-70b7-4b4f-97ad-ec067998ffb4",
+        "parentId" : null,
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "we could add a comment why it has dedicated branch that is doing the same logic.",
+        "createdAt" : "2020-02-17T13:01:21Z",
+        "updatedAt" : "2020-02-17T16:18:06Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "afc5e82d-fa63-4ac3-8159-bf4d69dc69ce",
+        "parentId" : "814f65d5-70b7-4b4f-97ad-ec067998ffb4",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "added",
+        "createdAt" : "2020-02-17T14:48:30Z",
+        "updatedAt" : "2020-02-17T16:18:06Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "fb025d5358f8296b853bbb7ede33b89e75356b35",
+    "line" : 54,
+    "diffHunk" : "@@ -1,1 +130,134 @@    override def onEvent(event: DirectoryChangeEvent): Unit = {\n      // in non-MacOS systems the path will be null\n      if (event.eventType() == EventType.OVERFLOW) {\n        didChangeWatchedFiles(event)\n      } else if (!Files.isDirectory(event.path())) {"
+  },
+  {
+    "id" : "ce5d39b5-1415-4e96-838f-97f8f684067d",
+    "prId" : 857,
+    "prUrl" : "https://github.com/scalameta/metals/pull/857",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "db6deaa3-2c94-4c56-8412-8def3e95c37b",
+        "parentId" : null,
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "please, add a comment that we create those paths just to get a notification they don't exist",
+        "createdAt" : "2019-08-08T06:56:56Z",
+        "updatedAt" : "2019-08-08T16:25:02Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3cbb9d52-c1ae-469c-8d87-fedcd858ea08",
+        "parentId" : "db6deaa3-2c94-4c56-8412-8def3e95c37b",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "added",
+        "createdAt" : "2019-08-08T12:31:23Z",
+        "updatedAt" : "2019-08-08T16:25:02Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0dd3eede29c603619dd79001b736615bb5743729",
+    "line" : 44,
+    "diffHunk" : "@@ -1,1 +67,71 @@    val createdSourceDirectories = new util.ArrayList[AbsolutePath]()\n    def watch(path: AbsolutePath, isSource: Boolean): Unit = {\n      if (!path.isDirectory && !path.isFile) {\n        val pathToCreate = if (path.isScalaOrJava) {\n          AbsolutePath(path.toNIO.getParent())"
+  }
+]

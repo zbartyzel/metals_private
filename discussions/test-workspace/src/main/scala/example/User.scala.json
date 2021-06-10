@@ -1,0 +1,46 @@
+[
+  {
+    "id" : "30495a6b-accf-4cec-9aad-a9070f6ae1bf",
+    "prId" : 424,
+    "prUrl" : "https://github.com/scalameta/metals/pull/424",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "33a11df8-d235-434d-b435-67d49137fb41",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Accidental change?",
+        "createdAt" : "2018-12-19T11:54:04Z",
+        "updatedAt" : "2018-12-19T13:35:23Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "05e06ad0-d19c-4419-be34-2f518477f187",
+        "parentId" : "33a11df8-d235-434d-b435-67d49137fb41",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Yes, was experimenting. Forgot to undo the diff, but it doesn't matter much I suppose.",
+        "createdAt" : "2018-12-19T12:42:23Z",
+        "updatedAt" : "2018-12-19T13:35:23Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "63262488-27c9-47dd-a89d-187d665d92f8",
+        "parentId" : "33a11df8-d235-434d-b435-67d49137fb41",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Removed.",
+        "createdAt" : "2018-12-19T12:44:23Z",
+        "updatedAt" : "2018-12-19T13:35:23Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "eade48fd8ffbc5572cad7092e373fee0027e4f0f",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +6,10 @@\nobject User {\n  val sum: Int = \"\"\n  val path = Paths.get(\"build.sbt\")\n}"
+  }
+]

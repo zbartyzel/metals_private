@@ -1,0 +1,200 @@
+[
+  {
+    "id" : "c7cfc5bf-6f6a-494c-8bb9-7eea97088fe2",
+    "prId" : 1018,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1018",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "e3ac05c8-483f-45fc-ab4c-a4e4f91de302",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "BTW We can migrate this job to GH Actions. The latest sbt-ci-release supports GH Actions",
+        "createdAt" : "2019-10-25T17:57:30Z",
+        "updatedAt" : "2019-10-25T17:57:30Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "71375836d05d62c051df649e2d1094176bc3fd23",
+    "line" : 25,
+    "diffHunk" : "@@ -1,1 +15,19 @@    - stage: release\n      script:\n        - nvm install 'lts/*' && nvm use 'lts/*'\n        - git fetch --tags\n        - sbt ci-release docs/docusaurusPublishGhpages"
+  },
+  {
+    "id" : "473bbf14-beda-4a60-bdd7-0e9b5e90db4d",
+    "prId" : 764,
+    "prUrl" : "https://github.com/scalameta/metals/pull/764",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "53507a70-d695-4fe7-a69a-e7e33a28d54c",
+        "parentId" : null,
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "what does it do?",
+        "createdAt" : "2019-06-13T13:19:23Z",
+        "updatedAt" : "2019-06-13T13:20:17Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "937dd48b-5136-4c4b-babf-7741940332dd",
+        "parentId" : "53507a70-d695-4fe7-a69a-e7e33a28d54c",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "specifies distribution to be ubuntu trusty - I think there is an issue when the distro is newer and it doesn't have jdk 8.",
+        "createdAt" : "2019-06-13T13:24:17Z",
+        "updatedAt" : "2019-06-13T13:24:18Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "759c95b8-d9a0-4b18-9c55-3b48add502d1",
+        "parentId" : "53507a70-d695-4fe7-a69a-e7e33a28d54c",
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "@olafurpg does this make sense? I had issues with jdk8 before adding this, but I have no experience with travis.",
+        "createdAt" : "2019-06-13T13:57:10Z",
+        "updatedAt" : "2019-06-13T13:57:11Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f31de0ed-2576-454c-a3a2-0a657f84a61b",
+        "parentId" : "53507a70-d695-4fe7-a69a-e7e33a28d54c",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "LGTM ",
+        "createdAt" : "2019-06-13T15:03:15Z",
+        "updatedAt" : "2019-06-13T15:04:20Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b24827dff9633514961a4a5d80f323b548d8be8e",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +4,8 @@  - linux\nlanguage: scala\ndist: trusty\nstages:\n  - name: test"
+  },
+  {
+    "id" : "523739d6-b4d5-472e-a92a-595d16923461",
+    "prId" : 267,
+    "prUrl" : "https://github.com/scalameta/metals/pull/267",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "215d0d76-2c4c-48f1-9a2f-bfb9249db552",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Makes sense 👍 ",
+        "createdAt" : "2018-04-07T17:39:29Z",
+        "updatedAt" : "2018-04-07T17:39:33Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "6cfbcede01e4f40baeeac303b7b535794a0dfd54",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +42,46 @@\nbefore_install:\n  - if [ \"$TRAVIS_BUILD_STAGE_NAME\" = 'Release'  ]; then\n      openssl aes-256-cbc -K $encrypted_df92ba612cfd_key -iv $encrypted_df92ba612cfd_iv -in travis/secrets.tar.enc -out travis/secrets.tar -d;\n      tar xv -C travis -f travis/secrets.tar;"
+  },
+  {
+    "id" : "2b1c8ea2-4741-4140-ab99-c1064360f287",
+    "prId" : 190,
+    "prUrl" : "https://github.com/scalameta/metals/pull/190",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "9f30c77f-f356-4203-95b8-226f84415ccb",
+        "parentId" : null,
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "Notice that I'm doing `test` for both projects, but there are no tests yet.\r\nThis effectively only tests that they compile for now.",
+        "createdAt" : "2018-02-06T09:53:26Z",
+        "updatedAt" : "2018-02-06T09:53:26Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "754418897a0217f1d72cb08c6219adccb43a201c",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +16,20 @@      script:\n        - sbt ++2.11.12 lsp4s/test\n        - sbt ++2.11.12 jsonrpc/test\n    - env: TEST=\"sbt test\"\n      script:"
+  },
+  {
+    "id" : "1ab32adc-2a8a-495b-8127-378085294865",
+    "prId" : 17,
+    "prUrl" : "https://github.com/scalameta/metals/pull/17",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "2b57baf1-34ac-4911-bdf2-804b462a6c3e",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Should we also check `sbt compile`?",
+        "createdAt" : "2017-11-08T08:48:03Z",
+        "updatedAt" : "2017-11-09T18:43:08Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "37bbe76c-789d-4426-965a-f9472e2a607c",
+        "parentId" : "2b57baf1-34ac-4911-bdf2-804b462a6c3e",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "right, I'll add it",
+        "createdAt" : "2017-11-08T08:48:42Z",
+        "updatedAt" : "2017-11-09T18:43:08Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "036c60e79446afa0d349365297a6781c32272a00",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +6,10 @@env:\n  matrix:\n  - CI_TEST: scalafmt\n  - CI_TEST: ci-fast\n"
+  },
+  {
+    "id" : "8cc3a181-3e8c-478d-9445-d18b6131e313",
+    "prId" : 17,
+    "prUrl" : "https://github.com/scalameta/metals/pull/17",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "7d9c193a-b5dd-4497-a559-b5d436068636",
+        "parentId" : null,
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "Is this defined in build.sbt? We can probably just run `test`",
+        "createdAt" : "2017-11-08T08:57:35Z",
+        "updatedAt" : "2017-11-09T18:43:08Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5722ff59-f066-48cd-8467-13c88039d938",
+        "parentId" : "7d9c193a-b5dd-4497-a559-b5d436068636",
+        "authorId" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "body" : "The task is defined in `bin/runci.sh` It's currently failing because it's looking for `dragos-vscode-scala:0.2.1-SNAPSHOT`, but that's not a managed dependency in the `build.sbt` :O I'm confused...",
+        "createdAt" : "2017-11-08T09:11:35Z",
+        "updatedAt" : "2017-11-09T18:43:08Z",
+        "lastEditedBy" : "bc07a4cc-a4ee-48f6-ae1e-f36bf246c466",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "06474069-cafc-4997-9722-73ea5a765cee",
+        "parentId" : "7d9c193a-b5dd-4497-a559-b5d436068636",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I'm very puzzled by this error, can you try `dragos-vscode-scala/publishLocal` before compile?",
+        "createdAt" : "2017-11-08T18:26:50Z",
+        "updatedAt" : "2017-11-09T18:43:08Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "036c60e79446afa0d349365297a6781c32272a00",
+    "line" : 9,
+    "diffHunk" : "@@ -1,1 +7,11 @@  matrix:\n  - CI_TEST: scalafmt\n  - CI_TEST: ci-fast\n\ncache:"
+  }
+]

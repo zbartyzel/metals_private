@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "59b42325-9ab2-4165-a948-8b2ad7edcadd",
+    "prId" : 736,
+    "prUrl" : "https://github.com/scalameta/metals/pull/736",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "7b079dd6-04d6-45ba-816f-eb979d720d02",
+        "parentId" : null,
+        "authorId" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "body" : "maybe `tasks` ? `original` doesn't tell me anything. If the intent is that it is something we expect to get after the `when/act` phase, then `expected` is - I think - well established name.",
+        "createdAt" : "2019-05-29T14:56:40Z",
+        "updatedAt" : "2019-06-01T12:08:36Z",
+        "lastEditedBy" : "99b86a37-7b24-412b-846e-038ecface4d6",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a2100b4f-8c85-4396-876e-f5b0a302f72e",
+        "parentId" : "7b079dd6-04d6-45ba-816f-eb979d720d02",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "`original` is used consistently in the metals test suites to represent the original input, for example\r\n```scala\r\ndef check(name: String, original: String, expected: String): Unit =\r\n  test(name) {\r\n    val obtained = someFunction(original)\r\n    assert(obtained == expected)\r\n  }\r\n```",
+        "createdAt" : "2019-05-31T09:38:47Z",
+        "updatedAt" : "2019-06-01T12:08:36Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3cd39a3dc1957ac5b5e4e60da9c3eae356702ace",
+    "line" : 40,
+    "diffHunk" : "@@ -1,1 +38,42 @@    val obtained = mutable.ListBuffer.empty[Int]\n    val size = 10\n    val original = 1.to(size).toList\n    val all = Future.traverse(original) { i =>\n      val promise = Promise[Unit]()"
+  }
+]

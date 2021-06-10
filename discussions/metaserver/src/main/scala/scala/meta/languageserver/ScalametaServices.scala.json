@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "1a915fb5-7c72-4a85-a45a-d28f8a0f4c2e",
+    "prId" : 195,
+    "prUrl" : "https://github.com/scalameta/metals/pull/195",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "d13466d1-2c1d-416f-9d56-cac64691961e",
+        "parentId" : null,
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "I'm not sure I'm doing it right. Probably it should be just `.request`? Why does `documentFormattingProvider.format` return response errors explicitly?",
+        "createdAt" : "2018-02-10T16:37:19Z",
+        "updatedAt" : "2018-02-11T19:15:09Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9b76b334-155f-4e52-8057-67e8e1e8768d",
+        "parentId" : "d13466d1-2c1d-416f-9d56-cac64691961e",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "I have a branch somewhere locally where I refactored the lsp4s API for requests to return `T` instead of `Either[Response.Error, T]`. Errors can instead be thrown as exception. I think this refactoring cleaned up a lot of code.\r\n\r\nThe reason it's `requestAsync` is simply because we don't have a combinator for synchronous explicit error handling.",
+        "createdAt" : "2018-02-11T15:54:03Z",
+        "updatedAt" : "2018-02-11T19:15:09Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "948c2bd9-cc25-4b73-87ac-287455c974f6",
+        "parentId" : "d13466d1-2c1d-416f-9d56-cac64691961e",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "OK, I see",
+        "createdAt" : "2018-02-11T19:17:28Z",
+        "updatedAt" : "2018-02-11T19:17:28Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0294c49a-6c23-42ae-8359-2ba4a3929c3c",
+        "parentId" : "d13466d1-2c1d-416f-9d56-cac64691961e",
+        "authorId" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "body" : "Btw, did you mean this branch: https://github.com/olafurpg/language-server/tree/refactoring? You mentioned it in #174.",
+        "createdAt" : "2018-02-11T19:26:17Z",
+        "updatedAt" : "2018-02-11T19:26:26Z",
+        "lastEditedBy" : "c7773eab-5a5b-4ca4-aed0-7b8a59085421",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8bba58c6-abc0-4b68-9468-f291b1171556",
+        "parentId" : "d13466d1-2c1d-416f-9d56-cac64691961e",
+        "authorId" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "body" : "correct, I never polished it into a PR because there is too much happening in that PR. The relevant commit is https://github.com/olafurpg/language-server/commit/3a8c1a7a797a8fdea80cd913aa8f068de3624621",
+        "createdAt" : "2018-02-12T11:22:25Z",
+        "updatedAt" : "2018-02-12T11:22:26Z",
+        "lastEditedBy" : "a2bc4287-0a04-46c7-ab03-33243f01e61a",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "37ef516caf63a83cb2af533a23f0de32c02ba087",
+    "line" : 27,
+    "diffHunk" : "@@ -1,1 +263,267 @@      ()\n    }\n    .requestAsync(td.willSaveWaitUntil) { params =>\n      params.reason match {\n        case TextDocumentSaveReason.Manual if latestConfig().scalafmt.onSave =>"
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "id" : "5c670a86-dbcd-446b-ad63-c5d2b8d7fcad",
+    "prId" : 1487,
+    "prUrl" : "https://github.com/scalameta/metals/pull/1487",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "4a521941-fc0c-4ec1-8298-bf2ee7fe70ad",
+        "parentId" : null,
+        "authorId" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "body" : "isn't `baseMethodInfo` already inlcuded in `baseMethodSymbolInformation` ?",
+        "createdAt" : "2020-03-17T18:46:51Z",
+        "updatedAt" : "2020-03-24T16:45:28Z",
+        "lastEditedBy" : "a7ecab15-7126-4839-9885-ed1a3031e6b8",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1c5b3fa4-5603-4f33-840a-89dc32fac111",
+        "parentId" : "4a521941-fc0c-4ec1-8298-bf2ee7fe70ad",
+        "authorId" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "body" : "it is but it has `Signature` tpe, and I need `MethodSignature`. I could do casting here but I prefer to keep casting where check is performed and simply provide it here with correct tpe (but yes it is duplicated).\r\nIf `SymbolInformation` was generic with `SymbolInformation[X <: Signature]` I could say here I need `baseMethodSymbolInformation: SymbolInformation[MethodSignature]` but I can't with current types.",
+        "createdAt" : "2020-03-18T08:23:35Z",
+        "updatedAt" : "2020-03-24T16:45:28Z",
+        "lastEditedBy" : "833cf3ad-ab55-41fb-9fdf-94433786b212",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "55838e6c9f4127bc8d06a8d31a6df496a0b729a8",
+    "line" : 80,
+    "diffHunk" : "@@ -1,1 +78,82 @@  private def matchMethodInClass(\n      superClass: ClassHierarchyItem,\n      baseMethodSymbolInformation: SymbolInformation,\n      baseMethodInfo: MethodSignature,\n      findSymbol: String => Option[SymbolInformation]"
+  }
+]
