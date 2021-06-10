@@ -1,0 +1,129 @@
+[
+  {
+    "id" : "85307312-15af-4d46-acbd-15a52b4adf26",
+    "prId" : 2863,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2863",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "47ecb20d-fc00-47f4-a7a4-e01a6719c2f8",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "Just to make sure I understand this. In your example with:\r\n\r\n```\r\nio:netty.netty-all:4.0.43.Final - io.netty.util.collection.IntObjectMap#Entry\r\nio.netty.netty-common:4.1.17.Final - io.netty.util.collection.IntObjectMap#PrimitiveEntry\r\n```\r\nThis is to ensure that we are always getting the same one back right? But aren't these technically two different symbols? How come `index.definition(tpe)` was returning a random one if they are unique? I'm not super familiar with the GlobalSymbolIndex so I may just totally be missing something.",
+        "createdAt" : "2021-06-08T12:03:03Z",
+        "updatedAt" : "2021-06-08T12:03:53Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9c1a2fde-53e2-415d-ba37-549bc29d927c",
+        "parentId" : "47ecb20d-fc00-47f4-a7a4-e01a6719c2f8",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "They are different but here `index.definitions` is performed only to find the location of a top-level class.\r\n\r\nIn this test  classpath search found these two class files wich has name that fit query:\r\n  - `io/netty/util/colletion/IntObjectMap$Entry.class`\r\n  - `io/netty/util/colletion/IntObjectMap$PrimitiveEntry.class`\r\n\r\nThen it calls `index.definition` to find toplevel symbols `io.netty.util.collection.IntObjectMap` to perform actual matching against semantic defitions extracted from source file.",
+        "createdAt" : "2021-06-08T16:06:45Z",
+        "updatedAt" : "2021-06-08T16:06:45Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "34a38c93-932d-4beb-beec-35d2550675ff",
+        "parentId" : "47ecb20d-fc00-47f4-a7a4-e01a6719c2f8",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "Ahh ok, thanks for explaining 👍🏼 ",
+        "createdAt" : "2021-06-08T18:46:03Z",
+        "updatedAt" : "2021-06-08T18:46:03Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ba2370599dca459eaca43b33c25c5e4b25295028",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +94,98 @@    } else forTpe\n\n    defs.sortBy(_.path.toURI.toString).headOption\n  }\n  override def shouldVisitPackage(pkg: String): Boolean = true"
+  },
+  {
+    "id" : "eda9920f-24b0-42f0-a550-417214759a6a",
+    "prId" : 2863,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2863",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "52f4083f-d980-4d24-8011-233f0ce61bf1",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "Does `forTpe` actually mean something here that I'm unaware of? Would it be more clear to just call this `symbolDefinitions` or something?",
+        "createdAt" : "2021-06-08T12:03:45Z",
+        "updatedAt" : "2021-06-08T12:04:06Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d4515e4f-1b98-49a7-b2a3-f2a6caf9227d",
+        "parentId" : "52f4083f-d980-4d24-8011-233f0ce61bf1",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "It means that it tries to find a definition for typeSymbol.\r\nIf it's empty it also tries to find termSymbol.\r\nUnfortunately, there is no equivalent to `orElse` combinator for empty List so I had to extract it into val",
+        "createdAt" : "2021-06-08T16:14:16Z",
+        "updatedAt" : "2021-06-08T16:14:16Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ba2370599dca459eaca43b33c25c5e4b25295028",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +88,92 @@    val tpe = Symbol(Symbols.Global(pkg, Descriptor.Type(nme)))\n\n    val forTpe = index.definitions(tpe)\n    val defs = if (forTpe.isEmpty) {\n      val term = Symbol(Symbols.Global(pkg, Descriptor.Term(nme)))"
+  }
+]

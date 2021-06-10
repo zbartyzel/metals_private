@@ -1,0 +1,97 @@
+[
+  {
+    "id" : "9f938e0e-a6b3-4245-8061-4f401c19cf93",
+    "prId" : 2825,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2825",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "7c37e6f4-b853-45f4-9b32-f3645eeba936",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "Same as the other comment, I'm assuming it's fine, but we don't need to worry about the `head` call here?",
+        "createdAt" : "2021-05-29T09:39:48Z",
+        "updatedAt" : "2021-05-29T09:45:16Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3fab548f-42b5-4267-857e-adec444a7f8f",
+        "parentId" : "7c37e6f4-b853-45f4-9b32-f3645eeba936",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "We shouldn't need to worry, that head is the just parsed source file. We can add a check, but this is not the only place we are doing it and there seems to be no issues around it.",
+        "createdAt" : "2021-05-31T08:31:03Z",
+        "updatedAt" : "2021-05-31T08:31:03Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c8024b38-8896-4ddb-840b-cfe6054bf617",
+        "parentId" : "7c37e6f4-b853-45f4-9b32-f3645eeba936",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "No need to add a check then. I was just curious :)",
+        "createdAt" : "2021-05-31T08:33:09Z",
+        "updatedAt" : "2021-05-31T08:33:09Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "51b96890-35da-4c64-9fb7-6f8f64cd42a7",
+        "parentId" : "7c37e6f4-b853-45f4-9b32-f3645eeba936",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "And this is basically produced by `driver.run(uri, source)`",
+        "createdAt" : "2021-05-31T08:37:23Z",
+        "updatedAt" : "2021-05-31T08:37:24Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "4c925bb564b537775be70666582c8e6f17d58fd2",
+    "line" : 54,
+    "diffHunk" : "@@ -1,1 +52,56 @@    val source = SourceFile.virtual(filePath.toString, params.text)\n    driver.run(uri, source)\n    val unit = driver.currentCtx.run.units.head\n    val pos = driver.sourcePosition(params)\n    val path ="
+  }
+]

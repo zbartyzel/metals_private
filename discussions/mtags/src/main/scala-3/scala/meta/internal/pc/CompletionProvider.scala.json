@@ -1,0 +1,34 @@
+[
+  {
+    "id" : "1e3873f4-ecdf-43e1-b817-673133088048",
+    "prId" : 2852,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2852",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ef187930-8f74-4147-9c37-dec46bf63acb",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "We should compare the full signature, show for symbol was mostly just name, which wasn't an issue prior to 3.0.1, since before the completions with the same symbol name were grouped together.",
+        "createdAt" : "2021-06-04T10:08:59Z",
+        "updatedAt" : "2021-06-04T10:12:52Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "55f4accb32b50673f57ca811cee234a7bcea5792",
+    "line" : 53,
+    "diffHunk" : "@@ -1,1 +283,287 @@                    if (byParamCount != 0) byParamCount\n                    else {\n                      s1.detailString.compareTo(s2.detailString)\n                    }\n                  }"
+  }
+]

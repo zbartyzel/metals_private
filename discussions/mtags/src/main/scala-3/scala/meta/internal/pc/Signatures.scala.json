@@ -1,0 +1,97 @@
+[
+  {
+    "id" : "28bb07ce-f593-4679-a1d3-1e8985badf7a",
+    "prId" : 2825,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2825",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "26b14f3e-77a8-464b-892e-da033dc7a46c",
+        "parentId" : null,
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "A nitpick: I know that in scala2 it's done in a similar way but maybe we can avoid having this non a real type instance?\r\n\r\nI mean that we can introduce smth like and use it as a resulting type of `shortType`\r\n```\r\nsealed trait TypeRepr\r\nobject TypeRepr {\r\n  case class Real(tpe: Type) extends TypeRepr\r\n  case class Shortened(fullName: String) extends TypeRepr\r\n}\r\n```",
+        "createdAt" : "2021-05-31T16:39:36Z",
+        "updatedAt" : "2021-05-31T17:47:17Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "647b919f-24df-4fa8-b5b3-07e8c8759bc2",
+        "parentId" : "26b14f3e-77a8-464b-892e-da033dc7a46c",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "It would be best to probably just print the types on the go, but that is rather complex. Anyway, looks like a good idea, I will see if I can use it here.",
+        "createdAt" : "2021-06-01T15:59:49Z",
+        "updatedAt" : "2021-06-01T15:59:50Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "872a07a8-9074-47d6-98e4-34b3070f5aa6",
+        "parentId" : "26b14f3e-77a8-464b-892e-da033dc7a46c",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "Cool but anyway - feel free to ignore that. It's more a thing of taste and as it works for scala2 it shouldn't introduce any significant problem.",
+        "createdAt" : "2021-06-01T20:30:59Z",
+        "updatedAt" : "2021-06-01T20:30:59Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "23c786d2-0ae6-4e61-8272-ce8d108e0bfd",
+        "parentId" : "26b14f3e-77a8-464b-892e-da033dc7a46c",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Ok, let's leave it for now, we might need to work on it anyway in the future.",
+        "createdAt" : "2021-06-09T18:25:20Z",
+        "updatedAt" : "2021-06-09T18:25:20Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "4c925bb564b537775be70666582c8e6f17d58fd2",
+    "line" : 57,
+    "diffHunk" : "@@ -1,1 +90,94 @@  def computeHash(bind: Binders) = hash\n  override def toString = name\n}\n\n/**"
+  }
+]

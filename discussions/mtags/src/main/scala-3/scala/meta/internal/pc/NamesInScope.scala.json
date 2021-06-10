@@ -1,0 +1,97 @@
+[
+  {
+    "id" : "45cfaa42-7244-409f-afa2-7ee649b7d008",
+    "prId" : 2825,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2825",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ac707988-cf58-4dc2-a1b0-5087d1c738d3",
+        "parentId" : null,
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "There is also `inspectImports` - it can provide renames too",
+        "createdAt" : "2021-05-31T16:29:43Z",
+        "updatedAt" : "2021-05-31T17:47:17Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "fc9e2f3e-b7d3-4c90-81ab-a02fb04c8657",
+        "parentId" : "ac707988-cf58-4dc2-a1b0-5087d1c738d3",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Och, do you mean that imports such as:\r\n```\r\nobject A{\r\n  import a.b.C as D\r\n}\r\n```\r\n?",
+        "createdAt" : "2021-06-01T15:58:41Z",
+        "updatedAt" : "2021-06-01T15:58:41Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c2e98143-935b-4ad0-9c81-340d939965d9",
+        "parentId" : "ac707988-cf58-4dc2-a1b0-5087d1c738d3",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "no, I mean that import renames are processed in `inspectImports` too and probably should be merged with renames that comes from `ctx.importInfo`: https://github.com/scalameta/metals/blob/7318b90e9782efc12632779119aee7f389515d56/mtags/src/main/scala-3/scala/meta/internal/pc/NamesInScope.scala#L170-L173\r\n",
+        "createdAt" : "2021-06-01T20:27:36Z",
+        "updatedAt" : "2021-06-01T20:27:36Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7651b962-7f1d-40e2-a28f-af32c12daee4",
+        "parentId" : "ac707988-cf58-4dc2-a1b0-5087d1c738d3",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "This isn't actual anymore. I found the original problem and will delete this method soon",
+        "createdAt" : "2021-06-08T14:36:16Z",
+        "updatedAt" : "2021-06-08T14:36:17Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "4c925bb564b537775be70666582c8e6f17d58fd2",
+    "line" : 55,
+    "diffHunk" : "@@ -1,1 +101,105 @@            sel.renamed match {\n              case Ident(name) if name.toString != \"_\" =>\n                renames += ((sel.imported.name.toSimpleName, name.toString))\n              case _ =>\n            }"
+  }
+]

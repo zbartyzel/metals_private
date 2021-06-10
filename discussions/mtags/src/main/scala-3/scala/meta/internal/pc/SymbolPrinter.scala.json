@@ -1,0 +1,34 @@
+[
+  {
+    "id" : "0d99641a-30ac-4de9-9196-a2cab67dc966",
+    "prId" : 2821,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2821",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ec856ce2-2bab-4e31-a592-a83d4e4063c2",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "We need the companion class of the enum object, which is the actual enum.",
+        "createdAt" : "2021-05-26T07:09:04Z",
+        "updatedAt" : "2021-05-26T10:22:47Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b972860fcf8aacda2a1106ad9c3cb5ed8bf53ab2",
+    "line" : 24,
+    "diffHunk" : "@@ -1,1 +41,45 @@        \"package \" + owners.toList.reverse.mkString(\".\")\n      // enum\n      case _ if sym.companionClass.is(Flags.Enum) =>\n        s\"enum $name: \"\n      // enum case"
+  }
+]

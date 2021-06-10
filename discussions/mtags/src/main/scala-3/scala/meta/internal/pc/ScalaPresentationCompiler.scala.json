@@ -1,0 +1,34 @@
+[
+  {
+    "id" : "53712713-eef4-44f6-84b2-54037f2a7fc2",
+    "prId" : 2852,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2852",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "5b807351-f810-4125-8d50-224cd3248f50",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Improved it to return the full hover string here, full separation was actually problematic to maintain.",
+        "createdAt" : "2021-06-04T10:09:29Z",
+        "updatedAt" : "2021-06-04T10:12:52Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "55f4accb32b50673f57ca811cee234a7bcea5792",
+    "line" : 36,
+    "diffHunk" : "@@ -1,1 +311,315 @@            val docComments =\n              symbols.flatMap(ParsedComment.docOf(_))\n            val hoverString = symbols.headOption.map { symbol =>\n              tpw match {\n                // https://github.com/lampepfl/dotty/issues/8891"
+  }
+]

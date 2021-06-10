@@ -1,0 +1,34 @@
+[
+  {
+    "id" : "639578bb-757a-47e4-adf5-5c2f93e59e48",
+    "prId" : 2830,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2830",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "c7d28f10-f155-4334-bda8-532cfb92371b",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "I usually process it a bit, but it's not 100% needed I guess.\r\n\r\n```suggestion\r\n$ git shortlog -sn --no-merges v0.10.3..v0.10.4\r\n\tTomasz Godzik\r\n\tVadim Chelyshov\r\n\tLuigi Frunzio\r\n\tChris Kipp\r\n```",
+        "createdAt" : "2021-05-31T08:55:53Z",
+        "updatedAt" : "2021-05-31T08:57:45Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8a966f768ca5a1749fcdd9e6b2de5e2e4de542e5",
+    "line" : 55,
+    "diffHunk" : "@@ -1,1 +53,57 @@\n```\n$ git shortlog -sn --no-merges v0.10.3..v0.10.4\n\tTomasz Godzik\n\tVadim Chelyshov"
+  }
+]

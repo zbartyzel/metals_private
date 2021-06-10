@@ -1,0 +1,224 @@
+[
+  {
+    "id" : "37506b25-2237-4b00-8337-5971934874f7",
+    "prId" : 2860,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2860",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ef31cb1d-85b0-4252-b6c9-00709d8ac8e1",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "What does this do?",
+        "createdAt" : "2021-06-05T17:19:06Z",
+        "updatedAt" : "2021-06-05T17:19:40Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9b28a2d6-594c-4906-b2dd-69a9af264852",
+        "parentId" : "ef31cb1d-85b0-4252-b6c9-00709d8ac8e1",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "sbt wrongly warns that `scalafixConfig` setting isn't used",
+        "createdAt" : "2021-06-05T17:47:07Z",
+        "updatedAt" : "2021-06-05T17:47:07Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "65f26894-fb3d-4cc0-8e6d-f762382bbd08",
+        "parentId" : "ef31cb1d-85b0-4252-b6c9-00709d8ac8e1",
+        "author" : {
+          "login" : "bjaglin",
+          "name" : "Brice Jaglin",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/349077?v=4",
+          "altName" : null
+        },
+        "body" : "I just opened https://github.com/scalacenter/sbt-scalafix/pull/233 to avoid that",
+        "createdAt" : "2021-06-05T20:07:24Z",
+        "updatedAt" : "2021-06-05T20:07:24Z",
+        "lastEditedBy" : {
+          "login" : "bjaglin",
+          "name" : "Brice Jaglin",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/349077?v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d8c6569fb7bca098ca57e7eb72f51645512984ae",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +172,176 @@}\nGlobal / cancelable := true\nGlobal / excludeLintKeys += scalafixConfig\ncrossScalaVersions := Nil\n"
+  },
+  {
+    "id" : "40c29307-38e3-47bc-8f3b-59aba0b9760c",
+    "prId" : 2826,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2826",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "2392bf4e-0a48-40eb-af02-23b3a56df679",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "You should change scala212 to be `2.12.14`, we try to keep on the latest version in Metals, and add `2.12.13` here. You will most likely need to set ammonite212Version to `2.12.14` if it's not yet published.\r\n\r\nAlso, please update `bin/test-release.sh`",
+        "createdAt" : "2021-05-28T15:03:24Z",
+        "updatedAt" : "2021-05-28T15:03:25Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c1a8850d-461f-4319-904e-48b2952ce9c0",
+        "parentId" : "2392bf4e-0a48-40eb-af02-23b3a56df679",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "scalafix isn't published for 2.12.14 yet and fails with:\r\n```\r\n[error] error: The ExplicitResultTypes rule only supports the exact Scala versions \r\n'List(2.12.13, 2.12.11, 2.12.12)' for this binary version.\r\n```",
+        "createdAt" : "2021-05-28T15:10:18Z",
+        "updatedAt" : "2021-05-28T15:10:18Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "76e34810-1709-4e7f-8a57-e2a4a55088a9",
+        "parentId" : "2392bf4e-0a48-40eb-af02-23b3a56df679",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "ach, ok, we can update it later.",
+        "createdAt" : "2021-05-28T15:37:48Z",
+        "updatedAt" : "2021-05-28T15:37:49Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "033b94c6-8676-4e13-9a6c-a2d722df6df0",
+        "parentId" : "2392bf4e-0a48-40eb-af02-23b3a56df679",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "and the same for ammonite",
+        "createdAt" : "2021-05-28T15:42:51Z",
+        "updatedAt" : "2021-05-28T15:42:52Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1fe78c8d5ea5e5c36be5ed16dc82532a22ba9be2",
+    "line" : 21,
+    "diffHunk" : "@@ -1,1 +227,231 @@      scala213,\n      scala212,\n      \"2.12.14\",\n      \"2.12.12\",\n      \"2.12.11\","
+  },
+  {
+    "id" : "5ac46d6c-f389-4c39-be35-5f3d3144b547",
+    "prId" : 2826,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2826",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "abf2f214-b5b9-4468-9ffc-8e1373737925",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "I know this is already merged, but does the snapshot resolver need to stay in here?",
+        "createdAt" : "2021-05-28T19:48:53Z",
+        "updatedAt" : "2021-05-28T19:48:54Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8a2748d0-42d6-46e1-92d7-99600240f9cd",
+        "parentId" : "abf2f214-b5b9-4468-9ffc-8e1373737925",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "It's useful for testing out snapshot releases. We can remove it for sure, but it shouldn't matter too much.",
+        "createdAt" : "2021-05-28T19:59:37Z",
+        "updatedAt" : "2021-05-28T19:59:37Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1fe78c8d5ea5e5c36be5ed16dc82532a22ba9be2",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +135,139 @@    testFrameworks := List(),\n    resolvers += Resolver.sonatypeRepo(\"public\"),\n    resolvers += Resolver.sonatypeRepo(\"snapshot\"),\n    dependencyOverrides += V.guava,\n    // faster publishLocal:"
+  }
+]

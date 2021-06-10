@@ -1,0 +1,55 @@
+[
+  {
+    "id" : "638ee333-1fb1-4fd3-8efa-c0ce1e352844",
+    "prId" : 2825,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2825",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "c960353e-f491-4c4c-be53-1459daed98b1",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "Do we need to ever worry about the compilation units being empty here and throwing with `head`?",
+        "createdAt" : "2021-05-29T09:25:47Z",
+        "updatedAt" : "2021-05-29T09:45:16Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9349bad3-88c8-4a2b-96ae-871c5b8fc97f",
+        "parentId" : "c960353e-f491-4c4c-be53-1459daed98b1",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "In this case, we should probably throw with a more specific message. I will add it.",
+        "createdAt" : "2021-05-31T08:37:00Z",
+        "updatedAt" : "2021-05-31T08:37:00Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "4c925bb564b537775be70666582c8e6f17d58fd2",
+    "line" : 17,
+    "diffHunk" : "@@ -1,1 +36,40 @@          \"No source files were passed to the Scala 3 presentation compiler\"\n        )\n      val unit = driver.currentCtx.run.units.head\n      val tree = unit.tpdTree\n      val pos = driver.sourcePosition(params)"
+  }
+]
