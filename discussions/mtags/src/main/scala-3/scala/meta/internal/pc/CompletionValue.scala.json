@@ -1,0 +1,76 @@
+[
+  {
+    "id" : "838fe142-f0f9-4782-85cb-0ca129ff308c",
+    "prId" : 2728,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2728",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "1f9c69d1-5bfa-4367-b57f-1983b0eb0181",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "```suggestion\r\nenum CompletionMember {\r\n```\r\n?\r\n\r\nor is it something akin to ScopeMember in Scala 2?",
+        "createdAt" : "2021-05-12T15:10:20Z",
+        "updatedAt" : "2021-05-13T16:03:06Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ec964d10-93a0-4da0-8dea-a74af9b659b5",
+        "parentId" : "1f9c69d1-5bfa-4367-b57f-1983b0eb0181",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Also, could you comment on why we need it?",
+        "createdAt" : "2021-05-12T15:13:33Z",
+        "updatedAt" : "2021-05-13T16:03:06Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e4a39c5f-6d07-4059-aea0-97d6ca05a5dd",
+        "parentId" : "1f9c69d1-5bfa-4367-b57f-1983b0eb0181",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "Yes, it's kind of ScopeMember but not exact. Added it for better completion ordering.\r\nWe will have to rework it because currently it just marks the source of completion: if it comes from Compiler or from WorkspaceSearch etc.",
+        "createdAt" : "2021-05-14T08:44:58Z",
+        "updatedAt" : "2021-05-14T08:44:58Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "10c763add43198a40377d84ab7a67c9f6a77ac84",
+    "line" : 11,
+    "diffHunk" : "@@ -1,1 +9,13 @@ * Should be improved in future.\n */\nenum CompletionValue {\n  case NamedArg(v: Completion)\n  case Scope(v: Completion)"
+  }
+]

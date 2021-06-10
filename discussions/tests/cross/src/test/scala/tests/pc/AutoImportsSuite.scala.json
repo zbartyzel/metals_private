@@ -1,0 +1,34 @@
+[
+  {
+    "id" : "1c7ec11c-b39b-498d-8363-59dffd761ef7",
+    "prId" : 2728,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2728",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "a8e60986-d8b0-49df-90b6-f3c1c35bc6b3",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Let's remove this and ignore the ammonite tests for Scala 3 since we don't really support it.",
+        "createdAt" : "2021-05-14T13:00:40Z",
+        "updatedAt" : "2021-05-14T13:00:44Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "10c763add43198a40377d84ab7a67c9f6a77ac84",
+    "line" : 60,
+    "diffHunk" : "@@ -1,1 +235,239 @@  )\n\n  checkAmmoniteEdit(\n    \"second-auto-import-amm-script\".tag(IgnoreScala3),\n    ammoniteWrapper("
+  }
+]

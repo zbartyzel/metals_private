@@ -1,0 +1,34 @@
+[
+  {
+    "id" : "e82a7444-74e0-4c75-87ea-9de066ec9590",
+    "prId" : 2497,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2497",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "77b4d3b3-3460-4ff6-a867-bc6d243b83f5",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "This is caused by the change to minimize the length of anything imported.",
+        "createdAt" : "2021-02-11T19:46:36Z",
+        "updatedAt" : "2021-02-17T15:54:49Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a3da8a9cf97b46b15072db2b6898bb3237b2919c",
+    "line" : 23,
+    "diffHunk" : "@@ -1,1 +64,68 @@       |}\n       |object B {\n       |  A.Nested.NestedLeaf\n       |}\n       |\"\"\".stripMargin"
+  }
+]

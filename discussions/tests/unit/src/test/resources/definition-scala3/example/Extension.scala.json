@@ -1,0 +1,55 @@
+[
+  {
+    "id" : "ac31b2d4-d4e9-418c-b764-b43a3db6f798",
+    "prId" : 2600,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2600",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "c15a06bb-3f3d-4913-ab97-54c62bbe8493",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "What is this fallback coming from?",
+        "createdAt" : "2021-03-26T17:04:47Z",
+        "updatedAt" : "2021-04-01T21:54:41Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "81787333-6079-4824-ba9f-73efd91f0209",
+        "parentId" : "c15a06bb-3f3d-4913-ab97-54c62bbe8493",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "I think it comes from `DefinitionAlternatives.methodOwner`",
+        "createdAt" : "2021-03-30T17:27:35Z",
+        "updatedAt" : "2021-04-01T21:54:41Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "028b3ff710580df42fff3574f99c743c9649e48c",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +6,10 @@extension/*<no symbol>*/ (s/*Extension.scala fallback to example.Extension$package.*/: String/*Predef.scala*/) {\n  def asInt/*Extension.scala fallback to example.Extension$package.*/: Int/*Int.scala*/ = s/*Extension.scala fallback to example.Extension$package.*/.toInt/*StringOps.scala*/\n  def double/*Extension.scala fallback to example.Extension$package.*/: String/*Predef.scala*/ = s/*Extension.scala fallback to example.Extension$package.*/ */*StringOps.scala*/ 2\n}\n"
+  }
+]

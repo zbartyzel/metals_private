@@ -1,0 +1,108 @@
+[
+  {
+    "id" : "5429bfa3-45e9-41d0-929a-f782a1b92e17",
+    "prId" : 2699,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2699",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "89f1e3d4-d1f1-4469-a567-f577fcc1e7a6",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "So this turned out harder than anticipated. We would not properly rename packages before, which would also pop up in signatures. ",
+        "createdAt" : "2021-04-17T18:35:46Z",
+        "updatedAt" : "2021-04-17T18:35:46Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "25a67e38-23c7-4ea3-81e3-d28e9bcaa33d",
+        "parentId" : "89f1e3d4-d1f1-4469-a567-f577fcc1e7a6",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "huh, interesting. Great job finding this!",
+        "createdAt" : "2021-04-18T18:20:06Z",
+        "updatedAt" : "2021-04-18T18:22:46Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "dc11ee95-442f-4fcd-8382-9d1acd2b24af",
+        "parentId" : "89f1e3d4-d1f1-4469-a567-f577fcc1e7a6",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "I have no idea actually why the package type and module type is different, but I don't think this will actually break anything. If it will, I will probably need to figure it out :S",
+        "createdAt" : "2021-04-19T14:18:36Z",
+        "updatedAt" : "2021-04-19T14:18:37Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0ef9b71591bfa72faaceec29301c9771f3327203",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +291,295 @@          // to make sure we always use renamed package\n          // what is saved in renames is actually companion module of a package\n          val renamedOwnerIndex =\n            owners.indexWhere(s => history.renames.contains(s.companionModule))\n          if (renamedOwnerIndex < 0 && history.tryShortenName(name)) NoPrefix"
+  },
+  {
+    "id" : "2f680614-066c-4a00-8e3e-9b67cb29f8e7",
+    "prId" : 2497,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2497",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f2f831ba-efb3-4de1-8089-7a910c1f9f4a",
+        "parentId" : null,
+        "author" : {
+          "login" : "tanishiking",
+          "name" : "Rikito Taniguchi",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4",
+          "altName" : null
+        },
+        "body" : "[note]\r\n- https://github.com/scalacenter/scalafix/commit/f2a8bcda692ae04b37553a7ba16b08d8e7bc7a69\r\n- https://github.com/scalacenter/scalafix/commit/6af6cfc6dcb1c3fdd573b9b612b5f72378a7a0db\r\n\r\n> Previously, the rewrite would insert names like `Value` in the position\r\nof a path dependent type such as `Day.Value` even if the `Value` in\r\nscope had a conflicting type `Bool.Value`. Now, when querying the\r\nscope we take into account the prefix from where the symbols in scope\r\norigin.\r\n\r\n> The implementation in this PR is probably incorrect for some cases. I\r\nhad to use a hacky workaround for the custom `PrettyType` type. Either\r\nway, this diff makes the test suite pass and allow us to move on.\r\n\r\n👍 ",
+        "createdAt" : "2021-02-13T12:35:54Z",
+        "updatedAt" : "2021-02-17T15:54:49Z",
+        "lastEditedBy" : {
+          "login" : "tanishiking",
+          "name" : "Rikito Taniguchi",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a3da8a9cf97b46b15072db2b6898bb3237b2919c",
+    "line" : 18,
+    "diffHunk" : "@@ -1,1 +196,200 @@      val result = tpe match {\n        case TypeRef(pre, sym, args) =>\n          if (history.isSymbolInScope(sym, pre)) {\n            TypeRef(NoPrefix, sym, args.map(arg => loop(arg, None)))\n          } else {"
+  }
+]

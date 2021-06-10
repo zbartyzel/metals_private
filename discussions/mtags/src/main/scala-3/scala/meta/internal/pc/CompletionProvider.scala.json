@@ -30,5 +30,132 @@
     "commit" : "55f4accb32b50673f57ca811cee234a7bcea5792",
     "line" : 53,
     "diffHunk" : "@@ -1,1 +283,287 @@                    if (byParamCount != 0) byParamCount\n                    else {\n                      s1.detailString.compareTo(s2.detailString)\n                    }\n                  }"
+  },
+  {
+    "id" : "41a76d59-a99f-4d12-9308-22b6fb0c1c07",
+    "prId" : 2803,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2803",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "551fd0e9-b5e9-485e-a8c9-0b96d0bcfb22",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "`sym.isField` returns true for StringIndexOutOfBoundsException which is causing some of the other ordering issues. I will raise a PR in Dotty.",
+        "createdAt" : "2021-05-15T21:35:13Z",
+        "updatedAt" : "2021-05-15T21:35:13Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "27217b14-9cf1-4ca8-abfe-1f87a3e44548",
+        "parentId" : "551fd0e9-b5e9-485e-a8c9-0b96d0bcfb22",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "Does it return true for `StringIndexOutOfBoundsException` class or object?\r\n\r\nThere is a weird thing that classpath search might produce object symbols that don't actually exist.\r\nI've just got an idea how to fix it and will try that.",
+        "createdAt" : "2021-05-16T10:06:42Z",
+        "updatedAt" : "2021-05-16T10:06:42Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b41d7f34-4582-4b13-8ade-90a6773c4d1e",
+        "parentId" : "551fd0e9-b5e9-485e-a8c9-0b96d0bcfb22",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Och, i haven't actually checked. Maybe that's the reason? ",
+        "createdAt" : "2021-05-16T10:12:19Z",
+        "updatedAt" : "2021-05-16T10:12:20Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "dc313781b16dc50024e9ea2d0ba622e216a63692",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +152,156 @@    def hasGetter = try {\n      // isField returns true for some classes\n      sym.isField || sym.getter != NoSymbol\n    } catch {\n      case _ => false"
+  },
+  {
+    "id" : "ef5caa8b-270e-44e4-8be8-98c70d60a9ac",
+    "prId" : 2487,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2487",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "dd6382cd-a5a1-464f-8d35-f68854e1a07b",
+        "parentId" : null,
+        "author" : {
+          "login" : "tanishiking",
+          "name" : "Rikito Taniguchi",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4",
+          "altName" : null
+        },
+        "body" : "it would be awesome if we have `byFuzzy` comparison between `byRelevance` and `byIdentifier` as scala2 does\r\nhttps://github.com/scalameta/metals/blob/4da9f0e1c68380bd9b47b01609ee30b0446995b0/mtags/src/main/scala-2/scala/meta/internal/pc/completions/Completions.scala#L173-L182",
+        "createdAt" : "2021-02-11T06:05:07Z",
+        "updatedAt" : "2021-02-15T10:00:42Z",
+        "lastEditedBy" : {
+          "login" : "tanishiking",
+          "name" : "Rikito Taniguchi",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "adc8da01-71b7-4bc2-a7da-b20a0bb67f05",
+        "parentId" : "dd6382cd-a5a1-464f-8d35-f68854e1a07b",
+        "author" : {
+          "login" : "sellophane",
+          "name" : "Błażej Kardyś",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/10901154?v=4",
+          "altName" : null
+        },
+        "body" : "Yes, I skipped that one because I previously failed to obtain query for completion, but now it's back",
+        "createdAt" : "2021-02-13T22:43:40Z",
+        "updatedAt" : "2021-02-15T10:00:42Z",
+        "lastEditedBy" : {
+          "login" : "sellophane",
+          "name" : "Błażej Kardyś",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/10901154?v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3b1e49496520e6c2aa38492600969843b30fc0e7",
+    "line" : 160,
+    "diffHunk" : "@@ -1,1 +158,162 @@            )\n            if (byRelevance != 0) byRelevance\n            else {\n              val byFuzzy = Integer.compare(\n                fuzzyScore(s1),"
   }
 ]

@@ -1,0 +1,34 @@
+[
+  {
+    "id" : "e3c35582-6d66-4609-b8e1-d22a38c5f465",
+    "prId" : 2497,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2497",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "75a4ddec-b7f3-438a-909f-e22306312e27",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Without isStale, we would pick up classes that are no longer here. This actually showed up in `CompletionMatchSuite.stale2`, which seems to now have worked correctly.",
+        "createdAt" : "2021-02-11T19:45:19Z",
+        "updatedAt" : "2021-02-17T15:54:49Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a3da8a9cf97b46b15072db2b6898bb3237b2919c",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +190,194 @@      val history = new ShortenedNames(\n        lookupSymbol = { name =>\n          context.lookupSymbol(name, sym => !sym.isStale) :: Nil\n        },\n        config = renameConfig,"
+  }
+]

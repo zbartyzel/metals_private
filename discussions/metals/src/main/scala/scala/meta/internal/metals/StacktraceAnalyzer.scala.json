@@ -1,0 +1,55 @@
+[
+  {
+    "id" : "748ccd1f-3926-4607-a512-53179d1134a5",
+    "prId" : 2668,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2668",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "d4d460dc-dc14-4fd9-9d70-3d8832d7f62d",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "We should be able to get the build target from `DebugProxy` so that when stack trace is printed in console we can make sure the proper file is picked up. This probably require additional `definitionProvider.fromSymbol` that takes an Option[BuildTagetId], but maybe we can do a follow up issue about it? This should not be a big deal really",
+        "createdAt" : "2021-04-22T11:43:56Z",
+        "updatedAt" : "2021-04-23T16:07:37Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "19e50430-5c48-4dd3-af60-51381d8f5a7a",
+        "parentId" : "d4d460dc-dc14-4fd9-9d70-3d8832d7f62d",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "There is not enough data currently - only stacktrace as a string. I will mention it in the issue for step 2",
+        "createdAt" : "2021-04-23T16:09:58Z",
+        "updatedAt" : "2021-04-23T16:09:59Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3fcc251f9126b13a9372df15273d675aff8f745",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +69,73 @@  def fileLocationFromLine(line: String): Option[l.Location] = {\n    def findLocationForSymbol(s: String): Option[Location] =\n      definitionProvider.fromSymbol(s, None).asScala.headOption\n\n    for {"
+  }
+]

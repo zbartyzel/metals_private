@@ -1,0 +1,129 @@
+[
+  {
+    "id" : "5e93778a-aacd-4ffd-87db-9cf60d2bf821",
+    "prId" : 2735,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2735",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "58a32624-9960-4982-9d51-1711b7e75cda",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "Only suggestion is _maybe_ to log something out here if we actually hit this. Since like you said an `Object` is actually valid as a notification. Actually even more then that if this is `nil` by chance for some reason from the client it might be nice to have something in here like:\r\n```suggestion\r\n      scribe.warn(s\"Unexpected notification params received for didFocusTextDocument: $parms\")\r\n      None\r\n```\r\nwdyt?",
+        "createdAt" : "2021-04-22T18:28:04Z",
+        "updatedAt" : "2021-04-22T18:36:02Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "eea1b183-220b-48fe-bd71-eb50393b1d36",
+        "parentId" : "58a32624-9960-4982-9d51-1711b7e75cda",
+        "author" : {
+          "login" : "Giggiux",
+          "name" : "Luigi Frunzio",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/9947659?u=6b6b1c62e4bfaf022c1db163da9203677e987ec9&v=4",
+          "altName" : null
+        },
+        "body" : "Added!",
+        "createdAt" : "2021-04-22T18:36:19Z",
+        "updatedAt" : "2021-04-22T18:36:19Z",
+        "lastEditedBy" : {
+          "login" : "Giggiux",
+          "name" : "Luigi Frunzio",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/9947659?u=6b6b1c62e4bfaf022c1db163da9203677e987ec9&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "4fa23357d24f398577121eacfc920690e5bd50d1",
+    "line" : 23,
+    "diffHunk" : "@@ -1,1 +1002,1006 @@          s\"Unexpected notification params received for didFocusTextDocument: $params\"\n        )\n        None\n    }\n"
+  },
+  {
+    "id" : "6222388b-be5f-4e1b-b57e-5d89ac2a688d",
+    "prId" : 2668,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2668",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "efd55638-d6f5-42bc-b6b4-e2e4e6a5634e",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Why move it outside `if !isVisited.contains(sourceUri)` ?\r\n",
+        "createdAt" : "2021-04-22T10:59:00Z",
+        "updatedAt" : "2021-04-23T16:07:37Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "59fe1d1b-09c0-4dfd-8aaa-f28d7c35fe0d",
+        "parentId" : "efd55638-d6f5-42bc-b6b4-e2e4e6a5634e",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "It was needed to correctly call `buildTargets.addDependencySource(path, item.getTarget)`.\r\nOtherwise, it registers jar only once for the first build target where it appeared.",
+        "createdAt" : "2021-04-23T13:41:34Z",
+        "updatedAt" : "2021-04-23T16:07:37Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2080eb31-d216-4719-abad-55974236751f",
+        "parentId" : "efd55638-d6f5-42bc-b6b4-e2e4e6a5634e",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Ach alright. This should be fine.",
+        "createdAt" : "2021-04-23T13:57:41Z",
+        "updatedAt" : "2021-04-23T16:07:37Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3fcc251f9126b13a9372df15273d675aff8f745",
+    "line" : 37,
+    "diffHunk" : "@@ -1,1 +2334,2338 @@      sourceUri <- Option(item.getSources).toList.flatMap(_.asScala)\n      path = sourceUri.toAbsolutePath\n      _ = buildTargets.addDependencySource(path, item.getTarget)\n      _ = jdkSources.foreach(source =>\n        buildTargets.addDependencySource(source, item.getTarget)"
+  }
+]

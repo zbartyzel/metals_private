@@ -1,0 +1,118 @@
+[
+  {
+    "id" : "8d3b5a76-f475-46b8-a412-5eec3d1075d8",
+    "prId" : 2749,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2749",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ff00da27-4b4b-4c14-8c8a-1656c6b5ca51",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "The reason might be that targetroot seems to be a fallback now:\r\nhttps://github.com/scalacenter/scalafix/blob/bf0df227c9b72fd6a9466f3a6fe11a8ce5f14efd/scalafix-cli/src/main/scala/scalafix/internal/v1/Args.scala#L365",
+        "createdAt" : "2021-04-30T14:00:35Z",
+        "updatedAt" : "2021-04-30T14:00:36Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "bb8f6de1-2b68-423d-8645-7b4a9a0c7b6d",
+        "parentId" : "ff00da27-4b4b-4c14-8c8a-1656c6b5ca51",
+        "author" : {
+          "login" : "mlachkar",
+          "name" : "Meriam Lachkar",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7843237?u=d2941da73011b9a49767ac863ce5bc20b7b10ed7&v=4",
+          "altName" : null
+        },
+        "body" : "I wouldn't say it's a fallback, it's just what this method does`getResourceAsStream` \r\n```\r\nprivate[scalafix] def fromPath(....) = {\r\n\r\nOption(classLoader.getResourceAsStream(semanticdbRelPath))\r\n...\r\n\r\n}\r\n```",
+        "createdAt" : "2021-04-30T14:53:42Z",
+        "updatedAt" : "2021-04-30T14:54:04Z",
+        "lastEditedBy" : {
+          "login" : "mlachkar",
+          "name" : "Meriam Lachkar",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7843237?u=d2941da73011b9a49767ac863ce5bc20b7b10ed7&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5d490589-1fa5-4a31-808d-80d2da3ddc12",
+        "parentId" : "ff00da27-4b4b-4c14-8c8a-1656c6b5ca51",
+        "author" : {
+          "login" : "mlachkar",
+          "name" : "Meriam Lachkar",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7843237?u=d2941da73011b9a49767ac863ce5bc20b7b10ed7&v=4",
+          "altName" : null
+        },
+        "body" : "We always look for semanticdb files in the classpath provided.\r\n",
+        "createdAt" : "2021-04-30T14:55:56Z",
+        "updatedAt" : "2021-04-30T14:55:57Z",
+        "lastEditedBy" : {
+          "login" : "mlachkar",
+          "name" : "Meriam Lachkar",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7843237?u=d2941da73011b9a49767ac863ce5bc20b7b10ed7&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "aaab09ea-3c73-41d8-adbd-9911fd31cf0c",
+        "parentId" : "ff00da27-4b4b-4c14-8c8a-1656c6b5ca51",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "huh interesting. I've seen an increased number of Vim users report seeing this lately:\r\n```\r\nLSP[metals] Stale SemanticDB\r\n--- /Users/REDACTED/Developer/REDACTED/package.scala-ondisk-md5-fingerprint\r\n+++ /Users/REDACTED/Developer/REDACTED/package.scala-semanticdb-md5-fingerprint\r\n@@ -1,1 +1,1 @@\r\n-91644521E64C92BC49FE92CF9078677E\r\n```\r\nThis should potentially help with this change right?",
+        "createdAt" : "2021-04-30T19:46:55Z",
+        "updatedAt" : "2021-04-30T19:47:23Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0469c1c3-4533-452b-bfc5-3229de0e1fab",
+        "parentId" : "ff00da27-4b4b-4c14-8c8a-1656c6b5ca51",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "I think so, we always looked on the classpath first, which meant we could pick up old semanticdb artifacts in case of any config changes,",
+        "createdAt" : "2021-04-30T19:52:23Z",
+        "updatedAt" : "2021-04-30T19:52:23Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "65eabc83bcf2a01571553acde612dc2116c8a6d3",
+    "line" : 76,
+    "diffHunk" : "@@ -1,1 +158,162 @@    // It seems that Scalafix ignores the targetroot parameter and searches the classpath\n    // Prepend targetroot to make sure that it's picked up first always\n    val classpath =\n      (targetRoot.toList ++ scalaTarget.fullClasspath.asScala).asJava\n"
+  }
+]

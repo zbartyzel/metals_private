@@ -1,0 +1,108 @@
+[
+  {
+    "id" : "9bb5e392-a5b3-40e8-a035-4f7a38a391f5",
+    "prId" : 2600,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2600",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "6d9b05ac-20de-4493-93c9-b9f04aa3b041",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "This is also in `ScalaToplevelMtags` - can we resue some parts of the code?",
+        "createdAt" : "2021-03-29T17:53:06Z",
+        "updatedAt" : "2021-04-01T21:54:41Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e483445f-bb39-44ae-9e6f-444c47acb63a",
+        "parentId" : "6d9b05ac-20de-4493-93c9-b9f04aa3b041",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "Yep, I thought about that.\r\n\r\nHowever, as this parser works well for Scala 2 too I planned to propose to left it as the only implementation after passing review/merge. So the work related to the extraction of common methods might be useless. wdyt?\r\n",
+        "createdAt" : "2021-03-30T17:12:59Z",
+        "updatedAt" : "2021-04-01T21:54:41Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "028b3ff710580df42fff3574f99c743c9649e48c",
+    "line" : 198,
+    "diffHunk" : "@@ -1,1 +196,200 @@   * Consume token stream like \"a.b.c\" and return List(a, b, c)\n   */\n  def parsePath(): List[Identifier] = {\n    val buf = List.newBuilder[Identifier]\n    def loop(): Unit = {"
+  },
+  {
+    "id" : "61f150ed-b006-40b4-b17d-f4f784f34106",
+    "prId" : 2600,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2600",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "4e06d5ce-aad4-4826-9b72-f9eb8d9f08d1",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "```suggestion\r\n  private def acceptTrivial(): Unit = {\r\n```",
+        "createdAt" : "2021-03-30T11:52:22Z",
+        "updatedAt" : "2021-04-01T21:54:41Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ccf6c615-e8ad-4eb3-8f82-06e07f39ce4c",
+        "parentId" : "4e06d5ce-aad4-4826-9b72-f9eb8d9f08d1",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "In `ScalaToplevelMtags` and in scalameta the block of whitespace symbols is called `trivia`",
+        "createdAt" : "2021-03-30T19:29:49Z",
+        "updatedAt" : "2021-04-01T21:54:41Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "028b3ff710580df42fff3574f99c743c9649e48c",
+    "line" : 300,
+    "diffHunk" : "@@ -1,1 +298,302 @@  }\n\n  private def acceptTrivia(): Unit = {\n    scanner.nextToken()\n    while ("
+  }
+]

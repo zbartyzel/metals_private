@@ -1,0 +1,150 @@
+[
+  {
+    "id" : "d1eb754f-3c0a-4ca2-a625-4549a1ad2480",
+    "prId" : 2532,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2532",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "e91d850a-e824-4280-8730-2ff32c6841fb",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Why not jsut add nullable/optional fields to DebugUnresolvedMainClassParams  and DebugUnresolvedTestClassParams ?",
+        "createdAt" : "2021-02-24T11:45:01Z",
+        "updatedAt" : "2021-03-08T13:25:41Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d9b3a668-2f4d-4112-9455-38c3e2871a1b",
+        "parentId" : "e91d850a-e824-4280-8730-2ff32c6841fb",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "Yea true I'll try doing that.",
+        "createdAt" : "2021-02-24T12:00:56Z",
+        "updatedAt" : "2021-03-08T13:25:41Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1ee15950-2963-47e6-b9c4-b78a472b1768",
+        "parentId" : "e91d850a-e824-4280-8730-2ff32c6841fb",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "Alright, so I've been playing around with this a bit, and I'm getting pretty convinced that just adding some more `@Nullable` fields here isn't the answer. It adds way more complexity in trying to handle all of the various cases, and I'm finding it way easier to manage to just have another case class for it. Just to give a small example:\r\n\r\n### Current\r\n```\r\ncase class DebugUnresolvedTestClassParams(\r\n    testClass: String,\r\n    @Nullable buildTarget: String = null\r\n)\r\n```\r\n\r\n### Possible new\r\n```\r\ncase class DebugUnresolvedTestClassParams(\r\n    @Nullable testClass: String,\r\n\t@Nullable path: String,\r\n    @Nullable testType: String,\r\n    @Nullable buildTarget: String = null\r\n)\r\n```\r\nApart from not loving having every field nullable, you get into all sorts of interesting things that we have to handle server side. What if `testType` is set to `testTarget` and you are provided with a `testClass` that doesn't fit that target. What if for type you pass in `testTarget`, but then you pass in a `path` in one target and the `buildTarget` for another target. There are just so many possiblities that you end up making really strict rules on how they are all handled, but then you lose all that info since it's all contained in a class with all nullable fields. I think having a new class for the discover `DebugFullyUnresolvedParams` for this just makes it way cleaner on the server side. I'm open to maybe trying to figure this out more, but I'm not seeing the benefit of having to change the current functionality to account for the new nullables, and also account for all the crazy cases with the class having every field nullable vs just having a separate class for it. wdyt?",
+        "createdAt" : "2021-02-25T09:07:28Z",
+        "updatedAt" : "2021-03-08T13:25:41Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a64ee796-7a62-44a5-8abf-f6cbdddba3d0",
+        "parentId" : "e91d850a-e824-4280-8730-2ff32c6841fb",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "It it all becomes much more complex because of the change then sure, I agree it might be beneficial to have a separate class. I just thought it might work better for the existing client implementations, but I haven't dug much into it.",
+        "createdAt" : "2021-02-25T10:17:04Z",
+        "updatedAt" : "2021-03-08T13:25:41Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "23bedef101619ed619520c4b121ecae6c358d874",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +437,441 @@\ncase class DebugDiscoveryParams(\n    path: String,\n    runType: String,\n    @Nullable args: java.util.List[String] = null,"
+  },
+  {
+    "id" : "184d25a5-befa-41f2-9080-2036a0c8ca36",
+    "prId" : 2532,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2532",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "a492c5d7-64f9-4ef3-927f-de241e55c1d9",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "I've been thinking about adding a Position here to be able to run a specific test based on the current cursor position. We could use slightly modified `ClassFinder` for that instead of semanticdb. It would also allow us not to ask for a specific main class, but just run the one the cursor is at. However, that probably doesn't make sense until we are able to run a single test case. Multiple main classes are not that common and usually it's one test per file. We should probably go through related feature requests after merging this and close them or comment about what is the current status.\r\n\r\n",
+        "createdAt" : "2021-03-04T10:59:23Z",
+        "updatedAt" : "2021-03-08T13:25:41Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a2a3dd18-881f-45e5-8345-55496f6e99e0",
+        "parentId" : "a492c5d7-64f9-4ef3-927f-de241e55c1d9",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "Yea for sure, I think once we can get this across the finish line, use it a bit, then we can start to fine tune what makes the most sense, and add more on top of it. That's my hope anyway.",
+        "createdAt" : "2021-03-04T21:32:26Z",
+        "updatedAt" : "2021-03-08T13:25:41Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "23bedef101619ed619520c4b121ecae6c358d874",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +436,440 @@)\n\ncase class DebugDiscoveryParams(\n    path: String,\n    runType: String,"
+  }
+]

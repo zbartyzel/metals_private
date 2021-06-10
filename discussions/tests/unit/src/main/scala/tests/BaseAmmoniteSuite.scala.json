@@ -1,0 +1,55 @@
+[
+  {
+    "id" : "dfb8be79-2fb4-40bb-8eeb-6213e9120678",
+    "prId" : 2668,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2668",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "de6d9297-7a2a-4934-93b8-7051f1cbdb57",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "Again are all these right no longer being in `.metals/readonly`? Or are they all now relative? If it's easy to switch, having the full path here might be clearer.",
+        "createdAt" : "2021-04-09T14:37:19Z",
+        "updatedAt" : "2021-04-23T16:07:36Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "56ab23db-ad61-4b40-adde-881fb4cdc607",
+        "parentId" : "de6d9297-7a2a-4934-93b8-7051f1cbdb57",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "Seen your reason up above. Just ignore this.",
+        "createdAt" : "2021-04-17T14:37:03Z",
+        "updatedAt" : "2021-04-23T16:07:37Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3fcc251f9126b13a9372df15273d675aff8f745",
+    "line" : 31,
+    "diffHunk" : "@@ -1,1 +63,67 @@        \"main.sc\",\n        \"foo.as@@Json.noSpaces\",\n        \"io/circe/syntax/package.scala\"\n      )\n"
+  }
+]

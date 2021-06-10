@@ -1,0 +1,108 @@
+[
+  {
+    "id" : "45ff2926-de63-4577-8779-7226dbf44ffe",
+    "prId" : 2668,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2668",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "4f32fab3-7d20-460c-92e3-0485c6f34c5f",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "Out of curiosity, why the change from the `TrieMap` to `List`? Normally I prefer to have a Map for this over a list of tuples unless there is a good reason not to.",
+        "createdAt" : "2021-04-09T14:11:20Z",
+        "updatedAt" : "2021-04-23T16:07:36Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8b379e7a-501f-4840-a013-294605874302",
+        "parentId" : "4f32fab3-7d20-460c-92e3-0485c6f34c5f",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "`scala.collection.concurrent.TrieMap` is too complex type for this method. It was used because `OnDemandSymbolIndex.toplevels` had this signature and there was this tricky method: https://github.com/scalameta/metals/blob/03704c17b5397bd8feb4771d0bedf9a6dfe0a660/mtags/src/main/scala-2/scala/meta/internal/mtags/OnDemandSymbolIndex.scala#L96-L104\r\n\r\nBut as `toplevels` signature was changed to `TrieMap[String, Set[AbsolutePath]]` it became inconvenient to use `addSourceJarTopLevels`  as they were so I changed this part and replaced `TrieMap` here on smth more suitable.\r\n\r\nIt might be `Map` but it anyway used only as a `List`.",
+        "createdAt" : "2021-04-12T14:23:35Z",
+        "updatedAt" : "2021-04-23T16:07:36Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c3c115a2-fb33-434d-bef5-4466fa941d48",
+        "parentId" : "4f32fab3-7d20-460c-92e3-0485c6f34c5f",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "Alright, sounds good and thanks for the explanation.",
+        "createdAt" : "2021-04-17T14:36:04Z",
+        "updatedAt" : "2021-04-23T16:07:37Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3fcc251f9126b13a9372df15273d675aff8f745",
+    "line" : 18,
+    "diffHunk" : "@@ -1,1 +31,35 @@    try {\n      val fs = PlatformFileIO.newJarFileSystem(path, create = false)\n      val toplevels = List.newBuilder[(String, AbsolutePath)]\n      conn()\n        .query("
+  },
+  {
+    "id" : "663f2893-009a-417c-b22f-9c303c8f71ce",
+    "prId" : 2668,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2668",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "2821583d-ce9f-4d71-8e87-129a68076383",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "Any reason to change from using a Map to a list? Typically I prefer Maps over List of tuples for this type of thing.",
+        "createdAt" : "2021-04-09T14:33:59Z",
+        "updatedAt" : "2021-04-23T16:07:36Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3fcc251f9126b13a9372df15273d675aff8f745",
+    "line" : 18,
+    "diffHunk" : "@@ -1,1 +31,35 @@    try {\n      val fs = PlatformFileIO.newJarFileSystem(path, create = false)\n      val toplevels = List.newBuilder[(String, AbsolutePath)]\n      conn()\n        .query("
+  }
+]

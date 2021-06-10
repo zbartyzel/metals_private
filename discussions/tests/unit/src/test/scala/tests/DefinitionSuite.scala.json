@@ -1,0 +1,55 @@
+[
+  {
+    "id" : "5fdfb210-39d0-4fb9-a15a-5cca784a425a",
+    "prId" : 2600,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2600",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "e5e1d831-b631-4e99-a423-e6a1cd605731",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "why is this excluded?",
+        "createdAt" : "2021-03-17T15:50:02Z",
+        "updatedAt" : "2021-04-01T21:54:41Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5c615f18-5d54-49c9-af7f-6b1ec9817612",
+        "parentId" : "e5e1d831-b631-4e99-a423-e6a1cd605731",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "To suppress errors because #2627",
+        "createdAt" : "2021-03-22T13:26:30Z",
+        "updatedAt" : "2021-04-01T21:54:41Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "028b3ff710580df42fff3574f99c743c9649e48c",
+    "line" : 112,
+    "diffHunk" : "@@ -1,1 +184,188 @@      dialect = dialects.Scala3,\n      badFileNames = List(\n        \"Extension.scala\"\n      )\n    )"
+  }
+]

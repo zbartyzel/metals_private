@@ -1,0 +1,34 @@
+[
+  {
+    "id" : "89b8ee43-e5fb-449f-9a0d-86781ce3adaf",
+    "prId" : 2701,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2701",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "a4b43c7e-9adb-4241-b63b-04b0858ebd9a",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "Good catch 👍🏼 ",
+        "createdAt" : "2021-04-11T12:27:03Z",
+        "updatedAt" : "2021-04-11T12:27:15Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "43cc8753e1b88d15e353375b397826c09d55ed82",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +72,76 @@properties, we strongly recommend that instead you rely on the\n`InitializationOptions` which are thoroughly covered below in the\n[`initialize`](#initialize] section.\n\n## Language Server Protocol"
+  }
+]

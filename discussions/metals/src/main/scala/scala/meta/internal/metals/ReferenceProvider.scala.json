@@ -1,0 +1,193 @@
+[
+  {
+    "id" : "6525ade2-eb29-4bbc-8e9e-024222cf8125",
+    "prId" : 2601,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2601",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "77eae732-999c-4eef-873c-372395e94071",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "So previously, we would check any document that the cursor currently points to. This would cause us not to find synthetic objects, since their definition only exists in the file where the case class was also defined.",
+        "createdAt" : "2021-03-12T17:26:06Z",
+        "updatedAt" : "2021-03-15T11:19:22Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f41604dd38d384c46037636f95cea33529f6d87b",
+    "line" : 51,
+    "diffHunk" : "@@ -1,1 +127,131 @@    }\n\n    definitionDoc match {\n      case Some(definitionDoc) =>\n        val name = symbol.desc.name.value"
+  },
+  {
+    "id" : "0557cd91-727b-436d-874a-7713e543b290",
+    "prId" : 2601,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2601",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ee300c31-f041-4951-9c61-c6f9bced97db",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Here we search for any synthetic symbols that we might be also interested in.",
+        "createdAt" : "2021-03-12T17:26:47Z",
+        "updatedAt" : "2021-03-15T11:19:22Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f41604dd38d384c46037636f95cea33529f6d87b",
+    "line" : 56,
+    "diffHunk" : "@@ -1,1 +132,136 @@        val alternatives = new SymbolAlternatives(symbol, name)\n\n        val candidates = for {\n          info <- definitionDoc.symbols\n          if info.symbol != name"
+  },
+  {
+    "id" : "85803bbb-b18a-4e1c-8ed6-e995726e749f",
+    "prId" : 2601,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2601",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "cd471951-834c-4142-8ddf-af698f150afc",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "This is an additional section that I actually added. We sometimes want to find non-synthetic symbols for synthetic symbols such as:\r\n- case class for a synthetic object\r\n- class field for a synthetic constructor param (they always synthetic when in `new A(param = \"\")`)",
+        "createdAt" : "2021-03-12T17:28:47Z",
+        "updatedAt" : "2021-03-15T11:19:22Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f41604dd38d384c46037636f95cea33529f6d87b",
+    "line" : 77,
+    "diffHunk" : "@@ -1,1 +153,157 @@        def isSyntheticSymbol = !nonSyntheticSymbols.contains(symbol)\n\n        def additionalAlternativesForSynthetic = for {\n          info <- definitionDoc.symbols\n          if info.symbol != name"
+  },
+  {
+    "id" : "2438ad5a-1c11-485f-998a-4fa8f3ee26cf",
+    "prId" : 2601,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2601",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "9353f3e8-972c-44bf-9b14-89a663249404",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Almost everything is moved except for isCompanionClass and isFieldParam",
+        "createdAt" : "2021-03-12T17:29:17Z",
+        "updatedAt" : "2021-03-15T11:19:22Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d3e6ee8e-a400-4606-bfd2-bd867a3742f5",
+        "parentId" : "9353f3e8-972c-44bf-9b14-89a663249404",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "This could just be a case class no?",
+        "createdAt" : "2021-03-15T09:13:13Z",
+        "updatedAt" : "2021-03-15T11:19:22Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "fe73fb28-a9db-40c9-ab7d-4b635d80733f",
+        "parentId" : "9353f3e8-972c-44bf-9b14-89a663249404",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Sure, but honestly I think it doesn't really fit the use case of a case class. We don't need to pretty print it, compareit, it's not really passed around, so I decided on a normal class here.",
+        "createdAt" : "2021-03-15T09:18:37Z",
+        "updatedAt" : "2021-03-15T11:19:22Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8c5944d6-b78d-4d70-bcec-7b79d85479d5",
+        "parentId" : "9353f3e8-972c-44bf-9b14-89a663249404",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "That's fine 👍🏼 ",
+        "createdAt" : "2021-03-15T09:19:19Z",
+        "updatedAt" : "2021-03-15T11:19:22Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f41604dd38d384c46037636f95cea33529f6d87b",
+    "line" : 162,
+    "diffHunk" : "@@ -1,1 +323,327 @@}\n\nclass SymbolAlternatives(symbol: String, name: String) {\n\n  // Returns true if `info` is the companion object matching the occurrence class symbol."
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "id" : "f292a13c-738f-4ad2-b726-80a3e84f9da5",
+    "prId" : 2589,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2589",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "efd5473b-e119-4144-a048-3884b00618c7",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Added the links here, otherwise the comments would get duplicated in the different expect suites",
+        "createdAt" : "2021-03-11T14:27:07Z",
+        "updatedAt" : "2021-03-11T14:27:08Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "12fbb0bb50d972bd724663e2c2d6eee8c85cb404",
+    "line" : 25,
+    "diffHunk" : "@@ -1,1 +48,52 @@/**\n * There is a number of issues observed in Scala 3 that can be seen in the tests:\n * - extension methods https://github.com/lampepfl/dotty/issues/11690\n * - enums https://github.com/lampepfl/dotty/issues/11689\n * - anonymous givens https://github.com/lampepfl/dotty/issues/11692"
+  }
+]

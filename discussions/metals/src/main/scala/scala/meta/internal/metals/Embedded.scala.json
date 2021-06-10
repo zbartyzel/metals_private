@@ -1,0 +1,76 @@
+[
+  {
+    "id" : "df590d06-f2c4-4d07-a1e6-895b1f57e908",
+    "prId" : 2674,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2674",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "13d82beb-256a-4596-a484-98c0d69f5018",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "So, I tested this and it seems fine, however I'm worried about his in the long term. Mainly because it seems that we are both cherry picking stuff from the classpath in mdoc and also in here. I feel it makes it quite difficult to understand what ultimately ends up there, and where something may have been filtered off. Just trying to understand this.\r\n\r\nWe download mdoc in this file. That's what `jars` are here for the runtime classpath. I guess I don't get why we would filter that seeing that I was _assuming_ that the evaluation that mdoc is doing has it's own separate classpath. I get even further confused because looking at the `MarkdownBuilder` I also see:\r\n\r\nhttps://github.com/scalameta/mdoc/blob/e0455f655f0c29a035a4ef703c21ad2d24902f89/mdoc/src/main/scala/mdoc/internal/markdown/MarkdownBuilder.scala#L80-L98\r\n\r\nSo It looks that when we are actually creating that we are already doing some filtering 🤔 \r\n\r\nI just don't get why this is happening and that is bleeding in here. I'm probably speaking to the choir. I'll also try to spend a little time on the mdoc side and figure this out because it baffles me.\r\n\r\nEither way for now, LGTM! But ultimately I think we should remove this in the future when the linked ticket you have attached in mdoc gets closed. ",
+        "createdAt" : "2021-04-03T08:47:37Z",
+        "updatedAt" : "2021-04-03T08:47:57Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "fcc73bb8-3c6d-48a8-964a-74081bf44f64",
+        "parentId" : "13d82beb-256a-4596-a484-98c0d69f5018",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "This is indeed a bit hacky workaround, because I was unable to figure out why the classloader would load up something from a wrong jar. Especially that now with the recent changes, everything should work alright. I think this has something to do with how classloaders operate. So if we classload a class from a certain jar using a certain classloaders then everything else connected to it will use the same classloader. So I am thinking this is why we are actually using mdoc's classloader to load up typesafe config. But I haven't yet dug deep into how they work, this is more like my impression.\r\n\r\nThis change makes it impossible to load up that jar, which is why it's working I think. \r\n\r\n> I just don't get why this is happening and that is bleeding in here. I'm probably speaking to the choir. I'll also try to spend a little time on the mdoc side and figure this out because it baffles me.\r\n\r\nHaha, yes I am as confused as you are :sweat_smile: But this seems to work and we shouldn't get similar issues anymore.",
+        "createdAt" : "2021-04-03T09:32:59Z",
+        "updatedAt" : "2021-04-03T09:32:59Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "05d18179-9e5b-443a-854d-035bf3165283",
+        "parentId" : "13d82beb-256a-4596-a484-98c0d69f5018",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "I think the main issue stems from the fact that the worksheet classloader has the main mdoc classpath as parent, so it is not as nicely isolated as it should.",
+        "createdAt" : "2021-04-03T09:40:24Z",
+        "updatedAt" : "2021-04-03T09:40:25Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "07e5646237763d921f3fca38e0bfc49e84ac90a7",
+    "line" : 19,
+    "diffHunk" : "@@ -1,1 +135,139 @@      pathString.contains(\"diffutils\")\n    }\n    val urls = runtimeClasspath.iterator.map(_.toUri().toURL()).toArray\n    new URLClassLoader(urls, parent)\n  }"
+  }
+]

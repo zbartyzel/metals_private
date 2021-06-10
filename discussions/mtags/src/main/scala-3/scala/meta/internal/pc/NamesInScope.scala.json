@@ -93,5 +93,37 @@
     "commit" : "4c925bb564b537775be70666582c8e6f17d58fd2",
     "line" : 55,
     "diffHunk" : "@@ -1,1 +101,105 @@            sel.renamed match {\n              case Ident(name) if name.toString != \"_\" =>\n                renames += ((sel.imported.name.toSimpleName, name.toString))\n              case _ =>\n            }"
+  },
+  {
+    "id" : "17ae873d-777b-4902-85e5-98e9e12c31e2",
+    "prId" : 2728,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2728",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b65eac0c-711a-45ca-be40-07a901edc0f4",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Could you add comments explaining how we are searching for symbols?",
+        "createdAt" : "2021-04-27T11:57:10Z",
+        "updatedAt" : "2021-05-10T11:58:32Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "10c763add43198a40377d84ab7a67c9f6a77ac84",
+    "line" : 81,
+    "diffHunk" : "@@ -1,1 +79,83 @@    }\n\n    val fromTree =\n      tree.typeOpt match {\n        case site: NamedType if site.symbol.is(Package) =>"
   }
 ]

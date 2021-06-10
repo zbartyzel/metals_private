@@ -1,0 +1,76 @@
+[
+  {
+    "id" : "866a86f1-c095-428c-8801-450fe9906299",
+    "prId" : 2779,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2779",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "477fa31a-2277-4af4-9a4e-75ea7dcb6b78",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "Sort of random, but are Scala 3 artifacts supposed to be `_3` or `_3.0.0`? This morning I hit on this in coursier and we had to correct to `_3` https://github.com/coursier/apps/pull/98",
+        "createdAt" : "2021-05-14T12:32:50Z",
+        "updatedAt" : "2021-05-14T12:32:51Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "04db0096-d041-49d6-9dfd-0fef5c82ffcf",
+        "parentId" : "477fa31a-2277-4af4-9a4e-75ea7dcb6b78",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Mtags always resolve with the full scala version similar to anything that depend on the compiler. Just like the other mtags versions. This is finally an end to the very confusing time 😅",
+        "createdAt" : "2021-05-14T12:40:56Z",
+        "updatedAt" : "2021-05-14T12:40:56Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "92181527-a0c7-40e9-bf7a-390afa38d2d4",
+        "parentId" : "477fa31a-2277-4af4-9a4e-75ea7dcb6b78",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "ahhh of course, duh. sorry wasn't thinking at all there.",
+        "createdAt" : "2021-05-14T12:51:06Z",
+        "updatedAt" : "2021-05-14T12:51:06Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b14dcc6e504c6df35a5797bf8f1c0fafef689627",
+    "line" : 10,
+    "diffHunk" : "@@ -1,1 +10,14 @@  org.scalameta:mtags_3.0.0-RC2:$version \\\n  org.scalameta:mtags_3.0.0-RC3:$version \\\n  org.scalameta:mtags_3.0.0:$version \\\n  org.scalameta:metals_2.12:$version \\\n  org.scalameta:mtags_2.13.0:$version \\"
+  }
+]

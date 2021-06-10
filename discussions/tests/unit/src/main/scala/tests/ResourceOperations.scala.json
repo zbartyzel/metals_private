@@ -1,0 +1,161 @@
+[
+  {
+    "id" : "f2e2702d-9d6d-4674-b066-00793684a03e",
+    "prId" : 2723,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2723",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "0e4ac5c8-e81f-4c90-8486-4c7ec76138fb",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "This one seems duplicated, we can remove the one in mtest.",
+        "createdAt" : "2021-04-21T20:24:28Z",
+        "updatedAt" : "2021-05-11T14:51:09Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c3349fcd-f201-4f87-8704-64d3a7181a83",
+        "parentId" : "0e4ac5c8-e81f-4c90-8486-4c7ec76138fb",
+        "author" : {
+          "login" : "Giggiux",
+          "name" : "Luigi Frunzio",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/9947659?u=6b6b1c62e4bfaf022c1db163da9203677e987ec9&v=4",
+          "altName" : null
+        },
+        "body" : "Yup! I didn't realize there was still the one in mtest 😳",
+        "createdAt" : "2021-04-22T10:12:04Z",
+        "updatedAt" : "2021-05-11T14:51:09Z",
+        "lastEditedBy" : {
+          "login" : "Giggiux",
+          "name" : "Luigi Frunzio",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/9947659?u=6b6b1c62e4bfaf022c1db163da9203677e987ec9&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "027c9bf78c700cb555e80ae8e2fab5e18678651e",
+    "line" : 17,
+    "diffHunk" : "@@ -1,1 +15,19 @@ * Client implementation of how to interpret `ResourceOperation` from LSP, used for testing purposes.\n */\nobject ResourceOperations {\n\n  def applyResourceOperation(resourceOperation: ResourceOperation): Unit = {"
+  },
+  {
+    "id" : "653731f2-d473-416c-89ce-fcb837ab3a0e",
+    "prId" : 2723,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2723",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "d8e440a8-4666-4853-89be-3d7d02dfb830",
+        "parentId" : null,
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "```suggestion\r\n        .map(opt => opt.getOverwrite)\r\n```\r\n?",
+        "createdAt" : "2021-04-22T17:54:11Z",
+        "updatedAt" : "2021-05-11T14:51:09Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3e853027-36b4-4f0d-9478-3acbdbbb9f40",
+        "parentId" : "d8e440a8-4666-4853-89be-3d7d02dfb830",
+        "author" : {
+          "login" : "Giggiux",
+          "name" : "Luigi Frunzio",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/9947659?u=6b6b1c62e4bfaf022c1db163da9203677e987ec9&v=4",
+          "altName" : null
+        },
+        "body" : "Without it, since the `.getOverwrite` method returns a java.lang.Boolean, the return type of the whole `overwrite` is `Any`. With the `: Boolean` there, there is some sort of implicit conversion that makes the `overwrite` a scala Boolean. Not so sure what's causing the error, but it seems to work.\r\nI'm happy to change it in something more \"readable\", if you've got any suggestion! ",
+        "createdAt" : "2021-04-23T17:13:49Z",
+        "updatedAt" : "2021-05-11T14:51:09Z",
+        "lastEditedBy" : {
+          "login" : "Giggiux",
+          "name" : "Luigi Frunzio",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/9947659?u=6b6b1c62e4bfaf022c1db163da9203677e987ec9&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2bcee95d-7fac-4da0-a162-ac5efe44b7e0",
+        "parentId" : "d8e440a8-4666-4853-89be-3d7d02dfb830",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "Thx for the explanation!\r\n\r\nI think that's ok - I have not idea how to make it better. The only alternative here is to call map as `.map[Boolean](..` but I don't see much difference here\r\n",
+        "createdAt" : "2021-04-27T07:57:37Z",
+        "updatedAt" : "2021-05-11T14:51:09Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "027c9bf78c700cb555e80ae8e2fab5e18678651e",
+    "line" : 42,
+    "diffHunk" : "@@ -1,1 +40,44 @@    val overwrite =\n      options\n        .map(opt => opt.getOverwrite: Boolean)\n        .getOrElse(false)\n    val ignoreIfExists = options"
+  },
+  {
+    "id" : "9a783bc1-08c2-46e5-ae00-35dd76f374d9",
+    "prId" : 2723,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2723",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "5d955d42-92be-40a9-bc66-e04184ec17db",
+        "parentId" : null,
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "```suggestion\r\n      .map(opt => opt.getIgnoreIfExists)\r\n```",
+        "createdAt" : "2021-04-22T17:54:31Z",
+        "updatedAt" : "2021-05-11T14:51:09Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "027c9bf78c700cb555e80ae8e2fab5e18678651e",
+    "line" : 45,
+    "diffHunk" : "@@ -1,1 +43,47 @@        .getOrElse(false)\n    val ignoreIfExists = options\n      .map(opt => opt.getIgnoreIfExists: Boolean)\n      .getOrElse(true.booleanValue())\n"
+  }
+]

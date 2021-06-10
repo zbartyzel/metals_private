@@ -1,0 +1,55 @@
+[
+  {
+    "id" : "9807d9cc-65dc-4c01-83e5-9377d27bfdd0",
+    "prId" : 2504,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2504",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "4d3e13c1-4f74-4836-acb9-ce4a2486f466",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "There is one extra parameter here, which is missing in M1 and M2",
+        "createdAt" : "2021-02-18T14:16:03Z",
+        "updatedAt" : "2021-02-18T14:16:04Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b7b371ae-072e-417a-b050-8edb769ce68c",
+        "parentId" : "4d3e13c1-4f74-4836-acb9-ce4a2486f466",
+        "author" : {
+          "login" : "tanishiking",
+          "name" : "Rikito Taniguchi",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4",
+          "altName" : null
+        },
+        "body" : "Oops, didn't realize it, thanks for fixing it 👍 \r\nit looks good! (and good to see the use of the `extension` keyword!)",
+        "createdAt" : "2021-02-18T15:05:20Z",
+        "updatedAt" : "2021-02-18T15:05:20Z",
+        "lastEditedBy" : {
+          "login" : "tanishiking",
+          "name" : "Rikito Taniguchi",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1ca76fba3fb60396b09fcdec3edfde98d74f0b6b",
+    "line" : 18,
+    "diffHunk" : "@@ -1,1 +16,20 @@        defn(using context).AnyType,\n        EmptyFlags,\n        EmptyFlags,\n        NoSourcePosition\n      )(using context)"
+  }
+]

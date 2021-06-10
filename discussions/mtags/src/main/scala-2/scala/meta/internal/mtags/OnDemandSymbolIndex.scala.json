@@ -1,0 +1,76 @@
+[
+  {
+    "id" : "fb241226-0752-414b-abee-996cfa5a037f",
+    "prId" : 2668,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2668",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "1c9bc5b5-85dd-469d-86ff-c06e073f2bb2",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "I am wondering whether we should use `definitions` everywhere and only decide at call site whether `headOption` is enough. What do you think? Is there a lot of places that use it still? I am fine leaving as is, but just wondering how correct it is now.",
+        "createdAt" : "2021-04-22T11:57:01Z",
+        "updatedAt" : "2021-04-23T16:07:37Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "cb484420-043a-4f49-a87f-f59be13c6aa7",
+        "parentId" : "1c9bc5b5-85dd-469d-86ff-c06e073f2bb2",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "Unfortunately, there are still a lot of places where it's used.\r\n\r\nInitially, I thought that this fix will take less time than I already spend on it.\r\nSo, I would prefer to turn it into an issue - a kind of the second interaction of fixing wrong definitions. \r\n\r\nI think I will return to it after completing scala 3 related things.",
+        "createdAt" : "2021-04-23T14:29:11Z",
+        "updatedAt" : "2021-04-23T16:07:37Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "01e08831-4f13-4741-a0d0-299995152ba6",
+        "parentId" : "1c9bc5b5-85dd-469d-86ff-c06e073f2bb2",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Sure! Let's create a follow up to make sure that all places are properly handled.",
+        "createdAt" : "2021-04-23T14:35:24Z",
+        "updatedAt" : "2021-04-23T16:07:37Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3fcc251f9126b13a9372df15273d675aff8f745",
+    "line" : 16,
+    "diffHunk" : "@@ -1,1 +52,56 @@\n  override def definition(symbol: Symbol): Option[SymbolDefinition] = {\n    try findSymbolDefinition(symbol, symbol).headOption\n    catch onErrorOption\n  }"
+  }
+]

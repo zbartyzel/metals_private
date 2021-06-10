@@ -1,0 +1,150 @@
+[
+  {
+    "id" : "90fa93df-4fe5-46da-ae7f-29a230a52c2a",
+    "prId" : 2668,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2668",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "9f686dc8-0f74-4659-bd9f-ca0fa84620d0",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "Do we also need to consider srcjars here? https://github.com/scalameta/metals/pull/2710",
+        "createdAt" : "2021-04-17T14:33:35Z",
+        "updatedAt" : "2021-04-23T16:07:37Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "aecfb3ef-401f-4922-96e3-a47c69029540",
+        "parentId" : "9f686dc8-0f74-4659-bd9f-ca0fa84620d0",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "Good catch. Thx!",
+        "createdAt" : "2021-04-20T16:41:13Z",
+        "updatedAt" : "2021-04-23T16:07:37Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0c996471-bc43-486c-a3f9-f8757d8c4fbc",
+        "parentId" : "9f686dc8-0f74-4659-bd9f-ca0fa84620d0",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "Ah. Actually, that's a filesystem scheme. For  filesystem over `.srcjar` it should be the same: \"jar\"",
+        "createdAt" : "2021-04-20T17:38:03Z",
+        "updatedAt" : "2021-04-23T16:07:37Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7ec10492-ca20-484e-ae96-4ca9f6943412",
+        "parentId" : "9f686dc8-0f74-4659-bd9f-ca0fa84620d0",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "Ah ok, I wasn't 100% sure, that's why I brought it up.",
+        "createdAt" : "2021-04-20T18:55:56Z",
+        "updatedAt" : "2021-04-23T16:07:37Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3fcc251f9126b13a9372df15273d675aff8f745",
+    "line" : 20,
+    "diffHunk" : "@@ -1,1 +285,289 @@    def jarPath: Option[AbsolutePath] = {\n      val filesystem = path.toNIO.getFileSystem()\n      if (filesystem.provider().getScheme().equals(\"jar\")) {\n        Some(\n          AbsolutePath("
+  },
+  {
+    "id" : "28c7c8be-6c73-43ca-a478-76bb5685b675",
+    "prId" : 2668,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2668",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "8118bd6a-b37d-4c7f-9602-ded148b9b271",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Is it possible that relative might be empty?",
+        "createdAt" : "2021-04-22T10:39:12Z",
+        "updatedAt" : "2021-04-23T16:07:37Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "fe240813-fed7-4c7d-937d-53d600201f5b",
+        "parentId" : "8118bd6a-b37d-4c7f-9602-ded148b9b271",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "Honestly, I'm not sure about Windows.\r\nIn Linux, it can't.",
+        "createdAt" : "2021-04-23T13:38:54Z",
+        "updatedAt" : "2021-04-23T16:07:37Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3fcc251f9126b13a9372df15273d675aff8f745",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +279,283 @@    def toRelativeInside(prefix: AbsolutePath): Option[RelativePath] = {\n      val relative = path.toRelative(prefix)\n      if (relative.toNIO.getName(0).filename != \"..\") Some(relative)\n      else None\n    }"
+  }
+]

@@ -1,0 +1,76 @@
+[
+  {
+    "id" : "4c69b1c5-8a84-42b1-a9e9-e21e45c42934",
+    "prId" : 2668,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2668",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "a89b0735-c89f-453b-8a0e-68e310ad0880",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "Shouldn't this still be in `.metals/readonly` or is it relative now? I commented on this in another file as well, but it might be clearer to just have the full path.",
+        "createdAt" : "2021-04-09T14:36:16Z",
+        "updatedAt" : "2021-04-23T16:07:36Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8d7eaf41-0053-4423-8242-b36cb3acebe5",
+        "parentId" : "a89b0735-c89f-453b-8a0e-68e310ad0880",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "They still are in `.metals/readonly` but the path became much longer - `.metals/readonly/dependencies/sbt-${version}-sources.jar/sbt/Keys.scala`.\r\nHonestly, it was easier to fix tests by leaving these paths without full prefix than investigating the right one per every test. Anyway, there isn't a lot of meaning in seeing them.\r\n\r\nAlso, I think it might be annoying to update jar names in these paths in case if some dependency version will be changed in tests",
+        "createdAt" : "2021-04-12T14:55:01Z",
+        "updatedAt" : "2021-04-23T16:07:36Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2d08f5da-207e-4d8a-9c16-ea0a3b7429d8",
+        "parentId" : "a89b0735-c89f-453b-8a0e-68e310ad0880",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "Yea good point about changing these in the future. 👍🏼 ",
+        "createdAt" : "2021-04-17T14:36:47Z",
+        "updatedAt" : "2021-04-23T16:07:37Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3fcc251f9126b13a9372df15273d675aff8f745",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +454,458 @@        \"build.sbt\",\n        \"sc@@alaVersion := \\\"2.12.11\\\"\",\n        \"sbt/Keys.scala\",\n        expectedLine = 190\n      )"
+  }
+]

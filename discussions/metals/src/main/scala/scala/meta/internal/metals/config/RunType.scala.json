@@ -1,0 +1,118 @@
+[
+  {
+    "id" : "2b05047a-da3c-4ace-a51e-16f5f612062a",
+    "prId" : 2532,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2532",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "55a35ff3-df6c-4ac6-8d5b-913f87f1ba46",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "we can have just test and if a target is specified and not file it would mean it's supposed to test all test in target?",
+        "createdAt" : "2021-02-24T11:47:34Z",
+        "updatedAt" : "2021-03-08T13:25:41Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4d06b92a-f2ed-4c0d-9c86-022c87eb4407",
+        "parentId" : "55a35ff3-df6c-4ac6-8d5b-913f87f1ba46",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "But then where would the target come from? A user would have to include it? This way, there is no need need, a user can either bind a `testFile` or a `testTarget` to whatever they want, without any need to have to provide a target.",
+        "createdAt" : "2021-02-24T11:58:06Z",
+        "updatedAt" : "2021-03-08T13:25:41Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "83173fd6-1c18-4cd7-83c7-5e1be59aa803",
+        "parentId" : "55a35ff3-df6c-4ac6-8d5b-913f87f1ba46",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Hmm.. that is a tough one. Your solution might be best here if we want to provide the functionality to run all tests in the current target.\r\n\r\nOne improvement could be that if a user doesn't specify file and type is `testFile` or `testTarget` we could use focusedDocument (or focusedTarget which I think exists.)",
+        "createdAt" : "2021-02-24T12:12:49Z",
+        "updatedAt" : "2021-03-08T13:25:41Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "95eb41d9-0948-45d1-9a2a-5b51e2931d12",
+        "parentId" : "55a35ff3-df6c-4ac6-8d5b-913f87f1ba46",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "Yea it's a good point. I'm just not convinced that on the client side if we are using `testFile` or `testTarget`, there shouldn't really be a reason why we can't send along uri since it should be quite easy to. Do you think this might be an issue from VS Code if someone is trying to trigger from like the side panel or something? I don't think it's unreasonable to just expect a uri.",
+        "createdAt" : "2021-02-25T08:14:53Z",
+        "updatedAt" : "2021-03-08T13:25:41Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e779f8d0-628b-45fa-a485-1ae67af452fa",
+        "parentId" : "55a35ff3-df6c-4ac6-8d5b-913f87f1ba46",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "We should be able to always send a URI - especially if we start from a command. The only exception would be if we wanted to have a `launch.json` configuration that would just run anything in the current file. This would allow to just use the existing shortcut for debug (F5), but on the other hand we can always add a separate command for that and `launch.json` might be a hack. So maybe leave it out for now and I will see how best to implement it on the vs code side.",
+        "createdAt" : "2021-02-25T10:22:00Z",
+        "updatedAt" : "2021-03-08T13:25:41Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "23bedef101619ed619520c4b121ecae6c358d874",
+    "line" : 12,
+    "diffHunk" : "@@ -1,1 +10,14 @@    string match {\n      case \"run\" => Some(Run)\n      case \"testFile\" => Some(TestFile)\n      case \"testTarget\" => Some(TestTarget)\n      case _ => None"
+  }
+]

@@ -1,0 +1,108 @@
+[
+  {
+    "id" : "2e7ad177-542e-4897-98ef-618ac0dc1dd1",
+    "prId" : 2668,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2668",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "156b52c8-c719-4c55-ad02-2c79e17661dc",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "Couldn't this be simplified to just `List`? Whenever I see `Option[List]` I always think that unless there is a real difference between `None` and `Some(List.empty)`.",
+        "createdAt" : "2021-04-17T14:31:34Z",
+        "updatedAt" : "2021-04-23T16:07:36Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0c2ccfd9-52f8-4423-b24e-5c777b1e947d",
+        "parentId" : "156b52c8-c719-4c55-ad02-2c79e17661dc",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "Yep, I agree that in most cases `Option[List[A]]` should be reduced to `List[A]`.\r\n\r\nHowever, here it's used only in inner functions just to take benefits from `orElse` combinator in usage below - https://github.com/scalameta/metals/blob/a82a14240bd55284ba220650fe5a70c4198b5cde/metals/src/main/scala/scala/meta/internal/metals/DefinitionProvider.scala#L305-L308\r\nOtherwise, I had to introduce smth like `orElseIfNil` for `List` for this small part of code.",
+        "createdAt" : "2021-04-20T16:40:40Z",
+        "updatedAt" : "2021-04-23T16:07:37Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "738b6370-f2a2-4f28-8136-618c6e35b784",
+        "parentId" : "156b52c8-c719-4c55-ad02-2c79e17661dc",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "Alright sounds good 👍🏼 ",
+        "createdAt" : "2021-04-20T18:55:30Z",
+        "updatedAt" : "2021-04-23T16:07:37Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3fcc251f9126b13a9372df15273d675aff8f745",
+    "line" : 136,
+    "diffHunk" : "@@ -1,1 +310,314 @@  ): List[BuildTargetIdentifier] = {\n    def trivialSource: Option[List[BuildTargetIdentifier]] =\n      Option(buildTargets.sourceBuildTargets(source).toList).filter(_.nonEmpty)\n\n    def dependencySource: Option[List[BuildTargetIdentifier]] = {"
+  },
+  {
+    "id" : "9a06a759-6dd6-4f41-b250-62060dc07b46",
+    "prId" : 2668,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2668",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "bfc57905-793d-4197-a531-742c3df8364d",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "Same question as above, is the `Option[List` necessary?",
+        "createdAt" : "2021-04-17T14:32:06Z",
+        "updatedAt" : "2021-04-23T16:07:37Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3fcc251f9126b13a9372df15273d675aff8f745",
+    "line" : 138,
+    "diffHunk" : "@@ -1,1 +312,316 @@      Option(buildTargets.sourceBuildTargets(source).toList).filter(_.nonEmpty)\n\n    def dependencySource: Option[List[BuildTargetIdentifier]] = {\n      source.jarPath\n        .map(path => buildTargets.inverseDependencySource(path).toList)"
+  }
+]

@@ -93,5 +93,37 @@
     "commit" : "4c925bb564b537775be70666582c8e6f17d58fd2",
     "line" : 57,
     "diffHunk" : "@@ -1,1 +90,94 @@  def computeHash(bind: Binders) = hash\n  override def toString = name\n}\n\n/**"
+  },
+  {
+    "id" : "b9dc5b21-62da-4c47-9de7-607e611fd38b",
+    "prId" : 2637,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2637",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "119f91e7-4027-4dc9-9fd5-74618b0f59a4",
+        "parentId" : null,
+        "author" : {
+          "login" : "tanishiking",
+          "name" : "Rikito Taniguchi",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4",
+          "altName" : null
+        },
+        "body" : "to here",
+        "createdAt" : "2021-03-28T16:01:14Z",
+        "updatedAt" : "2021-04-20T11:55:47Z",
+        "lastEditedBy" : {
+          "login" : "tanishiking",
+          "name" : "Rikito Taniguchi",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cb0dd9260bcbd1c2b38bcd118ac763772baf4a4c",
+    "line" : 20,
+    "diffHunk" : "@@ -1,1 +18,22 @@  def lookupSymbol(short: ShortName): Type = {\n    context.findRef(short.name)\n  }\n\n  def tryShortenName(short: ShortName)(using Context): Boolean = {"
   }
 ]

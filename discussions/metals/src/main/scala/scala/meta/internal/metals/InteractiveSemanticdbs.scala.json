@@ -1,0 +1,87 @@
+[
+  {
+    "id" : "217595f8-079f-485a-b29c-f280243cbe3f",
+    "prId" : 2539,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2539",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "58fbb87f-c438-4344-b776-03e65360cf40",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "We don't want to index worksheets globally at least until we can distinguish different build targets and unrelated symbols with the same name. Also, worksheet definitions are only available inside the worksheet itself.",
+        "createdAt" : "2021-02-22T16:33:17Z",
+        "updatedAt" : "2021-02-22T17:56:53Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b53145da24136554bef3e6fc28bc77a7dcfd5a62",
+    "line" : 23,
+    "diffHunk" : "@@ -1,1 +81,85 @@            Option(compiled).foreach(doc =>\n              // don't index dependency source files or worksheets, since their definitions are local\n              if (!source.isDependencySource(workspace) && !source.isWorksheet)\n                semanticdbIndexer().onChange(source, doc)\n            )"
+  },
+  {
+    "id" : "129579ff-2db6-40bf-88ee-8ecddccb6dfa",
+    "prId" : 2538,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2538",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "8cacf882-c98f-4e61-8956-7c4bbd1cf7d9",
+        "parentId" : null,
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "Is this check required?\r\nIt looks like `SemanticdbTextDocumentProvider` sets up `text` value correctly.",
+        "createdAt" : "2021-02-22T13:56:16Z",
+        "updatedAt" : "2021-02-22T14:00:06Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9e391f9d-a6ff-44a6-8c9a-270af90cc4c4",
+        "parentId" : "8cacf882-c98f-4e61-8956-7c4bbd1cf7d9",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "It's actually not serialized to bytes, which I think might be the default way to write it to file.",
+        "createdAt" : "2021-02-22T14:08:31Z",
+        "updatedAt" : "2021-02-22T14:08:32Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "099a722a1cd2f24e0c0d88f5d766a4ba70c613fe",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +179,183 @@    val textDocument = {\n      val doc = s.TextDocument.parseFrom(bytes)\n      if (doc.text.isEmpty()) doc.withText(text)\n      else doc\n    }"
+  }
+]

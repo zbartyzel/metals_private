@@ -1,0 +1,34 @@
+[
+  {
+    "id" : "a59eb9d6-6c66-4f16-9037-5972d16113bc",
+    "prId" : 2531,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2531",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "49bb68a7-da07-474e-8a49-d1ab30b71986",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Worksheets would show errors on a version specific code.",
+        "createdAt" : "2021-02-20T11:23:29Z",
+        "updatedAt" : "2021-02-20T11:23:29Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c112958defe7b37db9aa0bbb3c39c47933d013d8",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +5,9 @@class Worksheet211LspSuite extends tests.BaseWorksheetLspSuite(V.scala211)\nclass Worksheet3LspSuite extends tests.BaseWorksheetLspSuite(V.scala3) {\n  override def versionSpecificCodeToValidate: String =\n    \"\"\"given str: String = \"\"\"\"\"\n}"
+  }
+]

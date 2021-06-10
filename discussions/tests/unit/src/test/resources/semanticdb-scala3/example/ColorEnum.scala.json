@@ -1,0 +1,76 @@
+[
+  {
+    "id" : "a3f2190f-5c4d-483b-9f59-97a59d4144eb",
+    "prId" : 2589,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2589",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "e48cba5c-de60-4543-9436-6e8e3aaa40a0",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "https://github.com/lampepfl/dotty/issues/11689",
+        "createdAt" : "2021-03-10T17:15:22Z",
+        "updatedAt" : "2021-03-11T14:26:31Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d6a75dc9-db83-4344-9237-76e2259f1506",
+        "parentId" : "e48cba5c-de60-4543-9436-6e8e3aaa40a0",
+        "author" : {
+          "login" : "tanishiking",
+          "name" : "Rikito Taniguchi",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4",
+          "altName" : null
+        },
+        "body" : "What do you think about adding a link to this issue on a line comment in `ColorEnum.scala`, so we can see what's wrong with the test later? ",
+        "createdAt" : "2021-03-11T11:39:55Z",
+        "updatedAt" : "2021-03-11T14:26:31Z",
+        "lastEditedBy" : {
+          "login" : "tanishiking",
+          "name" : "Rikito Taniguchi",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "21b39b2d-a7d4-4545-80e8-e3fca8b2f1e4",
+        "parentId" : "e48cba5c-de60-4543-9436-6e8e3aaa40a0",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "The problem is that it will show up for any other tests too. I will put it into the test suite itself.",
+        "createdAt" : "2021-03-11T14:23:41Z",
+        "updatedAt" : "2021-03-11T14:26:31Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "12fbb0bb50d972bd724663e2c2d6eee8c85cb404",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +2,6 @@\nenum Color/*example.Color#*/(val rgb/*example.Color#rgb.*/: Int/*scala.Int#*/):\n   case Red/*example.Color.Red.*/   extends Color/*example.Color#*/(0xFF0000)/*scala.runtime.EnumValue#*/\n   case Green/*example.Color.Green.*/ extends Color/*example.Color#*/(0x00FF00)/*scala.runtime.EnumValue#*/\n   case Blue/*example.Color.Blue.*/  extends Color/*example.Color#*/(0x0000FF)/*scala.runtime.EnumValue#*/"
+  }
+]

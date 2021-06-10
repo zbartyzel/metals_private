@@ -1,0 +1,108 @@
+[
+  {
+    "id" : "ef79827f-3523-4196-881c-750d5f22155b",
+    "prId" : 2600,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2600",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ce4914f4-910d-457e-8ae7-3fcf3dcc86a0",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Could you add examples here an how it will be matched? \r\n\r\nAlso are we just able to just:\r\n1. Get the version suffix\r\n2. Check if binary version exists\r\n3. If it doesn't exist the it's full scala version and let's use scalaBinaryVersionFromJarName",
+        "createdAt" : "2021-03-16T17:41:22Z",
+        "updatedAt" : "2021-04-01T21:54:41Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a8beef1e-79e2-40e4-b225-3294ffe46c41",
+        "parentId" : "ce4914f4-910d-457e-8ae7-3fcf3dcc86a0",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "Added doc.\r\n\r\n> Get the version suffix\r\n\r\nHypothetically there might be some artifacts which version matches on scala version.\r\nSmth like `library-name_3.0.0-RC1-2.12` .\r\nAnd it's anyway unclear where is the version suffix starts in case if artifact name has `-` symbols",
+        "createdAt" : "2021-03-23T13:42:52Z",
+        "updatedAt" : "2021-04-01T21:54:41Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "028b3ff710580df42fff3574f99c743c9649e48c",
+    "line" : 28,
+    "diffHunk" : "@@ -1,1 +122,126 @@        val minor = m.group(3)\n        val ending = Option(m.group(4)).map(s => s\"$s\").getOrElse(\"\")\n        val version = s\"$major.$minor$ending\"\n        if (isSupportedScalaBinaryVersion(version))\n          Some(version -> hasUnderscorePrefix)"
+  },
+  {
+    "id" : "278d2eee-712a-4a48-974c-ab9cf37e3e99",
+    "prId" : 2600,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2600",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "490a824e-c218-421c-a8a3-d0917f4c78d4",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Could you add a link to the BSP PR to provide a context on how we plan to make it not depend on regex,",
+        "createdAt" : "2021-03-29T15:09:15Z",
+        "updatedAt" : "2021-04-01T21:54:41Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f8868bf2-f309-4fa3-a679-642eb647d5ab",
+        "parentId" : "490a824e-c218-421c-a8a3-d0917f4c78d4",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "Unfortunately, we will anyway have to keep this thing. The new BSP method will be optional.\r\nThere will be an additional less creepy version of this method for it.",
+        "createdAt" : "2021-03-30T19:42:45Z",
+        "updatedAt" : "2021-04-01T21:54:41Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "028b3ff710580df42fff3574f99c743c9649e48c",
+    "line" : 9,
+    "diffHunk" : "@@ -1,1 +103,107 @@\n  /**\n   * Extract scala binary version from dependency jar name.\n   * The version that starts from `_` prefix takes more precedence.\n   * Example:"
+  }
+]

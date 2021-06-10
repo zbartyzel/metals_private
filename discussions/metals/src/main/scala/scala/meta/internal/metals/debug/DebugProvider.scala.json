@@ -1,0 +1,34 @@
+[
+  {
+    "id" : "5938e9ff-9323-4b6b-825b-48fdb2a7875e",
+    "prId" : 2696,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2696",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "5d7539be-7cf6-4437-840b-7fd649fbb1dc",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Bumping up this one, maybe it'll help :thermometer: ",
+        "createdAt" : "2021-04-09T13:08:07Z",
+        "updatedAt" : "2021-04-12T07:17:01Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a2d517481a923ddb3e7c1e50776d53d41df479ac",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +498,502 @@\n    val address = new InetSocketAddress(uri.getHost, uri.getPort)\n    val timeout = TimeUnit.SECONDS.toMillis(20).toInt\n    socket.connect(address, timeout)\n"
+  }
+]

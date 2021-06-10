@@ -1,0 +1,34 @@
+[
+  {
+    "id" : "eb3ff998-c924-4122-8f09-1db5397b273a",
+    "prId" : 2529,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2529",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "88ac9826-3618-473e-b824-e26e2a6457fa",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "\\o/ TUNGSTEN!",
+        "createdAt" : "2021-02-19T18:38:52Z",
+        "updatedAt" : "2021-02-24T11:09:02Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "09338d8f327f26528f18edbd4f1a87c84fe2b4de",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +11,15 @@\nval defaultToken = sys.env.get(\"GITHUB_TOKEN\")\nval codename = \"Tungsten\"\n\n@main"
+  }
+]

@@ -1,0 +1,139 @@
+[
+  {
+    "id" : "42a1b951-41be-44dc-8209-950f88474579",
+    "prId" : 2767,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2767",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "231d0b26-d642-4cb7-bba8-0bc11f208820",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "I wonder why this is popping up now?",
+        "createdAt" : "2021-05-10T08:50:29Z",
+        "updatedAt" : "2021-05-10T08:50:41Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "87bbffd0-5ed7-4194-90ea-8bd20a6ec2f6",
+        "parentId" : "231d0b26-d642-4cb7-bba8-0bc11f208820",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "This might have been an issue before, but only popped up recently due to my changes.",
+        "createdAt" : "2021-05-10T09:05:57Z",
+        "updatedAt" : "2021-05-10T09:05:57Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b77c3012-567d-4251-8886-50835789da25",
+        "parentId" : "231d0b26-d642-4cb7-bba8-0bc11f208820",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Could we instead only fix it in tests? This should not be an issue on windows really. I think editors handle it correctly.",
+        "createdAt" : "2021-05-10T09:19:24Z",
+        "updatedAt" : "2021-05-10T09:19:28Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5e5bfe4e-4d3c-4aa4-b5ec-b914c264251e",
+        "parentId" : "231d0b26-d642-4cb7-bba8-0bc11f208820",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Too late, I will take a look at it.",
+        "createdAt" : "2021-05-10T09:19:47Z",
+        "updatedAt" : "2021-05-10T09:19:47Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9e8bd710-1dfe-4ba3-9817-871e1841e187",
+        "parentId" : "231d0b26-d642-4cb7-bba8-0bc11f208820",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "Opps, sorry)\r\n\r\nYep, I thought that it would be better to check how it works in the editor but I was too lazy to install Windows VM.\r\nHowever, to be sure we have to test it on several editor.",
+        "createdAt" : "2021-05-10T09:42:22Z",
+        "updatedAt" : "2021-05-10T09:42:22Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "18889bf8-d47c-4fe2-976a-d049a1096d4c",
+        "parentId" : "231d0b26-d642-4cb7-bba8-0bc11f208820",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "I have a Windows machine set up and will test it out. Shouldn't take long to look at it. Thanks for fixing this btw! ",
+        "createdAt" : "2021-05-10T09:52:47Z",
+        "updatedAt" : "2021-05-10T09:52:47Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "80e8906a4c884eddf1830d0a5ad61f494ab339f6",
+    "line" : 21,
+    "diffHunk" : "@@ -1,1 +112,116 @@   * Due to logic thats forcibly shifts position in `Foldable`\n   * `end` might point at `\\r>>range.end<<\\n`\n   * that causes problems on Windows (at least in tests)\n   */\n  private def adjustEnd(pos: Position, tokens: Tokens): Position = {"
+  }
+]

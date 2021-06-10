@@ -1,0 +1,118 @@
+[
+  {
+    "id" : "4f9ea428-bbc9-4850-ac05-8610a026bc55",
+    "prId" : 2617,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2617",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "52b541c2-a4f2-4eda-b154-8694f49e7a3f",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "I've seen this in a couple places where it prefaces with an empty string. What's the reasoning for that?",
+        "createdAt" : "2021-03-17T06:02:52Z",
+        "updatedAt" : "2021-03-17T06:03:08Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "eb842cc1-ba8e-4de7-aa72-96478fa5dfb7",
+        "parentId" : "52b541c2-a4f2-4eda-b154-8694f49e7a3f",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "I was also confused, but it seems the reason is https://scalacenter.github.io/scala-3-migration-guide/docs/incompatibilities/dropped-features.html#any2stringadd-conversion",
+        "createdAt" : "2021-03-17T10:01:49Z",
+        "updatedAt" : "2021-03-17T10:01:50Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "51cbc2a4-88b1-47e3-b746-84eb33d9ae35",
+        "parentId" : "52b541c2-a4f2-4eda-b154-8694f49e7a3f",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "huh, alright, thanks for linking that. I hope this doesn't become confusing for someone in the future that comes across this and wonders why there is a `\"\"` prefacing it. I can see myself seeing that just removing it 😆 ",
+        "createdAt" : "2021-03-17T10:06:46Z",
+        "updatedAt" : "2021-03-17T10:06:46Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "aabf73be-6ee7-4ac5-8c1d-5410cb3140f4",
+        "parentId" : "52b541c2-a4f2-4eda-b154-8694f49e7a3f",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "Hm. I've just realized that this line might look less weird if at least the first backtick was a type of `String`:\r\n```scala\r\nelse if (needsBacktick(s)) \"`\"+ s + \"`\"`\r\n```",
+        "createdAt" : "2021-03-17T10:15:55Z",
+        "updatedAt" : "2021-03-17T10:15:55Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e06c2203-371d-4400-b27b-a92183a071d6",
+        "parentId" : "52b541c2-a4f2-4eda-b154-8694f49e7a3f",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "ach yes, I didn't notice the comments when merging, sorry!",
+        "createdAt" : "2021-03-17T10:36:52Z",
+        "updatedAt" : "2021-03-17T10:36:52Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "caddf0dae5ced3ffc99eb4bb39e603fa2b190911",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +63,67 @@    if (s.isEmpty) \"``\"\n    else if (s(0) == '`' && s.last == '`') s\n    else if (needsBacktick(s)) \"\" + ('`') + s + '`'\n    else s\n  }"
+  }
+]

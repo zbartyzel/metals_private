@@ -1,0 +1,55 @@
+[
+  {
+    "id" : "fe02107e-ece6-4e44-870a-33a09c27ea4d",
+    "prId" : 2668,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2668",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "de88f79d-1b6f-4210-9a54-fc36b42fe715",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "You should also uncomment https://github.com/scalameta/metals/blob/03704c17b5397bd8feb4771d0bedf9a6dfe0a660/tests/unit/src/test/scala/tests/debug/BreakpointDapSuite.scala#L633\r\nto see if it's working correctly now.",
+        "createdAt" : "2021-04-22T16:30:29Z",
+        "updatedAt" : "2021-04-23T16:07:37Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "62d97fa3-7027-4679-b03c-5d9a1da5c30c",
+        "parentId" : "de88f79d-1b6f-4210-9a54-fc36b42fe715",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "Thx! Now it works.",
+        "createdAt" : "2021-04-23T16:12:21Z",
+        "updatedAt" : "2021-04-23T16:12:21Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3fcc251f9126b13a9372df15273d675aff8f745",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +327,331 @@  }\n\n  test(\"clashing-references\") {\n    for {\n      _ <- server.initialize("
+  }
+]

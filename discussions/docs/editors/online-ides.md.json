@@ -1,0 +1,87 @@
+[
+  {
+    "id" : "d9f8f877-a080-4090-aebd-36f91098d02c",
+    "prId" : 2370,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2370",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "4c9bc6a3-18a1-4c09-804b-b04b848529a6",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "```suggestion\r\ncompanies that want to increase their productivity by improving their\r\n```\r\n\r\nYou already used might in this sentence earlier, so I'd avoid using it twice.",
+        "createdAt" : "2021-03-23T18:32:52Z",
+        "updatedAt" : "2021-03-24T10:59:44Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1b6a65d9-8a1b-4e18-85a5-a5a59f1ba1bf",
+        "parentId" : "4c9bc6a3-18a1-4c09-804b-b04b848529a6",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Changed the previous to `should`",
+        "createdAt" : "2021-03-24T10:54:49Z",
+        "updatedAt" : "2021-03-24T10:59:44Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1ebc096236fa2d4e78d8a6ad5dbf8ef4348fa5c3",
+    "line" : 61,
+    "diffHunk" : "@@ -1,1 +59,63 @@Theia that helps companies and users create their own online workspace\ninfrastructure. These topics should be especially interesting for larger\ncompanies that might want to increase their productivity by improving their\ndevelopers' experience. With some additional setup it's possible using those\ntools to have a zero startup environments."
+  },
+  {
+    "id" : "2a976445-ec12-4b4c-a2d5-23779553a56b",
+    "prId" : 2370,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2370",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "2b036a61-05ab-477c-a63a-0749e90e52e1",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "I also added the example gif from the front page.",
+        "createdAt" : "2021-03-24T11:06:11Z",
+        "updatedAt" : "2021-03-24T11:06:11Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1ebc096236fa2d4e78d8a6ad5dbf8ef4348fa5c3",
+    "line" : 18,
+    "diffHunk" : "@@ -1,1 +16,20 @@about Gitpod [here](https://www.gitpod.io/docs/).\n\n![example](https://imgur.com/2AiIN43.gif)\n\n## Example Gitpod repository for Metals"
+  }
+]

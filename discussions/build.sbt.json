@@ -220,5 +220,90 @@
     "commit" : "1fe78c8d5ea5e5c36be5ed16dc82532a22ba9be2",
     "line" : 4,
     "diffHunk" : "@@ -1,1 +135,139 @@    testFrameworks := List(),\n    resolvers += Resolver.sonatypeRepo(\"public\"),\n    resolvers += Resolver.sonatypeRepo(\"snapshot\"),\n    dependencyOverrides += V.guava,\n    // faster publishLocal:"
+  },
+  {
+    "id" : "89500db9-bc05-4b38-a84f-35c89553badb",
+    "prId" : 2779,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2779",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "badcd6f5-994d-422d-a215-f823551062e9",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Those RC versions are still used for courses at EPFL, so I will hold off dropping them until end of the semester most likely.",
+        "createdAt" : "2021-05-14T12:52:17Z",
+        "updatedAt" : "2021-05-14T12:52:30Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b14dcc6e504c6df35a5797bf8f1c0fafef689627",
+    "line" : 25,
+    "diffHunk" : "@@ -1,1 +228,232 @@  // Scala 3\n  def nonDeprecatedScala3Versions =\n    Seq(scala3, \"3.0.0-RC3\", \"3.0.0-RC2\", \"3.0.0-RC1\")\n  def deprecatedScala3Versions = Seq()\n  def scala3Versions = nonDeprecatedScala3Versions ++ deprecatedScala3Versions"
+  },
+  {
+    "id" : "22dc9403-6378-4b3d-a868-de1cbada25fe",
+    "prId" : 2531,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2531",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "2b1693d2-9841-46cd-9158-4be80aad70e9",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "There were issues in the build because mtags3 were lacking the version specific directory.",
+        "createdAt" : "2021-02-20T11:22:57Z",
+        "updatedAt" : "2021-02-20T11:22:57Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1e4d0186-8567-4387-9876-7fee9d3f2845",
+        "parentId" : "2b1693d2-9841-46cd-9158-4be80aad70e9",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "Ironic I just hit on this when I cleaned and tried to build everything locally. It was on my list to look at after reviewing this, ha.",
+        "createdAt" : "2021-02-20T12:28:25Z",
+        "updatedAt" : "2021-02-20T12:29:59Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c112958defe7b37db9aa0bbb3c39c47933d013d8",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +294,298 @@    result += base / \"scala-3\"\n  }\n  result += base / s\"scala-$scalaVersion\"\n  result.toList\n}"
   }
 ]

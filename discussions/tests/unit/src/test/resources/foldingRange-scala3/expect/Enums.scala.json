@@ -1,0 +1,55 @@
+[
+  {
+    "id" : "1d35d139-2e47-45b2-a959-2cb4a3ab080f",
+    "prId" : 2543,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2543",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "43644d45-58f0-4836-b6a0-033c0c847c3a",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "I seem to not get folding ranges in case of:\r\n```\r\nobject EnumTypes {\r\n  enum ListEnum[+A]{\r\n    case Cons(h: A, t: ListEnum[A])\r\n    case Empty\r\n  }\r\n}\r\n```\r\n\r\nfrom https://github.com/scala/scala3-example-project\r\n\r\nCould you maybe add a test for that?",
+        "createdAt" : "2021-02-25T10:54:26Z",
+        "updatedAt" : "2021-02-25T11:03:27Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e1df0846-000f-4c9f-91fc-a31b3dc2585f",
+        "parentId" : "43644d45-58f0-4836-b6a0-033c0c847c3a",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "In this case with an enum, it doesn't reach the threshold value (3 lines).\r\nIf you add one more item folding range will appear.",
+        "createdAt" : "2021-02-26T16:49:23Z",
+        "updatedAt" : "2021-02-26T16:49:23Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "48f1ac24cb217bf2fdbf74cbb611ac7429baa4e0",
+    "line" : 1,
+    "diffHunk" : "@@ -1,1 +-1,3 @@enum Color>>region>>:\n  case Red\n  case Green"
+  }
+]

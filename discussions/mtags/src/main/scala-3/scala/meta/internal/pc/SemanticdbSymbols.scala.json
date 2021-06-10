@@ -1,0 +1,76 @@
+[
+  {
+    "id" : "873b2d23-909f-40a1-b288-4b8e2c442ec1",
+    "prId" : 2728,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2728",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "930cdb84-a35a-4324-9fa7-d55965b4beb9",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "This is probably not yet needed for AutoImports? Could we have the TODOs with an issue to back them?",
+        "createdAt" : "2021-04-27T11:45:07Z",
+        "updatedAt" : "2021-05-10T11:58:32Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d01f3855-5380-4ded-bf04-f10158e2a6c3",
+        "parentId" : "930cdb84-a35a-4324-9fa7-d55965b4beb9",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Let's remove the TODOs or but at least create a follow up issues.",
+        "createdAt" : "2021-05-10T16:36:18Z",
+        "updatedAt" : "2021-05-13T16:03:06Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f9f2b089-5ede-4155-aef1-c839496cb777",
+        "parentId" : "930cdb84-a35a-4324-9fa7-d55965b4beb9",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "Created - https://github.com/scalameta/metals/issues/2778",
+        "createdAt" : "2021-05-13T20:31:05Z",
+        "updatedAt" : "2021-05-13T20:31:05Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "10c763add43198a40377d84ab7a67c9f6a77ac84",
+    "line" : 51,
+    "diffHunk" : "@@ -1,1 +49,53 @@                  owner.info.decl(termName(value)).symbol :: Nil\n                case Descriptor.Parameter(value) =>\n                  // TODO - need to check how to implement this properly\n                  //owner.paramSymss.flatten.filter(_.name.containsName(value))\n                  Nil"
+  }
+]

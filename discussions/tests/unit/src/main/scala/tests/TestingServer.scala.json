@@ -1,0 +1,139 @@
+[
+  {
+    "id" : "c4234e90-9def-4228-a96c-223836d1d175",
+    "prId" : 2532,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2532",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "dae74e6d-ebf2-410e-8290-b1879f65a916",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Could we maybe wait on the indexingPromise in MetalsLanguageServer? We can make it public and it should work the same.",
+        "createdAt" : "2021-03-04T11:02:15Z",
+        "updatedAt" : "2021-03-08T13:25:41Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "727c934b-4f40-433a-a122-452a5a5f45eb",
+        "parentId" : "dae74e6d-ebf2-410e-8290-b1879f65a916",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "🤔 so I tried adding in this in place of it:\r\n```scala\r\n _ <- server.server.indexingPromise.future\r\n```\r\nWhich I assumed would wait for it, but it seems to not work. This is what you had in mind right?",
+        "createdAt" : "2021-03-04T19:43:48Z",
+        "updatedAt" : "2021-03-08T13:25:41Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "54d520cf-6103-4a3a-b000-ce9c8fc68760",
+        "parentId" : "dae74e6d-ebf2-410e-8290-b1879f65a916",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "It should wait until the workspace is indexed, so maybe we should also wait on `didSave` (it will wait on the compilation)?  The test classes are still not available by then?",
+        "createdAt" : "2021-03-04T20:25:57Z",
+        "updatedAt" : "2021-03-08T13:25:41Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "54a4d59a-c7b6-4f40-89f6-b792d675ace1",
+        "parentId" : "dae74e6d-ebf2-410e-8290-b1879f65a916",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "Yea but there already is a did save in the others that I tried this on. For example in `testTarget` we have the `didOpen`, `didSave`, and then the `indexingPromise.future`, and that still doesn't have the test classes. I have no idea why that takes more time.",
+        "createdAt" : "2021-03-04T21:31:34Z",
+        "updatedAt" : "2021-03-08T13:25:41Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5068609c-a490-4a0c-bded-d80e9bf5ac70",
+        "parentId" : "dae74e6d-ebf2-410e-8290-b1879f65a916",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Damn, it might have something to do with Bloop. Alternative would be to use SBT bsp here, but it's fine to leave it as is.",
+        "createdAt" : "2021-03-04T21:37:57Z",
+        "updatedAt" : "2021-03-08T13:25:41Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4f2c210e-146f-4049-bf7d-1dbe5a15b622",
+        "parentId" : "dae74e6d-ebf2-410e-8290-b1879f65a916",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "🤔 I'm thinking for now to leave it as I played around with this a bit more and still can't get it to work as expected.",
+        "createdAt" : "2021-03-05T16:30:43Z",
+        "updatedAt" : "2021-03-08T13:25:41Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "23bedef101619ed619520c4b121ecae6c358d874",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +474,478 @@  }\n\n  def waitFor(sec: Long): Future[Unit] = Future { Thread.sleep(sec) }\n\n  def startDebugging("
+  }
+]

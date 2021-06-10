@@ -1,0 +1,76 @@
+[
+  {
+    "id" : "d5a34832-8c3d-41ec-81b8-a01e24517d23",
+    "prId" : 2668,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2668",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "471041f1-8c05-4649-9c73-92e5faf1aa4c",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "I wish we had a `nonEmptySet` to use here.",
+        "createdAt" : "2021-04-09T13:56:34Z",
+        "updatedAt" : "2021-04-23T16:07:36Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "fb0f330a-9af8-43ab-98bb-f2cb6f2eb6af",
+        "parentId" : "471041f1-8c05-4649-9c73-92e5faf1aa4c",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "I wish the same but as it used in the index too it's required to implement it without additional mem-overhead.\r\nI've seen such implementation in [cats](https://github.com/typelevel/cats/blob/main/core/src/main/scala/cats/data/NonEmptySet.scala) but I don't know if it worths copy-paste their implementation for these two cases.\r\n",
+        "createdAt" : "2021-04-12T13:47:23Z",
+        "updatedAt" : "2021-04-23T16:07:36Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ab12db37-bf9f-4605-8060-fbe246cec1c8",
+        "parentId" : "471041f1-8c05-4649-9c73-92e5faf1aa4c",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "Ha, for sure not worth it. Was just thinking out loud :)",
+        "createdAt" : "2021-04-17T13:53:49Z",
+        "updatedAt" : "2021-04-23T16:07:36Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3fcc251f9126b13a9372df15273d675aff8f745",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +50,54 @@    TrieMap.empty[BuildTargetIdentifier, util.Set[AbsolutePath]]\n  private val inverseDependencySources =\n    TrieMap.empty[AbsolutePath, Set[BuildTargetIdentifier]]\n  private val isSourceRoot =\n    ConcurrentHashSet.empty[AbsolutePath]"
+  }
+]

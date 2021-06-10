@@ -1,0 +1,87 @@
+[
+  {
+    "id" : "1579fab8-99b5-4048-808e-9e501a0dffd9",
+    "prId" : 2600,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2600",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f220fe8f-1ed5-4f94-8713-cba374adafe1",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Can this be removed from the template case above? ",
+        "createdAt" : "2021-03-17T15:11:58Z",
+        "updatedAt" : "2021-04-01T21:54:41Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "97f64035-ac3d-412d-b9a9-e828e9456f3e",
+        "parentId" : "f220fe8f-1ed5-4f94-8713-cba374adafe1",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "It might be but requires to extract `OverloadsDisambiguator` into a variable.",
+        "createdAt" : "2021-03-22T12:38:54Z",
+        "updatedAt" : "2021-04-01T21:54:41Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "028b3ff710580df42fff3574f99c743c9649e48c",
+    "line" : 182,
+    "diffHunk" : "@@ -1,1 +251,255 @@            enterPatterns(t.pats, Kind.METHOD, Property.VAR.value); stop()\n          }\n        case t: Defn.Def =>\n          if (isPackageOwner) {\n            withOwner(fileOwner) {"
+  },
+  {
+    "id" : "2e8dfda1-753e-4c62-9cc5-aefd9fbe84e1",
+    "prId" : 2600,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2600",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "d0e7e802-0dd6-48f1-8c6e-ed2e79a5dc31",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Let's also add an issue in Metals, so that we don't forget about this case.",
+        "createdAt" : "2021-03-17T15:14:36Z",
+        "updatedAt" : "2021-04-01T21:54:41Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "028b3ff710580df42fff3574f99c743c9649e48c",
+    "line" : 192,
+    "diffHunk" : "@@ -1,1 +261,265 @@          }\n        case t: Defn.ExtensionGroup =>\n          // t.params are ignored - don't know which symbol/owner they should have\n          // need to wait for https://github.com/lampepfl/dotty/issues/11690\n          val (owner, overloads) ="
+  }
+]

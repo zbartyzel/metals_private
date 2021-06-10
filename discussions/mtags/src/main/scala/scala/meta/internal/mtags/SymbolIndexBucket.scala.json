@@ -1,0 +1,55 @@
+[
+  {
+    "id" : "8c2a2907-fa78-42cb-9e94-6c83b9bfc62a",
+    "prId" : 2780,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2780",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "7ca8bb91-30ac-4b39-989e-4da1fd8fadb8",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "We should also pass the dialect here to avoid the fallback in https://github.com/scalameta/metals/blob/12db95cb14b1fefdc982243f0e4a1a6311914304/mtags/src/main/scala/scala/meta/internal/mtags/ScalaMtags.scala#L27",
+        "createdAt" : "2021-05-15T10:06:18Z",
+        "updatedAt" : "2021-05-15T10:11:01Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5fd8f2e0-1549-4651-a66b-d3c015dbda9e",
+        "parentId" : "7ca8bb91-30ac-4b39-989e-4da1fd8fadb8",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "I will take a look at it",
+        "createdAt" : "2021-05-15T10:23:31Z",
+        "updatedAt" : "2021-05-15T10:23:31Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "39a9f38381f35c7406dded3b0c802813e3cbc7b1",
+    "line" : 187,
+    "diffHunk" : "@@ -1,1 +185,189 @@        val toIndexSource0 = toIndexSource(file).getOrElse(file)\n        val input = toIndexSource0.toInput\n        val document = mtags.index(language, input)\n        s.TextDocuments(List(document))\n      case _ =>"
+  }
+]

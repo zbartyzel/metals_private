@@ -1,0 +1,34 @@
+[
+  {
+    "id" : "aafa121d-7ac2-4d6a-9d4e-b757c234eeb5",
+    "prId" : 2587,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2587",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ba56ce1a-5661-4793-b05c-00bc83b87cb7",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Ignored this for now, so that we can format those directories manually using scala3 dialect. There is still a bunch of work on scalafmt to make it all work out of the box.",
+        "createdAt" : "2021-03-10T13:10:16Z",
+        "updatedAt" : "2021-03-10T13:17:40Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ebfb8fb30084738578f72985974d164332784a8d",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +15,19 @@  \"metals-bench/src/main/resources\"\n  \"mtags/src/main/scala-3.0/\"\n  \"mtags/src/main/scala-3.0.0-M1/\"\n  \"mtags/src/main/scala-3.0.0-M2/\"\n  \"mtags/src/main/scala-3.0.0-M3/\""
+  }
+]

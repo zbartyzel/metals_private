@@ -1,0 +1,34 @@
+[
+  {
+    "id" : "0ff23172-2ca4-4fe0-b985-d50b185aca9a",
+    "prId" : 2605,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2605",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "0f35860a-889d-40f8-b0ff-04973b8189a2",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "That was actually a wrongly named method - `method:` should be wrapped in backticks, which it started doing.",
+        "createdAt" : "2021-03-15T11:28:44Z",
+        "updatedAt" : "2021-03-15T15:32:17Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "6f1a4c3242bb93ce1e872665b12ff3b7319d1c6b",
+    "line" : 20,
+    "diffHunk" : "@@ -1,1 +289,293 @@       |}\n       |\"\"\".stripMargin,\n    newName = \"+++:\"\n  )\n"
+  }
+]

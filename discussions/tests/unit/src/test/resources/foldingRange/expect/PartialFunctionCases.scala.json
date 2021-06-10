@@ -1,0 +1,34 @@
+[
+  {
+    "id" : "102e412e-d595-4b6f-80ec-372303723545",
+    "prId" : 2765,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2765",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "df723a33-6a33-4c01-8569-d55e1d0ab73b",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "The threshold is 3, so we should have 4 statements for the fold region to show up.",
+        "createdAt" : "2021-05-04T09:32:52Z",
+        "updatedAt" : "2021-05-04T09:32:52Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "573e67dbb53fe49e76a7ae4934685acc752f4194",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +9,13 @@        println()\n        println()\n        println()\n<<region<<      case 3 =>\n        println()"
+  }
+]

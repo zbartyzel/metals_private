@@ -1,0 +1,87 @@
+[
+  {
+    "id" : "5ed057c2-3977-43a1-905a-bfb945925061",
+    "prId" : 2723,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2723",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "48df8a34-04dd-419e-a555-a819b6c9d85d",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Could we include the name of the file if possible as a separate parameter (`\"filename = A.scala\"`)? It's hard to figure out what should be happening here. I think underneath it's A.scala, but not everyone will know it",
+        "createdAt" : "2021-05-06T09:53:12Z",
+        "updatedAt" : "2021-05-11T14:51:09Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "027c9bf78c700cb555e80ae8e2fab5e18678651e",
+    "line" : 150,
+    "diffHunk" : "@@ -1,1 +148,152 @@  checkActionProduced(\n    \"sealed-class-no-codeAction\",\n    \"\"\"|package a\n       |\n       |sealed case class <<A>>()"
+  },
+  {
+    "id" : "dcb378a2-a1fd-4903-99b8-bafb113a50f3",
+    "prId" : 2723,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2723",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "e3e9212e-b7b3-4cdf-af98-7c4550ec53ae",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "We should remove the package if it's also empty. We can check the parent of the extracted class and if there are no other children we can remove the package also.",
+        "createdAt" : "2021-05-06T09:56:46Z",
+        "updatedAt" : "2021-05-11T14:51:09Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4ebdba5b-8a4a-48a8-865e-ccc4742f661d",
+        "parentId" : "e3e9212e-b7b3-4cdf-af98-7c4550ec53ae",
+        "author" : {
+          "login" : "Giggiux",
+          "name" : "Luigi Frunzio",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/9947659?u=6b6b1c62e4bfaf022c1db163da9203677e987ec9&v=4",
+          "altName" : null
+        },
+        "body" : "I'll do it in the next commit! ",
+        "createdAt" : "2021-05-07T16:00:01Z",
+        "updatedAt" : "2021-05-11T14:51:09Z",
+        "lastEditedBy" : {
+          "login" : "Giggiux",
+          "name" : "Luigi Frunzio",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/9947659?u=6b6b1c62e4bfaf022c1db163da9203677e987ec9&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "027c9bf78c700cb555e80ae8e2fab5e18678651e",
+    "line" : 214,
+    "diffHunk" : "@@ -1,1 +212,216 @@       |case class A()\n       |\n       |package b {\n       |  object <<B>>{}\n       |}"
+  }
+]

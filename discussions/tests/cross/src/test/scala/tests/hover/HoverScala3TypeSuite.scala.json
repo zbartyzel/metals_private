@@ -1,0 +1,87 @@
+[
+  {
+    "id" : "5979ae57-e851-45a1-be9d-1a9445007483",
+    "prId" : 2617,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2617",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "93cce297-7fb2-4929-ba90-56ce8361ab35",
+        "parentId" : null,
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "This one was fixed in dotty?",
+        "createdAt" : "2021-03-16T16:27:52Z",
+        "updatedAt" : "2021-03-16T16:30:51Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d5846d0e-c701-4362-a6d2-70202afb94a5",
+        "parentId" : "93cce297-7fb2-4929-ba90-56ce8361ab35",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Might be fixed in 3.0.0-RC2, so I wanted to add the test case to close the issue when updating.",
+        "createdAt" : "2021-03-16T16:34:26Z",
+        "updatedAt" : "2021-03-16T16:34:27Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "caddf0dae5ced3ffc99eb4bb39e603fa2b190911",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +74,78 @@  // https://github.com/scalameta/metals/issues/1991\n  check(\n    \"extension-methods\",\n    \"\"\"|\n       |object Foo:"
+  },
+  {
+    "id" : "26f32230-2b4b-4a7d-b45e-59948f2c1fcc",
+    "prId" : 2589,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2589",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "120ea936-36d7-48e7-babe-18535a50d5b6",
+        "parentId" : null,
+        "author" : {
+          "login" : "tanishiking",
+          "name" : "Rikito Taniguchi",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4",
+          "altName" : null
+        },
+        "body" : "I didn't realize that, thanks for adding this test and creating an issue on dotty :+1:",
+        "createdAt" : "2021-03-11T11:34:57Z",
+        "updatedAt" : "2021-03-11T14:26:31Z",
+        "lastEditedBy" : {
+          "login" : "tanishiking",
+          "name" : "Rikito Taniguchi",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "12fbb0bb50d972bd724663e2c2d6eee8c85cb404",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +53,57 @@       |\n       |\"\"\".stripMargin,\n    \"\"\"|val Red: enums.SimpleEnum.Color.Red\n       |\"\"\".stripMargin.hover\n  )"
+  }
+]

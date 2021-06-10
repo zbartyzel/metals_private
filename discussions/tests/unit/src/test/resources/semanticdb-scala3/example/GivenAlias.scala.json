@@ -1,0 +1,34 @@
+[
+  {
+    "id" : "25acaeff-2804-44e5-8100-99a0ce61c4b3",
+    "prId" : 2589,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2589",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "aa00d631-dc54-42fa-8b91-771dfa4bcc5a",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "https://github.com/lampepfl/dotty/issues/11692",
+        "createdAt" : "2021-03-10T17:20:04Z",
+        "updatedAt" : "2021-03-11T14:26:31Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "12fbb0bb50d972bd724663e2c2d6eee8c85cb404",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +2,6 @@\n/*example.GivenAlias$package.*/given intValue/*example.GivenAlias$package.intValue.*/: Int/*scala.Int#*/ = 4\ngiven String/*scala.Predef.String#*/ = \"st/*example.GivenAlias$package.given_String.*/r\""
+  }
+]

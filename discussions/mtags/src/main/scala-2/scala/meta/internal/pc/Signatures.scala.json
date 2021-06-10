@@ -1,0 +1,98 @@
+[
+  {
+    "id" : "29a2dd01-b6f4-4792-9d19-bbc9538f2c5e",
+    "prId" : 2497,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2497",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "d758aa15-d405-42e7-bfaf-a8a7c21150b5",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Changes here and the two methods below come from:\r\nhttps://github.com/scalacenter/scalafix/blob/69c0369ab49c41b0473ca68fe0a8ade396d3157e/scalafix-rules/src/main/scala/scala/meta/internal/pc/ScalafixGlobal.scala#L382",
+        "createdAt" : "2021-02-11T19:42:39Z",
+        "updatedAt" : "2021-02-17T15:54:49Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a3da8a9cf97b46b15072db2b6898bb3237b2919c",
+    "line" : 30,
+    "diffHunk" : "@@ -1,1 +133,137 @@    }\n\n    def isSymbolInScope(sym: Symbol, prefix: Type = NoPrefix): Boolean = {\n      nameResolvesToSymbol(sym.name, sym, prefix)\n    }"
+  },
+  {
+    "id" : "c203f909-e520-4658-9e65-4aa38aedac56",
+    "prId" : 2497,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2497",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "4d223f25-5b55-4f7e-bdbe-c53c32fdc846",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "This is a change I did here, since if lookup did not find anything then it should be false. Indeed a lot of tests seem to have unneccesarily long names.",
+        "createdAt" : "2021-02-11T19:44:25Z",
+        "updatedAt" : "2021-02-17T15:54:49Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a3da8a9cf97b46b15072db2b6898bb3237b2919c",
+    "line" : 42,
+    "diffHunk" : "@@ -1,1 +142,146 @@    ): Boolean = {\n      lookupSymbol(name) match {\n        case Nil => false\n        case lookup =>\n          lookup.exists {"
+  },
+  {
+    "id" : "a232d3fd-3b7d-4ae8-a107-d60df63bf76b",
+    "prId" : 2497,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2497",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ac6005c7-81b7-4e5e-bfc4-b9e25ac05ef4",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Here we try to find type name or term name with the same name.",
+        "createdAt" : "2021-02-11T19:44:58Z",
+        "updatedAt" : "2021-02-17T15:54:49Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a3da8a9cf97b46b15072db2b6898bb3237b2919c",
+    "line" : 148,
+    "diffHunk" : "@@ -1,1 +261,265 @@  implicit class XtensionNameMetals(name: Name) {\n    def otherName: Name =\n      if (name.isTermName) name.toTypeName\n      else name.toTermName\n  }"
+  }
+]

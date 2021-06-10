@@ -1,0 +1,339 @@
+[
+  {
+    "id" : "cf964651-646d-4abc-9610-4a27991138e5",
+    "prId" : 2733,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2733",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "0282b2b2-5b1b-4279-8226-ba811b92ed05",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "I left a comment on the pr in the other repo, but since using `cs install` doesn't work at all to get the Metals snapshots, it might be better to use bootstrap instead and allow the user to just give a version or default to `latest.stable`. WDYT?",
+        "createdAt" : "2021-04-22T08:27:07Z",
+        "updatedAt" : "2021-04-22T08:27:07Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d40db8a1-1080-4fef-abac-319e097fe8a5",
+        "parentId" : "0282b2b2-5b1b-4279-8226-ba811b92ed05",
+        "author" : {
+          "login" : "kurnevsky",
+          "name" : "Evgeny Kurnevsky",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/2943605?u=061639bbc630bfe016057e651d8b595783a17361&v=4",
+          "altName" : null
+        },
+        "body" : "I thought that `cs install` is a preferable way to install metals now, as has been said in https://github.com/scalameta/metals/issues/1884 . As for myself I don't use metals snapshots, so not sure how good they are and whether we should provide an easy option to do that :)",
+        "createdAt" : "2021-04-22T08:41:35Z",
+        "updatedAt" : "2021-04-22T08:41:35Z",
+        "lastEditedBy" : {
+          "login" : "kurnevsky",
+          "name" : "Evgeny Kurnevsky",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/2943605?u=061639bbc630bfe016057e651d8b595783a17361&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4e6a9d4c-177e-424f-8365-9bc471e804a7",
+        "parentId" : "0282b2b2-5b1b-4279-8226-ba811b92ed05",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "Ha, I'm probably on the far other end where I only use snapshots, but I'm not the norm there. I'd say that yea if a user is going to install it themselves, then `cs install metals` is by far the easiest way to install ithe recommended way. However, imo if a client is going to abstract over that and just use Coursier under the hood, then using `cs bootstrap` offers a way to also automate the installation and provide a way to install snapshots if they want.",
+        "createdAt" : "2021-04-22T08:56:00Z",
+        "updatedAt" : "2021-04-22T08:56:00Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e4b0457b-f038-4e79-bd9c-056759fa16f2",
+        "parentId" : "0282b2b2-5b1b-4279-8226-ba811b92ed05",
+        "author" : {
+          "login" : "kurnevsky",
+          "name" : "Evgeny Kurnevsky",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/2943605?u=061639bbc630bfe016057e651d8b595783a17361&v=4",
+          "altName" : null
+        },
+        "body" : "This way of installing has one drawback - if something is changed here https://github.com/coursier/apps/blob/f6ad7f3dffd2bf6fddc8991853a32919fd62e44d/apps/resources/metals.json we have to reflect this change in each client, and it easily can remain unnoticed.",
+        "createdAt" : "2021-04-22T09:27:40Z",
+        "updatedAt" : "2021-04-22T09:27:40Z",
+        "lastEditedBy" : {
+          "login" : "kurnevsky",
+          "name" : "Evgeny Kurnevsky",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/2943605?u=061639bbc630bfe016057e651d8b595783a17361&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "343cd9c1-71d2-4899-b55b-4f3d5c98a167",
+        "parentId" : "0282b2b2-5b1b-4279-8226-ba811b92ed05",
+        "author" : {
+          "login" : "kurnevsky",
+          "name" : "Evgeny Kurnevsky",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/2943605?u=061639bbc630bfe016057e651d8b595783a17361&v=4",
+          "altName" : null
+        },
+        "body" : "Should we create an issue for coursier to add `--version` flag to `cs install`? :)",
+        "createdAt" : "2021-04-22T10:01:06Z",
+        "updatedAt" : "2021-04-22T10:01:06Z",
+        "lastEditedBy" : {
+          "login" : "kurnevsky",
+          "name" : "Evgeny Kurnevsky",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/2943605?u=061639bbc630bfe016057e651d8b595783a17361&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4623b7f3-06e6-4c44-b1c3-fb2f0cac060d",
+        "parentId" : "0282b2b2-5b1b-4279-8226-ba811b92ed05",
+        "author" : {
+          "login" : "kurnevsky",
+          "name" : "Evgeny Kurnevsky",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/2943605?u=061639bbc630bfe016057e651d8b595783a17361&v=4",
+          "altName" : null
+        },
+        "body" : "Hm, looks like it already can handle versions: https://github.com/coursier/coursier/issues/1249",
+        "createdAt" : "2021-04-22T10:03:41Z",
+        "updatedAt" : "2021-04-22T10:03:41Z",
+        "lastEditedBy" : {
+          "login" : "kurnevsky",
+          "name" : "Evgeny Kurnevsky",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/2943605?u=061639bbc630bfe016057e651d8b595783a17361&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "832ac8a7-758b-4bd3-be98-b607c0ba5974",
+        "parentId" : "0282b2b2-5b1b-4279-8226-ba811b92ed05",
+        "author" : {
+          "login" : "kurnevsky",
+          "name" : "Evgeny Kurnevsky",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/2943605?u=061639bbc630bfe016057e651d8b595783a17361&v=4",
+          "altName" : null
+        },
+        "body" : "Yes, works like `cs install metals:version`, so I'll add it then.",
+        "createdAt" : "2021-04-22T10:07:39Z",
+        "updatedAt" : "2021-04-22T10:07:39Z",
+        "lastEditedBy" : {
+          "login" : "kurnevsky",
+          "name" : "Evgeny Kurnevsky",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/2943605?u=061639bbc630bfe016057e651d8b595783a17361&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d286aea0-bb79-4fd5-ada5-b9cef6eed30a",
+        "parentId" : "0282b2b2-5b1b-4279-8226-ba811b92ed05",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "Sorry if I wasn't clear before, but this won't work. That was partly what I was getting at with there is no way to install snapshots with `cs install metals`. For example in the above if you try it locally you get:\r\n\r\n```\r\n❯ cs install metals:0.10.2+5-919c430c-SNAPSHOT\r\nhttps://repo1.maven.org/maven2/io/get-coursier/apps/maven-metadata.xml\r\n  No new update since 2021-03-31 19:34:20\r\nException in thread \"main\" java.lang.Exception: coursier.install.AppArtifacts$ScalaDependenciesNotFound: Can't find a scala version suffix for org.scalameta::metals:0.10.2+5-919c430c-SNAPSHOT (likely a non existing module or version)\r\n        at coursier.install.AppDescriptor.artifacts(AppDescriptor.scala:66)\r\n        at coursier.install.InstallDir.update$1(InstallDir.scala:259)\r\n        at coursier.install.InstallDir.$anonfun$createOrUpdate$21(InstallDir.scala:385)\r\n        at coursier.install.InstallDir.$anonfun$createOrUpdate$21$adapted(InstallDir.scala:384)\r\n        at coursier.install.Updatable$.get$1(Updatable.scala:55)\r\n        at coursier.install.Updatable$.$anonfun$writing$1(Updatable.scala:96)\r\n        at coursier.cache.CacheLocks$.loop$1(CacheLocks.scala:72)\r\n        at coursier.cache.CacheLocks$.withLockOr(CacheLocks.scala:98)\r\n        at coursier.install.Updatable$.writing(Updatable.scala:96)\r\n        at coursier.install.InstallDir.createOrUpdate(InstallDir.scala:384)\r\n        at coursier.install.InstallDir.createOrUpdate(InstallDir.scala:87)\r\n        at coursier.cli.install.Install$.$anonfun$run$7(Install.scala:108)\r\n        at coursier.cli.install.Install$.$anonfun$run$7$adapted(Install.scala:95)\r\n        at scala.collection.immutable.List.foreach(List.scala:431)\r\n        at coursier.cli.install.Install$.run(Install.scala:95)\r\n        at coursier.cli.Coursier$.$anonfun$runA$2(Coursier.scala:152)\r\n        at coursier.cli.Coursier$.$anonfun$runA$2$adapted(Coursier.scala:140)\r\n        at coursier.cli.CommandAppPreA.run(CommandAppPreA.scala:22)\r\n        at caseapp.core.app.CommandAppWithPreCommand.$anonfun$main$5(CommandAppWithPreCommand.scala:99)\r\n        at caseapp.core.app.CommandAppWithPreCommand.$anonfun$main$5$adapted(CommandAppWithPreCommand.scala:99)\r\n        at scala.util.Either.fold(Either.scala:191)\r\n        at caseapp.core.app.CommandAppWithPreCommand.$anonfun$main$3(CommandAppWithPreCommand.scala:99)\r\n        at caseapp.core.app.CommandAppWithPreCommand.$anonfun$main$3$adapted(CommandAppWithPreCommand.scala:85)\r\n        at scala.Option.foreach(Option.scala:407)\r\n        at caseapp.core.app.CommandAppWithPreCommand.main(CommandAppWithPreCommand.scala:85)\r\n        at coursier.cli.Coursier$.main(Coursier.scala:105)\r\n        at coursier.cli.Coursier.main(Coursier.scala)\r\nCaused by: coursier.install.AppArtifacts$ScalaDependenciesNotFound: Can't find a scala version suffix for org.scalameta::metals:0.10.2+5-919c430c-SNAPSHOT (likely a non existing module or version)\r\n        at coursier.install.AppDescriptor.$anonfun$processDependencies$9(AppDescriptor.scala:184)\r\n        at scala.Option.toRight(Option.scala:485)\r\n        at coursier.install.AppDescriptor.processDependencies(AppDescriptor.scala:184)\r\n        at coursier.install.AppDescriptor.artifacts(AppDescriptor.scala:64)\r\n        ... 26 more\r\n```\r\n\r\nEven if you specify the repository you still have issues.",
+        "createdAt" : "2021-04-22T10:17:40Z",
+        "updatedAt" : "2021-04-22T10:17:40Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "dab3b48d-e6f1-44fe-9281-e09f8c8d0050",
+        "parentId" : "0282b2b2-5b1b-4279-8226-ba811b92ed05",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "In that case above I use Scala 2.13 locally, and Metals isn't published for 2.13, so it won't find the `metals_2.13` artifact.",
+        "createdAt" : "2021-04-22T10:18:42Z",
+        "updatedAt" : "2021-04-22T10:18:51Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "070fb9eb-54f0-4ce1-9d34-c883a5d4e1aa",
+        "parentId" : "0282b2b2-5b1b-4279-8226-ba811b92ed05",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "body" : "There is also some issues in general when trying to get the latest snapshot as you can see here https://github.com/coursier/coursier/issues/1700",
+        "createdAt" : "2021-04-22T10:19:53Z",
+        "updatedAt" : "2021-04-22T10:19:53Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/13974112?u=0913c840fef95924e8c732d98edc2ba9c1d0506c&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "96f456a7-9a93-493c-b122-b8bcbf884cb3",
+        "parentId" : "0282b2b2-5b1b-4279-8226-ba811b92ed05",
+        "author" : {
+          "login" : "kurnevsky",
+          "name" : "Evgeny Kurnevsky",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/2943605?u=061639bbc630bfe016057e651d8b595783a17361&v=4",
+          "altName" : null
+        },
+        "body" : "That's sad :(",
+        "createdAt" : "2021-04-22T10:42:45Z",
+        "updatedAt" : "2021-04-22T10:42:45Z",
+        "lastEditedBy" : {
+          "login" : "kurnevsky",
+          "name" : "Evgeny Kurnevsky",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/2943605?u=061639bbc630bfe016057e651d8b595783a17361&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cf5efab2240e33e548cb0d81b4848c415980fda1",
+    "line" : 30,
+    "diffHunk" : "@@ -1,1 +119,123 @@is enabled in a scala buffer or via `lsp-install-server` command. Also you can\ndo it manually executing `coursier install metals` and configuring `$PATH`\nvariable properly.\n\n```scala mdoc:editor:emacs"
+  },
+  {
+    "id" : "7eefc786-96d9-4432-8f22-e5ce9b55111d",
+    "prId" : 2733,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2733",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "41389cfe-7d2e-446c-b027-76afb6bfe70b",
+        "parentId" : null,
+        "author" : {
+          "login" : "chessman",
+          "name" : "Eugene Apollonsky",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/781558?v=4",
+          "altName" : null
+        },
+        "body" : "why `coursier install metals`? isn't it `coursier install metals-emacs`?",
+        "createdAt" : "2021-04-22T09:35:16Z",
+        "updatedAt" : "2021-04-22T10:08:44Z",
+        "lastEditedBy" : {
+          "login" : "chessman",
+          "name" : "Eugene Apollonsky",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/781558?v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "09db58aa-876e-4191-874b-4cd5ff40cf92",
+        "parentId" : "41389cfe-7d2e-446c-b027-76afb6bfe70b",
+        "author" : {
+          "login" : "kurnevsky",
+          "name" : "Evgeny Kurnevsky",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/2943605?u=061639bbc630bfe016057e651d8b595783a17361&v=4",
+          "altName" : null
+        },
+        "body" : "No, we don't need metals hacks for emacs anymore. Everything can be configured on `lsp-metals` side, so we can use generic metals.",
+        "createdAt" : "2021-04-22T10:09:44Z",
+        "updatedAt" : "2021-04-22T10:09:44Z",
+        "lastEditedBy" : {
+          "login" : "kurnevsky",
+          "name" : "Evgeny Kurnevsky",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/2943605?u=061639bbc630bfe016057e651d8b595783a17361&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "512c11e1-204d-4895-951b-6c54307eff8e",
+        "parentId" : "41389cfe-7d2e-446c-b027-76afb6bfe70b",
+        "author" : {
+          "login" : "chessman",
+          "name" : "Eugene Apollonsky",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/781558?v=4",
+          "altName" : null
+        },
+        "body" : "But you still mention `metals-emacs` below:\r\n```\r\nIf you start Emacs now then it will fail since the `metals-emacs` binary does\r\n￼not exist yet.\r\n￼\r\n￼```scala mdoc:bootstrap:metals-emacs emacs\r\n￼\r\n￼```\r\n￼\r\n￼The `-Dmetals.client=emacs` flag is important since it configures Metals for\r\n￼usage with Emacs.\r\n￼\r\n```",
+        "createdAt" : "2021-04-22T10:13:27Z",
+        "updatedAt" : "2021-04-22T10:13:44Z",
+        "lastEditedBy" : {
+          "login" : "chessman",
+          "name" : "Eugene Apollonsky",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/781558?v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8fcb4894-5920-4558-9958-54e6d2f1251a",
+        "parentId" : "41389cfe-7d2e-446c-b027-76afb6bfe70b",
+        "author" : {
+          "login" : "kurnevsky",
+          "name" : "Evgeny Kurnevsky",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/2943605?u=061639bbc630bfe016057e651d8b595783a17361&v=4",
+          "altName" : null
+        },
+        "body" : "Yes, it's for those who prefer [eglot](https://github.com/joaotavora/eglot). I don't maintain nor use it and will leave for eglot users to decide how it should be installed (they still use [metals-emacs](https://github.com/joaotavora/eglot/blob/a0a6218af2dfb476573b2e564f43ab82bfcaaca2/eglot.el#L122)).",
+        "createdAt" : "2021-04-22T10:34:22Z",
+        "updatedAt" : "2021-04-22T10:40:09Z",
+        "lastEditedBy" : {
+          "login" : "kurnevsky",
+          "name" : "Evgeny Kurnevsky",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/2943605?u=061639bbc630bfe016057e651d8b595783a17361&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cf5efab2240e33e548cb0d81b4848c415980fda1",
+    "line" : 29,
+    "diffHunk" : "@@ -1,1 +118,122 @@Next you have to install metals server. Emacs can do it for you when `lsp-mode`\nis enabled in a scala buffer or via `lsp-install-server` command. Also you can\ndo it manually executing `coursier install metals` and configuring `$PATH`\nvariable properly.\n"
+  }
+]

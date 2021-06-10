@@ -1,0 +1,76 @@
+[
+  {
+    "id" : "e2a03ab1-27db-45db-b30a-f4f737346cd5",
+    "prId" : 2600,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2600",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "6e1d6f86-31e4-4f6c-a94e-47f1610e5f43",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Should we also pass the dialect here?",
+        "createdAt" : "2021-03-16T17:43:05Z",
+        "updatedAt" : "2021-04-01T21:54:41Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2de1d9a1-0abf-41c1-819c-545dbf1283a4",
+        "parentId" : "6e1d6f86-31e4-4f6c-a94e-47f1610e5f43",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "Yep, but this method is used in search. \r\nI will create an issue because it would be better to do it in a separate PR. Getting the right dialect at call-sites of this method isn't trivial now.",
+        "createdAt" : "2021-03-22T12:01:59Z",
+        "updatedAt" : "2021-04-01T21:54:41Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1da86825-5ee2-4636-86e7-c9dd5541c607",
+        "parentId" : "6e1d6f86-31e4-4f6c-a94e-47f1610e5f43",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Sure, makes sense",
+        "createdAt" : "2021-03-22T13:59:15Z",
+        "updatedAt" : "2021-04-01T21:54:41Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "028b3ff710580df42fff3574f99c743c9649e48c",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +44,48 @@    input.toLanguage match {\n      case Language.SCALA =>\n        val mtags = new ScalaToplevelMtags(input, true, dialects.Scala213) {\n          override def visitOccurrence(\n              occ: SymbolOccurrence,"
+  }
+]

@@ -1,0 +1,108 @@
+[
+  {
+    "id" : "8b5e54c0-4d6a-4f89-bc57-c7c3e351630e",
+    "prId" : 2637,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2637",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "7346df8e-7422-41ce-9feb-140ef5f7ad04",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "It seems this is done for the description in CompletionItem, but requires SingleDenotation and TermRef? I haven't dug too much into it.",
+        "createdAt" : "2021-03-30T14:54:53Z",
+        "updatedAt" : "2021-04-20T11:55:47Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0ccd3cb9-28aa-443f-91f6-36a44ffffe42",
+        "parentId" : "7346df8e-7422-41ce-9feb-140ef5f7ad04",
+        "author" : {
+          "login" : "tanishiking",
+          "name" : "Rikito Taniguchi",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4",
+          "altName" : null
+        },
+        "body" : "The `description` in [Completion](https://github.com/tanishiking/dotty/blob/65b17af639e17a5d526581ff68fc17bfa08e6299/compiler/src/dotty/tools/dotc/interactive/Completion.scala#L36) returned from `Interactive.Completion.completions` has resolved type signature.\r\n\r\nHowever, now we compute the type signature by ourselves, we need to compute type parameters based on the given qualifiers as Scala2 does:  \r\nhttps://github.com/tanishiking/metals/blob/ac3a29e022062326b6feb63baa9929cdcdaca5e2/mtags/src/main/scala-2/scala/meta/internal/pc/completions/Completions.scala#L258-L262\r\n\r\nWhile this is a kinda regression, should we tackle this problem in this PR? or can we leave this as a future work for now?\r\n",
+        "createdAt" : "2021-04-19T12:37:39Z",
+        "updatedAt" : "2021-04-20T11:55:47Z",
+        "lastEditedBy" : {
+          "login" : "tanishiking",
+          "name" : "Rikito Taniguchi",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/9353584?u=c3e5aba60a43901e7d2b7c0ea4caac06cde77049&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0e3f06a6-4c1a-4de3-8598-72ef2b557a29",
+        "parentId" : "7346df8e-7422-41ce-9feb-140ef5f7ad04",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "We can leave it for future work for sure.",
+        "createdAt" : "2021-04-20T11:31:59Z",
+        "updatedAt" : "2021-04-20T11:55:47Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cb0dd9260bcbd1c2b38bcd118ac763772baf4a4c",
+    "line" : 25,
+    "diffHunk" : "@@ -1,1 +54,58 @@  )\n\n  // TODO: scala3, compute type parameters based on the qualifier.\n  check(\n    \"tparam\","
+  },
+  {
+    "id" : "fb2dacf6-62fd-462d-9b17-27dc4c2051db",
+    "prId" : 2544,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2544",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "035864bd-3538-4b06-8f5d-5977e5d24635",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "There was a fix in presentation compiler that will only propose objects in positions that are not valid for types. That is why I added the import clause here and in some other places.",
+        "createdAt" : "2021-02-23T17:07:33Z",
+        "updatedAt" : "2021-02-23T18:42:53Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "98912dde9153e0d1b8d41e43360729847a17b082",
+    "line" : 19,
+    "diffHunk" : "@@ -1,1 +499,503 @@      |\n      |object Main{\n      |  import scala.Function@@\n      |}\n      |\"\"\".stripMargin,"
+  }
+]

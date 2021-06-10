@@ -1,0 +1,34 @@
+[
+  {
+    "id" : "53ce9cb1-982e-46d6-95af-d66623ffb248",
+    "prId" : 2605,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2605",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "d77d38d1-bbd3-449b-a326-a70a7075a4b2",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "If new name is checked to have backticks then this is not needed.",
+        "createdAt" : "2021-03-15T13:31:34Z",
+        "updatedAt" : "2021-03-15T15:32:17Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "6f1a4c3242bb93ce1e872665b12ff3b7319d1c6b",
+    "line" : 95,
+    "diffHunk" : "@@ -1,1 +245,249 @@      if occ.symbol == occurence.symbol &&\n        withoutBacktick(realName) == withoutBacktick(renameName)\n    } yield new Location(uri, rng.toLSP)\n\n    val result = for {"
+  }
+]

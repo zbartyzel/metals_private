@@ -1,0 +1,34 @@
+[
+  {
+    "id" : "6beb4a9d-6ed2-4169-9b99-6b1e77aad809",
+    "prId" : 2586,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2586",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "9537aecf-7682-455c-88d2-15336db81796",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "This was actually causing a warning, which now was picked up.",
+        "createdAt" : "2021-03-09T16:18:39Z",
+        "updatedAt" : "2021-03-10T08:52:26Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d58a05d72a615e9338e2c28245343d6fa1d3aa30",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +11,15 @@    \"\"\"|/a/src/main/scala/a/Main.scala\n       |\n       |@main def run() = {\n       |  <<hello>>(\"Mark\")\n       |  <<hello>>(\"Anne\")"
+  }
+]

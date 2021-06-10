@@ -1,0 +1,34 @@
+[
+  {
+    "id" : "8695daf9-1d41-45d5-9153-286279dac7b3",
+    "prId" : 2678,
+    "prUrl" : "https://github.com/scalameta/metals/pull/2678",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "c9c4dcf2-60f2-417f-ab6e-4d903246f75a",
+        "parentId" : null,
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "The problem is that there is no strict format of what might be in `path` value.\r\nPossible values :\r\n- URI\r\n- absolute path\r\n- relative path\r\n\r\nThat causes failures on Windows:\r\n```scala\r\nPaths.get(\"jar:file:...\") // <- fails on Windows, should be replaced by `Paths.get(uri: URI)`\r\nURI.create(\"win\\path\\separator\") // <- fails on Windows\r\n\r\n```\r\nThe correct fix here would be to enforce a single format to `path` value across the codebase. However, that's challenging.\r\nI've tried to align it to be URI but got much more failing tests. \r\n\r\nI will try to fix this thing properly later.",
+        "createdAt" : "2021-04-05T05:35:25Z",
+        "updatedAt" : "2021-04-05T05:35:25Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e9af8fa09e1c5c0eccd42fbbd8d56e74f5ee08d4",
+    "line" : 26,
+    "diffHunk" : "@@ -1,1 +279,283 @@      }.getOrElse {\n        Paths.get(input.path).filename\n      }\n    }\n  }"
+  }
+]
