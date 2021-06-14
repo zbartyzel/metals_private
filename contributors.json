@@ -510,6 +510,21 @@
     "updatedAt" : "2021-06-10T12:30:10.985568+02:00"
   },
   {
+    "id" : "d4d384d7-1ada-48ce-9608-decd66535d3a",
+    "remoteIds" : [
+      {
+        "id" : "larsire",
+        "url" : "github.com",
+        "provider" : "GitHub"
+      }
+    ],
+    "name" : "Dominik Janik",
+    "avatarUrl" : "https://avatars.githubusercontent.com/u/6935667?u=16f44de690271a51faebfd84665ab8ce0928c1f2&v=4",
+    "altName" : "larsire",
+    "email" : null,
+    "updatedAt" : "2021-06-14T10:20:13.369435+02:00"
+  },
+  {
     "id" : "d51baa37-a082-4bdc-861a-3844e0606638",
     "remoteIds" : [
       {
