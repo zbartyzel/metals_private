@@ -1659,5 +1659,27 @@
     "commit" : "v0.10.4-52-gab10007",
     "line" : null,
     "diffHunk" : "@@ -1,1 +155,156 @@Global / onLoad ~= { old =>\n"
+  },
+  {
+    "id" : "17a09a13-efb0-4000-86e9-b5e745878100",
+    "prId" : null,
+    "prUrl" : null,
+    "prSource" : null,
+    "comments" : [
+      {
+        "id" : "17a09a13-efb0-4000-8e47-bb40ed0f3d00",
+        "parentId" : null,
+        "authorId" : "31589ca6-0c92-4eb7-a456-90b874498eff",
+        "body" : "@d4d384d7-1ada-48ce-9608-decd66535d3a Hejka",
+        "createdAt" : "2021-06-14T08:26:40.251Z",
+        "updatedAt" : "2021-06-14T08:26:40.251Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "v0.10.4-52-gab10007",
+    "line" : null,
+    "diffHunk" : "@@ -1,1 +415,416 @@      V.guava,\n"
   }
 ]
