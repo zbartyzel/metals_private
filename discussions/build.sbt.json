@@ -1632,6 +1632,17 @@
         "lastEditedBy" : null,
         "tags" : [
         ]
+      },
+      {
+        "id" : "17a099e0-e470-4000-89d3-bb5b46d7d800",
+        "parentId" : null,
+        "authorId" : "d4d384d7-1ada-48ce-9608-decd66535d3a",
+        "body" : "You can use wildcard like this \"*.ts\"\n",
+        "createdAt" : "2021-06-14T08:23:11.175Z",
+        "updatedAt" : "2021-06-14T08:23:11.175Z",
+        "lastEditedBy" : null,
+        "tags" : [
+        ]
       }
     ],
     "commit" : "v0.10.4-52-gab10007",
