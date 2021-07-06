@@ -360,6 +360,21 @@
     "updatedAt" : "2021-06-10T12:30:10.985694+02:00"
   },
   {
+    "id" : "c40b620a-59a0-41a0-a8dc-7b98e9458301",
+    "remoteIds" : [
+      {
+        "id" : "kpodsiad",
+        "url" : "github.com",
+        "provider" : "GitHub"
+      }
+    ],
+    "name" : null,
+    "avatarUrl" : "https://avatars.githubusercontent.com/u/37124721?u=fdcc7cbfb06b8d1dae1a7e3e7ace8c9ea91175bc&v=4",
+    "altName" : "kpodsiad",
+    "email" : null,
+    "updatedAt" : "2021-07-06T16:35:36.52039+02:00"
+  },
+  {
     "id" : "c53d2a65-0cb3-42cc-87f2-d239c82223a6",
     "remoteIds" : [
       {
@@ -658,6 +673,21 @@
     "altName" : "kostafey",
     "email" : null,
     "updatedAt" : "2021-06-10T12:30:10.986792+02:00"
+  },
+  {
+    "id" : "e452a5c2-28fe-4b22-9d45-cc4375d9f0af",
+    "remoteIds" : [
+      {
+        "id" : "Z1kkurat",
+        "url" : "github.com",
+        "provider" : "GitHub"
+      }
+    ],
+    "name" : "Kirill Shelopugin",
+    "avatarUrl" : "https://avatars.githubusercontent.com/u/7479593?u=0f437f40313e780cd4e11ea287c8b52a7f82c97e&v=4",
+    "altName" : "Z1kkurat",
+    "email" : null,
+    "updatedAt" : "2021-07-06T16:35:36.520272+02:00"
   },
   {
     "id" : "e74af9aa-71ac-4d06-b0d7-514da8b2f746",
